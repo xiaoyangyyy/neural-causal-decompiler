@@ -1,0 +1,61 @@
+{
+  "protocol": "docs/DISTILLED_PC_PROGRAM_PROTOCOL.md",
+  "replay_verified": true,
+  "replicated_behavioral_decompilation_improvement": false,
+  "pooled": {
+    "local": {
+      "all_pair_fidelity": 0.7540364583333333,
+      "active_pair_fidelity": 0.48446979651776056,
+      "exact_graph_fidelity": 0.19479166666666667,
+      "program_exact_graph_accuracy": 0.096875
+    },
+    "pc": {
+      "all_pair_fidelity": 0.6323921130952381,
+      "active_pair_fidelity": 0.2521583358366937,
+      "exact_graph_fidelity": 0.10208333333333333,
+      "program_exact_graph_accuracy": 0.12291666666666666
+    }
+  },
+  "pooled_exact_fidelity_delta": -0.09270833333333334,
+  "runs": {
+    "2193": {
+      "worlds": 480,
+      "strata": 30,
+      "local": {
+        "all_pair_fidelity": 0.7554489087301587,
+        "active_pair_fidelity": 0.5007132814489121,
+        "exact_graph_fidelity": 0.20104166666666667,
+        "program_exact_graph_accuracy": 0.084375
+      },
+      "pc": {
+        "all_pair_fidelity": 0.6167336309523809,
+        "active_pair_fidelity": 0.23739435841831638,
+        "exact_graph_fidelity": 0.10520833333333333,
+        "program_exact_graph_accuracy": 0.12708333333333333
+      },
+      "exact_delta": -0.09583333333333334,
+      "active_delta": -0.2633189230305958,
+      "replay_verified": true
+    },
+    "2194": {
+      "worlds": 480,
+      "strata": 30,
+      "local": {
+        "all_pair_fidelity": 0.752624007936508,
+        "active_pair_fidelity": 0.46822631158660893,
+        "exact_graph_fidelity": 0.18854166666666666,
+        "program_exact_graph_accuracy": 0.109375
+      },
+      "pc": {
+        "all_pair_fidelity": 0.6480505952380953,
+        "active_pair_fidelity": 0.2669223132550711,
+        "exact_graph_fidelity": 0.09895833333333333,
+        "program_exact_graph_accuracy": 0.11875
+      },
+      "exact_delta": -0.08958333333333333,
+      "active_delta": -0.20130399833153784,
+      "replay_verified": true
+    }
+  },
+  "interpretation": "explicit Fisher-PC is closer to truth but less faithful to frozen teachers; probes of behavior do not establish internal PC implementation"
+}

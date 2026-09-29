@@ -1,0 +1,60 @@
+{
+  "schema": "ncd.original-confirmation-protocol.v1",
+  "status": "frozen-before-confirmation",
+  "root": "..",
+  "output": "validation/original_confirmation_smoke",
+  "development_seed": 8100,
+  "seeds": [
+    8100
+  ],
+  "nodes": [
+    3,
+    5,
+    8
+  ],
+  "environments": [
+    "test_id"
+  ],
+  "worlds_per_cell": 1,
+  "declared_worlds": 3,
+  "delta": "1/100",
+  "training": {
+    "samples": 32,
+    "train_worlds": 4,
+    "dev_worlds": 4,
+    "test_worlds": 4,
+    "epochs": 1,
+    "width": 16
+  },
+  "end_to_end": {
+    "samples": 32,
+    "observation_rows": 128,
+    "mechanism_epochs": 2,
+    "query_count": 192,
+    "evaluation_rows": 128,
+    "max_terms": 6,
+    "beam_width": 8
+  },
+  "scientific_source_sha256": {
+    "ncd/original_confirmation.py": "c33aaef69df8bee8fa2296cbaf624841860440b1f5610ec036e26e3542d53f05",
+    "ncd/original_confirmation_worker.py": "2e7050b162f12e65df267b1c25f899ea4a0bc55e876aeeb1c7d0bd425d2e9f5d",
+    "ncd/active_intervention_experiment.py": "713314560b328515444668ae501dc7bf431faf3f58b087063c13d8c2fe49da79",
+    "ncd/active_end_to_end_experiment.py": "206b255b6e31d6328dfe750ac87fcb251c68ec84687f84df7a82b59022cb4b50",
+    "ncd/active_intervention_graph.py": "b132c5be445e85293a8b410b9303b6a30b4e9454736ba6d149cd83313d0b0d35",
+    "ncd/graph_model.py": "de044407e023a4e575cdb7781bd1e893d277fd87a1058e1f6c866fc3805b0873",
+    "ncd/multiverse.py": "9746dd2c23015e5138c65398065dfc20d1bb34cc8aaca2f5109e326eb1f19883",
+    "ncd/mechanisms.py": "35f78ebe2e2051a15d0b22e145b702146d169e53e4dce349c8bdc9276b389624",
+    "ncd/cdir.py": "147e24b1e0a86be97f96fb6895b9bdea7f8b0cf98c864961766710336c30e469",
+    "ncd/statistics.py": "b08101b0973592a2dfc8343ad888d45471035328a5ef6e9106251de3dd25ab84",
+    "ncd/model.py": "ee732b8f06c153951e6f3e559c9511591e8e6e632d815766c5192aff50bb3602",
+    "ncd/factorized_node_context_graph.py": "41fecea62fc71caaa911663dc3461a3580111f888aa96c15245868488e7459b8",
+    "ncd/graphs.py": "119ef2757b9200c05b3f2fddebf898bf189e4844e6010d29abf61480764085fc"
+  },
+  "historical_acceptance_sha256": "638a1c9daa6863cfdd0ec70b97e5f4d60ebb097573e900ad06b99dda30b3757b",
+  "limits": {
+    "stage_seconds": 120,
+    "memory_bytes": 8589934592,
+    "artifact_bytes": 8589934592
+  },
+  "scope": "development-only coordinator smoke; not one of the 300 confirmation worlds"
+}

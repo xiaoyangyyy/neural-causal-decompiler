@@ -1,0 +1,36 @@
+{
+  "accepted": true,
+  "minimum_state_interval": [
+    7,
+    10
+  ],
+  "lower_run": "runs/certified_multiswitch_lower_seed13701",
+  "lower_manifest_sha256": "d30169eb97d42fd21d0b0eeafef7b85ff73520bbc8a563d4c6a0193611acd634",
+  "prior_lower_replayed": {
+    "status": "verified",
+    "lower_bound": 6,
+    "excluded_sizes": 5,
+    "transition_aware_exclusions": 1,
+    "arithmetic": "exact-rational"
+  },
+  "upper_run": "runs/certified_continuous_realization_seed10701",
+  "upper_manifest_sha256": "f1e296b573485f64dde3f7a7c56b8dcd1802e9a105f9569f2ec8b4c9880dca62",
+  "lower_verification": {
+    "status": "verified",
+    "lower_bound": 7,
+    "excluded_sizes": 6,
+    "multi_switch_exclusions": 2,
+    "arithmetic": "exact-rational"
+  },
+  "upper_verification": {
+    "status": "verified",
+    "profiles_replayed": 2,
+    "largest_state_dim": 2,
+    "largest_realization": 100,
+    "initial_cells_verified": 20,
+    "transition_segments_verified": 100,
+    "packing_pairs_verified": 310
+  },
+  "claim": "all deterministic realizations with six or fewer states fail on the complete continuous intervention domain",
+  "limitations": "seven through nine states unresolved; scalar affine identity-output theorem"
+}

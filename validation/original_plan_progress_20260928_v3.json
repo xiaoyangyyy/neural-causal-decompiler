@@ -1,0 +1,120 @@
+{
+  "schema": "ncd.original-plan-progress.v3",
+  "observed_utc": "2026-09-28T11:43:47.183328+00:00",
+  "original_claim_counts": {
+    "proved": 0,
+    "refuted": 2,
+    "unresolved": 36
+  },
+  "original_objective_achieved": false,
+  "current_core": "0.60.0.dev1",
+  "current_core_source_count": 136,
+  "current_core_unchanged": true,
+  "scoped_recovery_contracts": {
+    "proved": 5,
+    "refuted": 2,
+    "unresolved": 0
+  },
+  "scoped_statistics_do_not_close_original_requirements": true,
+  "theory_source_tests": 57,
+  "theory_installed_tests": 57,
+  "candidate63_source_tests": 43,
+  "candidate63_installed_preflight_tests": 54,
+  "candidate63_not_promoted": true,
+  "whole_project_goal_active": true,
+  "static_files": {
+    "docs/FULL_REQUIREMENTS.md": "04d608c94e83c8b77adaca81fcf4942826d3aa7d5d61152d6e895b010fcc724c",
+    "RESULTS_ORIGINAL_PLAN_PROGRESS_V3.md": "531f93466822bab6d0d192f0074ac7898a9106c5299e1c4f0160396acb46aeb4",
+    "RESULTS_FIXED_GAUSSIAN_ESTIMATOR_FAILURE.md": "b73ab6887c8ac8239e6442744493d0b4497d820e32a9fcb00e2f8be7e8662965",
+    "validation/finite_graph_acceptance_v1.json": "36f2f107cf5d744a63ac12ba7526cee1c1b28494ad41691b25d1b1bc69a1d8d7",
+    "validation/joint_noise_acceptance_v1.json": "17618e69fb6e0ae76e3438aa9fadb0b3262a1da229fff3eaab0898208e9832b0",
+    "validation/finite_chernoff_acceptance_v1.json": "a1af77ddc22541e8eafa0b7f8a7777b44e462fbc873c76733317b11a294ef7fc",
+    "validation/estimator_failure_acceptance_v1.json": "7dbe69f93ae304778e1f142323cbb00f580ef187d015385e5bb030c72330facf",
+    "validation/wheel_v62r3_preflight_v2/status.json": "beb60562d39af18ca9dd087b2a9762a1c0d1f0f185ef72cda01b67b2f4ce57a0",
+    "validation/wheel_v63_preflight_v1/status.json": "9b9bb80f2a2c8cb4bcc20869e8483163008bbff822d8530d026467958acc9027",
+    "validation/theory_kernel_preflight_v63/status.json": "c2fdc42abd5bcf7efdf44963e091bbdf857a19b678a333eb6ac4f5c6209fad65",
+    "validation/heavy_queue_gate_v63_v3_check.json": "3355c970b21e26660d8419b24c73e4a8afe75048d4f1b8209f32b1564340ed45",
+    "validation/original_proof_registry_protocol_v4r3.json": "7687789ddd3639c5d862635e44127962bdd897c64b830ebbc724e97f0ebe013e",
+    "validation/original_proof_registry_protocol_v5.json": "30dec99728d6c643a29632cd8e79a136b7d1c754480a268ce927b2ac56872fa6",
+    "validation/registry_v62r3_stage_protocol_v2.json": "fb6dc8a97c5c602e64a7314b202363fdc7502b7f146c66161db61e9960f0bfcd",
+    "validation/registry_v63_stage_protocol_v3.json": "ec7860588b35268565743ddbd4c858e20515fe28d5359c8b5c2139e34eb7c0be",
+    "validation/piecewise_mechanism_resume_protocol_v8.json": "92283f1244a9f78b0c04fb08ebe49da957eb604c6c9fea0211d91306a7266511",
+    "validation/pytest_registry_v63_source_v1.xml": "5030861ba4c1ef684c6a41529f49d59caac036d555fa2b773ce41185b0ebd39d",
+    "validation/full_regression_v61r2_run_v2/pytest.xml": "af024074edadc5421395f465973d14ce927acffe8de2d2595a2094a312806588",
+    "validation/full_regression_v61r2_run_v2/proof_replay_recovery.json": "3fb6933bcf152441917aed851ba14a71819215c4d2c232cbaeaa0e6bf305c953",
+    "validation/piecewise_mechanism_geometric_coverage_v1.json": "143ae40257550ae37b382f3b4b4742dd2a3a945fe018f82bb3881e7a1432c7f0"
+  },
+  "observed_dynamic_files": {
+    "registry62": {
+      "source_path": "validation/registry_v62r3_stage_v2/launch.json",
+      "observed_snapshot": "validation/original_plan_progress_20260928_v3/registry62.json",
+      "snapshot_sha256": "d07f861bf151ccdea4d5c36d52354a1dee2a484dd5f2b454e2dc41664f80a768",
+      "status": "running",
+      "value": {
+        "schema": "ncd.registry-v62-stage-launch.v1",
+        "status": "running",
+        "pid": 6096,
+        "queued_utc": "2026-09-28T11:28:49.444557+00:00",
+        "whole_project_complete": false,
+        "observed_live_heavy_jobs": [],
+        "started_utc": "2026-09-28T11:29:10.362712+00:00"
+      }
+    },
+    "registry63": {
+      "source_path": "validation/registry_v63_stage_v3/launch.json",
+      "observed_snapshot": "validation/original_plan_progress_20260928_v3/registry63.json",
+      "snapshot_sha256": "643af79b3427ad63e7fe7c53874fb1c7e3223d5766bf60a0bb46a9ae3df2e853",
+      "status": "queued",
+      "value": {
+        "schema": "ncd.registry-v62-stage-launch.v1",
+        "status": "queued",
+        "pid": 18264,
+        "queued_utc": "2026-09-28T11:41:52.898369+00:00",
+        "whole_project_complete": false,
+        "observed_live_heavy_jobs": [
+          {
+            "pid": 8836,
+            "command": "\"E:\\\u5b9e\u9a8c\\neural-causal-decompiler\\validation\\wheel_v62r3_env\\Scripts\\python.exe\" -I -u \"E:\\\u5b9e\u9a8c\\neural-causal-decompiler\\validation\\run_registry_v62r3_stage_v2.py\" "
+          },
+          {
+            "pid": 6096,
+            "command": "\"E:\\\u5b9e\u9a8c\\neural-causal-decompiler\\validation\\wheel_v62r3_env\\Scripts\\python.exe\" -I -u \"E:\\\u5b9e\u9a8c\\neural-causal-decompiler\\validation\\run_registry_v62r3_stage_v2.py\" "
+          },
+          {
+            "pid": 18324,
+            "command": "E:\\\u5b9e\u9a8c\\neural-causal-decompiler\\validation\\wheel_v62r3_env\\Scripts\\python.exe -I -u E:\\\u5b9e\u9a8c\\neural-causal-decompiler\\validation\\run_registry_v62r3_stage_v2.py --worker"
+          },
+          {
+            "pid": 11956,
+            "command": "E:\\\u5b9e\u9a8c\\neural-causal-decompiler\\validation\\wheel_v62r3_env\\Scripts\\python.exe -I -u E:\\\u5b9e\u9a8c\\neural-causal-decompiler\\validation\\run_registry_v62r3_stage_v2.py --worker"
+          }
+        ]
+      }
+    },
+    "mechanism_continuation": {
+      "source_path": "runs/historical_mechanism0_piecewise_v8/launch.json",
+      "observed_snapshot": "validation/original_plan_progress_20260928_v3/mechanism_continuation.json",
+      "snapshot_sha256": "7314587bce58e729b70c4cd1cd55fb661f2d489946c3358258636127b3f1df5e",
+      "status": "queued",
+      "value": {
+        "schema": "ncd.piecewise-resume-launch.v2",
+        "status": "queued",
+        "pid": 15188,
+        "queued_utc": "2026-09-28T11:41:53.263243+00:00",
+        "original_objective_achieved": false
+      }
+    },
+    "proof62_progress": {
+      "source_path": "runs/original_proof_registry_v4r3/progress.json",
+      "observed_snapshot": "validation/original_plan_progress_20260928_v3/proof62_progress.json",
+      "snapshot_sha256": "99d7fccb806cbe95859a71809d9291456516c91838f1ff9cd7ca2cc91e09c894",
+      "status": null,
+      "value": {
+        "retained_jobs": 12,
+        "declared_jobs": 12,
+        "overall_objective_achieved": false
+      }
+    }
+  },
+  "previous_progress_record_retained": "validation/original_plan_progress_20260928_v2.json"
+}

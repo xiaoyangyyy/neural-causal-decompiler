@@ -1,0 +1,59 @@
+{
+  "id": "full_discoverer_computation",
+  "job": {
+    "id": "full_discoverer_computation",
+    "kind": "full_neural_ssa",
+    "artifact": "E:\\实验\\neural-causal-decompiler\\runs\\full_neural_ssa_realization_v1\\manifest.json",
+    "artifact_sha256": "c4154e286025fdc83c135f3b8dc9207f568e931a2eb0c8b1844d33bbe7ee7466",
+    "related_claims": [
+      "R4.program_fidelity",
+      "R5.interchange",
+      "R5.intermediate_numeric",
+      "R5.composition",
+      "R12.semantic_equivalence",
+      "R13.reproduction"
+    ],
+    "original_claim_closed": false
+  },
+  "result": {
+    "status": "proved",
+    "verification": {
+      "conclusion": "proved",
+      "original_objective_achieved": false,
+      "status": "verified",
+      "targets": [
+        {
+          "all_compatible_subsets_proved": true,
+          "conclusion": "proved",
+          "device_rounding_certified": false,
+          "full_mathematical_output_fidelity": true,
+          "id": "teacher1193",
+          "instructions": 37460,
+          "mapped_coordinates": 1116,
+          "original_objective_achieved": false,
+          "status": "verified",
+          "tensor_groups": 43
+        },
+        {
+          "all_compatible_subsets_proved": true,
+          "conclusion": "proved",
+          "device_rounding_certified": false,
+          "full_mathematical_output_fidelity": true,
+          "id": "discoverer91",
+          "instructions": 37459,
+          "mapped_coordinates": 1116,
+          "original_objective_achieved": false,
+          "status": "verified",
+          "tensor_groups": 43
+        }
+      ],
+      "_resource_guard": {
+        "job_memory_limit_bytes": 8589934592,
+        "descendants_included": true,
+        "reported_peak_within_limit": true
+      }
+    },
+    "original_claim_closed": false,
+    "artifact_sha256": "c4154e286025fdc83c135f3b8dc9207f568e931a2eb0c8b1844d33bbe7ee7466"
+  }
+}

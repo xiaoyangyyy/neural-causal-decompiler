@@ -1,0 +1,575 @@
+{
+  "bounds": {
+    "collider_faithful": true,
+    "finite_sample_minimax_error_lower": "1/2",
+    "observational_covariances_equal": true,
+    "population_unique_mec_claim": "refuted",
+    "triangle_faithful": false
+  },
+  "collider": {
+    "extra_nodes": "isolated independent Gaussian roots",
+    "graph": [
+      [
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "latent_confounding": false,
+    "noise_law": "product-centered-Gaussian",
+    "noise_std": [
+      "7/20",
+      "7/20",
+      "7/20",
+      "7/20",
+      "7/20"
+    ],
+    "scales": [
+      "1",
+      "4/5",
+      "5/4",
+      "1",
+      "1"
+    ],
+    "weights": [
+      [
+        "0",
+        "15/16",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "3/4",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    ]
+  },
+  "collider_equivalence": {
+    "cpdag": [
+      [
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "dag_count": 1,
+    "skeleton": [
+      [
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "unshielded_colliders": [
+      [
+        0,
+        1,
+        2
+      ]
+    ]
+  },
+  "covariance_collider": [
+    [
+      "49/400",
+      "147/1600",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "147/1600",
+      "49/256",
+      "147/1600",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "147/1600",
+      "49/256",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "49/400",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "0",
+      "49/400"
+    ]
+  ],
+  "covariance_triangle": [
+    [
+      "49/400",
+      "147/1600",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "147/1600",
+      "49/256",
+      "147/1600",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "147/1600",
+      "49/256",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "49/400",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "0",
+      "49/400"
+    ]
+  ],
+  "determinant": "282475249/10240000000000",
+  "evidence_class": "true_causal_correctness",
+  "gaussian_CI_collider": [
+    {
+      "condition": [
+        2
+      ],
+      "conditional_numerator": "7203/409600",
+      "pair": [
+        0,
+        1
+      ],
+      "unconditional": "147/1600"
+    },
+    {
+      "condition": [
+        1
+      ],
+      "conditional_numerator": "-21609/2560000",
+      "pair": [
+        0,
+        2
+      ],
+      "unconditional": "0"
+    },
+    {
+      "condition": [
+        0
+      ],
+      "conditional_numerator": "7203/640000",
+      "pair": [
+        1,
+        2
+      ],
+      "unconditional": "147/1600"
+    }
+  ],
+  "gaussian_CI_triangle": [
+    {
+      "condition": [
+        2
+      ],
+      "conditional_numerator": "7203/409600",
+      "pair": [
+        0,
+        1
+      ],
+      "unconditional": "147/1600"
+    },
+    {
+      "condition": [
+        1
+      ],
+      "conditional_numerator": "-21609/2560000",
+      "pair": [
+        0,
+        2
+      ],
+      "unconditional": "0"
+    },
+    {
+      "condition": [
+        0
+      ],
+      "conditional_numerator": "7203/640000",
+      "pair": [
+        1,
+        2
+      ],
+      "unconditional": "147/1600"
+    }
+  ],
+  "generator_sha256": "9746dd2c23015e5138c65398065dfc20d1bb34cc8aaca2f5109e326eb1f19883",
+  "intervention": {
+    "collider_mean": [
+      "0",
+      "12/25",
+      "1",
+      "0",
+      "0"
+    ],
+    "distinguishing_variable": 1,
+    "target": 2,
+    "triangle_mean": [
+      "0",
+      "0",
+      "1",
+      "0",
+      "0"
+    ],
+    "value": "1"
+  },
+  "mode": "population",
+  "nodes": 5,
+  "one_row_KL": "0",
+  "original_objective_achieved": false,
+  "perturbation": "0",
+  "proof_dependencies": [
+    "linear images of independent Gaussians determined by mean and covariance",
+    "Gaussian conditional independence iff corresponding conditional covariance is zero",
+    "graph Markov equivalence iff same skeleton and unshielded colliders",
+    "IID KL adds over rows; equal covariance determinants remove log determinant ratio",
+    "two disjoint correct-output events have summed probability <=1+TV, including randomized estimators",
+    "TV<=sqrt(KL), obtained from Jensen for Bhattacharyya affinity and Cauchy-Schwarz; rational bound encloses sqrt"
+  ],
+  "requested_error_upper": "1/100",
+  "requirements_sha256": "04d608c94e83c8b77adaca81fcf4942826d3aa7d5d61152d6e895b010fcc724c",
+  "samples": 96,
+  "schema": "ncd.faithfulness-boundary-certificate.v1",
+  "scope": {
+    "arithmetic": "exact rational model parameters; ideal real SCM and Gaussian laws",
+    "canonical_coefficient_magnitude": [
+      "2/5",
+      "11/10"
+    ],
+    "estimator_family": "all measurable estimators, including randomized estimators",
+    "information": "only IID observational rows, no true graph/scales/noises/do data",
+    "known_math_is_not_project_innovation": true,
+    "nodes": [
+      3,
+      5,
+      8
+    ],
+    "noise": "independent centered Gaussian, common standard deviation 7/20",
+    "not_claimed": [
+      "hardware floating execution",
+      "exact rounded generator realization",
+      "almost-sure or 99-percent random-world performance",
+      "all estimators given interventions",
+      "failure under a justified positive strong-faithfulness floor",
+      "original R0-R13 closure"
+    ],
+    "observed_scales": "inside exp([-3/2,3/2]); unknown to observational estimator",
+    "target": "one correct graph Markov equivalence class (CPDAG); abstention counts as nonrecovery"
+  },
+  "status": "refuted",
+  "triangle": {
+    "extra_nodes": "isolated independent Gaussian roots",
+    "graph": [
+      [
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "latent_confounding": false,
+    "noise_law": "product-centered-Gaussian",
+    "noise_std": [
+      "7/20",
+      "7/20",
+      "7/20",
+      "7/20",
+      "7/20"
+    ],
+    "scales": [
+      "1",
+      "1",
+      "1",
+      "1",
+      "1"
+    ],
+    "weights": [
+      [
+        "0",
+        "3/4",
+        "-9/16",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "3/4",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    ]
+  },
+  "triangle_equivalence": {
+    "cpdag": [
+      [
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "dag_count": 6,
+    "skeleton": [
+      [
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    ],
+    "unshielded_colliders": []
+  },
+  "uncovered": [
+    "hardware floating execution",
+    "exact rounded generator realization",
+    "almost-sure or 99-percent random-world performance",
+    "all estimators given interventions",
+    "failure under a justified positive strong-faithfulness floor",
+    "original R0-R13 closure"
+  ]
+}

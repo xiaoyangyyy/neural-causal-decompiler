@@ -1,0 +1,35 @@
+{
+  "schema": "ncd.piecewise-mechanism-stage.v1",
+  "checkpoint": "runs/active_end_to_end_seed4993/worlds/n3_test_id_0/observational_graph/baseline/mechanism_0.pt",
+  "checkpoint_sha256": "20b62f0bd0f6ba0e36ee678fbd7401e8425fdb8720e28c80b4b588382e671b61",
+  "domain": [
+    [
+      "-1",
+      "1"
+    ],
+    [
+      "-1",
+      "1"
+    ],
+    [
+      "-1",
+      "1"
+    ]
+  ],
+  "epsilon": "1/100",
+  "output": "runs/historical_mechanism0_piecewise_v1",
+  "max_cells": 767,
+  "max_candidate_queries": 768,
+  "search_seconds": 21600,
+  "stage_seconds": 43200,
+  "threads": 2,
+  "memory_bytes": 8589934592,
+  "artifact_bytes": 8589934592,
+  "source_sha256": {
+    "proof_workbench/piecewise_mechanism.py": "0ac39febfc1e8b04ad6f5090066247650a1f18b21907e4737a131a7fc28e7b08"
+  },
+  "starts_after": "original_confirmation installed replay terminates",
+  "truth_access": false,
+  "grammar": "scalar input branches; CDIR affine leaves (at most two parent terms)",
+  "mdl_claim": "current upper bound only; no minimality or uniqueness proof"
+}

@@ -1,0 +1,120 @@
+{
+  "schema": "ncd.affine-quotient-acceptance.v1",
+  "case_count": 8,
+  "certified_count": 7,
+  "unresolved_count": 1,
+  "records": [
+    {
+      "name": "frozen_affine_d8",
+      "model": "runs/certified_continuous_scale_seed4701/profiles/profile_000/system.json",
+      "state_dim": 8,
+      "action_dim": 2,
+      "result": {
+        "status": "certified",
+        "quotient_dim": 8,
+        "proof": "cyclic-triangular-delayed-observation"
+      },
+      "model_sha256": "0941551b0d89b1d813503728b1742ba816dbe04b09c0aaea5d5844ea5ed84316",
+      "certificate_sha256": "31ced19537e7a8f1bc89172626bf4b67de7174baa93be5e25f3661f3d1067cd0"
+    },
+    {
+      "name": "frozen_affine_d32",
+      "model": "runs/certified_continuous_scale_seed4701/profiles/profile_001/system.json",
+      "state_dim": 32,
+      "action_dim": 3,
+      "result": {
+        "status": "certified",
+        "quotient_dim": 32,
+        "proof": "cyclic-triangular-delayed-observation"
+      },
+      "model_sha256": "aaf5b547d0e3882a3a3ef89979fed3ce2345c4d3c9a0fbb728bc85acd60d3924",
+      "certificate_sha256": "f85451b99f111fbc33337d2c6ec53bf33cbc208e011a7ad939f372a11d46cc30"
+    },
+    {
+      "name": "frozen_affine_d64",
+      "model": "runs/certified_continuous_scale_seed4701/profiles/profile_002/system.json",
+      "state_dim": 64,
+      "action_dim": 4,
+      "result": {
+        "status": "certified",
+        "quotient_dim": 64,
+        "proof": "cyclic-triangular-delayed-observation"
+      },
+      "model_sha256": "87c742e0a6a16f737d57270a689d324fa1ebed839009ce0f2ea56c3d417e0fe3",
+      "certificate_sha256": "9d8066966d7f5694a1dd151862c3f13c683051cdbdf160fd516f6554a3742c77"
+    },
+    {
+      "name": "frozen_affine_d128",
+      "model": "runs/certified_continuous_scale_seed4701/profiles/profile_003/system.json",
+      "state_dim": 128,
+      "action_dim": 5,
+      "result": {
+        "status": "certified",
+        "quotient_dim": 128,
+        "proof": "cyclic-triangular-delayed-observation"
+      },
+      "model_sha256": "509a842b5957ae55f65d4f23d09bb368a2b33b9ba0c90044a5119b891f469380",
+      "certificate_sha256": "79b950f379145e5c1a9a3ed420e4ce648a127620c419a53e2e18dea57f6860a0"
+    },
+    {
+      "name": "ablated_affine_d128",
+      "model": "runs/affine_quotient_global_v1/controls/ablated_affine_d128/system.json",
+      "state_dim": 128,
+      "action_dim": 5,
+      "result": {
+        "status": "certified",
+        "quotient_dim": 4,
+        "proof": "closed-coordinate-projection"
+      },
+      "model_sha256": "fefa544a17e89546176f2f4b122592693c8ba348936f356f3e73e04129017d65",
+      "certificate_sha256": "0a4899cd9514b687f7bd38c5d712b660b0685a2bc54f62b2af128475ec3a2ac5"
+    },
+    {
+      "name": "mixed_sum_d2",
+      "model": "runs/affine_quotient_global_v1/controls/mixed_sum_d2/system.json",
+      "state_dim": 2,
+      "action_dim": 1,
+      "result": {
+        "status": "certified",
+        "quotient_dim": 1,
+        "proof": "exact-observability-row-space"
+      },
+      "model_sha256": "47f55111a6d3e4c33d006c884917bd858768abe715114f78abe1d101e4bddb76",
+      "certificate_sha256": "a2f04873dded14fc5b002b5c05dea5b6777ab5fc5fd3b9717fb45bfce97d38de"
+    },
+    {
+      "name": "constant_output_d2",
+      "model": "runs/affine_quotient_global_v1/controls/constant_output_d2/system.json",
+      "state_dim": 2,
+      "action_dim": 1,
+      "result": {
+        "status": "certified",
+        "quotient_dim": 0,
+        "proof": "constant-observation"
+      },
+      "model_sha256": "c7c47b7fa8af5a45931a526a1696a7462e3aeb41c4f61017ac73e4a153e9a1e2",
+      "certificate_sha256": "8b286c332bbdb29cd7dadf949e02e159c4a773b9c360f8ec6e8a005b66201579"
+    },
+    {
+      "name": "nonlinear_phase_boundary",
+      "model": "runs/functional_support_global_v1/controls/narrow_tent/system.json",
+      "state_dim": 1,
+      "action_dim": 1,
+      "result": {
+        "status": "unresolved",
+        "quotient_dim": null,
+        "proof": null
+      },
+      "model_sha256": "8a1c064f966a314d86ec83a0f363586b512240d60b11c7e52449cd4d052f42c2",
+      "certificate_sha256": "ba6e137af8e8ca77fa6612d6c32e42e1d2dc2ca6764f5beceaa92fdb4202717b"
+    }
+  ],
+  "exact_vs_approximate": {
+    "model": "profile_003",
+    "exact_quotient_dimension": 128,
+    "epsilon": "0.17",
+    "finite_state_lower": 81,
+    "finite_state_upper": "40824",
+    "delayed_witness_horizon": 124
+  }
+}

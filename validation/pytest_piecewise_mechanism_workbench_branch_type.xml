@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="3" time="2.084" timestamp="2026-09-28T16:31:46.915865+08:00" hostname="DESKTOP-B5O3UI0"><testcase classname="tests.test_piecewise_mechanism_workbench" name="test_affine_cells_cover_entire_domain_and_boundaries" time="0.919"><failure message="ValueError: Scalar comparison required">def test_affine_cells_cover_entire_domain_and_boundaries():
+        domain=[['-1','1'],['-1','1']]
+        c=certify_piecewise(example(),domain,max_cells=511,seconds=10)
+        assert verify_piecewise(c)['conclusion']=='proved'
+&gt;       ast=Node.from_dict(program(c));x=np.array([[a,b] for a in np.linspace(-1,1,41) for b in np.linspace(-1,1,41)])
+                           ^^^^^^^^^^
+
+tests\test_piecewise_mechanism_workbench.py:22: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+proof_workbench\piecewise_mechanism.py:144: in program
+    expression=emit(0);Node.from_dict(expression)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^
+ncd\cdir.py:64: in from_dict
+    return cls(d["op"],tuple(cls.from_dict(a,depth+1) for a in d.get("args",())),float(d.get("value",0)),int(d.get("index",0)))
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ncd\cdir.py:64: in &lt;genexpr&gt;
+    return cls(d["op"],tuple(cls.from_dict(a,depth+1) for a in d.get("args",())),float(d.get("value",0)),int(d.get("index",0)))
+                             ^^^^^^^^^^^^^^^^^^^^^^^^
+ncd\cdir.py:64: in from_dict
+    return cls(d["op"],tuple(cls.from_dict(a,depth+1) for a in d.get("args",())),float(d.get("value",0)),int(d.get("index",0)))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+&lt;string&gt;:7: in __init__
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = Node(op='lt', args=(Node(op='var', args=(), value=0.0, index=0), Node(op='constant', args=(), value=0.0, index=0)), value=0.0, index=0)
+
+    def __post_init__(self):
+        arities={"var":0,"constant":0,"add":2,"sub":2,"mul":2,"div":2,"abs":1,"sin":1,"cos":1,
+                 "tanh":1,"square":1,"sqrt":1,"log":1,"mean":1,"var_stat":1,"skew":1,"kurt":1,"cov":2,"dep":2,
+                 "mi":2,"regress":2,"residual":2,"partial":3,"lt":2,"gt":2,"and":2,"or":2,"not":1,"if":3}
+        if self.op=="columns":
+            if not self.args or any(a.kind!="vector" for a in self.args):raise ValueError("columns needs vectors")
+            return
+        if self.op not in arities or len(self.args)!=arities[self.op]:raise ValueError("Invalid IR arity/operator")
+        if any(not isinstance(a,Node) for a in self.args):raise ValueError("IR child must be Node")
+        if self.op=="constant" and not np.isfinite(self.value):raise ValueError("Non-finite constant")
+        if self.op=="var" and (not isinstance(self.index,int) or self.index&lt;0):raise ValueError("Invalid variable index")
+        if self.op in ("mean","var_stat","skew","kurt") and self.args[0].kind!="vector":raise ValueError("Statistic needs vector")
+        if self.op in ("dep","mi","cov","residual") and any(a.kind!="vector" for a in self.args):raise ValueError("Vector operands required")
+        if self.op=="partial" and (self.args[0].kind!="vector" or self.args[1].kind!="vector" or self.args[2].kind not in ("vector","matrix")):
+            raise ValueError("partial needs two vectors and conditioning predictors")
+        if self.op=="regress" and (self.args[0].kind!="vector" or self.args[1].kind not in ("vector","matrix")):
+            raise ValueError("regress(response,predictors)")
+&gt;       if self.op in ("lt","gt") and any(a.kind!="scalar" for a in self.args):raise ValueError("Scalar comparison required")
+                                                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       ValueError: Scalar comparison required
+
+ncd\cdir.py:45: ValueError</failure></testcase><testcase classname="tests.test_piecewise_mechanism_workbench" name="test_budget_exhaustion_retains_unresolved_cells_and_resume_contract" time="0.780" /><testcase classname="tests.test_piecewise_mechanism_workbench" name="test_gradients_are_real_network_derivatives_including_saturation" time="0.015" /></testsuite></testsuites>

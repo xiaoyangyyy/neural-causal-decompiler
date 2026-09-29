@@ -1,0 +1,174 @@
+{
+  "schema": "ncd.normalizer-cdir-program.v1",
+  "columns": 2,
+  "minimum_samples": 16,
+  "floor": "5902958103587057/590295810358705651712",
+  "clip": [
+    "-20",
+    "20"
+  ],
+  "operators": [
+    "mean",
+    "var_stat",
+    "sqrt",
+    "lt",
+    "if",
+    "sub",
+    "div",
+    "clip"
+  ],
+  "coordinates": [
+    {
+      "column": 0,
+      "normalized_expression": {
+        "op": "div",
+        "args": [
+          {
+            "op": "sub",
+            "args": [
+              {
+                "op": "var",
+                "index": 0
+              },
+              {
+                "op": "mean",
+                "args": [
+                  {
+                    "op": "var",
+                    "index": 0
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "op": "if",
+            "args": [
+              {
+                "op": "lt",
+                "args": [
+                  {
+                    "op": "sqrt",
+                    "args": [
+                      {
+                        "op": "var_stat",
+                        "args": [
+                          {
+                            "op": "var",
+                            "index": 0
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "op": "constant",
+                    "value": 1e-05
+                  }
+                ]
+              },
+              {
+                "op": "constant",
+                "value": 1e-05
+              },
+              {
+                "op": "sqrt",
+                "args": [
+                  {
+                    "op": "var_stat",
+                    "args": [
+                      {
+                        "op": "var",
+                        "index": 0
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "column": 1,
+      "normalized_expression": {
+        "op": "div",
+        "args": [
+          {
+            "op": "sub",
+            "args": [
+              {
+                "op": "var",
+                "index": 1
+              },
+              {
+                "op": "mean",
+                "args": [
+                  {
+                    "op": "var",
+                    "index": 1
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "op": "if",
+            "args": [
+              {
+                "op": "lt",
+                "args": [
+                  {
+                    "op": "sqrt",
+                    "args": [
+                      {
+                        "op": "var_stat",
+                        "args": [
+                          {
+                            "op": "var",
+                            "index": 1
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "op": "constant",
+                    "value": 1e-05
+                  }
+                ]
+              },
+              {
+                "op": "constant",
+                "value": 1e-05
+              },
+              {
+                "op": "sqrt",
+                "args": [
+                  {
+                    "op": "var_stat",
+                    "args": [
+                      {
+                        "op": "var",
+                        "index": 1
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "clip_intrinsic": "coordinatewise max(lower,min(upper,z)); three disjoint exact cases",
+  "control_variables": [
+    "mean_x",
+    "mean_y",
+    "std_x",
+    "std_y"
+  ],
+  "neural_remainder": "the original unchanged frozen encoder/head continuation; not symbolically recovered"
+}

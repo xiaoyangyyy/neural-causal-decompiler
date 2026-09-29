@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "ncd-neural-ssa-proof"
+version = "0.1.0"
+description = "Source-bound full primitive realization of fixed Discoverer networks"
+requires-python = ">=3.11"
+dependencies = ["neural-causal-decompiler==0.59.0", "ncd-normalizer-proof==0.1.0"]
+[project.scripts]
+ncd-neural-ssa-proof = "neural_ssa_proof.__main__:main"
+[tool.setuptools]
+packages = ["neural_ssa_proof"]

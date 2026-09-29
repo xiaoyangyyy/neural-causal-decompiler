@@ -1,0 +1,127 @@
+{
+  "protocol": "docs/END_TO_END_MECHANISM_PROTOCOL.md",
+  "runs": [
+    {
+      "seed": 3793,
+      "replayed": true,
+      "graph": {
+        "exact_accuracy": 0.0,
+        "mean_shd": 4.466666666666667
+      },
+      "aggregate": {
+        "inferred_graph": {
+          "baseline": {
+            "parent_exact_fraction": 0.4527777777777778,
+            "operator_exact_fraction": 0.29888888888888887,
+            "interaction_exact_fraction": 0.8466666666666666,
+            "mean_symbolic_neural_nmse": 0.008947272426864876,
+            "mean_symbolic_truth_nmse": 0.492461779702542,
+            "mean_intervention_effect_mae": 0.7044941545175462,
+            "mean_nonconstant_atoms": 2.555
+          },
+          "structured": {
+            "parent_exact_fraction": 0.4444444444444445,
+            "operator_exact_fraction": 0.3622222222222222,
+            "interaction_exact_fraction": 0.8822222222222222,
+            "mean_symbolic_neural_nmse": 0.00469001362102711,
+            "mean_symbolic_truth_nmse": 0.4918034376606265,
+            "mean_intervention_effect_mae": 0.13467386956702096,
+            "mean_nonconstant_atoms": 1.152222222222222
+          }
+        },
+        "oracle_graph_diagnostic": {
+          "baseline": {
+            "parent_exact_fraction": 1.0,
+            "operator_exact_fraction": 0.49166666666666664,
+            "interaction_exact_fraction": 0.8816666666666666,
+            "mean_symbolic_neural_nmse": 0.006795031496320297,
+            "mean_symbolic_truth_nmse": 0.25896096250867123,
+            "mean_intervention_effect_mae": 0.06724797500945026,
+            "mean_nonconstant_atoms": 2.427777777777778
+          },
+          "structured": {
+            "parent_exact_fraction": 1.0,
+            "operator_exact_fraction": 0.7,
+            "interaction_exact_fraction": 0.89,
+            "mean_symbolic_neural_nmse": 0.004698487879530285,
+            "mean_symbolic_truth_nmse": 0.24967352067388843,
+            "mean_intervention_effect_mae": 0.03754891809888231,
+            "mean_nonconstant_atoms": 0.9066666666666666
+          }
+        }
+      },
+      "inferred_structured_neural_lower": true
+    },
+    {
+      "seed": 3794,
+      "replayed": true,
+      "graph": {
+        "exact_accuracy": 0.13333333333333333,
+        "mean_shd": 4.2
+      },
+      "aggregate": {
+        "inferred_graph": {
+          "baseline": {
+            "parent_exact_fraction": 0.48000000000000004,
+            "operator_exact_fraction": 0.265,
+            "interaction_exact_fraction": 0.7961111111111111,
+            "mean_symbolic_neural_nmse": 0.005066903649013474,
+            "mean_symbolic_truth_nmse": 0.4502544881632908,
+            "mean_intervention_effect_mae": 0.2867281515065894,
+            "mean_nonconstant_atoms": 2.735
+          },
+          "structured": {
+            "parent_exact_fraction": 0.5016666666666666,
+            "operator_exact_fraction": 0.4083333333333333,
+            "interaction_exact_fraction": 0.8394444444444444,
+            "mean_symbolic_neural_nmse": 0.006704219266618605,
+            "mean_symbolic_truth_nmse": 0.4482909253149891,
+            "mean_intervention_effect_mae": 0.17729824456083498,
+            "mean_nonconstant_atoms": 1.2583333333333333
+          }
+        },
+        "oracle_graph_diagnostic": {
+          "baseline": {
+            "parent_exact_fraction": 1.0,
+            "operator_exact_fraction": 0.3861111111111111,
+            "interaction_exact_fraction": 0.8694444444444444,
+            "mean_symbolic_neural_nmse": 0.00479201183898798,
+            "mean_symbolic_truth_nmse": 0.16031781069654,
+            "mean_intervention_effect_mae": 496.6765740750548,
+            "mean_nonconstant_atoms": 2.703333333333333
+          },
+          "structured": {
+            "parent_exact_fraction": 1.0,
+            "operator_exact_fraction": 0.6222222222222221,
+            "interaction_exact_fraction": 0.8994444444444445,
+            "mean_symbolic_neural_nmse": 0.006556537590166754,
+            "mean_symbolic_truth_nmse": 0.1552704150186686,
+            "mean_intervention_effect_mae": 0.0627482744482625,
+            "mean_nonconstant_atoms": 1.021111111111111
+          }
+        }
+      },
+      "inferred_structured_neural_lower": false
+    }
+  ],
+  "pooled": {
+    "inferred_baseline_neural_nmse": 0.007007088037939175,
+    "inferred_structured_neural_nmse": 0.005697116443822857,
+    "relative_neural_reduction": 0.18694949842553826,
+    "truth_ratio_vs_inferred_baseline": 0.997218776232479,
+    "intervention_ratio_vs_inferred_baseline": 0.31473475953058266,
+    "inferred_to_oracle_structured_truth_ratio": 2.321542021287009,
+    "inferred_to_oracle_structured_intervention_ratio": 3.1104770353488522
+  },
+  "criteria": {
+    "complete_replay": true,
+    "full_coverage": true,
+    "inferred_neural_lower_each_seed": false,
+    "pooled_neural_reduction_at_least_20pct": false,
+    "truth_and_intervention_safeguards": true,
+    "complexity_no_higher": true,
+    "within_25pct_of_oracle": false
+  },
+  "passed": false,
+  "claim": "finite end-to-end benchmark result; not graph identifiability or universal decompilation"
+}

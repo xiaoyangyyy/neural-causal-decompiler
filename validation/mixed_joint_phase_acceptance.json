@@ -1,0 +1,545 @@
+{
+  "schema": "ncd.mixed-joint-phase-acceptance.v1",
+  "status": "accepted",
+  "protocol_sha256": "becde8960089c22f64a6747c17d3c0b3684a5dc96f015131859f293b0b603857",
+  "seeds": [
+    7101,
+    7102
+  ],
+  "dimensions": [
+    8,
+    32,
+    64,
+    128
+  ],
+  "cases": [
+    {
+      "status": "verified",
+      "seed": 7101,
+      "state_dim": 8,
+      "model_sha256": "3895ab06b55185ee5206f1e628eabac4e04955f93d4f4567d2642be0c2d9dd0c",
+      "training_sha256": "99c2aedcce7940b9966fa8186943f4c723098000ae8852f173f4b8f046da5feb",
+      "checkpoint_sha256": "031d21dcb44e3d0f7eb200dcfb3928a3dc8b29f4a7f1aff21c77e795d1eba7c5",
+      "recurrent_certificate_sha256": "f8384d40c4e6c3b9b37272e8a784de2e9e5b483cf8c771afc82bb4df8b9873a0",
+      "mixed_witness_sha256": "50e7924c4ea9d5915778c878808af634f48e35bbfa42222543ab8d88f46729dc",
+      "initial_certificate_sha256": "4d025bced8bb3d77cf44434fa26fc3cacbbdf1d5604a7520f5dee36e74091c16",
+      "closure_certificate_sha256": "cd063de0af1cc8d55cc7d7668c640f5067f8e1612e03a03d8a2520d0bf6827fa",
+      "program_sha256": "d9f6f0625002bd9ecd4361e64826dc10340022cf79ac46e509663f6fbcce6430",
+      "lower_certificate_sha256": "f6643927ab79b1d4ba80226b796726536d355c4544900fe1f6327297f261f58f",
+      "minimum_state_interval": [
+        82,
+        135
+      ],
+      "original_weighted_upper": "2250",
+      "minimum_initial_label_count": 81,
+      "initial_states": 81,
+      "recurrent_states": 54,
+      "action_template_count": 62,
+      "mixed_rectangle_difference": "8847575866849542420794137631021/5192296858534827628530496329220096",
+      "mixed_observed_coordinate": 0,
+      "mixed_hidden_units_checked": 32,
+      "joint_vertices_checked": 1348,
+      "minimum_handoff_slack": "805008340265186918018806378855583237/49846049841934345233892764760512921600",
+      "test_metrics": {
+        "rmse": 0.001804388584540547,
+        "max_error": 0.0069141062944382825
+      },
+      "parameter_changes": [
+        {
+          "parameter_group": "hidden_weights",
+          "allowed_parameter_count": 128,
+          "changed_parameter_count": 128,
+          "maximum_change": 0.5687036294167521
+        },
+        {
+          "parameter_group": "hidden_biases",
+          "allowed_parameter_count": 32,
+          "changed_parameter_count": 32,
+          "maximum_change": 0.4065981095481599
+        },
+        {
+          "parameter_group": "output_weights",
+          "allowed_parameter_count": 32,
+          "changed_parameter_count": 32,
+          "maximum_change": 0.3639406136257658
+        },
+        {
+          "parameter_group": "output_biases",
+          "allowed_parameter_count": 8,
+          "changed_parameter_count": 8,
+          "maximum_change": 0.13271986710107356
+        }
+      ],
+      "training_replayed": true,
+      "standalone_smoke": {
+        "traces": 3,
+        "actions_per_trace": 5,
+        "maximum_observed_error": "1/6",
+        "backend": "standalone program only"
+      }
+    },
+    {
+      "status": "verified",
+      "seed": 7101,
+      "state_dim": 32,
+      "model_sha256": "87eece3ec9b6590c919acdcf1f93fe42137d1ed6b00a8b46642e9182a9e6b494",
+      "training_sha256": "a17a2485d30b674f407c3ae902564ebc71e6b0f99e042273a3b698b0d63d43c1",
+      "checkpoint_sha256": "97d8f7d449784efd0eb6cad8f2ad1e696616d8ec700a96f31023c23707ffb4b9",
+      "recurrent_certificate_sha256": "3e7e8a6f8ec9a6c4db2b412746f2c799e2a2e481529e5e48e39677ac06dfbe71",
+      "mixed_witness_sha256": "e47fc113f9977e2d54dda8c6632d4ab28f64448903b26aba98fab2729af309eb",
+      "initial_certificate_sha256": "3046718317fe57ec470dbffc1c397dfe0e28e4dea4d94789ffd6daa173a5e27c",
+      "closure_certificate_sha256": "365e009b3c3101b7529e9bf8652e40d7747834320928b01ba799225cbcb20614",
+      "program_sha256": "8649e85e5d5b98f23ac323e5753f1026df880cce525d0e54d613d88c3bc5453f",
+      "lower_certificate_sha256": "93da53b2ad2b62899ba06203d95b0d583cda701547bd5045ac8baf6672475b92",
+      "minimum_state_interval": [
+        82,
+        135
+      ],
+      "original_weighted_upper": "2250",
+      "minimum_initial_label_count": 81,
+      "initial_states": 81,
+      "recurrent_states": 54,
+      "action_template_count": 5,
+      "mixed_rectangle_difference": "6700702366519433470245604161591/1298074214633706907132624082305024",
+      "mixed_observed_coordinate": 0,
+      "mixed_hidden_units_checked": 128,
+      "joint_vertices_checked": 1780,
+      "minimum_handoff_slack": "134985127609933966116809590553051829961/6380294379767596189938273889345653964800",
+      "test_metrics": {
+        "rmse": 0.0019989305673029653,
+        "max_error": 0.022322354833126473
+      },
+      "parameter_changes": [
+        {
+          "parameter_group": "hidden_weights",
+          "allowed_parameter_count": 512,
+          "changed_parameter_count": 504,
+          "maximum_change": 0.7524487925104342
+        },
+        {
+          "parameter_group": "hidden_biases",
+          "allowed_parameter_count": 128,
+          "changed_parameter_count": 122,
+          "maximum_change": 0.6686219290468634
+        },
+        {
+          "parameter_group": "output_weights",
+          "allowed_parameter_count": 128,
+          "changed_parameter_count": 122,
+          "maximum_change": 0.5887444902194914
+        },
+        {
+          "parameter_group": "output_biases",
+          "allowed_parameter_count": 32,
+          "changed_parameter_count": 32,
+          "maximum_change": 0.1811828408921057
+        }
+      ],
+      "training_replayed": true,
+      "standalone_smoke": {
+        "traces": 3,
+        "actions_per_trace": 5,
+        "maximum_observed_error": "1/6",
+        "backend": "standalone program only"
+      }
+    },
+    {
+      "status": "verified",
+      "seed": 7101,
+      "state_dim": 64,
+      "model_sha256": "9a6e82b18e5d48db8b11d565eb345d7b9c36e5f07cf5b1606cf5f42d55910b79",
+      "training_sha256": "c55d94097e11a32c8203eb6836885f70a474cd8d7bbe47317cf3b743e516aaa8",
+      "checkpoint_sha256": "cdebc8c2bbd72b4b40044b7131ec899355d956fe824ff3c915c8ebd0f312aa89",
+      "recurrent_certificate_sha256": "b199eae04b8606b5c1b79ca471a927ba71ba47a393b95d4546d0b99db56435aa",
+      "mixed_witness_sha256": "9bc387773e56382c6cee80326e0b3562688cefb34e4e373c71a59209b08a7717",
+      "initial_certificate_sha256": "8b7c8a239af7619ab74d3ae56a13d2f6164130d5888bf90189d4d2f905573a60",
+      "closure_certificate_sha256": "deaee6ccbea8d8862eaa13f908e09e60634e6cbf5dab4edfb4906feae7915fee",
+      "program_sha256": "ba47a6b568fd401ef87bd49e8e65535b0a41d4637c84df1eb032aefad9f33292",
+      "lower_certificate_sha256": "3041301db76eb317b1837c2adc15f012df2b4e3cee3603f417b6f23af65a3298",
+      "minimum_state_interval": [
+        82,
+        135
+      ],
+      "original_weighted_upper": "2250",
+      "minimum_initial_label_count": 81,
+      "initial_states": 81,
+      "recurrent_states": 54,
+      "action_template_count": 8,
+      "mixed_rectangle_difference": "50037897850437946406056737055155/5192296858534827628530496329220096",
+      "mixed_observed_coordinate": 0,
+      "mixed_hidden_units_checked": 256,
+      "joint_vertices_checked": 2972,
+      "minimum_handoff_slack": "685047385493439848945015721936696033/33230699894622896822595176507008614400",
+      "test_metrics": {
+        "rmse": 0.002115298989921454,
+        "max_error": 0.018764100909163223
+      },
+      "parameter_changes": [
+        {
+          "parameter_group": "hidden_weights",
+          "allowed_parameter_count": 1024,
+          "changed_parameter_count": 1005,
+          "maximum_change": 0.689078226657449
+        },
+        {
+          "parameter_group": "hidden_biases",
+          "allowed_parameter_count": 256,
+          "changed_parameter_count": 245,
+          "maximum_change": 0.5875904027559797
+        },
+        {
+          "parameter_group": "output_weights",
+          "allowed_parameter_count": 256,
+          "changed_parameter_count": 245,
+          "maximum_change": 0.5205216978908829
+        },
+        {
+          "parameter_group": "output_biases",
+          "allowed_parameter_count": 64,
+          "changed_parameter_count": 64,
+          "maximum_change": 0.15668678988360069
+        }
+      ],
+      "training_replayed": true,
+      "standalone_smoke": {
+        "traces": 3,
+        "actions_per_trace": 5,
+        "maximum_observed_error": "1/6",
+        "backend": "standalone program only"
+      }
+    },
+    {
+      "status": "verified",
+      "seed": 7101,
+      "state_dim": 128,
+      "model_sha256": "051d42c443c07b3eae5bc4f447d57a0de959272017022ceb9fc151192be5f4d3",
+      "training_sha256": "e4487586fd1c8fc668cc9d4b0cf85237837baddf4ec7dea0b13a4e6d57267811",
+      "checkpoint_sha256": "db91fa67a0eab243b45e5be15fec925685727651af1677b0fedee4eed3d5136c",
+      "recurrent_certificate_sha256": "1940f7578478f72a7269e29e2f66c33628ae47b41182f0a0a865c5d767b97935",
+      "mixed_witness_sha256": "cfbc38db37d22790ac8074bde750e72971ff6edf99819e7dde34c863015fc678",
+      "initial_certificate_sha256": "d97c526058674082254ba7d69683df0865068d4579c31b2e7a924ebcc330dbad",
+      "closure_certificate_sha256": "4d1a9deb3a2c7f2b755defc65fbc9b04c5680d080caee62d0edc651831137ebc",
+      "program_sha256": "47c4db972d35b5459da23e69f671d873dbcb9c3772910051195dc9146b39ddb9",
+      "lower_certificate_sha256": "0b60225a85c652488887c21dd6bbf7fd980eaace9d1e8dabcd8f99576306a734",
+      "minimum_state_interval": [
+        82,
+        135
+      ],
+      "original_weighted_upper": "2250",
+      "minimum_initial_label_count": 81,
+      "initial_states": 81,
+      "recurrent_states": 54,
+      "action_template_count": 8,
+      "mixed_rectangle_difference": "7768178706783452712045186186135/10384593717069655257060992658440192",
+      "mixed_observed_coordinate": 0,
+      "mixed_hidden_units_checked": 512,
+      "joint_vertices_checked": 6156,
+      "minimum_handoff_slack": "2655779260135909288523423177818697757/132922799578491587290380706028034457600",
+      "test_metrics": {
+        "rmse": 0.001992664316023609,
+        "max_error": 0.022589115411086005
+      },
+      "parameter_changes": [
+        {
+          "parameter_group": "hidden_weights",
+          "allowed_parameter_count": 2048,
+          "changed_parameter_count": 2013,
+          "maximum_change": 0.9015898238374832
+        },
+        {
+          "parameter_group": "hidden_biases",
+          "allowed_parameter_count": 512,
+          "changed_parameter_count": 491,
+          "maximum_change": 0.5849769264818905
+        },
+        {
+          "parameter_group": "output_weights",
+          "allowed_parameter_count": 512,
+          "changed_parameter_count": 491,
+          "maximum_change": 0.49144740355045025
+        },
+        {
+          "parameter_group": "output_biases",
+          "allowed_parameter_count": 128,
+          "changed_parameter_count": 128,
+          "maximum_change": 0.2069735440603016
+        }
+      ],
+      "training_replayed": true,
+      "standalone_smoke": {
+        "traces": 3,
+        "actions_per_trace": 5,
+        "maximum_observed_error": "1/6",
+        "backend": "standalone program only"
+      }
+    },
+    {
+      "status": "verified",
+      "seed": 7102,
+      "state_dim": 8,
+      "model_sha256": "6445a190df2292fa468acb16d2ccddbf656223fe7409d3d5900f2f4c55a9a966",
+      "training_sha256": "2519be93c04ef0687993c233c93e3cfd737aff780bfddb95c5caf406cd013e33",
+      "checkpoint_sha256": "ead215758a1fcc89f5c3b8c0288c8e7c925d072f86b7c8ec29d4c8a8c86ce3d7",
+      "recurrent_certificate_sha256": "85041874b17555c2b5b6b94eec4eea0a32db53f8505a60a366b46bf38491a2e5",
+      "mixed_witness_sha256": "e5e98e5f6290350850ed26b0fef445350d60fb7cb215381f5f631b572db3b67e",
+      "initial_certificate_sha256": "e0ac8d635350aba8b5d0f7686946cfe64a47a5b6f863bffdac627fd4cd038e1e",
+      "closure_certificate_sha256": "48855997c8ed35c23543657d329c1652e0cad58fbab99a2072f5172f4ff802fc",
+      "program_sha256": "6e6bdeea8b92c3b959eea88c61898a44367fd761588734b039e51c081c174021",
+      "lower_certificate_sha256": "626f74f8538a29e572f4c64658978e9e7f63f1f7ea217fed7df73031422011cd",
+      "minimum_state_interval": [
+        82,
+        135
+      ],
+      "original_weighted_upper": "2250",
+      "minimum_initial_label_count": 81,
+      "initial_states": 81,
+      "recurrent_states": 54,
+      "action_template_count": 15,
+      "mixed_rectangle_difference": "339482926560333984088399255328903/20769187434139310514121985316880384",
+      "mixed_observed_coordinate": 0,
+      "mixed_hidden_units_checked": 32,
+      "joint_vertices_checked": 1188,
+      "minimum_handoff_slack": "2031522241260793806940563744428252099/99692099683868690467785529521025843200",
+      "test_metrics": {
+        "rmse": 0.0019397541219432395,
+        "max_error": 0.01684276751011006
+      },
+      "parameter_changes": [
+        {
+          "parameter_group": "hidden_weights",
+          "allowed_parameter_count": 128,
+          "changed_parameter_count": 126,
+          "maximum_change": 0.6881837954828685
+        },
+        {
+          "parameter_group": "hidden_biases",
+          "allowed_parameter_count": 32,
+          "changed_parameter_count": 30,
+          "maximum_change": 0.30633101510151334
+        },
+        {
+          "parameter_group": "output_weights",
+          "allowed_parameter_count": 32,
+          "changed_parameter_count": 30,
+          "maximum_change": 0.3832666861549354
+        },
+        {
+          "parameter_group": "output_biases",
+          "allowed_parameter_count": 8,
+          "changed_parameter_count": 8,
+          "maximum_change": 0.11859974844993629
+        }
+      ],
+      "training_replayed": true,
+      "standalone_smoke": {
+        "traces": 3,
+        "actions_per_trace": 5,
+        "maximum_observed_error": "1/6",
+        "backend": "standalone program only"
+      }
+    },
+    {
+      "status": "verified",
+      "seed": 7102,
+      "state_dim": 32,
+      "model_sha256": "2ac4e89a9881ee2697534640041c0c8039a86d524db9417bd0a9b680bb308cff",
+      "training_sha256": "18f7eddcd62e0d22e4a5029f46afaeb242128e5b3d4d9118dde9f45a705eb227",
+      "checkpoint_sha256": "c15e7c8e339935947e73fa3854fcdc4d3c51e5b9d456e017df14114466d93b05",
+      "recurrent_certificate_sha256": "7414aa090317098c67a1eccfbcf98006310d43ac3e428db544f04f615745d263",
+      "mixed_witness_sha256": "10c2692488ba9cb0f7ac91921f45e292ab86fc5c33f35c42769fff3ce8f16574",
+      "initial_certificate_sha256": "edb02bfbba2e3aeecefb6a5994c0704a19e1bccab01ff9a6ae9c500fa8225cf1",
+      "closure_certificate_sha256": "b03c42315a1bc13b466f9d1427edd694fd6d416bd2d9edf1e6109d3d7e189db0",
+      "program_sha256": "8b56cbf535cd308cd255c03555ba7c7350a1bb8b8802de287b257620831649ef",
+      "lower_certificate_sha256": "e7874092f9cd410a1c12ac83264a5308a24f021c195444e07fe8395529d82741",
+      "minimum_state_interval": [
+        82,
+        135
+      ],
+      "original_weighted_upper": "2250",
+      "minimum_initial_label_count": 81,
+      "initial_states": 81,
+      "recurrent_states": 54,
+      "action_template_count": 13,
+      "mixed_rectangle_difference": "10724208267058788027946043030315/10384593717069655257060992658440192",
+      "mixed_observed_coordinate": 0,
+      "mixed_hidden_units_checked": 128,
+      "joint_vertices_checked": 2284,
+      "minimum_handoff_slack": "4221919757963488893815259534077588023/199384199367737380935571059042051686400",
+      "test_metrics": {
+        "rmse": 0.001933517164820384,
+        "max_error": 0.013193863217160512
+      },
+      "parameter_changes": [
+        {
+          "parameter_group": "hidden_weights",
+          "allowed_parameter_count": 512,
+          "changed_parameter_count": 502,
+          "maximum_change": 0.8457083463621147
+        },
+        {
+          "parameter_group": "hidden_biases",
+          "allowed_parameter_count": 128,
+          "changed_parameter_count": 120,
+          "maximum_change": 0.5412400861839268
+        },
+        {
+          "parameter_group": "output_weights",
+          "allowed_parameter_count": 128,
+          "changed_parameter_count": 120,
+          "maximum_change": 0.5315664602354935
+        },
+        {
+          "parameter_group": "output_biases",
+          "allowed_parameter_count": 32,
+          "changed_parameter_count": 32,
+          "maximum_change": 0.15823879027589594
+        }
+      ],
+      "training_replayed": true,
+      "standalone_smoke": {
+        "traces": 3,
+        "actions_per_trace": 5,
+        "maximum_observed_error": "1/6",
+        "backend": "standalone program only"
+      }
+    },
+    {
+      "status": "verified",
+      "seed": 7102,
+      "state_dim": 64,
+      "model_sha256": "151bdac4d044f0cbd952f24b9476d23d39a6efcc16801bee150607d3ecabf5de",
+      "training_sha256": "bf94f01580fc0e10aec373b5bc9e92755878851d2219b1ec903d62753e1d0897",
+      "checkpoint_sha256": "da00198fa9d9e43d2a1eeaa563344e1081c5adfb862286d0fceff6be84a0f20c",
+      "recurrent_certificate_sha256": "b159d25947aae86d60fa19bb2a68bbca03052e481510aabb72436da57d59dc01",
+      "mixed_witness_sha256": "9e112bbc60d5a662bc1089b8515875461db87bb0b7fab242cfc8ce4d890599d5",
+      "initial_certificate_sha256": "61753fa99b119676b8df02259211a2c6c7b2775a4f9bf0c618ecade7ce4c3231",
+      "closure_certificate_sha256": "072c024b14a9a3158afb09ab72dbe18376f2ea4a74762fb747eae299080057be",
+      "program_sha256": "38bc60cbd7276fd63580f1ff6a3e9ac9fad6ea47dc03a4f45d4c0a30113ffff2",
+      "lower_certificate_sha256": "87cf6f60ceed01876b40998caa27b67677e0bb2f2237f8a960e0455234a78035",
+      "minimum_state_interval": [
+        82,
+        135
+      ],
+      "original_weighted_upper": "2250",
+      "minimum_initial_label_count": 81,
+      "initial_states": 81,
+      "recurrent_states": 54,
+      "action_template_count": 24,
+      "mixed_rectangle_difference": "-2483340021986121356353998239689/649037107316853453566312041152512",
+      "mixed_observed_coordinate": 0,
+      "mixed_hidden_units_checked": 256,
+      "joint_vertices_checked": 3872,
+      "minimum_handoff_slack": "2045861569856837337405682815993269399/99692099683868690467785529521025843200",
+      "test_metrics": {
+        "rmse": 0.0020249043934930646,
+        "max_error": 0.022112492259765526
+      },
+      "parameter_changes": [
+        {
+          "parameter_group": "hidden_weights",
+          "allowed_parameter_count": 1024,
+          "changed_parameter_count": 1009,
+          "maximum_change": 0.6482713059543547
+        },
+        {
+          "parameter_group": "hidden_biases",
+          "allowed_parameter_count": 256,
+          "changed_parameter_count": 245,
+          "maximum_change": 0.5861422482387291
+        },
+        {
+          "parameter_group": "output_weights",
+          "allowed_parameter_count": 256,
+          "changed_parameter_count": 245,
+          "maximum_change": 0.5849673140590855
+        },
+        {
+          "parameter_group": "output_biases",
+          "allowed_parameter_count": 64,
+          "changed_parameter_count": 64,
+          "maximum_change": 0.12951705131235375
+        }
+      ],
+      "training_replayed": true,
+      "standalone_smoke": {
+        "traces": 3,
+        "actions_per_trace": 5,
+        "maximum_observed_error": "1/6",
+        "backend": "standalone program only"
+      }
+    },
+    {
+      "status": "verified",
+      "seed": 7102,
+      "state_dim": 128,
+      "model_sha256": "ae800e3dd074d3ab197a20039bdb420b9b90bc2f530f43ac19439321f38f30ec",
+      "training_sha256": "69ea43e64e047ef1bd6fee5227eba18e96b663dde5f94819d23b8d5bd940b06f",
+      "checkpoint_sha256": "91f0da636b730f4ba634681f981768f583286aafb6426bc36ec2c330b52f4b12",
+      "recurrent_certificate_sha256": "cff0d7f2e23525afe041ad9ac13daf914364ce25172c43c0f6a4429404003415",
+      "mixed_witness_sha256": "2299ecafa25cec94d1d7cffe56ed656ab05dbbfebb45a95c3b6762bf903817d1",
+      "initial_certificate_sha256": "3ef9697f33d593345fe848cf26090beebffca5d42daddb2a05673224cba6a23e",
+      "closure_certificate_sha256": "27d1fdeed7b29715b01634c5e8c3350c0d1bdd7062ca533c5376f13d91ccea69",
+      "program_sha256": "8b81deb0cd75b3325660c22bb90d0847045a963c1dbb3ca3969f9177d26df18e",
+      "lower_certificate_sha256": "ba386cc6479c21945112740df42570a234cc1b4d3f1a8210fe824a1910d23fc8",
+      "minimum_state_interval": [
+        82,
+        135
+      ],
+      "original_weighted_upper": "2250",
+      "minimum_initial_label_count": 81,
+      "initial_states": 81,
+      "recurrent_states": 54,
+      "action_template_count": 2,
+      "mixed_rectangle_difference": "19677867162836569232981511924283/1298074214633706907132624082305024",
+      "mixed_observed_coordinate": 0,
+      "mixed_hidden_units_checked": 512,
+      "joint_vertices_checked": 5580,
+      "minimum_handoff_slack": "22046909097381288094949828333134773331/1063382396627932698323045648224275660800",
+      "test_metrics": {
+        "rmse": 0.002162960780475686,
+        "max_error": 0.018308882721145656
+      },
+      "parameter_changes": [
+        {
+          "parameter_group": "hidden_weights",
+          "allowed_parameter_count": 2048,
+          "changed_parameter_count": 2004,
+          "maximum_change": 0.8564910766736011
+        },
+        {
+          "parameter_group": "hidden_biases",
+          "allowed_parameter_count": 512,
+          "changed_parameter_count": 489,
+          "maximum_change": 0.5895219002837437
+        },
+        {
+          "parameter_group": "output_weights",
+          "allowed_parameter_count": 512,
+          "changed_parameter_count": 489,
+          "maximum_change": 0.538188417038275
+        },
+        {
+          "parameter_group": "output_biases",
+          "allowed_parameter_count": 128,
+          "changed_parameter_count": 128,
+          "maximum_change": 0.19725561245917506
+        }
+      ],
+      "training_replayed": true,
+      "standalone_smoke": {
+        "traces": 3,
+        "actions_per_trace": 5,
+        "maximum_observed_error": "1/6",
+        "backend": "standalone program only"
+      }
+    }
+  ],
+  "all_declared_profiles_retained": true,
+  "all_full_parameter_training_replayed": true,
+  "all_observed_mixed_phase_witnesses_replayed": true,
+  "all_joint_four_dimensional_handoffs_replayed": true,
+  "all_complete_graphs_and_standalone_programs_replayed": true,
+  "all_independent_transition_lowers_replayed": true,
+  "scope": "eight new fully trainable local shallow mixed networks; full initial/control cubes; every finite horizon; exact dyadic coefficient interpretation",
+  "boundary": "two state supports per scalar output; synthetic targets; arbitrary dense/deep networks, global minimum and original R4/R5/R8/R9/R10 remain open"
+}

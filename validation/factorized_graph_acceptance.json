@@ -1,0 +1,91 @@
+{
+  "protocol": "docs/FACTORIZED_GRAPH_PROGRAM_PROTOCOL.md",
+  "runs": [
+    {
+      "seed": 2393,
+      "source": "relational_seed493",
+      "verified": true,
+      "local": {
+        "worlds": 960,
+        "pairs": 13120,
+        "all_pair_fidelity": 0.7977134146341464,
+        "active_pair_fidelity": 0.46653266331658294,
+        "exact_graph_fidelity": 0.19791666666666666,
+        "teacher_exact_graph_accuracy": 0.14270833333333333,
+        "program_exact_graph_accuracy": 0.08541666666666667
+      },
+      "factorized": {
+        "worlds": 960,
+        "pairs": 13120,
+        "all_pair_fidelity": 0.8067073170731708,
+        "active_pair_fidelity": 0.4926985397079416,
+        "exact_graph_fidelity": 0.20625,
+        "teacher_exact_graph_accuracy": 0.14270833333333333,
+        "program_exact_graph_accuracy": 0.09375
+      },
+      "decision_components": {
+        "per_mode_non_decline": false,
+        "pooled_exact_gain": 0.008333333333333331,
+        "pooled_active_non_decline": true
+      }
+    },
+    {
+      "seed": 2394,
+      "source": "relational_seed494",
+      "verified": true,
+      "local": {
+        "worlds": 960,
+        "pairs": 13120,
+        "all_pair_fidelity": 0.806859756097561,
+        "active_pair_fidelity": 0.43663850600266785,
+        "exact_graph_fidelity": 0.18020833333333333,
+        "teacher_exact_graph_accuracy": 0.1375,
+        "program_exact_graph_accuracy": 0.08958333333333333
+      },
+      "factorized": {
+        "worlds": 960,
+        "pairs": 13120,
+        "all_pair_fidelity": 0.8117378048780488,
+        "active_pair_fidelity": 0.446064139941691,
+        "exact_graph_fidelity": 0.18229166666666666,
+        "teacher_exact_graph_accuracy": 0.1375,
+        "program_exact_graph_accuracy": 0.096875
+      },
+      "decision_components": {
+        "per_mode_non_decline": false,
+        "pooled_exact_gain": 0.002083333333333326,
+        "pooled_active_non_decline": true
+      }
+    }
+  ],
+  "pooled": {
+    "local": {
+      "worlds": 1920,
+      "pairs": 26240,
+      "all_pair_fidelity": 0.8022865853658536,
+      "active_pair_fidelity": 0.45233822442731975,
+      "exact_graph_fidelity": 0.1890625,
+      "teacher_exact_graph_accuracy": 0.14010416666666667,
+      "program_exact_graph_accuracy": 0.0875
+    },
+    "factorized": {
+      "worlds": 1920,
+      "pairs": 26240,
+      "all_pair_fidelity": 0.8092225609756097,
+      "active_pair_fidelity": 0.47071262423345317,
+      "exact_graph_fidelity": 0.19427083333333334,
+      "teacher_exact_graph_accuracy": 0.14010416666666667,
+      "program_exact_graph_accuracy": 0.0953125
+    },
+    "exact_gain": 0.005208333333333343,
+    "active_gain": 0.018374399806133423
+  },
+  "criteria": {
+    "both_replayed": true,
+    "no_exact_decline_each_seed": false,
+    "pooled_exact_gain_at_least_0.02": false,
+    "pooled_active_non_decline": true
+  },
+  "passed": false,
+  "claim": "negative behavioral graph-program extraction result; truth metrics are diagnostic"
+}

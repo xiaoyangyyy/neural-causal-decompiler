@@ -1,0 +1,617 @@
+{
+  "accepted_counterexample_evidence_sha256": "2dd0bb1c6d8f4c28a3ddb92f5ad02e821774aeb25ecf287cbab63e83a79182f7",
+  "original_objective_achieved": false,
+  "records": [
+    {
+      "allowed_identification_interventions": [],
+      "assumptions": {
+        "acyclic": true,
+        "exogenous_law": "independent centered Gaussian, common standard deviation 7/20",
+        "ideal_real_Gaussian_probability_model": true,
+        "no_latent_confounding": true,
+        "population_faithfulness": [
+          false,
+          true
+        ],
+        "unknown_observation_scales": true
+      },
+      "certificate": "runs/faithfulness_boundary_v1/population_n3.json",
+      "certificate_sha256": "ea235c83c1c7de6fda447d7ba755e5622194e3b6a8f461b566de3be8f2b66a4f",
+      "claim": "Acyclic independent Gaussian observational models with unknown observation scales always identify one correct graph Markov equivalence class",
+      "conclusion": "refuted-in-declared-scope",
+      "counterexample_validation_intervention": {
+        "collider_mean": [
+          "0",
+          "12/25",
+          "1"
+        ],
+        "distinguishing_variable": 1,
+        "target": 2,
+        "triangle_mean": [
+          "0",
+          "0",
+          "1"
+        ],
+        "value": "1"
+      },
+      "error_lower_bound": "1/2",
+      "error_metric": "Worst of the two zero-one single-correct-CPDAG nonrecovery probabilities",
+      "estimator_quantifiers": "All measurable observational estimators, including randomized ones; at least one of the two specified SCMs has the certified nonrecovery lower bound",
+      "id": "population_n3",
+      "input_domain": "R^(N x nodes); IID observations from either declared SCM; population law also identical for the population witness",
+      "models_sha256": {
+        "collider": "1724e1647b82d6b9bdb6e9b927299fb47e64a0db237bb8b1c5aaf53c125cde7f",
+        "triangle": "744549eb83991bd02d0dc09bef74c617f84cd8555a484d3665f83601097b200a"
+      },
+      "network_binding_note": "An all-estimator information-boundary theorem; no individual neural checkpoint is substituted for this quantifier",
+      "network_sha256": null,
+      "nodes": 3,
+      "original_claim_closed": false,
+      "program_role": "Executable proof construction/checking, not an extracted neural program",
+      "program_sha256": {
+        "certificate_construction_and_checker_file": "1c3b87118591a8a438cd9140f83be0a1da5c6f7fcad3286f5709504b1b5e1c4e",
+        "construction_function_AST": "c7d1b5ad5d61cf0562f5ea71d11f0c7c1d2ef03a7a0fd2889c4de2c8e7f61fd2",
+        "independent_structural_covariance_AST": "b99c4391fc5f0a527a024c45c64f63e1b0c7bbdd661ccebd2363e82c182d40e4",
+        "recovered_neural_program": null,
+        "verification_function_AST": "99ce5df829169f0f78ffbde73e95fdd28ac6ff4b0eb2366bf8de3ef651b29188"
+      },
+      "proof_dependencies": [
+        "linear images of independent Gaussians determined by mean and covariance",
+        "Gaussian conditional independence iff corresponding conditional covariance is zero",
+        "graph Markov equivalence iff same skeleton and unshielded colliders",
+        "IID KL adds over rows; equal covariance determinants remove log determinant ratio",
+        "two disjoint correct-output events have summed probability <=1+TV, including randomized estimators",
+        "TV<=sqrt(KL), obtained from Jensen for Bhattacharyya affinity and Cauchy-Schwarz; rational bound encloses sqrt"
+      ],
+      "samples": 96,
+      "scope": {
+        "arithmetic": "exact rational model parameters; ideal real SCM and Gaussian laws",
+        "canonical_coefficient_magnitude": [
+          "2/5",
+          "11/10"
+        ],
+        "estimator_family": "all measurable estimators, including randomized estimators",
+        "information": "only IID observational rows, no true graph/scales/noises/do data",
+        "known_math_is_not_project_innovation": true,
+        "nodes": [
+          3,
+          5,
+          8
+        ],
+        "noise": "independent centered Gaussian, common standard deviation 7/20",
+        "not_claimed": [
+          "hardware floating execution",
+          "exact rounded generator realization",
+          "almost-sure or 99-percent random-world performance",
+          "all estimators given interventions",
+          "failure under a justified positive strong-faithfulness floor",
+          "original R0-R13 closure"
+        ],
+        "observed_scales": "inside exp([-3/2,3/2]); unknown to observational estimator",
+        "target": "one correct graph Markov equivalence class (CPDAG); abstention counts as nonrecovery"
+      },
+      "uncovered": [
+        "hardware floating execution",
+        "exact rounded generator realization",
+        "almost-sure or 99-percent random-world performance",
+        "all estimators given interventions",
+        "failure under a justified positive strong-faithfulness floor",
+        "original R0-R13 closure"
+      ]
+    },
+    {
+      "allowed_identification_interventions": [],
+      "assumptions": {
+        "acyclic": true,
+        "exogenous_law": "independent centered Gaussian, common standard deviation 7/20",
+        "ideal_real_Gaussian_probability_model": true,
+        "no_latent_confounding": true,
+        "population_faithfulness": [
+          true,
+          true
+        ],
+        "unknown_observation_scales": true
+      },
+      "certificate": "runs/faithfulness_boundary_v1/faithful_finite_sample_n3.json",
+      "certificate_sha256": "79cc7033e6e2af89ecec8ac51734c24de754d2119be4cac029c0cd4e7f9d15d7",
+      "claim": "Ordinary faithfulness and bounded nonzero coefficients suffice for uniform observational single-CPDAG recovery with failure <=1/100 from 96 IID rows",
+      "conclusion": "refuted-in-declared-scope",
+      "counterexample_validation_intervention": {
+        "collider_mean": [
+          "0",
+          "12/25",
+          "1"
+        ],
+        "distinguishing_variable": 1,
+        "target": 2,
+        "triangle_mean": [
+          "0",
+          "0",
+          "1"
+        ],
+        "value": "1"
+      },
+      "error_lower_bound": "751/1600",
+      "error_metric": "Worst of the two zero-one single-correct-CPDAG nonrecovery probabilities",
+      "estimator_quantifiers": "All measurable observational estimators, including randomized ones; at least one of the two specified SCMs has the certified nonrecovery lower bound",
+      "id": "faithful_finite_sample_n3",
+      "input_domain": "R^(N x nodes); IID observations from either declared SCM; population law also identical for the population witness",
+      "models_sha256": {
+        "collider": "1724e1647b82d6b9bdb6e9b927299fb47e64a0db237bb8b1c5aaf53c125cde7f",
+        "triangle": "8c4bc55c7599aee2bd9c80647e01cbb416e8c507f6bb7bd85027399ff134fbf0"
+      },
+      "network_binding_note": "An all-estimator information-boundary theorem; no individual neural checkpoint is substituted for this quantifier",
+      "network_sha256": null,
+      "nodes": 3,
+      "original_claim_closed": false,
+      "program_role": "Executable proof construction/checking, not an extracted neural program",
+      "program_sha256": {
+        "certificate_construction_and_checker_file": "1c3b87118591a8a438cd9140f83be0a1da5c6f7fcad3286f5709504b1b5e1c4e",
+        "construction_function_AST": "c7d1b5ad5d61cf0562f5ea71d11f0c7c1d2ef03a7a0fd2889c4de2c8e7f61fd2",
+        "independent_structural_covariance_AST": "b99c4391fc5f0a527a024c45c64f63e1b0c7bbdd661ccebd2363e82c182d40e4",
+        "recovered_neural_program": null,
+        "verification_function_AST": "99ce5df829169f0f78ffbde73e95fdd28ac6ff4b0eb2366bf8de3ef651b29188"
+      },
+      "proof_dependencies": [
+        "linear images of independent Gaussians determined by mean and covariance",
+        "Gaussian conditional independence iff corresponding conditional covariance is zero",
+        "graph Markov equivalence iff same skeleton and unshielded colliders",
+        "IID KL adds over rows; equal covariance determinants remove log determinant ratio",
+        "two disjoint correct-output events have summed probability <=1+TV, including randomized estimators",
+        "TV<=sqrt(KL), obtained from Jensen for Bhattacharyya affinity and Cauchy-Schwarz; rational bound encloses sqrt"
+      ],
+      "samples": 96,
+      "scope": {
+        "arithmetic": "exact rational model parameters; ideal real SCM and Gaussian laws",
+        "canonical_coefficient_magnitude": [
+          "2/5",
+          "11/10"
+        ],
+        "estimator_family": "all measurable estimators, including randomized estimators",
+        "information": "only IID observational rows, no true graph/scales/noises/do data",
+        "known_math_is_not_project_innovation": true,
+        "nodes": [
+          3,
+          5,
+          8
+        ],
+        "noise": "independent centered Gaussian, common standard deviation 7/20",
+        "not_claimed": [
+          "hardware floating execution",
+          "exact rounded generator realization",
+          "almost-sure or 99-percent random-world performance",
+          "all estimators given interventions",
+          "failure under a justified positive strong-faithfulness floor",
+          "original R0-R13 closure"
+        ],
+        "observed_scales": "inside exp([-3/2,3/2]); unknown to observational estimator",
+        "target": "one correct graph Markov equivalence class (CPDAG); abstention counts as nonrecovery"
+      },
+      "uncovered": [
+        "hardware floating execution",
+        "exact rounded generator realization",
+        "almost-sure or 99-percent random-world performance",
+        "all estimators given interventions",
+        "failure under a justified positive strong-faithfulness floor",
+        "original R0-R13 closure"
+      ]
+    },
+    {
+      "allowed_identification_interventions": [],
+      "assumptions": {
+        "acyclic": true,
+        "exogenous_law": "independent centered Gaussian, common standard deviation 7/20",
+        "ideal_real_Gaussian_probability_model": true,
+        "no_latent_confounding": true,
+        "population_faithfulness": [
+          false,
+          true
+        ],
+        "unknown_observation_scales": true
+      },
+      "certificate": "runs/faithfulness_boundary_v1/population_n5.json",
+      "certificate_sha256": "8d0457498c3814c78e74a6e57885c2885bd56942890669cc7218de18e94d57c1",
+      "claim": "Acyclic independent Gaussian observational models with unknown observation scales always identify one correct graph Markov equivalence class",
+      "conclusion": "refuted-in-declared-scope",
+      "counterexample_validation_intervention": {
+        "collider_mean": [
+          "0",
+          "12/25",
+          "1",
+          "0",
+          "0"
+        ],
+        "distinguishing_variable": 1,
+        "target": 2,
+        "triangle_mean": [
+          "0",
+          "0",
+          "1",
+          "0",
+          "0"
+        ],
+        "value": "1"
+      },
+      "error_lower_bound": "1/2",
+      "error_metric": "Worst of the two zero-one single-correct-CPDAG nonrecovery probabilities",
+      "estimator_quantifiers": "All measurable observational estimators, including randomized ones; at least one of the two specified SCMs has the certified nonrecovery lower bound",
+      "id": "population_n5",
+      "input_domain": "R^(N x nodes); IID observations from either declared SCM; population law also identical for the population witness",
+      "models_sha256": {
+        "collider": "4a9db1e0b58ed07b382dd0b1f9354e318bdcc501432a80f32b4a9366167c7139",
+        "triangle": "f9deaeb46c0477bc5df139b4f48ad5766ab773e378c53176185c2b8d3403e4f1"
+      },
+      "network_binding_note": "An all-estimator information-boundary theorem; no individual neural checkpoint is substituted for this quantifier",
+      "network_sha256": null,
+      "nodes": 5,
+      "original_claim_closed": false,
+      "program_role": "Executable proof construction/checking, not an extracted neural program",
+      "program_sha256": {
+        "certificate_construction_and_checker_file": "1c3b87118591a8a438cd9140f83be0a1da5c6f7fcad3286f5709504b1b5e1c4e",
+        "construction_function_AST": "c7d1b5ad5d61cf0562f5ea71d11f0c7c1d2ef03a7a0fd2889c4de2c8e7f61fd2",
+        "independent_structural_covariance_AST": "b99c4391fc5f0a527a024c45c64f63e1b0c7bbdd661ccebd2363e82c182d40e4",
+        "recovered_neural_program": null,
+        "verification_function_AST": "99ce5df829169f0f78ffbde73e95fdd28ac6ff4b0eb2366bf8de3ef651b29188"
+      },
+      "proof_dependencies": [
+        "linear images of independent Gaussians determined by mean and covariance",
+        "Gaussian conditional independence iff corresponding conditional covariance is zero",
+        "graph Markov equivalence iff same skeleton and unshielded colliders",
+        "IID KL adds over rows; equal covariance determinants remove log determinant ratio",
+        "two disjoint correct-output events have summed probability <=1+TV, including randomized estimators",
+        "TV<=sqrt(KL), obtained from Jensen for Bhattacharyya affinity and Cauchy-Schwarz; rational bound encloses sqrt"
+      ],
+      "samples": 96,
+      "scope": {
+        "arithmetic": "exact rational model parameters; ideal real SCM and Gaussian laws",
+        "canonical_coefficient_magnitude": [
+          "2/5",
+          "11/10"
+        ],
+        "estimator_family": "all measurable estimators, including randomized estimators",
+        "information": "only IID observational rows, no true graph/scales/noises/do data",
+        "known_math_is_not_project_innovation": true,
+        "nodes": [
+          3,
+          5,
+          8
+        ],
+        "noise": "independent centered Gaussian, common standard deviation 7/20",
+        "not_claimed": [
+          "hardware floating execution",
+          "exact rounded generator realization",
+          "almost-sure or 99-percent random-world performance",
+          "all estimators given interventions",
+          "failure under a justified positive strong-faithfulness floor",
+          "original R0-R13 closure"
+        ],
+        "observed_scales": "inside exp([-3/2,3/2]); unknown to observational estimator",
+        "target": "one correct graph Markov equivalence class (CPDAG); abstention counts as nonrecovery"
+      },
+      "uncovered": [
+        "hardware floating execution",
+        "exact rounded generator realization",
+        "almost-sure or 99-percent random-world performance",
+        "all estimators given interventions",
+        "failure under a justified positive strong-faithfulness floor",
+        "original R0-R13 closure"
+      ]
+    },
+    {
+      "allowed_identification_interventions": [],
+      "assumptions": {
+        "acyclic": true,
+        "exogenous_law": "independent centered Gaussian, common standard deviation 7/20",
+        "ideal_real_Gaussian_probability_model": true,
+        "no_latent_confounding": true,
+        "population_faithfulness": [
+          true,
+          true
+        ],
+        "unknown_observation_scales": true
+      },
+      "certificate": "runs/faithfulness_boundary_v1/faithful_finite_sample_n5.json",
+      "certificate_sha256": "ca26d590a412e43cdb44beb5e97ba651bd0308287d9a6b607e3a4b2e9ad28278",
+      "claim": "Ordinary faithfulness and bounded nonzero coefficients suffice for uniform observational single-CPDAG recovery with failure <=1/100 from 96 IID rows",
+      "conclusion": "refuted-in-declared-scope",
+      "counterexample_validation_intervention": {
+        "collider_mean": [
+          "0",
+          "12/25",
+          "1",
+          "0",
+          "0"
+        ],
+        "distinguishing_variable": 1,
+        "target": 2,
+        "triangle_mean": [
+          "0",
+          "0",
+          "1",
+          "0",
+          "0"
+        ],
+        "value": "1"
+      },
+      "error_lower_bound": "751/1600",
+      "error_metric": "Worst of the two zero-one single-correct-CPDAG nonrecovery probabilities",
+      "estimator_quantifiers": "All measurable observational estimators, including randomized ones; at least one of the two specified SCMs has the certified nonrecovery lower bound",
+      "id": "faithful_finite_sample_n5",
+      "input_domain": "R^(N x nodes); IID observations from either declared SCM; population law also identical for the population witness",
+      "models_sha256": {
+        "collider": "4a9db1e0b58ed07b382dd0b1f9354e318bdcc501432a80f32b4a9366167c7139",
+        "triangle": "b11b0d98344602890fbfe6007cba9cd7584da5135142f381a65a130af622cb5d"
+      },
+      "network_binding_note": "An all-estimator information-boundary theorem; no individual neural checkpoint is substituted for this quantifier",
+      "network_sha256": null,
+      "nodes": 5,
+      "original_claim_closed": false,
+      "program_role": "Executable proof construction/checking, not an extracted neural program",
+      "program_sha256": {
+        "certificate_construction_and_checker_file": "1c3b87118591a8a438cd9140f83be0a1da5c6f7fcad3286f5709504b1b5e1c4e",
+        "construction_function_AST": "c7d1b5ad5d61cf0562f5ea71d11f0c7c1d2ef03a7a0fd2889c4de2c8e7f61fd2",
+        "independent_structural_covariance_AST": "b99c4391fc5f0a527a024c45c64f63e1b0c7bbdd661ccebd2363e82c182d40e4",
+        "recovered_neural_program": null,
+        "verification_function_AST": "99ce5df829169f0f78ffbde73e95fdd28ac6ff4b0eb2366bf8de3ef651b29188"
+      },
+      "proof_dependencies": [
+        "linear images of independent Gaussians determined by mean and covariance",
+        "Gaussian conditional independence iff corresponding conditional covariance is zero",
+        "graph Markov equivalence iff same skeleton and unshielded colliders",
+        "IID KL adds over rows; equal covariance determinants remove log determinant ratio",
+        "two disjoint correct-output events have summed probability <=1+TV, including randomized estimators",
+        "TV<=sqrt(KL), obtained from Jensen for Bhattacharyya affinity and Cauchy-Schwarz; rational bound encloses sqrt"
+      ],
+      "samples": 96,
+      "scope": {
+        "arithmetic": "exact rational model parameters; ideal real SCM and Gaussian laws",
+        "canonical_coefficient_magnitude": [
+          "2/5",
+          "11/10"
+        ],
+        "estimator_family": "all measurable estimators, including randomized estimators",
+        "information": "only IID observational rows, no true graph/scales/noises/do data",
+        "known_math_is_not_project_innovation": true,
+        "nodes": [
+          3,
+          5,
+          8
+        ],
+        "noise": "independent centered Gaussian, common standard deviation 7/20",
+        "not_claimed": [
+          "hardware floating execution",
+          "exact rounded generator realization",
+          "almost-sure or 99-percent random-world performance",
+          "all estimators given interventions",
+          "failure under a justified positive strong-faithfulness floor",
+          "original R0-R13 closure"
+        ],
+        "observed_scales": "inside exp([-3/2,3/2]); unknown to observational estimator",
+        "target": "one correct graph Markov equivalence class (CPDAG); abstention counts as nonrecovery"
+      },
+      "uncovered": [
+        "hardware floating execution",
+        "exact rounded generator realization",
+        "almost-sure or 99-percent random-world performance",
+        "all estimators given interventions",
+        "failure under a justified positive strong-faithfulness floor",
+        "original R0-R13 closure"
+      ]
+    },
+    {
+      "allowed_identification_interventions": [],
+      "assumptions": {
+        "acyclic": true,
+        "exogenous_law": "independent centered Gaussian, common standard deviation 7/20",
+        "ideal_real_Gaussian_probability_model": true,
+        "no_latent_confounding": true,
+        "population_faithfulness": [
+          false,
+          true
+        ],
+        "unknown_observation_scales": true
+      },
+      "certificate": "runs/faithfulness_boundary_v1/population_n8.json",
+      "certificate_sha256": "a6b79a481993bcd175a12778fdd0e5ce8c878e189dff2b555553664b29d0d626",
+      "claim": "Acyclic independent Gaussian observational models with unknown observation scales always identify one correct graph Markov equivalence class",
+      "conclusion": "refuted-in-declared-scope",
+      "counterexample_validation_intervention": {
+        "collider_mean": [
+          "0",
+          "12/25",
+          "1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "distinguishing_variable": 1,
+        "target": 2,
+        "triangle_mean": [
+          "0",
+          "0",
+          "1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "value": "1"
+      },
+      "error_lower_bound": "1/2",
+      "error_metric": "Worst of the two zero-one single-correct-CPDAG nonrecovery probabilities",
+      "estimator_quantifiers": "All measurable observational estimators, including randomized ones; at least one of the two specified SCMs has the certified nonrecovery lower bound",
+      "id": "population_n8",
+      "input_domain": "R^(N x nodes); IID observations from either declared SCM; population law also identical for the population witness",
+      "models_sha256": {
+        "collider": "4fd5477413a37dbbddb8d0c9b7f4847250dcd2849126073101464590cd7dd5b3",
+        "triangle": "0dc3feddc322b3766177f8c9339efb169b9301332fd1ff4c9219f550a2847dbd"
+      },
+      "network_binding_note": "An all-estimator information-boundary theorem; no individual neural checkpoint is substituted for this quantifier",
+      "network_sha256": null,
+      "nodes": 8,
+      "original_claim_closed": false,
+      "program_role": "Executable proof construction/checking, not an extracted neural program",
+      "program_sha256": {
+        "certificate_construction_and_checker_file": "1c3b87118591a8a438cd9140f83be0a1da5c6f7fcad3286f5709504b1b5e1c4e",
+        "construction_function_AST": "c7d1b5ad5d61cf0562f5ea71d11f0c7c1d2ef03a7a0fd2889c4de2c8e7f61fd2",
+        "independent_structural_covariance_AST": "b99c4391fc5f0a527a024c45c64f63e1b0c7bbdd661ccebd2363e82c182d40e4",
+        "recovered_neural_program": null,
+        "verification_function_AST": "99ce5df829169f0f78ffbde73e95fdd28ac6ff4b0eb2366bf8de3ef651b29188"
+      },
+      "proof_dependencies": [
+        "linear images of independent Gaussians determined by mean and covariance",
+        "Gaussian conditional independence iff corresponding conditional covariance is zero",
+        "graph Markov equivalence iff same skeleton and unshielded colliders",
+        "IID KL adds over rows; equal covariance determinants remove log determinant ratio",
+        "two disjoint correct-output events have summed probability <=1+TV, including randomized estimators",
+        "TV<=sqrt(KL), obtained from Jensen for Bhattacharyya affinity and Cauchy-Schwarz; rational bound encloses sqrt"
+      ],
+      "samples": 96,
+      "scope": {
+        "arithmetic": "exact rational model parameters; ideal real SCM and Gaussian laws",
+        "canonical_coefficient_magnitude": [
+          "2/5",
+          "11/10"
+        ],
+        "estimator_family": "all measurable estimators, including randomized estimators",
+        "information": "only IID observational rows, no true graph/scales/noises/do data",
+        "known_math_is_not_project_innovation": true,
+        "nodes": [
+          3,
+          5,
+          8
+        ],
+        "noise": "independent centered Gaussian, common standard deviation 7/20",
+        "not_claimed": [
+          "hardware floating execution",
+          "exact rounded generator realization",
+          "almost-sure or 99-percent random-world performance",
+          "all estimators given interventions",
+          "failure under a justified positive strong-faithfulness floor",
+          "original R0-R13 closure"
+        ],
+        "observed_scales": "inside exp([-3/2,3/2]); unknown to observational estimator",
+        "target": "one correct graph Markov equivalence class (CPDAG); abstention counts as nonrecovery"
+      },
+      "uncovered": [
+        "hardware floating execution",
+        "exact rounded generator realization",
+        "almost-sure or 99-percent random-world performance",
+        "all estimators given interventions",
+        "failure under a justified positive strong-faithfulness floor",
+        "original R0-R13 closure"
+      ]
+    },
+    {
+      "allowed_identification_interventions": [],
+      "assumptions": {
+        "acyclic": true,
+        "exogenous_law": "independent centered Gaussian, common standard deviation 7/20",
+        "ideal_real_Gaussian_probability_model": true,
+        "no_latent_confounding": true,
+        "population_faithfulness": [
+          true,
+          true
+        ],
+        "unknown_observation_scales": true
+      },
+      "certificate": "runs/faithfulness_boundary_v1/faithful_finite_sample_n8.json",
+      "certificate_sha256": "b03fbb917adb3bddd5e0e728ad01aacc36ad1a6cc9c1f27528a7010c20a7cbb2",
+      "claim": "Ordinary faithfulness and bounded nonzero coefficients suffice for uniform observational single-CPDAG recovery with failure <=1/100 from 96 IID rows",
+      "conclusion": "refuted-in-declared-scope",
+      "counterexample_validation_intervention": {
+        "collider_mean": [
+          "0",
+          "12/25",
+          "1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "distinguishing_variable": 1,
+        "target": 2,
+        "triangle_mean": [
+          "0",
+          "0",
+          "1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "value": "1"
+      },
+      "error_lower_bound": "751/1600",
+      "error_metric": "Worst of the two zero-one single-correct-CPDAG nonrecovery probabilities",
+      "estimator_quantifiers": "All measurable observational estimators, including randomized ones; at least one of the two specified SCMs has the certified nonrecovery lower bound",
+      "id": "faithful_finite_sample_n8",
+      "input_domain": "R^(N x nodes); IID observations from either declared SCM; population law also identical for the population witness",
+      "models_sha256": {
+        "collider": "4fd5477413a37dbbddb8d0c9b7f4847250dcd2849126073101464590cd7dd5b3",
+        "triangle": "e0dc054e19b6d92f6cd119a792a07b9d912c3e4d2561980f9f8f1fa01f4ac2c4"
+      },
+      "network_binding_note": "An all-estimator information-boundary theorem; no individual neural checkpoint is substituted for this quantifier",
+      "network_sha256": null,
+      "nodes": 8,
+      "original_claim_closed": false,
+      "program_role": "Executable proof construction/checking, not an extracted neural program",
+      "program_sha256": {
+        "certificate_construction_and_checker_file": "1c3b87118591a8a438cd9140f83be0a1da5c6f7fcad3286f5709504b1b5e1c4e",
+        "construction_function_AST": "c7d1b5ad5d61cf0562f5ea71d11f0c7c1d2ef03a7a0fd2889c4de2c8e7f61fd2",
+        "independent_structural_covariance_AST": "b99c4391fc5f0a527a024c45c64f63e1b0c7bbdd661ccebd2363e82c182d40e4",
+        "recovered_neural_program": null,
+        "verification_function_AST": "99ce5df829169f0f78ffbde73e95fdd28ac6ff4b0eb2366bf8de3ef651b29188"
+      },
+      "proof_dependencies": [
+        "linear images of independent Gaussians determined by mean and covariance",
+        "Gaussian conditional independence iff corresponding conditional covariance is zero",
+        "graph Markov equivalence iff same skeleton and unshielded colliders",
+        "IID KL adds over rows; equal covariance determinants remove log determinant ratio",
+        "two disjoint correct-output events have summed probability <=1+TV, including randomized estimators",
+        "TV<=sqrt(KL), obtained from Jensen for Bhattacharyya affinity and Cauchy-Schwarz; rational bound encloses sqrt"
+      ],
+      "samples": 96,
+      "scope": {
+        "arithmetic": "exact rational model parameters; ideal real SCM and Gaussian laws",
+        "canonical_coefficient_magnitude": [
+          "2/5",
+          "11/10"
+        ],
+        "estimator_family": "all measurable estimators, including randomized estimators",
+        "information": "only IID observational rows, no true graph/scales/noises/do data",
+        "known_math_is_not_project_innovation": true,
+        "nodes": [
+          3,
+          5,
+          8
+        ],
+        "noise": "independent centered Gaussian, common standard deviation 7/20",
+        "not_claimed": [
+          "hardware floating execution",
+          "exact rounded generator realization",
+          "almost-sure or 99-percent random-world performance",
+          "all estimators given interventions",
+          "failure under a justified positive strong-faithfulness floor",
+          "original R0-R13 closure"
+        ],
+        "observed_scales": "inside exp([-3/2,3/2]); unknown to observational estimator",
+        "target": "one correct graph Markov equivalence class (CPDAG); abstention counts as nonrecovery"
+      },
+      "uncovered": [
+        "hardware floating execution",
+        "exact rounded generator realization",
+        "almost-sure or 99-percent random-world performance",
+        "all estimators given interventions",
+        "failure under a justified positive strong-faithfulness floor",
+        "original R0-R13 closure"
+      ]
+    }
+  ],
+  "schema": "ncd.complete-scoped-proof-records.v1"
+}

@@ -1,0 +1,113 @@
+{
+  "protocol": "docs/PAIR_CONSISTENT_TRAINING_PROTOCOL.md",
+  "runs": [
+    {
+      "seed": 4593,
+      "replayed": true,
+      "raw": {
+        "macro_f1": 0.6219801284061462,
+        "skeleton_f1": 0.7958597604839424,
+        "mean_pair_shd": 2.6187499999999995,
+        "exact_graph_accuracy": 0.16666666666666663,
+        "directed_target_accuracy": 0.47098605569246027,
+        "parameter_count": 31636,
+        "by_environment_exact": {
+          "test_id": 0.28125,
+          "test_function": 0.13194444444444445,
+          "test_noise": 0.2638888888888889,
+          "test_scale": 0.07638888888888888,
+          "test_intervention": 0.0798611111111111
+        }
+      },
+      "consistent": {
+        "macro_f1": 0.5946417588720212,
+        "skeleton_f1": 0.7676223721273856,
+        "mean_pair_shd": 2.73125,
+        "exact_graph_accuracy": 0.13819444444444443,
+        "directed_target_accuracy": 0.43920576090161983,
+        "parameter_count": 31636,
+        "by_environment_exact": {
+          "test_id": 0.2569444444444444,
+          "test_function": 0.09375,
+          "test_noise": 0.23263888888888887,
+          "test_scale": 0.041666666666666664,
+          "test_intervention": 0.06597222222222222
+        }
+      },
+      "exact_higher": false,
+      "direction_higher": false,
+      "skeleton_no_lower": false,
+      "shd_lower": false
+    },
+    {
+      "seed": 4594,
+      "replayed": true,
+      "raw": {
+        "macro_f1": 0.6063700382338107,
+        "skeleton_f1": 0.7776714346302683,
+        "mean_pair_shd": 2.7055555555555557,
+        "exact_graph_accuracy": 0.15,
+        "directed_target_accuracy": 0.4841685896091779,
+        "parameter_count": 31636,
+        "by_environment_exact": {
+          "test_id": 0.2673611111111111,
+          "test_function": 0.1076388888888889,
+          "test_noise": 0.23958333333333334,
+          "test_scale": 0.07638888888888888,
+          "test_intervention": 0.05902777777777777
+        }
+      },
+      "consistent": {
+        "macro_f1": 0.6321045976651033,
+        "skeleton_f1": 0.7897868939967844,
+        "mean_pair_shd": 2.4534722222222225,
+        "exact_graph_accuracy": 0.16527777777777777,
+        "directed_target_accuracy": 0.47367363184227157,
+        "parameter_count": 31636,
+        "by_environment_exact": {
+          "test_id": 0.2986111111111111,
+          "test_function": 0.09722222222222222,
+          "test_noise": 0.2604166666666667,
+          "test_scale": 0.09722222222222222,
+          "test_intervention": 0.07291666666666666
+        }
+      },
+      "exact_higher": true,
+      "direction_higher": false,
+      "skeleton_no_lower": true,
+      "shd_lower": true
+    }
+  ],
+  "pooled": {
+    "raw_exact": 0.15833333333333333,
+    "consistent_exact": 0.1517361111111111,
+    "exact_delta": -0.0065972222222222265,
+    "raw_shd": 2.6621527777777776,
+    "consistent_shd": 2.5923611111111113,
+    "raw_skeleton_f1": 0.7867655975571053,
+    "consistent_skeleton_f1": 0.778704633062085,
+    "raw_directed_accuracy": 0.4775773226508191,
+    "consistent_directed_accuracy": 0.4564396963719457,
+    "direction_delta": -0.02113762627887339,
+    "environment_exact_deltas": {
+      "test_id": 0.00347222222222221,
+      "test_function": -0.02430555555555556,
+      "test_noise": -0.005208333333333343,
+      "test_scale": -0.006944444444444437,
+      "test_intervention": 3.469446951953614e-18
+    }
+  },
+  "criteria": {
+    "complete_replay": true,
+    "full_coverage": true,
+    "exact_higher_each_seed": false,
+    "pooled_exact_gain_at_least_2pp": false,
+    "direction_higher_each_seed": false,
+    "pooled_direction_gain_at_least_2pp": false,
+    "skeleton_no_lower_each_seed": false,
+    "shd_lower_each_seed": false,
+    "environment_decline_at_most_2pp": false
+  },
+  "passed": false,
+  "claim": "new graph-training comparison; not historical-teacher decompilation or causal identifiability"
+}

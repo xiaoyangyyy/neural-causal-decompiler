@@ -1,0 +1,44 @@
+{
+  "schema": "ncd.scoped-normalizer-ledger.v1",
+  "original_ledger": "runs\\original_proof_milestone_v1\\ledger.json",
+  "original_ledger_sha256": "d2972f018c7411bbb2ea4dec2a1d080a11a6006dbc3ef16b3c6d4e0c685e7cfc",
+  "original_claim_counts": {
+    "proved": 0,
+    "refuted": 2,
+    "unresolved": 36
+  },
+  "claims": [
+    {
+      "id": "R4.R5.actual_normalization_prefix",
+      "status": "proved",
+      "evidence_class": [
+        "network_fidelity",
+        "internal_mechanism_alignment"
+      ],
+      "target": "runs/oblique_seed1193/teacher.pt",
+      "target_sha256": "37ce128dd6a5050075310c03b268e8089b2bc49d69670c4cb92a3f38e6519ef3",
+      "program": "program.json",
+      "program_sha256": "d6183cda4e9cc4de4d008330ef454b7111f1e8a1b50a371e697f04f2347cb7df",
+      "certificate": "certificate.json",
+      "certificate_sha256": "2a24fc5ad96650abd2d90af8a4d4e7ec5b04ea02f6ee4fbb15c0a15db5ce92cc",
+      "quantifiers": "all real datasets of N>=16 rows and two columns, all four independent valid source datasets, every subset of the four named mean/clamped-std interventions",
+      "assumptions": [
+        "real mathematical semantics; exact frozen tensor weight values and binary64 host constants",
+        "same deterministic unchanged neural continuation",
+        "only the specified prefix intervention interfaces"
+      ],
+      "error": "exact zero for primitive/prefix states and composed mathematical logits",
+      "independently_verified": true,
+      "uncovered": [
+        "learned encoder/head symbolic recovery",
+        "whole hardware floating execution",
+        "other internal mappings and intervention interfaces",
+        "graph or true SCM correctness",
+        "MDL minimality",
+        "original R4 or R5 universal closure"
+      ]
+    }
+  ],
+  "original_claims_closed": 0,
+  "overall_objective_achieved": false
+}

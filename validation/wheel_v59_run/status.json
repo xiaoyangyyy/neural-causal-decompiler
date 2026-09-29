@@ -1,0 +1,196 @@
+{
+  "schema": "ncd.wheel-v59-replay.v1",
+  "status": "verified",
+  "version": "0.59.0",
+  "checker_sha256": "626d36b26df1834c12cd4eb708bcb81f9324d1d73f015c8305cbf442eb0f4ea9",
+  "mixed_training_replay_helper_sha256": "227cbb59cc51a1354a9c65d6ac4a87cf4f1912c21c5d811e99f50f6161efeb9b",
+  "confirmation_development_worlds_replayed": 3,
+  "formal_confirmation_not_completed": true,
+  "installed_module_count": 131,
+  "regression_tests": 249,
+  "all_modules_byte_identical": true,
+  "original_proof": {
+    "status": "verified",
+    "jobs": 6,
+    "results": [
+      {
+        "status": "verified",
+        "conclusion": "refuted",
+        "finite_sample_error_lower": "1/2"
+      },
+      {
+        "status": "verified",
+        "conclusion": "refuted",
+        "boxes_checked": 1,
+        "scope": "this frozen scalar neural mechanism versus this candidate expression on this closed input box",
+        "does_not_close_original_requirement": true
+      },
+      {
+        "status": "verified",
+        "conclusion": "proved",
+        "boxes_checked": 1,
+        "scope": "this frozen scalar neural mechanism versus this candidate expression on this closed input box",
+        "does_not_close_original_requirement": true
+      },
+      {
+        "status": "verified",
+        "conclusion": "proved",
+        "boxes_checked": 1,
+        "scope": "this frozen scalar neural mechanism versus this candidate expression on this closed input box",
+        "does_not_close_original_requirement": true
+      },
+      {
+        "status": "verified",
+        "conclusion": "proved",
+        "does_not_close_original_requirement": true
+      },
+      {
+        "status": "verified",
+        "conclusion": "refuted",
+        "rounds": 4,
+        "global_minimum_proved": false
+      }
+    ],
+    "overall_objective_achieved": false
+  },
+  "original_claim_count": 38,
+  "original_unresolved_claim_count": 36,
+  "mixed_cases": [
+    {
+      "seed": 7101,
+      "state_dim": 8,
+      "minimum_state_interval": [
+        82,
+        135
+      ],
+      "action_templates": 62,
+      "full_training_replayed": true,
+      "standalone_execution": {
+        "traces": 3,
+        "actions_per_trace": 5,
+        "maximum_observed_error": "1/6",
+        "backend": "standalone program only"
+      }
+    },
+    {
+      "seed": 7101,
+      "state_dim": 32,
+      "minimum_state_interval": [
+        82,
+        135
+      ],
+      "action_templates": 5,
+      "full_training_replayed": true,
+      "standalone_execution": {
+        "traces": 3,
+        "actions_per_trace": 5,
+        "maximum_observed_error": "1/6",
+        "backend": "standalone program only"
+      }
+    },
+    {
+      "seed": 7101,
+      "state_dim": 64,
+      "minimum_state_interval": [
+        82,
+        135
+      ],
+      "action_templates": 8,
+      "full_training_replayed": true,
+      "standalone_execution": {
+        "traces": 3,
+        "actions_per_trace": 5,
+        "maximum_observed_error": "1/6",
+        "backend": "standalone program only"
+      }
+    },
+    {
+      "seed": 7101,
+      "state_dim": 128,
+      "minimum_state_interval": [
+        82,
+        135
+      ],
+      "action_templates": 8,
+      "full_training_replayed": true,
+      "standalone_execution": {
+        "traces": 3,
+        "actions_per_trace": 5,
+        "maximum_observed_error": "1/6",
+        "backend": "standalone program only"
+      }
+    },
+    {
+      "seed": 7102,
+      "state_dim": 8,
+      "minimum_state_interval": [
+        82,
+        135
+      ],
+      "action_templates": 15,
+      "full_training_replayed": true,
+      "standalone_execution": {
+        "traces": 3,
+        "actions_per_trace": 5,
+        "maximum_observed_error": "1/6",
+        "backend": "standalone program only"
+      }
+    },
+    {
+      "seed": 7102,
+      "state_dim": 32,
+      "minimum_state_interval": [
+        82,
+        135
+      ],
+      "action_templates": 13,
+      "full_training_replayed": true,
+      "standalone_execution": {
+        "traces": 3,
+        "actions_per_trace": 5,
+        "maximum_observed_error": "1/6",
+        "backend": "standalone program only"
+      }
+    },
+    {
+      "seed": 7102,
+      "state_dim": 64,
+      "minimum_state_interval": [
+        82,
+        135
+      ],
+      "action_templates": 24,
+      "full_training_replayed": true,
+      "standalone_execution": {
+        "traces": 3,
+        "actions_per_trace": 5,
+        "maximum_observed_error": "1/6",
+        "backend": "standalone program only"
+      }
+    },
+    {
+      "seed": 7102,
+      "state_dim": 128,
+      "minimum_state_interval": [
+        82,
+        135
+      ],
+      "action_templates": 2,
+      "full_training_replayed": true,
+      "standalone_execution": {
+        "traces": 3,
+        "actions_per_trace": 5,
+        "maximum_observed_error": "1/6",
+        "backend": "standalone program only"
+      }
+    }
+  ],
+  "all_mixed_full_training_replayed": true,
+  "all_mixed_standalone_programs_executed": true,
+  "legacy_phase_cases_replayed": 8,
+  "whole_project_complete": false,
+  "wheel_sha256": "d4cf710186d9c1e533c98b28f4ff86da93ed1bbb56bf88adefaf46f0ea978be5",
+  "junit_sha256": "35e5d40e1cd5f1a9fa181f9245f7c3c3448f772908972277c1bd1fccc6d4d585",
+  "proof_manifest_sha256": "ee6069469a966169ffc71f8d9321682b8fb2f150d553d4c5f338c7dd597fb496",
+  "mixed_acceptance_sha256": "5eb9432fbfcf86695d2ab364274f70fed97a046de1ca7b665f9a190102bb21dd"
+}

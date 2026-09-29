@@ -1,0 +1,171 @@
+{
+  "protocol": "docs/QUADRATIC_READOUT_INTERVENTION_PROTOCOL.md",
+  "runs": [
+    {
+      "seed": 3193,
+      "source": "joint_seed191",
+      "verified": true,
+      "metrics": {
+        "representation": {
+          "linear_oblique": {
+            "natural": 12.1184694081404,
+            "targeted": 2.718101433900824,
+            "collateral": 13.209414829913703
+          },
+          "quadratic_oblique": {
+            "natural": 11.535989509431044,
+            "targeted": 16.821843114324388,
+            "collateral": 25.22239134960965
+          },
+          "quadratic_shuffled": {
+            "natural": 11.535989509431044,
+            "targeted": 16.546665251695796,
+            "collateral": 28.92933579752849
+          },
+          "quadratic_random": {
+            "natural": 11.535989509431044,
+            "targeted": 52.09800446947098,
+            "collateral": 59.69878474297218
+          }
+        },
+        "head_linear": {
+          "linear_oblique": {
+            "natural": 12.13264574132805,
+            "targeted": 5.582322175439798,
+            "collateral": 15.308488975026314
+          },
+          "quadratic_oblique": {
+            "natural": 11.400822847242196,
+            "targeted": 15.534415041579464,
+            "collateral": 23.474797340824484
+          },
+          "quadratic_shuffled": {
+            "natural": 11.400822847242196,
+            "targeted": 85.86964004467463,
+            "collateral": 91.59723536716719
+          },
+          "quadratic_random": {
+            "natural": 11.400822847242196,
+            "targeted": 632.4109596325668,
+            "collateral": 658.819390162398
+          }
+        },
+        "head_tanh": {
+          "linear_oblique": {
+            "natural": 11.630573470409582,
+            "targeted": 2.459996890740129,
+            "collateral": 12.768188678275814
+          },
+          "quadratic_oblique": {
+            "natural": 11.641285844481441,
+            "targeted": 6.200411129516736,
+            "collateral": 15.866455578464263
+          },
+          "quadratic_shuffled": {
+            "natural": 11.641285844481441,
+            "targeted": 75.708226383098,
+            "collateral": 91.0736658439691
+          },
+          "quadratic_random": {
+            "natural": 11.641285844481441,
+            "targeted": 724.0334534144871,
+            "collateral": 657.0187500187938
+          }
+        }
+      },
+      "natural_winning_sites": 2,
+      "target_winning_sites": 0,
+      "collateral_safe_at_target_wins": true,
+      "controls_beaten_all_sites": false,
+      "full_mask_coverage": true
+    },
+    {
+      "seed": 3194,
+      "source": "joint_seed192",
+      "verified": true,
+      "metrics": {
+        "representation": {
+          "linear_oblique": {
+            "natural": 22.70416654807634,
+            "targeted": 23.567462074730926,
+            "collateral": 12.336226146491946
+          },
+          "quadratic_oblique": {
+            "natural": 22.051430518787168,
+            "targeted": 30.979844556851265,
+            "collateral": 22.536803381115348
+          },
+          "quadratic_shuffled": {
+            "natural": 22.051430518787168,
+            "targeted": 38.76700211360847,
+            "collateral": 29.80522542386007
+          },
+          "quadratic_random": {
+            "natural": 22.051430518787168,
+            "targeted": 71.69022347490053,
+            "collateral": 73.67015454644316
+          }
+        },
+        "head_linear": {
+          "linear_oblique": {
+            "natural": 22.74117154269987,
+            "targeted": 23.556767241982282,
+            "collateral": 13.027743371861897
+          },
+          "quadratic_oblique": {
+            "natural": 21.885184153567067,
+            "targeted": 30.38323322804379,
+            "collateral": 18.353487883497884
+          },
+          "quadratic_shuffled": {
+            "natural": 21.885184153567067,
+            "targeted": 82.47326873979672,
+            "collateral": 64.75754245126467
+          },
+          "quadratic_random": {
+            "natural": 21.885184153567067,
+            "targeted": 264.12270533605624,
+            "collateral": 283.00563358607917
+          }
+        },
+        "head_tanh": {
+          "linear_oblique": {
+            "natural": 22.378618721315096,
+            "targeted": 22.1963942392006,
+            "collateral": 11.915870129026063
+          },
+          "quadratic_oblique": {
+            "natural": 22.230962624520853,
+            "targeted": 29.0548436050954,
+            "collateral": 25.023736142057306
+          },
+          "quadratic_shuffled": {
+            "natural": 22.230962624520853,
+            "targeted": 901.585501120441,
+            "collateral": 792.9144433594515
+          },
+          "quadratic_random": {
+            "natural": 22.230962624520853,
+            "targeted": 19878.186492018398,
+            "collateral": 19134.754083982116
+          }
+        }
+      },
+      "natural_winning_sites": 3,
+      "target_winning_sites": 0,
+      "collateral_safe_at_target_wins": true,
+      "controls_beaten_all_sites": true,
+      "full_mask_coverage": true
+    }
+  ],
+  "criteria": {
+    "both_replayed": true,
+    "full_mask_coverage": true,
+    "natural_lower_at_two_sites_each": true,
+    "target_lower_at_two_sites_each": false,
+    "collateral_nonincrease_at_winning_sites": true,
+    "beats_shuffled_and_random_all_sites": false
+  },
+  "passed": false,
+  "claim": "negative R5 measurement/intervention result; probe improvement is not mechanism evidence"
+}

@@ -1,0 +1,67 @@
+{
+  "protocol": "docs/CALIBRATED_GRAPH_DECODER_PROTOCOL.md",
+  "replay_verified": true,
+  "replicated_graph_decoding_improvement": false,
+  "pooled": {
+    "argmax": {
+      "exact_graph_accuracy": 0.1390625,
+      "pair_accuracy": 0.6907390873015873,
+      "mean_pair_shd": 3.4052083333333334,
+      "skeleton_f1": 0.7689934483824635,
+      "directed_target_accuracy": 0.4947982875469258
+    },
+    "calibrated": {
+      "exact_graph_accuracy": 0.15208333333333335,
+      "pair_accuracy": 0.7300421626984128,
+      "mean_pair_shd": 2.6640625,
+      "skeleton_f1": 0.7770485454796932,
+      "directed_target_accuracy": 0.42618017574046446
+    }
+  },
+  "pooled_exact_delta": 0.013020833333333343,
+  "runs": {
+    "1993": {
+      "worlds": 480,
+      "strata": 30,
+      "argmax": {
+        "exact_graph_accuracy": 0.13958333333333334,
+        "pair_accuracy": 0.688263888888889,
+        "mean_pair_shd": 3.4166666666666665,
+        "skeleton_f1": 0.7634469545513287,
+        "directed_target_accuracy": 0.5154089644005686
+      },
+      "calibrated": {
+        "exact_graph_accuracy": 0.14583333333333334,
+        "pair_accuracy": 0.7270758928571429,
+        "mean_pair_shd": 2.622916666666667,
+        "skeleton_f1": 0.768850173097355,
+        "directed_target_accuracy": 0.44796644370655786
+      },
+      "exact_delta": 0.0062500000000000056,
+      "shd_delta": -0.7937499999999997,
+      "replay_verified": true
+    },
+    "1994": {
+      "worlds": 480,
+      "strata": 30,
+      "argmax": {
+        "exact_graph_accuracy": 0.13854166666666667,
+        "pair_accuracy": 0.6932142857142857,
+        "mean_pair_shd": 3.39375,
+        "skeleton_f1": 0.7745399422135983,
+        "directed_target_accuracy": 0.4741876106932829
+      },
+      "calibrated": {
+        "exact_graph_accuracy": 0.15833333333333333,
+        "pair_accuracy": 0.7330084325396826,
+        "mean_pair_shd": 2.705208333333333,
+        "skeleton_f1": 0.7852469178620313,
+        "directed_target_accuracy": 0.40439390777437106
+      },
+      "exact_delta": 0.019791666666666652,
+      "shd_delta": -0.6885416666666666,
+      "replay_verified": true
+    }
+  },
+  "scope": "frozen neural graph decoding only; symbolic programs and SCM recovery unchanged"
+}

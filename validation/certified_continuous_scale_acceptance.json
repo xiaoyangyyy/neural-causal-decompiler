@@ -1,0 +1,46 @@
+{
+  "formal_seed": 4701,
+  "scope": "learned stable continuous ReLU dynamics; fixed state pairs; complete action boxes; finite horizons",
+  "checks": {
+    "complete_retraining_replay": true,
+    "four_profiles": true,
+    "reaches_128_dimensions": true,
+    "reaches_horizon_20": true,
+    "all_models_fit": true,
+    "relational_resolves_all_pairs": true,
+    "relational_certifies_near_pairs": true,
+    "independent_ibp_preserves_unresolved": true,
+    "all_certificates_replayed": true
+  },
+  "replay": {
+    "status": "verified",
+    "profiles_replayed": 4,
+    "certificates_verified": 16,
+    "largest_state_dim": 128,
+    "largest_horizon": 20
+  },
+  "summary": {
+    "schema": "ncd.continuous-scale-summary.v1",
+    "profiles": 4,
+    "largest_state_dim": 128,
+    "largest_action_dim": 5,
+    "largest_horizon": 20,
+    "largest_parameter_count": 52002,
+    "all_training_fit_max_error_below_1e-9": true,
+    "relational_statuses": {
+      "separated": 4,
+      "certified-within-epsilon": 4,
+      "unresolved": 0
+    },
+    "independent_statuses": {
+      "separated": 4,
+      "certified-within-epsilon": 0,
+      "unresolved": 4
+    },
+    "relational_mean_seconds": 1.2161531250021653,
+    "independent_mean_seconds": 7.591746562500703,
+    "scope": "learned stable continuous ReLU dynamics; fixed state pairs; complete action boxes; finite horizons",
+    "runtime_seconds": 136.67559090000577
+  },
+  "accepted": true
+}

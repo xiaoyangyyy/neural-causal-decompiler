@@ -1,0 +1,3431 @@
+{
+  "claims": [
+    {
+      "assumptions": [
+        "acyclic SCM with explicitly stated external noise law; additional identification assumptions require separate evidence"
+      ],
+      "error_contract": "identifiability or exact object/semantics specification, not benchmark mean accuracy",
+      "evidence": [],
+      "evidence_class": "true_causal_correctness",
+      "id": "R0.objects",
+      "input_domain": "all allowed SCMs and observation laws, including linear Gaussian models",
+      "interventions": "observational input changes; no identifying intervention assumed",
+      "proof_dependencies": [
+        "frozen target/data identities",
+        "declared domain and intervention contract",
+        "independent certificate or scope-matched counterexample"
+      ],
+      "quantifiers": "all instances in the stated original scope; instance binding alone does not reduce this quantifier",
+      "requirement": "R0",
+      "statement": "Separate discovery network, discovery program, true SCM and neural mechanisms",
+      "status": "unresolved",
+      "target_network": "allowed true SCM family, frozen networks and executable programs as separate objects",
+      "uncovered": "Historical module/test existence or a scoped certificate does not close this original scientific claim.",
+      "scoped_evidence": []
+    },
+    {
+      "assumptions": [
+        "independent centered Gaussian noises",
+        "no confounding",
+        "acyclic"
+      ],
+      "error_contract": "identifiability or exact object/semantics specification, not benchmark mean accuracy",
+      "evidence": [
+        "observational_gaussian_boundary/certificate.json"
+      ],
+      "evidence_class": "true_causal_correctness",
+      "id": "R0.observational_unique_direction",
+      "input_domain": "all sample sizes including population observations",
+      "interventions": "none observed",
+      "proof_dependencies": [
+        "frozen target/data identities",
+        "declared domain and intervention contract",
+        "independent certificate or scope-matched counterexample"
+      ],
+      "quantifiers": "any observational estimator on the allowed linear Gaussian family",
+      "requirement": "R0",
+      "statement": "Every allowed observational linear Gaussian SCM has a uniquely recoverable direction",
+      "status": "refuted",
+      "target_network": "allowed true SCM family, frozen networks and executable programs as separate objects",
+      "uncovered": "Additional identifying assumptions or informative interventions are separate claims.",
+      "scoped_evidence": [
+        {
+          "job": "milestone",
+          "result_status": "verified",
+          "entails_original_claim": false
+        }
+      ]
+    },
+    {
+      "assumptions": [
+        "independent centered Gaussian noises",
+        "no confounding",
+        "acyclic"
+      ],
+      "error_contract": "identifiability or exact object/semantics specification, not benchmark mean accuracy",
+      "evidence": [
+        "observational_gaussian_boundary/certificate.json"
+      ],
+      "evidence_class": "true_causal_correctness",
+      "id": "R0.uniform_finite_sample_direction",
+      "input_domain": "all sample sizes including population observations",
+      "interventions": "none observed",
+      "proof_dependencies": [
+        "frozen target/data identities",
+        "declared domain and intervention contract",
+        "independent certificate or scope-matched counterexample"
+      ],
+      "quantifiers": "any observational estimator on the allowed linear Gaussian family",
+      "requirement": "R0",
+      "statement": "Some observational estimator recovers every allowed linear Gaussian direction with error strictly below one half",
+      "status": "refuted",
+      "target_network": "allowed true SCM family, frozen networks and executable programs as separate objects",
+      "uncovered": "Additional identifying assumptions or informative interventions are separate claims.",
+      "scoped_evidence": [
+        {
+          "job": "milestone",
+          "result_status": "verified",
+          "entails_original_claim": false
+        }
+      ]
+    },
+    {
+      "assumptions": [
+        "acyclic SCM with explicitly stated external noise law; additional identification assumptions require separate evidence"
+      ],
+      "error_contract": "identifiability or exact object/semantics specification, not benchmark mean accuracy",
+      "evidence": [],
+      "evidence_class": "true_causal_correctness",
+      "id": "R0.equivalence_contract",
+      "input_domain": "all allowed SCMs and observation laws, including linear Gaussian models",
+      "interventions": "observational input changes; no identifying intervention assumed",
+      "proof_dependencies": [
+        "frozen target/data identities",
+        "declared domain and intervention contract",
+        "independent certificate or scope-matched counterexample"
+      ],
+      "quantifiers": "all instances in the stated original scope; instance binding alone does not reduce this quantifier",
+      "requirement": "R0",
+      "statement": "Specify fidelity domains and distinguish mathematical from device semantics",
+      "status": "unresolved",
+      "target_network": "allowed true SCM family, frozen networks and executable programs as separate objects",
+      "uncovered": "Historical module/test existence or a scoped certificate does not close this original scientific claim.",
+      "scoped_evidence": []
+    },
+    {
+      "assumptions": [
+        "acyclic SCM with explicitly stated external noise law; additional identification assumptions require separate evidence"
+      ],
+      "error_contract": "identifiability or exact object/semantics specification, not benchmark mean accuracy",
+      "evidence": [],
+      "evidence_class": "true_causal_correctness",
+      "id": "R1.world_generator",
+      "input_domain": "all allowed SCMs and observation laws, including linear Gaussian models",
+      "interventions": "observational input changes; no identifying intervention assumed",
+      "proof_dependencies": [
+        "frozen target/data identities",
+        "declared domain and intervention contract",
+        "independent certificate or scope-matched counterexample"
+      ],
+      "quantifiers": "all instances in the stated original scope; instance binding alone does not reduce this quantifier",
+      "requirement": "R1",
+      "statement": "SCM sampling, noises and interventions implement the declared benchmark",
+      "status": "unresolved",
+      "target_network": "allowed true SCM family, frozen networks and executable programs as separate objects",
+      "uncovered": "Historical module/test existence or a scoped certificate does not close this original scientific claim.",
+      "scoped_evidence": []
+    },
+    {
+      "assumptions": [
+        "acyclic SCM with explicitly stated external noise law; additional identification assumptions require separate evidence"
+      ],
+      "error_contract": "identifiability or exact object/semantics specification, not benchmark mean accuracy",
+      "evidence": [],
+      "evidence_class": "true_causal_correctness",
+      "id": "R1.noise_law",
+      "input_domain": "all allowed SCMs and observation laws, including linear Gaussian models",
+      "interventions": "observational input changes; no identifying intervention assumed",
+      "proof_dependencies": [
+        "frozen target/data identities",
+        "declared domain and intervention contract",
+        "independent certificate or scope-matched counterexample"
+      ],
+      "quantifiers": "all instances in the stated original scope; instance binding alone does not reduce this quantifier",
+      "requirement": "R1",
+      "statement": "Explicitly justify each declared noise independence and law",
+      "status": "unresolved",
+      "target_network": "allowed true SCM family, frozen networks and executable programs as separate objects",
+      "uncovered": "Historical module/test existence or a scoped certificate does not close this original scientific claim.",
+      "scoped_evidence": []
+    },
+    {
+      "assumptions": [
+        "a frozen target, declared input semantics and domain must be bound before closure"
+      ],
+      "error_contract": "classification label agreement for fidelity; graph accuracy reported separately",
+      "evidence": [],
+      "evidence_class": "network_fidelity",
+      "id": "R2.sample_invariance",
+      "input_domain": "entire admissible discovery input domain; a local proof box is only scoped evidence",
+      "interventions": "observational input changes; no identifying intervention assumed",
+      "proof_dependencies": [
+        "frozen target/data identities",
+        "declared domain and intervention contract",
+        "independent certificate or scope-matched counterexample"
+      ],
+      "quantifiers": "all instances in the stated original scope; instance binding alone does not reduce this quantifier",
+      "requirement": "R2",
+      "statement": "Discovery is invariant to sample order on its declared domain",
+      "status": "unresolved",
+      "target_network": "frozen discovery network and extracted discovery program",
+      "uncovered": "Historical module/test existence or a scoped certificate does not close this original scientific claim.",
+      "scoped_evidence": []
+    },
+    {
+      "assumptions": [
+        "a frozen target, declared input semantics and domain must be bound before closure"
+      ],
+      "error_contract": "classification label agreement for fidelity; graph accuracy reported separately",
+      "evidence": [],
+      "evidence_class": "network_fidelity",
+      "id": "R2.variable_equivariance",
+      "input_domain": "entire admissible discovery input domain; a local proof box is only scoped evidence",
+      "interventions": "observational input changes; no identifying intervention assumed",
+      "proof_dependencies": [
+        "frozen target/data identities",
+        "declared domain and intervention contract",
+        "independent certificate or scope-matched counterexample"
+      ],
+      "quantifiers": "all instances in the stated original scope; instance binding alone does not reduce this quantifier",
+      "requirement": "R2",
+      "statement": "Variable relabeling commutes with discovery",
+      "status": "unresolved",
+      "target_network": "frozen discovery network and extracted discovery program",
+      "uncovered": "Historical module/test existence or a scoped certificate does not close this original scientific claim.",
+      "scoped_evidence": []
+    },
+    {
+      "assumptions": [
+        "a frozen target, declared input semantics and domain must be bound before closure"
+      ],
+      "error_contract": "classification label agreement for fidelity; graph accuracy reported separately",
+      "evidence": [],
+      "evidence_class": "network_fidelity",
+      "id": "R2.discovery_guarantee",
+      "input_domain": "entire admissible discovery input domain; a local proof box is only scoped evidence",
+      "interventions": "observational input changes; no identifying intervention assumed",
+      "proof_dependencies": [
+        "frozen target/data identities",
+        "declared domain and intervention contract",
+        "independent certificate or scope-matched counterexample"
+      ],
+      "quantifiers": "all instances in the stated original scope; instance binding alone does not reduce this quantifier",
+      "requirement": "R2",
+      "statement": "State a justified discovery accuracy or identification guarantee",
+      "status": "unresolved",
+      "target_network": "frozen discovery network and extracted discovery program",
+      "uncovered": "Historical module/test existence or a scoped certificate does not close this original scientific claim.",
+      "scoped_evidence": []
+    },
+    {
+      "assumptions": [
+        "frozen operator and constant sets",
+        "explicit finite search bounds for class-relative MDL",
+        "unsupported operations remain unresolved"
+      ],
+      "error_contract": "semantic equivalence; deterministic serialization does not imply semantic uniqueness",
+      "evidence": [],
+      "evidence_class": "program_semantics",
+      "id": "R3.typed_semantics",
+      "input_domain": "all branches and protected-operation boundaries in the declared semantics; all shorter candidates for a minimality claim",
+      "interventions": "observational input changes; no identifying intervention assumed",
+      "proof_dependencies": [
+        "frozen target/data identities",
+        "declared domain and intervention contract",
+        "independent certificate or scope-matched counterexample"
+      ],
+      "quantifiers": "all instances in the stated original scope; instance binding alone does not reduce this quantifier",
+      "requirement": "R3",
+      "statement": "CDIR operators, protected operations and branches have explicit executable semantics",
+      "status": "unresolved",
+      "target_network": "CDIR operators and frozen finite operator/constant/search grammar",
+      "uncovered": "Historical module/test existence or a scoped certificate does not close this original scientific claim.",
+      "scoped_evidence": []
+    },
+    {
+      "assumptions": [
+        "frozen operator and constant sets",
+        "explicit finite search bounds for class-relative MDL",
+        "unsupported operations remain unresolved"
+      ],
+      "error_contract": "semantic equivalence; deterministic serialization does not imply semantic uniqueness",
+      "evidence": [],
+      "evidence_class": "program_semantics",
+      "id": "R3.compositionality",
+      "input_domain": "all branches and protected-operation boundaries in the declared semantics; all shorter candidates for a minimality claim",
+      "interventions": "observational input changes; no identifying intervention assumed",
+      "proof_dependencies": [
+        "frozen target/data identities",
+        "declared domain and intervention contract",
+        "independent certificate or scope-matched counterexample"
+      ],
+      "quantifiers": "all instances in the stated original scope; instance binding alone does not reduce this quantifier",
+      "requirement": "R3",
+      "statement": "Composed program execution follows the declared semantics",
+      "status": "unresolved",
+      "target_network": "CDIR operators and frozen finite operator/constant/search grammar",
+      "uncovered": "Historical module/test existence or a scoped certificate does not close this original scientific claim.",
+      "scoped_evidence": []
+    },
+    {
+      "assumptions": [
+        "a frozen target, declared input semantics and domain must be bound before closure",
+        "candidate search reads only allowed data and frozen network",
+        "shorter candidates must be exhausted to claim bounded-language MDL minimality"
+      ],
+      "error_contract": "classification label agreement for fidelity; graph accuracy reported separately",
+      "evidence": [],
+      "evidence_class": "network_fidelity",
+      "id": "R4.program_fidelity",
+      "input_domain": "entire admissible discovery input domain; a local proof box is only scoped evidence",
+      "interventions": "observational input changes; no identifying intervention assumed",
+      "proof_dependencies": [
+        "frozen target/data identities",
+        "declared domain and intervention contract",
+        "independent certificate or scope-matched counterexample"
+      ],
+      "quantifiers": "all instances in the stated original scope; instance binding alone does not reduce this quantifier",
+      "requirement": "R4",
+      "statement": "Automatically extract a program with verified fidelity on the declared discovery domain",
+      "status": "unresolved",
+      "target_network": "frozen discovery network and extracted discovery program",
+      "uncovered": "Historical module/test existence or a scoped certificate does not close this original scientific claim.",
+      "scoped_evidence": [
+        {
+          "job": "milestone",
+          "result_status": "verified",
+          "entails_original_claim": false
+        },
+        {
+          "job": "actual_graph_program_interchange",
+          "result_status": "proved",
+          "entails_original_claim": false
+        }
+      ]
+    },
+    {
+      "assumptions": [
+        "a frozen target, declared input semantics and domain must be bound before closure",
+        "candidate search reads only allowed data and frozen network",
+        "shorter candidates must be exhausted to claim bounded-language MDL minimality"
+      ],
+      "error_contract": "classification label agreement for fidelity; graph accuracy reported separately",
+      "evidence": [],
+      "evidence_class": "network_fidelity",
+      "id": "R4.cegis",
+      "input_domain": "entire admissible discovery input domain; a local proof box is only scoped evidence",
+      "interventions": "observational input changes; no identifying intervention assumed",
+      "proof_dependencies": [
+        "frozen target/data identities",
+        "declared domain and intervention contract",
+        "independent certificate or scope-matched counterexample"
+      ],
+      "quantifiers": "all instances in the stated original scope; instance binding alone does not reduce this quantifier",
+      "requirement": "R4",
+      "statement": "Use checked counterexamples to refine candidates",
+      "status": "unresolved",
+      "target_network": "frozen discovery network and extracted discovery program",
+      "uncovered": "Historical module/test existence or a scoped certificate does not close this original scientific claim.",
+      "scoped_evidence": []
+    },
+    {
+      "assumptions": [
+        "a frozen target, declared input semantics and domain must be bound before closure",
+        "candidate search reads only allowed data and frozen network",
+        "shorter candidates must be exhausted to claim bounded-language MDL minimality"
+      ],
+      "error_contract": "classification label agreement for fidelity; graph accuracy reported separately",
+      "evidence": [],
+      "evidence_class": "network_fidelity",
+      "id": "R4.mdl",
+      "input_domain": "entire admissible discovery input domain; a local proof box is only scoped evidence",
+      "interventions": "observational input changes; no identifying intervention assumed",
+      "proof_dependencies": [
+        "frozen target/data identities",
+        "declared domain and intervention contract",
+        "independent certificate or scope-matched counterexample"
+      ],
+      "quantifiers": "all instances in the stated original scope; instance binding alone does not reduce this quantifier",
+      "requirement": "R4",
+      "statement": "Prove minimality only under the explicitly fixed language and search bounds",
+      "status": "unresolved",
+      "target_network": "frozen discovery network and extracted discovery program",
+      "uncovered": "Historical module/test existence or a scoped certificate does not close this original scientific claim.",
+      "scoped_evidence": []
+    },
+    {
+      "assumptions": [
+        "fixed mapping before validation",
+        "branch accessibility and local relations must be certified",
+        "a failed map does not exclude its mapping family"
+      ],
+      "error_contract": "numeric intermediate and final-output bounds, collateral preservation and guard agreement",
+      "evidence": [],
+      "evidence_class": "internal_mechanism_alignment",
+      "id": "R5.interchange",
+      "input_domain": "all reachable base states, source states and branch paths in the declared abstraction domain",
+      "interventions": "all declared compatible combinations, including independent source worlds per variable",
+      "proof_dependencies": [
+        "frozen target/data identities",
+        "declared domain and intervention contract",
+        "independent certificate or scope-matched counterexample"
+      ],
+      "quantifiers": "all instances in the stated original scope; instance binding alone does not reduce this quantifier",
+      "requirement": "R5",
+      "statement": "Verify the fixed neural/program mapping under all declared compatible interventions",
+      "status": "unresolved",
+      "target_network": "fixed neural read/write map, executed intermediate variables and program steps",
+      "uncovered": "Historical module/test existence or a scoped certificate does not close this original scientific claim.",
+      "scoped_evidence": [
+        {
+          "job": "actual_graph_program_interchange",
+          "result_status": "proved",
+          "entails_original_claim": false
+        }
+      ]
+    },
+    {
+      "assumptions": [
+        "fixed mapping before validation",
+        "branch accessibility and local relations must be certified",
+        "a failed map does not exclude its mapping family"
+      ],
+      "error_contract": "numeric intermediate and final-output bounds, collateral preservation and guard agreement",
+      "evidence": [],
+      "evidence_class": "internal_mechanism_alignment",
+      "id": "R5.intermediate_numeric",
+      "input_domain": "all reachable base states, source states and branch paths in the declared abstraction domain",
+      "interventions": "all declared compatible combinations, including independent source worlds per variable",
+      "proof_dependencies": [
+        "frozen target/data identities",
+        "declared domain and intervention contract",
+        "independent certificate or scope-matched counterexample"
+      ],
+      "quantifiers": "all instances in the stated original scope; instance binding alone does not reduce this quantifier",
+      "requirement": "R5",
+      "statement": "Verify numeric intermediates and collateral preservation",
+      "status": "unresolved",
+      "target_network": "fixed neural read/write map, executed intermediate variables and program steps",
+      "uncovered": "Historical module/test existence or a scoped certificate does not close this original scientific claim.",
+      "scoped_evidence": [
+        {
+          "job": "actual_graph_program_interchange",
+          "result_status": "proved",
+          "entails_original_claim": false
+        }
+      ]
+    },
+    {
+      "assumptions": [
+        "fixed mapping before validation",
+        "branch accessibility and local relations must be certified",
+        "a failed map does not exclude its mapping family"
+      ],
+      "error_contract": "numeric intermediate and final-output bounds, collateral preservation and guard agreement",
+      "evidence": [],
+      "evidence_class": "internal_mechanism_alignment",
+      "id": "R5.composition",
+      "input_domain": "all reachable base states, source states and branch paths in the declared abstraction domain",
+      "interventions": "all declared compatible combinations, including independent source worlds per variable",
+      "proof_dependencies": [
+        "frozen target/data identities",
+        "declared domain and intervention contract",
+        "independent certificate or scope-matched counterexample"
+      ],
+      "quantifiers": "all instances in the stated original scope; instance binding alone does not reduce this quantifier",
+      "requirement": "R5",
+      "statement": "Compose local relations across multiple computation steps",
+      "status": "unresolved",
+      "target_network": "fixed neural read/write map, executed intermediate variables and program steps",
+      "uncovered": "Historical module/test existence or a scoped certificate does not close this original scientific claim.",
+      "scoped_evidence": [
+        {
+          "job": "actual_graph_program_interchange",
+          "result_status": "proved",
+          "entails_original_claim": false
+        }
+      ]
+    },
+    {
+      "assumptions": [
+        "independent world units",
+        "no reuse of evaluator truth in candidate search"
+      ],
+      "error_contract": "separate network fidelity, graph, true mechanism, noise and intervention errors; familywise confidence 99 percent",
+      "evidence": [],
+      "evidence_class": "evaluation_contract",
+      "id": "R6.separate_targets",
+      "input_domain": "all registered experiments, including failed runs and confirmation worlds",
+      "interventions": "observational input changes; no identifying intervention assumed",
+      "proof_dependencies": [
+        "frozen target/data identities",
+        "declared domain and intervention contract",
+        "independent certificate or scope-matched counterexample"
+      ],
+      "quantifiers": "all instances in the stated original scope; instance binding alone does not reduce this quantifier",
+      "requirement": "R6",
+      "statement": "Report network fidelity, truth accuracy, graph and mechanism errors separately",
+      "status": "unresolved",
+      "target_network": "frozen neural/program pair, independent true SCM evaluator and world-level statistics",
+      "uncovered": "Historical module/test existence or a scoped certificate does not close this original scientific claim.",
+      "scoped_evidence": []
+    },
+    {
+      "assumptions": [
+        "independent world units",
+        "no reuse of evaluator truth in candidate search"
+      ],
+      "error_contract": "separate network fidelity, graph, true mechanism, noise and intervention errors; familywise confidence 99 percent",
+      "evidence": [],
+      "evidence_class": "evaluation_contract",
+      "id": "R6.evaluation_guarantee",
+      "input_domain": "all registered experiments, including failed runs and confirmation worlds",
+      "interventions": "observational input changes; no identifying intervention assumed",
+      "proof_dependencies": [
+        "frozen target/data identities",
+        "declared domain and intervention contract",
+        "independent certificate or scope-matched counterexample"
+      ],
+      "quantifiers": "all instances in the stated original scope; instance binding alone does not reduce this quantifier",
+      "requirement": "R6",
+      "statement": "Replay comparisons and justify world-level statistical units",
+      "status": "unresolved",
+      "target_network": "frozen neural/program pair, independent true SCM evaluator and world-level statistics",
+      "uncovered": "Historical module/test existence or a scoped certificate does not close this original scientific claim.",
+      "scoped_evidence": []
+    },
+    {
+      "assumptions": [
+        "a frozen target, declared input semantics and domain must be bound before closure",
+        "strict rational numerical enclosures",
+        "search exhaustion is unresolved, not a universal refutation"
+      ],
+      "error_contract": "rigorous point counterexample or full-domain worst-case enclosure; no omitted hard regions",
+      "evidence": [],
+      "evidence_class": "network_fidelity",
+      "id": "R7.counterexamples",
+      "input_domain": "entire declared closed input domain including branch boundaries and degenerate inputs",
+      "interventions": "observational input changes; no identifying intervention assumed",
+      "proof_dependencies": [
+        "frozen target/data identities",
+        "declared domain and intervention contract",
+        "independent certificate or scope-matched counterexample"
+      ],
+      "quantifiers": "all instances in the stated original scope; instance binding alone does not reduce this quantifier",
+      "requirement": "R7",
+      "statement": "Return independently checked concrete counterexamples",
+      "status": "unresolved",
+      "target_network": "frozen discovery network and extracted discovery program",
+      "uncovered": "Historical module/test existence or a scoped certificate does not close this original scientific claim.",
+      "scoped_evidence": []
+    },
+    {
+      "assumptions": [
+        "a frozen target, declared input semantics and domain must be bound before closure",
+        "strict rational numerical enclosures",
+        "search exhaustion is unresolved, not a universal refutation"
+      ],
+      "error_contract": "rigorous point counterexample or full-domain worst-case enclosure; no omitted hard regions",
+      "evidence": [],
+      "evidence_class": "network_fidelity",
+      "id": "R7.worst_case",
+      "input_domain": "entire declared closed input domain including branch boundaries and degenerate inputs",
+      "interventions": "observational input changes; no identifying intervention assumed",
+      "proof_dependencies": [
+        "frozen target/data identities",
+        "declared domain and intervention contract",
+        "independent certificate or scope-matched counterexample"
+      ],
+      "quantifiers": "all instances in the stated original scope; instance binding alone does not reduce this quantifier",
+      "requirement": "R7",
+      "statement": "Certify any claimed global worst-case bound on its entire declared domain",
+      "status": "unresolved",
+      "target_network": "frozen discovery network and extracted discovery program",
+      "uncovered": "Historical module/test existence or a scoped certificate does not close this original scientific claim.",
+      "scoped_evidence": []
+    },
+    {
+      "assumptions": [
+        "function, noise, scale, intervention support and sampling law frozen before confirmation"
+      ],
+      "error_contract": "truth accuracy and neural/program fidelity separately; numeric and distributional intervention errors",
+      "evidence": [],
+      "evidence_class": "true_causal_correctness",
+      "id": "R8.function_ood",
+      "input_domain": "declared function-shift family; unbounded universal OOD claims are not substituted by a finite benchmark",
+      "interventions": "declared node interventions and compatible combinations within that family",
+      "proof_dependencies": [
+        "frozen target/data identities",
+        "declared domain and intervention contract",
+        "independent certificate or scope-matched counterexample"
+      ],
+      "quantifiers": "all instances in the stated original scope; instance binding alone does not reduce this quantifier",
+      "requirement": "R8",
+      "statement": "Justify claims on the declared function shift family",
+      "status": "unresolved",
+      "target_network": "frozen discovery and mechanism networks, programs and true benchmark SCMs",
+      "uncovered": "Historical module/test existence or a scoped certificate does not close this original scientific claim.",
+      "scoped_evidence": []
+    },
+    {
+      "assumptions": [
+        "function, noise, scale, intervention support and sampling law frozen before confirmation"
+      ],
+      "error_contract": "truth accuracy and neural/program fidelity separately; numeric and distributional intervention errors",
+      "evidence": [],
+      "evidence_class": "true_causal_correctness",
+      "id": "R8.noise_ood",
+      "input_domain": "declared noise-shift family; unbounded universal OOD claims are not substituted by a finite benchmark",
+      "interventions": "declared node interventions and compatible combinations within that family",
+      "proof_dependencies": [
+        "frozen target/data identities",
+        "declared domain and intervention contract",
+        "independent certificate or scope-matched counterexample"
+      ],
+      "quantifiers": "all instances in the stated original scope; instance binding alone does not reduce this quantifier",
+      "requirement": "R8",
+      "statement": "Justify claims on the declared noise shift family",
+      "status": "unresolved",
+      "target_network": "frozen discovery and mechanism networks, programs and true benchmark SCMs",
+      "uncovered": "Historical module/test existence or a scoped certificate does not close this original scientific claim.",
+      "scoped_evidence": []
+    },
+    {
+      "assumptions": [
+        "function, noise, scale, intervention support and sampling law frozen before confirmation"
+      ],
+      "error_contract": "truth accuracy and neural/program fidelity separately; numeric and distributional intervention errors",
+      "evidence": [],
+      "evidence_class": "true_causal_correctness",
+      "id": "R8.scale_ood",
+      "input_domain": "declared scale-shift family; unbounded universal OOD claims are not substituted by a finite benchmark",
+      "interventions": "declared node interventions and compatible combinations within that family",
+      "proof_dependencies": [
+        "frozen target/data identities",
+        "declared domain and intervention contract",
+        "independent certificate or scope-matched counterexample"
+      ],
+      "quantifiers": "all instances in the stated original scope; instance binding alone does not reduce this quantifier",
+      "requirement": "R8",
+      "statement": "Justify claims on the declared scale shift family",
+      "status": "unresolved",
+      "target_network": "frozen discovery and mechanism networks, programs and true benchmark SCMs",
+      "uncovered": "Historical module/test existence or a scoped certificate does not close this original scientific claim.",
+      "scoped_evidence": []
+    },
+    {
+      "assumptions": [
+        "function, noise, scale, intervention support and sampling law frozen before confirmation"
+      ],
+      "error_contract": "truth accuracy and neural/program fidelity separately; numeric and distributional intervention errors",
+      "evidence": [],
+      "evidence_class": "true_causal_correctness",
+      "id": "R8.intervention_ood",
+      "input_domain": "declared intervention-shift family; unbounded universal OOD claims are not substituted by a finite benchmark",
+      "interventions": "declared node interventions and compatible combinations within that family",
+      "proof_dependencies": [
+        "frozen target/data identities",
+        "declared domain and intervention contract",
+        "independent certificate or scope-matched counterexample"
+      ],
+      "quantifiers": "all instances in the stated original scope; instance binding alone does not reduce this quantifier",
+      "requirement": "R8",
+      "statement": "Justify claims on the declared intervention family",
+      "status": "unresolved",
+      "target_network": "frozen discovery and mechanism networks, programs and true benchmark SCMs",
+      "uncovered": "Historical module/test existence or a scoped certificate does not close this original scientific claim.",
+      "scoped_evidence": []
+    },
+    {
+      "assumptions": [
+        "observational directions require identification premises",
+        "DAG completion and oracle diagnostics do not prove identification"
+      ],
+      "error_contract": "identified DAG or valid equivalence class; network/program graph labels checked separately",
+      "evidence": [],
+      "evidence_class": "true_causal_correctness",
+      "id": "R9.graph_recovery",
+      "input_domain": "full declared 3/5/8-node observation or intervention task, separated by information access",
+      "interventions": "none for observational task; recorded node-do coverage for interventional task",
+      "proof_dependencies": [
+        "frozen target/data identities",
+        "declared domain and intervention contract",
+        "independent certificate or scope-matched counterexample"
+      ],
+      "quantifiers": "all instances in the stated original scope; instance binding alone does not reduce this quantifier",
+      "requirement": "R9",
+      "statement": "Recover an identified DAG or justified graph equivalence class on 3/5/8 nodes",
+      "status": "unresolved",
+      "target_network": "3/5/8-node discovery networks, extracted graph computation and true SCM evaluator",
+      "uncovered": "Historical module/test existence or a scoped certificate does not close this original scientific claim.",
+      "scoped_evidence": []
+    },
+    {
+      "assumptions": [
+        "observational directions require identification premises",
+        "DAG completion and oracle diagnostics do not prove identification"
+      ],
+      "error_contract": "identified DAG or valid equivalence class; network/program graph labels checked separately",
+      "evidence": [],
+      "evidence_class": "true_causal_correctness",
+      "id": "R9.sepsets",
+      "input_domain": "full declared 3/5/8-node observation or intervention task, separated by information access",
+      "interventions": "none for observational task; recorded node-do coverage for interventional task",
+      "proof_dependencies": [
+        "frozen target/data identities",
+        "declared domain and intervention contract",
+        "independent certificate or scope-matched counterexample"
+      ],
+      "quantifiers": "all instances in the stated original scope; instance binding alone does not reduce this quantifier",
+      "requirement": "R9",
+      "statement": "Tie separations and orientation decisions to evidence rather than inserted teacher truth",
+      "status": "unresolved",
+      "target_network": "3/5/8-node discovery networks, extracted graph computation and true SCM evaluator",
+      "uncovered": "Historical module/test existence or a scoped certificate does not close this original scientific claim.",
+      "scoped_evidence": []
+    },
+    {
+      "assumptions": [
+        "observational directions require identification premises",
+        "DAG completion and oracle diagnostics do not prove identification"
+      ],
+      "error_contract": "identified DAG or valid equivalence class; network/program graph labels checked separately",
+      "evidence": [],
+      "evidence_class": "network_fidelity",
+      "id": "R9.neural_program",
+      "input_domain": "full declared 3/5/8-node observation or intervention task, separated by information access",
+      "interventions": "none for observational task; recorded node-do coverage for interventional task",
+      "proof_dependencies": [
+        "frozen target/data identities",
+        "declared domain and intervention contract",
+        "independent certificate or scope-matched counterexample"
+      ],
+      "quantifiers": "all instances in the stated original scope; instance binding alone does not reduce this quantifier",
+      "requirement": "R9",
+      "statement": "Extract and verify the network graph-discovery computation",
+      "status": "unresolved",
+      "target_network": "3/5/8-node discovery networks, extracted graph computation and true SCM evaluator",
+      "uncovered": "Historical module/test existence or a scoped certificate does not close this original scientific claim.",
+      "scoped_evidence": [
+        {
+          "job": "actual_graph_program_interchange",
+          "result_status": "proved",
+          "entails_original_claim": false
+        }
+      ]
+    },
+    {
+      "assumptions": [
+        "correct parent sets or explicit conditional theorem",
+        "local Lipschitz and domain coverage",
+        "noise law, independence and coupling distance separately justified"
+      ],
+      "error_contract": "neural-symbolic mechanism error <=1/100 of frozen training scale; joint intervention distribution distance requires certified noise coupling",
+      "evidence": [],
+      "evidence_class": "true_causal_correctness",
+      "id": "R10.end_to_end",
+      "input_domain": "entire declared mechanism/intervention domain for the inferred parent sets",
+      "interventions": "all declared node-do values and compatible simultaneous interventions",
+      "proof_dependencies": [
+        "frozen target/data identities",
+        "declared domain and intervention contract",
+        "independent certificate or scope-matched counterexample"
+      ],
+      "quantifiers": "all instances in the stated original scope; instance binding alone does not reduce this quantifier",
+      "requirement": "R10",
+      "statement": "Recover an explicit SCM using inferred parents without oracle repairs",
+      "status": "unresolved",
+      "target_network": "frozen conditional neural mechanisms and inferred explicit SCM including graph, equations and exogenous laws",
+      "uncovered": "Historical module/test existence or a scoped certificate does not close this original scientific claim.",
+      "scoped_evidence": []
+    },
+    {
+      "assumptions": [
+        "correct parent sets or explicit conditional theorem",
+        "local Lipschitz and domain coverage",
+        "noise law, independence and coupling distance separately justified"
+      ],
+      "error_contract": "neural-symbolic mechanism error <=1/100 of frozen training scale; joint intervention distribution distance requires certified noise coupling",
+      "evidence": [],
+      "evidence_class": "network_fidelity",
+      "id": "R10.mechanism",
+      "input_domain": "entire declared mechanism/intervention domain for the inferred parent sets",
+      "interventions": "all declared node-do values and compatible simultaneous interventions",
+      "proof_dependencies": [
+        "frozen target/data identities",
+        "declared domain and intervention contract",
+        "independent certificate or scope-matched counterexample"
+      ],
+      "quantifiers": "all instances in the stated original scope; instance binding alone does not reduce this quantifier",
+      "requirement": "R10",
+      "statement": "Certify the frozen neural-to-symbolic mechanism approximation",
+      "status": "unresolved",
+      "target_network": "frozen conditional neural mechanisms and inferred explicit SCM including graph, equations and exogenous laws",
+      "uncovered": "Historical module/test existence or a scoped certificate does not close this original scientific claim.",
+      "scoped_evidence": [
+        {
+          "job": "milestone",
+          "result_status": "verified",
+          "entails_original_claim": false
+        }
+      ]
+    },
+    {
+      "assumptions": [
+        "correct parent sets or explicit conditional theorem",
+        "local Lipschitz and domain coverage",
+        "noise law, independence and coupling distance separately justified"
+      ],
+      "error_contract": "neural-symbolic mechanism error <=1/100 of frozen training scale; joint intervention distribution distance requires certified noise coupling",
+      "evidence": [],
+      "evidence_class": "true_causal_correctness",
+      "id": "R10.noise",
+      "input_domain": "entire declared mechanism/intervention domain for the inferred parent sets",
+      "interventions": "all declared node-do values and compatible simultaneous interventions",
+      "proof_dependencies": [
+        "frozen target/data identities",
+        "declared domain and intervention contract",
+        "independent certificate or scope-matched counterexample"
+      ],
+      "quantifiers": "all instances in the stated original scope; instance binding alone does not reduce this quantifier",
+      "requirement": "R10",
+      "statement": "Justify exogenous laws and independence rather than silently assuming empirical residual validity",
+      "status": "unresolved",
+      "target_network": "frozen conditional neural mechanisms and inferred explicit SCM including graph, equations and exogenous laws",
+      "uncovered": "Historical module/test existence or a scoped certificate does not close this original scientific claim.",
+      "scoped_evidence": []
+    },
+    {
+      "assumptions": [
+        "correct parent sets or explicit conditional theorem",
+        "local Lipschitz and domain coverage",
+        "noise law, independence and coupling distance separately justified"
+      ],
+      "error_contract": "neural-symbolic mechanism error <=1/100 of frozen training scale; joint intervention distribution distance requires certified noise coupling",
+      "evidence": [],
+      "evidence_class": "true_causal_correctness",
+      "id": "R10.intervention_distribution",
+      "input_domain": "entire declared mechanism/intervention domain for the inferred parent sets",
+      "interventions": "all declared node-do values and compatible simultaneous interventions",
+      "proof_dependencies": [
+        "frozen target/data identities",
+        "declared domain and intervention contract",
+        "independent certificate or scope-matched counterexample"
+      ],
+      "quantifiers": "all instances in the stated original scope; instance binding alone does not reduce this quantifier",
+      "requirement": "R10",
+      "statement": "Certify intervention effects and distribution bounds with verified premises",
+      "status": "unresolved",
+      "target_network": "frozen conditional neural mechanisms and inferred explicit SCM including graph, equations and exogenous laws",
+      "uncovered": "Historical module/test existence or a scoped certificate does not close this original scientific claim.",
+      "scoped_evidence": []
+    },
+    {
+      "assumptions": [
+        "frozen hashes and requirements",
+        "external extension tasks require their own specifications"
+      ],
+      "error_contract": "identity and independent replay; passing reproduction does not establish causal truth",
+      "evidence": [],
+      "evidence_class": "engineering_reproduction",
+      "id": "R11.ablations",
+      "input_domain": "all registered release/ablation cases, including failures and isolated installed execution",
+      "interventions": "observational input changes; no identifying intervention assumed",
+      "proof_dependencies": [
+        "frozen target/data identities",
+        "declared domain and intervention contract",
+        "independent certificate or scope-matched counterexample"
+      ],
+      "quantifiers": "all instances in the stated original scope; instance binding alone does not reduce this quantifier",
+      "requirement": "R11",
+      "statement": "Preserve and independently replay all declared ablations without selective reporting",
+      "status": "unresolved",
+      "target_network": "all declared source, wheel, checkpoint, ablation and executable-program artifacts",
+      "uncovered": "Historical module/test existence or a scoped certificate does not close this original scientific claim.",
+      "scoped_evidence": []
+    },
+    {
+      "assumptions": [
+        "frozen operator and constant sets",
+        "explicit finite search bounds for class-relative MDL",
+        "unsupported operations remain unresolved"
+      ],
+      "error_contract": "semantic equivalence; deterministic serialization does not imply semantic uniqueness",
+      "evidence": [],
+      "evidence_class": "program_semantics",
+      "id": "R12.semantic_equivalence",
+      "input_domain": "all branches and protected-operation boundaries in the declared semantics; all shorter candidates for a minimality claim",
+      "interventions": "observational input changes; no identifying intervention assumed",
+      "proof_dependencies": [
+        "frozen target/data identities",
+        "declared domain and intervention contract",
+        "independent certificate or scope-matched counterexample"
+      ],
+      "quantifiers": "all instances in the stated original scope; instance binding alone does not reduce this quantifier",
+      "requirement": "R12",
+      "statement": "Certify equivalence in the declared operator subset",
+      "status": "unresolved",
+      "target_network": "CDIR operators and frozen finite operator/constant/search grammar",
+      "uncovered": "Historical module/test existence or a scoped certificate does not close this original scientific claim.",
+      "scoped_evidence": [
+        {
+          "job": "binary_exact_equality",
+          "result_status": "proved",
+          "entails_original_claim": false
+        },
+        {
+          "job": "binary_nonzero",
+          "result_status": "refuted",
+          "entails_original_claim": false
+        }
+      ]
+    },
+    {
+      "assumptions": [
+        "frozen operator and constant sets",
+        "explicit finite search bounds for class-relative MDL",
+        "unsupported operations remain unresolved"
+      ],
+      "error_contract": "semantic equivalence; deterministic serialization does not imply semantic uniqueness",
+      "evidence": [],
+      "evidence_class": "program_semantics",
+      "id": "R12.canonicalization",
+      "input_domain": "all branches and protected-operation boundaries in the declared semantics; all shorter candidates for a minimality claim",
+      "interventions": "observational input changes; no identifying intervention assumed",
+      "proof_dependencies": [
+        "frozen target/data identities",
+        "declared domain and intervention contract",
+        "independent certificate or scope-matched counterexample"
+      ],
+      "quantifiers": "all instances in the stated original scope; instance binding alone does not reduce this quantifier",
+      "requirement": "R12",
+      "statement": "Separate deterministic serialization from semantic uniqueness",
+      "status": "unresolved",
+      "target_network": "CDIR operators and frozen finite operator/constant/search grammar",
+      "uncovered": "Historical module/test existence or a scoped certificate does not close this original scientific claim.",
+      "scoped_evidence": []
+    },
+    {
+      "assumptions": [
+        "frozen operator and constant sets",
+        "explicit finite search bounds for class-relative MDL",
+        "unsupported operations remain unresolved"
+      ],
+      "error_contract": "semantic equivalence; deterministic serialization does not imply semantic uniqueness",
+      "evidence": [],
+      "evidence_class": "program_semantics",
+      "id": "R12.shortest_unique",
+      "input_domain": "all branches and protected-operation boundaries in the declared semantics; all shorter candidates for a minimality claim",
+      "interventions": "observational input changes; no identifying intervention assumed",
+      "proof_dependencies": [
+        "frozen target/data identities",
+        "declared domain and intervention contract",
+        "independent certificate or scope-matched counterexample"
+      ],
+      "quantifiers": "all instances in the stated original scope; instance binding alone does not reduce this quantifier",
+      "requirement": "R12",
+      "statement": "Justify any uniqueness or globally shortest-program claim",
+      "status": "unresolved",
+      "target_network": "CDIR operators and frozen finite operator/constant/search grammar",
+      "uncovered": "Historical module/test existence or a scoped certificate does not close this original scientific claim.",
+      "scoped_evidence": []
+    },
+    {
+      "assumptions": [
+        "frozen hashes and requirements",
+        "external extension tasks require their own specifications"
+      ],
+      "error_contract": "identity and independent replay; passing reproduction does not establish causal truth",
+      "evidence": [],
+      "evidence_class": "engineering_reproduction",
+      "id": "R13.reproduction",
+      "input_domain": "all registered release/ablation cases, including failures and isolated installed execution",
+      "interventions": "observational input changes; no identifying intervention assumed",
+      "proof_dependencies": [
+        "frozen target/data identities",
+        "declared domain and intervention contract",
+        "independent certificate or scope-matched counterexample"
+      ],
+      "quantifiers": "all instances in the stated original scope; instance binding alone does not reduce this quantifier",
+      "requirement": "R13",
+      "statement": "Provide portable artifacts, source bindings and independent installed-package replay",
+      "status": "unresolved",
+      "target_network": "all declared source, wheel, checkpoint, ablation and executable-program artifacts",
+      "uncovered": "Historical module/test existence or a scoped certificate does not close this original scientific claim.",
+      "scoped_evidence": [
+        {
+          "job": "milestone",
+          "result_status": "verified",
+          "entails_original_claim": false
+        },
+        {
+          "job": "actual_graph_program_interchange",
+          "result_status": "proved",
+          "entails_original_claim": false
+        }
+      ]
+    },
+    {
+      "assumptions": [
+        "frozen hashes and requirements",
+        "external extension tasks require their own specifications"
+      ],
+      "error_contract": "identity and independent replay; passing reproduction does not establish causal truth",
+      "evidence": [],
+      "evidence_class": "engineering_reproduction",
+      "id": "R13.extensions",
+      "input_domain": "all registered release/ablation cases, including failures and isolated installed execution",
+      "interventions": "observational input changes; no identifying intervention assumed",
+      "proof_dependencies": [
+        "frozen target/data identities",
+        "declared domain and intervention contract",
+        "independent certificate or scope-matched counterexample"
+      ],
+      "quantifiers": "all instances in the stated original scope; instance binding alone does not reduce this quantifier",
+      "requirement": "R13",
+      "statement": "Distinguish defined external tasks from architecture visions",
+      "status": "unresolved",
+      "target_network": "all declared source, wheel, checkpoint, ablation and executable-program artifacts",
+      "uncovered": "Historical module/test existence or a scoped certificate does not close this original scientific claim.",
+      "scoped_evidence": []
+    }
+  ],
+  "overall_objective_achieved": false,
+  "requirements_sha256": "04d608c94e83c8b77adaca81fcf4942826d3aa7d5d61152d6e895b010fcc724c",
+  "schema": "ncd.original-claims.v1",
+  "target_instance_bindings": [
+    {
+      "id": "observational_gaussian_boundary",
+      "kind": "gaussian_nonidentifiability"
+    },
+    {
+      "checkpoint": "runs/active_end_to_end_seed4993/worlds/n3_test_id_0/observational_graph/baseline/mechanism_0.pt",
+      "checkpoint_sha256": "20b62f0bd0f6ba0e36ee678fbd7401e8425fdb8720e28c80b4b588382e671b61",
+      "domain": [
+        [
+          "-1",
+          "1"
+        ],
+        [
+          "-1",
+          "1"
+        ],
+        [
+          "-1",
+          "1"
+        ]
+      ],
+      "epsilon": "1/100",
+      "id": "historical_mechanism_0",
+      "kind": "frozen_mechanism",
+      "node": 0,
+      "scm": "runs/active_end_to_end_seed4993/worlds/n3_test_id_0/observational_graph/baseline/explicit_scm.json",
+      "scm_sha256": "25ee18accadb67001ec81e9833dada9cfb587312e14c58c981da4c729dd3c235"
+    },
+    {
+      "checkpoint": "runs/active_end_to_end_seed4993/worlds/n3_test_id_0/observational_graph/baseline/mechanism_1.pt",
+      "checkpoint_sha256": "2a88efbbad9a0963d9dc1c55df4909d540b3565adb8d5c7e03571988916e9886",
+      "domain": [
+        [
+          "-1",
+          "1"
+        ],
+        [
+          "-1",
+          "1"
+        ],
+        [
+          "-1",
+          "1"
+        ]
+      ],
+      "epsilon": "1/100",
+      "id": "historical_mechanism_1",
+      "kind": "frozen_mechanism",
+      "node": 1,
+      "scm": "runs/active_end_to_end_seed4993/worlds/n3_test_id_0/observational_graph/baseline/explicit_scm.json",
+      "scm_sha256": "25ee18accadb67001ec81e9833dada9cfb587312e14c58c981da4c729dd3c235"
+    },
+    {
+      "checkpoint": "runs/active_end_to_end_seed4993/worlds/n3_test_id_0/observational_graph/baseline/mechanism_2.pt",
+      "checkpoint_sha256": "77bff2f77190843f2b627231d1b33e65fe176036bedbb0d3d422106d4dd74620",
+      "domain": [
+        [
+          "-1",
+          "1"
+        ],
+        [
+          "-1",
+          "1"
+        ],
+        [
+          "-1",
+          "1"
+        ]
+      ],
+      "epsilon": "1/100",
+      "id": "historical_mechanism_2",
+      "kind": "frozen_mechanism",
+      "node": 2,
+      "scm": "runs/active_end_to_end_seed4993/worlds/n3_test_id_0/observational_graph/baseline/explicit_scm.json",
+      "scm_sha256": "25ee18accadb67001ec81e9833dada9cfb587312e14c58c981da4c729dd3c235"
+    },
+    {
+      "checkpoint": "runs/all_seed91_final/bivariate/models/full/discoverer.pt",
+      "checkpoint_sha256": "84a313ccbeb7f120686547bee9b010a6ef5f686b506ebf9f9b1fa4d6234c89e8",
+      "domain": [
+        [
+          [
+            "312053279/1073741824",
+            "312053281/1073741824"
+          ],
+          [
+            "-1214515713/1073741824",
+            "-1214515711/1073741824"
+          ]
+        ],
+        [
+          [
+            "-881412545/1073741824",
+            "-881412543/1073741824"
+          ],
+          [
+            "-943376065/1073741824",
+            "-943376063/1073741824"
+          ]
+        ],
+        [
+          [
+            "904559423/1073741824",
+            "904559425/1073741824"
+          ],
+          [
+            "1612188031/1073741824",
+            "1612188033/1073741824"
+          ]
+        ],
+        [
+          [
+            "416300383/1073741824",
+            "416300385/1073741824"
+          ],
+          [
+            "-771142337/1073741824",
+            "-771142335/1073741824"
+          ]
+        ],
+        [
+          [
+            "-647533953/1073741824",
+            "-647533951/1073741824"
+          ],
+          [
+            "1813760255/1073741824",
+            "1813760257/1073741824"
+          ]
+        ],
+        [
+          [
+            "1910605311/1073741824",
+            "1910605313/1073741824"
+          ],
+          [
+            "-1291353601/1073741824",
+            "-1291353599/1073741824"
+          ]
+        ],
+        [
+          [
+            "328226719/1073741824",
+            "328226721/1073741824"
+          ],
+          [
+            "1319831551/1073741824",
+            "1319831553/1073741824"
+          ]
+        ],
+        [
+          [
+            "-1297623297/1073741824",
+            "-1297623295/1073741824"
+          ],
+          [
+            "61313183/1073741824",
+            "61313185/1073741824"
+          ]
+        ],
+        [
+          [
+            "125144439/1073741824",
+            "125144441/1073741824"
+          ],
+          [
+            "-1449365377/1073741824",
+            "-1449365375/1073741824"
+          ]
+        ],
+        [
+          [
+            "1800402943/1073741824",
+            "1800402945/1073741824"
+          ],
+          [
+            "287918495/1073741824",
+            "287918497/1073741824"
+          ]
+        ],
+        [
+          [
+            "-290695937/1073741824",
+            "-290695935/1073741824"
+          ],
+          [
+            "-26296901/1073741824",
+            "-26296899/1073741824"
+          ]
+        ],
+        [
+          [
+            "-44551449/1073741824",
+            "-44551447/1073741824"
+          ],
+          [
+            "961214975/1073741824",
+            "961214977/1073741824"
+          ]
+        ],
+        [
+          [
+            "200509791/1073741824",
+            "200509793/1073741824"
+          ],
+          [
+            "-1382623105/1073741824",
+            "-1382623103/1073741824"
+          ]
+        ],
+        [
+          [
+            "322400319/1073741824",
+            "322400321/1073741824"
+          ],
+          [
+            "936197055/1073741824",
+            "936197057/1073741824"
+          ]
+        ],
+        [
+          [
+            "-168989217/1073741824",
+            "-168989215/1073741824"
+          ],
+          [
+            "1766360831/1073741824",
+            "1766360833/1073741824"
+          ]
+        ],
+        [
+          [
+            "729811647/1073741824",
+            "729811649/1073741824"
+          ],
+          [
+            "-616932865/1073741824",
+            "-616932863/1073741824"
+          ]
+        ]
+      ],
+      "id": "historical_discovery_local_box",
+      "kind": "frozen_discovery",
+      "program": "runs/all_seed91_final/bivariate/programs/full.json",
+      "program_sha256": "c8d033fea41592198cf2ae68d95801f1a071ebd61e5c5069c780fdc59f75f818"
+    },
+    {
+      "checkpoint": "runs/active_end_to_end_seed4993/worlds/n3_test_id_0/observational_graph/baseline/mechanism_0.pt",
+      "checkpoint_sha256": "20b62f0bd0f6ba0e36ee678fbd7401e8425fdb8720e28c80b4b588382e671b61",
+      "domain": [
+        [
+          "-1",
+          "1"
+        ],
+        [
+          "-1",
+          "1"
+        ],
+        [
+          "-1",
+          "1"
+        ]
+      ],
+      "epsilon": "1/100",
+      "id": "historical_mechanism_0_cegis",
+      "kind": "mechanism_cegis",
+      "node": 0,
+      "scm": "runs/active_end_to_end_seed4993/worlds/n3_test_id_0/observational_graph/baseline/explicit_scm.json",
+      "scm_sha256": "25ee18accadb67001ec81e9833dada9cfb587312e14c58c981da4c729dd3c235"
+    }
+  ],
+  "scoped_statistical_contracts": [],
+  "scoped_program_realization_contracts": [
+    {
+      "id": "actual_graph_math_seed8101_active_graph_n3",
+      "contract": {
+        "certificate_sha256": "086cd1348b01c785ef909e9f9633029047e27c1a5d296c0e60d97ea0fe6f082f",
+        "checkpoint_sha256": "15a3989a1831d5daf09b8c712cd1399cc04c9dad6d48f61c90b97587cb1a9ddf",
+        "domain": {
+          "batch": "Every positive finite integer B",
+          "features": [
+            "B",
+            3,
+            3,
+            24
+          ],
+          "values": "All finite real feature coordinates, including diagonal tokens, clipping boundaries and label ties"
+        },
+        "error": {
+          "decoded_graph": "identical partially-directed prediction, rejection trace and explicit DAG completion",
+          "mathematical_logits": "0",
+          "mathematical_probabilities": "0",
+          "pair_labels": "identical under the same lowest-index argmax rule"
+        },
+        "fixed_map": {
+          "all_mappings_refuted": false,
+          "compatible_interventions": "Every subset of the 14 declared sites, each receiving its own finite real tensor of the identical batch/node/channel shape; independent source assignments are allowed",
+          "hardware_rounding_covered": false,
+          "interchange_relation": "The mapped post-intervention neural states and program states agree, as do final scores and graph decisions; all nonintervened mapped states and their differences from the unpatched execution agree.",
+          "neural_execution": "All 14 declared modules occur on every supported forward path. Replacement does not count an omitted/unevaluated SSA primitive as execution coverage.",
+          "proof": "The checked local equations commute with matching output overrides. Topological induction covers every combination without assuming shared source values or cancellation; all downstream ordinary divisors/logs remain defined for arbitrary finite replacement values at these sites.",
+          "read_write": "Read by the row-major bijective grid/flat reshape; write by its inverse and return the overridden physical module output. For attention preserve the second tuple component.",
+          "short_causal_algorithm_proved": false,
+          "sites": [
+            {
+              "channels": "width",
+              "kind": "linear",
+              "layout": "grid",
+              "module": "encoder.0",
+              "state": "encoder.0.affine"
+            },
+            {
+              "channels": "width",
+              "kind": "tanh",
+              "layout": "grid",
+              "module": "encoder.1",
+              "state": "encoder.0.tanh"
+            },
+            {
+              "channels": "width",
+              "kind": "linear",
+              "layout": "grid",
+              "module": "encoder.2",
+              "state": "encoder.1.affine"
+            },
+            {
+              "channels": "width",
+              "kind": "tanh",
+              "layout": "grid",
+              "module": "encoder.3",
+              "state": "encoder.1.tanh"
+            },
+            {
+              "channels": "width",
+              "kind": "linear",
+              "layout": "grid",
+              "module": "context.0",
+              "state": "context.layer.0.affine"
+            },
+            {
+              "channels": "width",
+              "kind": "tanh",
+              "layout": "grid",
+              "module": "context.1",
+              "state": "context.layer.0.tanh"
+            },
+            {
+              "channels": "width",
+              "kind": "linear",
+              "layout": "grid",
+              "module": "context.2",
+              "state": "context.layer.1.affine"
+            },
+            {
+              "channels": "width",
+              "kind": "tanh",
+              "layout": "grid",
+              "module": "context.3",
+              "state": "context.layer.1.tanh"
+            },
+            {
+              "channels": "width",
+              "kind": "attention",
+              "layout": "flat",
+              "module": "attention",
+              "state": "attention.output.affine",
+              "tuple_first": true
+            },
+            {
+              "channels": "width",
+              "kind": "norm",
+              "layout": "flat",
+              "module": "norm",
+              "state": "norm.output"
+            },
+            {
+              "channels": "width",
+              "kind": "linear",
+              "layout": "grid",
+              "module": "head_trunk.0",
+              "state": "head.trunk.0.affine"
+            },
+            {
+              "channels": "width",
+              "kind": "tanh",
+              "layout": "grid",
+              "module": "head_trunk.1",
+              "state": "head.trunk.0.tanh"
+            },
+            {
+              "channels": 1,
+              "kind": "linear",
+              "layout": "grid",
+              "module": "skeleton_head",
+              "state": "head.skeleton.affine"
+            },
+            {
+              "channels": 3,
+              "kind": "linear",
+              "layout": "grid",
+              "module": "orientation_head",
+              "state": "head.orientation.affine"
+            }
+          ]
+        },
+        "id": "actual_graph_math_seed8101_active_graph_n3",
+        "network_sha256": "895723a90c148f80c982d2211a74a50eda2038fe252f8e7b7ce2a15e602ae7f0",
+        "nodes": 3,
+        "original_claim_closed": false,
+        "program_sha256": "ead636569d2915010a99e7a88686c88c040ffa4974343c617956abe2c6e06d93",
+        "proof_method": "Typed local equations and exact stored coefficients; topological composition with ideal real module contracts; device rounding excluded",
+        "scope": {
+          "compatible_site_subsets": 16384,
+          "features": 24,
+          "hardware_rounding_covered": false,
+          "input_values": "All finite real feature coordinates; every positive finite batch size",
+          "mathematical_score_probability_error": "0",
+          "mdl_minimality_proved": false,
+          "nodes": [
+            3,
+            5,
+            8
+          ],
+          "original_claim_closed": false,
+          "other_networks_or_maps_covered": false,
+          "physical_sites": 14,
+          "raw_feature_frontend_included": false,
+          "schema": "ncd.registered-actual-graph-scope.v1",
+          "targets": [
+            "seed8101_active_graph",
+            "seed8101_observational_graph",
+            "seed8102_active_graph",
+            "seed8102_observational_graph"
+          ],
+          "true_graph_identification_proved": false,
+          "width": 48
+        },
+        "status": "proved",
+        "target": "seed8101_active_graph",
+        "uncovered": [
+          "Raw statistical and do-response feature construction",
+          "Other actual graph architectures/checkpoints",
+          "Device rounding or bit-exact equivalence",
+          "True graph identification or an identified CPDAG",
+          "Shortest causal algorithm/MDL minimality",
+          "Unregistered physical graph sites or other mapping families"
+        ]
+      },
+      "evidence_jobs": [
+        "actual_graph_program_interchange"
+      ]
+    },
+    {
+      "id": "actual_graph_math_seed8101_active_graph_n5",
+      "contract": {
+        "certificate_sha256": "7d4602287ad0148fdb626cc9bd386ea4a091fea494d076ddf122fef2cc81a649",
+        "checkpoint_sha256": "15a3989a1831d5daf09b8c712cd1399cc04c9dad6d48f61c90b97587cb1a9ddf",
+        "domain": {
+          "batch": "Every positive finite integer B",
+          "features": [
+            "B",
+            5,
+            5,
+            24
+          ],
+          "values": "All finite real feature coordinates, including diagonal tokens, clipping boundaries and label ties"
+        },
+        "error": {
+          "decoded_graph": "identical partially-directed prediction, rejection trace and explicit DAG completion",
+          "mathematical_logits": "0",
+          "mathematical_probabilities": "0",
+          "pair_labels": "identical under the same lowest-index argmax rule"
+        },
+        "fixed_map": {
+          "all_mappings_refuted": false,
+          "compatible_interventions": "Every subset of the 14 declared sites, each receiving its own finite real tensor of the identical batch/node/channel shape; independent source assignments are allowed",
+          "hardware_rounding_covered": false,
+          "interchange_relation": "The mapped post-intervention neural states and program states agree, as do final scores and graph decisions; all nonintervened mapped states and their differences from the unpatched execution agree.",
+          "neural_execution": "All 14 declared modules occur on every supported forward path. Replacement does not count an omitted/unevaluated SSA primitive as execution coverage.",
+          "proof": "The checked local equations commute with matching output overrides. Topological induction covers every combination without assuming shared source values or cancellation; all downstream ordinary divisors/logs remain defined for arbitrary finite replacement values at these sites.",
+          "read_write": "Read by the row-major bijective grid/flat reshape; write by its inverse and return the overridden physical module output. For attention preserve the second tuple component.",
+          "short_causal_algorithm_proved": false,
+          "sites": [
+            {
+              "channels": "width",
+              "kind": "linear",
+              "layout": "grid",
+              "module": "encoder.0",
+              "state": "encoder.0.affine"
+            },
+            {
+              "channels": "width",
+              "kind": "tanh",
+              "layout": "grid",
+              "module": "encoder.1",
+              "state": "encoder.0.tanh"
+            },
+            {
+              "channels": "width",
+              "kind": "linear",
+              "layout": "grid",
+              "module": "encoder.2",
+              "state": "encoder.1.affine"
+            },
+            {
+              "channels": "width",
+              "kind": "tanh",
+              "layout": "grid",
+              "module": "encoder.3",
+              "state": "encoder.1.tanh"
+            },
+            {
+              "channels": "width",
+              "kind": "linear",
+              "layout": "grid",
+              "module": "context.0",
+              "state": "context.layer.0.affine"
+            },
+            {
+              "channels": "width",
+              "kind": "tanh",
+              "layout": "grid",
+              "module": "context.1",
+              "state": "context.layer.0.tanh"
+            },
+            {
+              "channels": "width",
+              "kind": "linear",
+              "layout": "grid",
+              "module": "context.2",
+              "state": "context.layer.1.affine"
+            },
+            {
+              "channels": "width",
+              "kind": "tanh",
+              "layout": "grid",
+              "module": "context.3",
+              "state": "context.layer.1.tanh"
+            },
+            {
+              "channels": "width",
+              "kind": "attention",
+              "layout": "flat",
+              "module": "attention",
+              "state": "attention.output.affine",
+              "tuple_first": true
+            },
+            {
+              "channels": "width",
+              "kind": "norm",
+              "layout": "flat",
+              "module": "norm",
+              "state": "norm.output"
+            },
+            {
+              "channels": "width",
+              "kind": "linear",
+              "layout": "grid",
+              "module": "head_trunk.0",
+              "state": "head.trunk.0.affine"
+            },
+            {
+              "channels": "width",
+              "kind": "tanh",
+              "layout": "grid",
+              "module": "head_trunk.1",
+              "state": "head.trunk.0.tanh"
+            },
+            {
+              "channels": 1,
+              "kind": "linear",
+              "layout": "grid",
+              "module": "skeleton_head",
+              "state": "head.skeleton.affine"
+            },
+            {
+              "channels": 3,
+              "kind": "linear",
+              "layout": "grid",
+              "module": "orientation_head",
+              "state": "head.orientation.affine"
+            }
+          ]
+        },
+        "id": "actual_graph_math_seed8101_active_graph_n5",
+        "network_sha256": "895723a90c148f80c982d2211a74a50eda2038fe252f8e7b7ce2a15e602ae7f0",
+        "nodes": 5,
+        "original_claim_closed": false,
+        "program_sha256": "6be707bc3f345911b16766afbbfd9753f946341cf51757929810963e7ef23af0",
+        "proof_method": "Typed local equations and exact stored coefficients; topological composition with ideal real module contracts; device rounding excluded",
+        "scope": {
+          "compatible_site_subsets": 16384,
+          "features": 24,
+          "hardware_rounding_covered": false,
+          "input_values": "All finite real feature coordinates; every positive finite batch size",
+          "mathematical_score_probability_error": "0",
+          "mdl_minimality_proved": false,
+          "nodes": [
+            3,
+            5,
+            8
+          ],
+          "original_claim_closed": false,
+          "other_networks_or_maps_covered": false,
+          "physical_sites": 14,
+          "raw_feature_frontend_included": false,
+          "schema": "ncd.registered-actual-graph-scope.v1",
+          "targets": [
+            "seed8101_active_graph",
+            "seed8101_observational_graph",
+            "seed8102_active_graph",
+            "seed8102_observational_graph"
+          ],
+          "true_graph_identification_proved": false,
+          "width": 48
+        },
+        "status": "proved",
+        "target": "seed8101_active_graph",
+        "uncovered": [
+          "Raw statistical and do-response feature construction",
+          "Other actual graph architectures/checkpoints",
+          "Device rounding or bit-exact equivalence",
+          "True graph identification or an identified CPDAG",
+          "Shortest causal algorithm/MDL minimality",
+          "Unregistered physical graph sites or other mapping families"
+        ]
+      },
+      "evidence_jobs": [
+        "actual_graph_program_interchange"
+      ]
+    },
+    {
+      "id": "actual_graph_math_seed8101_active_graph_n8",
+      "contract": {
+        "certificate_sha256": "d32e0e129507f1bb6469b29e5cd3555606029513eafd270db76d7b194777bb83",
+        "checkpoint_sha256": "15a3989a1831d5daf09b8c712cd1399cc04c9dad6d48f61c90b97587cb1a9ddf",
+        "domain": {
+          "batch": "Every positive finite integer B",
+          "features": [
+            "B",
+            8,
+            8,
+            24
+          ],
+          "values": "All finite real feature coordinates, including diagonal tokens, clipping boundaries and label ties"
+        },
+        "error": {
+          "decoded_graph": "identical partially-directed prediction, rejection trace and explicit DAG completion",
+          "mathematical_logits": "0",
+          "mathematical_probabilities": "0",
+          "pair_labels": "identical under the same lowest-index argmax rule"
+        },
+        "fixed_map": {
+          "all_mappings_refuted": false,
+          "compatible_interventions": "Every subset of the 14 declared sites, each receiving its own finite real tensor of the identical batch/node/channel shape; independent source assignments are allowed",
+          "hardware_rounding_covered": false,
+          "interchange_relation": "The mapped post-intervention neural states and program states agree, as do final scores and graph decisions; all nonintervened mapped states and their differences from the unpatched execution agree.",
+          "neural_execution": "All 14 declared modules occur on every supported forward path. Replacement does not count an omitted/unevaluated SSA primitive as execution coverage.",
+          "proof": "The checked local equations commute with matching output overrides. Topological induction covers every combination without assuming shared source values or cancellation; all downstream ordinary divisors/logs remain defined for arbitrary finite replacement values at these sites.",
+          "read_write": "Read by the row-major bijective grid/flat reshape; write by its inverse and return the overridden physical module output. For attention preserve the second tuple component.",
+          "short_causal_algorithm_proved": false,
+          "sites": [
+            {
+              "channels": "width",
+              "kind": "linear",
+              "layout": "grid",
+              "module": "encoder.0",
+              "state": "encoder.0.affine"
+            },
+            {
+              "channels": "width",
+              "kind": "tanh",
+              "layout": "grid",
+              "module": "encoder.1",
+              "state": "encoder.0.tanh"
+            },
+            {
+              "channels": "width",
+              "kind": "linear",
+              "layout": "grid",
+              "module": "encoder.2",
+              "state": "encoder.1.affine"
+            },
+            {
+              "channels": "width",
+              "kind": "tanh",
+              "layout": "grid",
+              "module": "encoder.3",
+              "state": "encoder.1.tanh"
+            },
+            {
+              "channels": "width",
+              "kind": "linear",
+              "layout": "grid",
+              "module": "context.0",
+              "state": "context.layer.0.affine"
+            },
+            {
+              "channels": "width",
+              "kind": "tanh",
+              "layout": "grid",
+              "module": "context.1",
+              "state": "context.layer.0.tanh"
+            },
+            {
+              "channels": "width",
+              "kind": "linear",
+              "layout": "grid",
+              "module": "context.2",
+              "state": "context.layer.1.affine"
+            },
+            {
+              "channels": "width",
+              "kind": "tanh",
+              "layout": "grid",
+              "module": "context.3",
+              "state": "context.layer.1.tanh"
+            },
+            {
+              "channels": "width",
+              "kind": "attention",
+              "layout": "flat",
+              "module": "attention",
+              "state": "attention.output.affine",
+              "tuple_first": true
+            },
+            {
+              "channels": "width",
+              "kind": "norm",
+              "layout": "flat",
+              "module": "norm",
+              "state": "norm.output"
+            },
+            {
+              "channels": "width",
+              "kind": "linear",
+              "layout": "grid",
+              "module": "head_trunk.0",
+              "state": "head.trunk.0.affine"
+            },
+            {
+              "channels": "width",
+              "kind": "tanh",
+              "layout": "grid",
+              "module": "head_trunk.1",
+              "state": "head.trunk.0.tanh"
+            },
+            {
+              "channels": 1,
+              "kind": "linear",
+              "layout": "grid",
+              "module": "skeleton_head",
+              "state": "head.skeleton.affine"
+            },
+            {
+              "channels": 3,
+              "kind": "linear",
+              "layout": "grid",
+              "module": "orientation_head",
+              "state": "head.orientation.affine"
+            }
+          ]
+        },
+        "id": "actual_graph_math_seed8101_active_graph_n8",
+        "network_sha256": "895723a90c148f80c982d2211a74a50eda2038fe252f8e7b7ce2a15e602ae7f0",
+        "nodes": 8,
+        "original_claim_closed": false,
+        "program_sha256": "3819fcf34f1d7dda158f17c18fa839847e6d04fa43748184950bf7e786771466",
+        "proof_method": "Typed local equations and exact stored coefficients; topological composition with ideal real module contracts; device rounding excluded",
+        "scope": {
+          "compatible_site_subsets": 16384,
+          "features": 24,
+          "hardware_rounding_covered": false,
+          "input_values": "All finite real feature coordinates; every positive finite batch size",
+          "mathematical_score_probability_error": "0",
+          "mdl_minimality_proved": false,
+          "nodes": [
+            3,
+            5,
+            8
+          ],
+          "original_claim_closed": false,
+          "other_networks_or_maps_covered": false,
+          "physical_sites": 14,
+          "raw_feature_frontend_included": false,
+          "schema": "ncd.registered-actual-graph-scope.v1",
+          "targets": [
+            "seed8101_active_graph",
+            "seed8101_observational_graph",
+            "seed8102_active_graph",
+            "seed8102_observational_graph"
+          ],
+          "true_graph_identification_proved": false,
+          "width": 48
+        },
+        "status": "proved",
+        "target": "seed8101_active_graph",
+        "uncovered": [
+          "Raw statistical and do-response feature construction",
+          "Other actual graph architectures/checkpoints",
+          "Device rounding or bit-exact equivalence",
+          "True graph identification or an identified CPDAG",
+          "Shortest causal algorithm/MDL minimality",
+          "Unregistered physical graph sites or other mapping families"
+        ]
+      },
+      "evidence_jobs": [
+        "actual_graph_program_interchange"
+      ]
+    },
+    {
+      "id": "actual_graph_math_seed8101_observational_graph_n3",
+      "contract": {
+        "certificate_sha256": "f0d6406fe77458dd9eddbb21dbdb4316c18c38fae2b677667cc933f3f6b94832",
+        "checkpoint_sha256": "3e1c5c4967858ba5035fd4f897dd5872c95ee70f70131e45fe72b9cfcc2345fc",
+        "domain": {
+          "batch": "Every positive finite integer B",
+          "features": [
+            "B",
+            3,
+            3,
+            24
+          ],
+          "values": "All finite real feature coordinates, including diagonal tokens, clipping boundaries and label ties"
+        },
+        "error": {
+          "decoded_graph": "identical partially-directed prediction, rejection trace and explicit DAG completion",
+          "mathematical_logits": "0",
+          "mathematical_probabilities": "0",
+          "pair_labels": "identical under the same lowest-index argmax rule"
+        },
+        "fixed_map": {
+          "all_mappings_refuted": false,
+          "compatible_interventions": "Every subset of the 14 declared sites, each receiving its own finite real tensor of the identical batch/node/channel shape; independent source assignments are allowed",
+          "hardware_rounding_covered": false,
+          "interchange_relation": "The mapped post-intervention neural states and program states agree, as do final scores and graph decisions; all nonintervened mapped states and their differences from the unpatched execution agree.",
+          "neural_execution": "All 14 declared modules occur on every supported forward path. Replacement does not count an omitted/unevaluated SSA primitive as execution coverage.",
+          "proof": "The checked local equations commute with matching output overrides. Topological induction covers every combination without assuming shared source values or cancellation; all downstream ordinary divisors/logs remain defined for arbitrary finite replacement values at these sites.",
+          "read_write": "Read by the row-major bijective grid/flat reshape; write by its inverse and return the overridden physical module output. For attention preserve the second tuple component.",
+          "short_causal_algorithm_proved": false,
+          "sites": [
+            {
+              "channels": "width",
+              "kind": "linear",
+              "layout": "grid",
+              "module": "encoder.0",
+              "state": "encoder.0.affine"
+            },
+            {
+              "channels": "width",
+              "kind": "tanh",
+              "layout": "grid",
+              "module": "encoder.1",
+              "state": "encoder.0.tanh"
+            },
+            {
+              "channels": "width",
+              "kind": "linear",
+              "layout": "grid",
+              "module": "encoder.2",
+              "state": "encoder.1.affine"
+            },
+            {
+              "channels": "width",
+              "kind": "tanh",
+              "layout": "grid",
+              "module": "encoder.3",
+              "state": "encoder.1.tanh"
+            },
+            {
+              "channels": "width",
+              "kind": "linear",
+              "layout": "grid",
+              "module": "context.0",
+              "state": "context.layer.0.affine"
+            },
+            {
+              "channels": "width",
+              "kind": "tanh",
+              "layout": "grid",
+              "module": "context.1",
+              "state": "context.layer.0.tanh"
+            },
+            {
+              "channels": "width",
+              "kind": "linear",
+              "layout": "grid",
+              "module": "context.2",
+              "state": "context.layer.1.affine"
+            },
+            {
+              "channels": "width",
+              "kind": "tanh",
+              "layout": "grid",
+              "module": "context.3",
+              "state": "context.layer.1.tanh"
+            },
+            {
+              "channels": "width",
+              "kind": "attention",
+              "layout": "flat",
+              "module": "attention",
+              "state": "attention.output.affine",
+              "tuple_first": true
+            },
+            {
+              "channels": "width",
+              "kind": "norm",
+              "layout": "flat",
+              "module": "norm",
+              "state": "norm.output"
+            },
+            {
+              "channels": "width",
+              "kind": "linear",
+              "layout": "grid",
+              "module": "head_trunk.0",
+              "state": "head.trunk.0.affine"
+            },
+            {
+              "channels": "width",
+              "kind": "tanh",
+              "layout": "grid",
+              "module": "head_trunk.1",
+              "state": "head.trunk.0.tanh"
+            },
+            {
+              "channels": 1,
+              "kind": "linear",
+              "layout": "grid",
+              "module": "skeleton_head",
+              "state": "head.skeleton.affine"
+            },
+            {
+              "channels": 3,
+              "kind": "linear",
+              "layout": "grid",
+              "module": "orientation_head",
+              "state": "head.orientation.affine"
+            }
+          ]
+        },
+        "id": "actual_graph_math_seed8101_observational_graph_n3",
+        "network_sha256": "b013561499b3aa7e01806a9fe5f13067322ec46020f4d01dcbd5b0e78be597a7",
+        "nodes": 3,
+        "original_claim_closed": false,
+        "program_sha256": "3f84587a751bb5d9bf2db6e61cb515d70ebf91e3d9537cb5adb03e3a7ffae576",
+        "proof_method": "Typed local equations and exact stored coefficients; topological composition with ideal real module contracts; device rounding excluded",
+        "scope": {
+          "compatible_site_subsets": 16384,
+          "features": 24,
+          "hardware_rounding_covered": false,
+          "input_values": "All finite real feature coordinates; every positive finite batch size",
+          "mathematical_score_probability_error": "0",
+          "mdl_minimality_proved": false,
+          "nodes": [
+            3,
+            5,
+            8
+          ],
+          "original_claim_closed": false,
+          "other_networks_or_maps_covered": false,
+          "physical_sites": 14,
+          "raw_feature_frontend_included": false,
+          "schema": "ncd.registered-actual-graph-scope.v1",
+          "targets": [
+            "seed8101_active_graph",
+            "seed8101_observational_graph",
+            "seed8102_active_graph",
+            "seed8102_observational_graph"
+          ],
+          "true_graph_identification_proved": false,
+          "width": 48
+        },
+        "status": "proved",
+        "target": "seed8101_observational_graph",
+        "uncovered": [
+          "Raw statistical and do-response feature construction",
+          "Other actual graph architectures/checkpoints",
+          "Device rounding or bit-exact equivalence",
+          "True graph identification or an identified CPDAG",
+          "Shortest causal algorithm/MDL minimality",
+          "Unregistered physical graph sites or other mapping families"
+        ]
+      },
+      "evidence_jobs": [
+        "actual_graph_program_interchange"
+      ]
+    },
+    {
+      "id": "actual_graph_math_seed8101_observational_graph_n5",
+      "contract": {
+        "certificate_sha256": "6f240bf5e299e5ed1e7299005f0c339f3b35a054be4bb6a63a93a61204b84f14",
+        "checkpoint_sha256": "3e1c5c4967858ba5035fd4f897dd5872c95ee70f70131e45fe72b9cfcc2345fc",
+        "domain": {
+          "batch": "Every positive finite integer B",
+          "features": [
+            "B",
+            5,
+            5,
+            24
+          ],
+          "values": "All finite real feature coordinates, including diagonal tokens, clipping boundaries and label ties"
+        },
+        "error": {
+          "decoded_graph": "identical partially-directed prediction, rejection trace and explicit DAG completion",
+          "mathematical_logits": "0",
+          "mathematical_probabilities": "0",
+          "pair_labels": "identical under the same lowest-index argmax rule"
+        },
+        "fixed_map": {
+          "all_mappings_refuted": false,
+          "compatible_interventions": "Every subset of the 14 declared sites, each receiving its own finite real tensor of the identical batch/node/channel shape; independent source assignments are allowed",
+          "hardware_rounding_covered": false,
+          "interchange_relation": "The mapped post-intervention neural states and program states agree, as do final scores and graph decisions; all nonintervened mapped states and their differences from the unpatched execution agree.",
+          "neural_execution": "All 14 declared modules occur on every supported forward path. Replacement does not count an omitted/unevaluated SSA primitive as execution coverage.",
+          "proof": "The checked local equations commute with matching output overrides. Topological induction covers every combination without assuming shared source values or cancellation; all downstream ordinary divisors/logs remain defined for arbitrary finite replacement values at these sites.",
+          "read_write": "Read by the row-major bijective grid/flat reshape; write by its inverse and return the overridden physical module output. For attention preserve the second tuple component.",
+          "short_causal_algorithm_proved": false,
+          "sites": [
+            {
+              "channels": "width",
+              "kind": "linear",
+              "layout": "grid",
+              "module": "encoder.0",
+              "state": "encoder.0.affine"
+            },
+            {
+              "channels": "width",
+              "kind": "tanh",
+              "layout": "grid",
+              "module": "encoder.1",
+              "state": "encoder.0.tanh"
+            },
+            {
+              "channels": "width",
+              "kind": "linear",
+              "layout": "grid",
+              "module": "encoder.2",
+              "state": "encoder.1.affine"
+            },
+            {
+              "channels": "width",
+              "kind": "tanh",
+              "layout": "grid",
+              "module": "encoder.3",
+              "state": "encoder.1.tanh"
+            },
+            {
+              "channels": "width",
+              "kind": "linear",
+              "layout": "grid",
+              "module": "context.0",
+              "state": "context.layer.0.affine"
+            },
+            {
+              "channels": "width",
+              "kind": "tanh",
+              "layout": "grid",
+              "module": "context.1",
+              "state": "context.layer.0.tanh"
+            },
+            {
+              "channels": "width",
+              "kind": "linear",
+              "layout": "grid",
+              "module": "context.2",
+              "state": "context.layer.1.affine"
+            },
+            {
+              "channels": "width",
+              "kind": "tanh",
+              "layout": "grid",
+              "module": "context.3",
+              "state": "context.layer.1.tanh"
+            },
+            {
+              "channels": "width",
+              "kind": "attention",
+              "layout": "flat",
+              "module": "attention",
+              "state": "attention.output.affine",
+              "tuple_first": true
+            },
+            {
+              "channels": "width",
+              "kind": "norm",
+              "layout": "flat",
+              "module": "norm",
+              "state": "norm.output"
+            },
+            {
+              "channels": "width",
+              "kind": "linear",
+              "layout": "grid",
+              "module": "head_trunk.0",
+              "state": "head.trunk.0.affine"
+            },
+            {
+              "channels": "width",
+              "kind": "tanh",
+              "layout": "grid",
+              "module": "head_trunk.1",
+              "state": "head.trunk.0.tanh"
+            },
+            {
+              "channels": 1,
+              "kind": "linear",
+              "layout": "grid",
+              "module": "skeleton_head",
+              "state": "head.skeleton.affine"
+            },
+            {
+              "channels": 3,
+              "kind": "linear",
+              "layout": "grid",
+              "module": "orientation_head",
+              "state": "head.orientation.affine"
+            }
+          ]
+        },
+        "id": "actual_graph_math_seed8101_observational_graph_n5",
+        "network_sha256": "b013561499b3aa7e01806a9fe5f13067322ec46020f4d01dcbd5b0e78be597a7",
+        "nodes": 5,
+        "original_claim_closed": false,
+        "program_sha256": "5fff41730db6b2f2a0c96873bc981b8efabf25dada255bb535068ff785be5c5b",
+        "proof_method": "Typed local equations and exact stored coefficients; topological composition with ideal real module contracts; device rounding excluded",
+        "scope": {
+          "compatible_site_subsets": 16384,
+          "features": 24,
+          "hardware_rounding_covered": false,
+          "input_values": "All finite real feature coordinates; every positive finite batch size",
+          "mathematical_score_probability_error": "0",
+          "mdl_minimality_proved": false,
+          "nodes": [
+            3,
+            5,
+            8
+          ],
+          "original_claim_closed": false,
+          "other_networks_or_maps_covered": false,
+          "physical_sites": 14,
+          "raw_feature_frontend_included": false,
+          "schema": "ncd.registered-actual-graph-scope.v1",
+          "targets": [
+            "seed8101_active_graph",
+            "seed8101_observational_graph",
+            "seed8102_active_graph",
+            "seed8102_observational_graph"
+          ],
+          "true_graph_identification_proved": false,
+          "width": 48
+        },
+        "status": "proved",
+        "target": "seed8101_observational_graph",
+        "uncovered": [
+          "Raw statistical and do-response feature construction",
+          "Other actual graph architectures/checkpoints",
+          "Device rounding or bit-exact equivalence",
+          "True graph identification or an identified CPDAG",
+          "Shortest causal algorithm/MDL minimality",
+          "Unregistered physical graph sites or other mapping families"
+        ]
+      },
+      "evidence_jobs": [
+        "actual_graph_program_interchange"
+      ]
+    },
+    {
+      "id": "actual_graph_math_seed8101_observational_graph_n8",
+      "contract": {
+        "certificate_sha256": "390b56cb5b9963d33c1a349c4a552357f1de31cecca180e80f4f244ec1769f74",
+        "checkpoint_sha256": "3e1c5c4967858ba5035fd4f897dd5872c95ee70f70131e45fe72b9cfcc2345fc",
+        "domain": {
+          "batch": "Every positive finite integer B",
+          "features": [
+            "B",
+            8,
+            8,
+            24
+          ],
+          "values": "All finite real feature coordinates, including diagonal tokens, clipping boundaries and label ties"
+        },
+        "error": {
+          "decoded_graph": "identical partially-directed prediction, rejection trace and explicit DAG completion",
+          "mathematical_logits": "0",
+          "mathematical_probabilities": "0",
+          "pair_labels": "identical under the same lowest-index argmax rule"
+        },
+        "fixed_map": {
+          "all_mappings_refuted": false,
+          "compatible_interventions": "Every subset of the 14 declared sites, each receiving its own finite real tensor of the identical batch/node/channel shape; independent source assignments are allowed",
+          "hardware_rounding_covered": false,
+          "interchange_relation": "The mapped post-intervention neural states and program states agree, as do final scores and graph decisions; all nonintervened mapped states and their differences from the unpatched execution agree.",
+          "neural_execution": "All 14 declared modules occur on every supported forward path. Replacement does not count an omitted/unevaluated SSA primitive as execution coverage.",
+          "proof": "The checked local equations commute with matching output overrides. Topological induction covers every combination without assuming shared source values or cancellation; all downstream ordinary divisors/logs remain defined for arbitrary finite replacement values at these sites.",
+          "read_write": "Read by the row-major bijective grid/flat reshape; write by its inverse and return the overridden physical module output. For attention preserve the second tuple component.",
+          "short_causal_algorithm_proved": false,
+          "sites": [
+            {
+              "channels": "width",
+              "kind": "linear",
+              "layout": "grid",
+              "module": "encoder.0",
+              "state": "encoder.0.affine"
+            },
+            {
+              "channels": "width",
+              "kind": "tanh",
+              "layout": "grid",
+              "module": "encoder.1",
+              "state": "encoder.0.tanh"
+            },
+            {
+              "channels": "width",
+              "kind": "linear",
+              "layout": "grid",
+              "module": "encoder.2",
+              "state": "encoder.1.affine"
+            },
+            {
+              "channels": "width",
+              "kind": "tanh",
+              "layout": "grid",
+              "module": "encoder.3",
+              "state": "encoder.1.tanh"
+            },
+            {
+              "channels": "width",
+              "kind": "linear",
+              "layout": "grid",
+              "module": "context.0",
+              "state": "context.layer.0.affine"
+            },
+            {
+              "channels": "width",
+              "kind": "tanh",
+              "layout": "grid",
+              "module": "context.1",
+              "state": "context.layer.0.tanh"
+            },
+            {
+              "channels": "width",
+              "kind": "linear",
+              "layout": "grid",
+              "module": "context.2",
+              "state": "context.layer.1.affine"
+            },
+            {
+              "channels": "width",
+              "kind": "tanh",
+              "layout": "grid",
+              "module": "context.3",
+              "state": "context.layer.1.tanh"
+            },
+            {
+              "channels": "width",
+              "kind": "attention",
+              "layout": "flat",
+              "module": "attention",
+              "state": "attention.output.affine",
+              "tuple_first": true
+            },
+            {
+              "channels": "width",
+              "kind": "norm",
+              "layout": "flat",
+              "module": "norm",
+              "state": "norm.output"
+            },
+            {
+              "channels": "width",
+              "kind": "linear",
+              "layout": "grid",
+              "module": "head_trunk.0",
+              "state": "head.trunk.0.affine"
+            },
+            {
+              "channels": "width",
+              "kind": "tanh",
+              "layout": "grid",
+              "module": "head_trunk.1",
+              "state": "head.trunk.0.tanh"
+            },
+            {
+              "channels": 1,
+              "kind": "linear",
+              "layout": "grid",
+              "module": "skeleton_head",
+              "state": "head.skeleton.affine"
+            },
+            {
+              "channels": 3,
+              "kind": "linear",
+              "layout": "grid",
+              "module": "orientation_head",
+              "state": "head.orientation.affine"
+            }
+          ]
+        },
+        "id": "actual_graph_math_seed8101_observational_graph_n8",
+        "network_sha256": "b013561499b3aa7e01806a9fe5f13067322ec46020f4d01dcbd5b0e78be597a7",
+        "nodes": 8,
+        "original_claim_closed": false,
+        "program_sha256": "89159fffa52d85c72072699d802eed809257b1a70eaf8a9e7bacac7dacfa4bc4",
+        "proof_method": "Typed local equations and exact stored coefficients; topological composition with ideal real module contracts; device rounding excluded",
+        "scope": {
+          "compatible_site_subsets": 16384,
+          "features": 24,
+          "hardware_rounding_covered": false,
+          "input_values": "All finite real feature coordinates; every positive finite batch size",
+          "mathematical_score_probability_error": "0",
+          "mdl_minimality_proved": false,
+          "nodes": [
+            3,
+            5,
+            8
+          ],
+          "original_claim_closed": false,
+          "other_networks_or_maps_covered": false,
+          "physical_sites": 14,
+          "raw_feature_frontend_included": false,
+          "schema": "ncd.registered-actual-graph-scope.v1",
+          "targets": [
+            "seed8101_active_graph",
+            "seed8101_observational_graph",
+            "seed8102_active_graph",
+            "seed8102_observational_graph"
+          ],
+          "true_graph_identification_proved": false,
+          "width": 48
+        },
+        "status": "proved",
+        "target": "seed8101_observational_graph",
+        "uncovered": [
+          "Raw statistical and do-response feature construction",
+          "Other actual graph architectures/checkpoints",
+          "Device rounding or bit-exact equivalence",
+          "True graph identification or an identified CPDAG",
+          "Shortest causal algorithm/MDL minimality",
+          "Unregistered physical graph sites or other mapping families"
+        ]
+      },
+      "evidence_jobs": [
+        "actual_graph_program_interchange"
+      ]
+    },
+    {
+      "id": "actual_graph_math_seed8102_active_graph_n3",
+      "contract": {
+        "certificate_sha256": "1ab4b67a7dfdefff2f216da4d2d8f02af89f3476892f1e269c220bcb3ffb7bf6",
+        "checkpoint_sha256": "3cd093729cbfe097663b748a2c39018efbb44a57cc91038cebd97c973c03c5e1",
+        "domain": {
+          "batch": "Every positive finite integer B",
+          "features": [
+            "B",
+            3,
+            3,
+            24
+          ],
+          "values": "All finite real feature coordinates, including diagonal tokens, clipping boundaries and label ties"
+        },
+        "error": {
+          "decoded_graph": "identical partially-directed prediction, rejection trace and explicit DAG completion",
+          "mathematical_logits": "0",
+          "mathematical_probabilities": "0",
+          "pair_labels": "identical under the same lowest-index argmax rule"
+        },
+        "fixed_map": {
+          "all_mappings_refuted": false,
+          "compatible_interventions": "Every subset of the 14 declared sites, each receiving its own finite real tensor of the identical batch/node/channel shape; independent source assignments are allowed",
+          "hardware_rounding_covered": false,
+          "interchange_relation": "The mapped post-intervention neural states and program states agree, as do final scores and graph decisions; all nonintervened mapped states and their differences from the unpatched execution agree.",
+          "neural_execution": "All 14 declared modules occur on every supported forward path. Replacement does not count an omitted/unevaluated SSA primitive as execution coverage.",
+          "proof": "The checked local equations commute with matching output overrides. Topological induction covers every combination without assuming shared source values or cancellation; all downstream ordinary divisors/logs remain defined for arbitrary finite replacement values at these sites.",
+          "read_write": "Read by the row-major bijective grid/flat reshape; write by its inverse and return the overridden physical module output. For attention preserve the second tuple component.",
+          "short_causal_algorithm_proved": false,
+          "sites": [
+            {
+              "channels": "width",
+              "kind": "linear",
+              "layout": "grid",
+              "module": "encoder.0",
+              "state": "encoder.0.affine"
+            },
+            {
+              "channels": "width",
+              "kind": "tanh",
+              "layout": "grid",
+              "module": "encoder.1",
+              "state": "encoder.0.tanh"
+            },
+            {
+              "channels": "width",
+              "kind": "linear",
+              "layout": "grid",
+              "module": "encoder.2",
+              "state": "encoder.1.affine"
+            },
+            {
+              "channels": "width",
+              "kind": "tanh",
+              "layout": "grid",
+              "module": "encoder.3",
+              "state": "encoder.1.tanh"
+            },
+            {
+              "channels": "width",
+              "kind": "linear",
+              "layout": "grid",
+              "module": "context.0",
+              "state": "context.layer.0.affine"
+            },
+            {
+              "channels": "width",
+              "kind": "tanh",
+              "layout": "grid",
+              "module": "context.1",
+              "state": "context.layer.0.tanh"
+            },
+            {
+              "channels": "width",
+              "kind": "linear",
+              "layout": "grid",
+              "module": "context.2",
+              "state": "context.layer.1.affine"
+            },
+            {
+              "channels": "width",
+              "kind": "tanh",
+              "layout": "grid",
+              "module": "context.3",
+              "state": "context.layer.1.tanh"
+            },
+            {
+              "channels": "width",
+              "kind": "attention",
+              "layout": "flat",
+              "module": "attention",
+              "state": "attention.output.affine",
+              "tuple_first": true
+            },
+            {
+              "channels": "width",
+              "kind": "norm",
+              "layout": "flat",
+              "module": "norm",
+              "state": "norm.output"
+            },
+            {
+              "channels": "width",
+              "kind": "linear",
+              "layout": "grid",
+              "module": "head_trunk.0",
+              "state": "head.trunk.0.affine"
+            },
+            {
+              "channels": "width",
+              "kind": "tanh",
+              "layout": "grid",
+              "module": "head_trunk.1",
+              "state": "head.trunk.0.tanh"
+            },
+            {
+              "channels": 1,
+              "kind": "linear",
+              "layout": "grid",
+              "module": "skeleton_head",
+              "state": "head.skeleton.affine"
+            },
+            {
+              "channels": 3,
+              "kind": "linear",
+              "layout": "grid",
+              "module": "orientation_head",
+              "state": "head.orientation.affine"
+            }
+          ]
+        },
+        "id": "actual_graph_math_seed8102_active_graph_n3",
+        "network_sha256": "2bb47e63d66e97b81957e2ebc1ac100c16b35de54b3f454dcc80160af1395552",
+        "nodes": 3,
+        "original_claim_closed": false,
+        "program_sha256": "f19f867ffa14f6afe0c72f04c43c36b996775cac72692e5ff7e3df4b9d8d01f3",
+        "proof_method": "Typed local equations and exact stored coefficients; topological composition with ideal real module contracts; device rounding excluded",
+        "scope": {
+          "compatible_site_subsets": 16384,
+          "features": 24,
+          "hardware_rounding_covered": false,
+          "input_values": "All finite real feature coordinates; every positive finite batch size",
+          "mathematical_score_probability_error": "0",
+          "mdl_minimality_proved": false,
+          "nodes": [
+            3,
+            5,
+            8
+          ],
+          "original_claim_closed": false,
+          "other_networks_or_maps_covered": false,
+          "physical_sites": 14,
+          "raw_feature_frontend_included": false,
+          "schema": "ncd.registered-actual-graph-scope.v1",
+          "targets": [
+            "seed8101_active_graph",
+            "seed8101_observational_graph",
+            "seed8102_active_graph",
+            "seed8102_observational_graph"
+          ],
+          "true_graph_identification_proved": false,
+          "width": 48
+        },
+        "status": "proved",
+        "target": "seed8102_active_graph",
+        "uncovered": [
+          "Raw statistical and do-response feature construction",
+          "Other actual graph architectures/checkpoints",
+          "Device rounding or bit-exact equivalence",
+          "True graph identification or an identified CPDAG",
+          "Shortest causal algorithm/MDL minimality",
+          "Unregistered physical graph sites or other mapping families"
+        ]
+      },
+      "evidence_jobs": [
+        "actual_graph_program_interchange"
+      ]
+    },
+    {
+      "id": "actual_graph_math_seed8102_active_graph_n5",
+      "contract": {
+        "certificate_sha256": "e7cbb76c5c9fbfc15219834717605a1b21889ab8b3c18ecf62d987471352daef",
+        "checkpoint_sha256": "3cd093729cbfe097663b748a2c39018efbb44a57cc91038cebd97c973c03c5e1",
+        "domain": {
+          "batch": "Every positive finite integer B",
+          "features": [
+            "B",
+            5,
+            5,
+            24
+          ],
+          "values": "All finite real feature coordinates, including diagonal tokens, clipping boundaries and label ties"
+        },
+        "error": {
+          "decoded_graph": "identical partially-directed prediction, rejection trace and explicit DAG completion",
+          "mathematical_logits": "0",
+          "mathematical_probabilities": "0",
+          "pair_labels": "identical under the same lowest-index argmax rule"
+        },
+        "fixed_map": {
+          "all_mappings_refuted": false,
+          "compatible_interventions": "Every subset of the 14 declared sites, each receiving its own finite real tensor of the identical batch/node/channel shape; independent source assignments are allowed",
+          "hardware_rounding_covered": false,
+          "interchange_relation": "The mapped post-intervention neural states and program states agree, as do final scores and graph decisions; all nonintervened mapped states and their differences from the unpatched execution agree.",
+          "neural_execution": "All 14 declared modules occur on every supported forward path. Replacement does not count an omitted/unevaluated SSA primitive as execution coverage.",
+          "proof": "The checked local equations commute with matching output overrides. Topological induction covers every combination without assuming shared source values or cancellation; all downstream ordinary divisors/logs remain defined for arbitrary finite replacement values at these sites.",
+          "read_write": "Read by the row-major bijective grid/flat reshape; write by its inverse and return the overridden physical module output. For attention preserve the second tuple component.",
+          "short_causal_algorithm_proved": false,
+          "sites": [
+            {
+              "channels": "width",
+              "kind": "linear",
+              "layout": "grid",
+              "module": "encoder.0",
+              "state": "encoder.0.affine"
+            },
+            {
+              "channels": "width",
+              "kind": "tanh",
+              "layout": "grid",
+              "module": "encoder.1",
+              "state": "encoder.0.tanh"
+            },
+            {
+              "channels": "width",
+              "kind": "linear",
+              "layout": "grid",
+              "module": "encoder.2",
+              "state": "encoder.1.affine"
+            },
+            {
+              "channels": "width",
+              "kind": "tanh",
+              "layout": "grid",
+              "module": "encoder.3",
+              "state": "encoder.1.tanh"
+            },
+            {
+              "channels": "width",
+              "kind": "linear",
+              "layout": "grid",
+              "module": "context.0",
+              "state": "context.layer.0.affine"
+            },
+            {
+              "channels": "width",
+              "kind": "tanh",
+              "layout": "grid",
+              "module": "context.1",
+              "state": "context.layer.0.tanh"
+            },
+            {
+              "channels": "width",
+              "kind": "linear",
+              "layout": "grid",
+              "module": "context.2",
+              "state": "context.layer.1.affine"
+            },
+            {
+              "channels": "width",
+              "kind": "tanh",
+              "layout": "grid",
+              "module": "context.3",
+              "state": "context.layer.1.tanh"
+            },
+            {
+              "channels": "width",
+              "kind": "attention",
+              "layout": "flat",
+              "module": "attention",
+              "state": "attention.output.affine",
+              "tuple_first": true
+            },
+            {
+              "channels": "width",
+              "kind": "norm",
+              "layout": "flat",
+              "module": "norm",
+              "state": "norm.output"
+            },
+            {
+              "channels": "width",
+              "kind": "linear",
+              "layout": "grid",
+              "module": "head_trunk.0",
+              "state": "head.trunk.0.affine"
+            },
+            {
+              "channels": "width",
+              "kind": "tanh",
+              "layout": "grid",
+              "module": "head_trunk.1",
+              "state": "head.trunk.0.tanh"
+            },
+            {
+              "channels": 1,
+              "kind": "linear",
+              "layout": "grid",
+              "module": "skeleton_head",
+              "state": "head.skeleton.affine"
+            },
+            {
+              "channels": 3,
+              "kind": "linear",
+              "layout": "grid",
+              "module": "orientation_head",
+              "state": "head.orientation.affine"
+            }
+          ]
+        },
+        "id": "actual_graph_math_seed8102_active_graph_n5",
+        "network_sha256": "2bb47e63d66e97b81957e2ebc1ac100c16b35de54b3f454dcc80160af1395552",
+        "nodes": 5,
+        "original_claim_closed": false,
+        "program_sha256": "51efbd6aa64aabe379c4e7d3f55763f3f463d6a80d48ea98b7c71f8393b63357",
+        "proof_method": "Typed local equations and exact stored coefficients; topological composition with ideal real module contracts; device rounding excluded",
+        "scope": {
+          "compatible_site_subsets": 16384,
+          "features": 24,
+          "hardware_rounding_covered": false,
+          "input_values": "All finite real feature coordinates; every positive finite batch size",
+          "mathematical_score_probability_error": "0",
+          "mdl_minimality_proved": false,
+          "nodes": [
+            3,
+            5,
+            8
+          ],
+          "original_claim_closed": false,
+          "other_networks_or_maps_covered": false,
+          "physical_sites": 14,
+          "raw_feature_frontend_included": false,
+          "schema": "ncd.registered-actual-graph-scope.v1",
+          "targets": [
+            "seed8101_active_graph",
+            "seed8101_observational_graph",
+            "seed8102_active_graph",
+            "seed8102_observational_graph"
+          ],
+          "true_graph_identification_proved": false,
+          "width": 48
+        },
+        "status": "proved",
+        "target": "seed8102_active_graph",
+        "uncovered": [
+          "Raw statistical and do-response feature construction",
+          "Other actual graph architectures/checkpoints",
+          "Device rounding or bit-exact equivalence",
+          "True graph identification or an identified CPDAG",
+          "Shortest causal algorithm/MDL minimality",
+          "Unregistered physical graph sites or other mapping families"
+        ]
+      },
+      "evidence_jobs": [
+        "actual_graph_program_interchange"
+      ]
+    },
+    {
+      "id": "actual_graph_math_seed8102_active_graph_n8",
+      "contract": {
+        "certificate_sha256": "ae0ad12b3615534c3fb5b4353df13bf549eb368db9eef26306f52f3c63f1b16e",
+        "checkpoint_sha256": "3cd093729cbfe097663b748a2c39018efbb44a57cc91038cebd97c973c03c5e1",
+        "domain": {
+          "batch": "Every positive finite integer B",
+          "features": [
+            "B",
+            8,
+            8,
+            24
+          ],
+          "values": "All finite real feature coordinates, including diagonal tokens, clipping boundaries and label ties"
+        },
+        "error": {
+          "decoded_graph": "identical partially-directed prediction, rejection trace and explicit DAG completion",
+          "mathematical_logits": "0",
+          "mathematical_probabilities": "0",
+          "pair_labels": "identical under the same lowest-index argmax rule"
+        },
+        "fixed_map": {
+          "all_mappings_refuted": false,
+          "compatible_interventions": "Every subset of the 14 declared sites, each receiving its own finite real tensor of the identical batch/node/channel shape; independent source assignments are allowed",
+          "hardware_rounding_covered": false,
+          "interchange_relation": "The mapped post-intervention neural states and program states agree, as do final scores and graph decisions; all nonintervened mapped states and their differences from the unpatched execution agree.",
+          "neural_execution": "All 14 declared modules occur on every supported forward path. Replacement does not count an omitted/unevaluated SSA primitive as execution coverage.",
+          "proof": "The checked local equations commute with matching output overrides. Topological induction covers every combination without assuming shared source values or cancellation; all downstream ordinary divisors/logs remain defined for arbitrary finite replacement values at these sites.",
+          "read_write": "Read by the row-major bijective grid/flat reshape; write by its inverse and return the overridden physical module output. For attention preserve the second tuple component.",
+          "short_causal_algorithm_proved": false,
+          "sites": [
+            {
+              "channels": "width",
+              "kind": "linear",
+              "layout": "grid",
+              "module": "encoder.0",
+              "state": "encoder.0.affine"
+            },
+            {
+              "channels": "width",
+              "kind": "tanh",
+              "layout": "grid",
+              "module": "encoder.1",
+              "state": "encoder.0.tanh"
+            },
+            {
+              "channels": "width",
+              "kind": "linear",
+              "layout": "grid",
+              "module": "encoder.2",
+              "state": "encoder.1.affine"
+            },
+            {
+              "channels": "width",
+              "kind": "tanh",
+              "layout": "grid",
+              "module": "encoder.3",
+              "state": "encoder.1.tanh"
+            },
+            {
+              "channels": "width",
+              "kind": "linear",
+              "layout": "grid",
+              "module": "context.0",
+              "state": "context.layer.0.affine"
+            },
+            {
+              "channels": "width",
+              "kind": "tanh",
+              "layout": "grid",
+              "module": "context.1",
+              "state": "context.layer.0.tanh"
+            },
+            {
+              "channels": "width",
+              "kind": "linear",
+              "layout": "grid",
+              "module": "context.2",
+              "state": "context.layer.1.affine"
+            },
+            {
+              "channels": "width",
+              "kind": "tanh",
+              "layout": "grid",
+              "module": "context.3",
+              "state": "context.layer.1.tanh"
+            },
+            {
+              "channels": "width",
+              "kind": "attention",
+              "layout": "flat",
+              "module": "attention",
+              "state": "attention.output.affine",
+              "tuple_first": true
+            },
+            {
+              "channels": "width",
+              "kind": "norm",
+              "layout": "flat",
+              "module": "norm",
+              "state": "norm.output"
+            },
+            {
+              "channels": "width",
+              "kind": "linear",
+              "layout": "grid",
+              "module": "head_trunk.0",
+              "state": "head.trunk.0.affine"
+            },
+            {
+              "channels": "width",
+              "kind": "tanh",
+              "layout": "grid",
+              "module": "head_trunk.1",
+              "state": "head.trunk.0.tanh"
+            },
+            {
+              "channels": 1,
+              "kind": "linear",
+              "layout": "grid",
+              "module": "skeleton_head",
+              "state": "head.skeleton.affine"
+            },
+            {
+              "channels": 3,
+              "kind": "linear",
+              "layout": "grid",
+              "module": "orientation_head",
+              "state": "head.orientation.affine"
+            }
+          ]
+        },
+        "id": "actual_graph_math_seed8102_active_graph_n8",
+        "network_sha256": "2bb47e63d66e97b81957e2ebc1ac100c16b35de54b3f454dcc80160af1395552",
+        "nodes": 8,
+        "original_claim_closed": false,
+        "program_sha256": "89fcc2e01b92f366df2b809e9ab486bb971dfad17f6ce29802847e452e37296b",
+        "proof_method": "Typed local equations and exact stored coefficients; topological composition with ideal real module contracts; device rounding excluded",
+        "scope": {
+          "compatible_site_subsets": 16384,
+          "features": 24,
+          "hardware_rounding_covered": false,
+          "input_values": "All finite real feature coordinates; every positive finite batch size",
+          "mathematical_score_probability_error": "0",
+          "mdl_minimality_proved": false,
+          "nodes": [
+            3,
+            5,
+            8
+          ],
+          "original_claim_closed": false,
+          "other_networks_or_maps_covered": false,
+          "physical_sites": 14,
+          "raw_feature_frontend_included": false,
+          "schema": "ncd.registered-actual-graph-scope.v1",
+          "targets": [
+            "seed8101_active_graph",
+            "seed8101_observational_graph",
+            "seed8102_active_graph",
+            "seed8102_observational_graph"
+          ],
+          "true_graph_identification_proved": false,
+          "width": 48
+        },
+        "status": "proved",
+        "target": "seed8102_active_graph",
+        "uncovered": [
+          "Raw statistical and do-response feature construction",
+          "Other actual graph architectures/checkpoints",
+          "Device rounding or bit-exact equivalence",
+          "True graph identification or an identified CPDAG",
+          "Shortest causal algorithm/MDL minimality",
+          "Unregistered physical graph sites or other mapping families"
+        ]
+      },
+      "evidence_jobs": [
+        "actual_graph_program_interchange"
+      ]
+    },
+    {
+      "id": "actual_graph_math_seed8102_observational_graph_n3",
+      "contract": {
+        "certificate_sha256": "7d11c463a21cd7362fea0a9e5cbe6780662944fb70f68fe27ab650716cf9c3b5",
+        "checkpoint_sha256": "4a29397323b775543afc8ad33741589773b5c1969f71db86964e1c618f76e80f",
+        "domain": {
+          "batch": "Every positive finite integer B",
+          "features": [
+            "B",
+            3,
+            3,
+            24
+          ],
+          "values": "All finite real feature coordinates, including diagonal tokens, clipping boundaries and label ties"
+        },
+        "error": {
+          "decoded_graph": "identical partially-directed prediction, rejection trace and explicit DAG completion",
+          "mathematical_logits": "0",
+          "mathematical_probabilities": "0",
+          "pair_labels": "identical under the same lowest-index argmax rule"
+        },
+        "fixed_map": {
+          "all_mappings_refuted": false,
+          "compatible_interventions": "Every subset of the 14 declared sites, each receiving its own finite real tensor of the identical batch/node/channel shape; independent source assignments are allowed",
+          "hardware_rounding_covered": false,
+          "interchange_relation": "The mapped post-intervention neural states and program states agree, as do final scores and graph decisions; all nonintervened mapped states and their differences from the unpatched execution agree.",
+          "neural_execution": "All 14 declared modules occur on every supported forward path. Replacement does not count an omitted/unevaluated SSA primitive as execution coverage.",
+          "proof": "The checked local equations commute with matching output overrides. Topological induction covers every combination without assuming shared source values or cancellation; all downstream ordinary divisors/logs remain defined for arbitrary finite replacement values at these sites.",
+          "read_write": "Read by the row-major bijective grid/flat reshape; write by its inverse and return the overridden physical module output. For attention preserve the second tuple component.",
+          "short_causal_algorithm_proved": false,
+          "sites": [
+            {
+              "channels": "width",
+              "kind": "linear",
+              "layout": "grid",
+              "module": "encoder.0",
+              "state": "encoder.0.affine"
+            },
+            {
+              "channels": "width",
+              "kind": "tanh",
+              "layout": "grid",
+              "module": "encoder.1",
+              "state": "encoder.0.tanh"
+            },
+            {
+              "channels": "width",
+              "kind": "linear",
+              "layout": "grid",
+              "module": "encoder.2",
+              "state": "encoder.1.affine"
+            },
+            {
+              "channels": "width",
+              "kind": "tanh",
+              "layout": "grid",
+              "module": "encoder.3",
+              "state": "encoder.1.tanh"
+            },
+            {
+              "channels": "width",
+              "kind": "linear",
+              "layout": "grid",
+              "module": "context.0",
+              "state": "context.layer.0.affine"
+            },
+            {
+              "channels": "width",
+              "kind": "tanh",
+              "layout": "grid",
+              "module": "context.1",
+              "state": "context.layer.0.tanh"
+            },
+            {
+              "channels": "width",
+              "kind": "linear",
+              "layout": "grid",
+              "module": "context.2",
+              "state": "context.layer.1.affine"
+            },
+            {
+              "channels": "width",
+              "kind": "tanh",
+              "layout": "grid",
+              "module": "context.3",
+              "state": "context.layer.1.tanh"
+            },
+            {
+              "channels": "width",
+              "kind": "attention",
+              "layout": "flat",
+              "module": "attention",
+              "state": "attention.output.affine",
+              "tuple_first": true
+            },
+            {
+              "channels": "width",
+              "kind": "norm",
+              "layout": "flat",
+              "module": "norm",
+              "state": "norm.output"
+            },
+            {
+              "channels": "width",
+              "kind": "linear",
+              "layout": "grid",
+              "module": "head_trunk.0",
+              "state": "head.trunk.0.affine"
+            },
+            {
+              "channels": "width",
+              "kind": "tanh",
+              "layout": "grid",
+              "module": "head_trunk.1",
+              "state": "head.trunk.0.tanh"
+            },
+            {
+              "channels": 1,
+              "kind": "linear",
+              "layout": "grid",
+              "module": "skeleton_head",
+              "state": "head.skeleton.affine"
+            },
+            {
+              "channels": 3,
+              "kind": "linear",
+              "layout": "grid",
+              "module": "orientation_head",
+              "state": "head.orientation.affine"
+            }
+          ]
+        },
+        "id": "actual_graph_math_seed8102_observational_graph_n3",
+        "network_sha256": "3575d9a9d86953514e6cc2d7cd004f3e58aa2680671385e9a9283c6b69f0b540",
+        "nodes": 3,
+        "original_claim_closed": false,
+        "program_sha256": "ad6498dc9d51bca90383fcd6d4d758e1f1fea3cb0963a0a5476ac9042cf98f0b",
+        "proof_method": "Typed local equations and exact stored coefficients; topological composition with ideal real module contracts; device rounding excluded",
+        "scope": {
+          "compatible_site_subsets": 16384,
+          "features": 24,
+          "hardware_rounding_covered": false,
+          "input_values": "All finite real feature coordinates; every positive finite batch size",
+          "mathematical_score_probability_error": "0",
+          "mdl_minimality_proved": false,
+          "nodes": [
+            3,
+            5,
+            8
+          ],
+          "original_claim_closed": false,
+          "other_networks_or_maps_covered": false,
+          "physical_sites": 14,
+          "raw_feature_frontend_included": false,
+          "schema": "ncd.registered-actual-graph-scope.v1",
+          "targets": [
+            "seed8101_active_graph",
+            "seed8101_observational_graph",
+            "seed8102_active_graph",
+            "seed8102_observational_graph"
+          ],
+          "true_graph_identification_proved": false,
+          "width": 48
+        },
+        "status": "proved",
+        "target": "seed8102_observational_graph",
+        "uncovered": [
+          "Raw statistical and do-response feature construction",
+          "Other actual graph architectures/checkpoints",
+          "Device rounding or bit-exact equivalence",
+          "True graph identification or an identified CPDAG",
+          "Shortest causal algorithm/MDL minimality",
+          "Unregistered physical graph sites or other mapping families"
+        ]
+      },
+      "evidence_jobs": [
+        "actual_graph_program_interchange"
+      ]
+    },
+    {
+      "id": "actual_graph_math_seed8102_observational_graph_n5",
+      "contract": {
+        "certificate_sha256": "dbabb13b565aa866403fa13e9a81032706d44de8a831683e419781dc6119f1ff",
+        "checkpoint_sha256": "4a29397323b775543afc8ad33741589773b5c1969f71db86964e1c618f76e80f",
+        "domain": {
+          "batch": "Every positive finite integer B",
+          "features": [
+            "B",
+            5,
+            5,
+            24
+          ],
+          "values": "All finite real feature coordinates, including diagonal tokens, clipping boundaries and label ties"
+        },
+        "error": {
+          "decoded_graph": "identical partially-directed prediction, rejection trace and explicit DAG completion",
+          "mathematical_logits": "0",
+          "mathematical_probabilities": "0",
+          "pair_labels": "identical under the same lowest-index argmax rule"
+        },
+        "fixed_map": {
+          "all_mappings_refuted": false,
+          "compatible_interventions": "Every subset of the 14 declared sites, each receiving its own finite real tensor of the identical batch/node/channel shape; independent source assignments are allowed",
+          "hardware_rounding_covered": false,
+          "interchange_relation": "The mapped post-intervention neural states and program states agree, as do final scores and graph decisions; all nonintervened mapped states and their differences from the unpatched execution agree.",
+          "neural_execution": "All 14 declared modules occur on every supported forward path. Replacement does not count an omitted/unevaluated SSA primitive as execution coverage.",
+          "proof": "The checked local equations commute with matching output overrides. Topological induction covers every combination without assuming shared source values or cancellation; all downstream ordinary divisors/logs remain defined for arbitrary finite replacement values at these sites.",
+          "read_write": "Read by the row-major bijective grid/flat reshape; write by its inverse and return the overridden physical module output. For attention preserve the second tuple component.",
+          "short_causal_algorithm_proved": false,
+          "sites": [
+            {
+              "channels": "width",
+              "kind": "linear",
+              "layout": "grid",
+              "module": "encoder.0",
+              "state": "encoder.0.affine"
+            },
+            {
+              "channels": "width",
+              "kind": "tanh",
+              "layout": "grid",
+              "module": "encoder.1",
+              "state": "encoder.0.tanh"
+            },
+            {
+              "channels": "width",
+              "kind": "linear",
+              "layout": "grid",
+              "module": "encoder.2",
+              "state": "encoder.1.affine"
+            },
+            {
+              "channels": "width",
+              "kind": "tanh",
+              "layout": "grid",
+              "module": "encoder.3",
+              "state": "encoder.1.tanh"
+            },
+            {
+              "channels": "width",
+              "kind": "linear",
+              "layout": "grid",
+              "module": "context.0",
+              "state": "context.layer.0.affine"
+            },
+            {
+              "channels": "width",
+              "kind": "tanh",
+              "layout": "grid",
+              "module": "context.1",
+              "state": "context.layer.0.tanh"
+            },
+            {
+              "channels": "width",
+              "kind": "linear",
+              "layout": "grid",
+              "module": "context.2",
+              "state": "context.layer.1.affine"
+            },
+            {
+              "channels": "width",
+              "kind": "tanh",
+              "layout": "grid",
+              "module": "context.3",
+              "state": "context.layer.1.tanh"
+            },
+            {
+              "channels": "width",
+              "kind": "attention",
+              "layout": "flat",
+              "module": "attention",
+              "state": "attention.output.affine",
+              "tuple_first": true
+            },
+            {
+              "channels": "width",
+              "kind": "norm",
+              "layout": "flat",
+              "module": "norm",
+              "state": "norm.output"
+            },
+            {
+              "channels": "width",
+              "kind": "linear",
+              "layout": "grid",
+              "module": "head_trunk.0",
+              "state": "head.trunk.0.affine"
+            },
+            {
+              "channels": "width",
+              "kind": "tanh",
+              "layout": "grid",
+              "module": "head_trunk.1",
+              "state": "head.trunk.0.tanh"
+            },
+            {
+              "channels": 1,
+              "kind": "linear",
+              "layout": "grid",
+              "module": "skeleton_head",
+              "state": "head.skeleton.affine"
+            },
+            {
+              "channels": 3,
+              "kind": "linear",
+              "layout": "grid",
+              "module": "orientation_head",
+              "state": "head.orientation.affine"
+            }
+          ]
+        },
+        "id": "actual_graph_math_seed8102_observational_graph_n5",
+        "network_sha256": "3575d9a9d86953514e6cc2d7cd004f3e58aa2680671385e9a9283c6b69f0b540",
+        "nodes": 5,
+        "original_claim_closed": false,
+        "program_sha256": "e125ed5273eb79f5e71af48c90ee84713ffa24add49fac93f3f8e7952e8202d4",
+        "proof_method": "Typed local equations and exact stored coefficients; topological composition with ideal real module contracts; device rounding excluded",
+        "scope": {
+          "compatible_site_subsets": 16384,
+          "features": 24,
+          "hardware_rounding_covered": false,
+          "input_values": "All finite real feature coordinates; every positive finite batch size",
+          "mathematical_score_probability_error": "0",
+          "mdl_minimality_proved": false,
+          "nodes": [
+            3,
+            5,
+            8
+          ],
+          "original_claim_closed": false,
+          "other_networks_or_maps_covered": false,
+          "physical_sites": 14,
+          "raw_feature_frontend_included": false,
+          "schema": "ncd.registered-actual-graph-scope.v1",
+          "targets": [
+            "seed8101_active_graph",
+            "seed8101_observational_graph",
+            "seed8102_active_graph",
+            "seed8102_observational_graph"
+          ],
+          "true_graph_identification_proved": false,
+          "width": 48
+        },
+        "status": "proved",
+        "target": "seed8102_observational_graph",
+        "uncovered": [
+          "Raw statistical and do-response feature construction",
+          "Other actual graph architectures/checkpoints",
+          "Device rounding or bit-exact equivalence",
+          "True graph identification or an identified CPDAG",
+          "Shortest causal algorithm/MDL minimality",
+          "Unregistered physical graph sites or other mapping families"
+        ]
+      },
+      "evidence_jobs": [
+        "actual_graph_program_interchange"
+      ]
+    },
+    {
+      "id": "actual_graph_math_seed8102_observational_graph_n8",
+      "contract": {
+        "certificate_sha256": "bfd638eb2f6f36018aa592a41419705db1dd8ebf6ce417e855f02e1e2a4d80b4",
+        "checkpoint_sha256": "4a29397323b775543afc8ad33741589773b5c1969f71db86964e1c618f76e80f",
+        "domain": {
+          "batch": "Every positive finite integer B",
+          "features": [
+            "B",
+            8,
+            8,
+            24
+          ],
+          "values": "All finite real feature coordinates, including diagonal tokens, clipping boundaries and label ties"
+        },
+        "error": {
+          "decoded_graph": "identical partially-directed prediction, rejection trace and explicit DAG completion",
+          "mathematical_logits": "0",
+          "mathematical_probabilities": "0",
+          "pair_labels": "identical under the same lowest-index argmax rule"
+        },
+        "fixed_map": {
+          "all_mappings_refuted": false,
+          "compatible_interventions": "Every subset of the 14 declared sites, each receiving its own finite real tensor of the identical batch/node/channel shape; independent source assignments are allowed",
+          "hardware_rounding_covered": false,
+          "interchange_relation": "The mapped post-intervention neural states and program states agree, as do final scores and graph decisions; all nonintervened mapped states and their differences from the unpatched execution agree.",
+          "neural_execution": "All 14 declared modules occur on every supported forward path. Replacement does not count an omitted/unevaluated SSA primitive as execution coverage.",
+          "proof": "The checked local equations commute with matching output overrides. Topological induction covers every combination without assuming shared source values or cancellation; all downstream ordinary divisors/logs remain defined for arbitrary finite replacement values at these sites.",
+          "read_write": "Read by the row-major bijective grid/flat reshape; write by its inverse and return the overridden physical module output. For attention preserve the second tuple component.",
+          "short_causal_algorithm_proved": false,
+          "sites": [
+            {
+              "channels": "width",
+              "kind": "linear",
+              "layout": "grid",
+              "module": "encoder.0",
+              "state": "encoder.0.affine"
+            },
+            {
+              "channels": "width",
+              "kind": "tanh",
+              "layout": "grid",
+              "module": "encoder.1",
+              "state": "encoder.0.tanh"
+            },
+            {
+              "channels": "width",
+              "kind": "linear",
+              "layout": "grid",
+              "module": "encoder.2",
+              "state": "encoder.1.affine"
+            },
+            {
+              "channels": "width",
+              "kind": "tanh",
+              "layout": "grid",
+              "module": "encoder.3",
+              "state": "encoder.1.tanh"
+            },
+            {
+              "channels": "width",
+              "kind": "linear",
+              "layout": "grid",
+              "module": "context.0",
+              "state": "context.layer.0.affine"
+            },
+            {
+              "channels": "width",
+              "kind": "tanh",
+              "layout": "grid",
+              "module": "context.1",
+              "state": "context.layer.0.tanh"
+            },
+            {
+              "channels": "width",
+              "kind": "linear",
+              "layout": "grid",
+              "module": "context.2",
+              "state": "context.layer.1.affine"
+            },
+            {
+              "channels": "width",
+              "kind": "tanh",
+              "layout": "grid",
+              "module": "context.3",
+              "state": "context.layer.1.tanh"
+            },
+            {
+              "channels": "width",
+              "kind": "attention",
+              "layout": "flat",
+              "module": "attention",
+              "state": "attention.output.affine",
+              "tuple_first": true
+            },
+            {
+              "channels": "width",
+              "kind": "norm",
+              "layout": "flat",
+              "module": "norm",
+              "state": "norm.output"
+            },
+            {
+              "channels": "width",
+              "kind": "linear",
+              "layout": "grid",
+              "module": "head_trunk.0",
+              "state": "head.trunk.0.affine"
+            },
+            {
+              "channels": "width",
+              "kind": "tanh",
+              "layout": "grid",
+              "module": "head_trunk.1",
+              "state": "head.trunk.0.tanh"
+            },
+            {
+              "channels": 1,
+              "kind": "linear",
+              "layout": "grid",
+              "module": "skeleton_head",
+              "state": "head.skeleton.affine"
+            },
+            {
+              "channels": 3,
+              "kind": "linear",
+              "layout": "grid",
+              "module": "orientation_head",
+              "state": "head.orientation.affine"
+            }
+          ]
+        },
+        "id": "actual_graph_math_seed8102_observational_graph_n8",
+        "network_sha256": "3575d9a9d86953514e6cc2d7cd004f3e58aa2680671385e9a9283c6b69f0b540",
+        "nodes": 8,
+        "original_claim_closed": false,
+        "program_sha256": "da26671bc1ac45d1b3a118df59eb22206c17ab87ebcf1ca10f848571310b88fc",
+        "proof_method": "Typed local equations and exact stored coefficients; topological composition with ideal real module contracts; device rounding excluded",
+        "scope": {
+          "compatible_site_subsets": 16384,
+          "features": 24,
+          "hardware_rounding_covered": false,
+          "input_values": "All finite real feature coordinates; every positive finite batch size",
+          "mathematical_score_probability_error": "0",
+          "mdl_minimality_proved": false,
+          "nodes": [
+            3,
+            5,
+            8
+          ],
+          "original_claim_closed": false,
+          "other_networks_or_maps_covered": false,
+          "physical_sites": 14,
+          "raw_feature_frontend_included": false,
+          "schema": "ncd.registered-actual-graph-scope.v1",
+          "targets": [
+            "seed8101_active_graph",
+            "seed8101_observational_graph",
+            "seed8102_active_graph",
+            "seed8102_observational_graph"
+          ],
+          "true_graph_identification_proved": false,
+          "width": 48
+        },
+        "status": "proved",
+        "target": "seed8102_observational_graph",
+        "uncovered": [
+          "Raw statistical and do-response feature construction",
+          "Other actual graph architectures/checkpoints",
+          "Device rounding or bit-exact equivalence",
+          "True graph identification or an identified CPDAG",
+          "Shortest causal algorithm/MDL minimality",
+          "Unregistered physical graph sites or other mapping families"
+        ]
+      },
+      "evidence_jobs": [
+        "actual_graph_program_interchange"
+      ]
+    }
+  ],
+  "original_claim_count_preserved": 38,
+  "scoped_unresolved_does_not_refute_original_claims": true
+}

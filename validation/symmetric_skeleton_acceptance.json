@@ -1,0 +1,91 @@
+{
+  "protocol": "docs/SYMMETRIC_SKELETON_PROTOCOL.md",
+  "runs": [
+    {
+      "seed": 2793,
+      "source": "relational_seed493",
+      "verified": true,
+      "baseline": {
+        "worlds": 960,
+        "pairs": 13120,
+        "all_pair_fidelity": 0.8048018292682927,
+        "active_pair_fidelity": 0.482103134479272,
+        "exact_graph_fidelity": 0.2,
+        "teacher_exact_graph_accuracy": 0.125,
+        "program_exact_graph_accuracy": 0.07916666666666666
+      },
+      "symmetric": {
+        "worlds": 960,
+        "pairs": 13120,
+        "all_pair_fidelity": 0.8054878048780488,
+        "active_pair_fidelity": 0.4877559213167403,
+        "exact_graph_fidelity": 0.2,
+        "teacher_exact_graph_accuracy": 0.125,
+        "program_exact_graph_accuracy": 0.08125
+      },
+      "decision_components": {
+        "per_mode_non_decline": true,
+        "pooled_exact_gain": 0.0,
+        "pooled_active_non_decline": true
+      }
+    },
+    {
+      "seed": 2794,
+      "source": "relational_seed494",
+      "verified": true,
+      "baseline": {
+        "worlds": 960,
+        "pairs": 13120,
+        "all_pair_fidelity": 0.8164634146341463,
+        "active_pair_fidelity": 0.4579018460153084,
+        "exact_graph_fidelity": 0.18333333333333332,
+        "teacher_exact_graph_accuracy": 0.12604166666666666,
+        "program_exact_graph_accuracy": 0.11145833333333334
+      },
+      "symmetric": {
+        "worlds": 960,
+        "pairs": 13120,
+        "all_pair_fidelity": 0.8150152439024391,
+        "active_pair_fidelity": 0.46694487151328795,
+        "exact_graph_fidelity": 0.18229166666666666,
+        "teacher_exact_graph_accuracy": 0.12604166666666666,
+        "program_exact_graph_accuracy": 0.10208333333333333
+      },
+      "decision_components": {
+        "per_mode_non_decline": false,
+        "pooled_exact_gain": -0.001041666666666663,
+        "pooled_active_non_decline": true
+      }
+    }
+  ],
+  "pooled": {
+    "baseline": {
+      "worlds": 1920,
+      "pairs": 26240,
+      "all_pair_fidelity": 0.8106326219512195,
+      "active_pair_fidelity": 0.4706509001811015,
+      "exact_graph_fidelity": 0.19166666666666668,
+      "teacher_exact_graph_accuracy": 0.12552083333333333,
+      "program_exact_graph_accuracy": 0.0953125
+    },
+    "symmetric": {
+      "worlds": 1920,
+      "pairs": 26240,
+      "all_pair_fidelity": 0.810251524390244,
+      "active_pair_fidelity": 0.4778185631882538,
+      "exact_graph_fidelity": 0.19114583333333332,
+      "teacher_exact_graph_accuracy": 0.12552083333333333,
+      "program_exact_graph_accuracy": 0.09166666666666666
+    },
+    "exact_gain": -0.0005208333333333592,
+    "active_gain": 0.0071676630071522696
+  },
+  "criteria": {
+    "both_replayed": true,
+    "per_seed_and_mode_non_decline": false,
+    "pooled_exact_gain_at_least_0.02": false,
+    "pooled_active_non_decline": true
+  },
+  "passed": false,
+  "claim": "negative behavioral graph-program extraction result; truth metrics are diagnostic"
+}

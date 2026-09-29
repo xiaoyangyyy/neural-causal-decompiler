@@ -1,0 +1,199 @@
+{
+  "schema": "ncd.transition-lower-independent-domain-check.v1",
+  "status": "verified",
+  "system": {
+    "schema": "ncd.continuous-relu-system.v1",
+    "state_dim": 4,
+    "action_dim": 1,
+    "transition": {
+      "weights": [
+        [
+          [
+            0.25,
+            0.0,
+            0.0,
+            0.0,
+            0.27
+          ],
+          [
+            0.0,
+            0.25,
+            0.0,
+            0.0,
+            0.27
+          ],
+          [
+            0.0,
+            0.0,
+            0.25,
+            0.0,
+            0.27
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.25,
+            0.27
+          ]
+        ]
+      ],
+      "biases": [
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ]
+    },
+    "observation": {
+      "weights": [
+        [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ]
+      ],
+      "biases": [
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ]
+    }
+  },
+  "proof": {
+    "schema": "ncd.transition-consistency-lower.v1",
+    "status": "certified",
+    "system_sha256": "41957fb35fcb8d01713bc5528b3de0c945c743ee01685692e42a385df82429cf",
+    "epsilon": "17/100",
+    "state_dim": 4,
+    "action_dim": 1,
+    "packing_lower_bound": 81,
+    "excluded_machine_state_count": 81,
+    "lower_bound": 82,
+    "packing": {
+      "observed_axes": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "axis_values": [
+        "0",
+        "1/2",
+        "1"
+      ],
+      "point_count": 81,
+      "minimum_separation": "1/2",
+      "twice_epsilon": "17/50"
+    },
+    "continuum_coverage": {
+      "candidate_machine_states": 81,
+      "packing_anchors_exhaust_all_labels": true,
+      "labels_per_observed_axis_slice": 3,
+      "other_anchor_exclusion_margin": "4/25",
+      "adjacent_decoder_gap_upper": "17/50",
+      "necessary_decoder_bands": [
+        [
+          "3/20",
+          "17/100"
+        ],
+        [
+          "49/100",
+          "51/100"
+        ],
+        [
+          "83/100",
+          "17/20"
+        ]
+      ],
+      "forbidden_decoder_gap": [
+        "17/100",
+        "49/100"
+      ]
+    },
+    "witness": {
+      "observed_axis": 0,
+      "common_initial_anchor": [
+        "0",
+        "0",
+        "0",
+        "1"
+      ],
+      "left_initial_state": [
+        "0",
+        "0",
+        "0",
+        "1"
+      ],
+      "right_initial_state": [
+        "319/1000",
+        "0",
+        "0",
+        "1"
+      ],
+      "left_initial_observation": [
+        "0",
+        "0",
+        "0",
+        "1"
+      ],
+      "right_initial_observation": [
+        "319/1000",
+        "0",
+        "0",
+        "1"
+      ],
+      "common_action": [
+        "1"
+      ],
+      "left_next_observation": [
+        "607985949695017/2251799813685248",
+        "607985949695017/2251799813685248",
+        "607985949695017/2251799813685248",
+        "1170935903116329/2251799813685248"
+      ],
+      "right_next_observation": [
+        "98445873104551941/281474976710656000",
+        "607985949695017/2251799813685248",
+        "607985949695017/2251799813685248",
+        "1170935903116329/2251799813685248"
+      ],
+      "required_successor_decoder_interval": [
+        "50595127063740421/281474976710656000",
+        "24769797950537729/56294995342131200"
+      ],
+      "lower_gap_margin": "2744381022928901/281474976710656000",
+      "upper_gap_margin": "2814749767106559/56294995342131200",
+      "initial_middle_label_exclusion_margin": "1/1000"
+    },
+    "scope": "any deterministic time-homogeneous finite machine with a state-only output map; arbitrary initial selector and partitions; full unit initial/action cubes; error at times zero and one",
+    "boundary": "whole-machine lower 82; exact global minimum, code length and end-to-end causal decompilation remain open"
+  },
+  "note": "affine 4D, one action, predecessor observed; theorem does not require separated two-action nonlinear ring architecture"
+}

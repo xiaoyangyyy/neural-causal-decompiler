@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="10" time="0.255" timestamp="2026-09-28T18:52:30.470777+08:00" hostname="DESKTOP-B5O3UI0"><testcase classname="tests.test_joint_noise_proof" name="test_full_support_joint_counterexample_with_zero_marginal_errors" time="0.001" /><testcase classname="tests.test_joint_noise_proof" name="test_counterexample_and_conditions_cannot_be_forged[covariance]" time="0.001" /><testcase classname="tests.test_joint_noise_proof" name="test_counterexample_and_conditions_cannot_be_forged[singular]" time="0.001" /><testcase classname="tests.test_joint_noise_proof" name="test_counterexample_and_conditions_cannot_be_forged[marginal]" time="0.001" /><testcase classname="tests.test_joint_noise_proof" name="test_counterexample_and_conditions_cannot_be_forged[lower]" time="0.001" /><testcase classname="tests.test_joint_noise_proof" name="test_counterexample_and_conditions_cannot_be_forged[radical]" time="0.001" /><testcase classname="tests.test_joint_noise_proof" name="test_counterexample_and_conditions_cannot_be_forged[equation]" time="0.001" /><testcase classname="tests.test_joint_noise_proof" name="test_counterexample_and_conditions_cannot_be_forged[joint_law]" time="0.001" /><testcase classname="tests.test_joint_noise_proof" name="test_counterexample_and_conditions_cannot_be_forged[scope]" time="0.001" /><testcase classname="tests.test_joint_noise_proof" name="test_portable_bundle_replays_and_retains_previous_artifacts" time="0.010"><failure message="OSError: [Errno 28] No space left on device">OSError: [Errno 28] No space left on device
+
+During handling of the above exception, another exception occurred:
+
+tmp_path = WindowsPath('C:/Users/K/AppData/Local/Temp/pytest-of-K/pytest-107/test_portable_bundle_replays_a0')
+
+    def test_portable_bundle_replays_and_retains_previous_artifacts(tmp_path):
+        import joint_noise_proof
+        package = Path(joint_noise_proof.__file__).parent
+        root = tmp_path / "case"
+        (root / "validation").mkdir(parents=True)
+        c = {"schema": "ncd.joint-noise-protocol.v1", "output": "runs/counterexample", "cases": {"joint": {}}, "source_sha256": {"joint_noise_proof/" + p.name: hashlib.sha256(p.read_bytes()).hexdigest() for p in package.glob("*.py")}, "original_objective_achieved": False}
+        path = root / "validation/protocol.json"
+        path.write_text(json.dumps(c), encoding="utf-8")
+&gt;       result = prove(path)
+                 ^^^^^^^^^^^
+
+tests\test_joint_noise_proof.py:56: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+joint_noise_proof\__main__.py:61: in prove
+    save(output / "certificates.json", certificates)
+joint_noise_proof\__main__.py:19: in save
+    Path(path).write_text(json.dumps(data, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+C:\Users\K\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py:555: in write_text
+    return PathBase.write_text(self, data, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('C:/Users/K/AppData/Local/Temp/pytest-of-K/pytest-107/test_portable_bundle_replays_a0/case/runs/counterexample/certificates.json')
+data = '{\n  "joint": {\n    "actual_learned_residuals_certified": false,\n    "claim_refuted": "For all explicit SCM pairs, ...",\n    "schema": "ncd.correlated-noise-marginal-boundary.v1",\n    "status": "refuted-in-stated-model-pair"\n  }\n}\n'
+encoding = 'utf-8', errors = None, newline = None
+
+    def write_text(self, data, encoding=None, errors=None, newline=None):
+        """
+        Open the file in text mode, write to it, and close the file.
+        """
+        if not isinstance(data, str):
+            raise TypeError('data must be str, not %s' %
+                            data.__class__.__name__)
+&gt;       with self.open(mode='w', encoding=encoding, errors=errors, newline=newline) as f:
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       OSError: [Errno 28] No space left on device
+
+C:\Users\K\AppData\Local\Programs\Python\Python313\Lib\pathlib\_abc.py:651: OSError</failure></testcase></testsuite></testsuites>

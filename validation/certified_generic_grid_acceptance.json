@@ -1,0 +1,22 @@
+{
+  "accepted": true,
+  "run": "runs/certified_generic_grid_seed11701",
+  "manifest_sha256": "3b8c854b437ef6ffe8c0d3a5e6bedf046c7e720395c51f427024fc99665e572d",
+  "verification": {
+    "status": "certified",
+    "state_dim": 2,
+    "states": 100,
+    "initial_cells_verified": 100,
+    "relation_observations_verified": 100,
+    "transition_boxes_verified": 10000,
+    "packing_pairs_verified": 300,
+    "lower_bound": 25,
+    "upper_bound": 100,
+    "worst_transition_bound": 0.1092500000000016,
+    "horizon": "unbounded"
+  },
+  "formal_runtime_seconds": 2.343269999983022,
+  "phase_crossing_and_coupling_checked": true,
+  "claim": "infinite-horizon 0.12-output-error upper certificate on a coupled nonlinear ReLU network",
+  "limitations": "minimum state count remains between 25 and 100; the benchmark is constructed rather than trained"
+}

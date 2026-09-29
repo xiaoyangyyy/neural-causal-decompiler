@@ -1,0 +1,165 @@
+{
+  "correlated": {
+    "actual_learned_residuals_certified": false,
+    "claim_refuted": "For all explicit SCM pairs, identical graph, equations and exogenous marginal laws imply identical joint intervention distributions without a joint-noise premise.",
+    "classical_probability_facts_not_project_innovation": true,
+    "conclusion": "joint W1 under l1 cost is strictly greater than 7/25 despite every coordinate marginal W1 and local mechanism error being zero",
+    "difference_variances": [
+      "2",
+      "1"
+    ],
+    "dual_lipschitz_constant_l1": "1",
+    "dual_witness": "h(x)=abs(x1-x2)",
+    "each_exogenous_marginal_w1": [
+      "0",
+      "0",
+      "0"
+    ],
+    "each_output_marginal_w1": [
+      "0",
+      "0",
+      "0"
+    ],
+    "exogenous_marginal_laws": [
+      "N(0,1)",
+      "N(0,1)",
+      "N(0,1)"
+    ],
+    "expectation_gap": "sqrt(2/pi)*(sqrt(2)-1)",
+    "intervened_marginal_laws": [
+      "point_mass_0",
+      "N(0,1)",
+      "N(0,1)"
+    ],
+    "intervention": {
+      "targets": [
+        0
+      ],
+      "values": [
+        "0"
+      ]
+    },
+    "lipschitz_derivation": "abs(abs(x1-x2)-abs(y1-y2)) <= abs(x1-y1)+abs(x2-y2) <= sum_i abs(xi-yi); every joint coupling therefore has expected l1 cost at least the expectation gap.",
+    "local_mechanism_errors": [
+      "0",
+      "0",
+      "0"
+    ],
+    "moment_derivation": "For centered Gaussian D of variance v, E abs(D)=sqrt(2*v/pi), obtained by integrating x*exp(-x*x/(2*v)) on the positive half-line.",
+    "not_refuted": [
+      "Bounds with a certified joint-noise coupling",
+      "The declared independent-Gaussian product-noise propagation theorem",
+      "End-to-end recovery under separately validated noise assumptions"
+    ],
+    "original_claim_closed": false,
+    "original_objective_achieved": false,
+    "positive_definite_leading_minors": [
+      [
+        "1",
+        "1",
+        "1"
+      ],
+      [
+        "1",
+        "1",
+        "3/4"
+      ]
+    ],
+    "rational_bounds": {
+      "gap_factor_lower": "2/5",
+      "joint_w1_l1_lower": "7/25",
+      "pi_upper": "4",
+      "sqrt2_lower": "7/5",
+      "sqrt_half_lower": "7/10"
+    },
+    "rational_derivation": "pi<4 from pi/4=integral_0^1 1/(1+x*x) dx<1; (7/5)^2<2 and (7/10)^2<1/2. Thus the positive expectation gap is strictly greater than (7/10)*(2/5)=7/25.",
+    "realization": {
+      "equations": [
+        "X0=U0",
+        "X1=X0+U1",
+        "X2=X0+U2"
+      ],
+      "graph": [
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "noise": "centered joint Gaussian, correlation(U1,U2)=1/2",
+      "noise_covariance": [
+        [
+          "1",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "1",
+          "1/2"
+        ],
+        [
+          "0",
+          "1/2",
+          "1"
+        ]
+      ]
+    },
+    "realization_witness_expectation": "sqrt(2/pi)",
+    "reference": {
+      "equations": [
+        "X0=U0",
+        "X1=X0+U1",
+        "X2=X0+U2"
+      ],
+      "graph": [
+        [
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "noise": "centered joint Gaussian, independent coordinates",
+      "noise_covariance": [
+        [
+          "1",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "1",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "1"
+        ]
+      ]
+    },
+    "reference_witness_expectation": "2/sqrt(pi)",
+    "schema": "ncd.correlated-noise-marginal-boundary.v1",
+    "status": "refuted-in-stated-model-pair"
+  }
+}

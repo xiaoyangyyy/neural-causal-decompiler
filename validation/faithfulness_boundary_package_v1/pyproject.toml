@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "ncd-faithfulness-boundary-proof"
+version = "0.1.0"
+description = "Rational certificates for unfaithfulness and nonuniform finite-sample MEC recovery"
+requires-python = ">=3.11"
+dependencies = []
+[project.scripts]
+ncd-faithfulness-boundary-proof = "faithfulness_boundary_proof.__main__:main"
+[tool.setuptools]
+packages = ["faithfulness_boundary_proof"]

@@ -1,0 +1,94 @@
+{
+  "pooled_mean_delta": -0.002050781250000022,
+  "protocol": "docs/CONSERVATIVE_CAUSAL_GUIDANCE_PROTOCOL.md",
+  "replay_verified": true,
+  "replicated_safe_improvement": false,
+  "runs": {
+    "1493": {
+      "candidate_count": 10,
+      "checks": {
+        "changed_with_gain": false,
+        "nondecreasing_all_environments": false,
+        "validation_noninferior": true
+      },
+      "environments": {
+        "test_function": {
+          "baseline_fidelity": 0.681640625,
+          "delta": 0.0048828125,
+          "guided_fidelity": 0.6865234375
+        },
+        "test_id": {
+          "baseline_fidelity": 0.7900390625,
+          "delta": 0.0107421875,
+          "guided_fidelity": 0.80078125
+        },
+        "test_intervention": {
+          "baseline_fidelity": 0.8125,
+          "delta": -0.0048828125,
+          "guided_fidelity": 0.8076171875
+        },
+        "test_noise": {
+          "baseline_fidelity": 0.71484375,
+          "delta": 0.00390625,
+          "guided_fidelity": 0.71875
+        },
+        "test_scale": {
+          "baseline_fidelity": 0.4931640625,
+          "delta": -0.0009765625,
+          "guided_fidelity": 0.4921875
+        }
+      },
+      "mean_delta": 0.0027343749999999556,
+      "mean_fidelity": {
+        "with_internal": 0.701171875,
+        "without_internal": 0.6984375
+      },
+      "positive_features": 10,
+      "selected_site": "head_tanh",
+      "selection_changed": true
+    },
+    "1494": {
+      "candidate_count": 10,
+      "checks": {
+        "changed_with_gain": false,
+        "nondecreasing_all_environments": false,
+        "validation_noninferior": true
+      },
+      "environments": {
+        "test_function": {
+          "baseline_fidelity": 0.71875,
+          "delta": -0.0009765625,
+          "guided_fidelity": 0.7177734375
+        },
+        "test_id": {
+          "baseline_fidelity": 0.7998046875,
+          "delta": -0.0087890625,
+          "guided_fidelity": 0.791015625
+        },
+        "test_intervention": {
+          "baseline_fidelity": 0.8291015625,
+          "delta": 0.0,
+          "guided_fidelity": 0.8291015625
+        },
+        "test_noise": {
+          "baseline_fidelity": 0.6826171875,
+          "delta": -0.0244140625,
+          "guided_fidelity": 0.658203125
+        },
+        "test_scale": {
+          "baseline_fidelity": 0.5419921875,
+          "delta": 0.0,
+          "guided_fidelity": 0.5419921875
+        }
+      },
+      "mean_delta": -0.0068359375,
+      "mean_fidelity": {
+        "with_internal": 0.7076171875,
+        "without_internal": 0.714453125
+      },
+      "positive_features": 10,
+      "selected_site": "head_tanh",
+      "selection_changed": true
+    }
+  }
+}

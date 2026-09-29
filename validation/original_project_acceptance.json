@@ -1,0 +1,180 @@
+{
+  "schema": "ncd.original-project-milestone-acceptance.v1",
+  "status": "first-milestone-accepted-original-open",
+  "milestone": "atomic claim contracts, Gaussian boundary and frozen-network fidelity/CEGIS loop",
+  "requirement_groups": {
+    "R0": {
+      "proved": 0,
+      "refuted": 2,
+      "unresolved": 2
+    },
+    "R1": {
+      "proved": 0,
+      "refuted": 0,
+      "unresolved": 2
+    },
+    "R2": {
+      "proved": 0,
+      "refuted": 0,
+      "unresolved": 3
+    },
+    "R3": {
+      "proved": 0,
+      "refuted": 0,
+      "unresolved": 2
+    },
+    "R4": {
+      "proved": 0,
+      "refuted": 0,
+      "unresolved": 3
+    },
+    "R5": {
+      "proved": 0,
+      "refuted": 0,
+      "unresolved": 3
+    },
+    "R6": {
+      "proved": 0,
+      "refuted": 0,
+      "unresolved": 2
+    },
+    "R7": {
+      "proved": 0,
+      "refuted": 0,
+      "unresolved": 2
+    },
+    "R8": {
+      "proved": 0,
+      "refuted": 0,
+      "unresolved": 4
+    },
+    "R9": {
+      "proved": 0,
+      "refuted": 0,
+      "unresolved": 3
+    },
+    "R10": {
+      "proved": 0,
+      "refuted": 0,
+      "unresolved": 4
+    },
+    "R11": {
+      "proved": 0,
+      "refuted": 0,
+      "unresolved": 1
+    },
+    "R12": {
+      "proved": 0,
+      "refuted": 0,
+      "unresolved": 3
+    },
+    "R13": {
+      "proved": 0,
+      "refuted": 0,
+      "unresolved": 2
+    }
+  },
+  "claim_count": 38,
+  "unresolved_claims": [
+    "R0.objects",
+    "R0.equivalence_contract",
+    "R1.world_generator",
+    "R1.noise_law",
+    "R2.sample_invariance",
+    "R2.variable_equivariance",
+    "R2.discovery_guarantee",
+    "R3.typed_semantics",
+    "R3.compositionality",
+    "R4.program_fidelity",
+    "R4.cegis",
+    "R4.mdl",
+    "R5.interchange",
+    "R5.intermediate_numeric",
+    "R5.composition",
+    "R6.separate_targets",
+    "R6.evaluation_guarantee",
+    "R7.counterexamples",
+    "R7.worst_case",
+    "R8.function_ood",
+    "R8.noise_ood",
+    "R8.scale_ood",
+    "R8.intervention_ood",
+    "R9.graph_recovery",
+    "R9.sepsets",
+    "R9.neural_program",
+    "R10.end_to_end",
+    "R10.mechanism",
+    "R10.noise",
+    "R10.intervention_distribution",
+    "R11.ablations",
+    "R12.semantic_equivalence",
+    "R12.canonicalization",
+    "R12.shortest_unique",
+    "R13.reproduction",
+    "R13.extensions"
+  ],
+  "scoped_proof_records": [
+    {
+      "id": "observational_gaussian_boundary",
+      "kind": "gaussian_nonidentifiability",
+      "certificate": "observational_gaussian_boundary/certificate.json",
+      "certificate_sha256": "f0fc14b56f3407ae90f230f7093369f6909507304f990e8385f79dd3fd75fb24",
+      "conclusion": "refuted"
+    },
+    {
+      "id": "historical_mechanism_0",
+      "kind": "frozen_mechanism",
+      "certificate": "historical_mechanism_0/certificate.json",
+      "certificate_sha256": "7397aba16d3c0c59c6da442c40367aefeb46554a245db85cb6b40dc18090f58d",
+      "conclusion": "refuted"
+    },
+    {
+      "id": "historical_mechanism_1",
+      "kind": "frozen_mechanism",
+      "certificate": "historical_mechanism_1/certificate.json",
+      "certificate_sha256": "8c9c18066b4de18ea83625eb7f7c8d8ea236a85680956406b6b862ce7d6f4732",
+      "conclusion": "proved"
+    },
+    {
+      "id": "historical_mechanism_2",
+      "kind": "frozen_mechanism",
+      "certificate": "historical_mechanism_2/certificate.json",
+      "certificate_sha256": "06539cae0c757f0ebbaa49e36a01bce0b7fa896befc88fb5579aeddf89668156",
+      "conclusion": "proved"
+    },
+    {
+      "id": "historical_discovery_local_box",
+      "kind": "frozen_discovery",
+      "certificate": "historical_discovery_local_box/certificate.json",
+      "certificate_sha256": "8c276e9756541b83a1d5548a806e4076226332e1ff2b6cc45a4121ed4551d502",
+      "conclusion": "proved"
+    },
+    {
+      "id": "historical_mechanism_0_cegis",
+      "kind": "mechanism_cegis",
+      "certificate": "historical_mechanism_0_cegis/certificate.json",
+      "certificate_sha256": "12928445f104ffe86fe50d5e17b08ae59d24b93a85a4bfe7423cbf399c2531b5",
+      "conclusion": "refuted"
+    }
+  ],
+  "regression_tests": 249,
+  "installed_module_count": 131,
+  "mixed_full_training_and_program_cases": 8,
+  "legacy_phase_cases": 8,
+  "development_confirmation_worlds_replayed": 3,
+  "overall_objective_achieved": false,
+  "full_plan_implemented": false,
+  "formal_confirmation_declared_worlds": 300,
+  "formal_confirmation_result": "running; no scientific acceptance yet",
+  "bindings": {
+    "validation/wheel_v59_run/status.json": "3e3d6fddfb535b78d76f46ad9f9060a520f0d6e4ef1f2d81741e7242c8c3e934",
+    "validation/pytest_v59.xml": "35e5d40e1cd5f1a9fa181f9245f7c3c3448f772908972277c1bd1fccc6d4d585",
+    "validation/original_proof_milestone_protocol.json": "456c46885fed320f678b5bd22c407e2df9b7b584645d070f5e580f09fef2dc7e",
+    "runs/original_proof_milestone_v1/manifest.json": "ee6069469a966169ffc71f8d9321682b8fb2f150d553d4c5f338c7dd597fb496",
+    "validation/original_confirmation_protocol.json": "ac8e3bd7d7e29d4b6e818165994c3a096e3b3a0063de280163493de5d8dd1c44",
+    "docs/ORIGINAL_PROOF_METHOD.md": "d3551b8ecbe028897ffadc8a7949b9936c83c2790bc8b31406fed2823e3440d9",
+    "docs/ORIGINAL_PROOF_CLAIMS.md": "631533fbeffaea80fa9d9b37f584541dd388a71872d6adb0e3dc6480d39ed534"
+  },
+  "formal_confirmation_launch": "validation/original_confirmation_launch/launch.json",
+  "formal_confirmation_started_utc": "2026-09-28T07:08:03.986098+00:00"
+}

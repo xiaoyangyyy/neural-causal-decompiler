@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ncd-proof-extensions"
+version = "0.1.0"
+description = "Scoped proof and impossibility certificates for the original causal decompiler"
+requires-python = ">=3.11"
+dependencies = ["neural-causal-decompiler==0.59.0"]
+
+[project.scripts]
+ncd-proof-ext = "proof_extensions.__main__:main"
+
+[tool.setuptools]
+packages = ["proof_extensions"]

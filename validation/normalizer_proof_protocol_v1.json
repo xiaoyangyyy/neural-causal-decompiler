@@ -1,0 +1,39 @@
+{
+  "schema": "ncd.normalizer-proof-protocol.v1",
+  "revision": 1,
+  "checkpoint": "runs/oblique_seed1193/teacher.pt",
+  "checkpoint_sha256": "37ce128dd6a5050075310c03b268e8089b2bc49d69670c4cb92a3f38e6519ef3",
+  "source_sha256": {
+    "ncd/model.py": "ee732b8f06c153951e6f3e559c9511591e8e6e632d815766c5192aff50bb3602",
+    "ncd/cdir.py": "147e24b1e0a86be97f96fb6895b9bdea7f8b0cf98c864961766710336c30e469",
+    "ncd/program_trace.py": "6426a5d04ec225563f003755c07f1466834fd36b42d43f73194f81886e9d5ce4",
+    "ncd/proof_intervals.py": "8838c1141070672ca69775520d81f87dc56a93678e3d818c75235ed2c3981f21",
+    "ncd/io.py": "05bbd8286f973fd5e51c8bba0ed14f76f0b3245887dede5f9e87d1b2ac77df36",
+    "normalizer_proof/__init__.py": "0025c76cb02949eddbf7bc48be46f88ecb85297cf88b3c762dea76a85644ae7b",
+    "normalizer_proof/__main__.py": "178ce2a4a87ad2ee3342a1673addf3162cefdc2a4790c5e300f52fb6187791f9",
+    "normalizer_proof/audit.py": "77aefce4a31cc98a64925c157972c1ee5d2b66b84ff47f306a9c23149e9e4aea",
+    "normalizer_proof/realization.py": "3ed6718967eb1df664cf91526934bf7d823405edb52de8bf549a499bd0ea16bd"
+  },
+  "output": "runs/actual_normalizer_composition_v1",
+  "development_seed": 8100,
+  "claim": "Exact partial realization of both normalization prefixes and preservation through the unchanged neural continuation under all compatible independent-source interventions.",
+  "scope": "mathematical real operators with frozen binary64 constants and checkpoint weight values; no whole-device rounding theorem",
+  "masks": 16,
+  "independent_source_count": 4,
+  "minimum_samples": 16,
+  "diagnostic_fixtures": 6,
+  "fixture_names": [
+    "zero_variance",
+    "floor_equality",
+    "clip_edges",
+    "large_normalized",
+    "independent_source_shifts",
+    "development_8100"
+  ],
+  "diagnostic_tolerances": {
+    "relative": 1e-10,
+    "absolute": 1e-09
+  },
+  "original_objective_achieved": false,
+  "original_R5_closed": false
+}

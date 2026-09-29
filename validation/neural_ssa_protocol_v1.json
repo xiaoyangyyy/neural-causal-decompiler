@@ -1,0 +1,37 @@
+{
+  "schema": "ncd.neural-ssa-protocol.v1",
+  "revision": 1,
+  "output": "runs/full_neural_ssa_realization_v1",
+  "development_seed": 8100,
+  "source_sha256": {
+    "neural_ssa_proof/__init__.py": "2ed4467b9bd0b66d32fa26ed793d79f45f8a2c83222d57c45aa6113014c53b2c",
+    "neural_ssa_proof/__main__.py": "b95b09aa9b2eb4c0cdf870de7b650447ab130fd029ac798cbaa8d0d33ea99848",
+    "neural_ssa_proof/audit.py": "296071118febbfd1edd91b705c1812c60637e95b96163399f21a3362ac722e90",
+    "neural_ssa_proof/compiler.py": "07fcce14091e7b336a9dea6827b8c1d8bbc4ba474dbc9739e4169eb9ae821c55",
+    "neural_ssa_proof/runtime.py": "5f2837ba3ffa250ae8e1b44d9e3e8ac8bc13e62882c9df154ca812f29b89fbc9",
+    "neural_ssa_proof/verification.py": "6de5e335273fcac88206d520af7a59233a8b1cee704daf9f2fa1cec8cef8f4af",
+    "ncd/model.py": "ee732b8f06c153951e6f3e559c9511591e8e6e632d815766c5192aff50bb3602",
+    "ncd/proof_intervals.py": "8838c1141070672ca69775520d81f87dc56a93678e3d818c75235ed2c3981f21",
+    "normalizer_proof/realization.py": "3ed6718967eb1df664cf91526934bf7d823405edb52de8bf549a499bd0ea16bd"
+  },
+  "limits": {
+    "instructions": 100000,
+    "seconds": 600,
+    "artifact_bytes": 104857600,
+    "training_threads": 2
+  },
+  "jobs": [
+    {
+      "id": "teacher1193",
+      "checkpoint": "runs/oblique_seed1193/teacher.pt",
+      "checkpoint_sha256": "37ce128dd6a5050075310c03b268e8089b2bc49d69670c4cb92a3f38e6519ef3"
+    },
+    {
+      "id": "discoverer91",
+      "checkpoint": "runs/all_seed91_final/bivariate/models/full/discoverer.pt",
+      "checkpoint_sha256": "84a313ccbeb7f120686547bee9b010a6ef5f686b506ebf9f9b1fa4d6234c89e8"
+    }
+  ],
+  "scope": "full fixed-network mathematical computation and fixed coordinate mapping; not minimal causal algorithm or true SCM identification",
+  "original_objective_achieved": false
+}

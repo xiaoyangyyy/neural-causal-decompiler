@@ -1,0 +1,293 @@
+{
+  "schema": "ncd.optimal-initial-grid-acceptance.v1",
+  "status": "accepted",
+  "previous_acceptance_sha256": "fd2ceb403bdb009ffd381e07cf390db77f05d0d200b579194960099e43976f33",
+  "seeds": [
+    6101,
+    6102
+  ],
+  "dimensions": [
+    8,
+    32,
+    64,
+    128
+  ],
+  "cases": [
+    {
+      "seed": 6101,
+      "state_dim": 8,
+      "model_sha256": "c755bdc2b66984203cc6fd40b498d3e6dc2bdc273986e292b10fb720b28cba0a",
+      "recurrent_certificate_sha256": "c5037044b05fd111dcaf0a18d080b1722c5a26635d57b868acb18d1a832d9528",
+      "previous_two_stage_certificate_sha256": "76681a54056259769db6d7ae2b5c7fc9da49683a476b2553bf034e13bcca9ade",
+      "initial_grid_certificate_sha256": "09405d4563c4c28606a28894f2c7ed8801b8d2a401c380925507479dda22032d",
+      "phase_witnesses": {
+        "state_second_difference": "-10922274467617137083557701941583/5192296858534827628530496329220096",
+        "control_second_difference": "-143138926960144656033258466433949/207691874341393105141219853168803840"
+      },
+      "old_minimum_state_interval": [
+        81,
+        459
+      ],
+      "new_minimum_state_interval": [
+        81,
+        297
+      ],
+      "initial_states": 81,
+      "recurrent_states": 216,
+      "exact_minimum_initial_grid_count": 81,
+      "baseline_handoff_excluded_coordinates": [],
+      "initial_handoff_minimum_slack": "237643792332954476479/59029581035870565171200",
+      "executable_smoke": {
+        "traces": 3,
+        "actions_per_trace": 5,
+        "maximum_observed_error": "1/6"
+      }
+    },
+    {
+      "seed": 6101,
+      "state_dim": 32,
+      "model_sha256": "6ef7b0bfa6ec7a0142fb0955ff9139bfb47cca195a5f5acc2959af5fa7292e7b",
+      "recurrent_certificate_sha256": "785899dfdcdbe2054ba5b5891c12612a9e567e240cfad2ba91e9928f4677ccea",
+      "previous_two_stage_certificate_sha256": "095397b27074f6690f930bfd65dce161ff8a63b1cb2a6217cbb9f7e1ec4f2e01",
+      "initial_grid_certificate_sha256": "53538e62032b0946fe89ea4148cb0438cb8946a118c1973d02b57d620e6f180b",
+      "phase_witnesses": {
+        "state_second_difference": "-32491554770653747516000436862231/12980742146337069071326240823050240",
+        "control_second_difference": "-6709082573411612915143349028777/6490371073168534535663120411525120"
+      },
+      "old_minimum_state_interval": [
+        81,
+        459
+      ],
+      "new_minimum_state_interval": [
+        81,
+        324
+      ],
+      "initial_states": 108,
+      "recurrent_states": 216,
+      "exact_minimum_initial_grid_count": 108,
+      "baseline_handoff_excluded_coordinates": [
+        0
+      ],
+      "initial_handoff_minimum_slack": "350448992107909143301/88544371553805847756800",
+      "executable_smoke": {
+        "traces": 3,
+        "actions_per_trace": 5,
+        "maximum_observed_error": "1/6"
+      }
+    },
+    {
+      "seed": 6101,
+      "state_dim": 64,
+      "model_sha256": "d8a81e9b9701bb2735d3d66720bbdd5a6d3ba34305d525470db9a56cce6962cb",
+      "recurrent_certificate_sha256": "f71b2c8a2cc6d455dc474836653d6463ab4940a546a9eb536017c045b059c205",
+      "previous_two_stage_certificate_sha256": "b2e2ff6ff52254e7c2ba1b2344ce919af7706f73000014091d23ce4f004727cd",
+      "initial_grid_certificate_sha256": "d8fa450457adab6bca3c64169609a917a3ad670b13237f6c595f82f51249580d",
+      "phase_witnesses": {
+        "state_second_difference": "-120503384692863344445896733326391/51922968585348276285304963292200960",
+        "control_second_difference": "-144390044648522793600486058061991/207691874341393105141219853168803840"
+      },
+      "old_minimum_state_interval": [
+        81,
+        459
+      ],
+      "new_minimum_state_interval": [
+        81,
+        324
+      ],
+      "initial_states": 108,
+      "recurrent_states": 216,
+      "exact_minimum_initial_grid_count": 108,
+      "baseline_handoff_excluded_coordinates": [
+        0
+      ],
+      "initial_handoff_minimum_slack": "187134238211927386967/29514790517935282585600",
+      "executable_smoke": {
+        "traces": 3,
+        "actions_per_trace": 5,
+        "maximum_observed_error": "1/6"
+      }
+    },
+    {
+      "seed": 6101,
+      "state_dim": 128,
+      "model_sha256": "0dce602b4db9aa59c6a5c4000ce65987d1ef99b7422fd15678f6a37387872f10",
+      "recurrent_certificate_sha256": "00c4248ce1c94dba82c8d30ca618559a22190d295c7ada34fc9d511cb6ece7f9",
+      "previous_two_stage_certificate_sha256": "e435c5932f4e9c89009da1c608e4454bb0cf3a4cd50265683c518bb03acc3018",
+      "initial_grid_certificate_sha256": "3876fac228f9ad3cc46a5cbfae480c206967effbeb26e970866d4b00b73de13b",
+      "phase_witnesses": {
+        "state_second_difference": "-111791068936571085922369552380561/51922968585348276285304963292200960",
+        "control_second_difference": "-185476638867907229950175066706123/207691874341393105141219853168803840"
+      },
+      "old_minimum_state_interval": [
+        81,
+        459
+      ],
+      "new_minimum_state_interval": [
+        81,
+        324
+      ],
+      "initial_states": 108,
+      "recurrent_states": 216,
+      "exact_minimum_initial_grid_count": 108,
+      "baseline_handoff_excluded_coordinates": [
+        0
+      ],
+      "initial_handoff_minimum_slack": "1292751087775549362127/177088743107611695513600",
+      "executable_smoke": {
+        "traces": 3,
+        "actions_per_trace": 5,
+        "maximum_observed_error": "1/6"
+      }
+    },
+    {
+      "seed": 6102,
+      "state_dim": 8,
+      "model_sha256": "97c7023299eb571ae22ee9498df995d5a0dcf19a7345ef33617885ea04710549",
+      "recurrent_certificate_sha256": "28a36058ffaea0eaa70d94d5dcc5e58b098d868b8588989b197edb3e8265e636",
+      "previous_two_stage_certificate_sha256": "2e88487cb7b2eb9558753026ead914e8fd7432ace5d452bf9722457cfb7706ec",
+      "initial_grid_certificate_sha256": "50d7565366ace98381e80a2a137c021453b921c335b1d4404fed631719c15aa2",
+      "phase_witnesses": {
+        "state_second_difference": "-55732604214298634943282015777927/25961484292674138142652481646100480",
+        "control_second_difference": "-70521881211631140356127796935441/103845937170696552570609926584401920"
+      },
+      "old_minimum_state_interval": [
+        81,
+        459
+      ],
+      "new_minimum_state_interval": [
+        81,
+        297
+      ],
+      "initial_states": 81,
+      "recurrent_states": 216,
+      "exact_minimum_initial_grid_count": 81,
+      "baseline_handoff_excluded_coordinates": [],
+      "initial_handoff_minimum_slack": "665774683319407485437/177088743107611695513600",
+      "executable_smoke": {
+        "traces": 3,
+        "actions_per_trace": 5,
+        "maximum_observed_error": "1/6"
+      }
+    },
+    {
+      "seed": 6102,
+      "state_dim": 32,
+      "model_sha256": "ef7e05671bcead133a8cf72a03d5beb0111069451a46cda357040429d4556234",
+      "recurrent_certificate_sha256": "1017e39df8aad1ae02c207dbabc5686603327cab80f0a3bb388175884367fae5",
+      "previous_two_stage_certificate_sha256": "ec720e23a03d58402227b9dd206b55291f8aa4fe8d66eb41c018402ae214299f",
+      "initial_grid_certificate_sha256": "79fcf58763caf45ba1d2f9653838725ae22b6495914d5ac8928dad2433d2ce1a",
+      "phase_witnesses": {
+        "state_second_difference": "-12671684690361233813398026849231/5192296858534827628530496329220096",
+        "control_second_difference": "-21841134472512427596396332464503/20769187434139310514121985316880384"
+      },
+      "old_minimum_state_interval": [
+        81,
+        459
+      ],
+      "new_minimum_state_interval": [
+        81,
+        324
+      ],
+      "initial_states": 108,
+      "recurrent_states": 216,
+      "exact_minimum_initial_grid_count": 108,
+      "baseline_handoff_excluded_coordinates": [
+        0
+      ],
+      "initial_handoff_minimum_slack": "82262400752370848419/22136092888451461939200",
+      "executable_smoke": {
+        "traces": 3,
+        "actions_per_trace": 5,
+        "maximum_observed_error": "1/6"
+      }
+    },
+    {
+      "seed": 6102,
+      "state_dim": 64,
+      "model_sha256": "40f29d5660ee96ae4798e8151b579f6f6b0ff69baafb444a19294742db699811",
+      "recurrent_certificate_sha256": "e9517d34e0b3b94691c98714a3a069f5618b663036eea331270a3a1af4f3f702",
+      "previous_two_stage_certificate_sha256": "d74e13c6438fae24abbe8f06a06aef7b5bdbca2787714c7c4ca001bb6cac66ee",
+      "initial_grid_certificate_sha256": "066f48c283a4071622e62ae4cd02afebd2dc18c64079ac9192ed1bd197cfb2d9",
+      "phase_witnesses": {
+        "state_second_difference": "-61798802859814345187990940474669/25961484292674138142652481646100480",
+        "control_second_difference": "-71051529749976366353200243900251/103845937170696552570609926584401920"
+      },
+      "old_minimum_state_interval": [
+        81,
+        459
+      ],
+      "new_minimum_state_interval": [
+        81,
+        324
+      ],
+      "initial_states": 108,
+      "recurrent_states": 216,
+      "exact_minimum_initial_grid_count": 108,
+      "baseline_handoff_excluded_coordinates": [
+        0
+      ],
+      "initial_handoff_minimum_slack": "48138459996462169023/7378697629483820646400",
+      "executable_smoke": {
+        "traces": 3,
+        "actions_per_trace": 5,
+        "maximum_observed_error": "1/6"
+      }
+    },
+    {
+      "seed": 6102,
+      "state_dim": 128,
+      "model_sha256": "46b73d27f3d3985545177dcc43d2d643811d6e1cef7603bfc7723d5c82a5b098",
+      "recurrent_certificate_sha256": "bf59626c991ae1d10ff991cbff0876fcc94eaf7d8d5cfc6b13b5cb2ad157ab4b",
+      "previous_two_stage_certificate_sha256": "0c308f917129f7999dd360e5f01c43b31e6478a7e76cfce5504aeefaabb23ed6",
+      "initial_grid_certificate_sha256": "73694c3c2380cb1d36494cbf600d1a638081271d701592f3c1b7b014287cc89f",
+      "phase_witnesses": {
+        "state_second_difference": "-112253959823437489718049724549557/51922968585348276285304963292200960",
+        "control_second_difference": "-189421253396665246631732076823851/207691874341393105141219853168803840"
+      },
+      "old_minimum_state_interval": [
+        81,
+        459
+      ],
+      "new_minimum_state_interval": [
+        81,
+        324
+      ],
+      "initial_states": 108,
+      "recurrent_states": 216,
+      "exact_minimum_initial_grid_count": 108,
+      "baseline_handoff_excluded_coordinates": [
+        0
+      ],
+      "initial_handoff_minimum_slack": "638201592244435108301/88544371553805847756800",
+      "executable_smoke": {
+        "traces": 3,
+        "actions_per_trace": 5,
+        "maximum_observed_error": "1/6"
+      }
+    }
+  ],
+  "all_phase_crossings_replayed": true,
+  "all_original_lower_and_two_stage_certificates_replayed": true,
+  "all_initial_optimality_certificates_replayed": true,
+  "minimum_state_intervals_by_dimension": {
+    "8": [
+      81,
+      297
+    ],
+    "32": [
+      81,
+      324
+    ],
+    "64": [
+      81,
+      324
+    ],
+    "128": [
+      81,
+      324
+    ]
+  },
+  "scope": "eight frozen trained phase-crossing rings, full unit initial/action cubes, all finite horizons",
+  "initial_optimality_scope": "positive integer coordinate grids satisfying exact output and sensitivity handoff into the fixed recurrent relation",
+  "boundary": "optimal initial coordinate grid in this proof class; general finite realization minimum remains unknown"
+}

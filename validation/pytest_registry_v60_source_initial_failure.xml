@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="2" skipped="0" tests="16" time="25.822" timestamp="2026-09-28T17:24:16.156367+08:00" hostname="DESKTOP-B5O3UI0"><testcase classname="tests.test_unified_proof_registry" name="test_actual_binary_constants_cannot_be_erased_as_decimal_zero" time="0.796" /><testcase classname="tests.test_unified_proof_registry" name="test_actual_statistics_variance_floor_not_protected_cdir_division" time="0.017"><failure message="assert Fraction(-1, 604462909807314587353088) == Fraction(1, 1208925819614629174706176)&#10; +  where Fraction(-1, 604462909807314587353088) = Interval(lo=Fraction(-1, 604462909807314587353088), hi=Fraction(1, 1208925819614629174706176)).lo&#10; +  and   Fraction(1, 1208925819614629174706176) = Interval(lo=Fraction(-1, 604462909807314587353088), hi=Fraction(1, 1208925819614629174706176)).hi">def test_actual_statistics_variance_floor_not_protected_cdir_division():
+        data=[[Interval.point((1 if i%2 else -1)*Q(1,100000000)),Interval.point((1 if i%2 else -1)*Q(2,100000000))] for i in range(16)]
+        ratio=raw_feature(data,2)
+&gt;       assert ratio.lo==ratio.hi==0
+E       assert Fraction(-1, 604462909807314587353088) == Fraction(1, 1208925819614629174706176)
+E        +  where Fraction(-1, 604462909807314587353088) = Interval(lo=Fraction(-1, 604462909807314587353088), hi=Fraction(1, 1208925819614629174706176)).lo
+E        +  and   Fraction(1, 1208925819614629174706176) = Interval(lo=Fraction(-1, 604462909807314587353088), hi=Fraction(1, 1208925819614629174706176)).hi
+
+..\..\tests\test_unified_proof_registry.py:30: AssertionError</failure></testcase><testcase classname="tests.test_unified_proof_registry" name="test_polynomial_coefficients_are_independently_recomputed" time="0.001" /><testcase classname="tests.test_unified_proof_registry" name="test_scope_and_verifier_environment_tampering_rejected[promotion]" time="0.094" /><testcase classname="tests.test_unified_proof_registry" name="test_scope_and_verifier_environment_tampering_rejected[unknown_claim]" time="0.100" /><testcase classname="tests.test_unified_proof_registry" name="test_scope_and_verifier_environment_tampering_rejected[source]" time="0.101" /><testcase classname="tests.test_unified_proof_registry" name="test_scope_and_verifier_environment_tampering_rejected[snapshot]" time="0.106" /><testcase classname="tests.test_unified_proof_registry" name="test_scope_and_verifier_environment_tampering_rejected[threads]" time="0.101" /><testcase classname="tests.test_unified_proof_registry" name="test_unsupported_operators_and_exhausted_bounds_stay_open" time="0.526" /><testcase classname="tests.test_unified_proof_registry" name="test_original_claim_ledger_cannot_inherit_local_closure[omitted_claim]" time="0.002" /><testcase classname="tests.test_unified_proof_registry" name="test_original_claim_ledger_cannot_inherit_local_closure[false_proved]" time="0.002" /><testcase classname="tests.test_unified_proof_registry" name="test_declared_job_omission_is_rejected_before_replay" time="0.277"><failure message="FileNotFoundError: [Errno 2] No such file or directory: 'E:\\瀹為獙\\neural-causal-decompiler\\validation\\original_proof_registry_protocol_v2r1.json'">tmp_path = WindowsPath('C:/Users/K/AppData/Local/Temp/pytest-of-K/pytest-96/test_declared_job_omission_is_0')
+
+    def test_declared_job_omission_is_rejected_before_replay(tmp_path):
+        source=ROOT/'runs/original_proof_registry_v2r1'
+        for name in ['config.json','ledger.json','summary.json']:(tmp_path/name).write_bytes((source/name).read_bytes())
+        summary=read(tmp_path/'summary.json');summary['records'].pop()
+        (tmp_path/'summary.json').write_text(json.dumps(summary))
+&gt;       with pytest.raises(ValueError,match='omitted proof jobs'):verify_proof(tmp_path)
+                                                                  ^^^^^^^^^^^^^^^^^^^^^^
+
+..\..\tests\test_unified_proof_registry.py:79: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+ncd\proof_registry.py:155: in verify_proof
+    if digest(summary['protocol'])!=summary['protocol_sha256'] or read_json(summary['protocol'])!=config:raise ValueError('Externally frozen protocol changed')
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+path = 'E:\\瀹為獙\\neural-causal-decompiler\\validation\\original_proof_registry_protocol_v2r1.json'
+
+    def digest(path):
+        h = hashlib.sha256()
+&gt;       with open(path, "rb") as f:
+             ^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: 'E:\\瀹為獙\\neural-causal-decompiler\\validation\\original_proof_registry_protocol_v2r1.json'
+
+ncd\io.py:10: FileNotFoundError</failure></testcase><testcase classname="tests.test_unified_proof_registry" name="test_memory_limit_reaches_real_descendant_not_only_launcher" time="0.162" /><testcase classname="tests.test_unified_proof_registry" name="test_timeout_terminates_owned_descendant" time="1.007" /><testcase classname="tests.test_cdir" name="test_composed_residual_and_statistical_typing" time="0.005" /><testcase classname="tests.test_cdir" name="test_arithmetic_equivalence_and_protected_division" time="0.014" /></testsuite></testsuites>

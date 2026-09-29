@@ -1,0 +1,115 @@
+{
+  "tests": {
+    "passed": 59
+  },
+  "493": {
+    "status": "verified",
+    "worlds": 2976,
+    "modes": [
+      "without_relations",
+      "with_relations"
+    ],
+    "node_sizes": [
+      3,
+      5,
+      8
+    ],
+    "mechanism_recoveries": 18,
+    "science_not_certified": true
+  },
+  "494": {
+    "status": "verified",
+    "worlds": 2976,
+    "modes": [
+      "without_relations",
+      "with_relations"
+    ],
+    "node_sizes": [
+      3,
+      5,
+      8
+    ],
+    "mechanism_recoveries": 18,
+    "science_not_certified": true
+  },
+  "paired_graph_effects": [
+    {
+      "seed": 493,
+      "nodes": 3,
+      "worlds": 96,
+      "relation_only_correct": 9,
+      "baseline_only_correct": 12,
+      "mean_difference": -0.03125,
+      "hoeffding95_interval": [
+        -0.30847131103874453,
+        0.24597131103874453
+      ],
+      "assumptions": "fixed trained models; independent bounded world units"
+    },
+    {
+      "seed": 493,
+      "nodes": 5,
+      "worlds": 96,
+      "relation_only_correct": 6,
+      "baseline_only_correct": 6,
+      "mean_difference": 0.0,
+      "hoeffding95_interval": [
+        -0.27722131103874453,
+        0.27722131103874453
+      ],
+      "assumptions": "fixed trained models; independent bounded world units"
+    },
+    {
+      "seed": 493,
+      "nodes": 8,
+      "worlds": 96,
+      "relation_only_correct": 1,
+      "baseline_only_correct": 4,
+      "mean_difference": -0.03125,
+      "hoeffding95_interval": [
+        -0.30847131103874453,
+        0.24597131103874453
+      ],
+      "assumptions": "fixed trained models; independent bounded world units"
+    },
+    {
+      "seed": 494,
+      "nodes": 3,
+      "worlds": 96,
+      "relation_only_correct": 14,
+      "baseline_only_correct": 8,
+      "mean_difference": 0.0625,
+      "hoeffding95_interval": [
+        -0.21472131103874453,
+        0.33972131103874453
+      ],
+      "assumptions": "fixed trained models; independent bounded world units"
+    },
+    {
+      "seed": 494,
+      "nodes": 5,
+      "worlds": 96,
+      "relation_only_correct": 3,
+      "baseline_only_correct": 6,
+      "mean_difference": -0.03125,
+      "hoeffding95_interval": [
+        -0.30847131103874453,
+        0.24597131103874453
+      ],
+      "assumptions": "fixed trained models; independent bounded world units"
+    },
+    {
+      "seed": 494,
+      "nodes": 8,
+      "worlds": 96,
+      "relation_only_correct": 1,
+      "baseline_only_correct": 2,
+      "mean_difference": -0.010416666666666666,
+      "hoeffding95_interval": [
+        -0.2876379777054112,
+        0.26680464437207785
+      ],
+      "assumptions": "fixed trained models; independent bounded world units"
+    }
+  ]
+}

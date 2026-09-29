@@ -1,0 +1,433 @@
+{
+  "id": "observational_cpdag_identification_boundary",
+  "job": {
+    "artifact": "runs/faithfulness_boundary_v1/manifest.json",
+    "artifact_sha256": "343735dd59bfa958ac545d035c00f0fd61665ba1f61431737003e3d6e98f9c73",
+    "id": "observational_cpdag_identification_boundary",
+    "identification_scope": {
+      "arithmetic": "exact rational model parameters; ideal real SCM and Gaussian laws",
+      "canonical_coefficient_magnitude": [
+        "2/5",
+        "11/10"
+      ],
+      "estimator_family": "all measurable estimators, including randomized estimators",
+      "information": "only IID observational rows, no true graph/scales/noises/do data",
+      "known_math_is_not_project_innovation": true,
+      "nodes": [
+        3,
+        5,
+        8
+      ],
+      "noise": "independent centered Gaussian, common standard deviation 7/20",
+      "not_claimed": [
+        "hardware floating execution",
+        "exact rounded generator realization",
+        "almost-sure or 99-percent random-world performance",
+        "all estimators given interventions",
+        "failure under a justified positive strong-faithfulness floor",
+        "original R0-R13 closure"
+      ],
+      "observed_scales": "inside exp([-3/2,3/2]); unknown to observational estimator",
+      "target": "one correct graph Markov equivalence class (CPDAG); abstention counts as nonrecovery"
+    },
+    "kind": "observational_cpdag_boundary",
+    "original_claim_closed": false,
+    "related_claims": [
+      "R0.uniform_finite_sample_direction",
+      "R2.discovery_guarantee",
+      "R8.scale_ood",
+      "R9.graph_recovery",
+      "R10.intervention_distribution"
+    ]
+  },
+  "result": {
+    "status": "verified",
+    "verification": {
+      "case_count": 6,
+      "conclusion": "verified",
+      "identification_contracts": [
+        {
+          "bounds": {
+            "collider_faithful": true,
+            "finite_sample_minimax_error_lower": "1/2",
+            "observational_covariances_equal": true,
+            "population_unique_mec_claim": "refuted",
+            "triangle_faithful": false
+          },
+          "certificate_sha256": "ea235c83c1c7de6fda447d7ba755e5622194e3b6a8f461b566de3be8f2b66a4f",
+          "evidence_class": "true_causal_correctness",
+          "id": "population_n3",
+          "original_claim_entailment": false,
+          "scope": {
+            "arithmetic": "exact rational model parameters; ideal real SCM and Gaussian laws",
+            "canonical_coefficient_magnitude": [
+              "2/5",
+              "11/10"
+            ],
+            "estimator_family": "all measurable estimators, including randomized estimators",
+            "information": "only IID observational rows, no true graph/scales/noises/do data",
+            "known_math_is_not_project_innovation": true,
+            "nodes": [
+              3,
+              5,
+              8
+            ],
+            "noise": "independent centered Gaussian, common standard deviation 7/20",
+            "not_claimed": [
+              "hardware floating execution",
+              "exact rounded generator realization",
+              "almost-sure or 99-percent random-world performance",
+              "all estimators given interventions",
+              "failure under a justified positive strong-faithfulness floor",
+              "original R0-R13 closure"
+            ],
+            "observed_scales": "inside exp([-3/2,3/2]); unknown to observational estimator",
+            "target": "one correct graph Markov equivalence class (CPDAG); abstention counts as nonrecovery"
+          },
+          "status": "refuted",
+          "uncovered": [
+            "hardware floating execution",
+            "exact rounded generator realization",
+            "almost-sure or 99-percent random-world performance",
+            "all estimators given interventions",
+            "failure under a justified positive strong-faithfulness floor",
+            "original R0-R13 closure"
+          ]
+        },
+        {
+          "bounds": {
+            "all_N_delta_argument": "For every positive N and 0<delta<1/2 use q=(1-2delta)/2 and t=q/(8N); t<1/16, N*t^2/2<=q^2/64 and (1-q/8)/2>delta. All edge magnitudes exceed 1/2 while rho02 can approach zero.",
+            "collider_faithful": true,
+            "finite_sample_minimax_error_lower": "751/1600",
+            "iid_KL": "2401/122880000",
+            "minimax_argument": "Let t decrease to zero for fixed N; KL and TV vanish, so worst-case error is at least 1/2. A fair independent choice of the two CPDAGs attains upper error 1/2 on this family.",
+            "observational_covariances_equal": false,
+            "strictly_exceeds_requested_error": true,
+            "total_variation_upper": "49/800",
+            "triangle_faithful": true,
+            "unconditional_rho_02_squared": "2401/9216002401",
+            "uniform_faithful_mec_recovery_claim": "refuted",
+            "unseparated_two_class_family_minimax": "1/2"
+          },
+          "certificate_sha256": "79cc7033e6e2af89ecec8ac51734c24de754d2119be4cac029c0cd4e7f9d15d7",
+          "evidence_class": "true_causal_correctness",
+          "id": "faithful_finite_sample_n3",
+          "original_claim_entailment": false,
+          "scope": {
+            "arithmetic": "exact rational model parameters; ideal real SCM and Gaussian laws",
+            "canonical_coefficient_magnitude": [
+              "2/5",
+              "11/10"
+            ],
+            "estimator_family": "all measurable estimators, including randomized estimators",
+            "information": "only IID observational rows, no true graph/scales/noises/do data",
+            "known_math_is_not_project_innovation": true,
+            "nodes": [
+              3,
+              5,
+              8
+            ],
+            "noise": "independent centered Gaussian, common standard deviation 7/20",
+            "not_claimed": [
+              "hardware floating execution",
+              "exact rounded generator realization",
+              "almost-sure or 99-percent random-world performance",
+              "all estimators given interventions",
+              "failure under a justified positive strong-faithfulness floor",
+              "original R0-R13 closure"
+            ],
+            "observed_scales": "inside exp([-3/2,3/2]); unknown to observational estimator",
+            "target": "one correct graph Markov equivalence class (CPDAG); abstention counts as nonrecovery"
+          },
+          "status": "refuted",
+          "uncovered": [
+            "hardware floating execution",
+            "exact rounded generator realization",
+            "almost-sure or 99-percent random-world performance",
+            "all estimators given interventions",
+            "failure under a justified positive strong-faithfulness floor",
+            "original R0-R13 closure"
+          ]
+        },
+        {
+          "bounds": {
+            "collider_faithful": true,
+            "finite_sample_minimax_error_lower": "1/2",
+            "observational_covariances_equal": true,
+            "population_unique_mec_claim": "refuted",
+            "triangle_faithful": false
+          },
+          "certificate_sha256": "8d0457498c3814c78e74a6e57885c2885bd56942890669cc7218de18e94d57c1",
+          "evidence_class": "true_causal_correctness",
+          "id": "population_n5",
+          "original_claim_entailment": false,
+          "scope": {
+            "arithmetic": "exact rational model parameters; ideal real SCM and Gaussian laws",
+            "canonical_coefficient_magnitude": [
+              "2/5",
+              "11/10"
+            ],
+            "estimator_family": "all measurable estimators, including randomized estimators",
+            "information": "only IID observational rows, no true graph/scales/noises/do data",
+            "known_math_is_not_project_innovation": true,
+            "nodes": [
+              3,
+              5,
+              8
+            ],
+            "noise": "independent centered Gaussian, common standard deviation 7/20",
+            "not_claimed": [
+              "hardware floating execution",
+              "exact rounded generator realization",
+              "almost-sure or 99-percent random-world performance",
+              "all estimators given interventions",
+              "failure under a justified positive strong-faithfulness floor",
+              "original R0-R13 closure"
+            ],
+            "observed_scales": "inside exp([-3/2,3/2]); unknown to observational estimator",
+            "target": "one correct graph Markov equivalence class (CPDAG); abstention counts as nonrecovery"
+          },
+          "status": "refuted",
+          "uncovered": [
+            "hardware floating execution",
+            "exact rounded generator realization",
+            "almost-sure or 99-percent random-world performance",
+            "all estimators given interventions",
+            "failure under a justified positive strong-faithfulness floor",
+            "original R0-R13 closure"
+          ]
+        },
+        {
+          "bounds": {
+            "all_N_delta_argument": "For every positive N and 0<delta<1/2 use q=(1-2delta)/2 and t=q/(8N); t<1/16, N*t^2/2<=q^2/64 and (1-q/8)/2>delta. All edge magnitudes exceed 1/2 while rho02 can approach zero.",
+            "collider_faithful": true,
+            "finite_sample_minimax_error_lower": "751/1600",
+            "iid_KL": "2401/122880000",
+            "minimax_argument": "Let t decrease to zero for fixed N; KL and TV vanish, so worst-case error is at least 1/2. A fair independent choice of the two CPDAGs attains upper error 1/2 on this family.",
+            "observational_covariances_equal": false,
+            "strictly_exceeds_requested_error": true,
+            "total_variation_upper": "49/800",
+            "triangle_faithful": true,
+            "unconditional_rho_02_squared": "2401/9216002401",
+            "uniform_faithful_mec_recovery_claim": "refuted",
+            "unseparated_two_class_family_minimax": "1/2"
+          },
+          "certificate_sha256": "ca26d590a412e43cdb44beb5e97ba651bd0308287d9a6b607e3a4b2e9ad28278",
+          "evidence_class": "true_causal_correctness",
+          "id": "faithful_finite_sample_n5",
+          "original_claim_entailment": false,
+          "scope": {
+            "arithmetic": "exact rational model parameters; ideal real SCM and Gaussian laws",
+            "canonical_coefficient_magnitude": [
+              "2/5",
+              "11/10"
+            ],
+            "estimator_family": "all measurable estimators, including randomized estimators",
+            "information": "only IID observational rows, no true graph/scales/noises/do data",
+            "known_math_is_not_project_innovation": true,
+            "nodes": [
+              3,
+              5,
+              8
+            ],
+            "noise": "independent centered Gaussian, common standard deviation 7/20",
+            "not_claimed": [
+              "hardware floating execution",
+              "exact rounded generator realization",
+              "almost-sure or 99-percent random-world performance",
+              "all estimators given interventions",
+              "failure under a justified positive strong-faithfulness floor",
+              "original R0-R13 closure"
+            ],
+            "observed_scales": "inside exp([-3/2,3/2]); unknown to observational estimator",
+            "target": "one correct graph Markov equivalence class (CPDAG); abstention counts as nonrecovery"
+          },
+          "status": "refuted",
+          "uncovered": [
+            "hardware floating execution",
+            "exact rounded generator realization",
+            "almost-sure or 99-percent random-world performance",
+            "all estimators given interventions",
+            "failure under a justified positive strong-faithfulness floor",
+            "original R0-R13 closure"
+          ]
+        },
+        {
+          "bounds": {
+            "collider_faithful": true,
+            "finite_sample_minimax_error_lower": "1/2",
+            "observational_covariances_equal": true,
+            "population_unique_mec_claim": "refuted",
+            "triangle_faithful": false
+          },
+          "certificate_sha256": "a6b79a481993bcd175a12778fdd0e5ce8c878e189dff2b555553664b29d0d626",
+          "evidence_class": "true_causal_correctness",
+          "id": "population_n8",
+          "original_claim_entailment": false,
+          "scope": {
+            "arithmetic": "exact rational model parameters; ideal real SCM and Gaussian laws",
+            "canonical_coefficient_magnitude": [
+              "2/5",
+              "11/10"
+            ],
+            "estimator_family": "all measurable estimators, including randomized estimators",
+            "information": "only IID observational rows, no true graph/scales/noises/do data",
+            "known_math_is_not_project_innovation": true,
+            "nodes": [
+              3,
+              5,
+              8
+            ],
+            "noise": "independent centered Gaussian, common standard deviation 7/20",
+            "not_claimed": [
+              "hardware floating execution",
+              "exact rounded generator realization",
+              "almost-sure or 99-percent random-world performance",
+              "all estimators given interventions",
+              "failure under a justified positive strong-faithfulness floor",
+              "original R0-R13 closure"
+            ],
+            "observed_scales": "inside exp([-3/2,3/2]); unknown to observational estimator",
+            "target": "one correct graph Markov equivalence class (CPDAG); abstention counts as nonrecovery"
+          },
+          "status": "refuted",
+          "uncovered": [
+            "hardware floating execution",
+            "exact rounded generator realization",
+            "almost-sure or 99-percent random-world performance",
+            "all estimators given interventions",
+            "failure under a justified positive strong-faithfulness floor",
+            "original R0-R13 closure"
+          ]
+        },
+        {
+          "bounds": {
+            "all_N_delta_argument": "For every positive N and 0<delta<1/2 use q=(1-2delta)/2 and t=q/(8N); t<1/16, N*t^2/2<=q^2/64 and (1-q/8)/2>delta. All edge magnitudes exceed 1/2 while rho02 can approach zero.",
+            "collider_faithful": true,
+            "finite_sample_minimax_error_lower": "751/1600",
+            "iid_KL": "2401/122880000",
+            "minimax_argument": "Let t decrease to zero for fixed N; KL and TV vanish, so worst-case error is at least 1/2. A fair independent choice of the two CPDAGs attains upper error 1/2 on this family.",
+            "observational_covariances_equal": false,
+            "strictly_exceeds_requested_error": true,
+            "total_variation_upper": "49/800",
+            "triangle_faithful": true,
+            "unconditional_rho_02_squared": "2401/9216002401",
+            "uniform_faithful_mec_recovery_claim": "refuted",
+            "unseparated_two_class_family_minimax": "1/2"
+          },
+          "certificate_sha256": "b03fbb917adb3bddd5e0e728ad01aacc36ad1a6cc9c1f27528a7010c20a7cbb2",
+          "evidence_class": "true_causal_correctness",
+          "id": "faithful_finite_sample_n8",
+          "original_claim_entailment": false,
+          "scope": {
+            "arithmetic": "exact rational model parameters; ideal real SCM and Gaussian laws",
+            "canonical_coefficient_magnitude": [
+              "2/5",
+              "11/10"
+            ],
+            "estimator_family": "all measurable estimators, including randomized estimators",
+            "information": "only IID observational rows, no true graph/scales/noises/do data",
+            "known_math_is_not_project_innovation": true,
+            "nodes": [
+              3,
+              5,
+              8
+            ],
+            "noise": "independent centered Gaussian, common standard deviation 7/20",
+            "not_claimed": [
+              "hardware floating execution",
+              "exact rounded generator realization",
+              "almost-sure or 99-percent random-world performance",
+              "all estimators given interventions",
+              "failure under a justified positive strong-faithfulness floor",
+              "original R0-R13 closure"
+            ],
+            "observed_scales": "inside exp([-3/2,3/2]); unknown to observational estimator",
+            "target": "one correct graph Markov equivalence class (CPDAG); abstention counts as nonrecovery"
+          },
+          "status": "refuted",
+          "uncovered": [
+            "hardware floating execution",
+            "exact rounded generator realization",
+            "almost-sure or 99-percent random-world performance",
+            "all estimators given interventions",
+            "failure under a justified positive strong-faithfulness floor",
+            "original R0-R13 closure"
+          ]
+        }
+      ],
+      "independent_bundle_verification": {
+        "jobs": 6,
+        "original_objective_achieved": false,
+        "results": [
+          {
+            "conclusion": "refuted",
+            "id": "population_n3",
+            "minimax_error_lower": "1/2",
+            "mode": "population",
+            "nodes": 3,
+            "original_objective_achieved": false,
+            "status": "verified"
+          },
+          {
+            "conclusion": "refuted",
+            "id": "faithful_finite_sample_n3",
+            "minimax_error_lower": "751/1600",
+            "mode": "faithful-finite-sample",
+            "nodes": 3,
+            "original_objective_achieved": false,
+            "status": "verified"
+          },
+          {
+            "conclusion": "refuted",
+            "id": "population_n5",
+            "minimax_error_lower": "1/2",
+            "mode": "population",
+            "nodes": 5,
+            "original_objective_achieved": false,
+            "status": "verified"
+          },
+          {
+            "conclusion": "refuted",
+            "id": "faithful_finite_sample_n5",
+            "minimax_error_lower": "751/1600",
+            "mode": "faithful-finite-sample",
+            "nodes": 5,
+            "original_objective_achieved": false,
+            "status": "verified"
+          },
+          {
+            "conclusion": "refuted",
+            "id": "population_n8",
+            "minimax_error_lower": "1/2",
+            "mode": "population",
+            "nodes": 8,
+            "original_objective_achieved": false,
+            "status": "verified"
+          },
+          {
+            "conclusion": "refuted",
+            "id": "faithful_finite_sample_n8",
+            "minimax_error_lower": "751/1600",
+            "mode": "faithful-finite-sample",
+            "nodes": 8,
+            "original_objective_achieved": false,
+            "status": "verified"
+          }
+        ],
+        "status": "verified"
+      },
+      "kernel": "faithfulness_boundary_proof",
+      "original_claim_closed": false,
+      "original_objective_achieved": false,
+      "status": "verified",
+      "_resource_guard": {
+        "job_memory_limit_bytes": 8589934592,
+        "descendants_included": true,
+        "reported_peak_within_limit": true
+      }
+    },
+    "original_claim_closed": false,
+    "artifact_sha256": "343735dd59bfa958ac545d035c00f0fd61665ba1f61431737003e3d6e98f9c73"
+  }
+}

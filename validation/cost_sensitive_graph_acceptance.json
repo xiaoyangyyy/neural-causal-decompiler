@@ -1,0 +1,123 @@
+{
+  "protocol": "docs/COST_SENSITIVE_FACTORIZED_GRAPH_PROTOCOL.md",
+  "runs": [
+    {
+      "seed": 2593,
+      "source": "relational_seed493",
+      "verified": true,
+      "selected": {
+        "without_relations": {
+          "positive_weight": 1.0,
+          "aggregation": "and",
+          "exact_graph_fidelity": 0.3125,
+          "all_pair_fidelity": 0.911204268292683,
+          "active_pair_fidelity": 0.7031847133757961
+        },
+        "with_relations": {
+          "positive_weight": 3.0,
+          "aggregation": "and",
+          "exact_graph_fidelity": 0.3177083333333333,
+          "all_pair_fidelity": 0.8864329268292683,
+          "active_pair_fidelity": 0.6558891454965358
+        }
+      },
+      "baseline": {
+        "worlds": 960,
+        "pairs": 13120,
+        "all_pair_fidelity": 0.8057164634146341,
+        "active_pair_fidelity": 0.4908110267678785,
+        "exact_graph_fidelity": 0.196875,
+        "teacher_exact_graph_accuracy": 0.14791666666666667,
+        "program_exact_graph_accuracy": 0.090625
+      },
+      "cost_sensitive": {
+        "worlds": 960,
+        "pairs": 13120,
+        "all_pair_fidelity": 0.805640243902439,
+        "active_pair_fidelity": 0.5061011040092969,
+        "exact_graph_fidelity": 0.20833333333333334,
+        "teacher_exact_graph_accuracy": 0.14791666666666667,
+        "program_exact_graph_accuracy": 0.08125
+      },
+      "decision_components": {
+        "per_mode_non_decline": true,
+        "pooled_exact_gain": 0.011458333333333348,
+        "pooled_active_non_decline": true
+      }
+    },
+    {
+      "seed": 2594,
+      "source": "relational_seed494",
+      "verified": true,
+      "selected": {
+        "without_relations": {
+          "positive_weight": 1.0,
+          "aggregation": "and",
+          "exact_graph_fidelity": 0.2552083333333333,
+          "all_pair_fidelity": 0.8769054878048781,
+          "active_pair_fidelity": 0.6278801843317973
+        },
+        "with_relations": {
+          "positive_weight": 1.0,
+          "aggregation": "and",
+          "exact_graph_fidelity": 0.25,
+          "all_pair_fidelity": 0.8788109756097561,
+          "active_pair_fidelity": 0.629802095459837
+        }
+      },
+      "baseline": {
+        "worlds": 960,
+        "pairs": 13120,
+        "all_pair_fidelity": 0.8134146341463414,
+        "active_pair_fidelity": 0.44951652799640207,
+        "exact_graph_fidelity": 0.18958333333333333,
+        "teacher_exact_graph_accuracy": 0.1375,
+        "program_exact_graph_accuracy": 0.06770833333333333
+      },
+      "cost_sensitive": {
+        "worlds": 960,
+        "pairs": 13120,
+        "all_pair_fidelity": 0.8134146341463414,
+        "active_pair_fidelity": 0.44951652799640207,
+        "exact_graph_fidelity": 0.18958333333333333,
+        "teacher_exact_graph_accuracy": 0.1375,
+        "program_exact_graph_accuracy": 0.06770833333333333
+      },
+      "decision_components": {
+        "per_mode_non_decline": true,
+        "pooled_exact_gain": 0.0,
+        "pooled_active_non_decline": true
+      }
+    }
+  ],
+  "pooled": {
+    "baseline": {
+      "worlds": 1920,
+      "pairs": 26240,
+      "all_pair_fidelity": 0.8095655487804878,
+      "active_pair_fidelity": 0.4713847455834127,
+      "exact_graph_fidelity": 0.19322916666666667,
+      "teacher_exact_graph_accuracy": 0.14270833333333333,
+      "program_exact_graph_accuracy": 0.07916666666666666
+    },
+    "cost_sensitive": {
+      "worlds": 1920,
+      "pairs": 26240,
+      "all_pair_fidelity": 0.8095274390243903,
+      "active_pair_fidelity": 0.4799167533818939,
+      "exact_graph_fidelity": 0.19895833333333332,
+      "teacher_exact_graph_accuracy": 0.14270833333333333,
+      "program_exact_graph_accuracy": 0.07447916666666667
+    },
+    "exact_gain": 0.005729166666666646,
+    "active_gain": 0.008532007798481178
+  },
+  "criteria": {
+    "both_replayed": true,
+    "per_seed_and_mode_non_decline": true,
+    "pooled_exact_gain_at_least_0.02": false,
+    "pooled_active_non_decline": true
+  },
+  "passed": false,
+  "claim": "negative behavioral graph-program extraction result; truth metrics are diagnostic"
+}

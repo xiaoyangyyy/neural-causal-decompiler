@@ -1,0 +1,78 @@
+{
+  "formal_seed": 2701,
+  "scope": "exact finite deterministic ReLU Moore transducers over a complete action-closed state list",
+  "checks": {
+    "complete_replay": true,
+    "all_active_exact": true,
+    "all_oracle_certificates": true,
+    "all_active_certificates": true,
+    "all_approximate_intervals_closed": true,
+    "budget_preserves_unresolved": true
+  },
+  "replay": {
+    "status": "verified",
+    "cases_replayed": 12,
+    "certificates_verified": 60,
+    "approximate_certificates_verified": 36,
+    "active_exact_cases": 12,
+    "limited_unresolved_pairs": 76
+  },
+  "summary": {
+    "schema": "ncd.certified-finite-summary.v1",
+    "cases": 12,
+    "all_oracle_certificates_verified": true,
+    "all_active_certificates_verified": true,
+    "active_exact_cases": 12,
+    "source_states": 90,
+    "quotient_states": 54,
+    "compression_ratio": 0.6,
+    "active_queries": 678,
+    "approximate_complexity_curve": [
+      {
+        "epsilon": 0.0,
+        "lower_bound_total": 90,
+        "upper_bound_total": 90,
+        "closed_cases": 12
+      },
+      {
+        "epsilon": 0.25,
+        "lower_bound_total": 54,
+        "upper_bound_total": 54,
+        "closed_cases": 12
+      },
+      {
+        "epsilon": 10.0,
+        "lower_bound_total": 12,
+        "upper_bound_total": 12,
+        "closed_cases": 12
+      }
+    ],
+    "all_approximate_intervals_closed": true,
+    "baselines_at_active_query_budget": {
+      "random": {
+        "exact_cases": 7,
+        "false_merges": 35,
+        "false_splits": 0,
+        "certified_complete_cases": 0
+      },
+      "passive": {
+        "exact_cases": 11,
+        "false_merges": 1,
+        "false_splits": 0,
+        "certified_complete_cases": 0
+      },
+      "activation_clustering": {
+        "exact_cases": 0,
+        "false_merges": 56,
+        "false_splits": 34
+      }
+    },
+    "limited_budget": {
+      "certified_complete_cases": 0,
+      "unresolved_pairs": 76
+    },
+    "claim_scope": "exact finite deterministic ReLU Moore transducers over a complete action-closed state list",
+    "runtime_seconds": 16.645211299997754
+  },
+  "accepted": true
+}

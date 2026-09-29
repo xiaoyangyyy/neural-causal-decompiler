@@ -1,0 +1,29 @@
+{
+  "accepted": true,
+  "lower_run": "runs/certified_transition_lower_seed12701",
+  "lower_manifest_sha256": "2469b1c2988dcf6875522cd5dda7a223bb62041e7b6e1abb17ac1e56e3a2f156",
+  "upper_run": "runs/certified_continuous_realization_seed10701",
+  "upper_manifest_sha256": "f1e296b573485f64dde3f7a7c56b8dcd1802e9a105f9569f2ec8b4c9880dca62",
+  "minimum_state_interval": [
+    6,
+    10
+  ],
+  "lower_verification": {
+    "status": "verified",
+    "lower_bound": 6,
+    "excluded_sizes": 5,
+    "transition_aware_exclusions": 1,
+    "arithmetic": "exact-rational"
+  },
+  "upper_verification": {
+    "status": "verified",
+    "profiles_replayed": 2,
+    "largest_state_dim": 2,
+    "largest_realization": 100,
+    "initial_cells_verified": 20,
+    "transition_segments_verified": 100,
+    "packing_pairs_verified": 310
+  },
+  "claim": "five states impossible under deterministic transition closure for the frozen scalar ReLU system",
+  "limitations": "the minimum is not identified; affine identity-output 1D theorem only"
+}

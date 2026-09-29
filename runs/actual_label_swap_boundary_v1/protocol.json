@@ -1,0 +1,28 @@
+{
+  "schema": "ncd.neural-boundary-protocol.v1",
+  "revision": 1,
+  "output": "runs/actual_label_swap_boundary_v1",
+  "development_seed": 8100,
+  "realization_protocol": "validation/neural_ssa_protocol_v1.json",
+  "realization_protocol_sha256": "07900abe5294ca0fe148530a09f77900e5c8a00e4d723b436e581e6bce2d51db",
+  "realization_certificate": "runs/full_neural_ssa_realization_v1/discoverer91/certificate.json",
+  "realization_certificate_sha256": "24af8c941ce8d2996aac9f4f133550227db40e5c7b168aa3ca97ae805b05582c",
+  "program": "runs/full_neural_ssa_realization_v1/discoverer91/program.json",
+  "program_sha256": "67b40d1293b3dc0557e75216465b1b655a9053b33d669c55204063f5a0279998",
+  "source_sha256": {
+    "neural_ssa_proof/__init__.py": "2ed4467b9bd0b66d32fa26ed793d79f45f8a2c83222d57c45aa6113014c53b2c",
+    "neural_ssa_proof/__main__.py": "b95b09aa9b2eb4c0cdf870de7b650447ab130fd029ac798cbaa8d0d33ea99848",
+    "neural_ssa_proof/audit.py": "296071118febbfd1edd91b705c1812c60637e95b96163399f21a3362ac722e90",
+    "neural_ssa_proof/compiler.py": "07fcce14091e7b336a9dea6827b8c1d8bbc4ba474dbc9739e4169eb9ae821c55",
+    "neural_ssa_proof/runtime.py": "5f2837ba3ffa250ae8e1b44d9e3e8ac8bc13e62882c9df154ca812f29b89fbc9",
+    "neural_ssa_proof/verification.py": "6de5e335273fcac88206d520af7a59233a8b1cee704daf9f2fa1cec8cef8f4af",
+    "ncd/model.py": "ee732b8f06c153951e6f3e559c9511591e8e6e632d815766c5192aff50bb3602",
+    "ncd/proof_intervals.py": "8838c1141070672ca69775520d81f87dc56a93678e3d818c75235ed2c3981f21",
+    "normalizer_proof/realization.py": "3ed6718967eb1df664cf91526934bf7d823405edb52de8bf549a499bd0ea16bd",
+    "neural_boundary_proof/boundary.py": "4cc28566c2518f1ea7f0ab89973dec8f2e0a1facf1750ebe98a56412cd24f58d",
+    "neural_boundary_proof/__init__.py": "89482869cfe8461ac60427ca6f84ae3417ec18bae2a989fe8fc81013da54cb8f",
+    "neural_boundary_proof/__main__.py": "e55a45aefc92a4f6257d4fc05a8ace3b72ac3d9c44c3db3b5338deccf07e3f64"
+  },
+  "scope": "reachable single-label variable-swap counterexample including ties; score equivariance preserved",
+  "original_objective_achieved": false
+}

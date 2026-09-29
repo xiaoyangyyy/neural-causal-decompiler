@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ncd-proof-workbench"
+version = "0.1.0"
+description = "Scoped internal-information, exact-semantics and bounded-MDL proof certificates"
+requires-python = ">=3.11"
+dependencies = ["neural-causal-decompiler==0.59.0", "ncd-proof-extensions==0.1.0"]
+
+[project.scripts]
+ncd-proof-workbench = "proof_workbench.__main__:main"
+
+[tool.setuptools]
+packages = ["proof_workbench"]

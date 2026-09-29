@@ -1,0 +1,173 @@
+{
+  "schema": "ncd.decoder-equivariance-boundary.v1",
+  "status": "refuted",
+  "case": "label_tie",
+  "probabilities": [
+    [
+      [
+        "1",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "1/8",
+        "3/8",
+        "3/8",
+        "1/8"
+      ],
+      [
+        "1",
+        "0",
+        "0",
+        "0"
+      ]
+    ],
+    [
+      [
+        "1/8",
+        "3/8",
+        "3/8",
+        "1/8"
+      ],
+      [
+        "1",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "1",
+        "0",
+        "0",
+        "0"
+      ]
+    ],
+    [
+      [
+        "1",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "1",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "1",
+        "0",
+        "0",
+        "0"
+      ]
+    ]
+  ],
+  "permutation": [
+    1,
+    0,
+    2
+  ],
+  "decoded_original": [
+    [
+      0,
+      1,
+      0
+    ],
+    [
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0
+    ]
+  ],
+  "decoded_permuted": [
+    [
+      0,
+      1,
+      0
+    ],
+    [
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0
+    ]
+  ],
+  "required_equivariant_output": [
+    [
+      0,
+      0,
+      0
+    ],
+    [
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0
+    ]
+  ],
+  "original_diagnostic": {
+    "removed_cycle_edges": [],
+    "raw_graph": [
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "semantics": "partially_directed_prediction_not_guaranteed_completed_PDAG"
+  },
+  "permuted_diagnostic": {
+    "removed_cycle_edges": [],
+    "raw_graph": [
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "semantics": "partially_directed_prediction_not_guaranteed_completed_PDAG"
+  },
+  "scope": "legacy decode_graph is not node-permutation-equivariant on all valid reverse-symmetric probability inputs",
+  "exact_arithmetic": "dyadic probabilities; integer graph operations; strict confidence comparisons or exact ties",
+  "source_sha256": {
+    "graph_model.py": "de044407e023a4e575cdb7781bd1e893d277fd87a1058e1f6c866fc3805b0873",
+    "graphs.py": "119ef2757b9200c05b3f2fddebf898bf189e4844e6010d29abf61480764085fc"
+  },
+  "actual_trained_network_reachability_certified": false,
+  "true_causal_identification_refuted": false
+}

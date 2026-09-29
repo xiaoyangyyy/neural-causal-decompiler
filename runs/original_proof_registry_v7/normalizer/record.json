@@ -1,0 +1,35 @@
+{
+  "id": "normalizer",
+  "job": {
+    "artifact": "runs/actual_normalizer_composition_v1/manifest.json",
+    "artifact_sha256": "679e5fa874865dcfa4241a49699592b188820f0a3086c2e0e08455a1c43adb58",
+    "id": "normalizer",
+    "kind": "historical_normalizer",
+    "original_claim_closed": false,
+    "related_claims": [
+      "R4.program_fidelity",
+      "R5.intermediate_numeric",
+      "R5.composition"
+    ]
+  },
+  "result": {
+    "status": "proved",
+    "verification": {
+      "all_degenerate_and_boundary_inputs_included": true,
+      "compatible_masks": 16,
+      "conclusion": "proved",
+      "independent_sources": true,
+      "mathematical_final_logits_equal": true,
+      "original_R5_closed": false,
+      "scope": "actual preprocessing prefix plus identical frozen neural continuation",
+      "status": "verified",
+      "_resource_guard": {
+        "job_memory_limit_bytes": 8589934592,
+        "descendants_included": true,
+        "reported_peak_within_limit": true
+      }
+    },
+    "original_claim_closed": false,
+    "artifact_sha256": "679e5fa874865dcfa4241a49699592b188820f0a3086c2e0e08455a1c43adb58"
+  }
+}

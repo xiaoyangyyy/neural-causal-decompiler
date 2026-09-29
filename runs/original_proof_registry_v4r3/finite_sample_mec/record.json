@@ -1,0 +1,167 @@
+{
+  "id": "finite_sample_mec",
+  "job": {
+    "id": "finite_sample_mec",
+    "kind": "finite_sample_mec",
+    "artifact": "runs/finite_gaussian_mec_boundary_v1/manifest.json",
+    "artifact_sha256": "cdf1f3ea9cb7bb44fdade6fdcde47d6fe98e8675e7cbbd49e7c13d6de5ab858e",
+    "related_claims": [
+      "R0.equivalence_contract",
+      "R2.discovery_guarantee",
+      "R9.graph_recovery"
+    ],
+    "original_claim_closed": false
+  },
+  "result": {
+    "status": "verified",
+    "verification": {
+      "case_count": 3,
+      "conclusion": "verified",
+      "independent_bundle_verification": {
+        "cases": {
+          "family5990": {
+            "all_estimators_covered": true,
+            "original_objective_achieved": false,
+            "population_family_identifiable": true,
+            "requested_confidence_gate": "proved",
+            "status": "verified",
+            "sufficient_samples": 5990,
+            "uniform_error_upper": "1/600",
+            "zero_error_finite_sample_equivalence_class_recovery": "refuted"
+          },
+          "finite96": {
+            "all_estimators_covered": true,
+            "original_objective_achieved": false,
+            "population_family_identifiable": true,
+            "requested_confidence_gate": "unresolved-by-this-bound",
+            "status": "verified",
+            "sufficient_samples": 990,
+            "uniform_error_upper": "5/53",
+            "zero_error_finite_sample_equivalence_class_recovery": "refuted"
+          },
+          "sufficient990": {
+            "all_estimators_covered": true,
+            "original_objective_achieved": false,
+            "population_family_identifiable": true,
+            "requested_confidence_gate": "proved",
+            "status": "verified",
+            "sufficient_samples": 990,
+            "uniform_error_upper": "1/100",
+            "zero_error_finite_sample_equivalence_class_recovery": "refuted"
+          }
+        },
+        "original_objective_achieved": false,
+        "status": "verified-in-declared-family"
+      },
+      "kernel": "finite_graph_proof",
+      "original_claim_closed": false,
+      "original_objective_achieved": false,
+      "recovery_contracts": [
+        {
+          "bound_attempts": {
+            "second_moment": "proved"
+          },
+          "case": "family5990",
+          "id": "gaussian_recovery_e0db555deddd2ef820e0639d820adbfad488344d02a57ae33ea80bfd218ebb94",
+          "inputs": {
+            "a": "1/2",
+            "delta": "1/100",
+            "family_size": 6,
+            "samples": 5990
+          },
+          "model_estimator_sha256": "989ea304c456318b14adcd67684f300c24e9fe82de1968a46f9bc28d136dc2cc",
+          "proved_by": [
+            "second_moment"
+          ],
+          "quantity": "uniform per-event recovery failure<=delta/family_size, sufficient for family failure<=delta by union bound",
+          "scope": "Known declared two-model Gaussian family; fixed estimator; ideal IID real observation rows; no actual trained-network or device guarantee",
+          "status": "proved",
+          "unresolved_attempt_is_not_a_recovery_refutation": true
+        },
+        {
+          "bound_attempts": {
+            "second_moment": "unresolved-by-this-bound"
+          },
+          "case": "finite96",
+          "id": "gaussian_recovery_5095e4eae39a602ab3f748e45bf9c81fba56112d76439cfd7e6133dd24192963",
+          "inputs": {
+            "a": "1/2",
+            "delta": "1/100",
+            "family_size": 1,
+            "samples": 96
+          },
+          "model_estimator_sha256": "989ea304c456318b14adcd67684f300c24e9fe82de1968a46f9bc28d136dc2cc",
+          "proved_by": [],
+          "quantity": "uniform per-event recovery failure<=delta/family_size, sufficient for family failure<=delta by union bound",
+          "scope": "Known declared two-model Gaussian family; fixed estimator; ideal IID real observation rows; no actual trained-network or device guarantee",
+          "status": "unresolved",
+          "unresolved_attempt_is_not_a_recovery_refutation": true
+        },
+        {
+          "bound_attempts": {
+            "second_moment": "proved"
+          },
+          "case": "sufficient990",
+          "id": "gaussian_recovery_cf454be07d146f0de1e1662e52624dd182e5ad9a8008eeeff7dab0bad7ea1b7e",
+          "inputs": {
+            "a": "1/2",
+            "delta": "1/100",
+            "family_size": 1,
+            "samples": 990
+          },
+          "model_estimator_sha256": "989ea304c456318b14adcd67684f300c24e9fe82de1968a46f9bc28d136dc2cc",
+          "proved_by": [
+            "second_moment"
+          ],
+          "quantity": "uniform per-event recovery failure<=delta/family_size, sufficient for family failure<=delta by union bound",
+          "scope": "Known declared two-model Gaussian family; fixed estimator; ideal IID real observation rows; no actual trained-network or device guarantee",
+          "status": "proved",
+          "unresolved_attempt_is_not_a_recovery_refutation": true
+        }
+      ],
+      "scoped_claims": [
+        {
+          "id": "family5990.finite_observation_zero_error_mec",
+          "scope": "All possibly randomized estimators on exactly the declared two different faithful Gaussian MECs; every finite number of IID observed rows",
+          "status": "refuted"
+        },
+        {
+          "error_upper": "1/600",
+          "id": "family5990.second_moment_error_bound",
+          "scope": "The declared known-coefficient estimator, Gaussian laws and IID row count",
+          "status": "proved"
+        },
+        {
+          "id": "finite96.finite_observation_zero_error_mec",
+          "scope": "All possibly randomized estimators on exactly the declared two different faithful Gaussian MECs; every finite number of IID observed rows",
+          "status": "refuted"
+        },
+        {
+          "error_upper": "5/53",
+          "id": "finite96.second_moment_error_bound",
+          "scope": "The declared known-coefficient estimator, Gaussian laws and IID row count",
+          "status": "proved"
+        },
+        {
+          "id": "sufficient990.finite_observation_zero_error_mec",
+          "scope": "All possibly randomized estimators on exactly the declared two different faithful Gaussian MECs; every finite number of IID observed rows",
+          "status": "refuted"
+        },
+        {
+          "error_upper": "1/100",
+          "id": "sufficient990.second_moment_error_bound",
+          "scope": "The declared known-coefficient estimator, Gaussian laws and IID row count",
+          "status": "proved"
+        }
+      ],
+      "status": "verified",
+      "_resource_guard": {
+        "job_memory_limit_bytes": 8589934592,
+        "descendants_included": true,
+        "reported_peak_within_limit": true
+      }
+    },
+    "original_claim_closed": false,
+    "artifact_sha256": "cdf1f3ea9cb7bb44fdade6fdcde47d6fe98e8675e7cbbd49e7c13d6de5ab858e"
+  }
+}

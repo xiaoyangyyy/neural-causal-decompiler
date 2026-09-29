@@ -1,0 +1,133 @@
+{
+  "schema": "ncd.dynamic-packing-acceptance.v1",
+  "status": "accepted",
+  "epsilon_exact_float": "6124895493223875/36028797018963968",
+  "profiles": [
+    {
+      "dimension": 8,
+      "model_sha256": "0941551b0d89b1d813503728b1742ba816dbe04b09c0aaea5d5844ea5ed84316",
+      "certificate_sha256": "24a0b96bdeda8cf4de6989869857b6c478c0a69cd3c0ae5003667e2fa578735d",
+      "lower_bound": 135,
+      "pair_count": 9045,
+      "first_witness_counts": [
+        8991,
+        54
+      ],
+      "minimum_pair_distance": "62149674857712843/180143985094819840",
+      "evaluation_mode": "globally-affine"
+    },
+    {
+      "dimension": 32,
+      "model_sha256": "aaf5b547d0e3882a3a3ef89979fed3ce2345c4d3c9a0fbb728bc85acd60d3924",
+      "certificate_sha256": "44311b21b46d07fde9998a11deb10cb42c2d5c2462ff46fb6103bd05feced652",
+      "lower_bound": 135,
+      "pair_count": 9045,
+      "first_witness_counts": [
+        8991,
+        54
+      ],
+      "minimum_pair_distance": "62149674857712843/180143985094819840",
+      "evaluation_mode": "globally-affine"
+    },
+    {
+      "dimension": 64,
+      "model_sha256": "87c742e0a6a16f737d57270a689d324fa1ebed839009ce0f2ea56c3d417e0fe3",
+      "certificate_sha256": "4f63570ed79647742a1f0425b310454dc22f72a46f2bc4676227cda938b9f3c6",
+      "lower_bound": 135,
+      "pair_count": 9045,
+      "first_witness_counts": [
+        8991,
+        54
+      ],
+      "minimum_pair_distance": "62149674857712843/180143985094819840",
+      "evaluation_mode": "globally-affine"
+    },
+    {
+      "dimension": 128,
+      "model_sha256": "509a842b5957ae55f65d4f23d09bb368a2b33b9ba0c90044a5119b891f469380",
+      "certificate_sha256": "bf16b59a5e8bce92ba58b35acceb54003aef5624123d2199f4b373d367139d7c",
+      "lower_bound": 135,
+      "pair_count": 9045,
+      "first_witness_counts": [
+        8991,
+        54
+      ],
+      "minimum_pair_distance": "62149674857712843/180143985094819840",
+      "evaluation_mode": "globally-affine"
+    }
+  ],
+  "original_128_feedback_edge": "5404319552844595/18014398509481984",
+  "counterfactual_controls": [
+    {
+      "name": "feedback_edge_removed",
+      "model_sha256": "fefa544a17e89546176f2f4b122592693c8ba348936f356f3e73e04129017d65",
+      "critical_pairs": [
+        {
+          "base_x0": "0",
+          "initial_max_distance": "1/10",
+          "one_step_max_distance": "8106479329266893/180143985094819840",
+          "one_step_output0_distance": "8106479329266893/180143985094819840",
+          "trace_max_distance": "1/10"
+        },
+        {
+          "base_x0": "1/2",
+          "initial_max_distance": "1/10",
+          "one_step_max_distance": "8106479329266893/180143985094819840",
+          "one_step_output0_distance": "8106479329266893/180143985094819840",
+          "trace_max_distance": "1/10"
+        }
+      ],
+      "candidate_135_packing_fails": true,
+      "effective_feedback_edge": "0"
+    },
+    {
+      "name": "learned_nonlinear_7201",
+      "model_sha256": "4051a678ea1f7b7d80679ac23fd7ee37fe3f8dc37a112c39ea3d797fcdf9e832",
+      "critical_pairs": [
+        {
+          "base_x0": "0",
+          "initial_max_distance": "1/10",
+          "one_step_max_distance": "4964765909530793467556186090549609/51922968585348276285304963292200960",
+          "one_step_output0_distance": "4964765909530793467556186090549609/51922968585348276285304963292200960",
+          "trace_max_distance": "1/10"
+        },
+        {
+          "base_x0": "1/2",
+          "initial_max_distance": "1/10",
+          "one_step_max_distance": "4319761634156525073403092847249589/51922968585348276285304963292200960",
+          "one_step_output0_distance": "4319761634156525073403092847249589/51922968585348276285304963292200960",
+          "trace_max_distance": "1/10"
+        }
+      ],
+      "candidate_135_packing_fails": true
+    },
+    {
+      "name": "learned_nonlinear_7202",
+      "model_sha256": "023d0c0c4aad23be7b06edff8692451031e9fe7c1d78c0f190fbf2a898e7444c",
+      "critical_pairs": [
+        {
+          "base_x0": "0",
+          "initial_max_distance": "1/10",
+          "one_step_max_distance": "4971572447302039297353245550843647/51922968585348276285304963292200960",
+          "one_step_output0_distance": "4971572447302039297353245550843647/51922968585348276285304963292200960",
+          "trace_max_distance": "1/10"
+        },
+        {
+          "base_x0": "1/2",
+          "initial_max_distance": "1/10",
+          "one_step_max_distance": "4325777199025967717352125886029147/51922968585348276285304963292200960",
+          "one_step_output0_distance": "4325777199025967717352125886029147/51922968585348276285304963292200960",
+          "trace_max_distance": "1/10"
+        }
+      ],
+      "candidate_135_packing_fails": true
+    }
+  ],
+  "old_upper_certificate_sha256": "7fcd84c2cec77f26bfb71262572099acbeecb583cfceef4dc17716af5a14f9e9",
+  "new_128_minimum_state_interval": [
+    135,
+    40824
+  ],
+  "scope": "all unit initial states, all continuous action words, all times",
+  "boundary": "one-step witness does not separate the critical pair in ablated or learned nonlinear controls"
+}

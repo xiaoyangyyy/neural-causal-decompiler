@@ -1,0 +1,252 @@
+{
+  "schema": "ncd.actual-discoverer-label-swap-boundary.v1",
+  "status": "refuted",
+  "target": "runs/all_seed91_final/bivariate/models/full/discoverer.pt",
+  "checkpoint_sha256": "84a313ccbeb7f120686547bee9b010a6ef5f686b506ebf9f9b1fa4d6234c89e8",
+  "realization_certificate_sha256": "6f5531265b8376cb58c5aa7914e71d201c866a79ec06e8f76d7cbddf1bc25540",
+  "program_sha256": "eb5f74048ca4cd6edb7f0c9a2a833000b2edba15bbab0698561c1f552a21ce86",
+  "sample_permutation_theorem": {
+    "domain": "all finite real N x 2 inputs, N >= 16, without internal interventions",
+    "operators": {
+      "add": 14802,
+      "argmax": 1,
+      "clip": 4,
+      "constant": 7446,
+      "div": 4,
+      "if": 4,
+      "log": 4,
+      "lt": 4,
+      "mean": 196,
+      "mul": 14596,
+      "sqrt": 4,
+      "square": 96,
+      "sub": 4,
+      "tanh": 288,
+      "var": 2,
+      "var_stat": 4
+    },
+    "primitive_relations": {
+      "var": "common row permutation on raw vectors",
+      "constant": "scalar unchanged",
+      "pointwise": "common row permutation for vectors; scalar arguments unchanged",
+      "mean": "exact finite-sum invariance under bijective row reindexing",
+      "var_stat": "mean invariant; centered squares reindexed; exact mean invariant",
+      "argmax": "scalar logits unchanged, including ties"
+    },
+    "conclusion": "Every scalar SSA coordinate is unchanged; every vector coordinate is reindexed by the common permutation. Induction is in SSA order.",
+    "device_arithmetic": "not claimed"
+  },
+  "swapped_branch_relation": {
+    "paired_tensor_groups": [
+      [
+        "x",
+        "flip"
+      ],
+      [
+        "mean",
+        "mean_3"
+      ],
+      [
+        "std",
+        "std_1"
+      ],
+      [
+        "clamp_min",
+        "clamp_min_1"
+      ],
+      [
+        "sub",
+        "sub_1"
+      ],
+      [
+        "truediv",
+        "truediv_1"
+      ],
+      [
+        "clamp",
+        "clamp_1"
+      ],
+      [
+        "encoder_0",
+        "encoder_4"
+      ],
+      [
+        "encoder_1",
+        "encoder_5"
+      ],
+      [
+        "encoder_2",
+        "encoder_6"
+      ],
+      [
+        "encoder_3",
+        "encoder_7"
+      ],
+      [
+        "mean_1",
+        "mean_4"
+      ],
+      [
+        "square",
+        "square_1"
+      ],
+      [
+        "mean_2",
+        "mean_5"
+      ],
+      [
+        "getitem",
+        "getitem_1"
+      ],
+      [
+        "log",
+        "log_1"
+      ],
+      [
+        "cat",
+        "cat_1"
+      ],
+      [
+        "head_0",
+        "head_3"
+      ],
+      [
+        "head_1",
+        "head_4"
+      ],
+      [
+        "head_2",
+        "head_5"
+      ]
+    ],
+    "class_swap": [
+      1,
+      0,
+      2,
+      3
+    ],
+    "identity": "Both branches are the same row-invariant scalar head H on x and swap(x); logits = (H(x) + class_swap(H(swap(x))))/2."
+  },
+  "data": [
+    [
+      "5902958103587057/590295810358705651712",
+      "-5902958103587057/590295810358705651712"
+    ],
+    [
+      "-5902958103587057/590295810358705651712",
+      "5902958103587057/590295810358705651712"
+    ],
+    [
+      "5902958103587057/590295810358705651712",
+      "-5902958103587057/590295810358705651712"
+    ],
+    [
+      "-5902958103587057/590295810358705651712",
+      "5902958103587057/590295810358705651712"
+    ],
+    [
+      "5902958103587057/590295810358705651712",
+      "-5902958103587057/590295810358705651712"
+    ],
+    [
+      "-5902958103587057/590295810358705651712",
+      "5902958103587057/590295810358705651712"
+    ],
+    [
+      "5902958103587057/590295810358705651712",
+      "-5902958103587057/590295810358705651712"
+    ],
+    [
+      "-5902958103587057/590295810358705651712",
+      "5902958103587057/590295810358705651712"
+    ],
+    [
+      "5902958103587057/590295810358705651712",
+      "-5902958103587057/590295810358705651712"
+    ],
+    [
+      "-5902958103587057/590295810358705651712",
+      "5902958103587057/590295810358705651712"
+    ],
+    [
+      "5902958103587057/590295810358705651712",
+      "-5902958103587057/590295810358705651712"
+    ],
+    [
+      "-5902958103587057/590295810358705651712",
+      "5902958103587057/590295810358705651712"
+    ],
+    [
+      "5902958103587057/590295810358705651712",
+      "-5902958103587057/590295810358705651712"
+    ],
+    [
+      "-5902958103587057/590295810358705651712",
+      "5902958103587057/590295810358705651712"
+    ],
+    [
+      "5902958103587057/590295810358705651712",
+      "-5902958103587057/590295810358705651712"
+    ],
+    [
+      "-5902958103587057/590295810358705651712",
+      "5902958103587057/590295810358705651712"
+    ]
+  ],
+  "row_permutation": [
+    1,
+    0,
+    3,
+    2,
+    5,
+    4,
+    7,
+    6,
+    9,
+    8,
+    11,
+    10,
+    13,
+    12,
+    15,
+    14
+  ],
+  "logit_enclosures": [
+    [
+      "954360901977037774202529/302231454903657293676544",
+      "3817443607908158671009297/1208925819614629174706176"
+    ],
+    [
+      "954360901977037774202529/302231454903657293676544",
+      "3817443607908158671009297/1208925819614629174706176"
+    ],
+    [
+      "-2741208807713737323931985/1208925819614629174706176",
+      "-1370604403856864543682223/604462909807314587353088"
+    ],
+    [
+      "-2970066990480302157668715/1208925819614629174706176",
+      "-742516747620074261575393/302231454903657293676544"
+    ]
+  ],
+  "strict_direction_margin_lower": "3279326207810940092087281/604462909807314587353088",
+  "exact_tie_reason": "swap(data) is a row permutation; branch head H is row invariant; the two heads are identical. Thus logits[0]=logits[1] exactly.",
+  "label_on_input": 0,
+  "label_on_swapped_input": 0,
+  "required_swapped_label": 1,
+  "claim_refuted": "This actual frozen classifier returns variable-swap-equivariant single labels on every finite real N x 2 input, N >= 16.",
+  "quantifier": "one admissible input disproves this universal single-label claim; this is not a failed candidate search",
+  "input_admissibility": "finite N=16, both marginal variances positive; collinear and exact tie boundaries are included in the declared real-input contract",
+  "scope": "mathematical loaded network and lowest-index single-label decision; score equivariance is preserved",
+  "not_refuted": [
+    "almost-sure distributional claims that explicitly exclude these measure-zero boundaries",
+    "set-valued or CPDAG outputs",
+    "other classifiers or redesigned tie rules",
+    "sample invariance"
+  ],
+  "original_claim_id": "R2.variable_equivariance",
+  "original_claim_scope_assessment": "applicable to the universal single-label finite-input contract; original ledger closure requires trusted audit integration",
+  "original_claim_closed_by_this_bundle": false,
+  "device_rounding_certified": false,
+  "original_objective_achieved": false
+}

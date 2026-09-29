@@ -1,0 +1,1102 @@
+Neural Causal Decompiler
+Decompiling Amortized Causal Discovery into Explicit Causal Identification Rules
+
+最终不是简单得到：
+
+$$ NN\rightarrow equation $$
+
+而是得到：
+
+$$ \boxed{ SCM \rightarrow D \rightarrow Neural\ Causal\ Discovery \rightarrow Symbolic\ Program \rightarrow Counterexample \rightarrow Verification } $$
+
+现有研究分别证明了几个部件是可行的：amortized causal discovery 可以让神经网络一次前向推断因果结构；Transformer 可以形成隐式 SCM；causal abstraction 提供了“低层神经计算是否真正实现高层算法”的形式化语言；MIPS 已经证明小型 neural algorithm 可以自动蒸馏成程序。你的工作就是把这些部件第一次系统地接成“因果发现算法反编译”。
+
+一、先把研究对象彻底定义清楚
+
+整个系统有四个对象：
+
+$$ \mathcal M \xrightarrow{\text{sample}} D \xrightarrow{N_\theta} \hat G $$
+
+以及：
+
+$$ N_\theta \xrightarrow{Decompiler} P $$
+
+其中：
+
+$$ \mathcal M=(G,F,U) $$
+
+是真实 SCM；
+
+\(D\) 是 SCM 生成的数据；
+
+\(N_\theta\) 是 neural causal discovery network；
+
+\(P\) 是最终逆解出来的 causal discovery program。
+
+所以你研究的核心不是：
+
+$$ P\approx\mathcal M $$
+
+而首先是：
+
+$$ \boxed{ P(D)\approx N_\theta(D) } $$
+
+然后再问：
+
+$$ \boxed{ P(D)\approx G^* } $$
+
+以及更重要的：
+
+$$ \boxed{ P\text{使用的规则是否对应真正的 causal identification principle?} } $$
+
+这个区别极其重要。
+
+例如真实世界可能是：
+
+$$ X\rightarrow Y,\quad Y=f(X)+\epsilon $$
+
+神经网络可能学到的是：
+
+$$ Dependence(X,\epsilon_{Y|X}) < Dependence(Y,\epsilon_{X|Y}) \Rightarrow X\rightarrow Y $$
+
+这才是你要逆出来的因果发现算法。
+
+二、整个项目分成 9 个 Phase
+Phase	做什么	产物	是否必须
+0	定义 SCM benchmark 与理论问题	Benchmark Spec	必须
+1	搭 SCM World Generator	无限 ground-truth worlds	必须
+2	训练 Neural Causal Discoverer	\(N_\theta\)	必须
+3	建立 Decompiler IR	Causal Discovery IR	必须
+4	符号逆解网络	\(P_\phi\)	核心
+5	Neural ↔ Symbolic 内部对齐	Circuit–Rule mapping	核心
+6	Ground-truth 比较	Fidelity benchmark	核心
+7	Counterexample Engine	自动攻击规则	最大亮点
+8	OOD + Intervention 验证	Causal principle test	核心
+9	扩展多变量/机制恢复	Full Neural→SCM	第二阶段
+
+第一篇做到 Phase 8 就已经完整。
+
+三、Phase 0：先冻结第一版问题
+
+第一版绝对不要直接上 20 个变量，也不要隐藏混杂，也不要循环 SCM。
+
+先做：
+
+$$ X\rightarrow Y $$
+
+与：
+
+$$ Y\rightarrow X $$
+
+甚至先做纯 bivariate causal discovery。
+
+原因很简单。
+
+如果连：
+
+$$ X\rightarrow Y $$
+
+都无法从 network 中自动逆出：
+
+$$ R(X,Y) $$
+
+那么做 20 节点图不会解决问题，只会掩盖问题。
+
+第一版任务
+
+给定：
+
+$$ D= \{(x_i,y_i)\}_{i=1}^{N} $$
+
+网络输出：
+
+$$ N_\theta(D) = \{ X\rightarrow Y, Y\rightarrow X, X\perp Y \} $$
+
+可再加入第四类：
+
+$$ Undetermined $$
+
+尤其 linear Gaussian：
+
+$$ Y=aX+\epsilon,\quad X,\epsilon\sim Gaussian $$
+
+很多情况下仅凭 observational data 无法确定方向。
+
+让网络学会回答：
+
+“不知道。”
+
+反而非常重要。
+
+这可以防止网络被迫学习 shortcut。
+
+四、Phase 1：SCM World Generator
+
+这是整个项目最重要的基础设施。
+
+不要下载数据集。
+
+自己无限生成。
+
+建议建立：
+
+causal_world/
+    graph_generator.py
+    mechanism_generator.py
+    noise_generator.py
+    sampler.py
+    intervention.py
+    canonical_ast.py
+    metadata.py
+
+每一个生成世界保存：
+
+SCM ID
+seed
+
+graph
+structural equations
+equation AST
+
+noise family
+noise parameters
+
+sample size
+
+observational samples
+
+intervention samples
+
+environment ID
+
+例如：
+
+$$ X=U_X $$ $$ Y=0.8X^2+\sin(X)+U_Y $$
+
+不仅保存字符串。
+
+必须保存 AST：
+
+ADD
+├── MUL
+│   ├── 0.8
+│   └── SQUARE
+│       └── X
+│
+└── SIN
+    └── X
+
+因为后面：
+
+$$ x(x+y) $$
+
+和：
+
+$$ x^2+xy $$
+
+不能简单做字符串 comparison。
+
+五、SCM 第一版设计
+
+建议分 6 个 Family。
+
+Family A：Linear Gaussian
+$$ Y=aX+\epsilon $$
+
+用于测试：
+
+network 是否会在不可识别情况下强行猜方向？
+
+这非常重要。
+
+Family B：Linear Non-Gaussian
+
+例如：
+
+$$ Y=aX+\epsilon $$
+
+但：
+
+$$ \epsilon\sim Laplace $$
+
+或者 Student-t。
+
+这一类对应经典 non-Gaussian identifiability 思路。
+
+Family C：Additive Noise Model
+$$ Y=f(X)+\epsilon $$
+
+其中：
+
+$$ \epsilon\perp X $$
+
+函数随机选择：
+
+$$ x^2 $$ $$ x^3 $$ $$ \sin x $$ $$ \tanh x $$ $$ ax+bx^2 $$
+
+等。
+
+这是你第一版最重要的数据。
+
+因为它存在非常清楚的方向性思想：
+
+正确方向：
+
+$$ Y=f(X)+\epsilon $$
+
+应该满足：
+
+$$ X\perp\epsilon $$
+
+错误方向通常不满足同样结构。
+
+于是你有一个非常明确的“已知 causal principle”可以检查网络是否重新学出来。
+
+Family D：Multiplicative
+
+例如：
+
+$$ Y=X\epsilon $$
+
+或者：
+
+$$ Y=f(X)\epsilon $$
+
+避免网络只会 additive noise。
+
+Family E：Heteroskedastic
+$$ Y=f(X)+g(X)\epsilon $$
+
+增加 mechanism complexity。
+
+Family F：Independent
+$$ X\perp Y $$
+
+防止：
+
+网络认为所有变量之间都必须存在因果边。
+
+六、训练/测试不能随机切分
+
+这是一个非常容易犯的大错误。
+
+不能：
+
+random 80% train
+random 20% test
+
+这样只能证明 interpolation。
+
+你应该建立四套 benchmark：
+
+$$ D_{ID} $$
+
+训练分布同分布。
+
+$$ D_{Function-OOD} $$
+
+训练：
+
+$$ x^2,\sin x,\tanh x $$
+
+测试：
+
+$$ x^3,\cos x,\text{piecewise} $$
+$$ D_{Noise-OOD} $$
+
+训练：
+
+Gaussian / Laplace
+
+测试：
+
+Student-t / mixture noise。
+
+$$ D_{Scale-OOD} $$
+
+改变：
+
+$$ Var(X),Var(Y) $$
+
+专门攻击 variance shortcut。
+
+最后：
+
+$$ D_{Adversarial} $$
+
+由后面的 Counterexample Engine 自动生成。
+
+这一点非常重要，因为已有对 amortized causal discovery 的研究已经指出：训练数据分布本身会向 Transformer 注入隐式 causal prior，模型并没有绕过 identifiability 问题。
+
+七、Phase 2：训练因果发现网络
+
+第一版不用巨大 Transformer。
+
+甚至我推荐一个很小的：
+
+Set Transformer / DeepSets Causal Discovery Network
+
+输入：
+
+$$ D\in R^{N\times2} $$
+
+每一行：
+
+$$ (x_i,y_i) $$
+
+因为样本顺序没有意义，所以应该满足 sample permutation invariance。
+
+架构可以：
+
+$$ (x_i,y_i) \rightarrow MLP \rightarrow h_i $$
+
+然后：
+
+$$ H= Pool(h_1,\ldots,h_N) $$
+
+再：
+
+$$ H \rightarrow Transformer/MLP \rightarrow logits $$
+
+输出：
+
+$$ L_{XY},L_{YX},L_{independent},L_{unknown} $$
+
+模型规模：
+
+$$ 0.5M\sim5M $$
+
+参数已经够了。
+
+八、必须加入一个 symmetry constraint
+
+这是特别重要的实验设计。
+
+如果输入交换：
+
+$$ (X,Y)\rightarrow(Y,X) $$
+
+那么：
+
+$$ P(X\rightarrow Y) $$
+
+应该变成：
+
+$$ P(Y\rightarrow X) $$
+
+因此训练的时候强制：
+
+$$ N_\theta(Swap(D)) = Swap(N_\theta(D)) $$
+
+否则模型可能学习：
+
+第一列更可能是 cause。
+
+这种垃圾 shortcut。
+
+九、Phase 3：建立你的核心——Causal Discovery IR
+
+不要让 symbolic learning 直接面对：
+
+$$ 500000\ neural\ activations $$
+
+一定会组合爆炸。
+
+你的关键创新应该是建立：
+
+Causal Discovery Intermediate Representation
+
+简称：
+
+$$ CDIR $$
+
+类似：
+
+Neural network
+      ↓
+latent circuit
+      ↓
+CDIR
+      ↓
+symbolic program
+
+CDIR 第一版只包含一些非常基础的 statistical primitives。
+
+例如：
+
+$$ mean(X) $$ $$ Var(X) $$ $$ Skew(X) $$ $$ Kurt(X) $$ $$ Cov(X,Y) $$ $$ MI(X,Y) $$
+
+以及一个重要操作：
+
+$$ Residual(Y|X) $$
+
+然后：
+
+$$ Dependence(X,Residual(Y|X)) $$
+
+注意这里不要直接加入：
+
+ANM_direction_test()
+
+否则你等于把答案写进去了。
+
+你只给它 primitives。
+
+例如：
+
+REGRESS(Y, X)
+RESIDUAL(...)
+DEPENDENCE(...)
+COMPARE(...)
+
+让 symbolic synthesis 自己组合出：
+
+$$ Dependence( X, Residual(Y|X) ) < Dependence( Y, Residual(X|Y) ) $$
+
+如果它自动逆出这个结构，就非常漂亮。
+
+十、第一版 DSL
+
+建议自己做一个非常小的 DSL。
+
+表达式：
+
+$$ E ::= constant $$ $$ |Stat(X) $$ $$ |E+E $$ $$ |E-E $$ $$ |E\times E $$ $$ |E/E $$ $$ |abs(E) $$
+
+布尔：
+
+$$ B ::= E_1<E_2 $$ $$ |E_1>E_2 $$ $$ |B\land B $$ $$ |B\lor B $$
+
+程序：
+
+$$ P ::= direction(X,Y) $$
+
+或者：
+
+$$ IF\ B: X\rightarrow Y ELSE: Y\rightarrow X $$
+
+最终可能自动得到：
+
+r_xy = dependence(X, residual(Y, regress(Y, X)))
+r_yx = dependence(Y, residual(X, regress(X, Y)))
+
+if r_xy < r_yx:
+    return X_to_Y
+else:
+    return Y_to_X
+
+这就是你真正想看到的结果。
+
+十一、Phase 4：符号逆解不要一开始就用纯 PySR
+
+PySR 可以作为 baseline。
+
+但我更推荐你的核心方法采用：
+
+$$ \boxed{ Beam\ Search + MDL + CEGIS } $$
+
+因为你的输出不是单纯：
+
+$$ y=x^2+\sin x $$
+
+而是一个 causal decision program。
+
+定义：
+
+$$ Score(P) = Fidelity(P,N_\theta) -\lambda Complexity(P) $$
+
+其中：
+
+$$ Fidelity= \frac{1}{M} \sum_i I[ P(D_i)=N_\theta(D_i) ] $$
+
+复杂度：
+
+$$ Complexity(P) = \#ASTNodes(P) $$
+
+还可以加入深度 penalty：
+
+$$ +\alpha Depth(P) $$
+
+最终：
+
+$$ P^* = \arg\max_P [ Fidelity-\lambda Complexity ] $$
+
+这就是 Minimum Description Length 思路。
+
+十二、千万不要直接拟合 ground truth
+
+Decompiler 的训练对象必须是：
+
+$$ \boxed{N_\theta(D)} $$
+
+不是：
+
+$$ G^* $$
+
+否则你不是逆解网络。
+
+你是在重新训练一个 symbolic causal discovery algorithm。
+
+因此你要保存三个结果：
+
+$$ N_\theta(D) $$ $$ P(D) $$ $$ G^* $$
+
+这样产生两个独立评价：
+
+Decompilation Fidelity
+$$ P(D) \approx N_\theta(D) $$
+Causal Accuracy
+$$ P(D) \approx G^* $$
+
+这两个必须分开。
+
+十三、这会产生一个特别重要的四象限
+Neural	Symbolic	Ground Truth	说明
+✓	✓	✓	网络真的学到正确规则
+✓	✓	✗	成功逆出了 network shortcut
+✓	✗	✓	symbolic decompiler 不够强
+✗	✓	✓	program 比 network 泛化更好
+
+第二种：
+
+$$ NN=Program\neq Truth $$
+
+其实非常有研究价值。
+
+因为你成功发现了模型为什么错。
+
+十四、Phase 5：不能只做黑箱蒸馏
+
+否则 reviewer 会说：
+
+你只是训练了一个 symbolic surrogate。
+
+所以必须证明：
+
+$$ \boxed{ symbolic\ rule \leftrightarrow internal\ neural\ mechanism } $$
+
+这就是 causal abstraction 要进入的地方。Causal abstraction 的核心正是判断低层神经机制与高层算法之间是否在 intervention 下保持对应。
+
+例如程序里发现一个 quantity：
+
+$$ R_{XY} = Dependence( X, Residual(Y|X) ) $$
+
+你去 network hidden representation：
+
+$$ h_1,\ldots,h_k $$
+
+训练一个 probe：
+
+$$ h\rightarrow R_{XY} $$
+
+如果：
+
+$$ R^2\approx1 $$
+
+说明内部 representation 编码这个 quantity。
+
+但这还只是 correlation。
+
+十五、然后进行 neural intervention
+
+例如找到：
+
+$$ h_{27} $$
+
+高度编码：
+
+$$ R_{XY} $$
+
+进行：
+
+$$ do(h_{27}=0) $$
+
+观察：
+
+$$ P(X\rightarrow Y) $$
+
+变化。
+
+同时 symbolic program 中删除对应 term：
+
+$$ do(R_{XY}=0) $$
+
+比较：
+
+$$ \Delta NN $$
+
+和：
+
+$$ \Delta P $$
+
+如果满足：
+
+$$ \Delta NN \approx \Delta P $$
+
+你得到的就不再只是：
+
+“这个程序模仿网络。”
+
+而是：
+
+这个 symbolic variable 对应网络内部实际使用的 computation。
+
+这就是整个项目质量提升非常大的地方。
+
+十六、Phase 6：Ground Truth 比较
+
+至少建立六个核心指标。
+
+Neural accuracy
+$$ A_{NN} = Acc(N_\theta(D),G^*) $$
+Program fidelity
+$$ F_{P\rightarrow N} = Acc(P(D),N_\theta(D)) $$
+
+这是反编译成功率。
+
+Program causal accuracy
+$$ A_P = Acc(P(D),G^*) $$
+OOD fidelity
+$$ F_{OOD} $$
+
+换 mechanism、noise、scale 后：
+
+$$ P\approx N_\theta? $$
+Intervention alignment
+$$ I_{align} = sim( \Delta NN, \Delta P ) $$
+Program complexity
+$$ C(P)=AST\ nodes $$
+
+最后你追求的是：
+
+$$ F_{P\rightarrow N}\uparrow $$
+
+同时：
+
+$$ C(P)\downarrow $$
+十七、Phase 7 是我认为整个项目最亮的部分：Counterexample Engine
+
+你逆出来：
+
+IF Var(X) > Var(Y):
+    X → Y
+
+不要人工看完说：
+
+这是 shortcut。
+
+让机器自己攻击。
+
+定义 SCM 参数：
+
+$$ \phi $$
+
+自动寻找：
+
+$$ \phi^* = \arg\max_\phi \mathcal L $$
+
+例如：
+
+$$ \mathcal L= I[ P(D_\phi) \neq G_\phi^* ] $$
+
+同时约束：
+
+$$ X\rightarrow Y $$
+
+仍然保持不变。
+
+然后专门让：
+
+$$ Var(X)<Var(Y) $$
+
+如果程序立刻失败：
+
+$$ P(D)\neq G^* $$
+
+你就找到 counterexample。
+
+十八、进一步攻击 Neural Network
+
+更有趣的是：
+
+$$ P $$
+
+可能揭示：
+
+$$ N_\theta $$
+
+的 shortcut。
+
+于是生成：
+
+$$ D^* $$
+
+然后输入 network：
+
+$$ N_\theta(D^*) $$
+
+如果 network 也失败：
+
+$$ N_\theta(D^*)=P(D^*)\neq G^* $$
+
+这证明：
+
+$$ \boxed{ Decompiler\ successfully\ exposed\ neural\ shortcut } $$
+
+这是非常强的实验。
+
+十九、再加入 CEGIS 闭环
+
+整个系统：
+
+Neural Causal Model
+        ↓
+Decompiler
+        ↓
+Symbolic Program P₁
+        ↓
+Counterexample Search
+        ↓
+D*
+        ↓
+Does P₁ match NN?
+   │             │
+  yes            no
+   │             ↓
+   │          refine
+   │             ↓
+   └─────────── P₂
+
+也就是：
+
+$$ P_1 \rightarrow counterexample \rightarrow P_2 \rightarrow counterexample \rightarrow P_3 $$
+
+直到：
+
+$$ P_k(D)\approx N_\theta(D) $$
+
+在大量 counterexample 下仍成立。
+
+MIPS 已经证明 mechanistic interpretability → executable program 是可行的 proof-of-concept，而你的区别在于加入因果发现结构和主动反例闭环。
+
+二十、Phase 8：真正测试“因果原则”
+
+现在才有资格问：
+
+逆出来的是不是 causal principle？
+
+假设得到：
+
+$$ R $$
+
+你必须测试：
+
+$$ R_{train} $$
+
+是否在：
+
+$$ E_1,E_2,E_3,\ldots $$
+
+不同环境保持。
+
+例如：
+
+$$ E_1: Gaussian\ cause $$ $$ E_2: Laplace\ cause $$ $$ E_3: Student-t $$ $$ E_4: scale\ shift $$ $$ E_5: function\ shift $$ $$ E_6: intervention $$
+
+如果：
+
+$$ R $$
+
+只在：
+
+$$ E_1 $$
+
+有效：
+
+shortcut。
+
+如果：
+
+$$ R $$
+
+跨多个 SCM family：
+
+$$ R_{E_1}\approx R_{E_2}\approx R_{E_3} $$
+
+才可以叫：
+
+$$ \text{candidate invariant causal principle} $$
+
+注意是 candidate，不是宣布发现了自然定律。
+
+二十一、第二阶段再做多变量
+
+等二变量跑通，升级：
+
+$$ n=3,5,8 $$
+
+第一版不要超过：
+
+$$ n=8 $$
+
+DAG generator：
+
+$$ G\sim Erdős-Rényi $$
+
+控制 expected degree：
+
+$$ 1\sim2 $$
+
+避免图太密。
+
+网络变成：
+
+$$ D\in R^{S\times N} $$
+
+输出：
+
+$$ A\in R^{N\times N} $$
+
+每个：
+
+$$ A_{ij} $$
+
+表示：
+
+$$ X_i\rightarrow X_j $$
+
+概率。
+
+二十二、多变量时不要让 symbolic search 全局搜索
+
+否则你同事说的组合爆炸马上回来。
+
+改成：
+
+$$ P_{ij} $$
+
+也就是每一条 candidate edge 对应一个 edge program。
+
+先：
+
+$$ X_i,X_j,\mathcal C $$
+
+其中：
+
+$$ \mathcal C $$
+
+是候选 conditioning variables。
+
+Decompiler 学：
+
+$$ P_{ij}(D,\mathcal C) \rightarrow \{ edge, no-edge, orientation \} $$
+
+最后组成：
+
+$$ G = \bigcup P_{ij} $$
+
+于是：
+
+$$ Global\ search $$
+
+被拆成：
+
+$$ Local\ causal\ decisions $$
+
+再加入 cycle constraint。
+
+二十三、多变量真正值得看的东西
+
+例如 network 最终可能逆出：
+
+if Dep(X,Y | Z) < τ:
+    remove(X,Y)
+
+然后：
+
+if X-Z-Y
+and X not_adjacent Y:
+    orient X → Z ← Y
+
+如果 neural causal discovery model 自己重新发现类似：
+
+$$ conditional\ independence $$
+$$ v\text{-structure} $$
+
+的组合，那么结果会非常漂亮。
+
+你相当于让神经网络自己重新发明：
+
+某些 PC-style causal reasoning primitives。
+
+Nichani 等人的理论工作已经表明 Transformer 学到 latent causal structure 是可以被数学分析的，但他们依靠人工理论推导；你的目标是把这种算法恢复自动化。
+
+二十四、最后才升级到 Mechanism Decompilation
+
+前面解决：
+
+$$ D\rightarrow G $$
+
+以后，再开始：
+
+$$ D,G \rightarrow F $$
+
+即恢复：
+
+$$ X_i=f_i(Pa_i,U_i) $$
+
+现在 symbolic regression 才真正大量进入。
+
+比如真实：
+
+$$ Y= 0.7X_1X_2+\sin X_3+\epsilon $$
+
+恢复：
+
+$$ \hat Y= 0.69X_1X_2+1.02\sin X_3 $$
+
+然后比较：
+
+Parent recovery
+$$ \{X_1,X_2,X_3\} $$
+Operator recovery
+$$ \times,\sin $$
+Interaction recovery
+$$ X_1\times X_2 $$
+Equation fidelity
+$$ f\approx\hat f $$
+
+这时候才真正进入：
+
+$$ \boxed{ Neural\ Model \rightarrow Explicit\ SCM } $$
+二十五、实验中必须做的 Ablation
+
+你至少要比较：
+
+Variant	目的
+Neural only	causal discovery baseline
+Decision tree distillation	普通可解释模型
+PySR distillation	普通 symbolic regression
+Decompiler without circuit alignment	验证 mechanistic mapping 的作用
+Without MDL	看程序是否爆炸
+Without CEGIS	看 counterexample loop 是否重要
+Without OOD worlds	看是否容易学 shortcut
+Full method	最终模型
+
+尤其：
+
+$$ \text{without CEGIS} $$
+
+我预计会是非常重要的 ablation。
+
+二十六、理论部分怎么写
+
+第一篇不需要一开始证明特别大的 theorem。
+
+先定义三个东西。
+
+Definition 1：Behavioral Decompilation Fidelity
+
+如果：
+
+$$ Pr_{D\sim\Omega} [P(D)=N_\theta(D)] \ge1-\epsilon $$
+
+称 \(P\) 是 \(N_\theta\) 的：
+
+$$ \epsilon\text{-faithful decompilation} $$
+Definition 2：Interventional Decompilation Fidelity
+
+存在 neural intervention：
+
+$$ I_N $$
+
+和 symbolic intervention：
+
+$$ I_P $$
+
+如果：
+
+$$ P^{I_P}(D) \approx N_\theta^{I_N}(D) $$
+
+则说明高层 program 与低层 neural mechanism 存在 causal alignment。
+
+这可以直接借 causal abstraction 的数学语言发展。
+
+Definition 3：Decompilation Equivalence Class
+
+因为可能存在：
+
+$$ P_1\neq P_2 $$
+
+但：
+
+$$ P_1(D)=P_2(D) $$
+
+所以定义：
+
+$$ [P]_\Omega = \{ Q: Q(D)=P(D), \forall D\in\Omega \} $$
+
+然后选择：
+
+$$ P^* = \arg\min_{P\in[P]_\Omega} L(P) $$
+
+即：
+
+最短的等价程序。
+
+这就是 MDL。
+
+这部分可能发展成你所谓：
+
+$$ \boxed{ Decompilation\ Identifiability } $$
+二十七、工程 Repo 我建议直接这样建
+neural-causal-decompiler/
+
+├── worlds/
+│   ├── scm.py
+│   ├── dag.py
+│   ├── mechanisms.py
+│   ├── noise.py
+│   ├── interventions.py
+│   └── ast.py
+│
+├── discoverer/
+│   ├── set_transformer.py
+│   ├── multivariate_transformer.py
+│   ├── heads.py
+│   └── train.py
+│
+├── traces/
+│   ├── hooks.py
+│   ├── activations.py
+│   ├── patching.py
+│   └── probes.py
+│
+├── cdir/
+│   ├── primitives.py
+│   ├── statistics.py
+│   ├── residuals.py
+│   └── grammar.py
+│
+├── decompiler/
+│   ├── ast.py
+│   ├── beam_search.py
+│   ├── mdl.py
+│   ├── simplify.py
+│   └── synthesize.py
+│
+├── cegis/
+│   ├── search.py
+│   ├── adversarial_scm.py
+│   └── refine.py
+│
+├── verification/
+│   ├── behavioral.py
+│   ├── structural.py
+│   ├── intervention.py
+│   ├── ood.py
+│   └── equivalence.py
+│
+└── experiments/
+
+这个结构后面扩展 CNN、Transformer、robot policy 都不用重写核心

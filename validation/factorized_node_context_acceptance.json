@@ -1,0 +1,109 @@
+{
+  "protocol": "docs/FACTORIZED_NODE_CONTEXT_PROTOCOL.md",
+  "runs": [
+    {
+      "seed": 4193,
+      "replayed": true,
+      "flat": {
+        "macro_f1": 0.5814788346628177,
+        "skeleton_f1": 0.7553140244670746,
+        "mean_pair_shd": 3.714583333333333,
+        "exact_graph_accuracy": 0.13125,
+        "directed_target_accuracy": 0.5258218098200257,
+        "parameter_count": 31636,
+        "by_environment_exact": {
+          "test_id": 0.2152777777777778,
+          "test_function": 0.125,
+          "test_noise": 0.25,
+          "test_scale": 0.041666666666666664,
+          "test_intervention": 0.024305555555555556
+        }
+      },
+      "factorized": {
+        "macro_f1": 0.6061853291832289,
+        "skeleton_f1": 0.7760605135485407,
+        "mean_pair_shd": 3.2319444444444443,
+        "exact_graph_accuracy": 0.15763888888888883,
+        "directed_target_accuracy": 0.48599742788966915,
+        "parameter_count": 31636,
+        "by_environment_exact": {
+          "test_id": 0.2604166666666667,
+          "test_function": 0.1527777777777778,
+          "test_noise": 0.2708333333333333,
+          "test_scale": 0.06944444444444443,
+          "test_intervention": 0.034722222222222224
+        }
+      },
+      "exact_higher": true,
+      "skeleton_no_lower": true,
+      "shd_lower": true
+    },
+    {
+      "seed": 4194,
+      "replayed": true,
+      "flat": {
+        "macro_f1": 0.614360094396115,
+        "skeleton_f1": 0.7804657975210353,
+        "mean_pair_shd": 3.090972222222222,
+        "exact_graph_accuracy": 0.16944444444444443,
+        "directed_target_accuracy": 0.4952198923114136,
+        "parameter_count": 31636,
+        "by_environment_exact": {
+          "test_id": 0.2881944444444444,
+          "test_function": 0.16319444444444445,
+          "test_noise": 0.22569444444444445,
+          "test_scale": 0.09027777777777779,
+          "test_intervention": 0.07986111111111112
+        }
+      },
+      "factorized": {
+        "macro_f1": 0.6190347676393527,
+        "skeleton_f1": 0.7726468006891133,
+        "mean_pair_shd": 2.6381944444444443,
+        "exact_graph_accuracy": 0.1701388888888889,
+        "directed_target_accuracy": 0.46334949399374964,
+        "parameter_count": 31636,
+        "by_environment_exact": {
+          "test_id": 0.2777777777777778,
+          "test_function": 0.14930555555555555,
+          "test_noise": 0.2604166666666667,
+          "test_scale": 0.09027777777777778,
+          "test_intervention": 0.07291666666666666
+        }
+      },
+      "exact_higher": true,
+      "skeleton_no_lower": false,
+      "shd_lower": true
+    }
+  ],
+  "pooled": {
+    "flat_exact": 0.15034722222222222,
+    "factorized_exact": 0.16388888888888886,
+    "exact_delta": 0.013541666666666646,
+    "flat_shd": 3.4027777777777777,
+    "factorized_shd": 2.9350694444444443,
+    "flat_skeleton_f1": 0.7678899109940549,
+    "factorized_skeleton_f1": 0.774353657118827,
+    "flat_directed_accuracy": 0.5105208510657196,
+    "factorized_directed_accuracy": 0.47467346094170937,
+    "environment_exact_deltas": {
+      "test_id": 0.017361111111111133,
+      "test_function": 0.0069444444444444475,
+      "test_noise": 0.027777777777777776,
+      "test_scale": 0.013888888888888878,
+      "test_intervention": 0.0017361111111111032
+    }
+  },
+  "criteria": {
+    "complete_replay": true,
+    "full_coverage": true,
+    "exact_higher_each_seed": true,
+    "pooled_exact_gain_at_least_2pp": false,
+    "skeleton_no_lower_each_seed": false,
+    "pooled_direction_no_lower": false,
+    "shd_lower_each_seed": true,
+    "environment_decline_at_most_2pp": true
+  },
+  "passed": false,
+  "claim": "new factorized architecture comparison; not historical-teacher decompilation or causal identifiability"
+}

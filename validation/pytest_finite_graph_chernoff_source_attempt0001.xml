@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="2" skipped="0" tests="15" time="0.282" timestamp="2026-09-28T19:12:36.876973+08:00" hostname="DESKTOP-B5O3UI0"><testcase classname="tests.test_finite_graph_chernoff" name="test_original_96_rows_now_satisfy_single_event_recovery_gate" time="0.003" /><testcase classname="tests.test_finite_graph_chernoff" name="test_six_events_use_stronger_tail_and_declared_correction" time="0.004" /><testcase classname="tests.test_finite_graph_chernoff" name="test_odd_rows_drop_only_the_beneficial_half_power" time="0.005" /><testcase classname="tests.test_finite_graph_chernoff" name="test_known_negative_coefficient_changes_no_probability_bound" time="0.003" /><testcase classname="tests.test_finite_graph_chernoff" name="test_exact_compare_includes_equality_without_float_log" time="0.001" /><testcase classname="tests.test_finite_graph_chernoff" name="test_large_arithmetic_budget_retains_unresolved_gate" time="0.003" /><testcase classname="tests.test_finite_graph_chernoff" name="test_mgf_premises_tail_and_scope_cannot_be_forged[tilt]" time="0.002" /><testcase classname="tests.test_finite_graph_chernoff" name="test_mgf_premises_tail_and_scope_cannot_be_forged[variance]" time="0.002" /><testcase classname="tests.test_finite_graph_chernoff" name="test_mgf_premises_tail_and_scope_cannot_be_forged[power]" time="0.002" /><testcase classname="tests.test_finite_graph_chernoff" name="test_mgf_premises_tail_and_scope_cannot_be_forged[gate]" time="0.003" /><testcase classname="tests.test_finite_graph_chernoff" name="test_mgf_premises_tail_and_scope_cannot_be_forged[noise]" time="0.002" /><testcase classname="tests.test_finite_graph_chernoff" name="test_mgf_premises_tail_and_scope_cannot_be_forged[scope]" time="0.003" /><testcase classname="tests.test_finite_graph_chernoff" name="test_inverse_chisquare_premise_and_radical_bound_are_checked" time="0.004" /><testcase classname="tests.test_finite_graph_chernoff" name="test_bundle_dependency_sources_are_required" time="0.006"><failure message="NameError: name 'Path' is not defined">tmp_path = WindowsPath('E:/实验/neural-causal-decompiler/validation/chernoff_source_temp_bundle_v1/test_bundle_dependency_sources0')
+
+    def test_bundle_dependency_sources_are_required(tmp_path):
+        import hashlib, json, finite_graph_proof, finite_graph_chernoff
+        from finite_graph_chernoff.__main__ import prove
+        root = tmp_path / "case"
+        (root / "validation").mkdir(parents=True)
+        sources = {}
+        for package in (finite_graph_proof, finite_graph_chernoff):
+&gt;           for p in Path(package.__file__).parent.glob("*.py"):
+                     ^^^^
+E           NameError: name 'Path' is not defined
+
+tests\test_finite_graph_chernoff.py:91: NameError</failure></testcase><testcase classname="tests.test_finite_graph_chernoff" name="test_rehashed_false_recovery_gate_is_rejected" time="0.003"><failure message="NameError: name 'Path' is not defined">tmp_path = WindowsPath('E:/实验/neural-causal-decompiler/validation/chernoff_source_temp_bundle_v1/test_rehashed_false_recovery_g0')
+
+    def test_rehashed_false_recovery_gate_is_rejected(tmp_path):
+        import hashlib, json, finite_graph_proof, finite_graph_chernoff
+        from finite_graph_chernoff.__main__ import prove, verify_bundle
+        root = tmp_path / "case"
+        (root / "validation").mkdir(parents=True)
+        sources = {}
+        for package in (finite_graph_proof, finite_graph_chernoff):
+&gt;           for p in Path(package.__file__).parent.glob("*.py"):
+                     ^^^^
+E           NameError: name 'Path' is not defined
+
+tests\test_finite_graph_chernoff.py:108: NameError</failure></testcase></testsuite></testsuites>

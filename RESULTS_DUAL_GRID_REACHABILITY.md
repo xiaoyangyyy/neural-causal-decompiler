@@ -1,0 +1,11 @@
+# Co-designed state/action grid lowers the 128D machine upper to 1,041
+
+An executable exact-certified finite realization for the frozen trained affine 128D ReLU ring has **1,041 states** at rational `epsilon=17/100`: 243 initial and 798 recurrent. The previous upper was 1,142. With the independent 162-state packing lower, the same-model general finite-machine minimum lies in **[162,1041]**.
+
+The change reuses the independently certified joint state/action grid with 512 implicit action bins and recurrent active-coordinate bins `(14,6,6,6,9)`, then recomputes a two-stage handoff and a closed graph using 60 exact shared-action pairwise support inequalities. It finds 780 distinct initial successor cells and 798 recurrent cells after checking 14,696 recurrent candidates, with 4,901 retained edges. The full graph and exact-rational handoff are replayed from the frozen network.
+
+The joint grid has a *larger* coordinatewise transition-image rectangle than the previous grid (4,992 versus 4,480 states), but its action-correlated closed graph is smaller (798 versus 899). This is direct evidence that selecting an abstraction by its full-grid or image-box size can miss a smaller executable realization. The abstract graph remains conservative, and global minimality, nonlinear 128D certification, and broader project requirements remain open.
+
+Evidence: [method](docs/DUAL_GRID_REACHABILITY_METHOD.md), [acceptance](validation/dual_grid_reachability_acceptance.json), [two-stage handoff](runs/dual_grid_reachability_v1/affine_d128/two_stage_certificate.json), and [full closure certificate](runs/dual_grid_reachability_v1/affine_d128/closure_certificate.json). Replay with `python -m scripts.acceptance_dual_grid_reachability --verify`.
+
+Release 0.54.0 passed all 211 regression tests. An isolated installation of the built wheel replayed the matching 162-state lower certificate, the joint weighted recurrent certificate, the new two-stage handoff, the 798-state closed graph, and executable action traces. All 114 installed Python modules matched source bytes. Evidence: [wheel status](validation/wheel_v54_run/status.json) and [JUnit report](validation/pytest_v54.xml). Wheel SHA-256: `33c7e3d99f45b62e7a386443bc9689d73a971617dfd96835c73624f24e5ce11e`.

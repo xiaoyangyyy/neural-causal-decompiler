@@ -1,0 +1,328 @@
+{
+  "schema": "ncd.nonlinear-action-closure-acceptance.v1",
+  "status": "accepted",
+  "previous_acceptance_sha256": "68e1ac04b2e4ad5eeace2f91798dfa21b5366dff930f55979bf6772b7a630090",
+  "cases": [
+    {
+      "seed": 6101,
+      "state_dim": 8,
+      "model_sha256": "c755bdc2b66984203cc6fd40b498d3e6dc2bdc273986e292b10fb720b28cba0a",
+      "recurrent_certificate_sha256": "c5037044b05fd111dcaf0a18d080b1722c5a26635d57b868acb18d1a832d9528",
+      "initial_grid_certificate_sha256": "09405d4563c4c28606a28894f2c7ed8801b8d2a401c380925507479dda22032d",
+      "closure_certificate_sha256": "5044a6c2bb9946f8fe9fcbd4b5f2618e8ab4df0d51f28144bf17472bc18513c4",
+      "program_sha256": "97e1c614199e73deb145f2346a0e705556e922a95e1670f7c1ae1adb9757cd7a",
+      "action_template_count": 1,
+      "phase_witnesses": {
+        "state_second_difference": "-10922274467617137083557701941583/5192296858534827628530496329220096",
+        "control_second_difference": "-143138926960144656033258466433949/207691874341393105141219853168803840"
+      },
+      "old_minimum_state_interval": [
+        81,
+        297
+      ],
+      "new_minimum_state_interval": [
+        81,
+        132
+      ],
+      "initial_states": 81,
+      "recurrent_states": 51,
+      "graph_statistics": {
+        "distinct_initial_successors": 51,
+        "initial_candidate_edges": 2304,
+        "initial_retained_edges": 493,
+        "recurrent_candidate_edges": 1200,
+        "recurrent_retained_edges": 294,
+        "source_centers_checked": 132
+      },
+      "executable_smoke": {
+        "traces": 3,
+        "actions_per_trace": 5,
+        "maximum_observed_error": "1/6",
+        "backend": "standalone exported program"
+      }
+    },
+    {
+      "seed": 6101,
+      "state_dim": 32,
+      "model_sha256": "6ef7b0bfa6ec7a0142fb0955ff9139bfb47cca195a5f5acc2959af5fa7292e7b",
+      "recurrent_certificate_sha256": "785899dfdcdbe2054ba5b5891c12612a9e567e240cfad2ba91e9928f4677ccea",
+      "initial_grid_certificate_sha256": "53538e62032b0946fe89ea4148cb0438cb8946a118c1973d02b57d620e6f180b",
+      "closure_certificate_sha256": "4e2e99878d9cb8e82a442b10b03784a596b032207a40dcc63937ca42639d8b50",
+      "program_sha256": "03b8cfc1884064116ce36872bd9f381d3cac891d7d1b2f54984fb1a9e4fb8a97",
+      "action_template_count": 1,
+      "phase_witnesses": {
+        "state_second_difference": "-32491554770653747516000436862231/12980742146337069071326240823050240",
+        "control_second_difference": "-6709082573411612915143349028777/6490371073168534535663120411525120"
+      },
+      "old_minimum_state_interval": [
+        81,
+        324
+      ],
+      "new_minimum_state_interval": [
+        81,
+        166
+      ],
+      "initial_states": 108,
+      "recurrent_states": 58,
+      "graph_statistics": {
+        "distinct_initial_successors": 58,
+        "initial_candidate_edges": 3016,
+        "initial_retained_edges": 664,
+        "recurrent_candidate_edges": 1088,
+        "recurrent_retained_edges": 309,
+        "source_centers_checked": 166
+      },
+      "executable_smoke": {
+        "traces": 3,
+        "actions_per_trace": 5,
+        "maximum_observed_error": "1/6",
+        "backend": "standalone exported program"
+      }
+    },
+    {
+      "seed": 6101,
+      "state_dim": 64,
+      "model_sha256": "d8a81e9b9701bb2735d3d66720bbdd5a6d3ba34305d525470db9a56cce6962cb",
+      "recurrent_certificate_sha256": "f71b2c8a2cc6d455dc474836653d6463ab4940a546a9eb536017c045b059c205",
+      "initial_grid_certificate_sha256": "d8fa450457adab6bca3c64169609a917a3ad670b13237f6c595f82f51249580d",
+      "closure_certificate_sha256": "edcbec2c3d00b656396cd22ea797e11d06d27800c149e3483a0cfd402be869d5",
+      "program_sha256": "691e72e552bd14b6b524c7e3378d4a225a1615fb45f9cdf1ad68c87222aceb8a",
+      "action_template_count": 1,
+      "phase_witnesses": {
+        "state_second_difference": "-120503384692863344445896733326391/51922968585348276285304963292200960",
+        "control_second_difference": "-144390044648522793600486058061991/207691874341393105141219853168803840"
+      },
+      "old_minimum_state_interval": [
+        81,
+        324
+      ],
+      "new_minimum_state_interval": [
+        81,
+        162
+      ],
+      "initial_states": 108,
+      "recurrent_states": 54,
+      "graph_statistics": {
+        "distinct_initial_successors": 54,
+        "initial_candidate_edges": 3148,
+        "initial_retained_edges": 655,
+        "recurrent_candidate_edges": 1032,
+        "recurrent_retained_edges": 295,
+        "source_centers_checked": 162
+      },
+      "executable_smoke": {
+        "traces": 3,
+        "actions_per_trace": 5,
+        "maximum_observed_error": "1/6",
+        "backend": "standalone exported program"
+      }
+    },
+    {
+      "seed": 6101,
+      "state_dim": 128,
+      "model_sha256": "0dce602b4db9aa59c6a5c4000ce65987d1ef99b7422fd15678f6a37387872f10",
+      "recurrent_certificate_sha256": "00c4248ce1c94dba82c8d30ca618559a22190d295c7ada34fc9d511cb6ece7f9",
+      "initial_grid_certificate_sha256": "3876fac228f9ad3cc46a5cbfae480c206967effbeb26e970866d4b00b73de13b",
+      "closure_certificate_sha256": "02289ce88e8361f700d7deafbf270b5b7cf1906b3492df3ce8a48999b89c2475",
+      "program_sha256": "811b1a6bf90e53abc99767b8eb61d25aad9ad24b215c5cae70f85de912006d2f",
+      "action_template_count": 1,
+      "phase_witnesses": {
+        "state_second_difference": "-111791068936571085922369552380561/51922968585348276285304963292200960",
+        "control_second_difference": "-185476638867907229950175066706123/207691874341393105141219853168803840"
+      },
+      "old_minimum_state_interval": [
+        81,
+        324
+      ],
+      "new_minimum_state_interval": [
+        81,
+        163
+      ],
+      "initial_states": 108,
+      "recurrent_states": 55,
+      "graph_statistics": {
+        "distinct_initial_successors": 55,
+        "initial_candidate_edges": 2936,
+        "initial_retained_edges": 617,
+        "recurrent_candidate_edges": 1256,
+        "recurrent_retained_edges": 311,
+        "source_centers_checked": 163
+      },
+      "executable_smoke": {
+        "traces": 3,
+        "actions_per_trace": 5,
+        "maximum_observed_error": "1/6",
+        "backend": "standalone exported program"
+      }
+    },
+    {
+      "seed": 6102,
+      "state_dim": 8,
+      "model_sha256": "97c7023299eb571ae22ee9498df995d5a0dcf19a7345ef33617885ea04710549",
+      "recurrent_certificate_sha256": "28a36058ffaea0eaa70d94d5dcc5e58b098d868b8588989b197edb3e8265e636",
+      "initial_grid_certificate_sha256": "50d7565366ace98381e80a2a137c021453b921c335b1d4404fed631719c15aa2",
+      "closure_certificate_sha256": "98b16ec10fc1a23375bc3150be1268f87adfde83378349ff71544581018b44ef",
+      "program_sha256": "3e9be0d57e40a2facff39fd13d17873ff660c7c599e1d9de7a382a50a085aa16",
+      "action_template_count": 1,
+      "phase_witnesses": {
+        "state_second_difference": "-55732604214298634943282015777927/25961484292674138142652481646100480",
+        "control_second_difference": "-70521881211631140356127796935441/103845937170696552570609926584401920"
+      },
+      "old_minimum_state_interval": [
+        81,
+        297
+      ],
+      "new_minimum_state_interval": [
+        81,
+        132
+      ],
+      "initial_states": 81,
+      "recurrent_states": 51,
+      "graph_statistics": {
+        "distinct_initial_successors": 51,
+        "initial_candidate_edges": 2304,
+        "initial_retained_edges": 493,
+        "recurrent_candidate_edges": 1200,
+        "recurrent_retained_edges": 294,
+        "source_centers_checked": 132
+      },
+      "executable_smoke": {
+        "traces": 3,
+        "actions_per_trace": 5,
+        "maximum_observed_error": "1/6",
+        "backend": "standalone exported program"
+      }
+    },
+    {
+      "seed": 6102,
+      "state_dim": 32,
+      "model_sha256": "ef7e05671bcead133a8cf72a03d5beb0111069451a46cda357040429d4556234",
+      "recurrent_certificate_sha256": "1017e39df8aad1ae02c207dbabc5686603327cab80f0a3bb388175884367fae5",
+      "initial_grid_certificate_sha256": "79fcf58763caf45ba1d2f9653838725ae22b6495914d5ac8928dad2433d2ce1a",
+      "closure_certificate_sha256": "3483ed5b8f4d3cf77757f914c844250530c4edb2d3708eb2de2dd5193158b7f7",
+      "program_sha256": "dee2b22b5da114750267974c2f20e39d11f469b212df7371aa5b9bae16f7e503",
+      "action_template_count": 1,
+      "phase_witnesses": {
+        "state_second_difference": "-12671684690361233813398026849231/5192296858534827628530496329220096",
+        "control_second_difference": "-21841134472512427596396332464503/20769187434139310514121985316880384"
+      },
+      "old_minimum_state_interval": [
+        81,
+        324
+      ],
+      "new_minimum_state_interval": [
+        81,
+        166
+      ],
+      "initial_states": 108,
+      "recurrent_states": 58,
+      "graph_statistics": {
+        "distinct_initial_successors": 58,
+        "initial_candidate_edges": 3016,
+        "initial_retained_edges": 664,
+        "recurrent_candidate_edges": 1088,
+        "recurrent_retained_edges": 309,
+        "source_centers_checked": 166
+      },
+      "executable_smoke": {
+        "traces": 3,
+        "actions_per_trace": 5,
+        "maximum_observed_error": "1/6",
+        "backend": "standalone exported program"
+      }
+    },
+    {
+      "seed": 6102,
+      "state_dim": 64,
+      "model_sha256": "40f29d5660ee96ae4798e8151b579f6f6b0ff69baafb444a19294742db699811",
+      "recurrent_certificate_sha256": "e9517d34e0b3b94691c98714a3a069f5618b663036eea331270a3a1af4f3f702",
+      "initial_grid_certificate_sha256": "066f48c283a4071622e62ae4cd02afebd2dc18c64079ac9192ed1bd197cfb2d9",
+      "closure_certificate_sha256": "af492dd5886ff63806ba9828e40e0a14bd4c80acc4851df654a5fc571e4052d2",
+      "program_sha256": "f11fdbf089538a5c7a74268093d416b1dabfe5de3906bd016290239fc1b5f3f2",
+      "action_template_count": 1,
+      "phase_witnesses": {
+        "state_second_difference": "-61798802859814345187990940474669/25961484292674138142652481646100480",
+        "control_second_difference": "-71051529749976366353200243900251/103845937170696552570609926584401920"
+      },
+      "old_minimum_state_interval": [
+        81,
+        324
+      ],
+      "new_minimum_state_interval": [
+        81,
+        162
+      ],
+      "initial_states": 108,
+      "recurrent_states": 54,
+      "graph_statistics": {
+        "distinct_initial_successors": 54,
+        "initial_candidate_edges": 3148,
+        "initial_retained_edges": 655,
+        "recurrent_candidate_edges": 1032,
+        "recurrent_retained_edges": 295,
+        "source_centers_checked": 162
+      },
+      "executable_smoke": {
+        "traces": 3,
+        "actions_per_trace": 5,
+        "maximum_observed_error": "1/6",
+        "backend": "standalone exported program"
+      }
+    },
+    {
+      "seed": 6102,
+      "state_dim": 128,
+      "model_sha256": "46b73d27f3d3985545177dcc43d2d643811d6e1cef7603bfc7723d5c82a5b098",
+      "recurrent_certificate_sha256": "bf59626c991ae1d10ff991cbff0876fcc94eaf7d8d5cfc6b13b5cb2ad157ab4b",
+      "initial_grid_certificate_sha256": "73694c3c2380cb1d36494cbf600d1a638081271d701592f3c1b7b014287cc89f",
+      "closure_certificate_sha256": "6098e2e3745fc097bdca4847785f01563aa80378297dd6dccfb88081606f2c6e",
+      "program_sha256": "9706ebc4ea947815eaec503892d4757cf399827b4bf7720e4ea89ffce08d1dfd",
+      "action_template_count": 1,
+      "phase_witnesses": {
+        "state_second_difference": "-112253959823437489718049724549557/51922968585348276285304963292200960",
+        "control_second_difference": "-189421253396665246631732076823851/207691874341393105141219853168803840"
+      },
+      "old_minimum_state_interval": [
+        81,
+        324
+      ],
+      "new_minimum_state_interval": [
+        81,
+        163
+      ],
+      "initial_states": 108,
+      "recurrent_states": 55,
+      "graph_statistics": {
+        "distinct_initial_successors": 55,
+        "initial_candidate_edges": 2936,
+        "initial_retained_edges": 617,
+        "recurrent_candidate_edges": 1256,
+        "recurrent_retained_edges": 311,
+        "source_centers_checked": 163
+      },
+      "executable_smoke": {
+        "traces": 3,
+        "actions_per_trace": 5,
+        "maximum_observed_error": "1/6",
+        "backend": "standalone exported program"
+      }
+    }
+  ],
+  "seeds": [
+    6101,
+    6102
+  ],
+  "dimensions": [
+    8,
+    32,
+    64,
+    128
+  ],
+  "all_phase_crossings_replayed": true,
+  "all_original_lower_and_initial_certificates_replayed": true,
+  "all_complete_nonlinear_action_graphs_replayed": true,
+  "all_standalone_programs_replayed": true,
+  "all_cases_strictly_improve_upper": true,
+  "scope": "eight frozen trained phase-crossing rings, full unit initial/action cubes, all finite horizons",
+  "boundary": "closed conservative phase-polygon action graph; global machine minimum and end-to-end causal decompilation remain open"
+}

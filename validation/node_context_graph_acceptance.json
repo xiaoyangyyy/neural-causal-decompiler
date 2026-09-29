@@ -1,0 +1,106 @@
+{
+  "protocol": "docs/NODE_CONTEXT_GRAPH_PROTOCOL.md",
+  "runs": [
+    {
+      "seed": 3993,
+      "replayed": true,
+      "baseline": {
+        "macro_f1": 0.5643487150606847,
+        "skeleton_f1": 0.7577876908283911,
+        "mean_pair_shd": 3.548611111111111,
+        "exact_graph_accuracy": 0.11736111111111111,
+        "directed_target_accuracy": 0.47566206361552565,
+        "parameter_count": 15412,
+        "by_environment_exact": {
+          "test_id": 0.18055555555555555,
+          "test_function": 0.12152777777777778,
+          "test_noise": 0.17013888888888887,
+          "test_scale": 0.05902777777777777,
+          "test_intervention": 0.05555555555555556
+        }
+      },
+      "node_context": {
+        "macro_f1": 0.5783166063019948,
+        "skeleton_f1": 0.7445594674200418,
+        "mean_pair_shd": 3.1951388888888888,
+        "exact_graph_accuracy": 0.12708333333333333,
+        "directed_target_accuracy": 0.4467283729097741,
+        "parameter_count": 31636,
+        "by_environment_exact": {
+          "test_id": 0.21874999999999997,
+          "test_function": 0.09027777777777778,
+          "test_noise": 0.23611111111111113,
+          "test_scale": 0.027777777777777776,
+          "test_intervention": 0.0625
+        }
+      },
+      "exact_higher": true,
+      "shd_lower": true
+    },
+    {
+      "seed": 3994,
+      "replayed": true,
+      "baseline": {
+        "macro_f1": 0.5772098533522871,
+        "skeleton_f1": 0.7630015015967132,
+        "mean_pair_shd": 3.026388888888889,
+        "exact_graph_accuracy": 0.10555555555555554,
+        "directed_target_accuracy": 0.4648191554773776,
+        "parameter_count": 15412,
+        "by_environment_exact": {
+          "test_id": 0.1840277777777778,
+          "test_function": 0.09027777777777778,
+          "test_noise": 0.1840277777777778,
+          "test_scale": 0.034722222222222224,
+          "test_intervention": 0.034722222222222224
+        }
+      },
+      "node_context": {
+        "macro_f1": 0.580115939213563,
+        "skeleton_f1": 0.7449983283518073,
+        "mean_pair_shd": 3.3770833333333337,
+        "exact_graph_accuracy": 0.11875,
+        "directed_target_accuracy": 0.48386500321277975,
+        "parameter_count": 31636,
+        "by_environment_exact": {
+          "test_id": 0.2152777777777778,
+          "test_function": 0.09722222222222222,
+          "test_noise": 0.20138888888888887,
+          "test_scale": 0.03125,
+          "test_intervention": 0.04861111111111111
+        }
+      },
+      "exact_higher": true,
+      "shd_lower": false
+    }
+  ],
+  "pooled": {
+    "baseline_exact": 0.11145833333333333,
+    "node_context_exact": 0.12291666666666666,
+    "exact_delta": 0.011458333333333334,
+    "baseline_shd": 3.2875,
+    "node_context_shd": 3.2861111111111114,
+    "baseline_skeleton_f1": 0.7603945962125522,
+    "node_context_skeleton_f1": 0.7447788978859246,
+    "baseline_directed_accuracy": 0.47024060954645164,
+    "node_context_directed_accuracy": 0.4652966880612769,
+    "environment_exact_deltas": {
+      "test_id": 0.03472222222222221,
+      "test_function": -0.012152777777777776,
+      "test_noise": 0.04166666666666667,
+      "test_scale": -0.01736111111111111,
+      "test_intervention": 0.010416666666666664
+    }
+  },
+  "criteria": {
+    "complete_replay": true,
+    "full_coverage": true,
+    "exact_higher_each_seed": true,
+    "pooled_exact_gain_at_least_3pp": false,
+    "shd_lower_each_seed": false,
+    "skeleton_and_direction_no_lower": false,
+    "environment_decline_at_most_2pp": true
+  },
+  "passed": false,
+  "claim": "new architecture comparison; not historical-teacher decompilation or causal identifiability"
+}

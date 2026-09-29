@@ -1,0 +1,163 @@
+{
+  "protocol": "docs/STRUCTURED_MECHANISM_PROTOCOL.md",
+  "replay_verified": true,
+  "replicated_mechanism_improvement": true,
+  "pooled": {
+    "baseline": {
+      "parent_exact_fraction": 1.0,
+      "operator_exact_fraction": 0.5040277777777777,
+      "interaction_exact_fraction": 0.9247222222222222,
+      "mean_symbolic_neural_nmse": 0.11167249510054371,
+      "mean_symbolic_truth_nmse": 0.3418823777007706,
+      "mean_intervention_effect_mae": 7256.292318884,
+      "mean_nonconstant_atoms": 2.2606944444444443
+    },
+    "structured": {
+      "parent_exact_fraction": 1.0,
+      "operator_exact_fraction": 0.6680555555555556,
+      "interaction_exact_fraction": 0.9123611111111112,
+      "mean_symbolic_neural_nmse": 0.00602254441035335,
+      "mean_symbolic_truth_nmse": 0.22899197679250027,
+      "mean_intervention_effect_mae": 0.03032842199127559,
+      "mean_nonconstant_atoms": 0.8493055555555556
+    }
+  },
+  "pooled_relative_primary_reduction": 0.946069581368886,
+  "runs": {
+    "1793": {
+      "replay": {
+        "status": "verified",
+        "worlds": 30,
+        "node_sizes": [
+          3,
+          5,
+          8
+        ],
+        "environments": [
+          "test_id",
+          "test_function",
+          "test_noise",
+          "test_scale",
+          "test_intervention"
+        ],
+        "primary_nmse": 0.005411993617349415,
+        "science_not_certified": true
+      },
+      "baseline": {
+        "parent_exact_fraction": 1.0,
+        "operator_exact_fraction": 0.49861111111111106,
+        "interaction_exact_fraction": 0.9013888888888889,
+        "mean_symbolic_neural_nmse": 0.02955114626028866,
+        "mean_symbolic_truth_nmse": 0.22422183947474647,
+        "mean_intervention_effect_mae": 1.8153058011355074,
+        "mean_nonconstant_atoms": 2.3075
+      },
+      "structured": {
+        "parent_exact_fraction": 1.0,
+        "operator_exact_fraction": 0.6583333333333333,
+        "interaction_exact_fraction": 0.8902777777777778,
+        "mean_symbolic_neural_nmse": 0.005411993619648721,
+        "mean_symbolic_truth_nmse": 0.19238301886375309,
+        "mean_intervention_effect_mae": 0.03404912283731428,
+        "mean_nonconstant_atoms": 0.886388888888889
+      },
+      "relative_primary_reduction": 0.8168601118894177,
+      "checks": {
+        "primary_lower": true,
+        "truth_within_10_percent": true,
+        "intervention_within_10_percent": true,
+        "no_more_atoms": true
+      },
+      "by_environment": {
+        "test_id": {
+          "baseline": 0.009424542180061423,
+          "structured": 0.004810069762913443
+        },
+        "test_function": {
+          "baseline": 0.01944293655240584,
+          "structured": 0.006423169193178918
+        },
+        "test_noise": {
+          "baseline": 0.10298178138255863,
+          "structured": 0.004728978088555314
+        },
+        "test_scale": {
+          "baseline": 0.006308996448119809,
+          "structured": 0.0072529312511725634
+        },
+        "test_intervention": {
+          "baseline": 0.009597474738297597,
+          "structured": 0.0038448198024233684
+        }
+      }
+    },
+    "1794": {
+      "replay": {
+        "status": "verified",
+        "worlds": 30,
+        "node_sizes": [
+          3,
+          5,
+          8
+        ],
+        "environments": [
+          "test_id",
+          "test_function",
+          "test_noise",
+          "test_scale",
+          "test_intervention"
+        ],
+        "primary_nmse": 0.006633095214330567,
+        "science_not_certified": true
+      },
+      "baseline": {
+        "parent_exact_fraction": 1.0,
+        "operator_exact_fraction": 0.5094444444444445,
+        "interaction_exact_fraction": 0.9480555555555555,
+        "mean_symbolic_neural_nmse": 0.19379384394079877,
+        "mean_symbolic_truth_nmse": 0.45954291592679475,
+        "mean_intervention_effect_mae": 14510.769331966865,
+        "mean_nonconstant_atoms": 2.2138888888888886
+      },
+      "structured": {
+        "parent_exact_fraction": 1.0,
+        "operator_exact_fraction": 0.6777777777777778,
+        "interaction_exact_fraction": 0.9344444444444444,
+        "mean_symbolic_neural_nmse": 0.006633095201057979,
+        "mean_symbolic_truth_nmse": 0.26560093472124746,
+        "mean_intervention_effect_mae": 0.026607721145236896,
+        "mean_nonconstant_atoms": 0.8122222222222223
+      },
+      "relative_primary_reduction": 0.9657724153349045,
+      "checks": {
+        "primary_lower": true,
+        "truth_within_10_percent": true,
+        "intervention_within_10_percent": true,
+        "no_more_atoms": true
+      },
+      "by_environment": {
+        "test_id": {
+          "baseline": 0.012571693951612855,
+          "structured": 0.0019786264235345866
+        },
+        "test_function": {
+          "baseline": 0.03188978453155029,
+          "structured": 0.009209985406062254
+        },
+        "test_noise": {
+          "baseline": 0.9043045228453869,
+          "structured": 0.005227125895350408
+        },
+        "test_scale": {
+          "baseline": 0.012983289093457922,
+          "structured": 0.008670966805620623
+        },
+        "test_intervention": {
+          "baseline": 0.007219929281985762,
+          "structured": 0.008078771474722026
+        }
+      }
+    }
+  },
+  "scope": "equation extraction from frozen neural mechanisms with supplied oracle DAG; graph recovery and general identifiability not certified"
+}

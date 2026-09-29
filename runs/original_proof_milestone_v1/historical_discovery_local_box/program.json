@@ -1,0 +1,100 @@
+{
+  "names": [
+    "corr",
+    "abs_corr",
+    "var_log_ratio",
+    "skew_x",
+    "skew_y",
+    "kurt_x",
+    "kurt_y",
+    "dep_xy",
+    "resdep_xy",
+    "resdep_yx",
+    "reserr_xy",
+    "reserr_yx",
+    "mixed_xy",
+    "mixed_yx"
+  ],
+  "tree": {
+    "expr": {
+      "op": "var",
+      "index": 7
+    },
+    "threshold": 0.04178850017236951,
+    "left": {
+      "label": 2
+    },
+    "right": {
+      "expr": {
+        "op": "sub",
+        "args": [
+          {
+            "op": "var",
+            "index": 10
+          },
+          {
+            "op": "var",
+            "index": 11
+          }
+        ]
+      },
+      "threshold": -0.022655515392432757,
+      "left": {
+        "label": 0
+      },
+      "right": {
+        "expr": {
+          "op": "var",
+          "index": 1
+        },
+        "threshold": 0.8525244559650824,
+        "left": {
+          "expr": {
+            "op": "add",
+            "args": [
+              {
+                "op": "var",
+                "index": 5
+              },
+              {
+                "op": "var",
+                "index": 6
+              }
+            ]
+          },
+          "threshold": -1.0010385498030194,
+          "left": {
+            "label": 2
+          },
+          "right": {
+            "expr": {
+              "op": "var",
+              "index": 2
+            },
+            "threshold": -0.2781420714594215,
+            "left": {
+              "expr": {
+                "op": "var",
+                "index": 1
+              },
+              "threshold": 0.45461728612855556,
+              "left": {
+                "label": 1
+              },
+              "right": {
+                "label": 0
+              }
+            },
+            "right": {
+              "label": 1
+            }
+          }
+        },
+        "right": {
+          "label": 3
+        }
+      }
+    }
+  },
+  "complexity": 29
+}

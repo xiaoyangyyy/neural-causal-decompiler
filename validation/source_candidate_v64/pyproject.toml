@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "neural-causal-decompiler"
+version = "0.64.0.dev1"
+description = "Scalable certified interventional realizations and neural separation bounds"
+requires-python = ">=3.11"
+dependencies = ["numpy>=1.26", "scipy>=1.11", "torch>=2.2", "scikit-learn>=1.4", "sympy>=1.13"]
+
+[project.optional-dependencies]
+test = ["pytest>=8"]
+research = ["pysr>=2.4,<3"]
+
+[project.scripts]
+ncd = "ncd.cli:main"
+
+[tool.setuptools]
+packages = ["ncd"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+
+
+
+
+
+
+

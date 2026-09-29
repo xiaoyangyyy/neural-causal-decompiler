@@ -1,0 +1,298 @@
+{
+  "schema": "ncd.original-proof-config.v1",
+  "root": "..",
+  "output": "runs/original_proof_milestone_v1",
+  "requirements": "docs/FULL_REQUIREMENTS.md",
+  "jobs": [
+    {
+      "id": "observational_gaussian_boundary",
+      "kind": "gaussian_nonidentifiability"
+    },
+    {
+      "id": "historical_mechanism_0",
+      "kind": "frozen_mechanism",
+      "checkpoint": "runs/active_end_to_end_seed4993/worlds/n3_test_id_0/observational_graph/baseline/mechanism_0.pt",
+      "checkpoint_sha256": "20b62f0bd0f6ba0e36ee678fbd7401e8425fdb8720e28c80b4b588382e671b61",
+      "scm": "runs/active_end_to_end_seed4993/worlds/n3_test_id_0/observational_graph/baseline/explicit_scm.json",
+      "scm_sha256": "25ee18accadb67001ec81e9833dada9cfb587312e14c58c981da4c729dd3c235",
+      "node": 0,
+      "domain": [
+        [
+          "-1",
+          "1"
+        ],
+        [
+          "-1",
+          "1"
+        ],
+        [
+          "-1",
+          "1"
+        ]
+      ],
+      "epsilon": "1/100",
+      "max_boxes": 32,
+      "seconds": 300
+    },
+    {
+      "id": "historical_mechanism_1",
+      "kind": "frozen_mechanism",
+      "checkpoint": "runs/active_end_to_end_seed4993/worlds/n3_test_id_0/observational_graph/baseline/mechanism_1.pt",
+      "checkpoint_sha256": "2a88efbbad9a0963d9dc1c55df4909d540b3565adb8d5c7e03571988916e9886",
+      "scm": "runs/active_end_to_end_seed4993/worlds/n3_test_id_0/observational_graph/baseline/explicit_scm.json",
+      "scm_sha256": "25ee18accadb67001ec81e9833dada9cfb587312e14c58c981da4c729dd3c235",
+      "node": 1,
+      "domain": [
+        [
+          "-1",
+          "1"
+        ],
+        [
+          "-1",
+          "1"
+        ],
+        [
+          "-1",
+          "1"
+        ]
+      ],
+      "epsilon": "1/100",
+      "max_boxes": 32,
+      "seconds": 300
+    },
+    {
+      "id": "historical_mechanism_2",
+      "kind": "frozen_mechanism",
+      "checkpoint": "runs/active_end_to_end_seed4993/worlds/n3_test_id_0/observational_graph/baseline/mechanism_2.pt",
+      "checkpoint_sha256": "77bff2f77190843f2b627231d1b33e65fe176036bedbb0d3d422106d4dd74620",
+      "scm": "runs/active_end_to_end_seed4993/worlds/n3_test_id_0/observational_graph/baseline/explicit_scm.json",
+      "scm_sha256": "25ee18accadb67001ec81e9833dada9cfb587312e14c58c981da4c729dd3c235",
+      "node": 2,
+      "domain": [
+        [
+          "-1",
+          "1"
+        ],
+        [
+          "-1",
+          "1"
+        ],
+        [
+          "-1",
+          "1"
+        ]
+      ],
+      "epsilon": "1/100",
+      "max_boxes": 32,
+      "seconds": 300
+    },
+    {
+      "id": "historical_discovery_local_box",
+      "kind": "frozen_discovery",
+      "checkpoint": "runs/all_seed91_final/bivariate/models/full/discoverer.pt",
+      "checkpoint_sha256": "84a313ccbeb7f120686547bee9b010a6ef5f686b506ebf9f9b1fa4d6234c89e8",
+      "program": "runs/all_seed91_final/bivariate/programs/full.json",
+      "program_sha256": "c8d033fea41592198cf2ae68d95801f1a071ebd61e5c5069c780fdc59f75f818",
+      "domain": [
+        [
+          [
+            "312053279/1073741824",
+            "312053281/1073741824"
+          ],
+          [
+            "-1214515713/1073741824",
+            "-1214515711/1073741824"
+          ]
+        ],
+        [
+          [
+            "-881412545/1073741824",
+            "-881412543/1073741824"
+          ],
+          [
+            "-943376065/1073741824",
+            "-943376063/1073741824"
+          ]
+        ],
+        [
+          [
+            "904559423/1073741824",
+            "904559425/1073741824"
+          ],
+          [
+            "1612188031/1073741824",
+            "1612188033/1073741824"
+          ]
+        ],
+        [
+          [
+            "416300383/1073741824",
+            "416300385/1073741824"
+          ],
+          [
+            "-771142337/1073741824",
+            "-771142335/1073741824"
+          ]
+        ],
+        [
+          [
+            "-647533953/1073741824",
+            "-647533951/1073741824"
+          ],
+          [
+            "1813760255/1073741824",
+            "1813760257/1073741824"
+          ]
+        ],
+        [
+          [
+            "1910605311/1073741824",
+            "1910605313/1073741824"
+          ],
+          [
+            "-1291353601/1073741824",
+            "-1291353599/1073741824"
+          ]
+        ],
+        [
+          [
+            "328226719/1073741824",
+            "328226721/1073741824"
+          ],
+          [
+            "1319831551/1073741824",
+            "1319831553/1073741824"
+          ]
+        ],
+        [
+          [
+            "-1297623297/1073741824",
+            "-1297623295/1073741824"
+          ],
+          [
+            "61313183/1073741824",
+            "61313185/1073741824"
+          ]
+        ],
+        [
+          [
+            "125144439/1073741824",
+            "125144441/1073741824"
+          ],
+          [
+            "-1449365377/1073741824",
+            "-1449365375/1073741824"
+          ]
+        ],
+        [
+          [
+            "1800402943/1073741824",
+            "1800402945/1073741824"
+          ],
+          [
+            "287918495/1073741824",
+            "287918497/1073741824"
+          ]
+        ],
+        [
+          [
+            "-290695937/1073741824",
+            "-290695935/1073741824"
+          ],
+          [
+            "-26296901/1073741824",
+            "-26296899/1073741824"
+          ]
+        ],
+        [
+          [
+            "-44551449/1073741824",
+            "-44551447/1073741824"
+          ],
+          [
+            "961214975/1073741824",
+            "961214977/1073741824"
+          ]
+        ],
+        [
+          [
+            "200509791/1073741824",
+            "200509793/1073741824"
+          ],
+          [
+            "-1382623105/1073741824",
+            "-1382623103/1073741824"
+          ]
+        ],
+        [
+          [
+            "322400319/1073741824",
+            "322400321/1073741824"
+          ],
+          [
+            "936197055/1073741824",
+            "936197057/1073741824"
+          ]
+        ],
+        [
+          [
+            "-168989217/1073741824",
+            "-168989215/1073741824"
+          ],
+          [
+            "1766360831/1073741824",
+            "1766360833/1073741824"
+          ]
+        ],
+        [
+          [
+            "729811647/1073741824",
+            "729811649/1073741824"
+          ],
+          [
+            "-616932865/1073741824",
+            "-616932863/1073741824"
+          ]
+        ]
+      ],
+      "domain_selection": "extraction anchor 23, first 16 rows; explicit local contract; held-out tests not used"
+    },
+    {
+      "id": "historical_mechanism_0_cegis",
+      "kind": "mechanism_cegis",
+      "checkpoint": "runs/active_end_to_end_seed4993/worlds/n3_test_id_0/observational_graph/baseline/mechanism_0.pt",
+      "checkpoint_sha256": "20b62f0bd0f6ba0e36ee678fbd7401e8425fdb8720e28c80b4b588382e671b61",
+      "scm": "runs/active_end_to_end_seed4993/worlds/n3_test_id_0/observational_graph/baseline/explicit_scm.json",
+      "scm_sha256": "25ee18accadb67001ec81e9833dada9cfb587312e14c58c981da4c729dd3c235",
+      "node": 0,
+      "domain": [
+        [
+          "-1",
+          "1"
+        ],
+        [
+          "-1",
+          "1"
+        ],
+        [
+          "-1",
+          "1"
+        ]
+      ],
+      "epsilon": "1/100",
+      "max_boxes": 32,
+      "seconds": 300,
+      "rounds": 3,
+      "seed": 8100
+    }
+  ],
+  "status": "frozen-before-proof-run",
+  "resources": {
+    "stage_seconds": 43200,
+    "threads": 2,
+    "memory_bytes": 8589934592,
+    "artifact_bytes": 8589934592
+  },
+  "default_confidence": "99/100",
+  "whole_project_completion_requires_no_unresolved_original_claims": true
+}

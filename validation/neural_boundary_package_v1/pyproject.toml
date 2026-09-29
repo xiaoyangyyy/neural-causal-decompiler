@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "ncd-neural-boundary-proof"
+version = "0.1.0"
+description = "Strict reachable label equivariance counterexample in an actual frozen network"
+requires-python = ">=3.11"
+dependencies = ["ncd-neural-ssa-proof==0.1.0"]
+[project.scripts]
+ncd-neural-boundary-proof = "neural_boundary_proof.__main__:main"
+[tool.setuptools]
+packages = ["neural_boundary_proof"]

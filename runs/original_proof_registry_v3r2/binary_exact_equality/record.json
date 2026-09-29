@@ -1,0 +1,152 @@
+{
+  "id": "binary_exact_equality",
+  "job": {
+    "id": "binary_exact_equality",
+    "kind": "exact_polynomial",
+    "left": {
+      "op": "mul",
+      "args": [
+        {
+          "op": "mul",
+          "args": [
+            {
+              "op": "sub",
+              "args": [
+                {
+                  "op": "add",
+                  "args": [
+                    {
+                      "op": "constant",
+                      "value": 0.1
+                    },
+                    {
+                      "op": "constant",
+                      "value": 0.2
+                    }
+                  ]
+                },
+                {
+                  "op": "constant",
+                  "value": 0.3
+                }
+              ]
+            },
+            {
+              "op": "constant",
+              "value": 1.152921504606847e+18
+            }
+          ]
+        },
+        {
+          "op": "var",
+          "index": 0
+        }
+      ]
+    },
+    "right": {
+      "op": "mul",
+      "args": [
+        {
+          "op": "constant",
+          "value": 32.0
+        },
+        {
+          "op": "var",
+          "index": 0
+        }
+      ]
+    },
+    "variables": 1,
+    "related_claims": [
+      "R12.semantic_equivalence"
+    ],
+    "original_claim_closed": false
+  },
+  "result": {
+    "status": "proved",
+    "certificate": {
+      "schema": "ncd.exact-binary-polynomial-equivalence.v1",
+      "status": "proved",
+      "left": {
+        "op": "mul",
+        "args": [
+          {
+            "op": "mul",
+            "args": [
+              {
+                "op": "sub",
+                "args": [
+                  {
+                    "op": "add",
+                    "args": [
+                      {
+                        "op": "constant",
+                        "value": 0.1
+                      },
+                      {
+                        "op": "constant",
+                        "value": 0.2
+                      }
+                    ]
+                  },
+                  {
+                    "op": "constant",
+                    "value": 0.3
+                  }
+                ]
+              },
+              {
+                "op": "constant",
+                "value": 1.152921504606847e+18
+              }
+            ]
+          },
+          {
+            "op": "var",
+            "index": 0
+          }
+        ]
+      },
+      "right": {
+        "op": "mul",
+        "args": [
+          {
+            "op": "constant",
+            "value": 32.0
+          },
+          {
+            "op": "var",
+            "index": 0
+          }
+        ]
+      },
+      "variables": 1,
+      "left_normal_form": [
+        {
+          "powers": [
+            1
+          ],
+          "coefficient": "32"
+        }
+      ],
+      "right_normal_form": [
+        {
+          "powers": [
+            1
+          ],
+          "coefficient": "32"
+        }
+      ],
+      "scope": "equality as mathematical functions on all real inputs with the exact binary64 values of the serialized CDIR constants",
+      "canonical_serialization": "sorted powers and reduced rational coefficients; one representation per polynomial function",
+      "device_rounding_covered": false,
+      "internal_causal_equivalence_covered": false
+    },
+    "verification": {
+      "status": "verified",
+      "conclusion": "proved",
+      "scope": "equality as mathematical functions on all real inputs with the exact binary64 values of the serialized CDIR constants"
+    },
+    "original_claim_closed": false
+  }
+}

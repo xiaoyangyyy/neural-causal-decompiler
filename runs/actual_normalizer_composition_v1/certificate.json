@@ -1,0 +1,964 @@
+{
+  "schema": "ncd.actual-normalizer-composition.v1",
+  "status": "proved",
+  "checkpoint": "runs/oblique_seed1193/teacher.pt",
+  "source_sha256": {
+    "ncd/model.py": "ee732b8f06c153951e6f3e559c9511591e8e6e632d815766c5192aff50bb3602",
+    "ncd/cdir.py": "147e24b1e0a86be97f96fb6895b9bdea7f8b0cf98c864961766710336c30e469",
+    "ncd/program_trace.py": "6426a5d04ec225563f003755c07f1466834fd36b42d43f73194f81886e9d5ce4",
+    "ncd/proof_intervals.py": "8838c1141070672ca69775520d81f87dc56a93678e3d818c75235ed2c3981f21",
+    "normalizer_proof/realization.py": "3ed6718967eb1df664cf91526934bf7d823405edb52de8bf549a499bd0ea16bd"
+  },
+  "fx_export": {
+    "schema": "ncd.frozen-discoverer-fx.v1",
+    "checkpoint_sha256": "37ce128dd6a5050075310c03b268e8089b2bc49d69670c4cb92a3f38e6519ef3",
+    "model_source_sha256": "ee732b8f06c153951e6f3e559c9511591e8e6e632d815766c5192aff50bb3602",
+    "torch_version": "2.12.1+cpu",
+    "width": 48,
+    "nodes": [
+      {
+        "name": "x",
+        "op": "placeholder",
+        "target": "x",
+        "args": [],
+        "kwargs": {}
+      },
+      {
+        "name": "mean",
+        "op": "call_method",
+        "target": "mean",
+        "args": [
+          {
+            "node": "x"
+          }
+        ],
+        "kwargs": {
+          "dim": 1,
+          "keepdim": true
+        }
+      },
+      {
+        "name": "std",
+        "op": "call_method",
+        "target": "std",
+        "args": [
+          {
+            "node": "x"
+          }
+        ],
+        "kwargs": {
+          "dim": 1,
+          "keepdim": true,
+          "unbiased": false
+        }
+      },
+      {
+        "name": "clamp_min",
+        "op": "call_method",
+        "target": "clamp_min",
+        "args": [
+          {
+            "node": "std"
+          },
+          1e-05
+        ],
+        "kwargs": {}
+      },
+      {
+        "name": "sub",
+        "op": "call_function",
+        "target": "_operator.sub",
+        "args": [
+          {
+            "node": "x"
+          },
+          {
+            "node": "mean"
+          }
+        ],
+        "kwargs": {}
+      },
+      {
+        "name": "truediv",
+        "op": "call_function",
+        "target": "_operator.truediv",
+        "args": [
+          {
+            "node": "sub"
+          },
+          {
+            "node": "clamp_min"
+          }
+        ],
+        "kwargs": {}
+      },
+      {
+        "name": "clamp",
+        "op": "call_method",
+        "target": "clamp",
+        "args": [
+          {
+            "node": "truediv"
+          },
+          -20,
+          20
+        ],
+        "kwargs": {}
+      },
+      {
+        "name": "encoder_0",
+        "op": "call_module",
+        "target": "encoder.0",
+        "args": [
+          {
+            "node": "clamp"
+          }
+        ],
+        "kwargs": {}
+      },
+      {
+        "name": "encoder_1",
+        "op": "call_module",
+        "target": "encoder.1",
+        "args": [
+          {
+            "node": "encoder_0"
+          }
+        ],
+        "kwargs": {}
+      },
+      {
+        "name": "encoder_2",
+        "op": "call_module",
+        "target": "encoder.2",
+        "args": [
+          {
+            "node": "encoder_1"
+          }
+        ],
+        "kwargs": {}
+      },
+      {
+        "name": "encoder_3",
+        "op": "call_module",
+        "target": "encoder.3",
+        "args": [
+          {
+            "node": "encoder_2"
+          }
+        ],
+        "kwargs": {}
+      },
+      {
+        "name": "mean_1",
+        "op": "call_method",
+        "target": "mean",
+        "args": [
+          {
+            "node": "encoder_3"
+          },
+          1
+        ],
+        "kwargs": {}
+      },
+      {
+        "name": "square",
+        "op": "call_method",
+        "target": "square",
+        "args": [
+          {
+            "node": "encoder_3"
+          }
+        ],
+        "kwargs": {}
+      },
+      {
+        "name": "mean_2",
+        "op": "call_method",
+        "target": "mean",
+        "args": [
+          {
+            "node": "square"
+          },
+          1
+        ],
+        "kwargs": {}
+      },
+      {
+        "name": "getitem",
+        "op": "call_function",
+        "target": "_operator.getitem",
+        "args": [
+          {
+            "node": "clamp_min"
+          },
+          [
+            {
+              "repr": "slice(None, None, None)"
+            },
+            0
+          ]
+        ],
+        "kwargs": {}
+      },
+      {
+        "name": "log",
+        "op": "call_method",
+        "target": "log",
+        "args": [
+          {
+            "node": "getitem"
+          }
+        ],
+        "kwargs": {}
+      },
+      {
+        "name": "cat",
+        "op": "call_function",
+        "target": "torch.cat",
+        "args": [
+          [
+            {
+              "node": "mean_1"
+            },
+            {
+              "node": "mean_2"
+            },
+            {
+              "node": "log"
+            }
+          ]
+        ],
+        "kwargs": {
+          "dim": 1
+        }
+      },
+      {
+        "name": "flip",
+        "op": "call_method",
+        "target": "flip",
+        "args": [
+          {
+            "node": "x"
+          },
+          -1
+        ],
+        "kwargs": {}
+      },
+      {
+        "name": "mean_3",
+        "op": "call_method",
+        "target": "mean",
+        "args": [
+          {
+            "node": "flip"
+          }
+        ],
+        "kwargs": {
+          "dim": 1,
+          "keepdim": true
+        }
+      },
+      {
+        "name": "std_1",
+        "op": "call_method",
+        "target": "std",
+        "args": [
+          {
+            "node": "flip"
+          }
+        ],
+        "kwargs": {
+          "dim": 1,
+          "keepdim": true,
+          "unbiased": false
+        }
+      },
+      {
+        "name": "clamp_min_1",
+        "op": "call_method",
+        "target": "clamp_min",
+        "args": [
+          {
+            "node": "std_1"
+          },
+          1e-05
+        ],
+        "kwargs": {}
+      },
+      {
+        "name": "sub_1",
+        "op": "call_function",
+        "target": "_operator.sub",
+        "args": [
+          {
+            "node": "flip"
+          },
+          {
+            "node": "mean_3"
+          }
+        ],
+        "kwargs": {}
+      },
+      {
+        "name": "truediv_1",
+        "op": "call_function",
+        "target": "_operator.truediv",
+        "args": [
+          {
+            "node": "sub_1"
+          },
+          {
+            "node": "clamp_min_1"
+          }
+        ],
+        "kwargs": {}
+      },
+      {
+        "name": "clamp_1",
+        "op": "call_method",
+        "target": "clamp",
+        "args": [
+          {
+            "node": "truediv_1"
+          },
+          -20,
+          20
+        ],
+        "kwargs": {}
+      },
+      {
+        "name": "encoder_4",
+        "op": "call_module",
+        "target": "encoder.0",
+        "args": [
+          {
+            "node": "clamp_1"
+          }
+        ],
+        "kwargs": {}
+      },
+      {
+        "name": "encoder_5",
+        "op": "call_module",
+        "target": "encoder.1",
+        "args": [
+          {
+            "node": "encoder_4"
+          }
+        ],
+        "kwargs": {}
+      },
+      {
+        "name": "encoder_6",
+        "op": "call_module",
+        "target": "encoder.2",
+        "args": [
+          {
+            "node": "encoder_5"
+          }
+        ],
+        "kwargs": {}
+      },
+      {
+        "name": "encoder_7",
+        "op": "call_module",
+        "target": "encoder.3",
+        "args": [
+          {
+            "node": "encoder_6"
+          }
+        ],
+        "kwargs": {}
+      },
+      {
+        "name": "mean_4",
+        "op": "call_method",
+        "target": "mean",
+        "args": [
+          {
+            "node": "encoder_7"
+          },
+          1
+        ],
+        "kwargs": {}
+      },
+      {
+        "name": "square_1",
+        "op": "call_method",
+        "target": "square",
+        "args": [
+          {
+            "node": "encoder_7"
+          }
+        ],
+        "kwargs": {}
+      },
+      {
+        "name": "mean_5",
+        "op": "call_method",
+        "target": "mean",
+        "args": [
+          {
+            "node": "square_1"
+          },
+          1
+        ],
+        "kwargs": {}
+      },
+      {
+        "name": "getitem_1",
+        "op": "call_function",
+        "target": "_operator.getitem",
+        "args": [
+          {
+            "node": "clamp_min_1"
+          },
+          [
+            {
+              "repr": "slice(None, None, None)"
+            },
+            0
+          ]
+        ],
+        "kwargs": {}
+      },
+      {
+        "name": "log_1",
+        "op": "call_method",
+        "target": "log",
+        "args": [
+          {
+            "node": "getitem_1"
+          }
+        ],
+        "kwargs": {}
+      },
+      {
+        "name": "cat_1",
+        "op": "call_function",
+        "target": "torch.cat",
+        "args": [
+          [
+            {
+              "node": "mean_4"
+            },
+            {
+              "node": "mean_5"
+            },
+            {
+              "node": "log_1"
+            }
+          ]
+        ],
+        "kwargs": {
+          "dim": 1
+        }
+      },
+      {
+        "name": "head_0",
+        "op": "call_module",
+        "target": "head.0",
+        "args": [
+          {
+            "node": "cat"
+          }
+        ],
+        "kwargs": {}
+      },
+      {
+        "name": "head_1",
+        "op": "call_module",
+        "target": "head.1",
+        "args": [
+          {
+            "node": "head_0"
+          }
+        ],
+        "kwargs": {}
+      },
+      {
+        "name": "head_2",
+        "op": "call_module",
+        "target": "head.2",
+        "args": [
+          {
+            "node": "head_1"
+          }
+        ],
+        "kwargs": {}
+      },
+      {
+        "name": "head_3",
+        "op": "call_module",
+        "target": "head.0",
+        "args": [
+          {
+            "node": "cat_1"
+          }
+        ],
+        "kwargs": {}
+      },
+      {
+        "name": "head_4",
+        "op": "call_module",
+        "target": "head.1",
+        "args": [
+          {
+            "node": "head_3"
+          }
+        ],
+        "kwargs": {}
+      },
+      {
+        "name": "head_5",
+        "op": "call_module",
+        "target": "head.2",
+        "args": [
+          {
+            "node": "head_4"
+          }
+        ],
+        "kwargs": {}
+      },
+      {
+        "name": "getitem_2",
+        "op": "call_function",
+        "target": "_operator.getitem",
+        "args": [
+          {
+            "node": "head_5"
+          },
+          [
+            {
+              "repr": "slice(None, None, None)"
+            },
+            [
+              1,
+              0,
+              2,
+              3
+            ]
+          ]
+        ],
+        "kwargs": {}
+      },
+      {
+        "name": "add",
+        "op": "call_function",
+        "target": "_operator.add",
+        "args": [
+          {
+            "node": "head_2"
+          },
+          {
+            "node": "getitem_2"
+          }
+        ],
+        "kwargs": {}
+      },
+      {
+        "name": "mul",
+        "op": "call_function",
+        "target": "_operator.mul",
+        "args": [
+          0.5,
+          {
+            "node": "add"
+          }
+        ],
+        "kwargs": {}
+      },
+      {
+        "name": "output",
+        "op": "output",
+        "target": "output",
+        "args": [
+          {
+            "node": "mul"
+          }
+        ],
+        "kwargs": {}
+      }
+    ],
+    "graph_sha256": "f05c2caaf461dbdc13d78ab42d2897d043d2fc1321f808da9127d9e9a5721ef5"
+  },
+  "branches": [
+    {
+      "columns": [
+        0,
+        1
+      ],
+      "floor": "5902958103587057/590295810358705651712",
+      "clip": [
+        "-20",
+        "20"
+      ],
+      "nodes": {
+        "mean": "mean",
+        "std": "std",
+        "denominator": "clamp_min",
+        "centered": "sub",
+        "normalized": "truediv",
+        "clipped": "clamp"
+      }
+    },
+    {
+      "columns": [
+        1,
+        0
+      ],
+      "floor": "5902958103587057/590295810358705651712",
+      "clip": [
+        "-20",
+        "20"
+      ],
+      "nodes": {
+        "mean": "mean_3",
+        "std": "std_1",
+        "denominator": "clamp_min_1",
+        "centered": "sub_1",
+        "normalized": "truediv_1",
+        "clipped": "clamp_1"
+      }
+    }
+  ],
+  "program": {
+    "schema": "ncd.normalizer-cdir-program.v1",
+    "columns": 2,
+    "minimum_samples": 16,
+    "floor": "5902958103587057/590295810358705651712",
+    "clip": [
+      "-20",
+      "20"
+    ],
+    "operators": [
+      "mean",
+      "var_stat",
+      "sqrt",
+      "lt",
+      "if",
+      "sub",
+      "div",
+      "clip"
+    ],
+    "coordinates": [
+      {
+        "column": 0,
+        "normalized_expression": {
+          "op": "div",
+          "args": [
+            {
+              "op": "sub",
+              "args": [
+                {
+                  "op": "var",
+                  "index": 0
+                },
+                {
+                  "op": "mean",
+                  "args": [
+                    {
+                      "op": "var",
+                      "index": 0
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "op": "if",
+              "args": [
+                {
+                  "op": "lt",
+                  "args": [
+                    {
+                      "op": "sqrt",
+                      "args": [
+                        {
+                          "op": "var_stat",
+                          "args": [
+                            {
+                              "op": "var",
+                              "index": 0
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "op": "constant",
+                      "value": 1e-05
+                    }
+                  ]
+                },
+                {
+                  "op": "constant",
+                  "value": 1e-05
+                },
+                {
+                  "op": "sqrt",
+                  "args": [
+                    {
+                      "op": "var_stat",
+                      "args": [
+                        {
+                          "op": "var",
+                          "index": 0
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "column": 1,
+        "normalized_expression": {
+          "op": "div",
+          "args": [
+            {
+              "op": "sub",
+              "args": [
+                {
+                  "op": "var",
+                  "index": 1
+                },
+                {
+                  "op": "mean",
+                  "args": [
+                    {
+                      "op": "var",
+                      "index": 1
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "op": "if",
+              "args": [
+                {
+                  "op": "lt",
+                  "args": [
+                    {
+                      "op": "sqrt",
+                      "args": [
+                        {
+                          "op": "var_stat",
+                          "args": [
+                            {
+                              "op": "var",
+                              "index": 1
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "op": "constant",
+                      "value": 1e-05
+                    }
+                  ]
+                },
+                {
+                  "op": "constant",
+                  "value": 1e-05
+                },
+                {
+                  "op": "sqrt",
+                  "args": [
+                    {
+                      "op": "var_stat",
+                      "args": [
+                        {
+                          "op": "var",
+                          "index": 1
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "clip_intrinsic": "coordinatewise max(lower,min(upper,z)); three disjoint exact cases",
+    "control_variables": [
+      "mean_x",
+      "mean_y",
+      "std_x",
+      "std_y"
+    ],
+    "neural_remainder": "the original unchanged frozen encoder/head continuation; not symbolically recovered"
+  },
+  "read_map": "Read actual mean/clamp_min node coordinate; swap branch uses the corresponding reversed coordinate.",
+  "write_map": "Replace only that coordinate in both corresponding actual FX occurrences; independent source_j for each selected logical variable.",
+  "masks": [
+    [
+      false,
+      false,
+      false,
+      false
+    ],
+    [
+      true,
+      false,
+      false,
+      false
+    ],
+    [
+      false,
+      true,
+      false,
+      false
+    ],
+    [
+      true,
+      true,
+      false,
+      false
+    ],
+    [
+      false,
+      false,
+      true,
+      false
+    ],
+    [
+      true,
+      false,
+      true,
+      false
+    ],
+    [
+      false,
+      true,
+      true,
+      false
+    ],
+    [
+      true,
+      true,
+      true,
+      false
+    ],
+    [
+      false,
+      false,
+      false,
+      true
+    ],
+    [
+      true,
+      false,
+      false,
+      true
+    ],
+    [
+      false,
+      true,
+      false,
+      true
+    ],
+    [
+      true,
+      true,
+      false,
+      true
+    ],
+    [
+      false,
+      false,
+      true,
+      true
+    ],
+    [
+      true,
+      false,
+      true,
+      true
+    ],
+    [
+      false,
+      true,
+      true,
+      true
+    ],
+    [
+      true,
+      true,
+      true,
+      true
+    ]
+  ],
+  "source_family": "four independently selected valid source datasets; no shared-source cancellation assumption",
+  "domain": "every finite real N x 2 dataset with N>=16, including zero variance, and every valid source tuple",
+  "executable_exact_domain": "serialized finite rational inputs; includes every finite binary64 dataset",
+  "primitive_relations": [
+    "mean_j=sum(x_rj)/N, pop_variance_j=sum((x_rj-natural_mean_j)^2)/N>=0",
+    "actual std(unbiased=False)=sqrt(pop_variance); CDIR sqrt(max(var,0)) has the same value",
+    "if raw_std<floor then floor else raw_std equals clamp_min, including equality and zero variance",
+    "source clamped std>=floor>protected-division cutoff, so CDIR div is ordinary division everywhere admitted",
+    "center=raw-effective_mean; z=center/effective_std; clip is the same three-case function on both sides"
+  ],
+  "floor_cases": [
+    {
+      "guard": "raw_std<floor",
+      "output": "floor"
+    },
+    {
+      "guard": "raw_std>=floor",
+      "output": "raw_std"
+    }
+  ],
+  "clip_cases": [
+    {
+      "guard": "z<lower",
+      "output": "-20"
+    },
+    {
+      "guard": "lower<=z<=upper",
+      "output": "z"
+    },
+    {
+      "guard": "z>upper",
+      "output": "20"
+    }
+  ],
+  "protection_margin": "3019292234487536611/302231454903657293676544",
+  "continued_boundary_edges": [
+    {
+      "source": "clamp",
+      "consumer": "encoder_0"
+    },
+    {
+      "source": "clamp_min",
+      "consumer": "getitem"
+    },
+    {
+      "source": "clamp_1",
+      "consumer": "encoder_4"
+    },
+    {
+      "source": "clamp_min_1",
+      "consumer": "getitem_1"
+    }
+  ],
+  "composition": "Local exact primitive relations imply equality of all 12 program state coordinates and both FX copies under every mask. All prefix-to-continuation edge values agree; unchanged deterministic suffix then gives identical final logits and labels.",
+  "numeric_error": "0",
+  "classification_labels_equal": true,
+  "collateral_states_checked": "all unpatched mean/std states and both centered/normalized/clipped columns, not only the patched coordinate",
+  "branch_coverage": "both floor guards and all three clipping cases are included; runtime trace marks the actually visited conditional child",
+  "partial_neural_decompilation": true,
+  "learned_encoder_head_symbolically_recovered": false,
+  "device_rounding_certified": false,
+  "mdl_minimality": "unresolved",
+  "true_SCM_recovery": "unresolved",
+  "original_R5_closed": false
+}

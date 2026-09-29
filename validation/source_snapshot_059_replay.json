@@ -1,0 +1,46 @@
+{
+  "schema": "ncd.historical-source-snapshot-replay.v1",
+  "status": "verified",
+  "source_files": 146,
+  "source_snapshot_sha256": "a3c8106f367bbcc84f0c14a448ce54caa68a6066860f93232f5297fae688611e",
+  "installed_proof_replay": {
+    "status": "verified",
+    "proof_jobs": 5,
+    "results": [
+      {
+        "status": "verified",
+        "conclusion": "refuted",
+        "minimax_graph_error_lower": "287425197928998389772323/604462909807314587353088",
+        "original_scope_not_automatically_closed": true
+      },
+      {
+        "status": "verified",
+        "conclusion": "refuted",
+        "scope": "legacy decode_graph is not node-permutation-equivariant on all valid reverse-symmetric probability inputs",
+        "original_claim_closed": false
+      },
+      {
+        "status": "verified",
+        "conclusion": "refuted",
+        "scope": "legacy decode_graph is not node-permutation-equivariant on all valid reverse-symmetric probability inputs",
+        "original_claim_closed": false
+      },
+      {
+        "status": "verified",
+        "conclusion": "refuted",
+        "strict_network_labels": [
+          1,
+          2
+        ],
+        "scope": "specified frozen network and mathematical 14-feature family"
+      },
+      {
+        "status": "verified",
+        "conclusion": "proved",
+        "scope": "two specified explicit SCMs; all shared do-values and target subsets"
+      }
+    ],
+    "overall_objective_achieved": false
+  },
+  "original_project_complete": false
+}

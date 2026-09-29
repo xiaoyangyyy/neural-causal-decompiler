@@ -1,0 +1,606 @@
+{
+  "schema": "ncd.unified-proof-plan.v4",
+  "project_root": "E:\\\u5b9e\u9a8c\\neural-causal-decompiler",
+  "requirements": "docs/FULL_REQUIREMENTS.md",
+  "requirements_sha256": "04d608c94e83c8b77adaca81fcf4942826d3aa7d5d61152d6e895b010fcc724c",
+  "source_sha256": {
+    "ncd/abstract_reachability.py": "a3bd6fac15197a6f904ca9725206b5bdc62fc8bd799eb20fa6748a18f24b3519",
+    "ncd/active_end_to_end_experiment.py": "206b255b6e31d6328dfe750ac87fcb251c68ec84687f84df7a82b59022cb4b50",
+    "ncd/active_intervention_experiment.py": "713314560b328515444668ae501dc7bf431faf3f58b087063c13d8c2fe49da79",
+    "ncd/active_intervention_graph.py": "b132c5be445e85293a8b410b9303b6a30b4e9454736ba6d149cd83313d0b0d35",
+    "ncd/active_search.py": "cae2c9c5d2fff0d8340a7229754df101d1a41e0bf8e0d903a483abe3d4640096",
+    "ncd/actual_statistics_intervals.py": "047339a635b82dd90b44fe85a5274f3976ff95ee262d36a948aa6d15c4436330",
+    "ncd/affine_observability.py": "b438c243120db03ed62cff44e101d1f3e04815e1a1b7f48f1fbe643e95a394a5",
+    "ncd/alignment.py": "2a5165c82144f2698673872cdbb71fdab185f513928c60547179eb2b932620b9",
+    "ncd/antisymmetric_direction_experiment.py": "dc48030e8695b18046b791f087501f9a5ca888f02743855f8fd9f1e19ae8355e",
+    "ncd/antisymmetric_direction_graph.py": "d385bb7e6ace67699fda354413df90c6cca5066129e0ffe48629cc01ffeecff6",
+    "ncd/approximate_finite.py": "3b0fa8579ebe13c5a58304698a5a1e6772b3d0062f1ba01abb971cbbd3b68f69",
+    "ncd/automatic_grid_realization.py": "c8e9fed8246c59d745f55746e8891e5ed19e3aa817350a590a1cb0b5d31980c4",
+    "ncd/baselines.py": "baef5d73a6fbceaa0553f456fb63becfff03508e862203fa36f75a590bbdac4e",
+    "ncd/behavioral_cover.py": "94388d0e1d2a1447165eab23b4f356d4ee21e9b41ab4bf964231f2d233d48492",
+    "ncd/causal_feature_guidance.py": "30865962f7de618632fcefb9d0439b32c8e134db66e1bf2b62ec5192393b8794",
+    "ncd/causal_guided_experiment.py": "b553f0ba567c775de65c6784471478d68b252d825a4c3fdf63a72c236d67e136",
+    "ncd/cdir.py": "eaaffbf3cb4e9c3ebf3fc0d2f652998915f0c17bfe48d154e7f8818b23fe0673",
+    "ncd/certified_experiment.py": "c8dfd6d6cf71927cf3cc9be23004b247830599d269059313895606d04c2885a8",
+    "ncd/certified_finite.py": "0fe8283ee5a81a1022681ebe1727ca0b6b6cb0d62fc643f5c7d62c26ed46e7e7",
+    "ncd/cli.py": "eb7fe5536b1be2b522db2db2e50c3b5f4ac72161dee261f791334d16038f1616",
+    "ncd/collateral_intervention_experiment.py": "aeb8124a9d29c4f556e235e61b3092ad3c68e61280485e6f37e0dc52edec6984",
+    "ncd/collateral_tangent.py": "cb2fa0e035682918ea2a5c8fe41e33ed4bb11167997874a7b8e2022cf00daaa8",
+    "ncd/continuous_closed_realization.py": "8f44051470298111ffd425bb773533f3a2b0baa7b89f8ed496d4f1ce5537f2e4",
+    "ncd/continuous_compositional_realization.py": "d8e1cf4f7f1f49ef01cf57b5d595990ad99adb1530ec3af74f371af092b20542",
+    "ncd/continuous_cover.py": "a21f4e92cc395b38dd3ff64a8ccebf46c5f604f5c50acc6d37f8a56359cbcd4d",
+    "ncd/continuous_generic_realization.py": "6463b295d2f6bf77028ebcf7590483daa1c9565dac05860f4351ddd86f97adf3",
+    "ncd/continuous_nonlinear.py": "5b55d9d07c582cd919d64467ac8727e981b362606390de9523595d2d19439844",
+    "ncd/continuous_regions.py": "66d8e32196e277e2bc1d60fd964caab38f95b6cba37cfd62b21d7f28808c282a",
+    "ncd/continuous_scale.py": "689285271f0c4cd3616b5e21ab2f3956abde059a919da7a4d350b15c0733f694",
+    "ncd/continuous_separation.py": "bd1e2a5d2901d5c319dfcd5a0a3bfcd285f23857f58e52b74d73477a88c65aaf",
+    "ncd/correlated_reachability.py": "3132d34478a681ac29ee4ef0e6f81847f4106331e585ef75df7a542a0ee0c306",
+    "ncd/cost_sensitive_graph_experiment.py": "078bdf9ef42370d7553ef339096d83a4bc1a49cc4f8418cdb27fae83e55d56fa",
+    "ncd/counterexamples.py": "848108b107a7b418fdccbd5d2df23a61e8d36b9b762487298d94f27699b31ff8",
+    "ncd/discovery_fidelity_proof.py": "621418eb386b6d770359a079b79f9a399ae587986c26f4d26887135f7cf80e2c",
+    "ncd/distilled_pc_experiment.py": "4fbb7ea1671dfe0e3837a79bd5c4206405d3c23f9c62d3ed68a41b1a431d0a94",
+    "ncd/distributed_alignment.py": "ffb3f3c9a3d536eb767937d97f5fd39b200ea6eda6ec028497a7ca77245ecc81",
+    "ncd/dsl.py": "016cd52195bbc2a69d8b177b4a0c46a71671b1d2e94bd3ca8bcd79b04aa0e25d",
+    "ncd/dual_grid_reachability.py": "933fd250684f5a9abab1caaae8c538e22c877cf4da928524fb5f4ff56730359e",
+    "ncd/dynamic_packing.py": "e23288fd72b01b534c0391f4a34437913712c60d4f86960903af2e87623e637d",
+    "ncd/end_to_end_local_realization.py": "51096b00c910deb684f843c6abdd9d78760413256c7ff2bbae81fa11d4f8a0cb",
+    "ncd/end_to_end_mechanism_experiment.py": "20f2ae76149adb6794c185079ea0ea58ccc9849813e0281da8c6c3eb6a6b1da3",
+    "ncd/evidence.py": "cba7d93424ab39c9355d9f1a2d38baf4ca2a26d17a021005bf4905f7cb2ae259",
+    "ncd/exact_interval_lower.py": "11dc453cd01cbbddfe38538e0719641a0be6d2cba46993a8cf37b82fde6b179d",
+    "ncd/exact_polynomial.py": "4d088ae17bfb51b0573d3a889e515891c0aea853086a43175dd8c29a621d37c3",
+    "ncd/experiment.py": "3630fc2cf751d48def0c1efd5dfafce56d37c3b11f01c1d856e73ad3cea55bac",
+    "ncd/factorized_graph_experiment.py": "9728273a55425dba11359dc45e133a80c8a59b0153122094dca098632206b87f",
+    "ncd/factorized_graph_program.py": "8ac46da5ec410dafec3ecf8ef64971fb00ac73cd1d817c69b9110c40ac321af7",
+    "ncd/factorized_node_context_experiment.py": "3b1024080ab7456a5540b9f5621afd0318b81fd9d79af69957674b2c63f28a7f",
+    "ncd/factorized_node_context_graph.py": "41fecea62fc71caaa911663dc3461a3580111f888aa96c15245868488e7459b8",
+    "ncd/finite_neural.py": "30ac67fc3f204598cfbe0108e5efe0e8c091bada28a78b3e84224486aa2faa78",
+    "ncd/fixed_numeric_mapping.py": "c129a679c750fd977e85240906b14dd08151ccbac4150c65ea00d587ca31bf8c",
+    "ncd/frozen_mechanism_proof.py": "af508660639be8a7a3cb112cbc78975c900e7daceba7d9cd6ff31aea5ec7cafc",
+    "ncd/full_project.py": "20f9687ea960828aaefbf2ac77b30eca1ebb8a55912e30e2e66d76930c728b86",
+    "ncd/functional_support.py": "acc9410f5f09e57629c50bba5605acfdac6e41a7d533e2a2670e18812a5a99ee",
+    "ncd/gaussian_identifiability.py": "17c312a61d2690cb2c115aadad7d2fb6b23581734fc82a8fc1d971bd24c1b6b3",
+    "ncd/graphs.py": "119ef2757b9200c05b3f2fddebf898bf189e4844e6010d29abf61480764085fc",
+    "ncd/graph_decoder_experiment.py": "3fe2c53dc832cebb0b66b023d76fd82f575003a7ab53f21e4b793a960b0e0c28",
+    "ncd/graph_experiment.py": "b66ee4b08fba66dd494f18128de066a0feb9e7e2b1d3373c0f0073c9e7ff9ecd",
+    "ncd/graph_global_experiment.py": "ae4bc1165bc9344e635da9beecc76fa965a934e61cfe4634d71fbdf767ef4dc7",
+    "ncd/graph_global_program.py": "d58c99077df9387d2d4666455a1bfc604392037eeaac08ed2531f3fdc4a25012",
+    "ncd/graph_model.py": "de044407e023a4e575cdb7781bd1e893d277fd87a1058e1f6c866fc3805b0873",
+    "ncd/graph_program_features.py": "14f7335baeb35815fdc395c2dc6c310b641cbfee0ee9651d07fb170b74c6bb64",
+    "ncd/guided_experiment.py": "6e27cbff340aebb56e85ae60d143c55c125ec7413494cf5424d9328f2a9ef6fc",
+    "ncd/guided_synthesis.py": "b1cd6dd51021d21d3f986310f885dd0358b44d85928ed775e89da9ead39560c6",
+    "ncd/initial_grid_synthesis.py": "5f1479c7f55a7ee056b390cc6da0091211071c565f9827cfe2e46921a7f3d962",
+    "ncd/integer_grid_refinement.py": "70be99a73ac03adf84d848ceedc0fc2af6caf3af9f6c59b875a37cd808599ac9",
+    "ncd/interchange_proof.py": "418532c998f9127e9070170d2027be0947c33672a37a7f2d15134aa90299794f",
+    "ncd/interventional_support.py": "c68600d0525e726a94111f87ca5187c365f83ff62a52d32458215d9f9eb98108",
+    "ncd/invariant_slice_lower.py": "b7a1ec5e52d2041ad69da0c9a024bfbc51be0480189af790fa01069a38f54b80",
+    "ncd/io.py": "05bbd8286f973fd5e51c8bba0ed14f76f0b3245887dede5f9e87d1b2ac77df36",
+    "ncd/joint_alignment.py": "c5af9176651a5f224269e59bac85f653665e5a37ae68e89650917f38715c88a6",
+    "ncd/joint_experiment.py": "f3c7fdf3715926e60b347063ba5e432e49f1197598b188c43891195e3a28b04b",
+    "ncd/joint_phase_initial_handoff.py": "8bb9afdc4e0d86b1d40ff7c8d04891fe81d457710cf977babc5310686416c70a",
+    "ncd/manifold_intervention.py": "2243b30507e34a5b791f5d161c3faa535c90de101ca4309dffc2e295edee2ea8",
+    "ncd/manifold_intervention_experiment.py": "1347690c4ec95533ea19a1646d77db14d9b1f4071f9de137f38e3db17b03e415",
+    "ncd/mechanisms.py": "35f78ebe2e2051a15d0b22e145b702146d169e53e4dce349c8bdc9276b389624",
+    "ncd/mechanism_cegis_proof.py": "e68080c7a2ee58e87420bf03e7adeeef26f6d776c2d47db0f32ed29db91c9091",
+    "ncd/mechanism_pairs.py": "48d1c686623a372a9bd0e6790b62740f9fd3a83d63d5e2a0d4c253ba35c5e2f2",
+    "ncd/mechanism_search_experiment.py": "34f6e6c6e4cdeffb392b07551e67532750a04963f5d2caf9c5d93fcedb03d2d5",
+    "ncd/metrics.py": "10f6b7e33e89ea7c3dc4580f75820b07e082580a9d207b781c1cc4dba26606cb",
+    "ncd/model.py": "ee732b8f06c153951e6f3e559c9511591e8e6e632d815766c5192aff50bb3602",
+    "ncd/multiswitch_lower.py": "de57e15fadcb3141b6e24ad1d02cb7977ca083fcb604ed3701537288242b4e97",
+    "ncd/multiverse.py": "9746dd2c23015e5138c65398065dfc20d1bb34cc8aaca2f5109e326eb1f19883",
+    "ncd/neural_sites.py": "84beb9302d3c602e79387b9aae591592c81a3b87fcd61d43e70562a070f991f8",
+    "ncd/node_context_experiment.py": "76b0c3d1b2c9e639a884b66ce40ec5c7d39bdc9dc3783a71cae27e9798a2a471",
+    "ncd/node_context_graph.py": "0ab3ff815813ae543f052866390223979e8b57dfc94ce254317e4b8fbde12298",
+    "ncd/nonlinear_action_closure.py": "bbf7f99411756571945c04220d0854720c3d0efaba47304b2e9a033c4c8f050a",
+    "ncd/numeric_audit.py": "aa87febe573de92535819384e0829e4e4c78f3fe9e57935ab62858c04de7c611",
+    "ncd/numeric_experiment.py": "b69003efe46161ffee514508dd6e4b1f69de2aeaa5d1abe25b40f62d8c99e1c8",
+    "ncd/numeric_mapping.py": "253f19692eb1238b738aa26e451dd29cd63ef67a28f9b0ea2be94298e2207214",
+    "ncd/oblique_mapping.py": "95be5ae75551a4ba0a00fbda410d37550fa977e57466f98e471e23d439fb67d2",
+    "ncd/one_step_packing_capacity.py": "f26425a8df2fa30246108a59e63eef6daa6a53b7e947b7e5a5501089a52ae951",
+    "ncd/original_confirmation.py": "6775c265f20b520bc7d5db4018e63efb8b5ebfa8fbbd9602db12a7412ec3ad55",
+    "ncd/original_confirmation_worker.py": "2e7050b162f12e65df267b1c25f899ea4a0bc55e876aeeb1c7d0bd425d2e9f5d",
+    "ncd/original_proof_workflow.py": "7326367f758389183b74d2316672eacda2dc18656537d813538192102715e4e5",
+    "ncd/pair_consistent_experiment.py": "404887d21e0213ba96dc63071f57efd4f4ccd2bf30833791d6549d66b22f83b8",
+    "ncd/pair_consistent_graph.py": "dcb4fb6f229340a79f532acc22757410b1c5f706c5528b5a28fb555c3baf7fc2",
+    "ncd/phase_initial_handoff.py": "936b750d56b2516b4398807f0a81b8e9d4b711e39061caa221173398d581db71",
+    "ncd/program_trace.py": "6426a5d04ec225563f003755c07f1466834fd36b42d43f73194f81886e9d5ce4",
+    "ncd/proof_compatibility.py": "24e336b4dff55087f4afcfb140a837b3c0be9971658f25bcffe1a6ebe9b98e67",
+    "ncd/proof_compatibility_runner.py": "0b1eccc88915140b7b34fbaf6bad56c02a9b206a3ff8db32fd98fc9fdec568df",
+    "ncd/proof_intervals.py": "8838c1141070672ca69775520d81f87dc56a93678e3d818c75235ed2c3981f21",
+    "ncd/proof_kernel_runner.py": "17c7be4a2716ef0f24ff5ad0b04479242cfe2e542990ac0ff2f7747370381899",
+    "ncd/proof_process.py": "d538785753e6d7e85cf5bf13ac11088b413bbd24ea873ea0083a84786fe0932c",
+    "ncd/proof_registry.py": "a40d758077f9d9d532f220e6e0a2aaa905d5a7a1b4ea0f702591fd989c058b01",
+    "ncd/proof_registry_runner.py": "789045f7f380a4b5b9ea34d747faac82fdd9332b0feb7a419d6d74a6570a42a7",
+    "ncd/pysr_baseline.py": "1b3bf5699e232c143adec2752606476d021ef550fa6d778eecd19e437487ba97",
+    "ncd/pysr_worker.py": "4aced478cba9f888f04330f33f0d3112b5c0fd49c1bdc482a6e2129c5c53ba30",
+    "ncd/quadratic_intervention_experiment.py": "b0d3bc233dd06ec3da224baa19ba5aee980f29f7447b9824738bdf48b9a3983e",
+    "ncd/quadratic_readout.py": "76d6c10698838bc8e7b7042e7dd8cc0c10661853e88e42a9f50e951a8338d2d6",
+    "ncd/rational_polytope.py": "a03376c7bfdd64f005e91ba82bbceb939aa03a2b3979b0b90dc82cae9dc993bc",
+    "ncd/raw_numeric_experiment.py": "377617104f6033e8f90b404be2ebf9527c67b4e9c65b1593141c758619593fcc",
+    "ncd/raw_program_trace.py": "75071a2626e3f5fe8271fd1973aa17b39b8a11d6a052672b1b173ac9b1c9e6a4",
+    "ncd/reachable_two_stage.py": "b447823c8fcea5be706e2d119b7d37203532f5eaf32fc658a3162604577122f8",
+    "ncd/relational_experiment.py": "4db14f1d2ff425aca926dabd1bdf946a5c81ed145b297927ea715cd8f0dd634d",
+    "ncd/relational_graph.py": "50020c10ea0a6c0d1d346ae042e21ad787f7741eaafe549dd1d7ca267358571e",
+    "ncd/report.py": "66286b9695a0cdb49f46cbccb3c65676624c10d7e63224a0684df5fab44d467a",
+    "ncd/research_runtime.py": "775ba2e2e454ea43b186d55dc88ceb5c9a80ceb208eb92d46e50c68d879bdbbf",
+    "ncd/research_suite.py": "3f3da5ad3ac5f76cd3f355538298392ee95836a8e84e456f412517d0e91f0625",
+    "ncd/research_verify.py": "de82d6d55d2ced6904218f96879ab4677bbcd322384d94d2941df43f5c06ef44",
+    "ncd/rules.py": "772dfd5131bffc5cdb65e5af9f9af037833638325ac6e21764cd2e8b75b511ce",
+    "ncd/scm_error_certificate.py": "a3ac92cac3fcc3be7b15b6914ed73851b520909657dff36bfc3e52e96fef64cc",
+    "ncd/separable_product_bounds.py": "46a8d67df362165ea11bf47f0bd438b34da5f6495fc86b20e9c5cecd01725562",
+    "ncd/shifted_realization.py": "512126c2767bec4cb5bd1681080f04df1115fe2cc431180e53238ed9e74c9b6e",
+    "ncd/statistics.py": "b08101b0973592a2dfc8343ad888d45471035328a5ef6e9106251de3dd25ab84",
+    "ncd/symmetric_skeleton_experiment.py": "36b76f289f13d0fbbd4e857c54fab59c72daa4bc0063999f5bf8aa9b70b4a0a2",
+    "ncd/symmetric_skeleton_program.py": "7ebd3b03d70c9f44048039199851e543ae3cc748094e0c15c6ff0b0432d1074d",
+    "ncd/synthesis.py": "461b34322a3c93f506b0554e8295774455a7646d74022cb13126771644c55491",
+    "ncd/traces.py": "c613a2fd492b8ddb99c1033f4497f659666274a418b27ea6650ac491d37a556e",
+    "ncd/traffic_realization.py": "bfc102e0ce287857bd078c6b828288a650a0e98d1e698373a74bef8bfac8afdf",
+    "ncd/trained_mixed_realization.py": "deec954b7a3516fa7ba0d33901c5fe957df941a52203348a8964553b6541299f",
+    "ncd/trained_nonlinear_realization.py": "37c39fa4adcf9735ef8055586d9f1ac4dc7d4fede0ed85c6197d7e56750ecb84",
+    "ncd/transition_consistency_lower.py": "e408ed4c3da7d834534e68b82541b16e69ff3e1b81a8efc85fff01c935df7188",
+    "ncd/transition_overlap_lower.py": "39bd794671ec6488f18d6cc68af7b24a71c452f10b6d27a36a7cd4c78cdd1d56",
+    "ncd/verify.py": "c2854c7cf74bb7f3ebdcc1763f37e3d9414f6929fc078d7a8c938e2942d19833",
+    "ncd/weighted_grid_optimality.py": "bf403a056e1eb9aa84097a49a50ae39ea136f788c41dbf48767215dfd7ad869c",
+    "ncd/worlds.py": "48801c89a8914adba782c519780e3a253d6043a8d91ffa99186f886a0743aa39",
+    "ncd/__init__.py": "e83cea4d4ca3703348f040cbac72cd9610dce8039249c13bc20514e708347b2f",
+    "ncd/__main__.py": "8134dc71036ab6fef7cb605ec59b400b2864890fc00526f9763c447e2937e295"
+  },
+  "historical_context": {
+    "snapshot": "validation/source_snapshot_059",
+    "environment": "validation/proof_extensions_env_v1",
+    "snapshot_sha256": {
+      "pyproject.toml": "235597204f6a1239cabbeb0dbd6f1bb6d53eee7e06c718e3b38cc4da39eb9ea5",
+      "docs/FULL_REQUIREMENTS.md": "04d608c94e83c8b77adaca81fcf4942826d3aa7d5d61152d6e895b010fcc724c",
+      "ncd/abstract_reachability.py": "a3bd6fac15197a6f904ca9725206b5bdc62fc8bd799eb20fa6748a18f24b3519",
+      "ncd/active_end_to_end_experiment.py": "206b255b6e31d6328dfe750ac87fcb251c68ec84687f84df7a82b59022cb4b50",
+      "ncd/active_intervention_experiment.py": "713314560b328515444668ae501dc7bf431faf3f58b087063c13d8c2fe49da79",
+      "ncd/active_intervention_graph.py": "b132c5be445e85293a8b410b9303b6a30b4e9454736ba6d149cd83313d0b0d35",
+      "ncd/active_search.py": "cae2c9c5d2fff0d8340a7229754df101d1a41e0bf8e0d903a483abe3d4640096",
+      "ncd/affine_observability.py": "b438c243120db03ed62cff44e101d1f3e04815e1a1b7f48f1fbe643e95a394a5",
+      "ncd/alignment.py": "2a5165c82144f2698673872cdbb71fdab185f513928c60547179eb2b932620b9",
+      "ncd/antisymmetric_direction_experiment.py": "dc48030e8695b18046b791f087501f9a5ca888f02743855f8fd9f1e19ae8355e",
+      "ncd/antisymmetric_direction_graph.py": "d385bb7e6ace67699fda354413df90c6cca5066129e0ffe48629cc01ffeecff6",
+      "ncd/approximate_finite.py": "3b0fa8579ebe13c5a58304698a5a1e6772b3d0062f1ba01abb971cbbd3b68f69",
+      "ncd/automatic_grid_realization.py": "c8e9fed8246c59d745f55746e8891e5ed19e3aa817350a590a1cb0b5d31980c4",
+      "ncd/baselines.py": "baef5d73a6fbceaa0553f456fb63becfff03508e862203fa36f75a590bbdac4e",
+      "ncd/behavioral_cover.py": "94388d0e1d2a1447165eab23b4f356d4ee21e9b41ab4bf964231f2d233d48492",
+      "ncd/causal_feature_guidance.py": "30865962f7de618632fcefb9d0439b32c8e134db66e1bf2b62ec5192393b8794",
+      "ncd/causal_guided_experiment.py": "b553f0ba567c775de65c6784471478d68b252d825a4c3fdf63a72c236d67e136",
+      "ncd/cdir.py": "147e24b1e0a86be97f96fb6895b9bdea7f8b0cf98c864961766710336c30e469",
+      "ncd/certified_experiment.py": "c8dfd6d6cf71927cf3cc9be23004b247830599d269059313895606d04c2885a8",
+      "ncd/certified_finite.py": "0fe8283ee5a81a1022681ebe1727ca0b6b6cb0d62fc643f5c7d62c26ed46e7e7",
+      "ncd/cli.py": "500d0af6e318d1861c34c329767169a604b331e8f6e4a33b6627a41ff8aefcff",
+      "ncd/collateral_intervention_experiment.py": "aeb8124a9d29c4f556e235e61b3092ad3c68e61280485e6f37e0dc52edec6984",
+      "ncd/collateral_tangent.py": "cb2fa0e035682918ea2a5c8fe41e33ed4bb11167997874a7b8e2022cf00daaa8",
+      "ncd/continuous_closed_realization.py": "8f44051470298111ffd425bb773533f3a2b0baa7b89f8ed496d4f1ce5537f2e4",
+      "ncd/continuous_compositional_realization.py": "d8e1cf4f7f1f49ef01cf57b5d595990ad99adb1530ec3af74f371af092b20542",
+      "ncd/continuous_cover.py": "a21f4e92cc395b38dd3ff64a8ccebf46c5f604f5c50acc6d37f8a56359cbcd4d",
+      "ncd/continuous_generic_realization.py": "6463b295d2f6bf77028ebcf7590483daa1c9565dac05860f4351ddd86f97adf3",
+      "ncd/continuous_nonlinear.py": "5b55d9d07c582cd919d64467ac8727e981b362606390de9523595d2d19439844",
+      "ncd/continuous_regions.py": "66d8e32196e277e2bc1d60fd964caab38f95b6cba37cfd62b21d7f28808c282a",
+      "ncd/continuous_scale.py": "689285271f0c4cd3616b5e21ab2f3956abde059a919da7a4d350b15c0733f694",
+      "ncd/continuous_separation.py": "bd1e2a5d2901d5c319dfcd5a0a3bfcd285f23857f58e52b74d73477a88c65aaf",
+      "ncd/correlated_reachability.py": "3132d34478a681ac29ee4ef0e6f81847f4106331e585ef75df7a542a0ee0c306",
+      "ncd/cost_sensitive_graph_experiment.py": "078bdf9ef42370d7553ef339096d83a4bc1a49cc4f8418cdb27fae83e55d56fa",
+      "ncd/counterexamples.py": "848108b107a7b418fdccbd5d2df23a61e8d36b9b762487298d94f27699b31ff8",
+      "ncd/discovery_fidelity_proof.py": "8fcd180057bc0c5ef1dcf334258e786809c9b46da95b8d268d926245f6129339",
+      "ncd/distilled_pc_experiment.py": "4fbb7ea1671dfe0e3837a79bd5c4206405d3c23f9c62d3ed68a41b1a431d0a94",
+      "ncd/distributed_alignment.py": "ffb3f3c9a3d536eb767937d97f5fd39b200ea6eda6ec028497a7ca77245ecc81",
+      "ncd/dsl.py": "016cd52195bbc2a69d8b177b4a0c46a71671b1d2e94bd3ca8bcd79b04aa0e25d",
+      "ncd/dual_grid_reachability.py": "933fd250684f5a9abab1caaae8c538e22c877cf4da928524fb5f4ff56730359e",
+      "ncd/dynamic_packing.py": "e23288fd72b01b534c0391f4a34437913712c60d4f86960903af2e87623e637d",
+      "ncd/end_to_end_local_realization.py": "51096b00c910deb684f843c6abdd9d78760413256c7ff2bbae81fa11d4f8a0cb",
+      "ncd/end_to_end_mechanism_experiment.py": "20f2ae76149adb6794c185079ea0ea58ccc9849813e0281da8c6c3eb6a6b1da3",
+      "ncd/evidence.py": "cba7d93424ab39c9355d9f1a2d38baf4ca2a26d17a021005bf4905f7cb2ae259",
+      "ncd/exact_interval_lower.py": "11dc453cd01cbbddfe38538e0719641a0be6d2cba46993a8cf37b82fde6b179d",
+      "ncd/experiment.py": "3630fc2cf751d48def0c1efd5dfafce56d37c3b11f01c1d856e73ad3cea55bac",
+      "ncd/factorized_graph_experiment.py": "9728273a55425dba11359dc45e133a80c8a59b0153122094dca098632206b87f",
+      "ncd/factorized_graph_program.py": "8ac46da5ec410dafec3ecf8ef64971fb00ac73cd1d817c69b9110c40ac321af7",
+      "ncd/factorized_node_context_experiment.py": "3b1024080ab7456a5540b9f5621afd0318b81fd9d79af69957674b2c63f28a7f",
+      "ncd/factorized_node_context_graph.py": "41fecea62fc71caaa911663dc3461a3580111f888aa96c15245868488e7459b8",
+      "ncd/finite_neural.py": "30ac67fc3f204598cfbe0108e5efe0e8c091bada28a78b3e84224486aa2faa78",
+      "ncd/fixed_numeric_mapping.py": "c129a679c750fd977e85240906b14dd08151ccbac4150c65ea00d587ca31bf8c",
+      "ncd/frozen_mechanism_proof.py": "af508660639be8a7a3cb112cbc78975c900e7daceba7d9cd6ff31aea5ec7cafc",
+      "ncd/full_project.py": "20f9687ea960828aaefbf2ac77b30eca1ebb8a55912e30e2e66d76930c728b86",
+      "ncd/functional_support.py": "acc9410f5f09e57629c50bba5605acfdac6e41a7d533e2a2670e18812a5a99ee",
+      "ncd/gaussian_identifiability.py": "17c312a61d2690cb2c115aadad7d2fb6b23581734fc82a8fc1d971bd24c1b6b3",
+      "ncd/graphs.py": "119ef2757b9200c05b3f2fddebf898bf189e4844e6010d29abf61480764085fc",
+      "ncd/graph_decoder_experiment.py": "3fe2c53dc832cebb0b66b023d76fd82f575003a7ab53f21e4b793a960b0e0c28",
+      "ncd/graph_experiment.py": "b66ee4b08fba66dd494f18128de066a0feb9e7e2b1d3373c0f0073c9e7ff9ecd",
+      "ncd/graph_global_experiment.py": "ae4bc1165bc9344e635da9beecc76fa965a934e61cfe4634d71fbdf767ef4dc7",
+      "ncd/graph_global_program.py": "d58c99077df9387d2d4666455a1bfc604392037eeaac08ed2531f3fdc4a25012",
+      "ncd/graph_model.py": "de044407e023a4e575cdb7781bd1e893d277fd87a1058e1f6c866fc3805b0873",
+      "ncd/graph_program_features.py": "14f7335baeb35815fdc395c2dc6c310b641cbfee0ee9651d07fb170b74c6bb64",
+      "ncd/guided_experiment.py": "6e27cbff340aebb56e85ae60d143c55c125ec7413494cf5424d9328f2a9ef6fc",
+      "ncd/guided_synthesis.py": "b1cd6dd51021d21d3f986310f885dd0358b44d85928ed775e89da9ead39560c6",
+      "ncd/initial_grid_synthesis.py": "5f1479c7f55a7ee056b390cc6da0091211071c565f9827cfe2e46921a7f3d962",
+      "ncd/integer_grid_refinement.py": "70be99a73ac03adf84d848ceedc0fc2af6caf3af9f6c59b875a37cd808599ac9",
+      "ncd/interchange_proof.py": "418532c998f9127e9070170d2027be0947c33672a37a7f2d15134aa90299794f",
+      "ncd/interventional_support.py": "c68600d0525e726a94111f87ca5187c365f83ff62a52d32458215d9f9eb98108",
+      "ncd/invariant_slice_lower.py": "b7a1ec5e52d2041ad69da0c9a024bfbc51be0480189af790fa01069a38f54b80",
+      "ncd/io.py": "05bbd8286f973fd5e51c8bba0ed14f76f0b3245887dede5f9e87d1b2ac77df36",
+      "ncd/joint_alignment.py": "c5af9176651a5f224269e59bac85f653665e5a37ae68e89650917f38715c88a6",
+      "ncd/joint_experiment.py": "f3c7fdf3715926e60b347063ba5e432e49f1197598b188c43891195e3a28b04b",
+      "ncd/joint_phase_initial_handoff.py": "8bb9afdc4e0d86b1d40ff7c8d04891fe81d457710cf977babc5310686416c70a",
+      "ncd/manifold_intervention.py": "2243b30507e34a5b791f5d161c3faa535c90de101ca4309dffc2e295edee2ea8",
+      "ncd/manifold_intervention_experiment.py": "1347690c4ec95533ea19a1646d77db14d9b1f4071f9de137f38e3db17b03e415",
+      "ncd/mechanisms.py": "35f78ebe2e2051a15d0b22e145b702146d169e53e4dce349c8bdc9276b389624",
+      "ncd/mechanism_cegis_proof.py": "e68080c7a2ee58e87420bf03e7adeeef26f6d776c2d47db0f32ed29db91c9091",
+      "ncd/mechanism_pairs.py": "48d1c686623a372a9bd0e6790b62740f9fd3a83d63d5e2a0d4c253ba35c5e2f2",
+      "ncd/mechanism_search_experiment.py": "34f6e6c6e4cdeffb392b07551e67532750a04963f5d2caf9c5d93fcedb03d2d5",
+      "ncd/metrics.py": "10f6b7e33e89ea7c3dc4580f75820b07e082580a9d207b781c1cc4dba26606cb",
+      "ncd/model.py": "ee732b8f06c153951e6f3e559c9511591e8e6e632d815766c5192aff50bb3602",
+      "ncd/multiswitch_lower.py": "de57e15fadcb3141b6e24ad1d02cb7977ca083fcb604ed3701537288242b4e97",
+      "ncd/multiverse.py": "9746dd2c23015e5138c65398065dfc20d1bb34cc8aaca2f5109e326eb1f19883",
+      "ncd/neural_sites.py": "84beb9302d3c602e79387b9aae591592c81a3b87fcd61d43e70562a070f991f8",
+      "ncd/node_context_experiment.py": "76b0c3d1b2c9e639a884b66ce40ec5c7d39bdc9dc3783a71cae27e9798a2a471",
+      "ncd/node_context_graph.py": "0ab3ff815813ae543f052866390223979e8b57dfc94ce254317e4b8fbde12298",
+      "ncd/nonlinear_action_closure.py": "bbf7f99411756571945c04220d0854720c3d0efaba47304b2e9a033c4c8f050a",
+      "ncd/numeric_audit.py": "aa87febe573de92535819384e0829e4e4c78f3fe9e57935ab62858c04de7c611",
+      "ncd/numeric_experiment.py": "b69003efe46161ffee514508dd6e4b1f69de2aeaa5d1abe25b40f62d8c99e1c8",
+      "ncd/numeric_mapping.py": "253f19692eb1238b738aa26e451dd29cd63ef67a28f9b0ea2be94298e2207214",
+      "ncd/oblique_mapping.py": "95be5ae75551a4ba0a00fbda410d37550fa977e57466f98e471e23d439fb67d2",
+      "ncd/one_step_packing_capacity.py": "f26425a8df2fa30246108a59e63eef6daa6a53b7e947b7e5a5501089a52ae951",
+      "ncd/original_confirmation.py": "6775c265f20b520bc7d5db4018e63efb8b5ebfa8fbbd9602db12a7412ec3ad55",
+      "ncd/original_confirmation_worker.py": "2e7050b162f12e65df267b1c25f899ea4a0bc55e876aeeb1c7d0bd425d2e9f5d",
+      "ncd/original_proof_workflow.py": "7326367f758389183b74d2316672eacda2dc18656537d813538192102715e4e5",
+      "ncd/pair_consistent_experiment.py": "404887d21e0213ba96dc63071f57efd4f4ccd2bf30833791d6549d66b22f83b8",
+      "ncd/pair_consistent_graph.py": "dcb4fb6f229340a79f532acc22757410b1c5f706c5528b5a28fb555c3baf7fc2",
+      "ncd/phase_initial_handoff.py": "936b750d56b2516b4398807f0a81b8e9d4b711e39061caa221173398d581db71",
+      "ncd/program_trace.py": "6426a5d04ec225563f003755c07f1466834fd36b42d43f73194f81886e9d5ce4",
+      "ncd/proof_intervals.py": "8838c1141070672ca69775520d81f87dc56a93678e3d818c75235ed2c3981f21",
+      "ncd/pysr_baseline.py": "1b3bf5699e232c143adec2752606476d021ef550fa6d778eecd19e437487ba97",
+      "ncd/pysr_worker.py": "4aced478cba9f888f04330f33f0d3112b5c0fd49c1bdc482a6e2129c5c53ba30",
+      "ncd/quadratic_intervention_experiment.py": "b0d3bc233dd06ec3da224baa19ba5aee980f29f7447b9824738bdf48b9a3983e",
+      "ncd/quadratic_readout.py": "76d6c10698838bc8e7b7042e7dd8cc0c10661853e88e42a9f50e951a8338d2d6",
+      "ncd/rational_polytope.py": "a03376c7bfdd64f005e91ba82bbceb939aa03a2b3979b0b90dc82cae9dc993bc",
+      "ncd/raw_numeric_experiment.py": "377617104f6033e8f90b404be2ebf9527c67b4e9c65b1593141c758619593fcc",
+      "ncd/raw_program_trace.py": "75071a2626e3f5fe8271fd1973aa17b39b8a11d6a052672b1b173ac9b1c9e6a4",
+      "ncd/reachable_two_stage.py": "b447823c8fcea5be706e2d119b7d37203532f5eaf32fc658a3162604577122f8",
+      "ncd/relational_experiment.py": "4db14f1d2ff425aca926dabd1bdf946a5c81ed145b297927ea715cd8f0dd634d",
+      "ncd/relational_graph.py": "50020c10ea0a6c0d1d346ae042e21ad787f7741eaafe549dd1d7ca267358571e",
+      "ncd/report.py": "66286b9695a0cdb49f46cbccb3c65676624c10d7e63224a0684df5fab44d467a",
+      "ncd/research_runtime.py": "775ba2e2e454ea43b186d55dc88ceb5c9a80ceb208eb92d46e50c68d879bdbbf",
+      "ncd/research_suite.py": "3f3da5ad3ac5f76cd3f355538298392ee95836a8e84e456f412517d0e91f0625",
+      "ncd/research_verify.py": "de82d6d55d2ced6904218f96879ab4677bbcd322384d94d2941df43f5c06ef44",
+      "ncd/rules.py": "772dfd5131bffc5cdb65e5af9f9af037833638325ac6e21764cd2e8b75b511ce",
+      "ncd/scm_error_certificate.py": "a3ac92cac3fcc3be7b15b6914ed73851b520909657dff36bfc3e52e96fef64cc",
+      "ncd/separable_product_bounds.py": "46a8d67df362165ea11bf47f0bd438b34da5f6495fc86b20e9c5cecd01725562",
+      "ncd/shifted_realization.py": "512126c2767bec4cb5bd1681080f04df1115fe2cc431180e53238ed9e74c9b6e",
+      "ncd/statistics.py": "b08101b0973592a2dfc8343ad888d45471035328a5ef6e9106251de3dd25ab84",
+      "ncd/symmetric_skeleton_experiment.py": "36b76f289f13d0fbbd4e857c54fab59c72daa4bc0063999f5bf8aa9b70b4a0a2",
+      "ncd/symmetric_skeleton_program.py": "7ebd3b03d70c9f44048039199851e543ae3cc748094e0c15c6ff0b0432d1074d",
+      "ncd/synthesis.py": "461b34322a3c93f506b0554e8295774455a7646d74022cb13126771644c55491",
+      "ncd/traces.py": "c613a2fd492b8ddb99c1033f4497f659666274a418b27ea6650ac491d37a556e",
+      "ncd/traffic_realization.py": "bfc102e0ce287857bd078c6b828288a650a0e98d1e698373a74bef8bfac8afdf",
+      "ncd/trained_mixed_realization.py": "deec954b7a3516fa7ba0d33901c5fe957df941a52203348a8964553b6541299f",
+      "ncd/trained_nonlinear_realization.py": "37c39fa4adcf9735ef8055586d9f1ac4dc7d4fede0ed85c6197d7e56750ecb84",
+      "ncd/transition_consistency_lower.py": "e408ed4c3da7d834534e68b82541b16e69ff3e1b81a8efc85fff01c935df7188",
+      "ncd/transition_overlap_lower.py": "39bd794671ec6488f18d6cc68af7b24a71c452f10b6d27a36a7cd4c78cdd1d56",
+      "ncd/verify.py": "c2854c7cf74bb7f3ebdcc1763f37e3d9414f6929fc078d7a8c938e2942d19833",
+      "ncd/weighted_grid_optimality.py": "bf403a056e1eb9aa84097a49a50ae39ea136f788c41dbf48767215dfd7ad869c",
+      "ncd/worlds.py": "48801c89a8914adba782c519780e3a253d6043a8d91ffa99186f886a0743aa39",
+      "ncd/__init__.py": "0cfb3195dfac0f26eaa3741fd72bb1a7ce6e301b24dd760453554cfb5448559a",
+      "ncd/__main__.py": "8134dc71036ab6fef7cb605ec59b400b2864890fc00526f9763c447e2937e295",
+      "proof_extensions/feature_collision.py": "dd433d919e87e9d968cb8d1d51bb00dd2fce8f5e51385d6a6572207a562fa149",
+      "proof_extensions/finite_sample_boundary.py": "e9c2be3a1f486802913504066c105fb9aa75158470052854863306a9f6e60904",
+      "proof_extensions/frozen_graph.py": "b8c570981553e16d13926d63c57b34a9fe2cf91ee465c17d0f9cd400a353743f",
+      "proof_extensions/graph_candidates.py": "cf0a107ec29d43bcfd86f7f6bcd878010e02bec6f170b09b6d270ccde6171dec",
+      "proof_extensions/scm_propagation.py": "873d75892aced9038225894b3c2950c62c44c4fdb9f1401fd22454a4ba52f57a",
+      "proof_extensions/statistical_frontend.py": "80317e5ba32e292b446cd52197316cf231d291fc414add6a6aa77010d50196b4",
+      "proof_extensions/statistics_rule.py": "661388c4411092f345f08c82d6cc73146617488f13d433be96f5dd7392fecaef",
+      "proof_extensions/__init__.py": "e2e27e8348fa9e64ea4ebf41d5c4201906177fd1f9d1580945ee2b1ab8c8ffa1",
+      "proof_extensions/__main__.py": "92325e09bbb5738d82e487a441959a94b3bbbc1977ef0f9f36c6dcc1b285a158",
+      "scripts/active_end_to_end_acceptance.py": "638a1c9daa6863cfdd0ec70b97e5f4d60ebb097573e900ad06b99dda30b3757b",
+      "validation/original_confirmation_protocol.json": "ac8e3bd7d7e29d4b6e818165994c3a096e3b3a0063de280163493de5d8dd1c44",
+      "validation/original_proof_extensions_protocol.json": "d404df30492d9525a822d7df0e854bb426e35e60e27b06a8ef1956f4d10cd803",
+      "validation/original_proof_milestone_protocol.json": "456c46885fed320f678b5bd22c407e2df9b7b584645d070f5e580f09fef2dc7e",
+      "proof_workbench/bounded_mdl.py": "de43dc42a401a93186355b454eb27f25ca860071116235d112c11d3190b82324",
+      "proof_workbench/mean_information_boundary.py": "8d6ce889ccdda84ebbeb0b758335742866c720ace2237370f82675e06ed6d130",
+      "proof_workbench/piecewise_mechanism.py": "0ac39febfc1e8b04ad6f5090066247650a1f18b21907e4737a131a7fc28e7b08",
+      "proof_workbench/polynomial_semantics.py": "e012e0a58ca0827c845e5d4ce58886422e64a64cf9a00f96616dc76c2c3576c5",
+      "proof_workbench/__init__.py": "4ddb3f82f76291db1eecb5c01ad3063095f9c753e4466ee9486715ae0a3466f6",
+      "proof_workbench/__main__.py": "c04e0314d2eef4309faf15796bef12dcc36a2e1fa56ab15f2f4a7351d94eeb19",
+      "validation/original_proof_workbench_protocol_v1.json": "17460f4410bae13659607fd9a4106632347bb83857a0e63cc22273820a529a8b",
+      "normalizer_proof/__init__.py": "0025c76cb02949eddbf7bc48be46f88ecb85297cf88b3c762dea76a85644ae7b",
+      "normalizer_proof/__main__.py": "178ce2a4a87ad2ee3342a1673addf3162cefdc2a4790c5e300f52fb6187791f9",
+      "normalizer_proof/audit.py": "77aefce4a31cc98a64925c157972c1ee5d2b66b84ff47f306a9c23149e9e4aea",
+      "normalizer_proof/realization.py": "3ed6718967eb1df664cf91526934bf7d823405edb52de8bf549a499bd0ea16bd",
+      "validation/normalizer_proof_protocol_v1.json": "30d1585c54493dccc06b287ac8a44cc90276f7bbd5fee31e44d142400861e82d",
+      "neural_ssa_proof/__init__.py": "2ed4467b9bd0b66d32fa26ed793d79f45f8a2c83222d57c45aa6113014c53b2c",
+      "neural_ssa_proof/__main__.py": "b95b09aa9b2eb4c0cdf870de7b650447ab130fd029ac798cbaa8d0d33ea99848",
+      "neural_ssa_proof/audit.py": "296071118febbfd1edd91b705c1812c60637e95b96163399f21a3362ac722e90",
+      "neural_ssa_proof/compiler.py": "07fcce14091e7b336a9dea6827b8c1d8bbc4ba474dbc9739e4169eb9ae821c55",
+      "neural_ssa_proof/runtime.py": "5f2837ba3ffa250ae8e1b44d9e3e8ac8bc13e62882c9df154ca812f29b89fbc9",
+      "neural_ssa_proof/verification.py": "6de5e335273fcac88206d520af7a59233a8b1cee704daf9f2fa1cec8cef8f4af",
+      "validation/neural_ssa_protocol_v1.json": "07900abe5294ca0fe148530a09f77900e5c8a00e4d723b436e581e6bce2d51db",
+      "neural_boundary_proof/__init__.py": "89482869cfe8461ac60427ca6f84ae3417ec18bae2a989fe8fc81013da54cb8f",
+      "neural_boundary_proof/__main__.py": "e55a45aefc92a4f6257d4fc05a8ace3b72ac3d9c44c3db3b5338deccf07e3f64",
+      "neural_boundary_proof/boundary.py": "4cc28566c2518f1ea7f0ab89973dec8f2e0a1facf1750ebe98a56412cd24f58d",
+      "validation/neural_boundary_protocol_v1.json": "a5fe0d6ccb020699db9963a51b2eb87833f36eba95ed8c6c10d00feeacbbbe9c"
+    },
+    "inference_threads": 6,
+    "thread_scope": "historical frozen inference/candidate replay only; no neural training performed; new confirmation training remains two threads"
+  },
+  "output": "runs/original_proof_registry_v4r1",
+  "jobs": [
+    {
+      "id": "milestone",
+      "kind": "historical_core",
+      "artifact": "runs/original_proof_milestone_v1",
+      "artifact_sha256": "ee6069469a966169ffc71f8d9321682b8fb2f150d553d4c5f338c7dd597fb496",
+      "related_claims": [
+        "R0.observational_unique_direction",
+        "R0.uniform_finite_sample_direction",
+        "R4.program_fidelity",
+        "R10.mechanism",
+        "R13.reproduction"
+      ],
+      "original_claim_closed": false
+    },
+    {
+      "id": "extensions",
+      "kind": "historical_extensions",
+      "artifact": "runs/original_proof_extensions_bundle_v1/manifest.json",
+      "artifact_sha256": "4056bc40b4abad33b57cfe63adb30a71e4a1484107b484febe1b32324edd02cc",
+      "related_claims": [
+        "R0.equivalence_contract",
+        "R2.variable_equivariance",
+        "R4.program_fidelity",
+        "R10.intervention_distribution"
+      ],
+      "original_claim_closed": false
+    },
+    {
+      "id": "workbench",
+      "kind": "historical_workbench",
+      "artifact": "runs/original_proof_workbench_bundle_v1/manifest.json",
+      "artifact_sha256": "a84ec013c9a2f0835e560a579cf0c8fd13c66a93fb25ad83a75110ded74feb95",
+      "related_claims": [
+        "R5.interchange",
+        "R12.semantic_equivalence",
+        "R12.shortest_unique"
+      ],
+      "original_claim_closed": false
+    },
+    {
+      "id": "normalizer",
+      "kind": "historical_normalizer",
+      "artifact": "runs/actual_normalizer_composition_v1/manifest.json",
+      "artifact_sha256": "679e5fa874865dcfa4241a49699592b188820f0a3086c2e0e08455a1c43adb58",
+      "related_claims": [
+        "R4.program_fidelity",
+        "R5.intermediate_numeric",
+        "R5.composition"
+      ],
+      "original_claim_closed": false
+    },
+    {
+      "id": "binary_exact_equality",
+      "kind": "exact_polynomial",
+      "left": {
+        "op": "mul",
+        "args": [
+          {
+            "op": "mul",
+            "args": [
+              {
+                "op": "sub",
+                "args": [
+                  {
+                    "op": "add",
+                    "args": [
+                      {
+                        "op": "constant",
+                        "value": 0.1
+                      },
+                      {
+                        "op": "constant",
+                        "value": 0.2
+                      }
+                    ]
+                  },
+                  {
+                    "op": "constant",
+                    "value": 0.3
+                  }
+                ]
+              },
+              {
+                "op": "constant",
+                "value": 1.152921504606847e+18
+              }
+            ]
+          },
+          {
+            "op": "var",
+            "index": 0
+          }
+        ]
+      },
+      "right": {
+        "op": "mul",
+        "args": [
+          {
+            "op": "constant",
+            "value": 32.0
+          },
+          {
+            "op": "var",
+            "index": 0
+          }
+        ]
+      },
+      "variables": 1,
+      "related_claims": [
+        "R12.semantic_equivalence"
+      ],
+      "original_claim_closed": false
+    },
+    {
+      "id": "binary_nonzero",
+      "kind": "exact_polynomial",
+      "left": {
+        "op": "mul",
+        "args": [
+          {
+            "op": "mul",
+            "args": [
+              {
+                "op": "sub",
+                "args": [
+                  {
+                    "op": "add",
+                    "args": [
+                      {
+                        "op": "constant",
+                        "value": 0.1
+                      },
+                      {
+                        "op": "constant",
+                        "value": 0.2
+                      }
+                    ]
+                  },
+                  {
+                    "op": "constant",
+                    "value": 0.3
+                  }
+                ]
+              },
+              {
+                "op": "constant",
+                "value": 1.152921504606847e+18
+              }
+            ]
+          },
+          {
+            "op": "var",
+            "index": 0
+          }
+        ]
+      },
+      "right": {
+        "op": "constant",
+        "value": 0.0
+      },
+      "variables": 1,
+      "related_claims": [
+        "R12.semantic_equivalence"
+      ],
+      "original_claim_closed": false
+    },
+    {
+      "id": "actual_parent_mechanism",
+      "kind": "pending_piecewise",
+      "artifact": "runs/historical_mechanism0_piecewise_v1/certificate.json",
+      "protocol": "validation/piecewise_mechanism_protocol_v1.json",
+      "protocol_sha256": "b7a1be84c41a5da534e8a274fd7b0fa07ebd13ce5973e26801e2da905d2ea942",
+      "related_claims": [
+        "R4.program_fidelity",
+        "R7.worst_case",
+        "R10.mechanism"
+      ],
+      "original_claim_closed": false,
+      "artifact_sha256": "1e433322cd66e0b3e3c140817c7f4768093a59b032903b5d7ca0f3c4fc43c0d8"
+    },
+    {
+      "id": "full_discoverer_computation",
+      "kind": "full_neural_ssa",
+      "artifact": "E:\\\u5b9e\u9a8c\\neural-causal-decompiler\\runs\\full_neural_ssa_realization_v1\\manifest.json",
+      "artifact_sha256": "c4154e286025fdc83c135f3b8dc9207f568e931a2eb0c8b1844d33bbe7ee7466",
+      "related_claims": [
+        "R4.program_fidelity",
+        "R5.interchange",
+        "R5.intermediate_numeric",
+        "R5.composition",
+        "R12.semantic_equivalence",
+        "R13.reproduction"
+      ],
+      "original_claim_closed": false
+    },
+    {
+      "id": "actual_single_label_boundary",
+      "kind": "actual_label_boundary",
+      "artifact": "E:\\\u5b9e\u9a8c\\neural-causal-decompiler\\runs\\actual_label_swap_boundary_v1\\manifest.json",
+      "artifact_sha256": "2d0aaf5ad8d444d757363c2a1dcd587866689e6216ceced9a22a8a0e47512a6d",
+      "related_claims": [
+        "R2.sample_invariance",
+        "R2.variable_equivariance",
+        "R7.counterexamples"
+      ],
+      "original_claim_closed": false
+    },
+    {
+      "id": "finite_sample_mec",
+      "kind": "finite_sample_mec",
+      "artifact": "runs/finite_gaussian_mec_boundary_v1/manifest.json",
+      "artifact_sha256": "cdf1f3ea9cb7bb44fdade6fdcde47d6fe98e8675e7cbbd49e7c13d6de5ab858e",
+      "related_claims": [
+        "R0.equivalence_contract",
+        "R2.discovery_guarantee",
+        "R9.graph_recovery"
+      ],
+      "original_claim_closed": false
+    },
+    {
+      "id": "joint_noise_boundary",
+      "kind": "joint_noise_boundary",
+      "artifact": "runs/correlated_noise_marginal_boundary_v1/manifest.json",
+      "artifact_sha256": "45a7b7b42a4f36ebd60c99b637320a07e19d991e85b170413de5f74d18c2f6ea",
+      "related_claims": [
+        "R10.noise",
+        "R10.intervention_distribution"
+      ],
+      "original_claim_closed": false
+    },
+    {
+      "id": "gaussian_tail_recovery",
+      "kind": "gaussian_tail_recovery",
+      "artifact": "runs/finite_gaussian_tail_recovery_v1/manifest.json",
+      "artifact_sha256": "a931066ff5e76658cd9dc6b67b93028c1ad0585ba4dc6304c4dfe6a09b84d713",
+      "related_claims": [
+        "R2.discovery_guarantee",
+        "R9.graph_recovery"
+      ],
+      "original_claim_closed": false
+    }
+  ],
+  "worker_seconds": 3600,
+  "memory_bytes": 8589934592,
+  "original_objective_achieved": false,
+  "revision": 2,
+  "original_contract_resolution": {
+    "R2.variable_equivariance": {
+      "original_scope_preserved": true,
+      "native_score_contract": "F(swap(x)) = swap(F(x))",
+      "single_label_contract": "argmax with lowest-index tie resolution must commute with class swap",
+      "label_boundary_included": true,
+      "single_label_counterexample_does_not_refute_native_score_contract": true,
+      "fixed_discoverer_children_do_not_close_all_original_architectures": true
+    },
+    "R9.graph_recovery": {
+      "two_model_gaussian_theory_does_not_close_original_tasks": true,
+      "recovery_probability_is_not_world_accuracy_confidence": true,
+      "all_original_observation_and_intervention_tasks_preserved": true
+    },
+    "R10.intervention_distribution": {
+      "marginal_noise_counterexample_does_not_refute_verified_independent_noise_propagation": true,
+      "actual_parent_and_joint_noise_premises_remain_required": true
+    }
+  },
+  "kernel_context": {
+    "snapshot": "validation/source_snapshot_scoped_theory_010",
+    "environment": "validation/finite_graph_env_v1",
+    "source_sha256": {
+      "finite_graph_chernoff/__init__.py": "09f773190fe63ea9bcd246d42a2636d17205e423d81ef1d03fc4cb1ee7ef2237",
+      "finite_graph_chernoff/__main__.py": "fca2000c805680cb6c4502384e2025c7a7f259f280a6931d7d9c4f3197f26efa",
+      "finite_graph_chernoff/boundary.py": "67a51d575c42ea9fd5e1ceb65c1380c821f2269656f175a7010e81991ed6d221",
+      "finite_graph_proof/__init__.py": "6fbf4f7ef980b7f2c91b9164fe9bf4ecff21a754a6d284b7eb605ff9eadfe2c1",
+      "finite_graph_proof/__main__.py": "aa03a54060b5061fb02f957903118c459455cb7578176cb7534c50011326a93e",
+      "finite_graph_proof/boundary.py": "935df584b095f91a0c2ea051c381a4cc95e6b0c9b82c4a3471464db1ed2c340b",
+      "joint_noise_proof/__init__.py": "bd24faae497edbde6c5891bc38aa98b8fc0e3e1a52e90b2dbbd0a50d3ecf1913",
+      "joint_noise_proof/__main__.py": "ef1c205ca4355dded346eb33b517d55df43c276312641c2234bf026495e405f0",
+      "joint_noise_proof/boundary.py": "14a2387ec9dcfe6891515b826c8e14b3ce9a57d884eccbef0c29637d95a90b18"
+    }
+  }
+}

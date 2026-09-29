@@ -1,0 +1,491 @@
+{
+  "protocol": "docs/MANIFOLD_CONSTRAINED_INTERVENTION_PROTOCOL.md",
+  "runs": [
+    {
+      "seed": 3393,
+      "replayed": true,
+      "winning_sites": [
+        "representation",
+        "head_linear",
+        "head_tanh"
+      ],
+      "random_control_winning_sites": [
+        "representation",
+        "head_linear",
+        "head_tanh"
+      ],
+      "targeted_rule": true,
+      "collateral_rule": false,
+      "random_control_rule": true,
+      "sites": {
+        "representation": {
+          "subspace": {
+            "rank": 8,
+            "explained_variance": 0.9664009873728158,
+            "variance_threshold": 0.95,
+            "hidden_dimension": 196
+          },
+          "methods": {
+            "ordinary_biorthogonal": {
+              "targeted_nmse": 2.6885704005564857,
+              "collateral_nmse": 12.979469584324285,
+              "behavioral": {
+                "pairs": 2048,
+                "all_active_intermediates_executed": 2048,
+                "symbolic_changes": 384,
+                "baseline_agreement": 0.7685546875,
+                "interchange_accuracy": 0.5673828125,
+                "no_intervention_accuracy": 0.66064453125,
+                "informative_pairs": 278,
+                "informative_accuracy": 0.3489208633093525
+              },
+              "diagnostics": {
+                "mean_displacement_norm": 0.5436631787449338,
+                "max_displacement_norm": 3.645872721674146,
+                "biorthogonality_max_error": 1.141448047192739e-15,
+                "write_gram_condition": 145.81284371358456,
+                "max_write_cosine": 0.537126965056316
+              }
+            },
+            "natural_pca": {
+              "targeted_nmse": 1.7811324922184317,
+              "collateral_nmse": 12.430791461230628,
+              "behavioral": {
+                "pairs": 2048,
+                "all_active_intermediates_executed": 2048,
+                "symbolic_changes": 384,
+                "baseline_agreement": 0.7685546875,
+                "interchange_accuracy": 0.5283203125,
+                "no_intervention_accuracy": 0.66064453125,
+                "informative_pairs": 278,
+                "informative_accuracy": 0.1618705035971223
+              },
+              "diagnostics": {
+                "max_constraint_residual": 3.552713678800501e-15,
+                "mean_displacement_norm": 0.9567728745883334,
+                "max_displacement_norm": 5.158911188668721,
+                "minimum_constraint_rank": 1,
+                "maximum_constraint_condition": 8.797750395265696
+              }
+            },
+            "random_subspace": {
+              "targeted_nmse": 5031.698038772101,
+              "collateral_nmse": 4635.434924383766,
+              "behavioral": {
+                "pairs": 2048,
+                "all_active_intermediates_executed": 2048,
+                "symbolic_changes": 384,
+                "baseline_agreement": 0.7685546875,
+                "interchange_accuracy": 0.599609375,
+                "no_intervention_accuracy": 0.66064453125,
+                "informative_pairs": 278,
+                "informative_accuracy": 0.2158273381294964
+              },
+              "diagnostics": {
+                "max_constraint_residual": 3.552713678800501e-15,
+                "mean_displacement_norm": 2.349523190233875,
+                "max_displacement_norm": 16.542414687958814,
+                "minimum_constraint_rank": 1,
+                "maximum_constraint_condition": 5.360103215749705
+              }
+            }
+          }
+        },
+        "head_linear": {
+          "subspace": {
+            "rank": 5,
+            "explained_variance": 0.9707150071543772,
+            "variance_threshold": 0.95,
+            "hidden_dimension": 96
+          },
+          "methods": {
+            "ordinary_biorthogonal": {
+              "targeted_nmse": 6.676861654034928,
+              "collateral_nmse": 18.742928251758343,
+              "behavioral": {
+                "pairs": 2048,
+                "all_active_intermediates_executed": 2048,
+                "symbolic_changes": 384,
+                "baseline_agreement": 0.7685546875,
+                "interchange_accuracy": 0.63525390625,
+                "no_intervention_accuracy": 0.66064453125,
+                "informative_pairs": 278,
+                "informative_accuracy": 0.1366906474820144
+              },
+              "diagnostics": {
+                "mean_displacement_norm": 1.31762962136699,
+                "max_displacement_norm": 11.612370657619014,
+                "biorthogonality_max_error": 9.992007221626409e-16,
+                "write_gram_condition": 20.457807786269854,
+                "max_write_cosine": 0.4774844714325061
+              }
+            },
+            "natural_pca": {
+              "targeted_nmse": 1.69776404995606,
+              "collateral_nmse": 12.477828780227318,
+              "behavioral": {
+                "pairs": 2048,
+                "all_active_intermediates_executed": 2048,
+                "symbolic_changes": 384,
+                "baseline_agreement": 0.7685546875,
+                "interchange_accuracy": 0.48486328125,
+                "no_intervention_accuracy": 0.66064453125,
+                "informative_pairs": 278,
+                "informative_accuracy": 0.24820143884892087
+              },
+              "diagnostics": {
+                "max_constraint_residual": 7.105427357601002e-15,
+                "mean_displacement_norm": 6.859690539778564,
+                "max_displacement_norm": 36.873851161204584,
+                "minimum_constraint_rank": 1,
+                "maximum_constraint_condition": 77.701943073237
+              }
+            },
+            "random_subspace": {
+              "targeted_nmse": 18530.651021749498,
+              "collateral_nmse": 19120.09266360382,
+              "behavioral": {
+                "pairs": 2048,
+                "all_active_intermediates_executed": 2048,
+                "symbolic_changes": 384,
+                "baseline_agreement": 0.7685546875,
+                "interchange_accuracy": 0.59619140625,
+                "no_intervention_accuracy": 0.66064453125,
+                "informative_pairs": 278,
+                "informative_accuracy": 0.15467625899280577
+              },
+              "diagnostics": {
+                "max_constraint_residual": 9.769962616701378e-15,
+                "mean_displacement_norm": 7.177927597084477,
+                "max_displacement_norm": 76.8522359644792,
+                "minimum_constraint_rank": 1,
+                "maximum_constraint_condition": 11.147661663410213
+              }
+            }
+          }
+        },
+        "head_tanh": {
+          "subspace": {
+            "rank": 9,
+            "explained_variance": 0.9555467640012548,
+            "variance_threshold": 0.95,
+            "hidden_dimension": 96
+          },
+          "methods": {
+            "ordinary_biorthogonal": {
+              "targeted_nmse": 2.3426693491037014,
+              "collateral_nmse": 12.51074629724989,
+              "behavioral": {
+                "pairs": 2048,
+                "all_active_intermediates_executed": 2048,
+                "symbolic_changes": 384,
+                "baseline_agreement": 0.7685546875,
+                "interchange_accuracy": 0.5576171875,
+                "no_intervention_accuracy": 0.66064453125,
+                "informative_pairs": 278,
+                "informative_accuracy": 0.3669064748201439
+              },
+              "diagnostics": {
+                "mean_displacement_norm": 1.7441729593313566,
+                "max_displacement_norm": 8.353167543027089,
+                "biorthogonality_max_error": 6.560391826682345e-15,
+                "write_gram_condition": 511.34470983294153,
+                "max_write_cosine": 0.6718077841671438
+              }
+            },
+            "natural_pca": {
+              "targeted_nmse": 1.9044998331294576,
+              "collateral_nmse": 12.51476493013309,
+              "behavioral": {
+                "pairs": 2048,
+                "all_active_intermediates_executed": 2048,
+                "symbolic_changes": 384,
+                "baseline_agreement": 0.7685546875,
+                "interchange_accuracy": 0.6142578125,
+                "no_intervention_accuracy": 0.66064453125,
+                "informative_pairs": 278,
+                "informative_accuracy": 0.11510791366906475
+              },
+              "diagnostics": {
+                "max_constraint_residual": 7.438494264988549e-15,
+                "mean_displacement_norm": 2.083259441115376,
+                "max_displacement_norm": 8.532876658795868,
+                "minimum_constraint_rank": 1,
+                "maximum_constraint_condition": 15.388685639192685
+              }
+            },
+            "random_subspace": {
+              "targeted_nmse": 1426.2765416986306,
+              "collateral_nmse": 1228.709868584467,
+              "behavioral": {
+                "pairs": 2048,
+                "all_active_intermediates_executed": 2048,
+                "symbolic_changes": 384,
+                "baseline_agreement": 0.7685546875,
+                "interchange_accuracy": 0.62646484375,
+                "no_intervention_accuracy": 0.66064453125,
+                "informative_pairs": 278,
+                "informative_accuracy": 0.1366906474820144
+              },
+              "diagnostics": {
+                "max_constraint_residual": 6.217248937900877e-15,
+                "mean_displacement_norm": 3.3588606635855482,
+                "max_displacement_norm": 15.570387345442171,
+                "minimum_constraint_rank": 1,
+                "maximum_constraint_condition": 4.969414551009781
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "seed": 3394,
+      "replayed": true,
+      "winning_sites": [
+        "representation",
+        "head_linear",
+        "head_tanh"
+      ],
+      "random_control_winning_sites": [
+        "representation",
+        "head_linear",
+        "head_tanh"
+      ],
+      "targeted_rule": true,
+      "collateral_rule": true,
+      "random_control_rule": true,
+      "sites": {
+        "representation": {
+          "subspace": {
+            "rank": 8,
+            "explained_variance": 0.9604291772672797,
+            "variance_threshold": 0.95,
+            "hidden_dimension": 196
+          },
+          "methods": {
+            "ordinary_biorthogonal": {
+              "targeted_nmse": 4.056297772610857,
+              "collateral_nmse": 15.023347735613315,
+              "behavioral": {
+                "pairs": 2048,
+                "all_active_intermediates_executed": 2048,
+                "symbolic_changes": 364,
+                "baseline_agreement": 0.78466796875,
+                "interchange_accuracy": 0.55224609375,
+                "no_intervention_accuracy": 0.68896484375,
+                "informative_pairs": 252,
+                "informative_accuracy": 0.3412698412698413
+              },
+              "diagnostics": {
+                "mean_displacement_norm": 0.5021138112078016,
+                "max_displacement_norm": 2.466197646399723,
+                "biorthogonality_max_error": 3.58046925441613e-15,
+                "write_gram_condition": 172.77292530305908,
+                "max_write_cosine": 0.5610346297352806
+              }
+            },
+            "natural_pca": {
+              "targeted_nmse": 1.706648364372777,
+              "collateral_nmse": 13.201803220468348,
+              "behavioral": {
+                "pairs": 2048,
+                "all_active_intermediates_executed": 2048,
+                "symbolic_changes": 364,
+                "baseline_agreement": 0.78466796875,
+                "interchange_accuracy": 0.53515625,
+                "no_intervention_accuracy": 0.68896484375,
+                "informative_pairs": 252,
+                "informative_accuracy": 0.1388888888888889
+              },
+              "diagnostics": {
+                "max_constraint_residual": 1.3322676295501878e-15,
+                "mean_displacement_norm": 0.8568821590463611,
+                "max_displacement_norm": 3.522226749354875,
+                "minimum_constraint_rank": 1,
+                "maximum_constraint_condition": 20.682788051885392
+              }
+            },
+            "random_subspace": {
+              "targeted_nmse": 8296.685074172206,
+              "collateral_nmse": 8489.129424888142,
+              "behavioral": {
+                "pairs": 2048,
+                "all_active_intermediates_executed": 2048,
+                "symbolic_changes": 364,
+                "baseline_agreement": 0.78466796875,
+                "interchange_accuracy": 0.56640625,
+                "no_intervention_accuracy": 0.68896484375,
+                "informative_pairs": 252,
+                "informative_accuracy": 0.15476190476190477
+              },
+              "diagnostics": {
+                "max_constraint_residual": 2.220446049250313e-15,
+                "mean_displacement_norm": 2.0129174930831173,
+                "max_displacement_norm": 12.265566476026663,
+                "minimum_constraint_rank": 1,
+                "maximum_constraint_condition": 5.714347920748356
+              }
+            }
+          }
+        },
+        "head_linear": {
+          "subspace": {
+            "rank": 5,
+            "explained_variance": 0.9673970756256264,
+            "variance_threshold": 0.95,
+            "hidden_dimension": 96
+          },
+          "methods": {
+            "ordinary_biorthogonal": {
+              "targeted_nmse": 5.831381319018545,
+              "collateral_nmse": 15.626090232116546,
+              "behavioral": {
+                "pairs": 2048,
+                "all_active_intermediates_executed": 2048,
+                "symbolic_changes": 364,
+                "baseline_agreement": 0.78466796875,
+                "interchange_accuracy": 0.66748046875,
+                "no_intervention_accuracy": 0.68896484375,
+                "informative_pairs": 252,
+                "informative_accuracy": 0.1349206349206349
+              },
+              "diagnostics": {
+                "mean_displacement_norm": 0.7745277516522417,
+                "max_displacement_norm": 7.771908397880655,
+                "biorthogonality_max_error": 8.881784197001252e-16,
+                "write_gram_condition": 21.753379186094556,
+                "max_write_cosine": 0.44444083239279814
+              }
+            },
+            "natural_pca": {
+              "targeted_nmse": 1.6399894609356445,
+              "collateral_nmse": 13.300763235418257,
+              "behavioral": {
+                "pairs": 2048,
+                "all_active_intermediates_executed": 2048,
+                "symbolic_changes": 364,
+                "baseline_agreement": 0.78466796875,
+                "interchange_accuracy": 0.44384765625,
+                "no_intervention_accuracy": 0.68896484375,
+                "informative_pairs": 252,
+                "informative_accuracy": 0.25793650793650796
+              },
+              "diagnostics": {
+                "max_constraint_residual": 7.105427357601002e-15,
+                "mean_displacement_norm": 4.5295944041158425,
+                "max_displacement_norm": 41.79784247266656,
+                "minimum_constraint_rank": 1,
+                "maximum_constraint_condition": 42.95163395074247
+              }
+            },
+            "random_subspace": {
+              "targeted_nmse": 11098.614988027464,
+              "collateral_nmse": 8295.49205767266,
+              "behavioral": {
+                "pairs": 2048,
+                "all_active_intermediates_executed": 2048,
+                "symbolic_changes": 364,
+                "baseline_agreement": 0.78466796875,
+                "interchange_accuracy": 0.615234375,
+                "no_intervention_accuracy": 0.68896484375,
+                "informative_pairs": 252,
+                "informative_accuracy": 0.12698412698412698
+              },
+              "diagnostics": {
+                "max_constraint_residual": 6.661338147750939e-15,
+                "mean_displacement_norm": 4.666493135085081,
+                "max_displacement_norm": 58.05824284264313,
+                "minimum_constraint_rank": 1,
+                "maximum_constraint_condition": 17.44292839356211
+              }
+            }
+          }
+        },
+        "head_tanh": {
+          "subspace": {
+            "rank": 8,
+            "explained_variance": 0.9591656158440964,
+            "variance_threshold": 0.95,
+            "hidden_dimension": 96
+          },
+          "methods": {
+            "ordinary_biorthogonal": {
+              "targeted_nmse": 3.3732628661397404,
+              "collateral_nmse": 14.602178662133399,
+              "behavioral": {
+                "pairs": 2048,
+                "all_active_intermediates_executed": 2048,
+                "symbolic_changes": 364,
+                "baseline_agreement": 0.78466796875,
+                "interchange_accuracy": 0.62744140625,
+                "no_intervention_accuracy": 0.68896484375,
+                "informative_pairs": 252,
+                "informative_accuracy": 0.1984126984126984
+              },
+              "diagnostics": {
+                "mean_displacement_norm": 0.9876013601640037,
+                "max_displacement_norm": 9.788234311050644,
+                "biorthogonality_max_error": 4.9960036108132044e-15,
+                "write_gram_condition": 204.64955097891644,
+                "max_write_cosine": 0.7031251964875141
+              }
+            },
+            "natural_pca": {
+              "targeted_nmse": 1.8552950008349185,
+              "collateral_nmse": 13.31654466435835,
+              "behavioral": {
+                "pairs": 2048,
+                "all_active_intermediates_executed": 2048,
+                "symbolic_changes": 364,
+                "baseline_agreement": 0.78466796875,
+                "interchange_accuracy": 0.576171875,
+                "no_intervention_accuracy": 0.68896484375,
+                "informative_pairs": 252,
+                "informative_accuracy": 0.12698412698412698
+              },
+              "diagnostics": {
+                "max_constraint_residual": 7.105427357601002e-15,
+                "mean_displacement_norm": 1.6189876673658936,
+                "max_displacement_norm": 12.135348911355191,
+                "minimum_constraint_rank": 1,
+                "maximum_constraint_condition": 41.18312223125565
+              }
+            },
+            "random_subspace": {
+              "targeted_nmse": 1783.4640723786895,
+              "collateral_nmse": 1684.570327692259,
+              "behavioral": {
+                "pairs": 2048,
+                "all_active_intermediates_executed": 2048,
+                "symbolic_changes": 364,
+                "baseline_agreement": 0.78466796875,
+                "interchange_accuracy": 0.6484375,
+                "no_intervention_accuracy": 0.68896484375,
+                "informative_pairs": 252,
+                "informative_accuracy": 0.08333333333333333
+              },
+              "diagnostics": {
+                "max_constraint_residual": 6.217248937900877e-15,
+                "mean_displacement_norm": 2.2481403265818694,
+                "max_displacement_norm": 15.337243170042488,
+                "minimum_constraint_rank": 1,
+                "maximum_constraint_condition": 8.0180262077092
+              }
+            }
+          }
+        }
+      }
+    }
+  ],
+  "criteria": {
+    "complete_replay": true,
+    "full_coverage": true,
+    "constraint_residual": true,
+    "targeted_improvement": true,
+    "collateral_no_higher_at_winning_sites": false,
+    "beats_random_subspace": true
+  },
+  "passed": false,
+  "claim": "finite empirical intervention result; not exact circuit identity or causal truth"
+}

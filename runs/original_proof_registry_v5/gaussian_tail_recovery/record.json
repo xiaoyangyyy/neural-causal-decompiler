@@ -1,0 +1,487 @@
+{
+  "id": "gaussian_tail_recovery",
+  "job": {
+    "id": "gaussian_tail_recovery",
+    "kind": "gaussian_tail_recovery",
+    "artifact": "runs/finite_gaussian_tail_recovery_v1/manifest.json",
+    "artifact_sha256": "a931066ff5e76658cd9dc6b67b93028c1ad0585ba4dc6304c4dfe6a09b84d713",
+    "related_claims": [
+      "R2.discovery_guarantee",
+      "R9.graph_recovery"
+    ],
+    "original_claim_closed": false
+  },
+  "result": {
+    "status": "verified",
+    "verification": {
+      "case_count": 7,
+      "conclusion": "verified",
+      "independent_bundle_verification": {
+        "cases": {
+          "arithmetic_budget": {
+            "best_short_exact_fraction": null,
+            "best_supported_bound": null,
+            "comparison_without_float_or_log": true,
+            "conclusion": "proved-in-declared-family",
+            "mills_cauchy_schwarz_upper": {
+              "clamped_by_probability_one": true,
+              "comparison_supported": false,
+              "gate": "unresolved-arithmetic-budget",
+              "integer_exponent": 250000,
+              "multiplier": "1/866",
+              "power_bit_estimate": 750010,
+              "quarter_power_dropped_conservatively": 0,
+              "rational_power_base": "4/5",
+              "short_exact_fraction": null,
+              "sqrt_3n_minus6_integer_lower": 1732
+            },
+            "old_second_moment_gate": "proved",
+            "original_objective_achieved": false,
+            "recovery_estimator_unchanged": true,
+            "requested_recovery_success_probability_gate": "unresolved-arithmetic-budget",
+            "status": "verified",
+            "uniform_error_upper": {
+              "clamped_by_probability_one": true,
+              "comparison_supported": false,
+              "gate": "unresolved-arithmetic-budget",
+              "integer_exponent": 500000,
+              "multiplier": "1",
+              "odd_half_power_dropped_conservatively": false,
+              "power_bit_estimate": 2000001,
+              "rational_power_base": "8/9",
+              "short_exact_fraction": null
+            }
+          },
+          "hundred96": {
+            "best_short_exact_fraction": "35184372088832/59604644775390625",
+            "best_supported_bound": "mills_cauchy_schwarz",
+            "comparison_without_float_or_log": true,
+            "conclusion": "proved-in-declared-family",
+            "mills_cauchy_schwarz_upper": {
+              "clamped_by_probability_one": true,
+              "comparison_supported": true,
+              "gate": "unresolved-by-this-bound",
+              "integer_exponent": 24,
+              "multiplier": "1/8",
+              "power_bit_estimate": 76,
+              "quarter_power_dropped_conservatively": 0,
+              "rational_power_base": "4/5",
+              "short_exact_fraction": "35184372088832/59604644775390625",
+              "sqrt_3n_minus6_integer_lower": 16
+            },
+            "old_second_moment_gate": "unresolved-by-this-bound",
+            "original_objective_achieved": false,
+            "recovery_estimator_unchanged": true,
+            "requested_recovery_success_probability_gate": "unresolved-by-this-bound",
+            "status": "verified",
+            "uniform_error_upper": {
+              "clamped_by_probability_one": true,
+              "comparison_supported": true,
+              "gate": "unresolved-by-this-bound",
+              "integer_exponent": 48,
+              "multiplier": "1",
+              "odd_half_power_dropped_conservatively": false,
+              "power_bit_estimate": 193,
+              "rational_power_base": "8/9",
+              "short_exact_fraction": "22300745198530623141535718272648361505980416/6362685441135942358474828762538534230890216321"
+            }
+          },
+          "one_row": {
+            "best_short_exact_fraction": "1",
+            "best_supported_bound": "chernoff",
+            "comparison_without_float_or_log": true,
+            "conclusion": "proved-in-declared-family",
+            "mills_cauchy_schwarz_upper": {
+              "clamped_by_probability_one": true,
+              "comparison_supported": true,
+              "gate": "unresolved-by-this-bound",
+              "integer_exponent": 0,
+              "multiplier": "1",
+              "not_used_reason": "Inverse chi-square moment requires samples>2; probability-one bound retained",
+              "power_bit_estimate": 1,
+              "rational_power_base": "1",
+              "short_exact_fraction": "1"
+            },
+            "old_second_moment_gate": "unresolved-by-this-bound",
+            "original_objective_achieved": false,
+            "recovery_estimator_unchanged": true,
+            "requested_recovery_success_probability_gate": "unresolved-by-this-bound",
+            "status": "verified",
+            "uniform_error_upper": {
+              "clamped_by_probability_one": true,
+              "comparison_supported": true,
+              "gate": "unresolved-by-this-bound",
+              "integer_exponent": 0,
+              "multiplier": "1",
+              "odd_half_power_dropped_conservatively": true,
+              "power_bit_estimate": 1,
+              "rational_power_base": "8/9",
+              "short_exact_fraction": "1"
+            }
+          },
+          "single96": {
+            "best_short_exact_fraction": "35184372088832/59604644775390625",
+            "best_supported_bound": "mills_cauchy_schwarz",
+            "comparison_without_float_or_log": true,
+            "conclusion": "proved-in-declared-family",
+            "mills_cauchy_schwarz_upper": {
+              "clamped_by_probability_one": true,
+              "comparison_supported": true,
+              "gate": "proved",
+              "integer_exponent": 24,
+              "multiplier": "1/8",
+              "power_bit_estimate": 76,
+              "quarter_power_dropped_conservatively": 0,
+              "rational_power_base": "4/5",
+              "short_exact_fraction": "35184372088832/59604644775390625",
+              "sqrt_3n_minus6_integer_lower": 16
+            },
+            "old_second_moment_gate": "unresolved-by-this-bound",
+            "original_objective_achieved": false,
+            "recovery_estimator_unchanged": true,
+            "requested_recovery_success_probability_gate": "proved",
+            "status": "verified",
+            "uniform_error_upper": {
+              "clamped_by_probability_one": true,
+              "comparison_supported": true,
+              "gate": "proved",
+              "integer_exponent": 48,
+              "multiplier": "1",
+              "odd_half_power_dropped_conservatively": false,
+              "power_bit_estimate": 193,
+              "rational_power_base": "8/9",
+              "short_exact_fraction": "22300745198530623141535718272648361505980416/6362685441135942358474828762538534230890216321"
+            }
+          },
+          "single990": {
+            "best_short_exact_fraction": "51146728248377216718956089012931236753385031969422887335676427626502090568823039920051095192592252455482604439493126109519019633529459266458258243584/1193863941056256025013409281513527236711075890379671538665676767716106130869173916493981197280009124439730057915115729495648602478410048310930591242140508256852626800537109375",
+            "best_supported_bound": "mills_cauchy_schwarz",
+            "comparison_without_float_or_log": true,
+            "conclusion": "proved-in-declared-family",
+            "mills_cauchy_schwarz_upper": {
+              "clamped_by_probability_one": true,
+              "comparison_supported": true,
+              "gate": "proved",
+              "integer_exponent": 247,
+              "multiplier": "1/27",
+              "power_bit_estimate": 746,
+              "quarter_power_dropped_conservatively": 2,
+              "rational_power_base": "4/5",
+              "short_exact_fraction": "51146728248377216718956089012931236753385031969422887335676427626502090568823039920051095192592252455482604439493126109519019633529459266458258243584/1193863941056256025013409281513527236711075890379671538665676767716106130869173916493981197280009124439730057915115729495648602478410048310930591242140508256852626800537109375",
+              "sqrt_3n_minus6_integer_lower": 54
+            },
+            "old_second_moment_gate": "proved",
+            "original_objective_achieved": false,
+            "recovery_estimator_unchanged": true,
+            "requested_recovery_success_probability_gate": "proved",
+            "status": "verified",
+            "uniform_error_upper": {
+              "clamped_by_probability_one": true,
+              "comparison_supported": true,
+              "gate": "proved",
+              "integer_exponent": 495,
+              "multiplier": "1",
+              "odd_half_power_dropped_conservatively": false,
+              "power_bit_estimate": 1981,
+              "rational_power_base": "8/9",
+              "short_exact_fraction": "1070393741163148155140002073983180480759399898691736719484735047143278926103617010609652126665801063893223584191755295330789018217207945549138520474792623927242735488443881142104699789782210172928975896738895832197612166084745676956951404400308684101704866105705305247055335973308139964471316824642504293039366278387990046613544517844635154824075842045095053209331444802766174109712300516774551695312505342204453401455091375199535727402456168005632/22389385416870846871080886378298436315016715486327425827108339992664204259965535395024103945039002556587067989244061412656454039562069110600778044086402033464201260397268722652001130827430859815989947333868289353606817182604668909516868468103678075403317688328768994299743383535657486084734125357836985151667771995525387090217081007270366778386061684433011548673294606888716936102875501985893392616100341418586083954662468506060227703242174564040214302801608377834830443449"
+            }
+          },
+          "six5990": {
+            "best_short_exact_fraction": null,
+            "best_supported_bound": "chernoff",
+            "comparison_without_float_or_log": true,
+            "conclusion": "proved-in-declared-family",
+            "mills_cauchy_schwarz_upper": {
+              "clamped_by_probability_one": true,
+              "comparison_supported": true,
+              "gate": "proved",
+              "integer_exponent": 1497,
+              "multiplier": "1/67",
+              "power_bit_estimate": 4498,
+              "quarter_power_dropped_conservatively": 2,
+              "rational_power_base": "4/5",
+              "short_exact_fraction": "19222373783767455889555606457449258041261154620888026808845594205625918759604264824615001059978022805975463269594559451695513815326534950368516913782271067675546239849310078397078489376740010420666011378746201256506788723682713672084579543081385787137395260293916608466007710757058226645370514312583542936072245354273139364905262704777134693786761637139122507466932048442537645343492005684420789695038873590054439035217823885705188193888495855535487696757371541311710729507995641430655788012199178981621512632252823392235685340815380446336292815559323165971961122586126258625161094535246899833588217625017714773034698672088803342305355922871247404314083659924753829635469408761259834555960974550750131725737263157790786259069031128229097614511283157633025682561057349378268166463603767670890578158914073054708980062480718841055926573800835545165816408362060768357798123613929881246466752789359659843584/15281686771846343406211953258945935881886597279483809499654361893684806889197422911018005863385643708406247199933777469140598576107232923426019709983890393402566117344383508695934228267764306445589206924536391741748453720580296818578514699855666859573068035411336289445045479588914873292895581389398624397232843568726718150819222073222191285430697534963908492800842226399467487947869920377458256909972409107369180350105616630948608940021332247462797428424692677825551605689087518450192075911544506746458994563902167303640283404219218023453246670736911021156408326265281403676031721490098262305285693809451165442943340689402420583285892061234617372701683178592623958882053887272241716984386680532273944344223884656254728348155308780727264817725373615167357795910110841880536270606509680783785986028541165688763011715606473791946979460375630177339841423532870442168315743715923589186558154146494251469837510632545492227139435863277165388337574717221228180403650038430821175877175847566121172070810493869808476506688688090207506320439279079437255859375",
+              "sqrt_3n_minus6_integer_lower": 134
+            },
+            "old_second_moment_gate": "proved",
+            "original_objective_achieved": false,
+            "recovery_estimator_unchanged": true,
+            "requested_recovery_success_probability_gate": "proved",
+            "status": "verified",
+            "uniform_error_upper": {
+              "clamped_by_probability_one": true,
+              "comparison_supported": true,
+              "gate": "proved",
+              "integer_exponent": 2995,
+              "multiplier": "1",
+              "odd_half_power_dropped_conservatively": false,
+              "power_bit_estimate": 11981,
+              "rational_power_base": "8/9",
+              "short_exact_fraction": null
+            }
+          },
+          "six96": {
+            "best_short_exact_fraction": "35184372088832/59604644775390625",
+            "best_supported_bound": "mills_cauchy_schwarz",
+            "comparison_without_float_or_log": true,
+            "conclusion": "proved-in-declared-family",
+            "mills_cauchy_schwarz_upper": {
+              "clamped_by_probability_one": true,
+              "comparison_supported": true,
+              "gate": "proved",
+              "integer_exponent": 24,
+              "multiplier": "1/8",
+              "power_bit_estimate": 76,
+              "quarter_power_dropped_conservatively": 0,
+              "rational_power_base": "4/5",
+              "short_exact_fraction": "35184372088832/59604644775390625",
+              "sqrt_3n_minus6_integer_lower": 16
+            },
+            "old_second_moment_gate": "unresolved-by-this-bound",
+            "original_objective_achieved": false,
+            "recovery_estimator_unchanged": true,
+            "requested_recovery_success_probability_gate": "proved",
+            "status": "verified",
+            "uniform_error_upper": {
+              "clamped_by_probability_one": true,
+              "comparison_supported": true,
+              "gate": "unresolved-by-this-bound",
+              "integer_exponent": 48,
+              "multiplier": "1",
+              "odd_half_power_dropped_conservatively": false,
+              "power_bit_estimate": 193,
+              "rational_power_base": "8/9",
+              "short_exact_fraction": "22300745198530623141535718272648361505980416/6362685441135942358474828762538534230890216321"
+            }
+          }
+        },
+        "original_objective_achieved": false,
+        "status": "verified-in-declared-family"
+      },
+      "kernel": "finite_graph_chernoff",
+      "original_claim_closed": false,
+      "original_objective_achieved": false,
+      "recovery_contracts": [
+        {
+          "bound_attempts": {
+            "gaussian_tails": "unresolved-arithmetic-budget",
+            "second_moment": "proved"
+          },
+          "case": "arithmetic_budget",
+          "id": "gaussian_recovery_ad329031272e00b10fc88bebc560a98675aabdb02a1f7d8584491592ab44e281",
+          "inputs": {
+            "a": "1/2",
+            "delta": "1/100",
+            "family_size": 1,
+            "samples": 1000000
+          },
+          "model_estimator_sha256": "989ea304c456318b14adcd67684f300c24e9fe82de1968a46f9bc28d136dc2cc",
+          "proved_by": [
+            "second_moment"
+          ],
+          "quantity": "uniform per-event recovery failure<=delta/family_size, sufficient for family failure<=delta by union bound",
+          "scope": "Known declared two-model Gaussian family; fixed estimator; ideal IID real observation rows; no actual trained-network or device guarantee",
+          "status": "proved",
+          "strict_refutation": null,
+          "unresolved_attempt_is_not_a_recovery_refutation": true
+        },
+        {
+          "bound_attempts": {
+            "gaussian_tails": "unresolved-by-this-bound",
+            "second_moment": "unresolved-by-this-bound"
+          },
+          "case": "hundred96",
+          "id": "gaussian_recovery_b02774da29e8401c77fb55b10ae87601a698d6d7cb67362dd9bd2978f2e51be1",
+          "inputs": {
+            "a": "1/2",
+            "delta": "1/100",
+            "family_size": 100,
+            "samples": 96
+          },
+          "model_estimator_sha256": "989ea304c456318b14adcd67684f300c24e9fe82de1968a46f9bc28d136dc2cc",
+          "proved_by": [],
+          "quantity": "uniform per-event recovery failure<=delta/family_size, sufficient for family failure<=delta by union bound",
+          "scope": "Known declared two-model Gaussian family; fixed estimator; ideal IID real observation rows; no actual trained-network or device guarantee",
+          "status": "unresolved",
+          "strict_refutation": null,
+          "unresolved_attempt_is_not_a_recovery_refutation": true
+        },
+        {
+          "bound_attempts": {
+            "gaussian_tails": "unresolved-by-this-bound",
+            "second_moment": "unresolved-by-this-bound"
+          },
+          "case": "one_row",
+          "id": "gaussian_recovery_dfea8118f79642ccb0fce75d96e1d16eb4a331257e0983815c00a2041d86debf",
+          "inputs": {
+            "a": "1/2",
+            "delta": "1/100",
+            "family_size": 1,
+            "samples": 1
+          },
+          "model_estimator_sha256": "989ea304c456318b14adcd67684f300c24e9fe82de1968a46f9bc28d136dc2cc",
+          "proved_by": [],
+          "quantity": "uniform per-event recovery failure<=delta/family_size, sufficient for family failure<=delta by union bound",
+          "scope": "Known declared two-model Gaussian family; fixed estimator; ideal IID real observation rows; no actual trained-network or device guarantee",
+          "status": "unresolved",
+          "strict_refutation": null,
+          "unresolved_attempt_is_not_a_recovery_refutation": true
+        },
+        {
+          "bound_attempts": {
+            "gaussian_tails": "proved",
+            "second_moment": "unresolved-by-this-bound"
+          },
+          "case": "single96",
+          "id": "gaussian_recovery_5095e4eae39a602ab3f748e45bf9c81fba56112d76439cfd7e6133dd24192963",
+          "inputs": {
+            "a": "1/2",
+            "delta": "1/100",
+            "family_size": 1,
+            "samples": 96
+          },
+          "model_estimator_sha256": "989ea304c456318b14adcd67684f300c24e9fe82de1968a46f9bc28d136dc2cc",
+          "proved_by": [
+            "gaussian_tails"
+          ],
+          "quantity": "uniform per-event recovery failure<=delta/family_size, sufficient for family failure<=delta by union bound",
+          "scope": "Known declared two-model Gaussian family; fixed estimator; ideal IID real observation rows; no actual trained-network or device guarantee",
+          "status": "proved",
+          "strict_refutation": null,
+          "unresolved_attempt_is_not_a_recovery_refutation": true
+        },
+        {
+          "bound_attempts": {
+            "gaussian_tails": "proved",
+            "second_moment": "proved"
+          },
+          "case": "single990",
+          "id": "gaussian_recovery_cf454be07d146f0de1e1662e52624dd182e5ad9a8008eeeff7dab0bad7ea1b7e",
+          "inputs": {
+            "a": "1/2",
+            "delta": "1/100",
+            "family_size": 1,
+            "samples": 990
+          },
+          "model_estimator_sha256": "989ea304c456318b14adcd67684f300c24e9fe82de1968a46f9bc28d136dc2cc",
+          "proved_by": [
+            "second_moment",
+            "gaussian_tails"
+          ],
+          "quantity": "uniform per-event recovery failure<=delta/family_size, sufficient for family failure<=delta by union bound",
+          "scope": "Known declared two-model Gaussian family; fixed estimator; ideal IID real observation rows; no actual trained-network or device guarantee",
+          "status": "proved",
+          "strict_refutation": null,
+          "unresolved_attempt_is_not_a_recovery_refutation": true
+        },
+        {
+          "bound_attempts": {
+            "gaussian_tails": "proved",
+            "second_moment": "proved"
+          },
+          "case": "six5990",
+          "id": "gaussian_recovery_e0db555deddd2ef820e0639d820adbfad488344d02a57ae33ea80bfd218ebb94",
+          "inputs": {
+            "a": "1/2",
+            "delta": "1/100",
+            "family_size": 6,
+            "samples": 5990
+          },
+          "model_estimator_sha256": "989ea304c456318b14adcd67684f300c24e9fe82de1968a46f9bc28d136dc2cc",
+          "proved_by": [
+            "second_moment",
+            "gaussian_tails"
+          ],
+          "quantity": "uniform per-event recovery failure<=delta/family_size, sufficient for family failure<=delta by union bound",
+          "scope": "Known declared two-model Gaussian family; fixed estimator; ideal IID real observation rows; no actual trained-network or device guarantee",
+          "status": "proved",
+          "strict_refutation": null,
+          "unresolved_attempt_is_not_a_recovery_refutation": true
+        },
+        {
+          "bound_attempts": {
+            "gaussian_tails": "proved",
+            "second_moment": "unresolved-by-this-bound"
+          },
+          "case": "six96",
+          "id": "gaussian_recovery_4c68f7b3053f1e652109beed2b8c075d81cc5b1d284712a7d14d1d2e7d0cb67e",
+          "inputs": {
+            "a": "1/2",
+            "delta": "1/100",
+            "family_size": 6,
+            "samples": 96
+          },
+          "model_estimator_sha256": "989ea304c456318b14adcd67684f300c24e9fe82de1968a46f9bc28d136dc2cc",
+          "proved_by": [
+            "gaussian_tails"
+          ],
+          "quantity": "uniform per-event recovery failure<=delta/family_size, sufficient for family failure<=delta by union bound",
+          "scope": "Known declared two-model Gaussian family; fixed estimator; ideal IID real observation rows; no actual trained-network or device guarantee",
+          "status": "proved",
+          "strict_refutation": null,
+          "unresolved_attempt_is_not_a_recovery_refutation": true
+        }
+      ],
+      "scoped_claims": [
+        {
+          "id": "arithmetic_budget.gaussian_tail_bounds",
+          "new_numeric_gate": "unresolved-arithmetic-budget",
+          "older_valid_bound_preserved": true,
+          "scope": "Conditional Gaussian, Chernoff and Mills/Cauchy-Schwarz bounds; numeric power comparisons can retain an explicit budget gap",
+          "status": "proved"
+        },
+        {
+          "id": "hundred96.gaussian_tail_bounds",
+          "new_numeric_gate": "unresolved-by-this-bound",
+          "older_valid_bound_preserved": true,
+          "scope": "Conditional Gaussian, Chernoff and Mills/Cauchy-Schwarz bounds; numeric power comparisons can retain an explicit budget gap",
+          "status": "proved"
+        },
+        {
+          "id": "one_row.gaussian_tail_bounds",
+          "new_numeric_gate": "unresolved-by-this-bound",
+          "older_valid_bound_preserved": true,
+          "scope": "Conditional Gaussian, Chernoff and Mills/Cauchy-Schwarz bounds; numeric power comparisons can retain an explicit budget gap",
+          "status": "proved"
+        },
+        {
+          "id": "single96.gaussian_tail_bounds",
+          "new_numeric_gate": "proved",
+          "older_valid_bound_preserved": true,
+          "scope": "Conditional Gaussian, Chernoff and Mills/Cauchy-Schwarz bounds; numeric power comparisons can retain an explicit budget gap",
+          "status": "proved"
+        },
+        {
+          "id": "single990.gaussian_tail_bounds",
+          "new_numeric_gate": "proved",
+          "older_valid_bound_preserved": true,
+          "scope": "Conditional Gaussian, Chernoff and Mills/Cauchy-Schwarz bounds; numeric power comparisons can retain an explicit budget gap",
+          "status": "proved"
+        },
+        {
+          "id": "six5990.gaussian_tail_bounds",
+          "new_numeric_gate": "proved",
+          "older_valid_bound_preserved": true,
+          "scope": "Conditional Gaussian, Chernoff and Mills/Cauchy-Schwarz bounds; numeric power comparisons can retain an explicit budget gap",
+          "status": "proved"
+        },
+        {
+          "id": "six96.gaussian_tail_bounds",
+          "new_numeric_gate": "proved",
+          "older_valid_bound_preserved": true,
+          "scope": "Conditional Gaussian, Chernoff and Mills/Cauchy-Schwarz bounds; numeric power comparisons can retain an explicit budget gap",
+          "status": "proved"
+        }
+      ],
+      "status": "verified",
+      "_resource_guard": {
+        "job_memory_limit_bytes": 8589934592,
+        "descendants_included": true,
+        "reported_peak_within_limit": true
+      }
+    },
+    "original_claim_closed": false,
+    "artifact_sha256": "a931066ff5e76658cd9dc6b67b93028c1ad0585ba4dc6304c4dfe6a09b84d713"
+  }
+}

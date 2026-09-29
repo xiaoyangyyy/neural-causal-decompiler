@@ -1,0 +1,1165 @@
+{
+  "schema": "ncd.original-claims.v1",
+  "requirements_sha256": "04d608c94e83c8b77adaca81fcf4942826d3aa7d5d61152d6e895b010fcc724c",
+  "claims": [
+    {
+      "id": "R0.objects",
+      "requirement": "R0",
+      "statement": "Separate discovery network, discovery program, true SCM and neural mechanisms",
+      "status": "unresolved",
+      "quantifiers": "all instances in the stated original scope; instance binding alone does not reduce this quantifier",
+      "assumptions": [
+        "acyclic SCM with explicitly stated external noise law; additional identification assumptions require separate evidence"
+      ],
+      "target_network": "allowed true SCM family, frozen networks and executable programs as separate objects",
+      "input_domain": "all allowed SCMs and observation laws, including linear Gaussian models",
+      "interventions": "observational input changes; no identifying intervention assumed",
+      "error_contract": "identifiability or exact object/semantics specification, not benchmark mean accuracy",
+      "evidence_class": "true_causal_correctness",
+      "proof_dependencies": [
+        "frozen target/data identities",
+        "declared domain and intervention contract",
+        "independent certificate or scope-matched counterexample"
+      ],
+      "evidence": [],
+      "uncovered": "Historical module/test existence or a scoped certificate does not close this original scientific claim."
+    },
+    {
+      "id": "R0.observational_unique_direction",
+      "requirement": "R0",
+      "statement": "Every allowed observational linear Gaussian SCM has a uniquely recoverable direction",
+      "status": "refuted",
+      "quantifiers": "any observational estimator on the allowed linear Gaussian family",
+      "assumptions": [
+        "independent centered Gaussian noises",
+        "no confounding",
+        "acyclic"
+      ],
+      "target_network": "allowed true SCM family, frozen networks and executable programs as separate objects",
+      "input_domain": "all sample sizes including population observations",
+      "interventions": "none observed",
+      "error_contract": "identifiability or exact object/semantics specification, not benchmark mean accuracy",
+      "evidence_class": "true_causal_correctness",
+      "proof_dependencies": [
+        "frozen target/data identities",
+        "declared domain and intervention contract",
+        "independent certificate or scope-matched counterexample"
+      ],
+      "evidence": [
+        "observational_gaussian_boundary/certificate.json"
+      ],
+      "uncovered": "Additional identifying assumptions or informative interventions are separate claims."
+    },
+    {
+      "id": "R0.uniform_finite_sample_direction",
+      "requirement": "R0",
+      "statement": "Some observational estimator recovers every allowed linear Gaussian direction with error strictly below one half",
+      "status": "refuted",
+      "quantifiers": "any observational estimator on the allowed linear Gaussian family",
+      "assumptions": [
+        "independent centered Gaussian noises",
+        "no confounding",
+        "acyclic"
+      ],
+      "target_network": "allowed true SCM family, frozen networks and executable programs as separate objects",
+      "input_domain": "all sample sizes including population observations",
+      "interventions": "none observed",
+      "error_contract": "identifiability or exact object/semantics specification, not benchmark mean accuracy",
+      "evidence_class": "true_causal_correctness",
+      "proof_dependencies": [
+        "frozen target/data identities",
+        "declared domain and intervention contract",
+        "independent certificate or scope-matched counterexample"
+      ],
+      "evidence": [
+        "observational_gaussian_boundary/certificate.json"
+      ],
+      "uncovered": "Additional identifying assumptions or informative interventions are separate claims."
+    },
+    {
+      "id": "R0.equivalence_contract",
+      "requirement": "R0",
+      "statement": "Specify fidelity domains and distinguish mathematical from device semantics",
+      "status": "unresolved",
+      "quantifiers": "all instances in the stated original scope; instance binding alone does not reduce this quantifier",
+      "assumptions": [
+        "acyclic SCM with explicitly stated external noise law; additional identification assumptions require separate evidence"
+      ],
+      "target_network": "allowed true SCM family, frozen networks and executable programs as separate objects",
+      "input_domain": "all allowed SCMs and observation laws, including linear Gaussian models",
+      "interventions": "observational input changes; no identifying intervention assumed",
+      "error_contract": "identifiability or exact object/semantics specification, not benchmark mean accuracy",
+      "evidence_class": "true_causal_correctness",
+      "proof_dependencies": [
+        "frozen target/data identities",
+        "declared domain and intervention contract",
+        "independent certificate or scope-matched counterexample"
+      ],
+      "evidence": [],
+      "uncovered": "Historical module/test existence or a scoped certificate does not close this original scientific claim."
+    },
+    {
+      "id": "R1.world_generator",
+      "requirement": "R1",
+      "statement": "SCM sampling, noises and interventions implement the declared benchmark",
+      "status": "unresolved",
+      "quantifiers": "all instances in the stated original scope; instance binding alone does not reduce this quantifier",
+      "assumptions": [
+        "acyclic SCM with explicitly stated external noise law; additional identification assumptions require separate evidence"
+      ],
+      "target_network": "allowed true SCM family, frozen networks and executable programs as separate objects",
+      "input_domain": "all allowed SCMs and observation laws, including linear Gaussian models",
+      "interventions": "observational input changes; no identifying intervention assumed",
+      "error_contract": "identifiability or exact object/semantics specification, not benchmark mean accuracy",
+      "evidence_class": "true_causal_correctness",
+      "proof_dependencies": [
+        "frozen target/data identities",
+        "declared domain and intervention contract",
+        "independent certificate or scope-matched counterexample"
+      ],
+      "evidence": [],
+      "uncovered": "Historical module/test existence or a scoped certificate does not close this original scientific claim."
+    },
+    {
+      "id": "R1.noise_law",
+      "requirement": "R1",
+      "statement": "Explicitly justify each declared noise independence and law",
+      "status": "unresolved",
+      "quantifiers": "all instances in the stated original scope; instance binding alone does not reduce this quantifier",
+      "assumptions": [
+        "acyclic SCM with explicitly stated external noise law; additional identification assumptions require separate evidence"
+      ],
+      "target_network": "allowed true SCM family, frozen networks and executable programs as separate objects",
+      "input_domain": "all allowed SCMs and observation laws, including linear Gaussian models",
+      "interventions": "observational input changes; no identifying intervention assumed",
+      "error_contract": "identifiability or exact object/semantics specification, not benchmark mean accuracy",
+      "evidence_class": "true_causal_correctness",
+      "proof_dependencies": [
+        "frozen target/data identities",
+        "declared domain and intervention contract",
+        "independent certificate or scope-matched counterexample"
+      ],
+      "evidence": [],
+      "uncovered": "Historical module/test existence or a scoped certificate does not close this original scientific claim."
+    },
+    {
+      "id": "R2.sample_invariance",
+      "requirement": "R2",
+      "statement": "Discovery is invariant to sample order on its declared domain",
+      "status": "unresolved",
+      "quantifiers": "all instances in the stated original scope; instance binding alone does not reduce this quantifier",
+      "assumptions": [
+        "a frozen target, declared input semantics and domain must be bound before closure"
+      ],
+      "target_network": "frozen discovery network and extracted discovery program",
+      "input_domain": "entire admissible discovery input domain; a local proof box is only scoped evidence",
+      "interventions": "observational input changes; no identifying intervention assumed",
+      "error_contract": "classification label agreement for fidelity; graph accuracy reported separately",
+      "evidence_class": "network_fidelity",
+      "proof_dependencies": [
+        "frozen target/data identities",
+        "declared domain and intervention contract",
+        "independent certificate or scope-matched counterexample"
+      ],
+      "evidence": [],
+      "uncovered": "Historical module/test existence or a scoped certificate does not close this original scientific claim."
+    },
+    {
+      "id": "R2.variable_equivariance",
+      "requirement": "R2",
+      "statement": "Variable relabeling commutes with discovery",
+      "status": "unresolved",
+      "quantifiers": "all instances in the stated original scope; instance binding alone does not reduce this quantifier",
+      "assumptions": [
+        "a frozen target, declared input semantics and domain must be bound before closure"
+      ],
+      "target_network": "frozen discovery network and extracted discovery program",
+      "input_domain": "entire admissible discovery input domain; a local proof box is only scoped evidence",
+      "interventions": "observational input changes; no identifying intervention assumed",
+      "error_contract": "classification label agreement for fidelity; graph accuracy reported separately",
+      "evidence_class": "network_fidelity",
+      "proof_dependencies": [
+        "frozen target/data identities",
+        "declared domain and intervention contract",
+        "independent certificate or scope-matched counterexample"
+      ],
+      "evidence": [],
+      "uncovered": "Historical module/test existence or a scoped certificate does not close this original scientific claim."
+    },
+    {
+      "id": "R2.discovery_guarantee",
+      "requirement": "R2",
+      "statement": "State a justified discovery accuracy or identification guarantee",
+      "status": "unresolved",
+      "quantifiers": "all instances in the stated original scope; instance binding alone does not reduce this quantifier",
+      "assumptions": [
+        "a frozen target, declared input semantics and domain must be bound before closure"
+      ],
+      "target_network": "frozen discovery network and extracted discovery program",
+      "input_domain": "entire admissible discovery input domain; a local proof box is only scoped evidence",
+      "interventions": "observational input changes; no identifying intervention assumed",
+      "error_contract": "classification label agreement for fidelity; graph accuracy reported separately",
+      "evidence_class": "network_fidelity",
+      "proof_dependencies": [
+        "frozen target/data identities",
+        "declared domain and intervention contract",
+        "independent certificate or scope-matched counterexample"
+      ],
+      "evidence": [],
+      "uncovered": "Historical module/test existence or a scoped certificate does not close this original scientific claim."
+    },
+    {
+      "id": "R3.typed_semantics",
+      "requirement": "R3",
+      "statement": "CDIR operators, protected operations and branches have explicit executable semantics",
+      "status": "unresolved",
+      "quantifiers": "all instances in the stated original scope; instance binding alone does not reduce this quantifier",
+      "assumptions": [
+        "frozen operator and constant sets",
+        "explicit finite search bounds for class-relative MDL",
+        "unsupported operations remain unresolved"
+      ],
+      "target_network": "CDIR operators and frozen finite operator/constant/search grammar",
+      "input_domain": "all branches and protected-operation boundaries in the declared semantics; all shorter candidates for a minimality claim",
+      "interventions": "observational input changes; no identifying intervention assumed",
+      "error_contract": "semantic equivalence; deterministic serialization does not imply semantic uniqueness",
+      "evidence_class": "program_semantics",
+      "proof_dependencies": [
+        "frozen target/data identities",
+        "declared domain and intervention contract",
+        "independent certificate or scope-matched counterexample"
+      ],
+      "evidence": [],
+      "uncovered": "Historical module/test existence or a scoped certificate does not close this original scientific claim."
+    },
+    {
+      "id": "R3.compositionality",
+      "requirement": "R3",
+      "statement": "Composed program execution follows the declared semantics",
+      "status": "unresolved",
+      "quantifiers": "all instances in the stated original scope; instance binding alone does not reduce this quantifier",
+      "assumptions": [
+        "frozen operator and constant sets",
+        "explicit finite search bounds for class-relative MDL",
+        "unsupported operations remain unresolved"
+      ],
+      "target_network": "CDIR operators and frozen finite operator/constant/search grammar",
+      "input_domain": "all branches and protected-operation boundaries in the declared semantics; all shorter candidates for a minimality claim",
+      "interventions": "observational input changes; no identifying intervention assumed",
+      "error_contract": "semantic equivalence; deterministic serialization does not imply semantic uniqueness",
+      "evidence_class": "program_semantics",
+      "proof_dependencies": [
+        "frozen target/data identities",
+        "declared domain and intervention contract",
+        "independent certificate or scope-matched counterexample"
+      ],
+      "evidence": [],
+      "uncovered": "Historical module/test existence or a scoped certificate does not close this original scientific claim."
+    },
+    {
+      "id": "R4.program_fidelity",
+      "requirement": "R4",
+      "statement": "Automatically extract a program with verified fidelity on the declared discovery domain",
+      "status": "unresolved",
+      "quantifiers": "all instances in the stated original scope; instance binding alone does not reduce this quantifier",
+      "assumptions": [
+        "a frozen target, declared input semantics and domain must be bound before closure",
+        "candidate search reads only allowed data and frozen network",
+        "shorter candidates must be exhausted to claim bounded-language MDL minimality"
+      ],
+      "target_network": "frozen discovery network and extracted discovery program",
+      "input_domain": "entire admissible discovery input domain; a local proof box is only scoped evidence",
+      "interventions": "observational input changes; no identifying intervention assumed",
+      "error_contract": "classification label agreement for fidelity; graph accuracy reported separately",
+      "evidence_class": "network_fidelity",
+      "proof_dependencies": [
+        "frozen target/data identities",
+        "declared domain and intervention contract",
+        "independent certificate or scope-matched counterexample"
+      ],
+      "evidence": [],
+      "uncovered": "Historical module/test existence or a scoped certificate does not close this original scientific claim."
+    },
+    {
+      "id": "R4.cegis",
+      "requirement": "R4",
+      "statement": "Use checked counterexamples to refine candidates",
+      "status": "unresolved",
+      "quantifiers": "all instances in the stated original scope; instance binding alone does not reduce this quantifier",
+      "assumptions": [
+        "a frozen target, declared input semantics and domain must be bound before closure",
+        "candidate search reads only allowed data and frozen network",
+        "shorter candidates must be exhausted to claim bounded-language MDL minimality"
+      ],
+      "target_network": "frozen discovery network and extracted discovery program",
+      "input_domain": "entire admissible discovery input domain; a local proof box is only scoped evidence",
+      "interventions": "observational input changes; no identifying intervention assumed",
+      "error_contract": "classification label agreement for fidelity; graph accuracy reported separately",
+      "evidence_class": "network_fidelity",
+      "proof_dependencies": [
+        "frozen target/data identities",
+        "declared domain and intervention contract",
+        "independent certificate or scope-matched counterexample"
+      ],
+      "evidence": [],
+      "uncovered": "Historical module/test existence or a scoped certificate does not close this original scientific claim."
+    },
+    {
+      "id": "R4.mdl",
+      "requirement": "R4",
+      "statement": "Prove minimality only under the explicitly fixed language and search bounds",
+      "status": "unresolved",
+      "quantifiers": "all instances in the stated original scope; instance binding alone does not reduce this quantifier",
+      "assumptions": [
+        "a frozen target, declared input semantics and domain must be bound before closure",
+        "candidate search reads only allowed data and frozen network",
+        "shorter candidates must be exhausted to claim bounded-language MDL minimality"
+      ],
+      "target_network": "frozen discovery network and extracted discovery program",
+      "input_domain": "entire admissible discovery input domain; a local proof box is only scoped evidence",
+      "interventions": "observational input changes; no identifying intervention assumed",
+      "error_contract": "classification label agreement for fidelity; graph accuracy reported separately",
+      "evidence_class": "network_fidelity",
+      "proof_dependencies": [
+        "frozen target/data identities",
+        "declared domain and intervention contract",
+        "independent certificate or scope-matched counterexample"
+      ],
+      "evidence": [],
+      "uncovered": "Historical module/test existence or a scoped certificate does not close this original scientific claim."
+    },
+    {
+      "id": "R5.interchange",
+      "requirement": "R5",
+      "statement": "Verify the fixed neural/program mapping under all declared compatible interventions",
+      "status": "unresolved",
+      "quantifiers": "all instances in the stated original scope; instance binding alone does not reduce this quantifier",
+      "assumptions": [
+        "fixed mapping before validation",
+        "branch accessibility and local relations must be certified",
+        "a failed map does not exclude its mapping family"
+      ],
+      "target_network": "fixed neural read/write map, executed intermediate variables and program steps",
+      "input_domain": "all reachable base states, source states and branch paths in the declared abstraction domain",
+      "interventions": "all declared compatible combinations, including independent source worlds per variable",
+      "error_contract": "numeric intermediate and final-output bounds, collateral preservation and guard agreement",
+      "evidence_class": "internal_mechanism_alignment",
+      "proof_dependencies": [
+        "frozen target/data identities",
+        "declared domain and intervention contract",
+        "independent certificate or scope-matched counterexample"
+      ],
+      "evidence": [],
+      "uncovered": "Historical module/test existence or a scoped certificate does not close this original scientific claim."
+    },
+    {
+      "id": "R5.intermediate_numeric",
+      "requirement": "R5",
+      "statement": "Verify numeric intermediates and collateral preservation",
+      "status": "unresolved",
+      "quantifiers": "all instances in the stated original scope; instance binding alone does not reduce this quantifier",
+      "assumptions": [
+        "fixed mapping before validation",
+        "branch accessibility and local relations must be certified",
+        "a failed map does not exclude its mapping family"
+      ],
+      "target_network": "fixed neural read/write map, executed intermediate variables and program steps",
+      "input_domain": "all reachable base states, source states and branch paths in the declared abstraction domain",
+      "interventions": "all declared compatible combinations, including independent source worlds per variable",
+      "error_contract": "numeric intermediate and final-output bounds, collateral preservation and guard agreement",
+      "evidence_class": "internal_mechanism_alignment",
+      "proof_dependencies": [
+        "frozen target/data identities",
+        "declared domain and intervention contract",
+        "independent certificate or scope-matched counterexample"
+      ],
+      "evidence": [],
+      "uncovered": "Historical module/test existence or a scoped certificate does not close this original scientific claim."
+    },
+    {
+      "id": "R5.composition",
+      "requirement": "R5",
+      "statement": "Compose local relations across multiple computation steps",
+      "status": "unresolved",
+      "quantifiers": "all instances in the stated original scope; instance binding alone does not reduce this quantifier",
+      "assumptions": [
+        "fixed mapping before validation",
+        "branch accessibility and local relations must be certified",
+        "a failed map does not exclude its mapping family"
+      ],
+      "target_network": "fixed neural read/write map, executed intermediate variables and program steps",
+      "input_domain": "all reachable base states, source states and branch paths in the declared abstraction domain",
+      "interventions": "all declared compatible combinations, including independent source worlds per variable",
+      "error_contract": "numeric intermediate and final-output bounds, collateral preservation and guard agreement",
+      "evidence_class": "internal_mechanism_alignment",
+      "proof_dependencies": [
+        "frozen target/data identities",
+        "declared domain and intervention contract",
+        "independent certificate or scope-matched counterexample"
+      ],
+      "evidence": [],
+      "uncovered": "Historical module/test existence or a scoped certificate does not close this original scientific claim."
+    },
+    {
+      "id": "R6.separate_targets",
+      "requirement": "R6",
+      "statement": "Report network fidelity, truth accuracy, graph and mechanism errors separately",
+      "status": "unresolved",
+      "quantifiers": "all instances in the stated original scope; instance binding alone does not reduce this quantifier",
+      "assumptions": [
+        "independent world units",
+        "no reuse of evaluator truth in candidate search"
+      ],
+      "target_network": "frozen neural/program pair, independent true SCM evaluator and world-level statistics",
+      "input_domain": "all registered experiments, including failed runs and confirmation worlds",
+      "interventions": "observational input changes; no identifying intervention assumed",
+      "error_contract": "separate network fidelity, graph, true mechanism, noise and intervention errors; familywise confidence 99 percent",
+      "evidence_class": "evaluation_contract",
+      "proof_dependencies": [
+        "frozen target/data identities",
+        "declared domain and intervention contract",
+        "independent certificate or scope-matched counterexample"
+      ],
+      "evidence": [],
+      "uncovered": "Historical module/test existence or a scoped certificate does not close this original scientific claim."
+    },
+    {
+      "id": "R6.evaluation_guarantee",
+      "requirement": "R6",
+      "statement": "Replay comparisons and justify world-level statistical units",
+      "status": "unresolved",
+      "quantifiers": "all instances in the stated original scope; instance binding alone does not reduce this quantifier",
+      "assumptions": [
+        "independent world units",
+        "no reuse of evaluator truth in candidate search"
+      ],
+      "target_network": "frozen neural/program pair, independent true SCM evaluator and world-level statistics",
+      "input_domain": "all registered experiments, including failed runs and confirmation worlds",
+      "interventions": "observational input changes; no identifying intervention assumed",
+      "error_contract": "separate network fidelity, graph, true mechanism, noise and intervention errors; familywise confidence 99 percent",
+      "evidence_class": "evaluation_contract",
+      "proof_dependencies": [
+        "frozen target/data identities",
+        "declared domain and intervention contract",
+        "independent certificate or scope-matched counterexample"
+      ],
+      "evidence": [],
+      "uncovered": "Historical module/test existence or a scoped certificate does not close this original scientific claim."
+    },
+    {
+      "id": "R7.counterexamples",
+      "requirement": "R7",
+      "statement": "Return independently checked concrete counterexamples",
+      "status": "unresolved",
+      "quantifiers": "all instances in the stated original scope; instance binding alone does not reduce this quantifier",
+      "assumptions": [
+        "a frozen target, declared input semantics and domain must be bound before closure",
+        "strict rational numerical enclosures",
+        "search exhaustion is unresolved, not a universal refutation"
+      ],
+      "target_network": "frozen discovery network and extracted discovery program",
+      "input_domain": "entire declared closed input domain including branch boundaries and degenerate inputs",
+      "interventions": "observational input changes; no identifying intervention assumed",
+      "error_contract": "rigorous point counterexample or full-domain worst-case enclosure; no omitted hard regions",
+      "evidence_class": "network_fidelity",
+      "proof_dependencies": [
+        "frozen target/data identities",
+        "declared domain and intervention contract",
+        "independent certificate or scope-matched counterexample"
+      ],
+      "evidence": [],
+      "uncovered": "Historical module/test existence or a scoped certificate does not close this original scientific claim."
+    },
+    {
+      "id": "R7.worst_case",
+      "requirement": "R7",
+      "statement": "Certify any claimed global worst-case bound on its entire declared domain",
+      "status": "unresolved",
+      "quantifiers": "all instances in the stated original scope; instance binding alone does not reduce this quantifier",
+      "assumptions": [
+        "a frozen target, declared input semantics and domain must be bound before closure",
+        "strict rational numerical enclosures",
+        "search exhaustion is unresolved, not a universal refutation"
+      ],
+      "target_network": "frozen discovery network and extracted discovery program",
+      "input_domain": "entire declared closed input domain including branch boundaries and degenerate inputs",
+      "interventions": "observational input changes; no identifying intervention assumed",
+      "error_contract": "rigorous point counterexample or full-domain worst-case enclosure; no omitted hard regions",
+      "evidence_class": "network_fidelity",
+      "proof_dependencies": [
+        "frozen target/data identities",
+        "declared domain and intervention contract",
+        "independent certificate or scope-matched counterexample"
+      ],
+      "evidence": [],
+      "uncovered": "Historical module/test existence or a scoped certificate does not close this original scientific claim."
+    },
+    {
+      "id": "R8.function_ood",
+      "requirement": "R8",
+      "statement": "Justify claims on the declared function shift family",
+      "status": "unresolved",
+      "quantifiers": "all instances in the stated original scope; instance binding alone does not reduce this quantifier",
+      "assumptions": [
+        "function, noise, scale, intervention support and sampling law frozen before confirmation"
+      ],
+      "target_network": "frozen discovery and mechanism networks, programs and true benchmark SCMs",
+      "input_domain": "declared function-shift family; unbounded universal OOD claims are not substituted by a finite benchmark",
+      "interventions": "declared node interventions and compatible combinations within that family",
+      "error_contract": "truth accuracy and neural/program fidelity separately; numeric and distributional intervention errors",
+      "evidence_class": "true_causal_correctness",
+      "proof_dependencies": [
+        "frozen target/data identities",
+        "declared domain and intervention contract",
+        "independent certificate or scope-matched counterexample"
+      ],
+      "evidence": [],
+      "uncovered": "Historical module/test existence or a scoped certificate does not close this original scientific claim."
+    },
+    {
+      "id": "R8.noise_ood",
+      "requirement": "R8",
+      "statement": "Justify claims on the declared noise shift family",
+      "status": "unresolved",
+      "quantifiers": "all instances in the stated original scope; instance binding alone does not reduce this quantifier",
+      "assumptions": [
+        "function, noise, scale, intervention support and sampling law frozen before confirmation"
+      ],
+      "target_network": "frozen discovery and mechanism networks, programs and true benchmark SCMs",
+      "input_domain": "declared noise-shift family; unbounded universal OOD claims are not substituted by a finite benchmark",
+      "interventions": "declared node interventions and compatible combinations within that family",
+      "error_contract": "truth accuracy and neural/program fidelity separately; numeric and distributional intervention errors",
+      "evidence_class": "true_causal_correctness",
+      "proof_dependencies": [
+        "frozen target/data identities",
+        "declared domain and intervention contract",
+        "independent certificate or scope-matched counterexample"
+      ],
+      "evidence": [],
+      "uncovered": "Historical module/test existence or a scoped certificate does not close this original scientific claim."
+    },
+    {
+      "id": "R8.scale_ood",
+      "requirement": "R8",
+      "statement": "Justify claims on the declared scale shift family",
+      "status": "unresolved",
+      "quantifiers": "all instances in the stated original scope; instance binding alone does not reduce this quantifier",
+      "assumptions": [
+        "function, noise, scale, intervention support and sampling law frozen before confirmation"
+      ],
+      "target_network": "frozen discovery and mechanism networks, programs and true benchmark SCMs",
+      "input_domain": "declared scale-shift family; unbounded universal OOD claims are not substituted by a finite benchmark",
+      "interventions": "declared node interventions and compatible combinations within that family",
+      "error_contract": "truth accuracy and neural/program fidelity separately; numeric and distributional intervention errors",
+      "evidence_class": "true_causal_correctness",
+      "proof_dependencies": [
+        "frozen target/data identities",
+        "declared domain and intervention contract",
+        "independent certificate or scope-matched counterexample"
+      ],
+      "evidence": [],
+      "uncovered": "Historical module/test existence or a scoped certificate does not close this original scientific claim."
+    },
+    {
+      "id": "R8.intervention_ood",
+      "requirement": "R8",
+      "statement": "Justify claims on the declared intervention family",
+      "status": "unresolved",
+      "quantifiers": "all instances in the stated original scope; instance binding alone does not reduce this quantifier",
+      "assumptions": [
+        "function, noise, scale, intervention support and sampling law frozen before confirmation"
+      ],
+      "target_network": "frozen discovery and mechanism networks, programs and true benchmark SCMs",
+      "input_domain": "declared intervention-shift family; unbounded universal OOD claims are not substituted by a finite benchmark",
+      "interventions": "declared node interventions and compatible combinations within that family",
+      "error_contract": "truth accuracy and neural/program fidelity separately; numeric and distributional intervention errors",
+      "evidence_class": "true_causal_correctness",
+      "proof_dependencies": [
+        "frozen target/data identities",
+        "declared domain and intervention contract",
+        "independent certificate or scope-matched counterexample"
+      ],
+      "evidence": [],
+      "uncovered": "Historical module/test existence or a scoped certificate does not close this original scientific claim."
+    },
+    {
+      "id": "R9.graph_recovery",
+      "requirement": "R9",
+      "statement": "Recover an identified DAG or justified graph equivalence class on 3/5/8 nodes",
+      "status": "unresolved",
+      "quantifiers": "all instances in the stated original scope; instance binding alone does not reduce this quantifier",
+      "assumptions": [
+        "observational directions require identification premises",
+        "DAG completion and oracle diagnostics do not prove identification"
+      ],
+      "target_network": "3/5/8-node discovery networks, extracted graph computation and true SCM evaluator",
+      "input_domain": "full declared 3/5/8-node observation or intervention task, separated by information access",
+      "interventions": "none for observational task; recorded node-do coverage for interventional task",
+      "error_contract": "identified DAG or valid equivalence class; network/program graph labels checked separately",
+      "evidence_class": "true_causal_correctness",
+      "proof_dependencies": [
+        "frozen target/data identities",
+        "declared domain and intervention contract",
+        "independent certificate or scope-matched counterexample"
+      ],
+      "evidence": [],
+      "uncovered": "Historical module/test existence or a scoped certificate does not close this original scientific claim."
+    },
+    {
+      "id": "R9.sepsets",
+      "requirement": "R9",
+      "statement": "Tie separations and orientation decisions to evidence rather than inserted teacher truth",
+      "status": "unresolved",
+      "quantifiers": "all instances in the stated original scope; instance binding alone does not reduce this quantifier",
+      "assumptions": [
+        "observational directions require identification premises",
+        "DAG completion and oracle diagnostics do not prove identification"
+      ],
+      "target_network": "3/5/8-node discovery networks, extracted graph computation and true SCM evaluator",
+      "input_domain": "full declared 3/5/8-node observation or intervention task, separated by information access",
+      "interventions": "none for observational task; recorded node-do coverage for interventional task",
+      "error_contract": "identified DAG or valid equivalence class; network/program graph labels checked separately",
+      "evidence_class": "true_causal_correctness",
+      "proof_dependencies": [
+        "frozen target/data identities",
+        "declared domain and intervention contract",
+        "independent certificate or scope-matched counterexample"
+      ],
+      "evidence": [],
+      "uncovered": "Historical module/test existence or a scoped certificate does not close this original scientific claim."
+    },
+    {
+      "id": "R9.neural_program",
+      "requirement": "R9",
+      "statement": "Extract and verify the network graph-discovery computation",
+      "status": "unresolved",
+      "quantifiers": "all instances in the stated original scope; instance binding alone does not reduce this quantifier",
+      "assumptions": [
+        "observational directions require identification premises",
+        "DAG completion and oracle diagnostics do not prove identification"
+      ],
+      "target_network": "3/5/8-node discovery networks, extracted graph computation and true SCM evaluator",
+      "input_domain": "full declared 3/5/8-node observation or intervention task, separated by information access",
+      "interventions": "none for observational task; recorded node-do coverage for interventional task",
+      "error_contract": "identified DAG or valid equivalence class; network/program graph labels checked separately",
+      "evidence_class": "network_fidelity",
+      "proof_dependencies": [
+        "frozen target/data identities",
+        "declared domain and intervention contract",
+        "independent certificate or scope-matched counterexample"
+      ],
+      "evidence": [],
+      "uncovered": "Historical module/test existence or a scoped certificate does not close this original scientific claim."
+    },
+    {
+      "id": "R10.end_to_end",
+      "requirement": "R10",
+      "statement": "Recover an explicit SCM using inferred parents without oracle repairs",
+      "status": "unresolved",
+      "quantifiers": "all instances in the stated original scope; instance binding alone does not reduce this quantifier",
+      "assumptions": [
+        "correct parent sets or explicit conditional theorem",
+        "local Lipschitz and domain coverage",
+        "noise law, independence and coupling distance separately justified"
+      ],
+      "target_network": "frozen conditional neural mechanisms and inferred explicit SCM including graph, equations and exogenous laws",
+      "input_domain": "entire declared mechanism/intervention domain for the inferred parent sets",
+      "interventions": "all declared node-do values and compatible simultaneous interventions",
+      "error_contract": "neural-symbolic mechanism error <=1/100 of frozen training scale; joint intervention distribution distance requires certified noise coupling",
+      "evidence_class": "true_causal_correctness",
+      "proof_dependencies": [
+        "frozen target/data identities",
+        "declared domain and intervention contract",
+        "independent certificate or scope-matched counterexample"
+      ],
+      "evidence": [],
+      "uncovered": "Historical module/test existence or a scoped certificate does not close this original scientific claim."
+    },
+    {
+      "id": "R10.mechanism",
+      "requirement": "R10",
+      "statement": "Certify the frozen neural-to-symbolic mechanism approximation",
+      "status": "unresolved",
+      "quantifiers": "all instances in the stated original scope; instance binding alone does not reduce this quantifier",
+      "assumptions": [
+        "correct parent sets or explicit conditional theorem",
+        "local Lipschitz and domain coverage",
+        "noise law, independence and coupling distance separately justified"
+      ],
+      "target_network": "frozen conditional neural mechanisms and inferred explicit SCM including graph, equations and exogenous laws",
+      "input_domain": "entire declared mechanism/intervention domain for the inferred parent sets",
+      "interventions": "all declared node-do values and compatible simultaneous interventions",
+      "error_contract": "neural-symbolic mechanism error <=1/100 of frozen training scale; joint intervention distribution distance requires certified noise coupling",
+      "evidence_class": "network_fidelity",
+      "proof_dependencies": [
+        "frozen target/data identities",
+        "declared domain and intervention contract",
+        "independent certificate or scope-matched counterexample"
+      ],
+      "evidence": [],
+      "uncovered": "Historical module/test existence or a scoped certificate does not close this original scientific claim."
+    },
+    {
+      "id": "R10.noise",
+      "requirement": "R10",
+      "statement": "Justify exogenous laws and independence rather than silently assuming empirical residual validity",
+      "status": "unresolved",
+      "quantifiers": "all instances in the stated original scope; instance binding alone does not reduce this quantifier",
+      "assumptions": [
+        "correct parent sets or explicit conditional theorem",
+        "local Lipschitz and domain coverage",
+        "noise law, independence and coupling distance separately justified"
+      ],
+      "target_network": "frozen conditional neural mechanisms and inferred explicit SCM including graph, equations and exogenous laws",
+      "input_domain": "entire declared mechanism/intervention domain for the inferred parent sets",
+      "interventions": "all declared node-do values and compatible simultaneous interventions",
+      "error_contract": "neural-symbolic mechanism error <=1/100 of frozen training scale; joint intervention distribution distance requires certified noise coupling",
+      "evidence_class": "true_causal_correctness",
+      "proof_dependencies": [
+        "frozen target/data identities",
+        "declared domain and intervention contract",
+        "independent certificate or scope-matched counterexample"
+      ],
+      "evidence": [],
+      "uncovered": "Historical module/test existence or a scoped certificate does not close this original scientific claim."
+    },
+    {
+      "id": "R10.intervention_distribution",
+      "requirement": "R10",
+      "statement": "Certify intervention effects and distribution bounds with verified premises",
+      "status": "unresolved",
+      "quantifiers": "all instances in the stated original scope; instance binding alone does not reduce this quantifier",
+      "assumptions": [
+        "correct parent sets or explicit conditional theorem",
+        "local Lipschitz and domain coverage",
+        "noise law, independence and coupling distance separately justified"
+      ],
+      "target_network": "frozen conditional neural mechanisms and inferred explicit SCM including graph, equations and exogenous laws",
+      "input_domain": "entire declared mechanism/intervention domain for the inferred parent sets",
+      "interventions": "all declared node-do values and compatible simultaneous interventions",
+      "error_contract": "neural-symbolic mechanism error <=1/100 of frozen training scale; joint intervention distribution distance requires certified noise coupling",
+      "evidence_class": "true_causal_correctness",
+      "proof_dependencies": [
+        "frozen target/data identities",
+        "declared domain and intervention contract",
+        "independent certificate or scope-matched counterexample"
+      ],
+      "evidence": [],
+      "uncovered": "Historical module/test existence or a scoped certificate does not close this original scientific claim."
+    },
+    {
+      "id": "R11.ablations",
+      "requirement": "R11",
+      "statement": "Preserve and independently replay all declared ablations without selective reporting",
+      "status": "unresolved",
+      "quantifiers": "all instances in the stated original scope; instance binding alone does not reduce this quantifier",
+      "assumptions": [
+        "frozen hashes and requirements",
+        "external extension tasks require their own specifications"
+      ],
+      "target_network": "all declared source, wheel, checkpoint, ablation and executable-program artifacts",
+      "input_domain": "all registered release/ablation cases, including failures and isolated installed execution",
+      "interventions": "observational input changes; no identifying intervention assumed",
+      "error_contract": "identity and independent replay; passing reproduction does not establish causal truth",
+      "evidence_class": "engineering_reproduction",
+      "proof_dependencies": [
+        "frozen target/data identities",
+        "declared domain and intervention contract",
+        "independent certificate or scope-matched counterexample"
+      ],
+      "evidence": [],
+      "uncovered": "Historical module/test existence or a scoped certificate does not close this original scientific claim."
+    },
+    {
+      "id": "R12.semantic_equivalence",
+      "requirement": "R12",
+      "statement": "Certify equivalence in the declared operator subset",
+      "status": "unresolved",
+      "quantifiers": "all instances in the stated original scope; instance binding alone does not reduce this quantifier",
+      "assumptions": [
+        "frozen operator and constant sets",
+        "explicit finite search bounds for class-relative MDL",
+        "unsupported operations remain unresolved"
+      ],
+      "target_network": "CDIR operators and frozen finite operator/constant/search grammar",
+      "input_domain": "all branches and protected-operation boundaries in the declared semantics; all shorter candidates for a minimality claim",
+      "interventions": "observational input changes; no identifying intervention assumed",
+      "error_contract": "semantic equivalence; deterministic serialization does not imply semantic uniqueness",
+      "evidence_class": "program_semantics",
+      "proof_dependencies": [
+        "frozen target/data identities",
+        "declared domain and intervention contract",
+        "independent certificate or scope-matched counterexample"
+      ],
+      "evidence": [],
+      "uncovered": "Historical module/test existence or a scoped certificate does not close this original scientific claim."
+    },
+    {
+      "id": "R12.canonicalization",
+      "requirement": "R12",
+      "statement": "Separate deterministic serialization from semantic uniqueness",
+      "status": "unresolved",
+      "quantifiers": "all instances in the stated original scope; instance binding alone does not reduce this quantifier",
+      "assumptions": [
+        "frozen operator and constant sets",
+        "explicit finite search bounds for class-relative MDL",
+        "unsupported operations remain unresolved"
+      ],
+      "target_network": "CDIR operators and frozen finite operator/constant/search grammar",
+      "input_domain": "all branches and protected-operation boundaries in the declared semantics; all shorter candidates for a minimality claim",
+      "interventions": "observational input changes; no identifying intervention assumed",
+      "error_contract": "semantic equivalence; deterministic serialization does not imply semantic uniqueness",
+      "evidence_class": "program_semantics",
+      "proof_dependencies": [
+        "frozen target/data identities",
+        "declared domain and intervention contract",
+        "independent certificate or scope-matched counterexample"
+      ],
+      "evidence": [],
+      "uncovered": "Historical module/test existence or a scoped certificate does not close this original scientific claim."
+    },
+    {
+      "id": "R12.shortest_unique",
+      "requirement": "R12",
+      "statement": "Justify any uniqueness or globally shortest-program claim",
+      "status": "unresolved",
+      "quantifiers": "all instances in the stated original scope; instance binding alone does not reduce this quantifier",
+      "assumptions": [
+        "frozen operator and constant sets",
+        "explicit finite search bounds for class-relative MDL",
+        "unsupported operations remain unresolved"
+      ],
+      "target_network": "CDIR operators and frozen finite operator/constant/search grammar",
+      "input_domain": "all branches and protected-operation boundaries in the declared semantics; all shorter candidates for a minimality claim",
+      "interventions": "observational input changes; no identifying intervention assumed",
+      "error_contract": "semantic equivalence; deterministic serialization does not imply semantic uniqueness",
+      "evidence_class": "program_semantics",
+      "proof_dependencies": [
+        "frozen target/data identities",
+        "declared domain and intervention contract",
+        "independent certificate or scope-matched counterexample"
+      ],
+      "evidence": [],
+      "uncovered": "Historical module/test existence or a scoped certificate does not close this original scientific claim."
+    },
+    {
+      "id": "R13.reproduction",
+      "requirement": "R13",
+      "statement": "Provide portable artifacts, source bindings and independent installed-package replay",
+      "status": "unresolved",
+      "quantifiers": "all instances in the stated original scope; instance binding alone does not reduce this quantifier",
+      "assumptions": [
+        "frozen hashes and requirements",
+        "external extension tasks require their own specifications"
+      ],
+      "target_network": "all declared source, wheel, checkpoint, ablation and executable-program artifacts",
+      "input_domain": "all registered release/ablation cases, including failures and isolated installed execution",
+      "interventions": "observational input changes; no identifying intervention assumed",
+      "error_contract": "identity and independent replay; passing reproduction does not establish causal truth",
+      "evidence_class": "engineering_reproduction",
+      "proof_dependencies": [
+        "frozen target/data identities",
+        "declared domain and intervention contract",
+        "independent certificate or scope-matched counterexample"
+      ],
+      "evidence": [],
+      "uncovered": "Historical module/test existence or a scoped certificate does not close this original scientific claim."
+    },
+    {
+      "id": "R13.extensions",
+      "requirement": "R13",
+      "statement": "Distinguish defined external tasks from architecture visions",
+      "status": "unresolved",
+      "quantifiers": "all instances in the stated original scope; instance binding alone does not reduce this quantifier",
+      "assumptions": [
+        "frozen hashes and requirements",
+        "external extension tasks require their own specifications"
+      ],
+      "target_network": "all declared source, wheel, checkpoint, ablation and executable-program artifacts",
+      "input_domain": "all registered release/ablation cases, including failures and isolated installed execution",
+      "interventions": "observational input changes; no identifying intervention assumed",
+      "error_contract": "identity and independent replay; passing reproduction does not establish causal truth",
+      "evidence_class": "engineering_reproduction",
+      "proof_dependencies": [
+        "frozen target/data identities",
+        "declared domain and intervention contract",
+        "independent certificate or scope-matched counterexample"
+      ],
+      "evidence": [],
+      "uncovered": "Historical module/test existence or a scoped certificate does not close this original scientific claim."
+    }
+  ],
+  "target_instance_bindings": [
+    {
+      "id": "observational_gaussian_boundary",
+      "kind": "gaussian_nonidentifiability"
+    },
+    {
+      "id": "historical_mechanism_0",
+      "kind": "frozen_mechanism",
+      "checkpoint": "runs/active_end_to_end_seed4993/worlds/n3_test_id_0/observational_graph/baseline/mechanism_0.pt",
+      "checkpoint_sha256": "20b62f0bd0f6ba0e36ee678fbd7401e8425fdb8720e28c80b4b588382e671b61",
+      "scm": "runs/active_end_to_end_seed4993/worlds/n3_test_id_0/observational_graph/baseline/explicit_scm.json",
+      "scm_sha256": "25ee18accadb67001ec81e9833dada9cfb587312e14c58c981da4c729dd3c235",
+      "node": 0,
+      "domain": [
+        [
+          "-1",
+          "1"
+        ],
+        [
+          "-1",
+          "1"
+        ],
+        [
+          "-1",
+          "1"
+        ]
+      ],
+      "epsilon": "1/100"
+    },
+    {
+      "id": "historical_mechanism_1",
+      "kind": "frozen_mechanism",
+      "checkpoint": "runs/active_end_to_end_seed4993/worlds/n3_test_id_0/observational_graph/baseline/mechanism_1.pt",
+      "checkpoint_sha256": "2a88efbbad9a0963d9dc1c55df4909d540b3565adb8d5c7e03571988916e9886",
+      "scm": "runs/active_end_to_end_seed4993/worlds/n3_test_id_0/observational_graph/baseline/explicit_scm.json",
+      "scm_sha256": "25ee18accadb67001ec81e9833dada9cfb587312e14c58c981da4c729dd3c235",
+      "node": 1,
+      "domain": [
+        [
+          "-1",
+          "1"
+        ],
+        [
+          "-1",
+          "1"
+        ],
+        [
+          "-1",
+          "1"
+        ]
+      ],
+      "epsilon": "1/100"
+    },
+    {
+      "id": "historical_mechanism_2",
+      "kind": "frozen_mechanism",
+      "checkpoint": "runs/active_end_to_end_seed4993/worlds/n3_test_id_0/observational_graph/baseline/mechanism_2.pt",
+      "checkpoint_sha256": "77bff2f77190843f2b627231d1b33e65fe176036bedbb0d3d422106d4dd74620",
+      "scm": "runs/active_end_to_end_seed4993/worlds/n3_test_id_0/observational_graph/baseline/explicit_scm.json",
+      "scm_sha256": "25ee18accadb67001ec81e9833dada9cfb587312e14c58c981da4c729dd3c235",
+      "node": 2,
+      "domain": [
+        [
+          "-1",
+          "1"
+        ],
+        [
+          "-1",
+          "1"
+        ],
+        [
+          "-1",
+          "1"
+        ]
+      ],
+      "epsilon": "1/100"
+    },
+    {
+      "id": "historical_discovery_local_box",
+      "kind": "frozen_discovery",
+      "checkpoint": "runs/all_seed91_final/bivariate/models/full/discoverer.pt",
+      "checkpoint_sha256": "84a313ccbeb7f120686547bee9b010a6ef5f686b506ebf9f9b1fa4d6234c89e8",
+      "program": "runs/all_seed91_final/bivariate/programs/full.json",
+      "program_sha256": "c8d033fea41592198cf2ae68d95801f1a071ebd61e5c5069c780fdc59f75f818",
+      "domain": [
+        [
+          [
+            "312053279/1073741824",
+            "312053281/1073741824"
+          ],
+          [
+            "-1214515713/1073741824",
+            "-1214515711/1073741824"
+          ]
+        ],
+        [
+          [
+            "-881412545/1073741824",
+            "-881412543/1073741824"
+          ],
+          [
+            "-943376065/1073741824",
+            "-943376063/1073741824"
+          ]
+        ],
+        [
+          [
+            "904559423/1073741824",
+            "904559425/1073741824"
+          ],
+          [
+            "1612188031/1073741824",
+            "1612188033/1073741824"
+          ]
+        ],
+        [
+          [
+            "416300383/1073741824",
+            "416300385/1073741824"
+          ],
+          [
+            "-771142337/1073741824",
+            "-771142335/1073741824"
+          ]
+        ],
+        [
+          [
+            "-647533953/1073741824",
+            "-647533951/1073741824"
+          ],
+          [
+            "1813760255/1073741824",
+            "1813760257/1073741824"
+          ]
+        ],
+        [
+          [
+            "1910605311/1073741824",
+            "1910605313/1073741824"
+          ],
+          [
+            "-1291353601/1073741824",
+            "-1291353599/1073741824"
+          ]
+        ],
+        [
+          [
+            "328226719/1073741824",
+            "328226721/1073741824"
+          ],
+          [
+            "1319831551/1073741824",
+            "1319831553/1073741824"
+          ]
+        ],
+        [
+          [
+            "-1297623297/1073741824",
+            "-1297623295/1073741824"
+          ],
+          [
+            "61313183/1073741824",
+            "61313185/1073741824"
+          ]
+        ],
+        [
+          [
+            "125144439/1073741824",
+            "125144441/1073741824"
+          ],
+          [
+            "-1449365377/1073741824",
+            "-1449365375/1073741824"
+          ]
+        ],
+        [
+          [
+            "1800402943/1073741824",
+            "1800402945/1073741824"
+          ],
+          [
+            "287918495/1073741824",
+            "287918497/1073741824"
+          ]
+        ],
+        [
+          [
+            "-290695937/1073741824",
+            "-290695935/1073741824"
+          ],
+          [
+            "-26296901/1073741824",
+            "-26296899/1073741824"
+          ]
+        ],
+        [
+          [
+            "-44551449/1073741824",
+            "-44551447/1073741824"
+          ],
+          [
+            "961214975/1073741824",
+            "961214977/1073741824"
+          ]
+        ],
+        [
+          [
+            "200509791/1073741824",
+            "200509793/1073741824"
+          ],
+          [
+            "-1382623105/1073741824",
+            "-1382623103/1073741824"
+          ]
+        ],
+        [
+          [
+            "322400319/1073741824",
+            "322400321/1073741824"
+          ],
+          [
+            "936197055/1073741824",
+            "936197057/1073741824"
+          ]
+        ],
+        [
+          [
+            "-168989217/1073741824",
+            "-168989215/1073741824"
+          ],
+          [
+            "1766360831/1073741824",
+            "1766360833/1073741824"
+          ]
+        ],
+        [
+          [
+            "729811647/1073741824",
+            "729811649/1073741824"
+          ],
+          [
+            "-616932865/1073741824",
+            "-616932863/1073741824"
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "historical_mechanism_0_cegis",
+      "kind": "mechanism_cegis",
+      "checkpoint": "runs/active_end_to_end_seed4993/worlds/n3_test_id_0/observational_graph/baseline/mechanism_0.pt",
+      "checkpoint_sha256": "20b62f0bd0f6ba0e36ee678fbd7401e8425fdb8720e28c80b4b588382e671b61",
+      "scm": "runs/active_end_to_end_seed4993/worlds/n3_test_id_0/observational_graph/baseline/explicit_scm.json",
+      "scm_sha256": "25ee18accadb67001ec81e9833dada9cfb587312e14c58c981da4c729dd3c235",
+      "node": 0,
+      "domain": [
+        [
+          "-1",
+          "1"
+        ],
+        [
+          "-1",
+          "1"
+        ],
+        [
+          "-1",
+          "1"
+        ]
+      ],
+      "epsilon": "1/100"
+    }
+  ],
+  "overall_objective_achieved": false
+}

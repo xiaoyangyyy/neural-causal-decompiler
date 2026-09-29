@@ -1,0 +1,387 @@
+{
+  "decision_rule": "replicated iff both seeds win at >=2 sites, collateral does not increase at winning sites, and target NMSE beats shuffled and random controls",
+  "protocol": "docs/OBLIQUE_NUMERIC_PROTOCOL.md",
+  "replicated_improvement": true,
+  "runs": {
+    "1193": {
+      "passes_seed_rule": true,
+      "sites": {
+        "head_linear": {
+          "oblique_behavior_only": {
+            "collateral_nmse": 9674.574862076546,
+            "informative_accuracy": 0.25874125874125875,
+            "informative_pairs": 286,
+            "interchange_accuracy": 0.58251953125,
+            "mapping_diagnostics": {
+              "biorthogonality_max_error": 1.2656542480726785e-14,
+              "max_write_cosine": 0.3021393748607538,
+              "write_gram_condition": 363.05931895371884
+            },
+            "targeted_nmse": 11670.624686531279
+          },
+          "oblique_numeric": {
+            "collateral_nmse": 17.798262198433772,
+            "informative_accuracy": 0.13286713286713286,
+            "informative_pairs": 286,
+            "interchange_accuracy": 0.63232421875,
+            "mapping_diagnostics": {
+              "biorthogonality_max_error": 1.4432899320127035e-15,
+              "max_write_cosine": 0.4244778390733809,
+              "write_gram_condition": 22.503559053361368
+            },
+            "targeted_nmse": 4.297426214597788
+          },
+          "oblique_random": {
+            "collateral_nmse": 716.8774291841576,
+            "informative_accuracy": 0.08741258741258741,
+            "informative_pairs": 286,
+            "interchange_accuracy": 0.64599609375,
+            "mapping_diagnostics": {
+              "biorthogonality_max_error": 1.4432899320127035e-15,
+              "max_write_cosine": 0.3172535963533562,
+              "write_gram_condition": 30.944590990810553
+            },
+            "targeted_nmse": 847.7520312281792
+          },
+          "oblique_shuffled": {
+            "collateral_nmse": 146.54516337736308,
+            "informative_accuracy": 0.04895104895104895,
+            "informative_pairs": 286,
+            "interchange_accuracy": 0.66162109375,
+            "mapping_diagnostics": {
+              "biorthogonality_max_error": 1.9984014443252818e-15,
+              "max_write_cosine": 0.33470581454354814,
+              "write_gram_condition": 23.928545682691293
+            },
+            "targeted_nmse": 144.56157464950476
+          },
+          "orthogonal_numeric": {
+            "collateral_nmse": 24.439732293730078,
+            "informative_accuracy": 0.06643356643356643,
+            "informative_pairs": 286,
+            "interchange_accuracy": 0.65283203125,
+            "targeted_nmse": 12.647068529349712
+          },
+          "passes_site_rule": true,
+          "primary_delta_targeted_nmse": -8.349642314751923
+        },
+        "head_tanh": {
+          "oblique_behavior_only": {
+            "collateral_nmse": 2328.627197673408,
+            "informative_accuracy": 0.3041958041958042,
+            "informative_pairs": 286,
+            "interchange_accuracy": 0.60302734375,
+            "mapping_diagnostics": {
+              "biorthogonality_max_error": 1.4765966227514582e-14,
+              "max_write_cosine": 0.31160098654314067,
+              "write_gram_condition": 494.6682278401312
+            },
+            "targeted_nmse": 2163.5126963688695
+          },
+          "oblique_numeric": {
+            "collateral_nmse": 15.372445370670722,
+            "informative_accuracy": 0.43006993006993005,
+            "informative_pairs": 286,
+            "interchange_accuracy": 0.56884765625,
+            "mapping_diagnostics": {
+              "biorthogonality_max_error": 5.551115123125783e-15,
+              "max_write_cosine": 0.6394762074952591,
+              "write_gram_condition": 640.4043042641107
+            },
+            "targeted_nmse": 2.4023941162061244
+          },
+          "oblique_random": {
+            "collateral_nmse": 148.07994522114888,
+            "informative_accuracy": 0.05944055944055944,
+            "informative_pairs": 286,
+            "interchange_accuracy": 0.65087890625,
+            "mapping_diagnostics": {
+              "biorthogonality_max_error": 1.4432899320127035e-15,
+              "max_write_cosine": 0.3172535963533562,
+              "write_gram_condition": 30.944590990810553
+            },
+            "targeted_nmse": 123.83202569319106
+          },
+          "oblique_shuffled": {
+            "collateral_nmse": 40.329572494934794,
+            "informative_accuracy": 0.024475524475524476,
+            "informative_pairs": 286,
+            "interchange_accuracy": 0.66357421875,
+            "mapping_diagnostics": {
+              "biorthogonality_max_error": 1.5543122344752192e-15,
+              "max_write_cosine": 0.33170873785806904,
+              "write_gram_condition": 23.932048551669304
+            },
+            "targeted_nmse": 26.83929140890964
+          },
+          "orthogonal_numeric": {
+            "collateral_nmse": 16.63859027201452,
+            "informative_accuracy": 0.08041958041958042,
+            "informative_pairs": 286,
+            "interchange_accuracy": 0.650390625,
+            "targeted_nmse": 3.858625509084935
+          },
+          "passes_site_rule": true,
+          "primary_delta_targeted_nmse": -1.4562313928788106
+        },
+        "representation": {
+          "oblique_behavior_only": {
+            "collateral_nmse": 1659.1281609935018,
+            "informative_accuracy": 0.2727272727272727,
+            "informative_pairs": 286,
+            "interchange_accuracy": 0.587890625,
+            "mapping_diagnostics": {
+              "biorthogonality_max_error": 2.6645352591003757e-15,
+              "max_write_cosine": 0.25901701447823633,
+              "write_gram_condition": 131.13224862542165
+            },
+            "targeted_nmse": 1420.505078806174
+          },
+          "oblique_numeric": {
+            "collateral_nmse": 16.062514976537955,
+            "informative_accuracy": 0.4370629370629371,
+            "informative_pairs": 286,
+            "interchange_accuracy": 0.5654296875,
+            "mapping_diagnostics": {
+              "biorthogonality_max_error": 1.8596235662471372e-15,
+              "max_write_cosine": 0.5114315849496367,
+              "write_gram_condition": 203.98211360668182
+            },
+            "targeted_nmse": 3.2392347441484044
+          },
+          "oblique_random": {
+            "collateral_nmse": 68.80438302377812,
+            "informative_accuracy": 0.03496503496503497,
+            "informative_pairs": 286,
+            "interchange_accuracy": 0.66064453125,
+            "mapping_diagnostics": {
+              "biorthogonality_max_error": 1.1102230246251565e-15,
+              "max_write_cosine": 0.24595889906562096,
+              "write_gram_condition": 8.148388842741014
+            },
+            "targeted_nmse": 61.10179018908723
+          },
+          "oblique_shuffled": {
+            "collateral_nmse": 27.10607003424683,
+            "informative_accuracy": 0.017482517482517484,
+            "informative_pairs": 286,
+            "interchange_accuracy": 0.6640625,
+            "mapping_diagnostics": {
+              "biorthogonality_max_error": 1.1102230246251565e-15,
+              "max_write_cosine": 0.2173119900964544,
+              "write_gram_condition": 7.828904927405714
+            },
+            "targeted_nmse": 12.662076989962868
+          },
+          "orthogonal_numeric": {
+            "collateral_nmse": 16.81936311785665,
+            "informative_accuracy": 0.11888111888111888,
+            "informative_pairs": 286,
+            "interchange_accuracy": 0.64892578125,
+            "targeted_nmse": 5.322182154833036
+          },
+          "passes_site_rule": true,
+          "primary_delta_targeted_nmse": -2.0829474106846315
+        }
+      },
+      "test_pairs": 2048,
+      "unique_test_masks": 1411,
+      "winning_sites": [
+        "representation",
+        "head_linear",
+        "head_tanh"
+      ],
+      "worlds": 9216
+    },
+    "1194": {
+      "passes_seed_rule": true,
+      "sites": {
+        "head_linear": {
+          "oblique_behavior_only": {
+            "collateral_nmse": 7212.949629548991,
+            "informative_accuracy": 0.13725490196078433,
+            "informative_pairs": 255,
+            "interchange_accuracy": 0.5810546875,
+            "mapping_diagnostics": {
+              "biorthogonality_max_error": 2.1227461620632043e-14,
+              "max_write_cosine": 0.3112982027224449,
+              "write_gram_condition": 806.2740679628944
+            },
+            "targeted_nmse": 7441.220617648424
+          },
+          "oblique_numeric": {
+            "collateral_nmse": 13.70193980016846,
+            "informative_accuracy": 0.043137254901960784,
+            "informative_pairs": 255,
+            "interchange_accuracy": 0.6669921875,
+            "mapping_diagnostics": {
+              "biorthogonality_max_error": 1.1102230246251565e-15,
+              "max_write_cosine": 0.39342780981760334,
+              "write_gram_condition": 9.9034558165337
+            },
+            "targeted_nmse": 3.3959249262606312
+          },
+          "oblique_random": {
+            "collateral_nmse": 432.8223419800376,
+            "informative_accuracy": 0.03529411764705882,
+            "informative_pairs": 255,
+            "interchange_accuracy": 0.67138671875,
+            "mapping_diagnostics": {
+              "biorthogonality_max_error": 1.7763568394002505e-15,
+              "max_write_cosine": 0.34110581701521053,
+              "write_gram_condition": 40.08041250168908
+            },
+            "targeted_nmse": 454.048059427093
+          },
+          "oblique_shuffled": {
+            "collateral_nmse": 108.1718172092036,
+            "informative_accuracy": 0.0196078431372549,
+            "informative_pairs": 255,
+            "interchange_accuracy": 0.68310546875,
+            "mapping_diagnostics": {
+              "biorthogonality_max_error": 1.5543122344752192e-15,
+              "max_write_cosine": 0.32840128074367403,
+              "write_gram_condition": 23.816452566460505
+            },
+            "targeted_nmse": 82.96185187194318
+          },
+          "orthogonal_numeric": {
+            "collateral_nmse": 16.394275687191694,
+            "informative_accuracy": 0.03137254901960784,
+            "informative_pairs": 255,
+            "interchange_accuracy": 0.68115234375,
+            "targeted_nmse": 5.154879015313575
+          },
+          "passes_site_rule": true,
+          "primary_delta_targeted_nmse": -1.7589540890529434
+        },
+        "head_tanh": {
+          "oblique_behavior_only": {
+            "collateral_nmse": 8732.817585745583,
+            "informative_accuracy": 0.2196078431372549,
+            "informative_pairs": 255,
+            "interchange_accuracy": 0.5966796875,
+            "mapping_diagnostics": {
+              "biorthogonality_max_error": 5.718024160318413e-14,
+              "max_write_cosine": 0.34568070157799824,
+              "write_gram_condition": 1559.9615466764828
+            },
+            "targeted_nmse": 8015.93224460748
+          },
+          "oblique_numeric": {
+            "collateral_nmse": 13.349978740137043,
+            "informative_accuracy": 0.1803921568627451,
+            "informative_pairs": 255,
+            "interchange_accuracy": 0.6357421875,
+            "mapping_diagnostics": {
+              "biorthogonality_max_error": 7.105427357601002e-15,
+              "max_write_cosine": 0.6432047849672107,
+              "write_gram_condition": 189.07368978169106
+            },
+            "targeted_nmse": 2.9541094140927324
+          },
+          "oblique_random": {
+            "collateral_nmse": 210.80052306647775,
+            "informative_accuracy": 0.043137254901960784,
+            "informative_pairs": 255,
+            "interchange_accuracy": 0.6796875,
+            "mapping_diagnostics": {
+              "biorthogonality_max_error": 1.7763568394002505e-15,
+              "max_write_cosine": 0.34110581701521053,
+              "write_gram_condition": 40.08041250168908
+            },
+            "targeted_nmse": 242.84176708122504
+          },
+          "oblique_shuffled": {
+            "collateral_nmse": 50.31148088862266,
+            "informative_accuracy": 0.00784313725490196,
+            "informative_pairs": 255,
+            "interchange_accuracy": 0.681640625,
+            "mapping_diagnostics": {
+              "biorthogonality_max_error": 1.7763568394002505e-15,
+              "max_write_cosine": 0.324718356842616,
+              "write_gram_condition": 23.503563535591248
+            },
+            "targeted_nmse": 43.208218983318126
+          },
+          "orthogonal_numeric": {
+            "collateral_nmse": 14.987060735233433,
+            "informative_accuracy": 0.03529411764705882,
+            "informative_pairs": 255,
+            "interchange_accuracy": 0.67626953125,
+            "targeted_nmse": 5.931229338035141
+          },
+          "passes_site_rule": true,
+          "primary_delta_targeted_nmse": -2.977119923942409
+        },
+        "representation": {
+          "oblique_behavior_only": {
+            "collateral_nmse": 3073.8969760198734,
+            "informative_accuracy": 0.19215686274509805,
+            "informative_pairs": 255,
+            "interchange_accuracy": 0.57763671875,
+            "mapping_diagnostics": {
+              "biorthogonality_max_error": 3.774758283725532e-15,
+              "max_write_cosine": 0.27726524705381717,
+              "write_gram_condition": 196.0765231055745
+            },
+            "targeted_nmse": 2785.909567790733
+          },
+          "oblique_numeric": {
+            "collateral_nmse": 12.88747135792826,
+            "informative_accuracy": 0.2235294117647059,
+            "informative_pairs": 255,
+            "interchange_accuracy": 0.57373046875,
+            "mapping_diagnostics": {
+              "biorthogonality_max_error": 1.3322676295501878e-15,
+              "max_write_cosine": 0.546089627097303,
+              "write_gram_condition": 81.07634418982758
+            },
+            "targeted_nmse": 3.5247350580484094
+          },
+          "oblique_random": {
+            "collateral_nmse": 89.43716381195226,
+            "informative_accuracy": 0.023529411764705882,
+            "informative_pairs": 255,
+            "interchange_accuracy": 0.67578125,
+            "mapping_diagnostics": {
+              "biorthogonality_max_error": 8.881784197001252e-16,
+              "max_write_cosine": 0.23549656332102542,
+              "write_gram_condition": 8.510801899134536
+            },
+            "targeted_nmse": 81.687239452577
+          },
+          "oblique_shuffled": {
+            "collateral_nmse": 34.79531329375541,
+            "informative_accuracy": 0.011764705882352941,
+            "informative_pairs": 255,
+            "interchange_accuracy": 0.68505859375,
+            "mapping_diagnostics": {
+              "biorthogonality_max_error": 8.881784197001252e-16,
+              "max_write_cosine": 0.24084555316262946,
+              "write_gram_condition": 7.8192949467866715
+            },
+            "targeted_nmse": 21.936042686068635
+          },
+          "orthogonal_numeric": {
+            "collateral_nmse": 13.816711376871673,
+            "informative_accuracy": 0.08235294117647059,
+            "informative_pairs": 255,
+            "interchange_accuracy": 0.67236328125,
+            "targeted_nmse": 3.8746792161594596
+          },
+          "passes_site_rule": true,
+          "primary_delta_targeted_nmse": -0.3499441581110503
+        }
+      },
+      "test_pairs": 2048,
+      "unique_test_masks": 1411,
+      "winning_sites": [
+        "representation",
+        "head_linear",
+        "head_tanh"
+      ],
+      "worlds": 9216
+    }
+  }
+}

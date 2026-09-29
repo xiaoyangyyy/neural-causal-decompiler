@@ -1,0 +1,56 @@
+{
+  "id": "workbench",
+  "job": {
+    "artifact": "runs/original_proof_workbench_bundle_v1/manifest.json",
+    "artifact_sha256": "a84ec013c9a2f0835e560a579cf0c8fd13c66a93fb25ad83a75110ded74feb95",
+    "id": "workbench",
+    "kind": "historical_workbench",
+    "original_claim_closed": false,
+    "related_claims": [
+      "R5.interchange",
+      "R12.semantic_equivalence",
+      "R12.shortest_unique"
+    ]
+  },
+  "result": {
+    "status": "verified",
+    "verification": {
+      "overall_objective_achieved": false,
+      "proof_jobs": 4,
+      "results": [
+        {
+          "conclusion": "refuted",
+          "mapping_family_excluded": "every deterministic function of any or all post-normalization internal states; independent randomization also cannot improve the statistical bound",
+          "original_R5_closed": false,
+          "statistical_success_probability_upper": "51137301086387562884287/1208925819614629174706176",
+          "status": "verified"
+        },
+        {
+          "conclusion": "refuted",
+          "original_R12_closed": false,
+          "status": "verified"
+        },
+        {
+          "conclusion": "proved",
+          "minimum_cost": 3,
+          "original_R4_R12_closed": false,
+          "status": "verified"
+        },
+        {
+          "conclusion": "refuted",
+          "minimum_cost": 1,
+          "original_R12_closed": false,
+          "status": "verified"
+        }
+      ],
+      "status": "verified",
+      "_resource_guard": {
+        "job_memory_limit_bytes": 8589934592,
+        "descendants_included": true,
+        "reported_peak_within_limit": true
+      }
+    },
+    "original_claim_closed": false,
+    "artifact_sha256": "a84ec013c9a2f0835e560a579cf0c8fd13c66a93fb25ad83a75110ded74feb95"
+  }
+}

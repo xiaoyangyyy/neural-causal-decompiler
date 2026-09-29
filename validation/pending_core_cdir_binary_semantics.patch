@@ -1,0 +1,11 @@
+--- ncd/cdir.py
++++ ncd/cdir.py
+@@ -153,7 +153,7 @@
+ def to_sympy(node):
+     import sympy as sp
+     if node.op=="var":return sp.Symbol(f"x{node.index}",real=True)
+-    if node.op=="constant":return sp.Rational(str(node.value))
++    if node.op=="constant":return sp.Rational(*float(node.value).as_integer_ratio())
+     a=[to_sympy(x) for x in node.args]
+     operations={"add":lambda:a[0]+a[1],"sub":lambda:a[0]-a[1],"mul":lambda:a[0]*a[1],
+                 "square":lambda:a[0]**2,"sin":lambda:sp.sin(a[0]),"cos":lambda:sp.cos(a[0]),

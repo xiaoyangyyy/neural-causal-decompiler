@@ -1,0 +1,2175 @@
+{
+  "device_label_identity_proved": false,
+  "original_claim_counts": {
+    "proved": 0,
+    "refuted": 2,
+    "unresolved": 36
+  },
+  "original_objective_achieved": false,
+  "records": [
+    {
+      "allowed_interventions": "Every subset of the 14 declared sites, each receiving its own finite real tensor of the identical batch/node/channel shape; independent source assignments are allowed",
+      "certificate": "runs/actual_graph_program_proof_v1/targets/seed8101_observational_graph/n3/certificate.json",
+      "certificate_sha256": "f0d6406fe77458dd9eddbb21dbdb4316c18c38fae2b677667cc933f3f6b94832",
+      "checkpoint_sha256": "3e1c5c4967858ba5035fd4f897dd5872c95ee70f70131e45fe72b9cfcc2345fc",
+      "claim": "The fixed actual graph network and full explicit program agree on math scores, probabilities, labels and decoded graph; the fixed 14-site physical map commutes with every compatible site subset",
+      "declared_compatible_subsets": 16384,
+      "declared_sites": [
+        {
+          "channels": "width",
+          "kind": "linear",
+          "layout": "grid",
+          "module": "encoder.0",
+          "state": "encoder.0.affine"
+        },
+        {
+          "channels": "width",
+          "kind": "tanh",
+          "layout": "grid",
+          "module": "encoder.1",
+          "state": "encoder.0.tanh"
+        },
+        {
+          "channels": "width",
+          "kind": "linear",
+          "layout": "grid",
+          "module": "encoder.2",
+          "state": "encoder.1.affine"
+        },
+        {
+          "channels": "width",
+          "kind": "tanh",
+          "layout": "grid",
+          "module": "encoder.3",
+          "state": "encoder.1.tanh"
+        },
+        {
+          "channels": "width",
+          "kind": "linear",
+          "layout": "grid",
+          "module": "context.0",
+          "state": "context.layer.0.affine"
+        },
+        {
+          "channels": "width",
+          "kind": "tanh",
+          "layout": "grid",
+          "module": "context.1",
+          "state": "context.layer.0.tanh"
+        },
+        {
+          "channels": "width",
+          "kind": "linear",
+          "layout": "grid",
+          "module": "context.2",
+          "state": "context.layer.1.affine"
+        },
+        {
+          "channels": "width",
+          "kind": "tanh",
+          "layout": "grid",
+          "module": "context.3",
+          "state": "context.layer.1.tanh"
+        },
+        {
+          "channels": "width",
+          "kind": "attention",
+          "layout": "flat",
+          "module": "attention",
+          "state": "attention.output.affine",
+          "tuple_first": true
+        },
+        {
+          "channels": "width",
+          "kind": "norm",
+          "layout": "flat",
+          "module": "norm",
+          "state": "norm.output"
+        },
+        {
+          "channels": "width",
+          "kind": "linear",
+          "layout": "grid",
+          "module": "head_trunk.0",
+          "state": "head.trunk.0.affine"
+        },
+        {
+          "channels": "width",
+          "kind": "tanh",
+          "layout": "grid",
+          "module": "head_trunk.1",
+          "state": "head.trunk.0.tanh"
+        },
+        {
+          "channels": 1,
+          "kind": "linear",
+          "layout": "grid",
+          "module": "skeleton_head",
+          "state": "head.skeleton.affine"
+        },
+        {
+          "channels": 3,
+          "kind": "linear",
+          "layout": "grid",
+          "module": "orientation_head",
+          "state": "head.orientation.affine"
+        }
+      ],
+      "domain": {
+        "batch": "Every positive finite integer B",
+        "features": [
+          "B",
+          3,
+          3,
+          24
+        ],
+        "values": "All finite real feature coordinates, including diagonal tokens, clipping boundaries and label ties"
+      },
+      "error": {
+        "decoded_graph": "identical partially-directed prediction, rejection trace and explicit DAG completion",
+        "mathematical_logits": "0",
+        "mathematical_probabilities": "0",
+        "pair_labels": "identical under the same lowest-index argmax rule"
+      },
+      "evidence_class": "network_fidelity_and_fixed_internal_mapping",
+      "hypotheses": [
+        "Actual coefficients are their exact stored rational values",
+        "Primary NN source and checkpoint identities match the frozen four-target registry",
+        "Ideal real tensor/operator contracts; graph-tail floating casts interpreted as real identity embeddings",
+        "Positive frozen std and epsilon; matching finite replacement shapes"
+      ],
+      "id": "actual_graph_math_seed8101_observational_graph_n3",
+      "independent_replay": "runs/actual_graph_program_proof_v1/targets/seed8101_observational_graph/n3/verification.json",
+      "independent_replay_sha256": "e279c23f40d2558372b09f46b33ac20dd7bf0b6320690baafc82ca5717f82afd",
+      "network_math_sha256": "b013561499b3aa7e01806a9fe5f13067322ec46020f4d01dcbd5b0e78be597a7",
+      "original_claim_closed": false,
+      "program": "runs/actual_graph_program_proof_v1/targets/seed8101_observational_graph/n3/program.json",
+      "program_file_sha256": "84435a2f9ba085c1484617ceb9a39a94d72a7d547c00d5bd4425bc5f3ffd894c",
+      "program_math_sha256": "3f84587a751bb5d9bf2db6e61cb515d70ebf91e3d9537cb5adb03e3a7ffae576",
+      "proof_dependencies": {
+        "actual_tensor_bindings": 22,
+        "device_rounding_verified": false,
+        "method": "docs/ACTUAL_GRAPH_PROGRAM_METHOD.md",
+        "physical_module_map": true,
+        "primary_source_sha256": {
+          "active_intervention_graph.py": "b132c5be445e85293a8b410b9303b6a30b4e9454736ba6d149cd83313d0b0d35",
+          "factorized_node_context_graph.py": "41fecea62fc71caaa911663dc3461a3580111f888aa96c15245868488e7459b8",
+          "graph_model.py": "de044407e023a4e575cdb7781bd1e893d277fd87a1058e1f6c866fc3805b0873",
+          "graphs.py": "119ef2757b9200c05b3f2fddebf898bf189e4844e6010d29abf61480764085fc",
+          "model.py": "ee732b8f06c153951e6f3e559c9511591e8e6e632d815766c5192aff50bb3602",
+          "node_context_graph.py": "0ab3ff815813ae543f052866390223979e8b57dfc94ce254317e4b8fbde12298"
+        },
+        "source_sha256": {
+          "graph_ssa_proof/__init__.py": "ceeb163eb71006a85db4ad3ff5adb52b8c7592fffeb4daa5825b63b97f07d4d8",
+          "graph_ssa_proof/__main__.py": "7ba24c15c12fac87bc08c757bf887ffff4df92674d083700f9ef46efb2bb8161",
+          "graph_ssa_proof/binding.py": "56b430b3df20d053672c7ca8657a3b5dc1f8fc34ff6ee1c921f7c7f1fc90faa5",
+          "graph_ssa_proof/compiler.py": "d11dd16482ff57c119cdbc8955e3a3fc27b4fa6b8411d5f77dc99e6bddfd91f0",
+          "graph_ssa_proof/decoder.py": "2767ef0f22982aac19296c9bdbe8e8c3f1adbd3bb7c3586cfeeb9bcb612bdd7d",
+          "graph_ssa_proof/mapping.py": "bb2ffb0d6dfad87fb7116df36986936e36cc9097166cf583450df9b17b82a58e",
+          "graph_ssa_proof/runtime.py": "b8ba772f28f0acff9a7d5617122060935744a791b3643c52e96fa9fa6b9d8b06",
+          "graph_ssa_proof/verification.py": "73a263d15c6c27b75bca704f99ffcf5f9b2fdd50a91e4bf9713db914da656592"
+        }
+      },
+      "related_original_requirements": [
+        "R4",
+        "R5",
+        "R9",
+        "R13"
+      ],
+      "status": "proved-scoped",
+      "target": "seed8101_observational_graph",
+      "uncovered": [
+        "Raw statistical and do-response feature construction",
+        "Other actual graph architectures/checkpoints",
+        "Device rounding or bit-exact equivalence",
+        "True graph identification or an identified CPDAG",
+        "Shortest causal algorithm/MDL minimality",
+        "Unregistered physical graph sites or other mapping families"
+      ]
+    },
+    {
+      "allowed_interventions": "Every subset of the 14 declared sites, each receiving its own finite real tensor of the identical batch/node/channel shape; independent source assignments are allowed",
+      "certificate": "runs/actual_graph_program_proof_v1/targets/seed8101_observational_graph/n5/certificate.json",
+      "certificate_sha256": "6f240bf5e299e5ed1e7299005f0c339f3b35a054be4bb6a63a93a61204b84f14",
+      "checkpoint_sha256": "3e1c5c4967858ba5035fd4f897dd5872c95ee70f70131e45fe72b9cfcc2345fc",
+      "claim": "The fixed actual graph network and full explicit program agree on math scores, probabilities, labels and decoded graph; the fixed 14-site physical map commutes with every compatible site subset",
+      "declared_compatible_subsets": 16384,
+      "declared_sites": [
+        {
+          "channels": "width",
+          "kind": "linear",
+          "layout": "grid",
+          "module": "encoder.0",
+          "state": "encoder.0.affine"
+        },
+        {
+          "channels": "width",
+          "kind": "tanh",
+          "layout": "grid",
+          "module": "encoder.1",
+          "state": "encoder.0.tanh"
+        },
+        {
+          "channels": "width",
+          "kind": "linear",
+          "layout": "grid",
+          "module": "encoder.2",
+          "state": "encoder.1.affine"
+        },
+        {
+          "channels": "width",
+          "kind": "tanh",
+          "layout": "grid",
+          "module": "encoder.3",
+          "state": "encoder.1.tanh"
+        },
+        {
+          "channels": "width",
+          "kind": "linear",
+          "layout": "grid",
+          "module": "context.0",
+          "state": "context.layer.0.affine"
+        },
+        {
+          "channels": "width",
+          "kind": "tanh",
+          "layout": "grid",
+          "module": "context.1",
+          "state": "context.layer.0.tanh"
+        },
+        {
+          "channels": "width",
+          "kind": "linear",
+          "layout": "grid",
+          "module": "context.2",
+          "state": "context.layer.1.affine"
+        },
+        {
+          "channels": "width",
+          "kind": "tanh",
+          "layout": "grid",
+          "module": "context.3",
+          "state": "context.layer.1.tanh"
+        },
+        {
+          "channels": "width",
+          "kind": "attention",
+          "layout": "flat",
+          "module": "attention",
+          "state": "attention.output.affine",
+          "tuple_first": true
+        },
+        {
+          "channels": "width",
+          "kind": "norm",
+          "layout": "flat",
+          "module": "norm",
+          "state": "norm.output"
+        },
+        {
+          "channels": "width",
+          "kind": "linear",
+          "layout": "grid",
+          "module": "head_trunk.0",
+          "state": "head.trunk.0.affine"
+        },
+        {
+          "channels": "width",
+          "kind": "tanh",
+          "layout": "grid",
+          "module": "head_trunk.1",
+          "state": "head.trunk.0.tanh"
+        },
+        {
+          "channels": 1,
+          "kind": "linear",
+          "layout": "grid",
+          "module": "skeleton_head",
+          "state": "head.skeleton.affine"
+        },
+        {
+          "channels": 3,
+          "kind": "linear",
+          "layout": "grid",
+          "module": "orientation_head",
+          "state": "head.orientation.affine"
+        }
+      ],
+      "domain": {
+        "batch": "Every positive finite integer B",
+        "features": [
+          "B",
+          5,
+          5,
+          24
+        ],
+        "values": "All finite real feature coordinates, including diagonal tokens, clipping boundaries and label ties"
+      },
+      "error": {
+        "decoded_graph": "identical partially-directed prediction, rejection trace and explicit DAG completion",
+        "mathematical_logits": "0",
+        "mathematical_probabilities": "0",
+        "pair_labels": "identical under the same lowest-index argmax rule"
+      },
+      "evidence_class": "network_fidelity_and_fixed_internal_mapping",
+      "hypotheses": [
+        "Actual coefficients are their exact stored rational values",
+        "Primary NN source and checkpoint identities match the frozen four-target registry",
+        "Ideal real tensor/operator contracts; graph-tail floating casts interpreted as real identity embeddings",
+        "Positive frozen std and epsilon; matching finite replacement shapes"
+      ],
+      "id": "actual_graph_math_seed8101_observational_graph_n5",
+      "independent_replay": "runs/actual_graph_program_proof_v1/targets/seed8101_observational_graph/n5/verification.json",
+      "independent_replay_sha256": "1630be47aec41f59d41107cf736ca32ded2e313a4ae91bb83b133db327f9afda",
+      "network_math_sha256": "b013561499b3aa7e01806a9fe5f13067322ec46020f4d01dcbd5b0e78be597a7",
+      "original_claim_closed": false,
+      "program": "runs/actual_graph_program_proof_v1/targets/seed8101_observational_graph/n5/program.json",
+      "program_file_sha256": "9cdd3f35bdd65c8afc1f1b0b1fdad3ed85f8691e838541254d34501d9386f5b4",
+      "program_math_sha256": "5fff41730db6b2f2a0c96873bc981b8efabf25dada255bb535068ff785be5c5b",
+      "proof_dependencies": {
+        "actual_tensor_bindings": 22,
+        "device_rounding_verified": false,
+        "method": "docs/ACTUAL_GRAPH_PROGRAM_METHOD.md",
+        "physical_module_map": true,
+        "primary_source_sha256": {
+          "active_intervention_graph.py": "b132c5be445e85293a8b410b9303b6a30b4e9454736ba6d149cd83313d0b0d35",
+          "factorized_node_context_graph.py": "41fecea62fc71caaa911663dc3461a3580111f888aa96c15245868488e7459b8",
+          "graph_model.py": "de044407e023a4e575cdb7781bd1e893d277fd87a1058e1f6c866fc3805b0873",
+          "graphs.py": "119ef2757b9200c05b3f2fddebf898bf189e4844e6010d29abf61480764085fc",
+          "model.py": "ee732b8f06c153951e6f3e559c9511591e8e6e632d815766c5192aff50bb3602",
+          "node_context_graph.py": "0ab3ff815813ae543f052866390223979e8b57dfc94ce254317e4b8fbde12298"
+        },
+        "source_sha256": {
+          "graph_ssa_proof/__init__.py": "ceeb163eb71006a85db4ad3ff5adb52b8c7592fffeb4daa5825b63b97f07d4d8",
+          "graph_ssa_proof/__main__.py": "7ba24c15c12fac87bc08c757bf887ffff4df92674d083700f9ef46efb2bb8161",
+          "graph_ssa_proof/binding.py": "56b430b3df20d053672c7ca8657a3b5dc1f8fc34ff6ee1c921f7c7f1fc90faa5",
+          "graph_ssa_proof/compiler.py": "d11dd16482ff57c119cdbc8955e3a3fc27b4fa6b8411d5f77dc99e6bddfd91f0",
+          "graph_ssa_proof/decoder.py": "2767ef0f22982aac19296c9bdbe8e8c3f1adbd3bb7c3586cfeeb9bcb612bdd7d",
+          "graph_ssa_proof/mapping.py": "bb2ffb0d6dfad87fb7116df36986936e36cc9097166cf583450df9b17b82a58e",
+          "graph_ssa_proof/runtime.py": "b8ba772f28f0acff9a7d5617122060935744a791b3643c52e96fa9fa6b9d8b06",
+          "graph_ssa_proof/verification.py": "73a263d15c6c27b75bca704f99ffcf5f9b2fdd50a91e4bf9713db914da656592"
+        }
+      },
+      "related_original_requirements": [
+        "R4",
+        "R5",
+        "R9",
+        "R13"
+      ],
+      "status": "proved-scoped",
+      "target": "seed8101_observational_graph",
+      "uncovered": [
+        "Raw statistical and do-response feature construction",
+        "Other actual graph architectures/checkpoints",
+        "Device rounding or bit-exact equivalence",
+        "True graph identification or an identified CPDAG",
+        "Shortest causal algorithm/MDL minimality",
+        "Unregistered physical graph sites or other mapping families"
+      ]
+    },
+    {
+      "allowed_interventions": "Every subset of the 14 declared sites, each receiving its own finite real tensor of the identical batch/node/channel shape; independent source assignments are allowed",
+      "certificate": "runs/actual_graph_program_proof_v1/targets/seed8101_observational_graph/n8/certificate.json",
+      "certificate_sha256": "390b56cb5b9963d33c1a349c4a552357f1de31cecca180e80f4f244ec1769f74",
+      "checkpoint_sha256": "3e1c5c4967858ba5035fd4f897dd5872c95ee70f70131e45fe72b9cfcc2345fc",
+      "claim": "The fixed actual graph network and full explicit program agree on math scores, probabilities, labels and decoded graph; the fixed 14-site physical map commutes with every compatible site subset",
+      "declared_compatible_subsets": 16384,
+      "declared_sites": [
+        {
+          "channels": "width",
+          "kind": "linear",
+          "layout": "grid",
+          "module": "encoder.0",
+          "state": "encoder.0.affine"
+        },
+        {
+          "channels": "width",
+          "kind": "tanh",
+          "layout": "grid",
+          "module": "encoder.1",
+          "state": "encoder.0.tanh"
+        },
+        {
+          "channels": "width",
+          "kind": "linear",
+          "layout": "grid",
+          "module": "encoder.2",
+          "state": "encoder.1.affine"
+        },
+        {
+          "channels": "width",
+          "kind": "tanh",
+          "layout": "grid",
+          "module": "encoder.3",
+          "state": "encoder.1.tanh"
+        },
+        {
+          "channels": "width",
+          "kind": "linear",
+          "layout": "grid",
+          "module": "context.0",
+          "state": "context.layer.0.affine"
+        },
+        {
+          "channels": "width",
+          "kind": "tanh",
+          "layout": "grid",
+          "module": "context.1",
+          "state": "context.layer.0.tanh"
+        },
+        {
+          "channels": "width",
+          "kind": "linear",
+          "layout": "grid",
+          "module": "context.2",
+          "state": "context.layer.1.affine"
+        },
+        {
+          "channels": "width",
+          "kind": "tanh",
+          "layout": "grid",
+          "module": "context.3",
+          "state": "context.layer.1.tanh"
+        },
+        {
+          "channels": "width",
+          "kind": "attention",
+          "layout": "flat",
+          "module": "attention",
+          "state": "attention.output.affine",
+          "tuple_first": true
+        },
+        {
+          "channels": "width",
+          "kind": "norm",
+          "layout": "flat",
+          "module": "norm",
+          "state": "norm.output"
+        },
+        {
+          "channels": "width",
+          "kind": "linear",
+          "layout": "grid",
+          "module": "head_trunk.0",
+          "state": "head.trunk.0.affine"
+        },
+        {
+          "channels": "width",
+          "kind": "tanh",
+          "layout": "grid",
+          "module": "head_trunk.1",
+          "state": "head.trunk.0.tanh"
+        },
+        {
+          "channels": 1,
+          "kind": "linear",
+          "layout": "grid",
+          "module": "skeleton_head",
+          "state": "head.skeleton.affine"
+        },
+        {
+          "channels": 3,
+          "kind": "linear",
+          "layout": "grid",
+          "module": "orientation_head",
+          "state": "head.orientation.affine"
+        }
+      ],
+      "domain": {
+        "batch": "Every positive finite integer B",
+        "features": [
+          "B",
+          8,
+          8,
+          24
+        ],
+        "values": "All finite real feature coordinates, including diagonal tokens, clipping boundaries and label ties"
+      },
+      "error": {
+        "decoded_graph": "identical partially-directed prediction, rejection trace and explicit DAG completion",
+        "mathematical_logits": "0",
+        "mathematical_probabilities": "0",
+        "pair_labels": "identical under the same lowest-index argmax rule"
+      },
+      "evidence_class": "network_fidelity_and_fixed_internal_mapping",
+      "hypotheses": [
+        "Actual coefficients are their exact stored rational values",
+        "Primary NN source and checkpoint identities match the frozen four-target registry",
+        "Ideal real tensor/operator contracts; graph-tail floating casts interpreted as real identity embeddings",
+        "Positive frozen std and epsilon; matching finite replacement shapes"
+      ],
+      "id": "actual_graph_math_seed8101_observational_graph_n8",
+      "independent_replay": "runs/actual_graph_program_proof_v1/targets/seed8101_observational_graph/n8/verification.json",
+      "independent_replay_sha256": "83d812d1616418d9f24706a58a4075b0b32f839f1425be824e11682cebae6022",
+      "network_math_sha256": "b013561499b3aa7e01806a9fe5f13067322ec46020f4d01dcbd5b0e78be597a7",
+      "original_claim_closed": false,
+      "program": "runs/actual_graph_program_proof_v1/targets/seed8101_observational_graph/n8/program.json",
+      "program_file_sha256": "224c7061e75e5333fc52d41c7d6b76b9e23480f987a9b646087a964073814415",
+      "program_math_sha256": "89159fffa52d85c72072699d802eed809257b1a70eaf8a9e7bacac7dacfa4bc4",
+      "proof_dependencies": {
+        "actual_tensor_bindings": 22,
+        "device_rounding_verified": false,
+        "method": "docs/ACTUAL_GRAPH_PROGRAM_METHOD.md",
+        "physical_module_map": true,
+        "primary_source_sha256": {
+          "active_intervention_graph.py": "b132c5be445e85293a8b410b9303b6a30b4e9454736ba6d149cd83313d0b0d35",
+          "factorized_node_context_graph.py": "41fecea62fc71caaa911663dc3461a3580111f888aa96c15245868488e7459b8",
+          "graph_model.py": "de044407e023a4e575cdb7781bd1e893d277fd87a1058e1f6c866fc3805b0873",
+          "graphs.py": "119ef2757b9200c05b3f2fddebf898bf189e4844e6010d29abf61480764085fc",
+          "model.py": "ee732b8f06c153951e6f3e559c9511591e8e6e632d815766c5192aff50bb3602",
+          "node_context_graph.py": "0ab3ff815813ae543f052866390223979e8b57dfc94ce254317e4b8fbde12298"
+        },
+        "source_sha256": {
+          "graph_ssa_proof/__init__.py": "ceeb163eb71006a85db4ad3ff5adb52b8c7592fffeb4daa5825b63b97f07d4d8",
+          "graph_ssa_proof/__main__.py": "7ba24c15c12fac87bc08c757bf887ffff4df92674d083700f9ef46efb2bb8161",
+          "graph_ssa_proof/binding.py": "56b430b3df20d053672c7ca8657a3b5dc1f8fc34ff6ee1c921f7c7f1fc90faa5",
+          "graph_ssa_proof/compiler.py": "d11dd16482ff57c119cdbc8955e3a3fc27b4fa6b8411d5f77dc99e6bddfd91f0",
+          "graph_ssa_proof/decoder.py": "2767ef0f22982aac19296c9bdbe8e8c3f1adbd3bb7c3586cfeeb9bcb612bdd7d",
+          "graph_ssa_proof/mapping.py": "bb2ffb0d6dfad87fb7116df36986936e36cc9097166cf583450df9b17b82a58e",
+          "graph_ssa_proof/runtime.py": "b8ba772f28f0acff9a7d5617122060935744a791b3643c52e96fa9fa6b9d8b06",
+          "graph_ssa_proof/verification.py": "73a263d15c6c27b75bca704f99ffcf5f9b2fdd50a91e4bf9713db914da656592"
+        }
+      },
+      "related_original_requirements": [
+        "R4",
+        "R5",
+        "R9",
+        "R13"
+      ],
+      "status": "proved-scoped",
+      "target": "seed8101_observational_graph",
+      "uncovered": [
+        "Raw statistical and do-response feature construction",
+        "Other actual graph architectures/checkpoints",
+        "Device rounding or bit-exact equivalence",
+        "True graph identification or an identified CPDAG",
+        "Shortest causal algorithm/MDL minimality",
+        "Unregistered physical graph sites or other mapping families"
+      ]
+    },
+    {
+      "allowed_interventions": "Every subset of the 14 declared sites, each receiving its own finite real tensor of the identical batch/node/channel shape; independent source assignments are allowed",
+      "certificate": "runs/actual_graph_program_proof_v1/targets/seed8101_active_graph/n3/certificate.json",
+      "certificate_sha256": "086cd1348b01c785ef909e9f9633029047e27c1a5d296c0e60d97ea0fe6f082f",
+      "checkpoint_sha256": "15a3989a1831d5daf09b8c712cd1399cc04c9dad6d48f61c90b97587cb1a9ddf",
+      "claim": "The fixed actual graph network and full explicit program agree on math scores, probabilities, labels and decoded graph; the fixed 14-site physical map commutes with every compatible site subset",
+      "declared_compatible_subsets": 16384,
+      "declared_sites": [
+        {
+          "channels": "width",
+          "kind": "linear",
+          "layout": "grid",
+          "module": "encoder.0",
+          "state": "encoder.0.affine"
+        },
+        {
+          "channels": "width",
+          "kind": "tanh",
+          "layout": "grid",
+          "module": "encoder.1",
+          "state": "encoder.0.tanh"
+        },
+        {
+          "channels": "width",
+          "kind": "linear",
+          "layout": "grid",
+          "module": "encoder.2",
+          "state": "encoder.1.affine"
+        },
+        {
+          "channels": "width",
+          "kind": "tanh",
+          "layout": "grid",
+          "module": "encoder.3",
+          "state": "encoder.1.tanh"
+        },
+        {
+          "channels": "width",
+          "kind": "linear",
+          "layout": "grid",
+          "module": "context.0",
+          "state": "context.layer.0.affine"
+        },
+        {
+          "channels": "width",
+          "kind": "tanh",
+          "layout": "grid",
+          "module": "context.1",
+          "state": "context.layer.0.tanh"
+        },
+        {
+          "channels": "width",
+          "kind": "linear",
+          "layout": "grid",
+          "module": "context.2",
+          "state": "context.layer.1.affine"
+        },
+        {
+          "channels": "width",
+          "kind": "tanh",
+          "layout": "grid",
+          "module": "context.3",
+          "state": "context.layer.1.tanh"
+        },
+        {
+          "channels": "width",
+          "kind": "attention",
+          "layout": "flat",
+          "module": "attention",
+          "state": "attention.output.affine",
+          "tuple_first": true
+        },
+        {
+          "channels": "width",
+          "kind": "norm",
+          "layout": "flat",
+          "module": "norm",
+          "state": "norm.output"
+        },
+        {
+          "channels": "width",
+          "kind": "linear",
+          "layout": "grid",
+          "module": "head_trunk.0",
+          "state": "head.trunk.0.affine"
+        },
+        {
+          "channels": "width",
+          "kind": "tanh",
+          "layout": "grid",
+          "module": "head_trunk.1",
+          "state": "head.trunk.0.tanh"
+        },
+        {
+          "channels": 1,
+          "kind": "linear",
+          "layout": "grid",
+          "module": "skeleton_head",
+          "state": "head.skeleton.affine"
+        },
+        {
+          "channels": 3,
+          "kind": "linear",
+          "layout": "grid",
+          "module": "orientation_head",
+          "state": "head.orientation.affine"
+        }
+      ],
+      "domain": {
+        "batch": "Every positive finite integer B",
+        "features": [
+          "B",
+          3,
+          3,
+          24
+        ],
+        "values": "All finite real feature coordinates, including diagonal tokens, clipping boundaries and label ties"
+      },
+      "error": {
+        "decoded_graph": "identical partially-directed prediction, rejection trace and explicit DAG completion",
+        "mathematical_logits": "0",
+        "mathematical_probabilities": "0",
+        "pair_labels": "identical under the same lowest-index argmax rule"
+      },
+      "evidence_class": "network_fidelity_and_fixed_internal_mapping",
+      "hypotheses": [
+        "Actual coefficients are their exact stored rational values",
+        "Primary NN source and checkpoint identities match the frozen four-target registry",
+        "Ideal real tensor/operator contracts; graph-tail floating casts interpreted as real identity embeddings",
+        "Positive frozen std and epsilon; matching finite replacement shapes"
+      ],
+      "id": "actual_graph_math_seed8101_active_graph_n3",
+      "independent_replay": "runs/actual_graph_program_proof_v1/targets/seed8101_active_graph/n3/verification.json",
+      "independent_replay_sha256": "e279c23f40d2558372b09f46b33ac20dd7bf0b6320690baafc82ca5717f82afd",
+      "network_math_sha256": "895723a90c148f80c982d2211a74a50eda2038fe252f8e7b7ce2a15e602ae7f0",
+      "original_claim_closed": false,
+      "program": "runs/actual_graph_program_proof_v1/targets/seed8101_active_graph/n3/program.json",
+      "program_file_sha256": "76e49fd2409cd8ab5f08ce2ba1699f800aebddb3107be7cf31c88458d29258fe",
+      "program_math_sha256": "ead636569d2915010a99e7a88686c88c040ffa4974343c617956abe2c6e06d93",
+      "proof_dependencies": {
+        "actual_tensor_bindings": 22,
+        "device_rounding_verified": false,
+        "method": "docs/ACTUAL_GRAPH_PROGRAM_METHOD.md",
+        "physical_module_map": true,
+        "primary_source_sha256": {
+          "active_intervention_graph.py": "b132c5be445e85293a8b410b9303b6a30b4e9454736ba6d149cd83313d0b0d35",
+          "factorized_node_context_graph.py": "41fecea62fc71caaa911663dc3461a3580111f888aa96c15245868488e7459b8",
+          "graph_model.py": "de044407e023a4e575cdb7781bd1e893d277fd87a1058e1f6c866fc3805b0873",
+          "graphs.py": "119ef2757b9200c05b3f2fddebf898bf189e4844e6010d29abf61480764085fc",
+          "model.py": "ee732b8f06c153951e6f3e559c9511591e8e6e632d815766c5192aff50bb3602",
+          "node_context_graph.py": "0ab3ff815813ae543f052866390223979e8b57dfc94ce254317e4b8fbde12298"
+        },
+        "source_sha256": {
+          "graph_ssa_proof/__init__.py": "ceeb163eb71006a85db4ad3ff5adb52b8c7592fffeb4daa5825b63b97f07d4d8",
+          "graph_ssa_proof/__main__.py": "7ba24c15c12fac87bc08c757bf887ffff4df92674d083700f9ef46efb2bb8161",
+          "graph_ssa_proof/binding.py": "56b430b3df20d053672c7ca8657a3b5dc1f8fc34ff6ee1c921f7c7f1fc90faa5",
+          "graph_ssa_proof/compiler.py": "d11dd16482ff57c119cdbc8955e3a3fc27b4fa6b8411d5f77dc99e6bddfd91f0",
+          "graph_ssa_proof/decoder.py": "2767ef0f22982aac19296c9bdbe8e8c3f1adbd3bb7c3586cfeeb9bcb612bdd7d",
+          "graph_ssa_proof/mapping.py": "bb2ffb0d6dfad87fb7116df36986936e36cc9097166cf583450df9b17b82a58e",
+          "graph_ssa_proof/runtime.py": "b8ba772f28f0acff9a7d5617122060935744a791b3643c52e96fa9fa6b9d8b06",
+          "graph_ssa_proof/verification.py": "73a263d15c6c27b75bca704f99ffcf5f9b2fdd50a91e4bf9713db914da656592"
+        }
+      },
+      "related_original_requirements": [
+        "R4",
+        "R5",
+        "R9",
+        "R13"
+      ],
+      "status": "proved-scoped",
+      "target": "seed8101_active_graph",
+      "uncovered": [
+        "Raw statistical and do-response feature construction",
+        "Other actual graph architectures/checkpoints",
+        "Device rounding or bit-exact equivalence",
+        "True graph identification or an identified CPDAG",
+        "Shortest causal algorithm/MDL minimality",
+        "Unregistered physical graph sites or other mapping families"
+      ]
+    },
+    {
+      "allowed_interventions": "Every subset of the 14 declared sites, each receiving its own finite real tensor of the identical batch/node/channel shape; independent source assignments are allowed",
+      "certificate": "runs/actual_graph_program_proof_v1/targets/seed8101_active_graph/n5/certificate.json",
+      "certificate_sha256": "7d4602287ad0148fdb626cc9bd386ea4a091fea494d076ddf122fef2cc81a649",
+      "checkpoint_sha256": "15a3989a1831d5daf09b8c712cd1399cc04c9dad6d48f61c90b97587cb1a9ddf",
+      "claim": "The fixed actual graph network and full explicit program agree on math scores, probabilities, labels and decoded graph; the fixed 14-site physical map commutes with every compatible site subset",
+      "declared_compatible_subsets": 16384,
+      "declared_sites": [
+        {
+          "channels": "width",
+          "kind": "linear",
+          "layout": "grid",
+          "module": "encoder.0",
+          "state": "encoder.0.affine"
+        },
+        {
+          "channels": "width",
+          "kind": "tanh",
+          "layout": "grid",
+          "module": "encoder.1",
+          "state": "encoder.0.tanh"
+        },
+        {
+          "channels": "width",
+          "kind": "linear",
+          "layout": "grid",
+          "module": "encoder.2",
+          "state": "encoder.1.affine"
+        },
+        {
+          "channels": "width",
+          "kind": "tanh",
+          "layout": "grid",
+          "module": "encoder.3",
+          "state": "encoder.1.tanh"
+        },
+        {
+          "channels": "width",
+          "kind": "linear",
+          "layout": "grid",
+          "module": "context.0",
+          "state": "context.layer.0.affine"
+        },
+        {
+          "channels": "width",
+          "kind": "tanh",
+          "layout": "grid",
+          "module": "context.1",
+          "state": "context.layer.0.tanh"
+        },
+        {
+          "channels": "width",
+          "kind": "linear",
+          "layout": "grid",
+          "module": "context.2",
+          "state": "context.layer.1.affine"
+        },
+        {
+          "channels": "width",
+          "kind": "tanh",
+          "layout": "grid",
+          "module": "context.3",
+          "state": "context.layer.1.tanh"
+        },
+        {
+          "channels": "width",
+          "kind": "attention",
+          "layout": "flat",
+          "module": "attention",
+          "state": "attention.output.affine",
+          "tuple_first": true
+        },
+        {
+          "channels": "width",
+          "kind": "norm",
+          "layout": "flat",
+          "module": "norm",
+          "state": "norm.output"
+        },
+        {
+          "channels": "width",
+          "kind": "linear",
+          "layout": "grid",
+          "module": "head_trunk.0",
+          "state": "head.trunk.0.affine"
+        },
+        {
+          "channels": "width",
+          "kind": "tanh",
+          "layout": "grid",
+          "module": "head_trunk.1",
+          "state": "head.trunk.0.tanh"
+        },
+        {
+          "channels": 1,
+          "kind": "linear",
+          "layout": "grid",
+          "module": "skeleton_head",
+          "state": "head.skeleton.affine"
+        },
+        {
+          "channels": 3,
+          "kind": "linear",
+          "layout": "grid",
+          "module": "orientation_head",
+          "state": "head.orientation.affine"
+        }
+      ],
+      "domain": {
+        "batch": "Every positive finite integer B",
+        "features": [
+          "B",
+          5,
+          5,
+          24
+        ],
+        "values": "All finite real feature coordinates, including diagonal tokens, clipping boundaries and label ties"
+      },
+      "error": {
+        "decoded_graph": "identical partially-directed prediction, rejection trace and explicit DAG completion",
+        "mathematical_logits": "0",
+        "mathematical_probabilities": "0",
+        "pair_labels": "identical under the same lowest-index argmax rule"
+      },
+      "evidence_class": "network_fidelity_and_fixed_internal_mapping",
+      "hypotheses": [
+        "Actual coefficients are their exact stored rational values",
+        "Primary NN source and checkpoint identities match the frozen four-target registry",
+        "Ideal real tensor/operator contracts; graph-tail floating casts interpreted as real identity embeddings",
+        "Positive frozen std and epsilon; matching finite replacement shapes"
+      ],
+      "id": "actual_graph_math_seed8101_active_graph_n5",
+      "independent_replay": "runs/actual_graph_program_proof_v1/targets/seed8101_active_graph/n5/verification.json",
+      "independent_replay_sha256": "1630be47aec41f59d41107cf736ca32ded2e313a4ae91bb83b133db327f9afda",
+      "network_math_sha256": "895723a90c148f80c982d2211a74a50eda2038fe252f8e7b7ce2a15e602ae7f0",
+      "original_claim_closed": false,
+      "program": "runs/actual_graph_program_proof_v1/targets/seed8101_active_graph/n5/program.json",
+      "program_file_sha256": "ac30d40b724a00eb98b9388ab782b6300f641a02cb9ac36b6298daa632e9a224",
+      "program_math_sha256": "6be707bc3f345911b16766afbbfd9753f946341cf51757929810963e7ef23af0",
+      "proof_dependencies": {
+        "actual_tensor_bindings": 22,
+        "device_rounding_verified": false,
+        "method": "docs/ACTUAL_GRAPH_PROGRAM_METHOD.md",
+        "physical_module_map": true,
+        "primary_source_sha256": {
+          "active_intervention_graph.py": "b132c5be445e85293a8b410b9303b6a30b4e9454736ba6d149cd83313d0b0d35",
+          "factorized_node_context_graph.py": "41fecea62fc71caaa911663dc3461a3580111f888aa96c15245868488e7459b8",
+          "graph_model.py": "de044407e023a4e575cdb7781bd1e893d277fd87a1058e1f6c866fc3805b0873",
+          "graphs.py": "119ef2757b9200c05b3f2fddebf898bf189e4844e6010d29abf61480764085fc",
+          "model.py": "ee732b8f06c153951e6f3e559c9511591e8e6e632d815766c5192aff50bb3602",
+          "node_context_graph.py": "0ab3ff815813ae543f052866390223979e8b57dfc94ce254317e4b8fbde12298"
+        },
+        "source_sha256": {
+          "graph_ssa_proof/__init__.py": "ceeb163eb71006a85db4ad3ff5adb52b8c7592fffeb4daa5825b63b97f07d4d8",
+          "graph_ssa_proof/__main__.py": "7ba24c15c12fac87bc08c757bf887ffff4df92674d083700f9ef46efb2bb8161",
+          "graph_ssa_proof/binding.py": "56b430b3df20d053672c7ca8657a3b5dc1f8fc34ff6ee1c921f7c7f1fc90faa5",
+          "graph_ssa_proof/compiler.py": "d11dd16482ff57c119cdbc8955e3a3fc27b4fa6b8411d5f77dc99e6bddfd91f0",
+          "graph_ssa_proof/decoder.py": "2767ef0f22982aac19296c9bdbe8e8c3f1adbd3bb7c3586cfeeb9bcb612bdd7d",
+          "graph_ssa_proof/mapping.py": "bb2ffb0d6dfad87fb7116df36986936e36cc9097166cf583450df9b17b82a58e",
+          "graph_ssa_proof/runtime.py": "b8ba772f28f0acff9a7d5617122060935744a791b3643c52e96fa9fa6b9d8b06",
+          "graph_ssa_proof/verification.py": "73a263d15c6c27b75bca704f99ffcf5f9b2fdd50a91e4bf9713db914da656592"
+        }
+      },
+      "related_original_requirements": [
+        "R4",
+        "R5",
+        "R9",
+        "R13"
+      ],
+      "status": "proved-scoped",
+      "target": "seed8101_active_graph",
+      "uncovered": [
+        "Raw statistical and do-response feature construction",
+        "Other actual graph architectures/checkpoints",
+        "Device rounding or bit-exact equivalence",
+        "True graph identification or an identified CPDAG",
+        "Shortest causal algorithm/MDL minimality",
+        "Unregistered physical graph sites or other mapping families"
+      ]
+    },
+    {
+      "allowed_interventions": "Every subset of the 14 declared sites, each receiving its own finite real tensor of the identical batch/node/channel shape; independent source assignments are allowed",
+      "certificate": "runs/actual_graph_program_proof_v1/targets/seed8101_active_graph/n8/certificate.json",
+      "certificate_sha256": "d32e0e129507f1bb6469b29e5cd3555606029513eafd270db76d7b194777bb83",
+      "checkpoint_sha256": "15a3989a1831d5daf09b8c712cd1399cc04c9dad6d48f61c90b97587cb1a9ddf",
+      "claim": "The fixed actual graph network and full explicit program agree on math scores, probabilities, labels and decoded graph; the fixed 14-site physical map commutes with every compatible site subset",
+      "declared_compatible_subsets": 16384,
+      "declared_sites": [
+        {
+          "channels": "width",
+          "kind": "linear",
+          "layout": "grid",
+          "module": "encoder.0",
+          "state": "encoder.0.affine"
+        },
+        {
+          "channels": "width",
+          "kind": "tanh",
+          "layout": "grid",
+          "module": "encoder.1",
+          "state": "encoder.0.tanh"
+        },
+        {
+          "channels": "width",
+          "kind": "linear",
+          "layout": "grid",
+          "module": "encoder.2",
+          "state": "encoder.1.affine"
+        },
+        {
+          "channels": "width",
+          "kind": "tanh",
+          "layout": "grid",
+          "module": "encoder.3",
+          "state": "encoder.1.tanh"
+        },
+        {
+          "channels": "width",
+          "kind": "linear",
+          "layout": "grid",
+          "module": "context.0",
+          "state": "context.layer.0.affine"
+        },
+        {
+          "channels": "width",
+          "kind": "tanh",
+          "layout": "grid",
+          "module": "context.1",
+          "state": "context.layer.0.tanh"
+        },
+        {
+          "channels": "width",
+          "kind": "linear",
+          "layout": "grid",
+          "module": "context.2",
+          "state": "context.layer.1.affine"
+        },
+        {
+          "channels": "width",
+          "kind": "tanh",
+          "layout": "grid",
+          "module": "context.3",
+          "state": "context.layer.1.tanh"
+        },
+        {
+          "channels": "width",
+          "kind": "attention",
+          "layout": "flat",
+          "module": "attention",
+          "state": "attention.output.affine",
+          "tuple_first": true
+        },
+        {
+          "channels": "width",
+          "kind": "norm",
+          "layout": "flat",
+          "module": "norm",
+          "state": "norm.output"
+        },
+        {
+          "channels": "width",
+          "kind": "linear",
+          "layout": "grid",
+          "module": "head_trunk.0",
+          "state": "head.trunk.0.affine"
+        },
+        {
+          "channels": "width",
+          "kind": "tanh",
+          "layout": "grid",
+          "module": "head_trunk.1",
+          "state": "head.trunk.0.tanh"
+        },
+        {
+          "channels": 1,
+          "kind": "linear",
+          "layout": "grid",
+          "module": "skeleton_head",
+          "state": "head.skeleton.affine"
+        },
+        {
+          "channels": 3,
+          "kind": "linear",
+          "layout": "grid",
+          "module": "orientation_head",
+          "state": "head.orientation.affine"
+        }
+      ],
+      "domain": {
+        "batch": "Every positive finite integer B",
+        "features": [
+          "B",
+          8,
+          8,
+          24
+        ],
+        "values": "All finite real feature coordinates, including diagonal tokens, clipping boundaries and label ties"
+      },
+      "error": {
+        "decoded_graph": "identical partially-directed prediction, rejection trace and explicit DAG completion",
+        "mathematical_logits": "0",
+        "mathematical_probabilities": "0",
+        "pair_labels": "identical under the same lowest-index argmax rule"
+      },
+      "evidence_class": "network_fidelity_and_fixed_internal_mapping",
+      "hypotheses": [
+        "Actual coefficients are their exact stored rational values",
+        "Primary NN source and checkpoint identities match the frozen four-target registry",
+        "Ideal real tensor/operator contracts; graph-tail floating casts interpreted as real identity embeddings",
+        "Positive frozen std and epsilon; matching finite replacement shapes"
+      ],
+      "id": "actual_graph_math_seed8101_active_graph_n8",
+      "independent_replay": "runs/actual_graph_program_proof_v1/targets/seed8101_active_graph/n8/verification.json",
+      "independent_replay_sha256": "83d812d1616418d9f24706a58a4075b0b32f839f1425be824e11682cebae6022",
+      "network_math_sha256": "895723a90c148f80c982d2211a74a50eda2038fe252f8e7b7ce2a15e602ae7f0",
+      "original_claim_closed": false,
+      "program": "runs/actual_graph_program_proof_v1/targets/seed8101_active_graph/n8/program.json",
+      "program_file_sha256": "943f1450214c93ba0caf5f472de17a37dd25cedb533f73c15f0396df2ee02b16",
+      "program_math_sha256": "3819fcf34f1d7dda158f17c18fa839847e6d04fa43748184950bf7e786771466",
+      "proof_dependencies": {
+        "actual_tensor_bindings": 22,
+        "device_rounding_verified": false,
+        "method": "docs/ACTUAL_GRAPH_PROGRAM_METHOD.md",
+        "physical_module_map": true,
+        "primary_source_sha256": {
+          "active_intervention_graph.py": "b132c5be445e85293a8b410b9303b6a30b4e9454736ba6d149cd83313d0b0d35",
+          "factorized_node_context_graph.py": "41fecea62fc71caaa911663dc3461a3580111f888aa96c15245868488e7459b8",
+          "graph_model.py": "de044407e023a4e575cdb7781bd1e893d277fd87a1058e1f6c866fc3805b0873",
+          "graphs.py": "119ef2757b9200c05b3f2fddebf898bf189e4844e6010d29abf61480764085fc",
+          "model.py": "ee732b8f06c153951e6f3e559c9511591e8e6e632d815766c5192aff50bb3602",
+          "node_context_graph.py": "0ab3ff815813ae543f052866390223979e8b57dfc94ce254317e4b8fbde12298"
+        },
+        "source_sha256": {
+          "graph_ssa_proof/__init__.py": "ceeb163eb71006a85db4ad3ff5adb52b8c7592fffeb4daa5825b63b97f07d4d8",
+          "graph_ssa_proof/__main__.py": "7ba24c15c12fac87bc08c757bf887ffff4df92674d083700f9ef46efb2bb8161",
+          "graph_ssa_proof/binding.py": "56b430b3df20d053672c7ca8657a3b5dc1f8fc34ff6ee1c921f7c7f1fc90faa5",
+          "graph_ssa_proof/compiler.py": "d11dd16482ff57c119cdbc8955e3a3fc27b4fa6b8411d5f77dc99e6bddfd91f0",
+          "graph_ssa_proof/decoder.py": "2767ef0f22982aac19296c9bdbe8e8c3f1adbd3bb7c3586cfeeb9bcb612bdd7d",
+          "graph_ssa_proof/mapping.py": "bb2ffb0d6dfad87fb7116df36986936e36cc9097166cf583450df9b17b82a58e",
+          "graph_ssa_proof/runtime.py": "b8ba772f28f0acff9a7d5617122060935744a791b3643c52e96fa9fa6b9d8b06",
+          "graph_ssa_proof/verification.py": "73a263d15c6c27b75bca704f99ffcf5f9b2fdd50a91e4bf9713db914da656592"
+        }
+      },
+      "related_original_requirements": [
+        "R4",
+        "R5",
+        "R9",
+        "R13"
+      ],
+      "status": "proved-scoped",
+      "target": "seed8101_active_graph",
+      "uncovered": [
+        "Raw statistical and do-response feature construction",
+        "Other actual graph architectures/checkpoints",
+        "Device rounding or bit-exact equivalence",
+        "True graph identification or an identified CPDAG",
+        "Shortest causal algorithm/MDL minimality",
+        "Unregistered physical graph sites or other mapping families"
+      ]
+    },
+    {
+      "allowed_interventions": "Every subset of the 14 declared sites, each receiving its own finite real tensor of the identical batch/node/channel shape; independent source assignments are allowed",
+      "certificate": "runs/actual_graph_program_proof_v1/targets/seed8102_observational_graph/n3/certificate.json",
+      "certificate_sha256": "7d11c463a21cd7362fea0a9e5cbe6780662944fb70f68fe27ab650716cf9c3b5",
+      "checkpoint_sha256": "4a29397323b775543afc8ad33741589773b5c1969f71db86964e1c618f76e80f",
+      "claim": "The fixed actual graph network and full explicit program agree on math scores, probabilities, labels and decoded graph; the fixed 14-site physical map commutes with every compatible site subset",
+      "declared_compatible_subsets": 16384,
+      "declared_sites": [
+        {
+          "channels": "width",
+          "kind": "linear",
+          "layout": "grid",
+          "module": "encoder.0",
+          "state": "encoder.0.affine"
+        },
+        {
+          "channels": "width",
+          "kind": "tanh",
+          "layout": "grid",
+          "module": "encoder.1",
+          "state": "encoder.0.tanh"
+        },
+        {
+          "channels": "width",
+          "kind": "linear",
+          "layout": "grid",
+          "module": "encoder.2",
+          "state": "encoder.1.affine"
+        },
+        {
+          "channels": "width",
+          "kind": "tanh",
+          "layout": "grid",
+          "module": "encoder.3",
+          "state": "encoder.1.tanh"
+        },
+        {
+          "channels": "width",
+          "kind": "linear",
+          "layout": "grid",
+          "module": "context.0",
+          "state": "context.layer.0.affine"
+        },
+        {
+          "channels": "width",
+          "kind": "tanh",
+          "layout": "grid",
+          "module": "context.1",
+          "state": "context.layer.0.tanh"
+        },
+        {
+          "channels": "width",
+          "kind": "linear",
+          "layout": "grid",
+          "module": "context.2",
+          "state": "context.layer.1.affine"
+        },
+        {
+          "channels": "width",
+          "kind": "tanh",
+          "layout": "grid",
+          "module": "context.3",
+          "state": "context.layer.1.tanh"
+        },
+        {
+          "channels": "width",
+          "kind": "attention",
+          "layout": "flat",
+          "module": "attention",
+          "state": "attention.output.affine",
+          "tuple_first": true
+        },
+        {
+          "channels": "width",
+          "kind": "norm",
+          "layout": "flat",
+          "module": "norm",
+          "state": "norm.output"
+        },
+        {
+          "channels": "width",
+          "kind": "linear",
+          "layout": "grid",
+          "module": "head_trunk.0",
+          "state": "head.trunk.0.affine"
+        },
+        {
+          "channels": "width",
+          "kind": "tanh",
+          "layout": "grid",
+          "module": "head_trunk.1",
+          "state": "head.trunk.0.tanh"
+        },
+        {
+          "channels": 1,
+          "kind": "linear",
+          "layout": "grid",
+          "module": "skeleton_head",
+          "state": "head.skeleton.affine"
+        },
+        {
+          "channels": 3,
+          "kind": "linear",
+          "layout": "grid",
+          "module": "orientation_head",
+          "state": "head.orientation.affine"
+        }
+      ],
+      "domain": {
+        "batch": "Every positive finite integer B",
+        "features": [
+          "B",
+          3,
+          3,
+          24
+        ],
+        "values": "All finite real feature coordinates, including diagonal tokens, clipping boundaries and label ties"
+      },
+      "error": {
+        "decoded_graph": "identical partially-directed prediction, rejection trace and explicit DAG completion",
+        "mathematical_logits": "0",
+        "mathematical_probabilities": "0",
+        "pair_labels": "identical under the same lowest-index argmax rule"
+      },
+      "evidence_class": "network_fidelity_and_fixed_internal_mapping",
+      "hypotheses": [
+        "Actual coefficients are their exact stored rational values",
+        "Primary NN source and checkpoint identities match the frozen four-target registry",
+        "Ideal real tensor/operator contracts; graph-tail floating casts interpreted as real identity embeddings",
+        "Positive frozen std and epsilon; matching finite replacement shapes"
+      ],
+      "id": "actual_graph_math_seed8102_observational_graph_n3",
+      "independent_replay": "runs/actual_graph_program_proof_v1/targets/seed8102_observational_graph/n3/verification.json",
+      "independent_replay_sha256": "e279c23f40d2558372b09f46b33ac20dd7bf0b6320690baafc82ca5717f82afd",
+      "network_math_sha256": "3575d9a9d86953514e6cc2d7cd004f3e58aa2680671385e9a9283c6b69f0b540",
+      "original_claim_closed": false,
+      "program": "runs/actual_graph_program_proof_v1/targets/seed8102_observational_graph/n3/program.json",
+      "program_file_sha256": "c0b83b5f4511350fb92755744243eec8283db6bb24eabaa0af2c435bf4b4a2fe",
+      "program_math_sha256": "ad6498dc9d51bca90383fcd6d4d758e1f1fea3cb0963a0a5476ac9042cf98f0b",
+      "proof_dependencies": {
+        "actual_tensor_bindings": 22,
+        "device_rounding_verified": false,
+        "method": "docs/ACTUAL_GRAPH_PROGRAM_METHOD.md",
+        "physical_module_map": true,
+        "primary_source_sha256": {
+          "active_intervention_graph.py": "b132c5be445e85293a8b410b9303b6a30b4e9454736ba6d149cd83313d0b0d35",
+          "factorized_node_context_graph.py": "41fecea62fc71caaa911663dc3461a3580111f888aa96c15245868488e7459b8",
+          "graph_model.py": "de044407e023a4e575cdb7781bd1e893d277fd87a1058e1f6c866fc3805b0873",
+          "graphs.py": "119ef2757b9200c05b3f2fddebf898bf189e4844e6010d29abf61480764085fc",
+          "model.py": "ee732b8f06c153951e6f3e559c9511591e8e6e632d815766c5192aff50bb3602",
+          "node_context_graph.py": "0ab3ff815813ae543f052866390223979e8b57dfc94ce254317e4b8fbde12298"
+        },
+        "source_sha256": {
+          "graph_ssa_proof/__init__.py": "ceeb163eb71006a85db4ad3ff5adb52b8c7592fffeb4daa5825b63b97f07d4d8",
+          "graph_ssa_proof/__main__.py": "7ba24c15c12fac87bc08c757bf887ffff4df92674d083700f9ef46efb2bb8161",
+          "graph_ssa_proof/binding.py": "56b430b3df20d053672c7ca8657a3b5dc1f8fc34ff6ee1c921f7c7f1fc90faa5",
+          "graph_ssa_proof/compiler.py": "d11dd16482ff57c119cdbc8955e3a3fc27b4fa6b8411d5f77dc99e6bddfd91f0",
+          "graph_ssa_proof/decoder.py": "2767ef0f22982aac19296c9bdbe8e8c3f1adbd3bb7c3586cfeeb9bcb612bdd7d",
+          "graph_ssa_proof/mapping.py": "bb2ffb0d6dfad87fb7116df36986936e36cc9097166cf583450df9b17b82a58e",
+          "graph_ssa_proof/runtime.py": "b8ba772f28f0acff9a7d5617122060935744a791b3643c52e96fa9fa6b9d8b06",
+          "graph_ssa_proof/verification.py": "73a263d15c6c27b75bca704f99ffcf5f9b2fdd50a91e4bf9713db914da656592"
+        }
+      },
+      "related_original_requirements": [
+        "R4",
+        "R5",
+        "R9",
+        "R13"
+      ],
+      "status": "proved-scoped",
+      "target": "seed8102_observational_graph",
+      "uncovered": [
+        "Raw statistical and do-response feature construction",
+        "Other actual graph architectures/checkpoints",
+        "Device rounding or bit-exact equivalence",
+        "True graph identification or an identified CPDAG",
+        "Shortest causal algorithm/MDL minimality",
+        "Unregistered physical graph sites or other mapping families"
+      ]
+    },
+    {
+      "allowed_interventions": "Every subset of the 14 declared sites, each receiving its own finite real tensor of the identical batch/node/channel shape; independent source assignments are allowed",
+      "certificate": "runs/actual_graph_program_proof_v1/targets/seed8102_observational_graph/n5/certificate.json",
+      "certificate_sha256": "dbabb13b565aa866403fa13e9a81032706d44de8a831683e419781dc6119f1ff",
+      "checkpoint_sha256": "4a29397323b775543afc8ad33741589773b5c1969f71db86964e1c618f76e80f",
+      "claim": "The fixed actual graph network and full explicit program agree on math scores, probabilities, labels and decoded graph; the fixed 14-site physical map commutes with every compatible site subset",
+      "declared_compatible_subsets": 16384,
+      "declared_sites": [
+        {
+          "channels": "width",
+          "kind": "linear",
+          "layout": "grid",
+          "module": "encoder.0",
+          "state": "encoder.0.affine"
+        },
+        {
+          "channels": "width",
+          "kind": "tanh",
+          "layout": "grid",
+          "module": "encoder.1",
+          "state": "encoder.0.tanh"
+        },
+        {
+          "channels": "width",
+          "kind": "linear",
+          "layout": "grid",
+          "module": "encoder.2",
+          "state": "encoder.1.affine"
+        },
+        {
+          "channels": "width",
+          "kind": "tanh",
+          "layout": "grid",
+          "module": "encoder.3",
+          "state": "encoder.1.tanh"
+        },
+        {
+          "channels": "width",
+          "kind": "linear",
+          "layout": "grid",
+          "module": "context.0",
+          "state": "context.layer.0.affine"
+        },
+        {
+          "channels": "width",
+          "kind": "tanh",
+          "layout": "grid",
+          "module": "context.1",
+          "state": "context.layer.0.tanh"
+        },
+        {
+          "channels": "width",
+          "kind": "linear",
+          "layout": "grid",
+          "module": "context.2",
+          "state": "context.layer.1.affine"
+        },
+        {
+          "channels": "width",
+          "kind": "tanh",
+          "layout": "grid",
+          "module": "context.3",
+          "state": "context.layer.1.tanh"
+        },
+        {
+          "channels": "width",
+          "kind": "attention",
+          "layout": "flat",
+          "module": "attention",
+          "state": "attention.output.affine",
+          "tuple_first": true
+        },
+        {
+          "channels": "width",
+          "kind": "norm",
+          "layout": "flat",
+          "module": "norm",
+          "state": "norm.output"
+        },
+        {
+          "channels": "width",
+          "kind": "linear",
+          "layout": "grid",
+          "module": "head_trunk.0",
+          "state": "head.trunk.0.affine"
+        },
+        {
+          "channels": "width",
+          "kind": "tanh",
+          "layout": "grid",
+          "module": "head_trunk.1",
+          "state": "head.trunk.0.tanh"
+        },
+        {
+          "channels": 1,
+          "kind": "linear",
+          "layout": "grid",
+          "module": "skeleton_head",
+          "state": "head.skeleton.affine"
+        },
+        {
+          "channels": 3,
+          "kind": "linear",
+          "layout": "grid",
+          "module": "orientation_head",
+          "state": "head.orientation.affine"
+        }
+      ],
+      "domain": {
+        "batch": "Every positive finite integer B",
+        "features": [
+          "B",
+          5,
+          5,
+          24
+        ],
+        "values": "All finite real feature coordinates, including diagonal tokens, clipping boundaries and label ties"
+      },
+      "error": {
+        "decoded_graph": "identical partially-directed prediction, rejection trace and explicit DAG completion",
+        "mathematical_logits": "0",
+        "mathematical_probabilities": "0",
+        "pair_labels": "identical under the same lowest-index argmax rule"
+      },
+      "evidence_class": "network_fidelity_and_fixed_internal_mapping",
+      "hypotheses": [
+        "Actual coefficients are their exact stored rational values",
+        "Primary NN source and checkpoint identities match the frozen four-target registry",
+        "Ideal real tensor/operator contracts; graph-tail floating casts interpreted as real identity embeddings",
+        "Positive frozen std and epsilon; matching finite replacement shapes"
+      ],
+      "id": "actual_graph_math_seed8102_observational_graph_n5",
+      "independent_replay": "runs/actual_graph_program_proof_v1/targets/seed8102_observational_graph/n5/verification.json",
+      "independent_replay_sha256": "1630be47aec41f59d41107cf736ca32ded2e313a4ae91bb83b133db327f9afda",
+      "network_math_sha256": "3575d9a9d86953514e6cc2d7cd004f3e58aa2680671385e9a9283c6b69f0b540",
+      "original_claim_closed": false,
+      "program": "runs/actual_graph_program_proof_v1/targets/seed8102_observational_graph/n5/program.json",
+      "program_file_sha256": "fa48e8f9172af022337043f03183d385c48f8027accaf3c1c0fc859a7fec0056",
+      "program_math_sha256": "e125ed5273eb79f5e71af48c90ee84713ffa24add49fac93f3f8e7952e8202d4",
+      "proof_dependencies": {
+        "actual_tensor_bindings": 22,
+        "device_rounding_verified": false,
+        "method": "docs/ACTUAL_GRAPH_PROGRAM_METHOD.md",
+        "physical_module_map": true,
+        "primary_source_sha256": {
+          "active_intervention_graph.py": "b132c5be445e85293a8b410b9303b6a30b4e9454736ba6d149cd83313d0b0d35",
+          "factorized_node_context_graph.py": "41fecea62fc71caaa911663dc3461a3580111f888aa96c15245868488e7459b8",
+          "graph_model.py": "de044407e023a4e575cdb7781bd1e893d277fd87a1058e1f6c866fc3805b0873",
+          "graphs.py": "119ef2757b9200c05b3f2fddebf898bf189e4844e6010d29abf61480764085fc",
+          "model.py": "ee732b8f06c153951e6f3e559c9511591e8e6e632d815766c5192aff50bb3602",
+          "node_context_graph.py": "0ab3ff815813ae543f052866390223979e8b57dfc94ce254317e4b8fbde12298"
+        },
+        "source_sha256": {
+          "graph_ssa_proof/__init__.py": "ceeb163eb71006a85db4ad3ff5adb52b8c7592fffeb4daa5825b63b97f07d4d8",
+          "graph_ssa_proof/__main__.py": "7ba24c15c12fac87bc08c757bf887ffff4df92674d083700f9ef46efb2bb8161",
+          "graph_ssa_proof/binding.py": "56b430b3df20d053672c7ca8657a3b5dc1f8fc34ff6ee1c921f7c7f1fc90faa5",
+          "graph_ssa_proof/compiler.py": "d11dd16482ff57c119cdbc8955e3a3fc27b4fa6b8411d5f77dc99e6bddfd91f0",
+          "graph_ssa_proof/decoder.py": "2767ef0f22982aac19296c9bdbe8e8c3f1adbd3bb7c3586cfeeb9bcb612bdd7d",
+          "graph_ssa_proof/mapping.py": "bb2ffb0d6dfad87fb7116df36986936e36cc9097166cf583450df9b17b82a58e",
+          "graph_ssa_proof/runtime.py": "b8ba772f28f0acff9a7d5617122060935744a791b3643c52e96fa9fa6b9d8b06",
+          "graph_ssa_proof/verification.py": "73a263d15c6c27b75bca704f99ffcf5f9b2fdd50a91e4bf9713db914da656592"
+        }
+      },
+      "related_original_requirements": [
+        "R4",
+        "R5",
+        "R9",
+        "R13"
+      ],
+      "status": "proved-scoped",
+      "target": "seed8102_observational_graph",
+      "uncovered": [
+        "Raw statistical and do-response feature construction",
+        "Other actual graph architectures/checkpoints",
+        "Device rounding or bit-exact equivalence",
+        "True graph identification or an identified CPDAG",
+        "Shortest causal algorithm/MDL minimality",
+        "Unregistered physical graph sites or other mapping families"
+      ]
+    },
+    {
+      "allowed_interventions": "Every subset of the 14 declared sites, each receiving its own finite real tensor of the identical batch/node/channel shape; independent source assignments are allowed",
+      "certificate": "runs/actual_graph_program_proof_v1/targets/seed8102_observational_graph/n8/certificate.json",
+      "certificate_sha256": "bfd638eb2f6f36018aa592a41419705db1dd8ebf6ce417e855f02e1e2a4d80b4",
+      "checkpoint_sha256": "4a29397323b775543afc8ad33741589773b5c1969f71db86964e1c618f76e80f",
+      "claim": "The fixed actual graph network and full explicit program agree on math scores, probabilities, labels and decoded graph; the fixed 14-site physical map commutes with every compatible site subset",
+      "declared_compatible_subsets": 16384,
+      "declared_sites": [
+        {
+          "channels": "width",
+          "kind": "linear",
+          "layout": "grid",
+          "module": "encoder.0",
+          "state": "encoder.0.affine"
+        },
+        {
+          "channels": "width",
+          "kind": "tanh",
+          "layout": "grid",
+          "module": "encoder.1",
+          "state": "encoder.0.tanh"
+        },
+        {
+          "channels": "width",
+          "kind": "linear",
+          "layout": "grid",
+          "module": "encoder.2",
+          "state": "encoder.1.affine"
+        },
+        {
+          "channels": "width",
+          "kind": "tanh",
+          "layout": "grid",
+          "module": "encoder.3",
+          "state": "encoder.1.tanh"
+        },
+        {
+          "channels": "width",
+          "kind": "linear",
+          "layout": "grid",
+          "module": "context.0",
+          "state": "context.layer.0.affine"
+        },
+        {
+          "channels": "width",
+          "kind": "tanh",
+          "layout": "grid",
+          "module": "context.1",
+          "state": "context.layer.0.tanh"
+        },
+        {
+          "channels": "width",
+          "kind": "linear",
+          "layout": "grid",
+          "module": "context.2",
+          "state": "context.layer.1.affine"
+        },
+        {
+          "channels": "width",
+          "kind": "tanh",
+          "layout": "grid",
+          "module": "context.3",
+          "state": "context.layer.1.tanh"
+        },
+        {
+          "channels": "width",
+          "kind": "attention",
+          "layout": "flat",
+          "module": "attention",
+          "state": "attention.output.affine",
+          "tuple_first": true
+        },
+        {
+          "channels": "width",
+          "kind": "norm",
+          "layout": "flat",
+          "module": "norm",
+          "state": "norm.output"
+        },
+        {
+          "channels": "width",
+          "kind": "linear",
+          "layout": "grid",
+          "module": "head_trunk.0",
+          "state": "head.trunk.0.affine"
+        },
+        {
+          "channels": "width",
+          "kind": "tanh",
+          "layout": "grid",
+          "module": "head_trunk.1",
+          "state": "head.trunk.0.tanh"
+        },
+        {
+          "channels": 1,
+          "kind": "linear",
+          "layout": "grid",
+          "module": "skeleton_head",
+          "state": "head.skeleton.affine"
+        },
+        {
+          "channels": 3,
+          "kind": "linear",
+          "layout": "grid",
+          "module": "orientation_head",
+          "state": "head.orientation.affine"
+        }
+      ],
+      "domain": {
+        "batch": "Every positive finite integer B",
+        "features": [
+          "B",
+          8,
+          8,
+          24
+        ],
+        "values": "All finite real feature coordinates, including diagonal tokens, clipping boundaries and label ties"
+      },
+      "error": {
+        "decoded_graph": "identical partially-directed prediction, rejection trace and explicit DAG completion",
+        "mathematical_logits": "0",
+        "mathematical_probabilities": "0",
+        "pair_labels": "identical under the same lowest-index argmax rule"
+      },
+      "evidence_class": "network_fidelity_and_fixed_internal_mapping",
+      "hypotheses": [
+        "Actual coefficients are their exact stored rational values",
+        "Primary NN source and checkpoint identities match the frozen four-target registry",
+        "Ideal real tensor/operator contracts; graph-tail floating casts interpreted as real identity embeddings",
+        "Positive frozen std and epsilon; matching finite replacement shapes"
+      ],
+      "id": "actual_graph_math_seed8102_observational_graph_n8",
+      "independent_replay": "runs/actual_graph_program_proof_v1/targets/seed8102_observational_graph/n8/verification.json",
+      "independent_replay_sha256": "83d812d1616418d9f24706a58a4075b0b32f839f1425be824e11682cebae6022",
+      "network_math_sha256": "3575d9a9d86953514e6cc2d7cd004f3e58aa2680671385e9a9283c6b69f0b540",
+      "original_claim_closed": false,
+      "program": "runs/actual_graph_program_proof_v1/targets/seed8102_observational_graph/n8/program.json",
+      "program_file_sha256": "749ea22cb89e70d4a55c1065772c6dfe4d8c18793fbbe37775837fa92487efab",
+      "program_math_sha256": "da26671bc1ac45d1b3a118df59eb22206c17ab87ebcf1ca10f848571310b88fc",
+      "proof_dependencies": {
+        "actual_tensor_bindings": 22,
+        "device_rounding_verified": false,
+        "method": "docs/ACTUAL_GRAPH_PROGRAM_METHOD.md",
+        "physical_module_map": true,
+        "primary_source_sha256": {
+          "active_intervention_graph.py": "b132c5be445e85293a8b410b9303b6a30b4e9454736ba6d149cd83313d0b0d35",
+          "factorized_node_context_graph.py": "41fecea62fc71caaa911663dc3461a3580111f888aa96c15245868488e7459b8",
+          "graph_model.py": "de044407e023a4e575cdb7781bd1e893d277fd87a1058e1f6c866fc3805b0873",
+          "graphs.py": "119ef2757b9200c05b3f2fddebf898bf189e4844e6010d29abf61480764085fc",
+          "model.py": "ee732b8f06c153951e6f3e559c9511591e8e6e632d815766c5192aff50bb3602",
+          "node_context_graph.py": "0ab3ff815813ae543f052866390223979e8b57dfc94ce254317e4b8fbde12298"
+        },
+        "source_sha256": {
+          "graph_ssa_proof/__init__.py": "ceeb163eb71006a85db4ad3ff5adb52b8c7592fffeb4daa5825b63b97f07d4d8",
+          "graph_ssa_proof/__main__.py": "7ba24c15c12fac87bc08c757bf887ffff4df92674d083700f9ef46efb2bb8161",
+          "graph_ssa_proof/binding.py": "56b430b3df20d053672c7ca8657a3b5dc1f8fc34ff6ee1c921f7c7f1fc90faa5",
+          "graph_ssa_proof/compiler.py": "d11dd16482ff57c119cdbc8955e3a3fc27b4fa6b8411d5f77dc99e6bddfd91f0",
+          "graph_ssa_proof/decoder.py": "2767ef0f22982aac19296c9bdbe8e8c3f1adbd3bb7c3586cfeeb9bcb612bdd7d",
+          "graph_ssa_proof/mapping.py": "bb2ffb0d6dfad87fb7116df36986936e36cc9097166cf583450df9b17b82a58e",
+          "graph_ssa_proof/runtime.py": "b8ba772f28f0acff9a7d5617122060935744a791b3643c52e96fa9fa6b9d8b06",
+          "graph_ssa_proof/verification.py": "73a263d15c6c27b75bca704f99ffcf5f9b2fdd50a91e4bf9713db914da656592"
+        }
+      },
+      "related_original_requirements": [
+        "R4",
+        "R5",
+        "R9",
+        "R13"
+      ],
+      "status": "proved-scoped",
+      "target": "seed8102_observational_graph",
+      "uncovered": [
+        "Raw statistical and do-response feature construction",
+        "Other actual graph architectures/checkpoints",
+        "Device rounding or bit-exact equivalence",
+        "True graph identification or an identified CPDAG",
+        "Shortest causal algorithm/MDL minimality",
+        "Unregistered physical graph sites or other mapping families"
+      ]
+    },
+    {
+      "allowed_interventions": "Every subset of the 14 declared sites, each receiving its own finite real tensor of the identical batch/node/channel shape; independent source assignments are allowed",
+      "certificate": "runs/actual_graph_program_proof_v1/targets/seed8102_active_graph/n3/certificate.json",
+      "certificate_sha256": "1ab4b67a7dfdefff2f216da4d2d8f02af89f3476892f1e269c220bcb3ffb7bf6",
+      "checkpoint_sha256": "3cd093729cbfe097663b748a2c39018efbb44a57cc91038cebd97c973c03c5e1",
+      "claim": "The fixed actual graph network and full explicit program agree on math scores, probabilities, labels and decoded graph; the fixed 14-site physical map commutes with every compatible site subset",
+      "declared_compatible_subsets": 16384,
+      "declared_sites": [
+        {
+          "channels": "width",
+          "kind": "linear",
+          "layout": "grid",
+          "module": "encoder.0",
+          "state": "encoder.0.affine"
+        },
+        {
+          "channels": "width",
+          "kind": "tanh",
+          "layout": "grid",
+          "module": "encoder.1",
+          "state": "encoder.0.tanh"
+        },
+        {
+          "channels": "width",
+          "kind": "linear",
+          "layout": "grid",
+          "module": "encoder.2",
+          "state": "encoder.1.affine"
+        },
+        {
+          "channels": "width",
+          "kind": "tanh",
+          "layout": "grid",
+          "module": "encoder.3",
+          "state": "encoder.1.tanh"
+        },
+        {
+          "channels": "width",
+          "kind": "linear",
+          "layout": "grid",
+          "module": "context.0",
+          "state": "context.layer.0.affine"
+        },
+        {
+          "channels": "width",
+          "kind": "tanh",
+          "layout": "grid",
+          "module": "context.1",
+          "state": "context.layer.0.tanh"
+        },
+        {
+          "channels": "width",
+          "kind": "linear",
+          "layout": "grid",
+          "module": "context.2",
+          "state": "context.layer.1.affine"
+        },
+        {
+          "channels": "width",
+          "kind": "tanh",
+          "layout": "grid",
+          "module": "context.3",
+          "state": "context.layer.1.tanh"
+        },
+        {
+          "channels": "width",
+          "kind": "attention",
+          "layout": "flat",
+          "module": "attention",
+          "state": "attention.output.affine",
+          "tuple_first": true
+        },
+        {
+          "channels": "width",
+          "kind": "norm",
+          "layout": "flat",
+          "module": "norm",
+          "state": "norm.output"
+        },
+        {
+          "channels": "width",
+          "kind": "linear",
+          "layout": "grid",
+          "module": "head_trunk.0",
+          "state": "head.trunk.0.affine"
+        },
+        {
+          "channels": "width",
+          "kind": "tanh",
+          "layout": "grid",
+          "module": "head_trunk.1",
+          "state": "head.trunk.0.tanh"
+        },
+        {
+          "channels": 1,
+          "kind": "linear",
+          "layout": "grid",
+          "module": "skeleton_head",
+          "state": "head.skeleton.affine"
+        },
+        {
+          "channels": 3,
+          "kind": "linear",
+          "layout": "grid",
+          "module": "orientation_head",
+          "state": "head.orientation.affine"
+        }
+      ],
+      "domain": {
+        "batch": "Every positive finite integer B",
+        "features": [
+          "B",
+          3,
+          3,
+          24
+        ],
+        "values": "All finite real feature coordinates, including diagonal tokens, clipping boundaries and label ties"
+      },
+      "error": {
+        "decoded_graph": "identical partially-directed prediction, rejection trace and explicit DAG completion",
+        "mathematical_logits": "0",
+        "mathematical_probabilities": "0",
+        "pair_labels": "identical under the same lowest-index argmax rule"
+      },
+      "evidence_class": "network_fidelity_and_fixed_internal_mapping",
+      "hypotheses": [
+        "Actual coefficients are their exact stored rational values",
+        "Primary NN source and checkpoint identities match the frozen four-target registry",
+        "Ideal real tensor/operator contracts; graph-tail floating casts interpreted as real identity embeddings",
+        "Positive frozen std and epsilon; matching finite replacement shapes"
+      ],
+      "id": "actual_graph_math_seed8102_active_graph_n3",
+      "independent_replay": "runs/actual_graph_program_proof_v1/targets/seed8102_active_graph/n3/verification.json",
+      "independent_replay_sha256": "e279c23f40d2558372b09f46b33ac20dd7bf0b6320690baafc82ca5717f82afd",
+      "network_math_sha256": "2bb47e63d66e97b81957e2ebc1ac100c16b35de54b3f454dcc80160af1395552",
+      "original_claim_closed": false,
+      "program": "runs/actual_graph_program_proof_v1/targets/seed8102_active_graph/n3/program.json",
+      "program_file_sha256": "7f0ff55bc32d0868848abad75b298baf3379dcd5917ade5bf78df9903e95ad72",
+      "program_math_sha256": "f19f867ffa14f6afe0c72f04c43c36b996775cac72692e5ff7e3df4b9d8d01f3",
+      "proof_dependencies": {
+        "actual_tensor_bindings": 22,
+        "device_rounding_verified": false,
+        "method": "docs/ACTUAL_GRAPH_PROGRAM_METHOD.md",
+        "physical_module_map": true,
+        "primary_source_sha256": {
+          "active_intervention_graph.py": "b132c5be445e85293a8b410b9303b6a30b4e9454736ba6d149cd83313d0b0d35",
+          "factorized_node_context_graph.py": "41fecea62fc71caaa911663dc3461a3580111f888aa96c15245868488e7459b8",
+          "graph_model.py": "de044407e023a4e575cdb7781bd1e893d277fd87a1058e1f6c866fc3805b0873",
+          "graphs.py": "119ef2757b9200c05b3f2fddebf898bf189e4844e6010d29abf61480764085fc",
+          "model.py": "ee732b8f06c153951e6f3e559c9511591e8e6e632d815766c5192aff50bb3602",
+          "node_context_graph.py": "0ab3ff815813ae543f052866390223979e8b57dfc94ce254317e4b8fbde12298"
+        },
+        "source_sha256": {
+          "graph_ssa_proof/__init__.py": "ceeb163eb71006a85db4ad3ff5adb52b8c7592fffeb4daa5825b63b97f07d4d8",
+          "graph_ssa_proof/__main__.py": "7ba24c15c12fac87bc08c757bf887ffff4df92674d083700f9ef46efb2bb8161",
+          "graph_ssa_proof/binding.py": "56b430b3df20d053672c7ca8657a3b5dc1f8fc34ff6ee1c921f7c7f1fc90faa5",
+          "graph_ssa_proof/compiler.py": "d11dd16482ff57c119cdbc8955e3a3fc27b4fa6b8411d5f77dc99e6bddfd91f0",
+          "graph_ssa_proof/decoder.py": "2767ef0f22982aac19296c9bdbe8e8c3f1adbd3bb7c3586cfeeb9bcb612bdd7d",
+          "graph_ssa_proof/mapping.py": "bb2ffb0d6dfad87fb7116df36986936e36cc9097166cf583450df9b17b82a58e",
+          "graph_ssa_proof/runtime.py": "b8ba772f28f0acff9a7d5617122060935744a791b3643c52e96fa9fa6b9d8b06",
+          "graph_ssa_proof/verification.py": "73a263d15c6c27b75bca704f99ffcf5f9b2fdd50a91e4bf9713db914da656592"
+        }
+      },
+      "related_original_requirements": [
+        "R4",
+        "R5",
+        "R9",
+        "R13"
+      ],
+      "status": "proved-scoped",
+      "target": "seed8102_active_graph",
+      "uncovered": [
+        "Raw statistical and do-response feature construction",
+        "Other actual graph architectures/checkpoints",
+        "Device rounding or bit-exact equivalence",
+        "True graph identification or an identified CPDAG",
+        "Shortest causal algorithm/MDL minimality",
+        "Unregistered physical graph sites or other mapping families"
+      ]
+    },
+    {
+      "allowed_interventions": "Every subset of the 14 declared sites, each receiving its own finite real tensor of the identical batch/node/channel shape; independent source assignments are allowed",
+      "certificate": "runs/actual_graph_program_proof_v1/targets/seed8102_active_graph/n5/certificate.json",
+      "certificate_sha256": "e7cbb76c5c9fbfc15219834717605a1b21889ab8b3c18ecf62d987471352daef",
+      "checkpoint_sha256": "3cd093729cbfe097663b748a2c39018efbb44a57cc91038cebd97c973c03c5e1",
+      "claim": "The fixed actual graph network and full explicit program agree on math scores, probabilities, labels and decoded graph; the fixed 14-site physical map commutes with every compatible site subset",
+      "declared_compatible_subsets": 16384,
+      "declared_sites": [
+        {
+          "channels": "width",
+          "kind": "linear",
+          "layout": "grid",
+          "module": "encoder.0",
+          "state": "encoder.0.affine"
+        },
+        {
+          "channels": "width",
+          "kind": "tanh",
+          "layout": "grid",
+          "module": "encoder.1",
+          "state": "encoder.0.tanh"
+        },
+        {
+          "channels": "width",
+          "kind": "linear",
+          "layout": "grid",
+          "module": "encoder.2",
+          "state": "encoder.1.affine"
+        },
+        {
+          "channels": "width",
+          "kind": "tanh",
+          "layout": "grid",
+          "module": "encoder.3",
+          "state": "encoder.1.tanh"
+        },
+        {
+          "channels": "width",
+          "kind": "linear",
+          "layout": "grid",
+          "module": "context.0",
+          "state": "context.layer.0.affine"
+        },
+        {
+          "channels": "width",
+          "kind": "tanh",
+          "layout": "grid",
+          "module": "context.1",
+          "state": "context.layer.0.tanh"
+        },
+        {
+          "channels": "width",
+          "kind": "linear",
+          "layout": "grid",
+          "module": "context.2",
+          "state": "context.layer.1.affine"
+        },
+        {
+          "channels": "width",
+          "kind": "tanh",
+          "layout": "grid",
+          "module": "context.3",
+          "state": "context.layer.1.tanh"
+        },
+        {
+          "channels": "width",
+          "kind": "attention",
+          "layout": "flat",
+          "module": "attention",
+          "state": "attention.output.affine",
+          "tuple_first": true
+        },
+        {
+          "channels": "width",
+          "kind": "norm",
+          "layout": "flat",
+          "module": "norm",
+          "state": "norm.output"
+        },
+        {
+          "channels": "width",
+          "kind": "linear",
+          "layout": "grid",
+          "module": "head_trunk.0",
+          "state": "head.trunk.0.affine"
+        },
+        {
+          "channels": "width",
+          "kind": "tanh",
+          "layout": "grid",
+          "module": "head_trunk.1",
+          "state": "head.trunk.0.tanh"
+        },
+        {
+          "channels": 1,
+          "kind": "linear",
+          "layout": "grid",
+          "module": "skeleton_head",
+          "state": "head.skeleton.affine"
+        },
+        {
+          "channels": 3,
+          "kind": "linear",
+          "layout": "grid",
+          "module": "orientation_head",
+          "state": "head.orientation.affine"
+        }
+      ],
+      "domain": {
+        "batch": "Every positive finite integer B",
+        "features": [
+          "B",
+          5,
+          5,
+          24
+        ],
+        "values": "All finite real feature coordinates, including diagonal tokens, clipping boundaries and label ties"
+      },
+      "error": {
+        "decoded_graph": "identical partially-directed prediction, rejection trace and explicit DAG completion",
+        "mathematical_logits": "0",
+        "mathematical_probabilities": "0",
+        "pair_labels": "identical under the same lowest-index argmax rule"
+      },
+      "evidence_class": "network_fidelity_and_fixed_internal_mapping",
+      "hypotheses": [
+        "Actual coefficients are their exact stored rational values",
+        "Primary NN source and checkpoint identities match the frozen four-target registry",
+        "Ideal real tensor/operator contracts; graph-tail floating casts interpreted as real identity embeddings",
+        "Positive frozen std and epsilon; matching finite replacement shapes"
+      ],
+      "id": "actual_graph_math_seed8102_active_graph_n5",
+      "independent_replay": "runs/actual_graph_program_proof_v1/targets/seed8102_active_graph/n5/verification.json",
+      "independent_replay_sha256": "1630be47aec41f59d41107cf736ca32ded2e313a4ae91bb83b133db327f9afda",
+      "network_math_sha256": "2bb47e63d66e97b81957e2ebc1ac100c16b35de54b3f454dcc80160af1395552",
+      "original_claim_closed": false,
+      "program": "runs/actual_graph_program_proof_v1/targets/seed8102_active_graph/n5/program.json",
+      "program_file_sha256": "d7d883c8fd39cce172444516b653e6b331dad38dd00d2e8d67bff858e417c4e9",
+      "program_math_sha256": "51efbd6aa64aabe379c4e7d3f55763f3f463d6a80d48ea98b7c71f8393b63357",
+      "proof_dependencies": {
+        "actual_tensor_bindings": 22,
+        "device_rounding_verified": false,
+        "method": "docs/ACTUAL_GRAPH_PROGRAM_METHOD.md",
+        "physical_module_map": true,
+        "primary_source_sha256": {
+          "active_intervention_graph.py": "b132c5be445e85293a8b410b9303b6a30b4e9454736ba6d149cd83313d0b0d35",
+          "factorized_node_context_graph.py": "41fecea62fc71caaa911663dc3461a3580111f888aa96c15245868488e7459b8",
+          "graph_model.py": "de044407e023a4e575cdb7781bd1e893d277fd87a1058e1f6c866fc3805b0873",
+          "graphs.py": "119ef2757b9200c05b3f2fddebf898bf189e4844e6010d29abf61480764085fc",
+          "model.py": "ee732b8f06c153951e6f3e559c9511591e8e6e632d815766c5192aff50bb3602",
+          "node_context_graph.py": "0ab3ff815813ae543f052866390223979e8b57dfc94ce254317e4b8fbde12298"
+        },
+        "source_sha256": {
+          "graph_ssa_proof/__init__.py": "ceeb163eb71006a85db4ad3ff5adb52b8c7592fffeb4daa5825b63b97f07d4d8",
+          "graph_ssa_proof/__main__.py": "7ba24c15c12fac87bc08c757bf887ffff4df92674d083700f9ef46efb2bb8161",
+          "graph_ssa_proof/binding.py": "56b430b3df20d053672c7ca8657a3b5dc1f8fc34ff6ee1c921f7c7f1fc90faa5",
+          "graph_ssa_proof/compiler.py": "d11dd16482ff57c119cdbc8955e3a3fc27b4fa6b8411d5f77dc99e6bddfd91f0",
+          "graph_ssa_proof/decoder.py": "2767ef0f22982aac19296c9bdbe8e8c3f1adbd3bb7c3586cfeeb9bcb612bdd7d",
+          "graph_ssa_proof/mapping.py": "bb2ffb0d6dfad87fb7116df36986936e36cc9097166cf583450df9b17b82a58e",
+          "graph_ssa_proof/runtime.py": "b8ba772f28f0acff9a7d5617122060935744a791b3643c52e96fa9fa6b9d8b06",
+          "graph_ssa_proof/verification.py": "73a263d15c6c27b75bca704f99ffcf5f9b2fdd50a91e4bf9713db914da656592"
+        }
+      },
+      "related_original_requirements": [
+        "R4",
+        "R5",
+        "R9",
+        "R13"
+      ],
+      "status": "proved-scoped",
+      "target": "seed8102_active_graph",
+      "uncovered": [
+        "Raw statistical and do-response feature construction",
+        "Other actual graph architectures/checkpoints",
+        "Device rounding or bit-exact equivalence",
+        "True graph identification or an identified CPDAG",
+        "Shortest causal algorithm/MDL minimality",
+        "Unregistered physical graph sites or other mapping families"
+      ]
+    },
+    {
+      "allowed_interventions": "Every subset of the 14 declared sites, each receiving its own finite real tensor of the identical batch/node/channel shape; independent source assignments are allowed",
+      "certificate": "runs/actual_graph_program_proof_v1/targets/seed8102_active_graph/n8/certificate.json",
+      "certificate_sha256": "ae0ad12b3615534c3fb5b4353df13bf549eb368db9eef26306f52f3c63f1b16e",
+      "checkpoint_sha256": "3cd093729cbfe097663b748a2c39018efbb44a57cc91038cebd97c973c03c5e1",
+      "claim": "The fixed actual graph network and full explicit program agree on math scores, probabilities, labels and decoded graph; the fixed 14-site physical map commutes with every compatible site subset",
+      "declared_compatible_subsets": 16384,
+      "declared_sites": [
+        {
+          "channels": "width",
+          "kind": "linear",
+          "layout": "grid",
+          "module": "encoder.0",
+          "state": "encoder.0.affine"
+        },
+        {
+          "channels": "width",
+          "kind": "tanh",
+          "layout": "grid",
+          "module": "encoder.1",
+          "state": "encoder.0.tanh"
+        },
+        {
+          "channels": "width",
+          "kind": "linear",
+          "layout": "grid",
+          "module": "encoder.2",
+          "state": "encoder.1.affine"
+        },
+        {
+          "channels": "width",
+          "kind": "tanh",
+          "layout": "grid",
+          "module": "encoder.3",
+          "state": "encoder.1.tanh"
+        },
+        {
+          "channels": "width",
+          "kind": "linear",
+          "layout": "grid",
+          "module": "context.0",
+          "state": "context.layer.0.affine"
+        },
+        {
+          "channels": "width",
+          "kind": "tanh",
+          "layout": "grid",
+          "module": "context.1",
+          "state": "context.layer.0.tanh"
+        },
+        {
+          "channels": "width",
+          "kind": "linear",
+          "layout": "grid",
+          "module": "context.2",
+          "state": "context.layer.1.affine"
+        },
+        {
+          "channels": "width",
+          "kind": "tanh",
+          "layout": "grid",
+          "module": "context.3",
+          "state": "context.layer.1.tanh"
+        },
+        {
+          "channels": "width",
+          "kind": "attention",
+          "layout": "flat",
+          "module": "attention",
+          "state": "attention.output.affine",
+          "tuple_first": true
+        },
+        {
+          "channels": "width",
+          "kind": "norm",
+          "layout": "flat",
+          "module": "norm",
+          "state": "norm.output"
+        },
+        {
+          "channels": "width",
+          "kind": "linear",
+          "layout": "grid",
+          "module": "head_trunk.0",
+          "state": "head.trunk.0.affine"
+        },
+        {
+          "channels": "width",
+          "kind": "tanh",
+          "layout": "grid",
+          "module": "head_trunk.1",
+          "state": "head.trunk.0.tanh"
+        },
+        {
+          "channels": 1,
+          "kind": "linear",
+          "layout": "grid",
+          "module": "skeleton_head",
+          "state": "head.skeleton.affine"
+        },
+        {
+          "channels": 3,
+          "kind": "linear",
+          "layout": "grid",
+          "module": "orientation_head",
+          "state": "head.orientation.affine"
+        }
+      ],
+      "domain": {
+        "batch": "Every positive finite integer B",
+        "features": [
+          "B",
+          8,
+          8,
+          24
+        ],
+        "values": "All finite real feature coordinates, including diagonal tokens, clipping boundaries and label ties"
+      },
+      "error": {
+        "decoded_graph": "identical partially-directed prediction, rejection trace and explicit DAG completion",
+        "mathematical_logits": "0",
+        "mathematical_probabilities": "0",
+        "pair_labels": "identical under the same lowest-index argmax rule"
+      },
+      "evidence_class": "network_fidelity_and_fixed_internal_mapping",
+      "hypotheses": [
+        "Actual coefficients are their exact stored rational values",
+        "Primary NN source and checkpoint identities match the frozen four-target registry",
+        "Ideal real tensor/operator contracts; graph-tail floating casts interpreted as real identity embeddings",
+        "Positive frozen std and epsilon; matching finite replacement shapes"
+      ],
+      "id": "actual_graph_math_seed8102_active_graph_n8",
+      "independent_replay": "runs/actual_graph_program_proof_v1/targets/seed8102_active_graph/n8/verification.json",
+      "independent_replay_sha256": "83d812d1616418d9f24706a58a4075b0b32f839f1425be824e11682cebae6022",
+      "network_math_sha256": "2bb47e63d66e97b81957e2ebc1ac100c16b35de54b3f454dcc80160af1395552",
+      "original_claim_closed": false,
+      "program": "runs/actual_graph_program_proof_v1/targets/seed8102_active_graph/n8/program.json",
+      "program_file_sha256": "98a7e933426e5331dcf727f7028955a1209226302cc52ef3078a12d97a610848",
+      "program_math_sha256": "89fcc2e01b92f366df2b809e9ab486bb971dfad17f6ce29802847e452e37296b",
+      "proof_dependencies": {
+        "actual_tensor_bindings": 22,
+        "device_rounding_verified": false,
+        "method": "docs/ACTUAL_GRAPH_PROGRAM_METHOD.md",
+        "physical_module_map": true,
+        "primary_source_sha256": {
+          "active_intervention_graph.py": "b132c5be445e85293a8b410b9303b6a30b4e9454736ba6d149cd83313d0b0d35",
+          "factorized_node_context_graph.py": "41fecea62fc71caaa911663dc3461a3580111f888aa96c15245868488e7459b8",
+          "graph_model.py": "de044407e023a4e575cdb7781bd1e893d277fd87a1058e1f6c866fc3805b0873",
+          "graphs.py": "119ef2757b9200c05b3f2fddebf898bf189e4844e6010d29abf61480764085fc",
+          "model.py": "ee732b8f06c153951e6f3e559c9511591e8e6e632d815766c5192aff50bb3602",
+          "node_context_graph.py": "0ab3ff815813ae543f052866390223979e8b57dfc94ce254317e4b8fbde12298"
+        },
+        "source_sha256": {
+          "graph_ssa_proof/__init__.py": "ceeb163eb71006a85db4ad3ff5adb52b8c7592fffeb4daa5825b63b97f07d4d8",
+          "graph_ssa_proof/__main__.py": "7ba24c15c12fac87bc08c757bf887ffff4df92674d083700f9ef46efb2bb8161",
+          "graph_ssa_proof/binding.py": "56b430b3df20d053672c7ca8657a3b5dc1f8fc34ff6ee1c921f7c7f1fc90faa5",
+          "graph_ssa_proof/compiler.py": "d11dd16482ff57c119cdbc8955e3a3fc27b4fa6b8411d5f77dc99e6bddfd91f0",
+          "graph_ssa_proof/decoder.py": "2767ef0f22982aac19296c9bdbe8e8c3f1adbd3bb7c3586cfeeb9bcb612bdd7d",
+          "graph_ssa_proof/mapping.py": "bb2ffb0d6dfad87fb7116df36986936e36cc9097166cf583450df9b17b82a58e",
+          "graph_ssa_proof/runtime.py": "b8ba772f28f0acff9a7d5617122060935744a791b3643c52e96fa9fa6b9d8b06",
+          "graph_ssa_proof/verification.py": "73a263d15c6c27b75bca704f99ffcf5f9b2fdd50a91e4bf9713db914da656592"
+        }
+      },
+      "related_original_requirements": [
+        "R4",
+        "R5",
+        "R9",
+        "R13"
+      ],
+      "status": "proved-scoped",
+      "target": "seed8102_active_graph",
+      "uncovered": [
+        "Raw statistical and do-response feature construction",
+        "Other actual graph architectures/checkpoints",
+        "Device rounding or bit-exact equivalence",
+        "True graph identification or an identified CPDAG",
+        "Shortest causal algorithm/MDL minimality",
+        "Unregistered physical graph sites or other mapping families"
+      ]
+    }
+  ],
+  "schema": "ncd.actual-graph-scoped-ledger.v1",
+  "scoped_cases_proved": 12,
+  "semantic_mdl_minimality_proved": false,
+  "true_causal_correctness_proved": false
+}

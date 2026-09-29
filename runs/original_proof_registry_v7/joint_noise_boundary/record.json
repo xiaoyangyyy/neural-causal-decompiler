@@ -1,0 +1,63 @@
+{
+  "id": "joint_noise_boundary",
+  "job": {
+    "artifact": "runs/correlated_noise_marginal_boundary_v1/manifest.json",
+    "artifact_sha256": "45a7b7b42a4f36ebd60c99b637320a07e19d991e85b170413de5f74d18c2f6ea",
+    "id": "joint_noise_boundary",
+    "kind": "joint_noise_boundary",
+    "original_claim_closed": false,
+    "related_claims": [
+      "R10.noise",
+      "R10.intervention_distribution"
+    ]
+  },
+  "result": {
+    "status": "verified",
+    "verification": {
+      "case_count": 1,
+      "conclusion": "verified",
+      "independent_bundle_verification": {
+        "cases": {
+          "correlated": {
+            "actual_learned_residuals_certified": false,
+            "both_joint_gaussians_full_support": true,
+            "conclusion": "refuted",
+            "coordinate_marginal_w1": [
+              "0",
+              "0",
+              "0"
+            ],
+            "graph_and_equations_equal": true,
+            "independent_noise_propagation_refuted": false,
+            "joint_w1_l1_strict_lower": "7/25",
+            "original_objective_achieved": false,
+            "status": "verified"
+          }
+        },
+        "original_objective_achieved": false,
+        "status": "verified-in-declared-family"
+      },
+      "kernel": "joint_noise_proof",
+      "original_claim_closed": false,
+      "original_objective_achieved": false,
+      "recovery_contracts": [],
+      "scoped_claims": [
+        {
+          "id": "correlated.marginals_do_not_determine_joint_do_law",
+          "joint_w1_l1_strict_lower": "7/25",
+          "not_all_learned_residual_laws": true,
+          "scope": "The two explicit full-support Gaussian SCMs; identical graph, equations and marginal noises, different joint law under common do(X0=0)",
+          "status": "refuted"
+        }
+      ],
+      "status": "verified",
+      "_resource_guard": {
+        "job_memory_limit_bytes": 8589934592,
+        "descendants_included": true,
+        "reported_peak_within_limit": true
+      }
+    },
+    "original_claim_closed": false,
+    "artifact_sha256": "45a7b7b42a4f36ebd60c99b637320a07e19d991e85b170413de5f74d18c2f6ea"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "scope": "fixed initial-state pairs; bounded continuous intervention words; finite horizon",
+  "checks": {
+    "complete_replay": true,
+    "all_certificates_verified": true,
+    "separation_witness_present": true,
+    "upper_certificate_present": true,
+    "budget_preserves_unresolved": true,
+    "chromatic_lower_bound_verified": true,
+    "continuous_realization_interval_closed": true
+  },
+  "replay": {
+    "status": "verified",
+    "certificates_verified": 4,
+    "statuses": {
+      "separated": 1,
+      "certified-within-epsilon": 2,
+      "unresolved": 1
+    },
+    "leaves_verified": 22,
+    "incompatibility_lower_bound": {
+      "status": "verified",
+      "states": 4,
+      "pairs": 6,
+      "edges": 5,
+      "lower_bound": 3
+    },
+    "continuous_realization": {
+      "status": "verified",
+      "lower_bound": 2,
+      "upper_bound": 2,
+      "maximum_verified_error": 0.295000000000001,
+      "transition_leaves": 3,
+      "minimal": true
+    }
+  },
+  "summary": {
+    "schema": "ncd.continuous-separation-summary.v1",
+    "cases": 4,
+    "statuses": {
+      "separated": 1,
+      "certified-within-epsilon": 2,
+      "unresolved": 1
+    },
+    "all_certificates_verified": true,
+    "declared_states": 4,
+    "incompatibility_edges": 5,
+    "realization_complexity_lower_bound": 3,
+    "closed_realization": {
+      "epsilon": 0.3,
+      "lower_bound": 2,
+      "upper_bound": 2,
+      "minimal": true,
+      "maximum_verified_error": 0.295000000000001
+    },
+    "metric": "maximum over time of L-infinity observation distance",
+    "domain": {
+      "action": "demand",
+      "lower": 0.0,
+      "upper": 1.0,
+      "horizon": 1
+    },
+    "scope": "fixed initial-state pairs; bounded continuous intervention words; finite horizon",
+    "runtime_seconds": 2.058701399990241
+  },
+  "accepted": true
+}

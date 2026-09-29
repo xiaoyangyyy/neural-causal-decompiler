@@ -1,0 +1,92 @@
+{
+  "schema": "ncd.exact-interval-lower-acceptance.v1",
+  "status": "accepted",
+  "scalar_model_sha256": "74315d3760fa63ecd8a61ea72300cd7d7c0c2447d4ebb41a82325ad7af4f1ee2",
+  "product_model_sha256": "97b74d0d5c87dc4ce19a230123e37884ce1484300ef994ba62d90b7de5421ec1",
+  "scalar_exclusion_sha256": "34a5ad3fab6ec2b50b96f990d43b1516315b9c078f3485b4d429013d9cfd02e5",
+  "scalar_exclusion_check": {
+    "status": "verified",
+    "excluded_states": 8,
+    "closed_branches": 40387,
+    "internal_branches": 158,
+    "proof_tokens": 40545
+  },
+  "exact_scalar_upper": {
+    "status": "verified",
+    "states": 9,
+    "epsilon": "0.101",
+    "radius": "201/2000",
+    "target_chains": [
+      [
+        0,
+        1,
+        2,
+        3
+      ],
+      [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      [
+        2,
+        3,
+        4,
+        5
+      ],
+      [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      [
+        3,
+        4,
+        5,
+        6
+      ],
+      [
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      [
+        4,
+        5,
+        6,
+        7
+      ]
+    ],
+    "horizon": "unbounded",
+    "action_domain": "[0,1]"
+  },
+  "slice_certificate_sha256": "2d8187c06ac8fd31c81b2b623b44b552d318653806734d945ac57b230417c181",
+  "scalar_minimum_states": 9,
+  "product_lower_bound": 36,
+  "product_upper_bound": 81,
+  "product_minimum_state_interval": [
+    36,
+    81
+  ],
+  "upper_manifest_sha256": "ceaeae201df756ef5bc46c6bff2e5493ec9e153bb4e949860350ad454654f1b2",
+  "upper_run_status": "verified"
+}

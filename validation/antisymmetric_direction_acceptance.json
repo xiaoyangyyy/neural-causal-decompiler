@@ -1,0 +1,113 @@
+{
+  "protocol": "docs/ANTISYMMETRIC_DIRECTION_PROTOCOL.md",
+  "runs": [
+    {
+      "seed": 4393,
+      "replayed": true,
+      "factorized": {
+        "macro_f1": 0.5846703421938471,
+        "skeleton_f1": 0.7672911167451374,
+        "mean_pair_shd": 3.0597222222222222,
+        "exact_graph_accuracy": 0.14513888888888893,
+        "directed_target_accuracy": 0.45426807327290813,
+        "parameter_count": 31636,
+        "by_environment_exact": {
+          "test_id": 0.28125000000000006,
+          "test_function": 0.10763888888888888,
+          "test_noise": 0.23263888888888887,
+          "test_scale": 0.041666666666666664,
+          "test_intervention": 0.0625
+        }
+      },
+      "antisymmetric": {
+        "macro_f1": 0.5963574277044923,
+        "skeleton_f1": 0.777700250495538,
+        "mean_pair_shd": 2.967361111111111,
+        "exact_graph_accuracy": 0.15625,
+        "directed_target_accuracy": 0.47313767105600585,
+        "parameter_count": 31586,
+        "by_environment_exact": {
+          "test_id": 0.3090277777777778,
+          "test_function": 0.12847222222222224,
+          "test_noise": 0.25,
+          "test_scale": 0.034722222222222224,
+          "test_intervention": 0.05902777777777778
+        }
+      },
+      "exact_higher": true,
+      "direction_higher": true,
+      "skeleton_no_lower": true,
+      "shd_lower": true
+    },
+    {
+      "seed": 4394,
+      "replayed": true,
+      "factorized": {
+        "macro_f1": 0.5901551180983088,
+        "skeleton_f1": 0.7669638233700653,
+        "mean_pair_shd": 2.6694444444444447,
+        "exact_graph_accuracy": 0.12847222222222224,
+        "directed_target_accuracy": 0.41804704036669904,
+        "parameter_count": 31636,
+        "by_environment_exact": {
+          "test_id": 0.20486111111111108,
+          "test_function": 0.07986111111111112,
+          "test_noise": 0.2222222222222222,
+          "test_scale": 0.0798611111111111,
+          "test_intervention": 0.05555555555555555
+        }
+      },
+      "antisymmetric": {
+        "macro_f1": 0.57621941770509,
+        "skeleton_f1": 0.758528251518056,
+        "mean_pair_shd": 2.7395833333333335,
+        "exact_graph_accuracy": 0.12500000000000003,
+        "directed_target_accuracy": 0.39901838474878865,
+        "parameter_count": 31586,
+        "by_environment_exact": {
+          "test_id": 0.23958333333333334,
+          "test_function": 0.07986111111111112,
+          "test_noise": 0.18402777777777776,
+          "test_scale": 0.06597222222222222,
+          "test_intervention": 0.05555555555555555
+        }
+      },
+      "exact_higher": false,
+      "direction_higher": false,
+      "skeleton_no_lower": false,
+      "shd_lower": false
+    }
+  ],
+  "pooled": {
+    "factorized_exact": 0.13680555555555557,
+    "antisymmetric_exact": 0.140625,
+    "exact_delta": 0.003819444444444431,
+    "factorized_shd": 2.8645833333333335,
+    "antisymmetric_shd": 2.853472222222222,
+    "factorized_skeleton_f1": 0.7671274700576014,
+    "antisymmetric_skeleton_f1": 0.7681142510067971,
+    "factorized_directed_accuracy": 0.4361575568198036,
+    "antisymmetric_directed_accuracy": 0.43607802790239725,
+    "direction_delta": -7.952891740636847e-05,
+    "environment_exact_deltas": {
+      "test_id": 0.03125,
+      "test_function": 0.010416666666666678,
+      "test_noise": -0.010416666666666657,
+      "test_scale": -0.010416666666666661,
+      "test_intervention": -0.0017361111111111084
+    }
+  },
+  "criteria": {
+    "complete_replay": true,
+    "full_coverage": true,
+    "exact_higher_each_seed": false,
+    "pooled_exact_gain_at_least_2pp": false,
+    "direction_higher_each_seed": false,
+    "pooled_direction_gain_at_least_2pp": false,
+    "skeleton_no_lower_each_seed": false,
+    "shd_lower_each_seed": false,
+    "environment_decline_at_most_2pp": true
+  },
+  "passed": false,
+  "claim": "new graph-head architecture comparison; not historical-teacher decompilation or causal identifiability"
+}

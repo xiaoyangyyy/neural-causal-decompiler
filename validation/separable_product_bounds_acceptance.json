@@ -1,0 +1,57 @@
+{
+  "schema": "ncd.separable-product-acceptance.v1",
+  "status": "accepted",
+  "scalar_exclusion_sha256": "34a5ad3fab6ec2b50b96f990d43b1516315b9c078f3485b4d429013d9cfd02e5",
+  "profiles": [
+    {
+      "dimension": 2,
+      "system_sha256": "97b74d0d5c87dc4ce19a230123e37884ce1484300ef994ba62d90b7de5421ec1",
+      "certificate_sha256": "1fab21ed83bc94f56c2c8ce4f52ea1a767f02cc6a4356046b791ee3a591953b4",
+      "coefficients_checked": 42,
+      "lower_bound": "36",
+      "upper_bound": "81",
+      "horizon": "unbounded"
+    },
+    {
+      "dimension": 8,
+      "system_sha256": "f16e0f2e2549fcf5729eed6663ef1ea6106945f84f34040f7db92d054dfc9663",
+      "certificate_sha256": "4fd6c525ea16724e5ff3329b2a84fc1d881346ac01431fbcb64bcc4009030ca4",
+      "coefficients_checked": 552,
+      "lower_bound": "147456",
+      "upper_bound": "43046721",
+      "horizon": "unbounded"
+    },
+    {
+      "dimension": 32,
+      "system_sha256": "52cc5513a96c7d410137c34c75995ffc444de13444fbdfb3b941efd3d69500e6",
+      "certificate_sha256": "af1c7f7b8af59ddce1d3bfd05f62c3fcd73876d97f9b3689f2d2150cbd1bc647",
+      "coefficients_checked": 8352,
+      "lower_bound": "41505174165846491136",
+      "upper_bound": "3433683820292512484657849089281",
+      "horizon": "unbounded"
+    },
+    {
+      "dimension": 128,
+      "system_sha256": "1a74b01f2ca8b673c70ed6f3ecdb5d6b2423496d8c6f95bf3c7e7a2c06ce5680",
+      "certificate_sha256": "56895863735abd901989609923757d3a38bd7efaef8f6ce2a9bd439b6985d34a",
+      "coefficients_checked": 131712,
+      "lower_bound": "260532200783961439703034716269547792669857465497691269088779564017804541689856",
+      "upper_bound": "139008452377144732764939786789661303114218850808529137991604824430036072629766435941001769154109609521811665540548899435521",
+      "horizon": "unbounded"
+    }
+  ],
+  "representation_control": {
+    "system_sha256": "673477fbcd53bd508f12bc22095165a9ae52db9bad28b51bb3812b7db37de37f",
+    "certificate_sha256": "11ee0df8b4b214fd80b71ccd6cb91c37c2c3c0596cf767fd433317444180a80d",
+    "dimension": 8,
+    "lower_bound": "147456",
+    "upper_bound": "43046721"
+  },
+  "negative_controls": {
+    "coupled_2d_rejected": true,
+    "trained_128d_rejected": true,
+    "trained_128d_system_sha256": "4051a678ea1f7b7d80679ac23fd7ee37fe3f8dc37a112c39ea3d797fcdf9e832"
+  },
+  "claim": "exact implicit finite-state bounds for frozen separable products",
+  "boundary": "does not certify coupled or trained 128D networks"
+}

@@ -1,0 +1,20 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "E:\实验\neural-causal-decompiler\validation\wheel_v61r2_env\Lib\site-packages\ncd\__main__.py", line 2, in <module>
+    raise SystemExit(main())
+                     ~~~~^^
+  File "E:\实验\neural-causal-decompiler\validation\wheel_v61r2_env\Lib\site-packages\ncd\cli.py", line 128, in main
+    elif args.command=="verify-proof":result=verify_proof(args.directory)
+                                             ~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "E:\实验\neural-causal-decompiler\validation\wheel_v61r2_env\Lib\site-packages\ncd\proof_registry.py", line 186, in verify_proof
+    actual=evaluate(config,job)
+  File "E:\实验\neural-causal-decompiler\validation\wheel_v61r2_env\Lib\site-packages\ncd\proof_registry.py", line 108, in evaluate
+    result=run_historical(config,job)
+  File "E:\实验\neural-causal-decompiler\validation\wheel_v61r2_env\Lib\site-packages\ncd\proof_registry.py", line 74, in run_historical
+    request_path=Path(tmp)/'request.json';response_path=Path(tmp)/'response.json';save_json(request_path,request)
+                                                                                  ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\实验\neural-causal-decompiler\validation\wheel_v61r2_env\Lib\site-packages\ncd\io.py", line 22, in save_json
+    f.write(payload + "\n")
+    ~~~~~~~^^^^^^^^^^^^^^^^
+OSError: [Errno 28] No space left on device

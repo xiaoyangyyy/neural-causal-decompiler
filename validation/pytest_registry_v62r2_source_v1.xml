@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="4" skipped="0" tests="35" time="24.420" timestamp="2026-09-28T19:24:14.701591+08:00" hostname="DESKTOP-B5O3UI0"><testcase classname="tests.test_unified_proof_registry_v4r2" name="test_actual_binary_constants_cannot_be_erased_as_decimal_zero" time="1.010" /><testcase classname="tests.test_unified_proof_registry_v4r2" name="test_actual_statistics_variance_floor_not_protected_cdir_division" time="0.022" /><testcase classname="tests.test_unified_proof_registry_v4r2" name="test_polynomial_coefficients_are_independently_recomputed" time="0.001" /><testcase classname="tests.test_unified_proof_registry_v4r2" name="test_scope_and_verifier_environment_tampering_rejected[promotion]" time="0.144" /><testcase classname="tests.test_unified_proof_registry_v4r2" name="test_scope_and_verifier_environment_tampering_rejected[unknown_claim]" time="0.102" /><testcase classname="tests.test_unified_proof_registry_v4r2" name="test_scope_and_verifier_environment_tampering_rejected[source]" time="0.102" /><testcase classname="tests.test_unified_proof_registry_v4r2" name="test_scope_and_verifier_environment_tampering_rejected[snapshot]" time="0.221" /><testcase classname="tests.test_unified_proof_registry_v4r2" name="test_scope_and_verifier_environment_tampering_rejected[threads]" time="0.112" /><testcase classname="tests.test_unified_proof_registry_v4r2" name="test_unsupported_operators_and_exhausted_bounds_stay_open" time="0.700" /><testcase classname="tests.test_unified_proof_registry_v4r2" name="test_original_claim_ledger_cannot_inherit_local_closure[omitted_claim]" time="0.006" /><testcase classname="tests.test_unified_proof_registry_v4r2" name="test_original_claim_ledger_cannot_inherit_local_closure[false_proved]" time="0.002" /><testcase classname="tests.test_unified_proof_registry_v4r2" name="test_declared_job_omission_is_rejected_before_replay" time="0.413" /><testcase classname="tests.test_unified_proof_registry_v4r2" name="test_memory_limit_reaches_real_descendant_not_only_launcher" time="0.127" /><testcase classname="tests.test_unified_proof_registry_v4r2" name="test_timeout_terminates_owned_descendant" time="1.006" /><testcase classname="tests.test_unified_proof_registry_v4r2" name="test_verified_but_unclosed_record_is_replayed" time="0.010" /><testcase classname="tests.test_unified_proof_registry_v4r2" name="test_changed_partial_result_cannot_silently_strengthen" time="0.010" /><testcase classname="tests.test_unified_proof_registry_v4r2" name="test_original_score_parent_not_closed_by_label_child" time="0.002" /><testcase classname="tests.test_unified_proof_registry_v4r2" name="test_changed_partial_artifact_hash_is_rejected" time="0.106" /><testcase classname="tests.test_unified_proof_registry_v4r2" name="test_older_public_schema_still_rejects_omitted_jobs" time="5.297" /><testcase classname="tests.test_unified_proof_registry_v4r2" name="test_original_score_contract_cannot_be_replaced_by_labels" time="0.001" /><testcase classname="tests.test_unified_proof_registry_v4r2" name="test_relative_protocol_is_resolved_before_snapshot_cwd" time="0.336" /><testcase classname="tests.test_unified_proof_registry_v4r2" name="test_theory_kernel_scope_and_sources_are_enforced[incomplete]" time="0.283" /><testcase classname="tests.test_unified_proof_registry_v4r2" name="test_theory_kernel_scope_and_sources_are_enforced[snapshot]" time="0.305" /><testcase classname="tests.test_unified_proof_registry_v4r2" name="test_theory_kernel_scope_and_sources_are_enforced[promotion]" time="0.001" /><testcase classname="tests.test_unified_proof_registry_v4r2" name="test_matching_statistical_contracts_merge_valid_evidence_not_failed_attempts" time="0.011" /><testcase classname="tests.test_unified_proof_registry_v4r2" name="test_model_or_estimator_scope_collision_rejects_merge" time="0.001" /><testcase classname="tests.test_unified_proof_registry_v4r2" name="test_original_parent_not_closed_by_gaussian_recovery_records" time="0.002" /><testcase classname="tests.test_unified_proof_registry_v4r2" name="test_schema3_public_bridge_preserves_original_job_omission_rejection" time="4.684" /><testcase classname="tests.test_unified_proof_registry_v4r2" name="test_timeout_waits_for_all_owned_processes[0]" time="1.007" /><testcase classname="tests.test_unified_proof_registry_v4r2" name="test_timeout_waits_for_all_owned_processes[1]" time="1.008"><failure message="AssertionError: assert 258 == 0&#10; +  where 258 = &lt;_FuncPtr object at 0x000001AA576AC530&gt;(1008, 0)&#10; +    where &lt;_FuncPtr object at 0x000001AA576AC530&gt; = &lt;WinDLL 'kernel32', handle 7ffdc8310000 at 0x1aa5763e360&gt;.WaitForSingleObject">attempt = 1
+
+    @pytest.mark.skipif(os.name!='nt',reason='Windows job resource backend')
+    @pytest.mark.parametrize('attempt',range(6))
+    def test_timeout_waits_for_all_owned_processes(attempt):
+        code="import subprocess,sys,time; children=[subprocess.Popen([sys.executable,'-c','import time; time.sleep(30)']) for _ in range(3)]; print(','.join(str(p.pid) for p in children),flush=True); time.sleep(30)"
+        result=run_isolated([sys.executable,'-c',code],ROOT,1,128*1024**2)
+        resources=result['resources']
+        assert resources['timeout'] and resources['descendants_terminated']
+        assert resources['active_processes_on_return']==0 and resources['total_processes']&gt;=4
+        assert resources['peak_job_memory_bytes']&gt;0
+        kernel=ctypes.WinDLL('kernel32')
+        kernel.OpenProcess.argtypes=[ctypes.c_ulong,ctypes.c_int,ctypes.c_ulong];kernel.OpenProcess.restype=ctypes.c_void_p
+        kernel.WaitForSingleObject.argtypes=[ctypes.c_void_p,ctypes.c_ulong];kernel.WaitForSingleObject.restype=ctypes.c_ulong
+        kernel.CloseHandle.argtypes=[ctypes.c_void_p]
+        for pid in map(int,result['stdout'].strip().split(b',')):
+            handle=kernel.OpenProcess(0x100000,0,pid)
+            if handle:
+&gt;               try:assert kernel.WaitForSingleObject(handle,0)==0
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E               AssertionError: assert 258 == 0
+E                +  where 258 = &lt;_FuncPtr object at 0x000001AA576AC530&gt;(1008, 0)
+E                +    where &lt;_FuncPtr object at 0x000001AA576AC530&gt; = &lt;WinDLL 'kernel32', handle 7ffdc8310000 at 0x1aa5763e360&gt;.WaitForSingleObject
+
+tests\test_unified_proof_registry_v4r2.py:259: AssertionError</failure></testcase><testcase classname="tests.test_unified_proof_registry_v4r2" name="test_timeout_waits_for_all_owned_processes[2]" time="1.008"><failure message="AssertionError: assert 258 == 0&#10; +  where 258 = &lt;_FuncPtr object at 0x000001AA576AC600&gt;(1044, 0)&#10; +    where &lt;_FuncPtr object at 0x000001AA576AC600&gt; = &lt;WinDLL 'kernel32', handle 7ffdc8310000 at 0x1aa5763caf0&gt;.WaitForSingleObject">attempt = 2
+
+    @pytest.mark.skipif(os.name!='nt',reason='Windows job resource backend')
+    @pytest.mark.parametrize('attempt',range(6))
+    def test_timeout_waits_for_all_owned_processes(attempt):
+        code="import subprocess,sys,time; children=[subprocess.Popen([sys.executable,'-c','import time; time.sleep(30)']) for _ in range(3)]; print(','.join(str(p.pid) for p in children),flush=True); time.sleep(30)"
+        result=run_isolated([sys.executable,'-c',code],ROOT,1,128*1024**2)
+        resources=result['resources']
+        assert resources['timeout'] and resources['descendants_terminated']
+        assert resources['active_processes_on_return']==0 and resources['total_processes']&gt;=4
+        assert resources['peak_job_memory_bytes']&gt;0
+        kernel=ctypes.WinDLL('kernel32')
+        kernel.OpenProcess.argtypes=[ctypes.c_ulong,ctypes.c_int,ctypes.c_ulong];kernel.OpenProcess.restype=ctypes.c_void_p
+        kernel.WaitForSingleObject.argtypes=[ctypes.c_void_p,ctypes.c_ulong];kernel.WaitForSingleObject.restype=ctypes.c_ulong
+        kernel.CloseHandle.argtypes=[ctypes.c_void_p]
+        for pid in map(int,result['stdout'].strip().split(b',')):
+            handle=kernel.OpenProcess(0x100000,0,pid)
+            if handle:
+&gt;               try:assert kernel.WaitForSingleObject(handle,0)==0
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E               AssertionError: assert 258 == 0
+E                +  where 258 = &lt;_FuncPtr object at 0x000001AA576AC600&gt;(1044, 0)
+E                +    where &lt;_FuncPtr object at 0x000001AA576AC600&gt; = &lt;WinDLL 'kernel32', handle 7ffdc8310000 at 0x1aa5763caf0&gt;.WaitForSingleObject
+
+tests\test_unified_proof_registry_v4r2.py:259: AssertionError</failure></testcase><testcase classname="tests.test_unified_proof_registry_v4r2" name="test_timeout_waits_for_all_owned_processes[3]" time="1.006"><failure message="AssertionError: assert 258 == 0&#10; +  where 258 = &lt;_FuncPtr object at 0x000001AA576ADB20&gt;(920, 0)&#10; +    where &lt;_FuncPtr object at 0x000001AA576ADB20&gt; = &lt;WinDLL 'kernel32', handle 7ffdc8310000 at 0x1aa5763c160&gt;.WaitForSingleObject">attempt = 3
+
+    @pytest.mark.skipif(os.name!='nt',reason='Windows job resource backend')
+    @pytest.mark.parametrize('attempt',range(6))
+    def test_timeout_waits_for_all_owned_processes(attempt):
+        code="import subprocess,sys,time; children=[subprocess.Popen([sys.executable,'-c','import time; time.sleep(30)']) for _ in range(3)]; print(','.join(str(p.pid) for p in children),flush=True); time.sleep(30)"
+        result=run_isolated([sys.executable,'-c',code],ROOT,1,128*1024**2)
+        resources=result['resources']
+        assert resources['timeout'] and resources['descendants_terminated']
+        assert resources['active_processes_on_return']==0 and resources['total_processes']&gt;=4
+        assert resources['peak_job_memory_bytes']&gt;0
+        kernel=ctypes.WinDLL('kernel32')
+        kernel.OpenProcess.argtypes=[ctypes.c_ulong,ctypes.c_int,ctypes.c_ulong];kernel.OpenProcess.restype=ctypes.c_void_p
+        kernel.WaitForSingleObject.argtypes=[ctypes.c_void_p,ctypes.c_ulong];kernel.WaitForSingleObject.restype=ctypes.c_ulong
+        kernel.CloseHandle.argtypes=[ctypes.c_void_p]
+        for pid in map(int,result['stdout'].strip().split(b',')):
+            handle=kernel.OpenProcess(0x100000,0,pid)
+            if handle:
+&gt;               try:assert kernel.WaitForSingleObject(handle,0)==0
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E               AssertionError: assert 258 == 0
+E                +  where 258 = &lt;_FuncPtr object at 0x000001AA576ADB20&gt;(920, 0)
+E                +    where &lt;_FuncPtr object at 0x000001AA576ADB20&gt; = &lt;WinDLL 'kernel32', handle 7ffdc8310000 at 0x1aa5763c160&gt;.WaitForSingleObject
+
+tests\test_unified_proof_registry_v4r2.py:259: AssertionError</failure></testcase><testcase classname="tests.test_unified_proof_registry_v4r2" name="test_timeout_waits_for_all_owned_processes[4]" time="1.007" /><testcase classname="tests.test_unified_proof_registry_v4r2" name="test_timeout_waits_for_all_owned_processes[5]" time="1.006"><failure message="AssertionError: assert 258 == 0&#10; +  where 258 = &lt;_FuncPtr object at 0x000001AA58780530&gt;(1040, 0)&#10; +    where &lt;_FuncPtr object at 0x000001AA58780530&gt; = &lt;WinDLL 'kernel32', handle 7ffdc8310000 at 0x1aa5763d370&gt;.WaitForSingleObject">attempt = 5
+
+    @pytest.mark.skipif(os.name!='nt',reason='Windows job resource backend')
+    @pytest.mark.parametrize('attempt',range(6))
+    def test_timeout_waits_for_all_owned_processes(attempt):
+        code="import subprocess,sys,time; children=[subprocess.Popen([sys.executable,'-c','import time; time.sleep(30)']) for _ in range(3)]; print(','.join(str(p.pid) for p in children),flush=True); time.sleep(30)"
+        result=run_isolated([sys.executable,'-c',code],ROOT,1,128*1024**2)
+        resources=result['resources']
+        assert resources['timeout'] and resources['descendants_terminated']
+        assert resources['active_processes_on_return']==0 and resources['total_processes']&gt;=4
+        assert resources['peak_job_memory_bytes']&gt;0
+        kernel=ctypes.WinDLL('kernel32')
+        kernel.OpenProcess.argtypes=[ctypes.c_ulong,ctypes.c_int,ctypes.c_ulong];kernel.OpenProcess.restype=ctypes.c_void_p
+        kernel.WaitForSingleObject.argtypes=[ctypes.c_void_p,ctypes.c_ulong];kernel.WaitForSingleObject.restype=ctypes.c_ulong
+        kernel.CloseHandle.argtypes=[ctypes.c_void_p]
+        for pid in map(int,result['stdout'].strip().split(b',')):
+            handle=kernel.OpenProcess(0x100000,0,pid)
+            if handle:
+&gt;               try:assert kernel.WaitForSingleObject(handle,0)==0
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E               AssertionError: assert 258 == 0
+E                +  where 258 = &lt;_FuncPtr object at 0x000001AA58780530&gt;(1040, 0)
+E                +    where &lt;_FuncPtr object at 0x000001AA58780530&gt; = &lt;WinDLL 'kernel32', handle 7ffdc8310000 at 0x1aa5763d370&gt;.WaitForSingleObject
+
+tests\test_unified_proof_registry_v4r2.py:259: AssertionError</failure></testcase><testcase classname="tests.test_unified_proof_registry_v4r2" name="test_completed_launcher_cannot_leave_detached_owned_worker" time="0.075" /></testsuite></testsuites>

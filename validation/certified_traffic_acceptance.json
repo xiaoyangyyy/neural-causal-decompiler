@@ -1,0 +1,38 @@
+{
+  "scope": "learned quantized traffic dynamics; finite codebook and five declared control actions",
+  "checks": {
+    "complete_retraining_replay": true,
+    "all_training_pairs_fit": true,
+    "all_certificates_verified": true,
+    "all_active_exact": true,
+    "budget_preserves_unresolved": true
+  },
+  "replay": {
+    "status": "verified",
+    "cases_replayed": 2,
+    "certificates_verified": 4,
+    "active_exact_cases": 2,
+    "limited_unresolved_pairs": 30
+  },
+  "summary": {
+    "schema": "ncd.certified-traffic-summary.v1",
+    "cases": 2,
+    "actions": [
+      "normal",
+      "demand_up",
+      "incident_link1",
+      "signal_red_link2",
+      "closure_link3"
+    ],
+    "all_training_pairs_fit": true,
+    "all_certificates_verified": true,
+    "active_exact_cases": 2,
+    "concrete_states": 20,
+    "minimal_states": 8,
+    "response_queries": 220,
+    "limited_unresolved_pairs": 30,
+    "scope": "learned quantized traffic dynamics; finite codebook and five declared control actions",
+    "runtime_seconds": 4.859331799991196
+  },
+  "accepted": true
+}

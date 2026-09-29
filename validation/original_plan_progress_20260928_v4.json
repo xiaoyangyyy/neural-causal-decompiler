@@ -1,0 +1,150 @@
+{
+  "actual_graph_device_label_identity": "observed-failed; strict hardware guarantee unresolved",
+  "actual_graph_frozen_models": 4,
+  "actual_graph_installed_tests": 77,
+  "actual_graph_intervention_sites": 14,
+  "actual_graph_negative_controls": 36,
+  "actual_graph_observed_label_disagreements": 28,
+  "actual_graph_scoped_proofs": 12,
+  "actual_graph_source_and_installed_diagnostic_cases_each": 372,
+  "actual_graph_source_tests": 77,
+  "actual_graph_uniform_ncd_registry_integration": "pending new frozen native revision",
+  "current_core": "0.60.0.dev1",
+  "current_core_source_count": 136,
+  "current_core_unchanged": true,
+  "next_tasks": [
+    "Complete unchanged native63 generation/replay/audit and 292 regressions",
+    "Resume frozen mechanism8 only after native63 passes",
+    "Register accepted actual-graph proof and fixed-map backend in a new immutable native revision",
+    "Continue raw feature, short-program search and actual SCM/joint-noise proof gaps under original quantifiers"
+  ],
+  "observed_dynamic_files": {
+    "mechanism8": {
+      "snapshot": "validation/original_plan_progress_20260928_v4/mechanism8.json",
+      "snapshot_sha256": "7314587bce58e729b70c4cd1cd55fb661f2d489946c3358258636127b3f1df5e",
+      "source": "runs/historical_mechanism0_piecewise_v8/launch.json",
+      "status": "queued",
+      "value": {
+        "original_objective_achieved": false,
+        "pid": 15188,
+        "queued_utc": "2026-09-28T11:41:53.263243+00:00",
+        "schema": "ncd.piecewise-resume-launch.v2",
+        "status": "queued"
+      }
+    },
+    "registry62": {
+      "snapshot": "validation/original_plan_progress_20260928_v4/registry62.json",
+      "snapshot_sha256": "bcc5c317d96856c4a7690db1606059a2ed9c194a94345078ef302d62ebf7ad0b",
+      "source": "validation/registry_v62r3_stage_v2/launch.json",
+      "status": "passed",
+      "value": {
+        "exit_code": 0,
+        "finished_utc": "2026-09-28T12:10:11.902547+00:00",
+        "observed_live_heavy_jobs": [],
+        "pid": 6096,
+        "queued_utc": "2026-09-28T11:28:49.444557+00:00",
+        "resources": {
+          "active_processes_on_return": 0,
+          "cleanup_budget_seconds": 5,
+          "descendants_included": true,
+          "descendants_terminated": true,
+          "job_memory_limit_bytes": 8589934592,
+          "orphan_cleanup_required": true,
+          "peak_job_memory_bytes": 1113346048,
+          "timeout": false,
+          "total_processes": 213
+        },
+        "result": {
+          "all_three_public_commands_verified": true,
+          "baseline_tests": 249,
+          "failed_prior_regression_retained": true,
+          "native_registry_tests": 35,
+          "proof": {
+            "jobs": 12,
+            "original_claim_counts": {
+              "proved": 0,
+              "refuted": 2,
+              "unresolved": 36
+            },
+            "overall_objective_achieved": false,
+            "results": [
+              "verified",
+              "verified",
+              "verified",
+              "proved",
+              "proved",
+              "refuted",
+              "unresolved",
+              "proved",
+              "refuted",
+              "verified",
+              "verified",
+              "verified"
+            ],
+            "status": "verified"
+          },
+          "scoped_statistical_contracts": {
+            "proved": 5,
+            "unresolved": 2
+          },
+          "status": "candidate-verified-original-open",
+          "strict_audit_exit_code": 1,
+          "tests": 284,
+          "whole_project_complete": false
+        },
+        "schema": "ncd.registry-v62-stage-launch.v1",
+        "started_utc": "2026-09-28T11:29:10.362712+00:00",
+        "status": "passed",
+        "whole_project_complete": false
+      }
+    },
+    "registry63": {
+      "snapshot": "validation/original_plan_progress_20260928_v4/registry63.json",
+      "snapshot_sha256": "cb93a22bdd9b06792b5ab3e370e875f90349e1ee41dd3d03f152d56c75a82847",
+      "source": "validation/registry_v63_stage_v3/launch.json",
+      "status": "running",
+      "value": {
+        "observed_live_heavy_jobs": [],
+        "pid": 18264,
+        "queued_utc": "2026-09-28T11:41:52.898369+00:00",
+        "schema": "ncd.registry-v62-stage-launch.v1",
+        "started_utc": "2026-09-28T12:10:20.274389+00:00",
+        "status": "running",
+        "whole_project_complete": false
+      }
+    }
+  },
+  "observed_utc": "2026-09-28T12:24:19.550754+00:00",
+  "original_claim_counts": {
+    "proved": 0,
+    "refuted": 2,
+    "unresolved": 36
+  },
+  "original_objective_achieved": false,
+  "schema": "ncd.original-plan-progress.v4",
+  "scoped_conclusions_do_not_close_original_requirements": true,
+  "scoped_statistics": {
+    "proved": 5,
+    "refuted": 2,
+    "unresolved": 0
+  },
+  "source_candidate_62r3_full_regression": 284,
+  "source_candidate_62r3_public_commands_verified": true,
+  "source_candidate_63_full_regression_status": "running",
+  "static_files": {
+    "RESULTS_ACTUAL_GRAPH_PROGRAM.md": "17103a690267031426d90897bc5d8916d1f4902ee3cccff49326a45cfa61f78b",
+    "RESULTS_ORIGINAL_PLAN_PROGRESS_V4.md": "907342a308b0831102dd40e5705e22e14cd14ad906ccb99ffdc0bcbe29b991ac",
+    "docs/ACTUAL_GRAPH_PROGRAM_METHOD.md": "06440d3fee36aedf76684da9e2735e21a40bd53b7d4b8e73e852cc8b0fd73439",
+    "docs/FULL_REQUIREMENTS.md": "04d608c94e83c8b77adaca81fcf4942826d3aa7d5d61152d6e895b010fcc724c",
+    "validation/actual_graph_acceptance_v1.json": "85bf048596ca37207fe46d94ba523e9d2fb80298662561979a1328951a3da44c",
+    "validation/actual_graph_controls_v1/status.json": "bb45126d63482b66148bd77fb0b4a5eba38f5db1f5d011540bcd4ea4f810fa9b",
+    "validation/actual_graph_installed_v1/status.json": "f2fe4c6c59e8840d0f7d17323a22e9a815c09923dbe946838f4259db3cc0c881",
+    "validation/actual_graph_installed_v1/supervision.json": "729ed337dd62a6eae95c48e64cb1fa4b61ca2e18258c804f2ee0ac733f9d69d2",
+    "validation/actual_graph_protocol_v1.json": "90fb39f663c74c6eec344e372c54986b01b344fb8b4d3f6035a3a481dcf0b243",
+    "validation/actual_graph_scoped_ledger_v1.json": "5636b077381aac2a2ab73f16e964802e534953081b594158068226739d9fb257",
+    "validation/actual_graph_source_preflight_v1.json": "17ac64bbc38ee6043dccdea1a9fc1a4a8165838b1016174e58855350451ddd14",
+    "validation/original_plan_progress_20260928_v3.json": "669a83c590de0f8e4c098da332d39e57d7e113296eb730c2c5171564ed8e3efb",
+    "validation/registry_v62r3_acceptance_v1.json": "9fc153947ab35de0ac1f248a0f77cf1467d1cd7fdf6bfc2513a92b8f5e32e323"
+  },
+  "whole_project_goal_active": true
+}

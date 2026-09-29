@@ -1,0 +1,11 @@
+# Eight trained phase-crossing rings have 459-state finite realizations
+
+Two independent frozen training seeds across state dimensions **8, 32, 64 and 128** each now have an executable, exact-certified finite realization with **459 states** at `epsilon=17/100`. The original full-cube weighted-grid upper was 2,250, so the same-model upper falls by **79.6%**. The independent 81-state packing lower leaves the general minimum interval at **[81,459]** for each of the eight networks.
+
+The machine uses 243 coarse initial states covering the entire unit state cube and 216 recurrent states in the exact interval enclosure of the network's full-cube transition image. Exact ReLU sensitivity inequalities prove the initial output error and the one-step handoff to the previously certified recurrent relation. That relation then proves all continuous action sequences and all finite horizons. Exact state and control second-difference witnesses are replayed for every frozen model, so the result genuinely includes phase-crossing functions rather than a globally affine surrogate.
+
+These are synthetic traffic-inspired models with a structured fixed hidden feature dictionary and trained output coefficients. The proof concerns the frozen learned ReLU networks, not the simulator. It does not establish a globally minimal causal quotient or end-to-end causal program recovery. The recurrent 216-cell enclosure remains conservative.
+
+Evidence: [method](docs/NONLINEAR_TWO_STAGE_METHOD.md), [eight-case acceptance](validation/nonlinear_two_stage_acceptance.json), [frozen nonlinear study](RESULTS_TRAINED_NONLINEAR_GLOBAL.md), and the eight certificates under [runs/nonlinear_two_stage_v1](runs/nonlinear_two_stage_v1). Replay with `python -m scripts.acceptance_nonlinear_two_stage --verify`.
+
+Release 0.55.0 passed all 212 regression tests. An isolated wheel installation replayed all eight matching 81-state lower and 459-state upper certificates, exact state/control phase witnesses, and executable traces. All 114 installed Python modules matched source bytes. Evidence: [wheel status](validation/wheel_v55_run/status.json) and [JUnit report](validation/pytest_v55.xml). Wheel SHA-256: `a48ed39caae8a6a8d04e1f3685ec824cf375289d75c2678d27b0aadfd4e0b978`.

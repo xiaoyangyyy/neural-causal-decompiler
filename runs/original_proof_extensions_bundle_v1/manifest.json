@@ -1,0 +1,105 @@
+{
+  "schema": "ncd.original-proof-extensions-bundle.v1",
+  "config_sha256": "ee2e31a197830f9c5e199f89aafbfb7c6187838d513504ed16433456d2c97536",
+  "source_sha256": {
+    "proof_extensions/__init__.py": "e2e27e8348fa9e64ea4ebf41d5c4201906177fd1f9d1580945ee2b1ab8c8ffa1",
+    "proof_extensions/__main__.py": "92325e09bbb5738d82e487a441959a94b3bbbc1977ef0f9f36c6dcc1b285a158",
+    "proof_extensions/feature_collision.py": "dd433d919e87e9d968cb8d1d51bb00dd2fce8f5e51385d6a6572207a562fa149",
+    "proof_extensions/finite_sample_boundary.py": "e9c2be3a1f486802913504066c105fb9aa75158470052854863306a9f6e60904",
+    "proof_extensions/frozen_graph.py": "b8c570981553e16d13926d63c57b34a9fe2cf91ee465c17d0f9cd400a353743f",
+    "proof_extensions/graph_candidates.py": "cf0a107ec29d43bcfd86f7f6bcd878010e02bec6f170b09b6d270ccde6171dec",
+    "proof_extensions/scm_propagation.py": "873d75892aced9038225894b3c2950c62c44c4fdb9f1401fd22454a4ba52f57a",
+    "proof_extensions/statistical_frontend.py": "80317e5ba32e292b446cd52197316cf231d291fc414add6a6aa77010d50196b4",
+    "proof_extensions/statistics_rule.py": "661388c4411092f345f08c82d6cc73146617488f13d433be96f5dd7392fecaef",
+    "ncd/statistics.py": "b08101b0973592a2dfc8343ad888d45471035328a5ef6e9106251de3dd25ab84",
+    "ncd/model.py": "ee732b8f06c153951e6f3e559c9511591e8e6e632d815766c5192aff50bb3602",
+    "ncd/graph_model.py": "de044407e023a4e575cdb7781bd1e893d277fd87a1058e1f6c866fc3805b0873",
+    "ncd/graphs.py": "119ef2757b9200c05b3f2fddebf898bf189e4844e6010d29abf61480764085fc",
+    "ncd/proof_intervals.py": "8838c1141070672ca69775520d81f87dc56a93678e3d818c75235ed2c3981f21",
+    "ncd/discovery_fidelity_proof.py": "8fcd180057bc0c5ef1dcf334258e786809c9b46da95b8d268d926245f6129339"
+  },
+  "original_ledger": "runs/original_proof_milestone_v1/ledger.json",
+  "original_ledger_sha256": "d2972f018c7411bbb2ea4dec2a1d080a11a6006dbc3ef16b3c6d4e0c685e7cfc",
+  "original_claim_counts": {
+    "proved": 0,
+    "refuted": 2,
+    "unresolved": 36
+  },
+  "jobs": [
+    {
+      "id": "finite_sample",
+      "certificate": "runs/original_proof_extensions_bundle_v1/finite_sample/certificate.json",
+      "certificate_sha256": "ff2f920e03687148193a235d88228d6c37a0a653637d3d2651c7d89759d8a2c2",
+      "job_sha256": "01787663aee8957a3eb0af012a592034526fa92ca949ffd96f4b42ba811637b3",
+      "verification": {
+        "status": "verified",
+        "conclusion": "refuted",
+        "minimax_graph_error_lower": "287425197928998389772323/604462909807314587353088",
+        "original_scope_not_automatically_closed": true
+      },
+      "status": "refuted",
+      "original_claim_closed": false
+    },
+    {
+      "id": "decoder_tie",
+      "certificate": "runs/original_proof_extensions_bundle_v1/decoder_tie/certificate.json",
+      "certificate_sha256": "d9b5b8cfc1337994d035dd26d9f52cf2ad1e77787618b8ce9d7183898eed3c14",
+      "job_sha256": "083b20fc8c0ffe610c7ed780af681303d9b2f405a3eed8333f71269b30683a78",
+      "verification": {
+        "status": "verified",
+        "conclusion": "refuted",
+        "scope": "legacy decode_graph is not node-permutation-equivariant on all valid reverse-symmetric probability inputs",
+        "original_claim_closed": false
+      },
+      "status": "refuted",
+      "original_claim_closed": false
+    },
+    {
+      "id": "decoder_cycle",
+      "certificate": "runs/original_proof_extensions_bundle_v1/decoder_cycle/certificate.json",
+      "certificate_sha256": "64cebe05ae610195e3a47140bb8da8e0cdf2aa9a09f2665fb2d8a0d05abc1599",
+      "job_sha256": "09714d8d3d753e54afe7e3bdbab28e019059dd8b53cbec48e21ec66e094a012a",
+      "verification": {
+        "status": "verified",
+        "conclusion": "refuted",
+        "scope": "legacy decode_graph is not node-permutation-equivariant on all valid reverse-symmetric probability inputs",
+        "original_claim_closed": false
+      },
+      "status": "refuted",
+      "original_claim_closed": false
+    },
+    {
+      "id": "feature_collision",
+      "certificate": "runs/original_proof_extensions_bundle_v1/feature_collision/certificate.json",
+      "certificate_sha256": "c13f54491bf8e1d5f7ca7c47782572130424d781cf8cfbfc430d3ea58a51b4b5",
+      "job_sha256": "6e1aa12cb91e0e85bd5d04ea3bbca8f2aa05f1c0e4e23e0aa20378b99c02673b",
+      "verification": {
+        "status": "verified",
+        "conclusion": "refuted",
+        "strict_network_labels": [
+          1,
+          2
+        ],
+        "scope": "specified frozen network and mathematical 14-feature family"
+      },
+      "status": "refuted",
+      "original_claim_closed": false
+    },
+    {
+      "id": "scm_coupling",
+      "certificate": "runs/original_proof_extensions_bundle_v1/scm_coupling/certificate.json",
+      "certificate_sha256": "fe6035deb5c0e8df01fed8a5e246fa59c77c32866dee6318a754c2af51e06a00",
+      "job_sha256": "4caf6e8a3b66ee5c6e93208d7d8de2fa2e44aea22b100642757fcd776a07b049",
+      "verification": {
+        "status": "verified",
+        "conclusion": "proved",
+        "scope": "two specified explicit SCMs; all shared do-values and target subsets"
+      },
+      "status": "proved",
+      "original_claim_closed": false
+    }
+  ],
+  "overall_objective_achieved": false,
+  "full_plan_implemented": false,
+  "released_wheel_contains_extensions": false
+}

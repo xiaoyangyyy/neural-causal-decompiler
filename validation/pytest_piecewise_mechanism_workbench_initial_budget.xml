@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="2" skipped="0" tests="3" time="16.251" timestamp="2026-09-28T16:30:59.453593+08:00" hostname="DESKTOP-B5O3UI0"><testcase classname="tests.test_piecewise_mechanism_workbench" name="test_affine_cells_cover_entire_domain_and_boundaries" time="7.787"><failure message="AssertionError: assert 'unresolved' == 'proved'&#10;  &#10;  - proved&#10;  + unresolved">def test_affine_cells_cover_entire_domain_and_boundaries():
+        domain=[['-1','1'],['-1','1']]
+        c=certify_piecewise(example(),domain,max_cells=511,seconds=10)
+&gt;       assert verify_piecewise(c)['conclusion']=='proved'
+E       AssertionError: assert 'unresolved' == 'proved'
+E         
+E         - proved
+E         + unresolved
+
+tests\test_piecewise_mechanism_workbench.py:21: AssertionError</failure></testcase><testcase classname="tests.test_piecewise_mechanism_workbench" name="test_budget_exhaustion_retains_unresolved_cells_and_resume_contract" time="8.105"><failure message="AssertionError: assert 'unresolved' == 'proved'&#10;  &#10;  - proved&#10;  + unresolved">def test_budget_exhaustion_retains_unresolved_cells_and_resume_contract():
+        first=certify_piecewise(example(),[['-1','1'],['-1','1']],max_cells=1,seconds=1)
+        assert verify_piecewise(first)['conclusion']=='unresolved'
+        with pytest.raises(ValueError):program(first)
+        resumed=certify_piecewise(example(),first['domain'],max_cells=511,seconds=10,checkpoint=first)
+&gt;       assert verify_piecewise(resumed)['conclusion']=='proved'
+E       AssertionError: assert 'unresolved' == 'proved'
+E         
+E         - proved
+E         + unresolved
+
+tests\test_piecewise_mechanism_workbench.py:38: AssertionError</failure></testcase><testcase classname="tests.test_piecewise_mechanism_workbench" name="test_gradients_are_real_network_derivatives_including_saturation" time="0.017" /></testsuite></testsuites>

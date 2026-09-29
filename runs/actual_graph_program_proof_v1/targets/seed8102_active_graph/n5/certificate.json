@@ -1,0 +1,211 @@
+{
+  "all_boundaries_retained": true,
+  "checkpoint_binding_contract": "The local theorem concerns the supplied mathematical export; verify_checkpoint must independently bind it to the actual checkpoint before reporting actual-network fidelity",
+  "checkpoint_sha256": "3cd093729cbfe097663b748a2c39018efbb44a57cc91038cebd97c973c03c5e1",
+  "composition": "Topological induction over every typed SSA instruction, followed by structural equality of the complete finite graph tail",
+  "domain": {
+    "batch": "Every positive finite integer B",
+    "features": [
+      "B",
+      5,
+      5,
+      24
+    ],
+    "values": "All finite real feature coordinates, including diagonal tokens, clipping boundaries and label ties"
+  },
+  "error": {
+    "decoded_graph": "identical partially-directed prediction, rejection trace and explicit DAG completion",
+    "mathematical_logits": "0",
+    "mathematical_probabilities": "0",
+    "pair_labels": "identical under the same lowest-index argmax rule"
+  },
+  "hardware_rounding_covered": false,
+  "interchange": {
+    "all_mappings_refuted": false,
+    "compatible_interventions": "Every subset of the 14 declared sites, each receiving its own finite real tensor of the identical batch/node/channel shape; independent source assignments are allowed",
+    "hardware_rounding_covered": false,
+    "interchange_relation": "The mapped post-intervention neural states and program states agree, as do final scores and graph decisions; all nonintervened mapped states and their differences from the unpatched execution agree.",
+    "neural_execution": "All 14 declared modules occur on every supported forward path. Replacement does not count an omitted/unevaluated SSA primitive as execution coverage.",
+    "proof": "The checked local equations commute with matching output overrides. Topological induction covers every combination without assuming shared source values or cancellation; all downstream ordinary divisors/logs remain defined for arbitrary finite replacement values at these sites.",
+    "read_write": "Read by the row-major bijective grid/flat reshape; write by its inverse and return the overridden physical module output. For attention preserve the second tuple component.",
+    "short_causal_algorithm_proved": false,
+    "sites": [
+      {
+        "channels": "width",
+        "kind": "linear",
+        "layout": "grid",
+        "module": "encoder.0",
+        "state": "encoder.0.affine"
+      },
+      {
+        "channels": "width",
+        "kind": "tanh",
+        "layout": "grid",
+        "module": "encoder.1",
+        "state": "encoder.0.tanh"
+      },
+      {
+        "channels": "width",
+        "kind": "linear",
+        "layout": "grid",
+        "module": "encoder.2",
+        "state": "encoder.1.affine"
+      },
+      {
+        "channels": "width",
+        "kind": "tanh",
+        "layout": "grid",
+        "module": "encoder.3",
+        "state": "encoder.1.tanh"
+      },
+      {
+        "channels": "width",
+        "kind": "linear",
+        "layout": "grid",
+        "module": "context.0",
+        "state": "context.layer.0.affine"
+      },
+      {
+        "channels": "width",
+        "kind": "tanh",
+        "layout": "grid",
+        "module": "context.1",
+        "state": "context.layer.0.tanh"
+      },
+      {
+        "channels": "width",
+        "kind": "linear",
+        "layout": "grid",
+        "module": "context.2",
+        "state": "context.layer.1.affine"
+      },
+      {
+        "channels": "width",
+        "kind": "tanh",
+        "layout": "grid",
+        "module": "context.3",
+        "state": "context.layer.1.tanh"
+      },
+      {
+        "channels": "width",
+        "kind": "attention",
+        "layout": "flat",
+        "module": "attention",
+        "state": "attention.output.affine",
+        "tuple_first": true
+      },
+      {
+        "channels": "width",
+        "kind": "norm",
+        "layout": "flat",
+        "module": "norm",
+        "state": "norm.output"
+      },
+      {
+        "channels": "width",
+        "kind": "linear",
+        "layout": "grid",
+        "module": "head_trunk.0",
+        "state": "head.trunk.0.affine"
+      },
+      {
+        "channels": "width",
+        "kind": "tanh",
+        "layout": "grid",
+        "module": "head_trunk.1",
+        "state": "head.trunk.0.tanh"
+      },
+      {
+        "channels": 1,
+        "kind": "linear",
+        "layout": "grid",
+        "module": "skeleton_head",
+        "state": "head.skeleton.affine"
+      },
+      {
+        "channels": 3,
+        "kind": "linear",
+        "layout": "grid",
+        "module": "orientation_head",
+        "state": "head.orientation.affine"
+      }
+    ]
+  },
+  "network_sha256": "2bb47e63d66e97b81957e2ebc1ac100c16b35de54b3f454dcc80160af1395552",
+  "neural_network_suffix_retained": false,
+  "nodes": 5,
+  "original_claim_closed": false,
+  "original_objective_achieved": false,
+  "program_sha256": "51efbd6aa64aabe379c4e7d3f55763f3f463d6a80d48ea98b7c71f8393b63357",
+  "proof": {
+    "allowed_attention_keys": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      7,
+      8,
+      9,
+      10,
+      11,
+      13,
+      14,
+      15,
+      16,
+      17,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "checked_instructions": 138,
+    "local_relations": [
+      {
+        "argument": "Each serialized coefficient and bias is checked against the independently bound actual tensor; finite product-sums and equal-argument Tanh preserve equality for every real feature coordinate. Ordinary divisions use the positive frozen std, not protected CDIR.",
+        "relation": "shared encoder"
+      },
+      {
+        "argument": "Deleting zero diagonal terms gives exactly n-1 incoming/outgoing terms and n*(n-1) global terms. Source/target broadcasts preserve each indexed coordinate and concatenate in the actual six-block order.",
+        "relation": "node/global contexts"
+      },
+      {
+        "argument": "All n*n query tokens remain; only the n*(n-1) non-diagonal keys/values enter every head. Their nonempty score set has an attained maximum, hence at least one exp(score-max)=1, sum>=1. The checked Q/K/V slicing and head transpose exactly implement scaled finite dot-product softmax followed by value aggregation and frozen output projection.",
+        "relation": "complete masked multihead attention"
+      },
+      {
+        "argument": "The population variance is mean of squared deviations, so variance+eps>=eps>0 and sqrt is positive. Every centered coordinate, learned scale and learned bias agrees with the actual LayerNorm definition. No additional clipping is inserted.",
+        "relation": "learned LayerNorm"
+      },
+      {
+        "argument": "The full positive-denominator log-softmax computation is retained. exp(o-max(o))=exp(o)/exp(max(o)) proves its log-normalization equals the actual definition. Reverse-pair indices and the [0,2,1,3] class involution are checked exactly, as is the final real probability normalization. Equality of the full score/probability tensors preserves every label comparison, including ties.",
+        "relation": "factorized head, symmetry and graph probabilities"
+      },
+      {
+        "argument": "The five serialized function ASTs are independently matched to the approved actual source: classify, greedy cycle projection, DFS reachability, lexicographic topological order and one explicit rank-based DAG completion. The same finite loops and comparison branches receive equal probabilities. Equality covers tie, threshold and cycle-rejection branches; it does not identify ambiguous causal edges.",
+        "relation": "complete graph tail"
+      }
+    ],
+    "positive_conditions": {
+      "attention_denominator_lower": "1",
+      "attention_head_width": "12",
+      "frozen_std_minimum": "16106127/536870912",
+      "norm_radicand_lower": "5902958103587057/590295810358705651712",
+      "orientation_log_denominator_lower": "1",
+      "output_denominator_lower": "1",
+      "symmetry_divisor": "2"
+    }
+  },
+  "raw_frontend_included": false,
+  "schema": "ncd.actual-graph-program-fidelity.v1",
+  "status": "proved-scoped",
+  "unsupported_or_uncovered": [
+    "Raw statistical and do-response feature construction",
+    "Other actual graph architectures/checkpoints",
+    "Device rounding or bit-exact equivalence",
+    "True graph identification or an identified CPDAG",
+    "Shortest causal algorithm/MDL minimality",
+    "Unregistered physical graph sites or other mapping families"
+  ]
+}

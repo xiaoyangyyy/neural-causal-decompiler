@@ -1,0 +1,64 @@
+{
+  "schema": "ncd.finite-sample-separation-boundary.v1",
+  "status": "refuted",
+  "samples": 96,
+  "nodes": 3,
+  "coefficient": "1/100",
+  "error_target": "1/100",
+  "model_a": {
+    "edge_0_1": false,
+    "covariance": [
+      [
+        "1",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "1",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "1"
+      ]
+    ]
+  },
+  "model_b": {
+    "edge_0_1": true,
+    "covariance": [
+      [
+        "1",
+        "1/100",
+        "0"
+      ],
+      [
+        "1/100",
+        "10001/10000",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "1"
+      ]
+    ]
+  },
+  "noise": "all exogenous noises mutually independent N(0,1); extra nodes independent roots",
+  "population_laws_distinct": true,
+  "single_row_kl_b_to_a": "1/20000",
+  "sample_kl_b_to_a": "3/625",
+  "total_variation_upper": "14806256974658903904221/302231454903657293676544",
+  "minimax_graph_error_lower": "287425197928998389772323/604462909807314587353088",
+  "refuted_statement": "an observational estimator has error at most error_target for both specified graph models at this sample size",
+  "scope": "all randomized estimators with only these n observations and model-independent side information",
+  "dependencies": [
+    "Gaussian conditional KL calculation",
+    "iid KL tensorization",
+    "Pinsker inequality",
+    "two-point testing lower bound"
+  ],
+  "does_not_refute_benchmarks_excluding_this_small_edge": true,
+  "interventional_recovery_covered": false
+}

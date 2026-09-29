@@ -1,0 +1,100 @@
+{
+  "schema": "ncd.original-proof-extensions-config.v1",
+  "output": "runs/original_proof_extensions_bundle_v1",
+  "original_ledger": "runs/original_proof_milestone_v1/ledger.json",
+  "jobs": [
+    {
+      "id": "finite_sample",
+      "kind": "finite_sample"
+    },
+    {
+      "id": "decoder_tie",
+      "kind": "decoder_boundary",
+      "case": "label_tie"
+    },
+    {
+      "id": "decoder_cycle",
+      "kind": "decoder_boundary",
+      "case": "confidence_cycle"
+    },
+    {
+      "id": "feature_collision",
+      "kind": "feature_collision",
+      "checkpoint": "runs/all_seed91_final/bivariate/models/full/discoverer.pt"
+    },
+    {
+      "id": "scm_coupling",
+      "kind": "linear_gaussian_coupling",
+      "reference": {
+        "coefficients": [
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "1/2",
+            "0",
+            "0"
+          ],
+          [
+            "1/4",
+            "1/2",
+            "0"
+          ]
+        ],
+        "intercepts": [
+          "0",
+          "0",
+          "0"
+        ],
+        "noise_means": [
+          "0",
+          "0",
+          "0"
+        ],
+        "noise_stds": [
+          "1",
+          "1",
+          "1"
+        ],
+        "noise_joint": "independent_gaussian"
+      },
+      "realization": {
+        "coefficients": [
+          [
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "1/2",
+            "0",
+            "0"
+          ],
+          [
+            "1/4",
+            "1/2",
+            "0"
+          ]
+        ],
+        "intercepts": [
+          "1/1000",
+          "1/1000",
+          "1/1000"
+        ],
+        "noise_means": [
+          "0",
+          "0",
+          "0"
+        ],
+        "noise_stds": [
+          "1001/1000",
+          "1001/1000",
+          "1001/1000"
+        ],
+        "noise_joint": "independent_gaussian"
+      }
+    }
+  ]
+}

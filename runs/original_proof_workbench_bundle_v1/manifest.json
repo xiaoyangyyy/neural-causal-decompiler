@@ -1,0 +1,87 @@
+{
+  "schema": "ncd.proof-workbench-bundle.v1",
+  "source_sha256": {
+    "proof_workbench/__init__.py": "4ddb3f82f76291db1eecb5c01ad3063095f9c753e4466ee9486715ae0a3466f6",
+    "proof_workbench/__main__.py": "c04e0314d2eef4309faf15796bef12dcc36a2e1fa56ab15f2f4a7351d94eeb19",
+    "proof_workbench/bounded_mdl.py": "de43dc42a401a93186355b454eb27f25ca860071116235d112c11d3190b82324",
+    "proof_workbench/mean_information_boundary.py": "8d6ce889ccdda84ebbeb0b758335742866c720ace2237370f82675e06ed6d130",
+    "proof_workbench/piecewise_mechanism.py": "0ac39febfc1e8b04ad6f5090066247650a1f18b21907e4737a131a7fc28e7b08",
+    "proof_workbench/polynomial_semantics.py": "e012e0a58ca0827c845e5d4ce58886422e64a64cf9a00f96616dc76c2c3576c5",
+    "ncd/model.py": "ee732b8f06c153951e6f3e559c9511591e8e6e632d815766c5192aff50bb3602",
+    "ncd/neural_sites.py": "84beb9302d3c602e79387b9aae591592c81a3b87fcd61d43e70562a070f991f8",
+    "ncd/raw_program_trace.py": "75071a2626e3f5fe8271fd1973aa17b39b8a11d6a052672b1b173ac9b1c9e6a4",
+    "ncd/cdir.py": "147e24b1e0a86be97f96fb6895b9bdea7f8b0cf98c864961766710336c30e469",
+    "ncd/frozen_mechanism_proof.py": "af508660639be8a7a3cb112cbc78975c900e7daceba7d9cd6ff31aea5ec7cafc",
+    "ncd/proof_intervals.py": "8838c1141070672ca69775520d81f87dc56a93678e3d818c75235ed2c3981f21",
+    "ncd/discovery_fidelity_proof.py": "8fcd180057bc0c5ef1dcf334258e786809c9b46da95b8d268d926245f6129339",
+    "proof_extensions/statistical_frontend.py": "80317e5ba32e292b446cd52197316cf231d291fc414add6a6aa77010d50196b4"
+  },
+  "config_sha256": "db8449944f85bd095cdca12fbb2b7ea33b549e81c0365b50d153cf6466ddee5b",
+  "jobs": [
+    {
+      "id": "mean_information",
+      "certificate": "runs/original_proof_workbench_bundle_v1/mean_information/certificate.json",
+      "certificate_sha256": "e7ee16172eb156c4be7f29f105a04adc9ae889f70ead63b55e0633b4a21fb922",
+      "job_sha256": "5ae2288e401fbb406ee8cc92a7843ab8e13435fcbaa1f8f2d03b2f2838127622",
+      "status": "refuted",
+      "verification": {
+        "status": "verified",
+        "conclusion": "refuted",
+        "mapping_family_excluded": "every deterministic function of any or all post-normalization internal states; independent randomization also cannot improve the statistical bound",
+        "statistical_success_probability_upper": "51137301086387562884287/1208925819614629174706176",
+        "original_R5_closed": false
+      },
+      "original_claim_closed": false
+    },
+    {
+      "id": "decimal_conversion",
+      "certificate": "runs/original_proof_workbench_bundle_v1/decimal_conversion/certificate.json",
+      "certificate_sha256": "04b9367e99a8703a0fc4c108802100785b940e94406112996bd9693c68e28151",
+      "job_sha256": "49d31983d700acc7efc2a9a63b1f2b1e639791937b6ab5d4e2c1dc005fe42484",
+      "status": "refuted",
+      "verification": {
+        "status": "verified",
+        "conclusion": "refuted",
+        "original_R12_closed": false
+      },
+      "original_claim_closed": false
+    },
+    {
+      "id": "finite_mdl",
+      "certificate": "runs/original_proof_workbench_bundle_v1/finite_mdl/certificate.json",
+      "certificate_sha256": "d41a97cf32b63cb67720f7aecfcd87ec079866856b107483c3edf8ed2dd6d5e4",
+      "job_sha256": "15058d50ddad1ea0da645eaaee5d36108285a93f36b8a0197c7c03648e860f7d",
+      "status": "proved",
+      "verification": {
+        "status": "verified",
+        "conclusion": "proved",
+        "minimum_cost": 3,
+        "original_R4_R12_closed": false
+      },
+      "original_claim_closed": false
+    },
+    {
+      "id": "root_nonunique",
+      "certificate": "runs/original_proof_workbench_bundle_v1/root_nonunique/certificate.json",
+      "certificate_sha256": "0cbde5efe9064b595425ca18a572d4d2d8ca7e401253d85d776396e1c7e3994e",
+      "job_sha256": "d187ed01ddbadce39bd4cdca1d61aeb224c2e3cfe2cdfd84238152e8560180a1",
+      "status": "refuted",
+      "verification": {
+        "status": "verified",
+        "conclusion": "refuted",
+        "minimum_cost": 1,
+        "original_R12_closed": false
+      },
+      "original_claim_closed": false
+    }
+  ],
+  "original_ledger": "runs/original_proof_milestone_v1/ledger.json",
+  "original_ledger_sha256": "d2972f018c7411bbb2ea4dec2a1d080a11a6006dbc3ef16b3c6d4e0c685e7cfc",
+  "original_claim_counts": {
+    "proved": 0,
+    "refuted": 2,
+    "unresolved": 36
+  },
+  "overall_objective_achieved": false,
+  "full_plan_implemented": false
+}

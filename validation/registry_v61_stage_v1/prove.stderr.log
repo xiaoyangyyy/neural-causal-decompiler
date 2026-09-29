@@ -1,0 +1,20 @@
+error: Independent historical verifier rejected evidence: Traceback (most recent call last):
+  File "E:\\u02b5\ufffd\ufffd\neural-causal-decompiler\validation\wheel_v61_env\Lib\site-packages\ncd\proof_registry_runner.py", line 62, in <module>
+    if __name__=='__main__':main()
+                            ~~~~^^
+  File "E:\\u02b5\ufffd\ufffd\neural-causal-decompiler\validation\wheel_v61_env\Lib\site-packages\ncd\proof_registry_runner.py", line 52, in main
+    protocol=read(job['protocol']);certificate=read(job['artifact'])
+  File "E:\\u02b5\ufffd\ufffd\neural-causal-decompiler\validation\wheel_v61_env\Lib\site-packages\ncd\proof_registry_runner.py", line 6, in read
+    def read(path):return json.loads(Path(path).read_text(encoding='utf-8'))
+                                     ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\K\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 546, in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\K\AppData\Local\Programs\Python\Python313\Lib\pathlib\_abc.py", line 632, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\K\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'validation\\piecewise_mechanism_protocol_v1.json'
+

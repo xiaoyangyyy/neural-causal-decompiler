@@ -1,0 +1,29 @@
+{
+  "accepted": true,
+  "run": "runs/certified_continuous_realization_seed10701",
+  "manifest_sha256": "f1e296b573485f64dde3f7a7c56b8dcd1802e9a105f9569f2ec8b4c9880dca62",
+  "verification": {
+    "status": "verified",
+    "profiles_replayed": 2,
+    "largest_state_dim": 2,
+    "largest_realization": 100,
+    "initial_cells_verified": 20,
+    "transition_segments_verified": 100,
+    "packing_pairs_verified": 310
+  },
+  "size_bounds": [
+    [
+      1,
+      5,
+      10
+    ],
+    [
+      2,
+      25,
+      100
+    ]
+  ],
+  "formal_runtime_seconds": 0.13978510000742972,
+  "claim": "uniform epsilon simulation for arbitrary-length continuous action words on the frozen separable ReLU benchmark",
+  "limitations": "1D/2D only; lower and upper size bounds differ; no arbitrary-network or minimal-realization claim"
+}

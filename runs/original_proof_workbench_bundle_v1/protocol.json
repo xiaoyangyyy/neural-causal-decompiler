@@ -1,0 +1,50 @@
+{
+  "schema": "ncd.proof-workbench-config.v1",
+  "output": "runs/original_proof_workbench_bundle_v1",
+  "original_ledger": "runs/original_proof_milestone_v1/ledger.json",
+  "jobs": [
+    {
+      "id": "mean_information",
+      "kind": "mean_information"
+    },
+    {
+      "id": "decimal_conversion",
+      "kind": "decimal_conversion"
+    },
+    {
+      "id": "finite_mdl",
+      "kind": "finite_mdl",
+      "target": {
+        "op": "add",
+        "args": [
+          {
+            "op": "var",
+            "index": 0
+          },
+          {
+            "op": "var",
+            "index": 1
+          }
+        ]
+      },
+      "grammar": {
+        "variables": 2,
+        "constants": [
+          "0"
+        ],
+        "operations": [
+          "add",
+          "sub",
+          "mul",
+          "square"
+        ],
+        "max_cost": 3
+      }
+    },
+    {
+      "id": "root_nonunique",
+      "kind": "approximate_root_nonunique",
+      "checkpoint": "runs/active_end_to_end_seed4993/worlds/n3_test_id_0/observational_graph/baseline/mechanism_1.pt"
+    }
+  ]
+}

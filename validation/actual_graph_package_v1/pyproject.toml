@@ -1,0 +1,13 @@
+[build-system]
+requires=["setuptools>=68"]
+build-backend="setuptools.build_meta"
+[project]
+name="ncd-actual-graph-proof"
+version="0.1.0"
+description="Scoped exact-real actual graph-network program and interchange verification"
+requires-python=">=3.11"
+dependencies=["numpy>=1.24","torch==2.12.1+cpu"]
+[project.scripts]
+ncd-actual-graph-proof="graph_ssa_proof.__main__:main"
+[tool.setuptools]
+packages=["graph_ssa_proof"]

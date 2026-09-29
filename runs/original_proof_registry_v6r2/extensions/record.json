@@ -1,0 +1,65 @@
+{
+  "id": "extensions",
+  "job": {
+    "artifact": "runs/original_proof_extensions_bundle_v1/manifest.json",
+    "artifact_sha256": "4056bc40b4abad33b57cfe63adb30a71e4a1484107b484febe1b32324edd02cc",
+    "id": "extensions",
+    "kind": "historical_extensions",
+    "original_claim_closed": false,
+    "related_claims": [
+      "R0.equivalence_contract",
+      "R2.variable_equivariance",
+      "R4.program_fidelity",
+      "R10.intervention_distribution"
+    ]
+  },
+  "result": {
+    "status": "verified",
+    "verification": {
+      "overall_objective_achieved": false,
+      "proof_jobs": 5,
+      "results": [
+        {
+          "conclusion": "refuted",
+          "minimax_graph_error_lower": "287425197928998389772323/604462909807314587353088",
+          "original_scope_not_automatically_closed": true,
+          "status": "verified"
+        },
+        {
+          "conclusion": "refuted",
+          "original_claim_closed": false,
+          "scope": "legacy decode_graph is not node-permutation-equivariant on all valid reverse-symmetric probability inputs",
+          "status": "verified"
+        },
+        {
+          "conclusion": "refuted",
+          "original_claim_closed": false,
+          "scope": "legacy decode_graph is not node-permutation-equivariant on all valid reverse-symmetric probability inputs",
+          "status": "verified"
+        },
+        {
+          "conclusion": "refuted",
+          "scope": "specified frozen network and mathematical 14-feature family",
+          "status": "verified",
+          "strict_network_labels": [
+            1,
+            2
+          ]
+        },
+        {
+          "conclusion": "proved",
+          "scope": "two specified explicit SCMs; all shared do-values and target subsets",
+          "status": "verified"
+        }
+      ],
+      "status": "verified",
+      "_resource_guard": {
+        "job_memory_limit_bytes": 8589934592,
+        "descendants_included": true,
+        "reported_peak_within_limit": true
+      }
+    },
+    "original_claim_closed": false,
+    "artifact_sha256": "4056bc40b4abad33b57cfe63adb30a71e4a1484107b484febe1b32324edd02cc"
+  }
+}

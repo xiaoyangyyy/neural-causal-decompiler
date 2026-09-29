@@ -1,0 +1,1716 @@
+{
+  "arithmetic_budget": {
+    "a": "1/2",
+    "arithmetic_budget_exhaustion_does_not_refute_recovery": true,
+    "base_certificate": {
+      "a": "1/2",
+      "certificate_input_budget": {
+        "coefficient_and_confidence_bits": 256,
+        "maximum_samples_and_family_size": 1000000,
+        "theorem_formula_valid_for_every_positive_finite_n": true
+      },
+      "classical_probability_bounds_not_project_innovation": true,
+      "conditions": [
+        "Exactly the declared two SCM hypotheses, known nonzero a (including its sign)",
+        "Three observed variables; acyclic, no latent confounding, independent standard Gaussian exogenous laws",
+        "IID observations; a fixed estimator before evaluation",
+        "For K simultaneous recovery events use per-event delta/K and the union bound"
+      ],
+      "delta": "1/100",
+      "estimator": {
+        "per_claim_delta": "1/100",
+        "requested_confidence_gate": "proved",
+        "row_means": [
+          "1/2",
+          "-1/2"
+        ],
+        "row_variance": "5/2",
+        "statistic": "T=mean(X0*(X1-X2)); return edge01 iff sign(a)*T>=0, else edge02",
+        "sufficient_samples": 990,
+        "tail_proof": "For centered W with variance s2, Markov on (W-t)^2 and t=s2/abs(mu) gives P(W<=-abs(mu))<=s2/(s2+mu*mu); use s2=row_variance/n and the reflected upper tail for the other model.",
+        "uniform_error_upper": "1/100001"
+      },
+      "family_size": 1,
+      "lower_bound_reason": "On the cube product, each n-row density is >=(1/72)^n and its volume is (1/8)^n. Average two-model error is >=half their density overlap; worst-model error is at least that average.",
+      "models": [
+        {
+          "covariance": [
+            [
+              "1",
+              "1/2",
+              "0"
+            ],
+            [
+              "1/2",
+              "5/4",
+              "0"
+            ],
+            [
+              "0",
+              "0",
+              "1"
+            ]
+          ],
+          "graph": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "label": "edge01",
+          "mixing": [
+            [
+              "1",
+              "0",
+              "0"
+            ],
+            [
+              "1/2",
+              "1",
+              "0"
+            ],
+            [
+              "0",
+              "0",
+              "1"
+            ]
+          ]
+        },
+        {
+          "covariance": [
+            [
+              "1",
+              "0",
+              "1/2"
+            ],
+            [
+              "0",
+              "1",
+              "0"
+            ],
+            [
+              "1/2",
+              "0",
+              "5/4"
+            ]
+          ],
+          "graph": [
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "label": "edge02",
+          "mixing": [
+            [
+              "1",
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "1",
+              "0"
+            ],
+            [
+              "1/2",
+              "0",
+              "1"
+            ]
+          ]
+        }
+      ],
+      "noise_law": "Independent standard centered Gaussian U0,U1,U2, independently repeated for each observed row; an ideal mathematical sampling model, not a PRNG-independence certificate.",
+      "not_proved": [
+        "Graph recovery for all original 3/5/8-node worlds",
+        "Performance of the actual trained neural graph classifiers",
+        "Empirical exogenous independence or arbitrary noise-shift robustness"
+      ],
+      "not_refuted": [
+        "Population Markov equivalence recovery",
+        "Statistical recovery at declared nonzero error",
+        "Candidate sets that retain both different equivalence classes",
+        "Other information access such as noiseless or coupled interventional contrasts"
+      ],
+      "original_claim_closed": false,
+      "original_objective_achieved": false,
+      "overlap": {
+        "cube_radius": "1/4",
+        "cube_volume": "1/8",
+        "density_lower": "1/72",
+        "exponential_lower": "1/3",
+        "exponential_proof": "e = sum_k 1/k! <3 using the geometric upper bound on the factorial tail; q<=1 implies exp(-q)>=1/3.",
+        "jacobian_determinant": "1",
+        "joint_overlap_lower": {
+          "base": "1/576",
+          "exponent": 1000000
+        },
+        "maximum_residual_quadratic": "17/128",
+        "minimax_error_lower": {
+          "base": "1/576",
+          "exponent": 1000000,
+          "multiplier": "1/2"
+        },
+        "normalization_lower": "1/24",
+        "normalization_proof": "pi/4 = integral_0^1 1/(1+x*x) dx <=1; sqrt(8)<=3; hence (2*pi)^(3/2)<=24.",
+        "strictly_positive_for_every_finite_samples": true
+      },
+      "population": "The two covariance laws differ and their faithful one-edge skeletons give distinct Gaussian Markov equivalence classes. Population class identification is possible within this specified family.",
+      "samples": 1000000,
+      "schema": "ncd.finite-gaussian-mec-boundary.v1",
+      "status": "proved-in-stated-two-model-family",
+      "universal_zero_error_recovery": "refuted for every possibly randomized estimator required to return the single correct Markov equivalence class from finitely many observational rows"
+    },
+    "base_certificate_sha256": "d9cc5908b4e0ec14b681e63413bad0eb06b42486df954ef8134ca6ff75fffb36",
+    "base_failure_artifacts_not_rewritten": true,
+    "best_short_exact_fraction": null,
+    "best_supported_bound": null,
+    "conditional_error": "With S=sum X0_i^2~chi_square(samples), error conditional on S is Phi(-abs(a)*sqrt(S/2)); the Gaussian noise has conditional variance 2*S.",
+    "conditional_gaussian_exponent": "-1/16",
+    "delta": "1/100",
+    "exact_half_power_bound": "(1+a*a/2)^(-samples/2)",
+    "family_size": 1,
+    "gaussian_mgf_denominator": "9/8",
+    "inverse_chisquare_moment": "E(1/S)=1/(samples-2), obtained from the chi-square density by the Gamma recurrence; E exp(-a*a*S/2)=(1+a*a)^(-samples/2).",
+    "markov_derivation": "The error event is contained in sum W_i<=0. Markov on exp(-t*sum W_i), using IID rows, gives error <=(1+a*a/2)^(-samples/2).",
+    "mgf_condition": "The denominator is positive; here 1+a*a/2>1. Completing the Gaussian square proves the identity.",
+    "mgf_identity": "E exp(-t*W) = E exp((t*t-abs(a)*t)*X0^2) = (1+2*abs(a)*t-2*t*t)^(-1/2)",
+    "mills_cauchy_schwarz_upper": {
+      "clamped_by_probability_one": true,
+      "comparison_supported": false,
+      "gate": "unresolved-arithmetic-budget",
+      "integer_exponent": 250000,
+      "multiplier": "1/866",
+      "power_bit_estimate": 750010,
+      "quarter_power_dropped_conservatively": 0,
+      "rational_power_base": "4/5",
+      "short_exact_fraction": null,
+      "sqrt_3n_minus6_integer_lower": 1732
+    },
+    "mills_derivation": "For x>0, Phi(-x)<=exp(-x*x/2)/(x*sqrt(2*pi)) by integrating t*exp(-t*t/2) and t/x>=1. Cauchy-Schwarz gives error<=1/(abs(a)*sqrt(pi*(samples-2)))*(1+a*a)^(-samples/4), for samples>2.",
+    "not_proved": [
+      "Graph recovery for all original 3/5/8-node worlds",
+      "Performance of the actual trained neural graph classifiers",
+      "Empirical exogenous independence or arbitrary noise-shift robustness",
+      "A 99 percent guarantee for the actual frozen neural graph networks"
+    ],
+    "old_second_moment_gate": "proved",
+    "original_claim_closed": false,
+    "original_objective_achieved": false,
+    "per_event_error_threshold": "1/100",
+    "pi_lower_proof": "pi/4=integral_0^1 1/(1+x*x) dx; sum_{k=0}^7 (-x*x)^k is a lower polynomial, with nonnegative remainder x^16/(1+x*x). Its exact integral times four is >3.",
+    "pi_lower_rational": "135904/45045",
+    "power_bit_budget": 262144,
+    "probability_semantics": "Recovery probability over ideal IID observation rows for a fixed estimator and known two-model family; not a confidence interval for trained-network accuracy across evaluation worlds.",
+    "requested_recovery_success_probability_gate": "unresolved-arithmetic-budget",
+    "samples": 1000000,
+    "schema": "ncd.finite-gaussian-chernoff.v1",
+    "signed_row_law": "For each model reflect the signed error event so W=abs(a)*X0^2+sqrt(2)*X0*Z, with X0,Z independent N(0,1)",
+    "statistic_unchanged": "T=mean(X0*(X1-X2)); return edge01 iff sign(a)*T>=0, else edge02",
+    "status": "analytic-bounds-proved-in-stated-two-model-family",
+    "tilt": "1/4",
+    "uniform_error_upper": {
+      "clamped_by_probability_one": true,
+      "comparison_supported": false,
+      "gate": "unresolved-arithmetic-budget",
+      "integer_exponent": 500000,
+      "multiplier": "1",
+      "odd_half_power_dropped_conservatively": false,
+      "power_bit_estimate": 2000001,
+      "rational_power_base": "8/9",
+      "short_exact_fraction": null
+    },
+    "union_bound": "For K fixed recovery events satisfying these premises, per-event failure<=delta/K implies family failure<=delta; events need not be mutually independent."
+  },
+  "hundred96": {
+    "a": "1/2",
+    "arithmetic_budget_exhaustion_does_not_refute_recovery": true,
+    "base_certificate": {
+      "a": "1/2",
+      "certificate_input_budget": {
+        "coefficient_and_confidence_bits": 256,
+        "maximum_samples_and_family_size": 1000000,
+        "theorem_formula_valid_for_every_positive_finite_n": true
+      },
+      "classical_probability_bounds_not_project_innovation": true,
+      "conditions": [
+        "Exactly the declared two SCM hypotheses, known nonzero a (including its sign)",
+        "Three observed variables; acyclic, no latent confounding, independent standard Gaussian exogenous laws",
+        "IID observations; a fixed estimator before evaluation",
+        "For K simultaneous recovery events use per-event delta/K and the union bound"
+      ],
+      "delta": "1/100",
+      "estimator": {
+        "per_claim_delta": "1/10000",
+        "requested_confidence_gate": "unresolved-by-this-bound",
+        "row_means": [
+          "1/2",
+          "-1/2"
+        ],
+        "row_variance": "5/2",
+        "statistic": "T=mean(X0*(X1-X2)); return edge01 iff sign(a)*T>=0, else edge02",
+        "sufficient_samples": 99990,
+        "tail_proof": "For centered W with variance s2, Markov on (W-t)^2 and t=s2/abs(mu) gives P(W<=-abs(mu))<=s2/(s2+mu*mu); use s2=row_variance/n and the reflected upper tail for the other model.",
+        "uniform_error_upper": "5/53"
+      },
+      "family_size": 100,
+      "lower_bound_reason": "On the cube product, each n-row density is >=(1/72)^n and its volume is (1/8)^n. Average two-model error is >=half their density overlap; worst-model error is at least that average.",
+      "models": [
+        {
+          "covariance": [
+            [
+              "1",
+              "1/2",
+              "0"
+            ],
+            [
+              "1/2",
+              "5/4",
+              "0"
+            ],
+            [
+              "0",
+              "0",
+              "1"
+            ]
+          ],
+          "graph": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "label": "edge01",
+          "mixing": [
+            [
+              "1",
+              "0",
+              "0"
+            ],
+            [
+              "1/2",
+              "1",
+              "0"
+            ],
+            [
+              "0",
+              "0",
+              "1"
+            ]
+          ]
+        },
+        {
+          "covariance": [
+            [
+              "1",
+              "0",
+              "1/2"
+            ],
+            [
+              "0",
+              "1",
+              "0"
+            ],
+            [
+              "1/2",
+              "0",
+              "5/4"
+            ]
+          ],
+          "graph": [
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "label": "edge02",
+          "mixing": [
+            [
+              "1",
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "1",
+              "0"
+            ],
+            [
+              "1/2",
+              "0",
+              "1"
+            ]
+          ]
+        }
+      ],
+      "noise_law": "Independent standard centered Gaussian U0,U1,U2, independently repeated for each observed row; an ideal mathematical sampling model, not a PRNG-independence certificate.",
+      "not_proved": [
+        "Graph recovery for all original 3/5/8-node worlds",
+        "Performance of the actual trained neural graph classifiers",
+        "Empirical exogenous independence or arbitrary noise-shift robustness"
+      ],
+      "not_refuted": [
+        "Population Markov equivalence recovery",
+        "Statistical recovery at declared nonzero error",
+        "Candidate sets that retain both different equivalence classes",
+        "Other information access such as noiseless or coupled interventional contrasts"
+      ],
+      "original_claim_closed": false,
+      "original_objective_achieved": false,
+      "overlap": {
+        "cube_radius": "1/4",
+        "cube_volume": "1/8",
+        "density_lower": "1/72",
+        "exponential_lower": "1/3",
+        "exponential_proof": "e = sum_k 1/k! <3 using the geometric upper bound on the factorial tail; q<=1 implies exp(-q)>=1/3.",
+        "jacobian_determinant": "1",
+        "joint_overlap_lower": {
+          "base": "1/576",
+          "exponent": 96
+        },
+        "maximum_residual_quadratic": "17/128",
+        "minimax_error_lower": {
+          "base": "1/576",
+          "exponent": 96,
+          "multiplier": "1/2"
+        },
+        "normalization_lower": "1/24",
+        "normalization_proof": "pi/4 = integral_0^1 1/(1+x*x) dx <=1; sqrt(8)<=3; hence (2*pi)^(3/2)<=24.",
+        "strictly_positive_for_every_finite_samples": true
+      },
+      "population": "The two covariance laws differ and their faithful one-edge skeletons give distinct Gaussian Markov equivalence classes. Population class identification is possible within this specified family.",
+      "samples": 96,
+      "schema": "ncd.finite-gaussian-mec-boundary.v1",
+      "status": "proved-in-stated-two-model-family",
+      "universal_zero_error_recovery": "refuted for every possibly randomized estimator required to return the single correct Markov equivalence class from finitely many observational rows"
+    },
+    "base_certificate_sha256": "165da4dfa1515a34e77e2b6e0c33c7b7ae0568ecca8b53824115d010196af131",
+    "base_failure_artifacts_not_rewritten": true,
+    "best_short_exact_fraction": "35184372088832/59604644775390625",
+    "best_supported_bound": "mills_cauchy_schwarz",
+    "conditional_error": "With S=sum X0_i^2~chi_square(samples), error conditional on S is Phi(-abs(a)*sqrt(S/2)); the Gaussian noise has conditional variance 2*S.",
+    "conditional_gaussian_exponent": "-1/16",
+    "delta": "1/100",
+    "exact_half_power_bound": "(1+a*a/2)^(-samples/2)",
+    "family_size": 100,
+    "gaussian_mgf_denominator": "9/8",
+    "inverse_chisquare_moment": "E(1/S)=1/(samples-2), obtained from the chi-square density by the Gamma recurrence; E exp(-a*a*S/2)=(1+a*a)^(-samples/2).",
+    "markov_derivation": "The error event is contained in sum W_i<=0. Markov on exp(-t*sum W_i), using IID rows, gives error <=(1+a*a/2)^(-samples/2).",
+    "mgf_condition": "The denominator is positive; here 1+a*a/2>1. Completing the Gaussian square proves the identity.",
+    "mgf_identity": "E exp(-t*W) = E exp((t*t-abs(a)*t)*X0^2) = (1+2*abs(a)*t-2*t*t)^(-1/2)",
+    "mills_cauchy_schwarz_upper": {
+      "clamped_by_probability_one": true,
+      "comparison_supported": true,
+      "gate": "unresolved-by-this-bound",
+      "integer_exponent": 24,
+      "multiplier": "1/8",
+      "power_bit_estimate": 76,
+      "quarter_power_dropped_conservatively": 0,
+      "rational_power_base": "4/5",
+      "short_exact_fraction": "35184372088832/59604644775390625",
+      "sqrt_3n_minus6_integer_lower": 16
+    },
+    "mills_derivation": "For x>0, Phi(-x)<=exp(-x*x/2)/(x*sqrt(2*pi)) by integrating t*exp(-t*t/2) and t/x>=1. Cauchy-Schwarz gives error<=1/(abs(a)*sqrt(pi*(samples-2)))*(1+a*a)^(-samples/4), for samples>2.",
+    "not_proved": [
+      "Graph recovery for all original 3/5/8-node worlds",
+      "Performance of the actual trained neural graph classifiers",
+      "Empirical exogenous independence or arbitrary noise-shift robustness",
+      "A 99 percent guarantee for the actual frozen neural graph networks"
+    ],
+    "old_second_moment_gate": "unresolved-by-this-bound",
+    "original_claim_closed": false,
+    "original_objective_achieved": false,
+    "per_event_error_threshold": "1/10000",
+    "pi_lower_proof": "pi/4=integral_0^1 1/(1+x*x) dx; sum_{k=0}^7 (-x*x)^k is a lower polynomial, with nonnegative remainder x^16/(1+x*x). Its exact integral times four is >3.",
+    "pi_lower_rational": "135904/45045",
+    "power_bit_budget": 262144,
+    "probability_semantics": "Recovery probability over ideal IID observation rows for a fixed estimator and known two-model family; not a confidence interval for trained-network accuracy across evaluation worlds.",
+    "requested_recovery_success_probability_gate": "unresolved-by-this-bound",
+    "samples": 96,
+    "schema": "ncd.finite-gaussian-chernoff.v1",
+    "signed_row_law": "For each model reflect the signed error event so W=abs(a)*X0^2+sqrt(2)*X0*Z, with X0,Z independent N(0,1)",
+    "statistic_unchanged": "T=mean(X0*(X1-X2)); return edge01 iff sign(a)*T>=0, else edge02",
+    "status": "analytic-bounds-proved-in-stated-two-model-family",
+    "tilt": "1/4",
+    "uniform_error_upper": {
+      "clamped_by_probability_one": true,
+      "comparison_supported": true,
+      "gate": "unresolved-by-this-bound",
+      "integer_exponent": 48,
+      "multiplier": "1",
+      "odd_half_power_dropped_conservatively": false,
+      "power_bit_estimate": 193,
+      "rational_power_base": "8/9",
+      "short_exact_fraction": "22300745198530623141535718272648361505980416/6362685441135942358474828762538534230890216321"
+    },
+    "union_bound": "For K fixed recovery events satisfying these premises, per-event failure<=delta/K implies family failure<=delta; events need not be mutually independent."
+  },
+  "one_row": {
+    "a": "1/2",
+    "arithmetic_budget_exhaustion_does_not_refute_recovery": true,
+    "base_certificate": {
+      "a": "1/2",
+      "certificate_input_budget": {
+        "coefficient_and_confidence_bits": 256,
+        "maximum_samples_and_family_size": 1000000,
+        "theorem_formula_valid_for_every_positive_finite_n": true
+      },
+      "classical_probability_bounds_not_project_innovation": true,
+      "conditions": [
+        "Exactly the declared two SCM hypotheses, known nonzero a (including its sign)",
+        "Three observed variables; acyclic, no latent confounding, independent standard Gaussian exogenous laws",
+        "IID observations; a fixed estimator before evaluation",
+        "For K simultaneous recovery events use per-event delta/K and the union bound"
+      ],
+      "delta": "1/100",
+      "estimator": {
+        "per_claim_delta": "1/100",
+        "requested_confidence_gate": "unresolved-by-this-bound",
+        "row_means": [
+          "1/2",
+          "-1/2"
+        ],
+        "row_variance": "5/2",
+        "statistic": "T=mean(X0*(X1-X2)); return edge01 iff sign(a)*T>=0, else edge02",
+        "sufficient_samples": 990,
+        "tail_proof": "For centered W with variance s2, Markov on (W-t)^2 and t=s2/abs(mu) gives P(W<=-abs(mu))<=s2/(s2+mu*mu); use s2=row_variance/n and the reflected upper tail for the other model.",
+        "uniform_error_upper": "10/11"
+      },
+      "family_size": 1,
+      "lower_bound_reason": "On the cube product, each n-row density is >=(1/72)^n and its volume is (1/8)^n. Average two-model error is >=half their density overlap; worst-model error is at least that average.",
+      "models": [
+        {
+          "covariance": [
+            [
+              "1",
+              "1/2",
+              "0"
+            ],
+            [
+              "1/2",
+              "5/4",
+              "0"
+            ],
+            [
+              "0",
+              "0",
+              "1"
+            ]
+          ],
+          "graph": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "label": "edge01",
+          "mixing": [
+            [
+              "1",
+              "0",
+              "0"
+            ],
+            [
+              "1/2",
+              "1",
+              "0"
+            ],
+            [
+              "0",
+              "0",
+              "1"
+            ]
+          ]
+        },
+        {
+          "covariance": [
+            [
+              "1",
+              "0",
+              "1/2"
+            ],
+            [
+              "0",
+              "1",
+              "0"
+            ],
+            [
+              "1/2",
+              "0",
+              "5/4"
+            ]
+          ],
+          "graph": [
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "label": "edge02",
+          "mixing": [
+            [
+              "1",
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "1",
+              "0"
+            ],
+            [
+              "1/2",
+              "0",
+              "1"
+            ]
+          ]
+        }
+      ],
+      "noise_law": "Independent standard centered Gaussian U0,U1,U2, independently repeated for each observed row; an ideal mathematical sampling model, not a PRNG-independence certificate.",
+      "not_proved": [
+        "Graph recovery for all original 3/5/8-node worlds",
+        "Performance of the actual trained neural graph classifiers",
+        "Empirical exogenous independence or arbitrary noise-shift robustness"
+      ],
+      "not_refuted": [
+        "Population Markov equivalence recovery",
+        "Statistical recovery at declared nonzero error",
+        "Candidate sets that retain both different equivalence classes",
+        "Other information access such as noiseless or coupled interventional contrasts"
+      ],
+      "original_claim_closed": false,
+      "original_objective_achieved": false,
+      "overlap": {
+        "cube_radius": "1/4",
+        "cube_volume": "1/8",
+        "density_lower": "1/72",
+        "exponential_lower": "1/3",
+        "exponential_proof": "e = sum_k 1/k! <3 using the geometric upper bound on the factorial tail; q<=1 implies exp(-q)>=1/3.",
+        "jacobian_determinant": "1",
+        "joint_overlap_lower": {
+          "base": "1/576",
+          "exponent": 1
+        },
+        "maximum_residual_quadratic": "17/128",
+        "minimax_error_lower": {
+          "base": "1/576",
+          "exponent": 1,
+          "multiplier": "1/2"
+        },
+        "normalization_lower": "1/24",
+        "normalization_proof": "pi/4 = integral_0^1 1/(1+x*x) dx <=1; sqrt(8)<=3; hence (2*pi)^(3/2)<=24.",
+        "strictly_positive_for_every_finite_samples": true
+      },
+      "population": "The two covariance laws differ and their faithful one-edge skeletons give distinct Gaussian Markov equivalence classes. Population class identification is possible within this specified family.",
+      "samples": 1,
+      "schema": "ncd.finite-gaussian-mec-boundary.v1",
+      "status": "proved-in-stated-two-model-family",
+      "universal_zero_error_recovery": "refuted for every possibly randomized estimator required to return the single correct Markov equivalence class from finitely many observational rows"
+    },
+    "base_certificate_sha256": "79a01e4b15a9f18b5f7d04c799267092101f0e859b74f174dfd01fffe2717f32",
+    "base_failure_artifacts_not_rewritten": true,
+    "best_short_exact_fraction": "1",
+    "best_supported_bound": "chernoff",
+    "conditional_error": "With S=sum X0_i^2~chi_square(samples), error conditional on S is Phi(-abs(a)*sqrt(S/2)); the Gaussian noise has conditional variance 2*S.",
+    "conditional_gaussian_exponent": "-1/16",
+    "delta": "1/100",
+    "exact_half_power_bound": "(1+a*a/2)^(-samples/2)",
+    "family_size": 1,
+    "gaussian_mgf_denominator": "9/8",
+    "inverse_chisquare_moment": "E(1/S)=1/(samples-2), obtained from the chi-square density by the Gamma recurrence; E exp(-a*a*S/2)=(1+a*a)^(-samples/2).",
+    "markov_derivation": "The error event is contained in sum W_i<=0. Markov on exp(-t*sum W_i), using IID rows, gives error <=(1+a*a/2)^(-samples/2).",
+    "mgf_condition": "The denominator is positive; here 1+a*a/2>1. Completing the Gaussian square proves the identity.",
+    "mgf_identity": "E exp(-t*W) = E exp((t*t-abs(a)*t)*X0^2) = (1+2*abs(a)*t-2*t*t)^(-1/2)",
+    "mills_cauchy_schwarz_upper": {
+      "clamped_by_probability_one": true,
+      "comparison_supported": true,
+      "gate": "unresolved-by-this-bound",
+      "integer_exponent": 0,
+      "multiplier": "1",
+      "not_used_reason": "Inverse chi-square moment requires samples>2; probability-one bound retained",
+      "power_bit_estimate": 1,
+      "rational_power_base": "1",
+      "short_exact_fraction": "1"
+    },
+    "mills_derivation": "For x>0, Phi(-x)<=exp(-x*x/2)/(x*sqrt(2*pi)) by integrating t*exp(-t*t/2) and t/x>=1. Cauchy-Schwarz gives error<=1/(abs(a)*sqrt(pi*(samples-2)))*(1+a*a)^(-samples/4), for samples>2.",
+    "not_proved": [
+      "Graph recovery for all original 3/5/8-node worlds",
+      "Performance of the actual trained neural graph classifiers",
+      "Empirical exogenous independence or arbitrary noise-shift robustness",
+      "A 99 percent guarantee for the actual frozen neural graph networks"
+    ],
+    "old_second_moment_gate": "unresolved-by-this-bound",
+    "original_claim_closed": false,
+    "original_objective_achieved": false,
+    "per_event_error_threshold": "1/100",
+    "pi_lower_proof": "pi/4=integral_0^1 1/(1+x*x) dx; sum_{k=0}^7 (-x*x)^k is a lower polynomial, with nonnegative remainder x^16/(1+x*x). Its exact integral times four is >3.",
+    "pi_lower_rational": "135904/45045",
+    "power_bit_budget": 262144,
+    "probability_semantics": "Recovery probability over ideal IID observation rows for a fixed estimator and known two-model family; not a confidence interval for trained-network accuracy across evaluation worlds.",
+    "requested_recovery_success_probability_gate": "unresolved-by-this-bound",
+    "samples": 1,
+    "schema": "ncd.finite-gaussian-chernoff.v1",
+    "signed_row_law": "For each model reflect the signed error event so W=abs(a)*X0^2+sqrt(2)*X0*Z, with X0,Z independent N(0,1)",
+    "statistic_unchanged": "T=mean(X0*(X1-X2)); return edge01 iff sign(a)*T>=0, else edge02",
+    "status": "analytic-bounds-proved-in-stated-two-model-family",
+    "tilt": "1/4",
+    "uniform_error_upper": {
+      "clamped_by_probability_one": true,
+      "comparison_supported": true,
+      "gate": "unresolved-by-this-bound",
+      "integer_exponent": 0,
+      "multiplier": "1",
+      "odd_half_power_dropped_conservatively": true,
+      "power_bit_estimate": 1,
+      "rational_power_base": "8/9",
+      "short_exact_fraction": "1"
+    },
+    "union_bound": "For K fixed recovery events satisfying these premises, per-event failure<=delta/K implies family failure<=delta; events need not be mutually independent."
+  },
+  "single96": {
+    "a": "1/2",
+    "arithmetic_budget_exhaustion_does_not_refute_recovery": true,
+    "base_certificate": {
+      "a": "1/2",
+      "certificate_input_budget": {
+        "coefficient_and_confidence_bits": 256,
+        "maximum_samples_and_family_size": 1000000,
+        "theorem_formula_valid_for_every_positive_finite_n": true
+      },
+      "classical_probability_bounds_not_project_innovation": true,
+      "conditions": [
+        "Exactly the declared two SCM hypotheses, known nonzero a (including its sign)",
+        "Three observed variables; acyclic, no latent confounding, independent standard Gaussian exogenous laws",
+        "IID observations; a fixed estimator before evaluation",
+        "For K simultaneous recovery events use per-event delta/K and the union bound"
+      ],
+      "delta": "1/100",
+      "estimator": {
+        "per_claim_delta": "1/100",
+        "requested_confidence_gate": "unresolved-by-this-bound",
+        "row_means": [
+          "1/2",
+          "-1/2"
+        ],
+        "row_variance": "5/2",
+        "statistic": "T=mean(X0*(X1-X2)); return edge01 iff sign(a)*T>=0, else edge02",
+        "sufficient_samples": 990,
+        "tail_proof": "For centered W with variance s2, Markov on (W-t)^2 and t=s2/abs(mu) gives P(W<=-abs(mu))<=s2/(s2+mu*mu); use s2=row_variance/n and the reflected upper tail for the other model.",
+        "uniform_error_upper": "5/53"
+      },
+      "family_size": 1,
+      "lower_bound_reason": "On the cube product, each n-row density is >=(1/72)^n and its volume is (1/8)^n. Average two-model error is >=half their density overlap; worst-model error is at least that average.",
+      "models": [
+        {
+          "covariance": [
+            [
+              "1",
+              "1/2",
+              "0"
+            ],
+            [
+              "1/2",
+              "5/4",
+              "0"
+            ],
+            [
+              "0",
+              "0",
+              "1"
+            ]
+          ],
+          "graph": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "label": "edge01",
+          "mixing": [
+            [
+              "1",
+              "0",
+              "0"
+            ],
+            [
+              "1/2",
+              "1",
+              "0"
+            ],
+            [
+              "0",
+              "0",
+              "1"
+            ]
+          ]
+        },
+        {
+          "covariance": [
+            [
+              "1",
+              "0",
+              "1/2"
+            ],
+            [
+              "0",
+              "1",
+              "0"
+            ],
+            [
+              "1/2",
+              "0",
+              "5/4"
+            ]
+          ],
+          "graph": [
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "label": "edge02",
+          "mixing": [
+            [
+              "1",
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "1",
+              "0"
+            ],
+            [
+              "1/2",
+              "0",
+              "1"
+            ]
+          ]
+        }
+      ],
+      "noise_law": "Independent standard centered Gaussian U0,U1,U2, independently repeated for each observed row; an ideal mathematical sampling model, not a PRNG-independence certificate.",
+      "not_proved": [
+        "Graph recovery for all original 3/5/8-node worlds",
+        "Performance of the actual trained neural graph classifiers",
+        "Empirical exogenous independence or arbitrary noise-shift robustness"
+      ],
+      "not_refuted": [
+        "Population Markov equivalence recovery",
+        "Statistical recovery at declared nonzero error",
+        "Candidate sets that retain both different equivalence classes",
+        "Other information access such as noiseless or coupled interventional contrasts"
+      ],
+      "original_claim_closed": false,
+      "original_objective_achieved": false,
+      "overlap": {
+        "cube_radius": "1/4",
+        "cube_volume": "1/8",
+        "density_lower": "1/72",
+        "exponential_lower": "1/3",
+        "exponential_proof": "e = sum_k 1/k! <3 using the geometric upper bound on the factorial tail; q<=1 implies exp(-q)>=1/3.",
+        "jacobian_determinant": "1",
+        "joint_overlap_lower": {
+          "base": "1/576",
+          "exponent": 96
+        },
+        "maximum_residual_quadratic": "17/128",
+        "minimax_error_lower": {
+          "base": "1/576",
+          "exponent": 96,
+          "multiplier": "1/2"
+        },
+        "normalization_lower": "1/24",
+        "normalization_proof": "pi/4 = integral_0^1 1/(1+x*x) dx <=1; sqrt(8)<=3; hence (2*pi)^(3/2)<=24.",
+        "strictly_positive_for_every_finite_samples": true
+      },
+      "population": "The two covariance laws differ and their faithful one-edge skeletons give distinct Gaussian Markov equivalence classes. Population class identification is possible within this specified family.",
+      "samples": 96,
+      "schema": "ncd.finite-gaussian-mec-boundary.v1",
+      "status": "proved-in-stated-two-model-family",
+      "universal_zero_error_recovery": "refuted for every possibly randomized estimator required to return the single correct Markov equivalence class from finitely many observational rows"
+    },
+    "base_certificate_sha256": "1d0ab1aad1fd9ad3cb020089b162c4ed3a45578a07350505f12fc287586c2a34",
+    "base_failure_artifacts_not_rewritten": true,
+    "best_short_exact_fraction": "35184372088832/59604644775390625",
+    "best_supported_bound": "mills_cauchy_schwarz",
+    "conditional_error": "With S=sum X0_i^2~chi_square(samples), error conditional on S is Phi(-abs(a)*sqrt(S/2)); the Gaussian noise has conditional variance 2*S.",
+    "conditional_gaussian_exponent": "-1/16",
+    "delta": "1/100",
+    "exact_half_power_bound": "(1+a*a/2)^(-samples/2)",
+    "family_size": 1,
+    "gaussian_mgf_denominator": "9/8",
+    "inverse_chisquare_moment": "E(1/S)=1/(samples-2), obtained from the chi-square density by the Gamma recurrence; E exp(-a*a*S/2)=(1+a*a)^(-samples/2).",
+    "markov_derivation": "The error event is contained in sum W_i<=0. Markov on exp(-t*sum W_i), using IID rows, gives error <=(1+a*a/2)^(-samples/2).",
+    "mgf_condition": "The denominator is positive; here 1+a*a/2>1. Completing the Gaussian square proves the identity.",
+    "mgf_identity": "E exp(-t*W) = E exp((t*t-abs(a)*t)*X0^2) = (1+2*abs(a)*t-2*t*t)^(-1/2)",
+    "mills_cauchy_schwarz_upper": {
+      "clamped_by_probability_one": true,
+      "comparison_supported": true,
+      "gate": "proved",
+      "integer_exponent": 24,
+      "multiplier": "1/8",
+      "power_bit_estimate": 76,
+      "quarter_power_dropped_conservatively": 0,
+      "rational_power_base": "4/5",
+      "short_exact_fraction": "35184372088832/59604644775390625",
+      "sqrt_3n_minus6_integer_lower": 16
+    },
+    "mills_derivation": "For x>0, Phi(-x)<=exp(-x*x/2)/(x*sqrt(2*pi)) by integrating t*exp(-t*t/2) and t/x>=1. Cauchy-Schwarz gives error<=1/(abs(a)*sqrt(pi*(samples-2)))*(1+a*a)^(-samples/4), for samples>2.",
+    "not_proved": [
+      "Graph recovery for all original 3/5/8-node worlds",
+      "Performance of the actual trained neural graph classifiers",
+      "Empirical exogenous independence or arbitrary noise-shift robustness",
+      "A 99 percent guarantee for the actual frozen neural graph networks"
+    ],
+    "old_second_moment_gate": "unresolved-by-this-bound",
+    "original_claim_closed": false,
+    "original_objective_achieved": false,
+    "per_event_error_threshold": "1/100",
+    "pi_lower_proof": "pi/4=integral_0^1 1/(1+x*x) dx; sum_{k=0}^7 (-x*x)^k is a lower polynomial, with nonnegative remainder x^16/(1+x*x). Its exact integral times four is >3.",
+    "pi_lower_rational": "135904/45045",
+    "power_bit_budget": 262144,
+    "probability_semantics": "Recovery probability over ideal IID observation rows for a fixed estimator and known two-model family; not a confidence interval for trained-network accuracy across evaluation worlds.",
+    "requested_recovery_success_probability_gate": "proved",
+    "samples": 96,
+    "schema": "ncd.finite-gaussian-chernoff.v1",
+    "signed_row_law": "For each model reflect the signed error event so W=abs(a)*X0^2+sqrt(2)*X0*Z, with X0,Z independent N(0,1)",
+    "statistic_unchanged": "T=mean(X0*(X1-X2)); return edge01 iff sign(a)*T>=0, else edge02",
+    "status": "analytic-bounds-proved-in-stated-two-model-family",
+    "tilt": "1/4",
+    "uniform_error_upper": {
+      "clamped_by_probability_one": true,
+      "comparison_supported": true,
+      "gate": "proved",
+      "integer_exponent": 48,
+      "multiplier": "1",
+      "odd_half_power_dropped_conservatively": false,
+      "power_bit_estimate": 193,
+      "rational_power_base": "8/9",
+      "short_exact_fraction": "22300745198530623141535718272648361505980416/6362685441135942358474828762538534230890216321"
+    },
+    "union_bound": "For K fixed recovery events satisfying these premises, per-event failure<=delta/K implies family failure<=delta; events need not be mutually independent."
+  },
+  "single990": {
+    "a": "1/2",
+    "arithmetic_budget_exhaustion_does_not_refute_recovery": true,
+    "base_certificate": {
+      "a": "1/2",
+      "certificate_input_budget": {
+        "coefficient_and_confidence_bits": 256,
+        "maximum_samples_and_family_size": 1000000,
+        "theorem_formula_valid_for_every_positive_finite_n": true
+      },
+      "classical_probability_bounds_not_project_innovation": true,
+      "conditions": [
+        "Exactly the declared two SCM hypotheses, known nonzero a (including its sign)",
+        "Three observed variables; acyclic, no latent confounding, independent standard Gaussian exogenous laws",
+        "IID observations; a fixed estimator before evaluation",
+        "For K simultaneous recovery events use per-event delta/K and the union bound"
+      ],
+      "delta": "1/100",
+      "estimator": {
+        "per_claim_delta": "1/100",
+        "requested_confidence_gate": "proved",
+        "row_means": [
+          "1/2",
+          "-1/2"
+        ],
+        "row_variance": "5/2",
+        "statistic": "T=mean(X0*(X1-X2)); return edge01 iff sign(a)*T>=0, else edge02",
+        "sufficient_samples": 990,
+        "tail_proof": "For centered W with variance s2, Markov on (W-t)^2 and t=s2/abs(mu) gives P(W<=-abs(mu))<=s2/(s2+mu*mu); use s2=row_variance/n and the reflected upper tail for the other model.",
+        "uniform_error_upper": "1/100"
+      },
+      "family_size": 1,
+      "lower_bound_reason": "On the cube product, each n-row density is >=(1/72)^n and its volume is (1/8)^n. Average two-model error is >=half their density overlap; worst-model error is at least that average.",
+      "models": [
+        {
+          "covariance": [
+            [
+              "1",
+              "1/2",
+              "0"
+            ],
+            [
+              "1/2",
+              "5/4",
+              "0"
+            ],
+            [
+              "0",
+              "0",
+              "1"
+            ]
+          ],
+          "graph": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "label": "edge01",
+          "mixing": [
+            [
+              "1",
+              "0",
+              "0"
+            ],
+            [
+              "1/2",
+              "1",
+              "0"
+            ],
+            [
+              "0",
+              "0",
+              "1"
+            ]
+          ]
+        },
+        {
+          "covariance": [
+            [
+              "1",
+              "0",
+              "1/2"
+            ],
+            [
+              "0",
+              "1",
+              "0"
+            ],
+            [
+              "1/2",
+              "0",
+              "5/4"
+            ]
+          ],
+          "graph": [
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "label": "edge02",
+          "mixing": [
+            [
+              "1",
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "1",
+              "0"
+            ],
+            [
+              "1/2",
+              "0",
+              "1"
+            ]
+          ]
+        }
+      ],
+      "noise_law": "Independent standard centered Gaussian U0,U1,U2, independently repeated for each observed row; an ideal mathematical sampling model, not a PRNG-independence certificate.",
+      "not_proved": [
+        "Graph recovery for all original 3/5/8-node worlds",
+        "Performance of the actual trained neural graph classifiers",
+        "Empirical exogenous independence or arbitrary noise-shift robustness"
+      ],
+      "not_refuted": [
+        "Population Markov equivalence recovery",
+        "Statistical recovery at declared nonzero error",
+        "Candidate sets that retain both different equivalence classes",
+        "Other information access such as noiseless or coupled interventional contrasts"
+      ],
+      "original_claim_closed": false,
+      "original_objective_achieved": false,
+      "overlap": {
+        "cube_radius": "1/4",
+        "cube_volume": "1/8",
+        "density_lower": "1/72",
+        "exponential_lower": "1/3",
+        "exponential_proof": "e = sum_k 1/k! <3 using the geometric upper bound on the factorial tail; q<=1 implies exp(-q)>=1/3.",
+        "jacobian_determinant": "1",
+        "joint_overlap_lower": {
+          "base": "1/576",
+          "exponent": 990
+        },
+        "maximum_residual_quadratic": "17/128",
+        "minimax_error_lower": {
+          "base": "1/576",
+          "exponent": 990,
+          "multiplier": "1/2"
+        },
+        "normalization_lower": "1/24",
+        "normalization_proof": "pi/4 = integral_0^1 1/(1+x*x) dx <=1; sqrt(8)<=3; hence (2*pi)^(3/2)<=24.",
+        "strictly_positive_for_every_finite_samples": true
+      },
+      "population": "The two covariance laws differ and their faithful one-edge skeletons give distinct Gaussian Markov equivalence classes. Population class identification is possible within this specified family.",
+      "samples": 990,
+      "schema": "ncd.finite-gaussian-mec-boundary.v1",
+      "status": "proved-in-stated-two-model-family",
+      "universal_zero_error_recovery": "refuted for every possibly randomized estimator required to return the single correct Markov equivalence class from finitely many observational rows"
+    },
+    "base_certificate_sha256": "8bd1f06761be7ce13c6fb0981c10525e69df3df321a17e97d9eadfe36052b5f3",
+    "base_failure_artifacts_not_rewritten": true,
+    "best_short_exact_fraction": "51146728248377216718956089012931236753385031969422887335676427626502090568823039920051095192592252455482604439493126109519019633529459266458258243584/1193863941056256025013409281513527236711075890379671538665676767716106130869173916493981197280009124439730057915115729495648602478410048310930591242140508256852626800537109375",
+    "best_supported_bound": "mills_cauchy_schwarz",
+    "conditional_error": "With S=sum X0_i^2~chi_square(samples), error conditional on S is Phi(-abs(a)*sqrt(S/2)); the Gaussian noise has conditional variance 2*S.",
+    "conditional_gaussian_exponent": "-1/16",
+    "delta": "1/100",
+    "exact_half_power_bound": "(1+a*a/2)^(-samples/2)",
+    "family_size": 1,
+    "gaussian_mgf_denominator": "9/8",
+    "inverse_chisquare_moment": "E(1/S)=1/(samples-2), obtained from the chi-square density by the Gamma recurrence; E exp(-a*a*S/2)=(1+a*a)^(-samples/2).",
+    "markov_derivation": "The error event is contained in sum W_i<=0. Markov on exp(-t*sum W_i), using IID rows, gives error <=(1+a*a/2)^(-samples/2).",
+    "mgf_condition": "The denominator is positive; here 1+a*a/2>1. Completing the Gaussian square proves the identity.",
+    "mgf_identity": "E exp(-t*W) = E exp((t*t-abs(a)*t)*X0^2) = (1+2*abs(a)*t-2*t*t)^(-1/2)",
+    "mills_cauchy_schwarz_upper": {
+      "clamped_by_probability_one": true,
+      "comparison_supported": true,
+      "gate": "proved",
+      "integer_exponent": 247,
+      "multiplier": "1/27",
+      "power_bit_estimate": 746,
+      "quarter_power_dropped_conservatively": 2,
+      "rational_power_base": "4/5",
+      "short_exact_fraction": "51146728248377216718956089012931236753385031969422887335676427626502090568823039920051095192592252455482604439493126109519019633529459266458258243584/1193863941056256025013409281513527236711075890379671538665676767716106130869173916493981197280009124439730057915115729495648602478410048310930591242140508256852626800537109375",
+      "sqrt_3n_minus6_integer_lower": 54
+    },
+    "mills_derivation": "For x>0, Phi(-x)<=exp(-x*x/2)/(x*sqrt(2*pi)) by integrating t*exp(-t*t/2) and t/x>=1. Cauchy-Schwarz gives error<=1/(abs(a)*sqrt(pi*(samples-2)))*(1+a*a)^(-samples/4), for samples>2.",
+    "not_proved": [
+      "Graph recovery for all original 3/5/8-node worlds",
+      "Performance of the actual trained neural graph classifiers",
+      "Empirical exogenous independence or arbitrary noise-shift robustness",
+      "A 99 percent guarantee for the actual frozen neural graph networks"
+    ],
+    "old_second_moment_gate": "proved",
+    "original_claim_closed": false,
+    "original_objective_achieved": false,
+    "per_event_error_threshold": "1/100",
+    "pi_lower_proof": "pi/4=integral_0^1 1/(1+x*x) dx; sum_{k=0}^7 (-x*x)^k is a lower polynomial, with nonnegative remainder x^16/(1+x*x). Its exact integral times four is >3.",
+    "pi_lower_rational": "135904/45045",
+    "power_bit_budget": 262144,
+    "probability_semantics": "Recovery probability over ideal IID observation rows for a fixed estimator and known two-model family; not a confidence interval for trained-network accuracy across evaluation worlds.",
+    "requested_recovery_success_probability_gate": "proved",
+    "samples": 990,
+    "schema": "ncd.finite-gaussian-chernoff.v1",
+    "signed_row_law": "For each model reflect the signed error event so W=abs(a)*X0^2+sqrt(2)*X0*Z, with X0,Z independent N(0,1)",
+    "statistic_unchanged": "T=mean(X0*(X1-X2)); return edge01 iff sign(a)*T>=0, else edge02",
+    "status": "analytic-bounds-proved-in-stated-two-model-family",
+    "tilt": "1/4",
+    "uniform_error_upper": {
+      "clamped_by_probability_one": true,
+      "comparison_supported": true,
+      "gate": "proved",
+      "integer_exponent": 495,
+      "multiplier": "1",
+      "odd_half_power_dropped_conservatively": false,
+      "power_bit_estimate": 1981,
+      "rational_power_base": "8/9",
+      "short_exact_fraction": "1070393741163148155140002073983180480759399898691736719484735047143278926103617010609652126665801063893223584191755295330789018217207945549138520474792623927242735488443881142104699789782210172928975896738895832197612166084745676956951404400308684101704866105705305247055335973308139964471316824642504293039366278387990046613544517844635154824075842045095053209331444802766174109712300516774551695312505342204453401455091375199535727402456168005632/22389385416870846871080886378298436315016715486327425827108339992664204259965535395024103945039002556587067989244061412656454039562069110600778044086402033464201260397268722652001130827430859815989947333868289353606817182604668909516868468103678075403317688328768994299743383535657486084734125357836985151667771995525387090217081007270366778386061684433011548673294606888716936102875501985893392616100341418586083954662468506060227703242174564040214302801608377834830443449"
+    },
+    "union_bound": "For K fixed recovery events satisfying these premises, per-event failure<=delta/K implies family failure<=delta; events need not be mutually independent."
+  },
+  "six5990": {
+    "a": "1/2",
+    "arithmetic_budget_exhaustion_does_not_refute_recovery": true,
+    "base_certificate": {
+      "a": "1/2",
+      "certificate_input_budget": {
+        "coefficient_and_confidence_bits": 256,
+        "maximum_samples_and_family_size": 1000000,
+        "theorem_formula_valid_for_every_positive_finite_n": true
+      },
+      "classical_probability_bounds_not_project_innovation": true,
+      "conditions": [
+        "Exactly the declared two SCM hypotheses, known nonzero a (including its sign)",
+        "Three observed variables; acyclic, no latent confounding, independent standard Gaussian exogenous laws",
+        "IID observations; a fixed estimator before evaluation",
+        "For K simultaneous recovery events use per-event delta/K and the union bound"
+      ],
+      "delta": "1/100",
+      "estimator": {
+        "per_claim_delta": "1/600",
+        "requested_confidence_gate": "proved",
+        "row_means": [
+          "1/2",
+          "-1/2"
+        ],
+        "row_variance": "5/2",
+        "statistic": "T=mean(X0*(X1-X2)); return edge01 iff sign(a)*T>=0, else edge02",
+        "sufficient_samples": 5990,
+        "tail_proof": "For centered W with variance s2, Markov on (W-t)^2 and t=s2/abs(mu) gives P(W<=-abs(mu))<=s2/(s2+mu*mu); use s2=row_variance/n and the reflected upper tail for the other model.",
+        "uniform_error_upper": "1/600"
+      },
+      "family_size": 6,
+      "lower_bound_reason": "On the cube product, each n-row density is >=(1/72)^n and its volume is (1/8)^n. Average two-model error is >=half their density overlap; worst-model error is at least that average.",
+      "models": [
+        {
+          "covariance": [
+            [
+              "1",
+              "1/2",
+              "0"
+            ],
+            [
+              "1/2",
+              "5/4",
+              "0"
+            ],
+            [
+              "0",
+              "0",
+              "1"
+            ]
+          ],
+          "graph": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "label": "edge01",
+          "mixing": [
+            [
+              "1",
+              "0",
+              "0"
+            ],
+            [
+              "1/2",
+              "1",
+              "0"
+            ],
+            [
+              "0",
+              "0",
+              "1"
+            ]
+          ]
+        },
+        {
+          "covariance": [
+            [
+              "1",
+              "0",
+              "1/2"
+            ],
+            [
+              "0",
+              "1",
+              "0"
+            ],
+            [
+              "1/2",
+              "0",
+              "5/4"
+            ]
+          ],
+          "graph": [
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "label": "edge02",
+          "mixing": [
+            [
+              "1",
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "1",
+              "0"
+            ],
+            [
+              "1/2",
+              "0",
+              "1"
+            ]
+          ]
+        }
+      ],
+      "noise_law": "Independent standard centered Gaussian U0,U1,U2, independently repeated for each observed row; an ideal mathematical sampling model, not a PRNG-independence certificate.",
+      "not_proved": [
+        "Graph recovery for all original 3/5/8-node worlds",
+        "Performance of the actual trained neural graph classifiers",
+        "Empirical exogenous independence or arbitrary noise-shift robustness"
+      ],
+      "not_refuted": [
+        "Population Markov equivalence recovery",
+        "Statistical recovery at declared nonzero error",
+        "Candidate sets that retain both different equivalence classes",
+        "Other information access such as noiseless or coupled interventional contrasts"
+      ],
+      "original_claim_closed": false,
+      "original_objective_achieved": false,
+      "overlap": {
+        "cube_radius": "1/4",
+        "cube_volume": "1/8",
+        "density_lower": "1/72",
+        "exponential_lower": "1/3",
+        "exponential_proof": "e = sum_k 1/k! <3 using the geometric upper bound on the factorial tail; q<=1 implies exp(-q)>=1/3.",
+        "jacobian_determinant": "1",
+        "joint_overlap_lower": {
+          "base": "1/576",
+          "exponent": 5990
+        },
+        "maximum_residual_quadratic": "17/128",
+        "minimax_error_lower": {
+          "base": "1/576",
+          "exponent": 5990,
+          "multiplier": "1/2"
+        },
+        "normalization_lower": "1/24",
+        "normalization_proof": "pi/4 = integral_0^1 1/(1+x*x) dx <=1; sqrt(8)<=3; hence (2*pi)^(3/2)<=24.",
+        "strictly_positive_for_every_finite_samples": true
+      },
+      "population": "The two covariance laws differ and their faithful one-edge skeletons give distinct Gaussian Markov equivalence classes. Population class identification is possible within this specified family.",
+      "samples": 5990,
+      "schema": "ncd.finite-gaussian-mec-boundary.v1",
+      "status": "proved-in-stated-two-model-family",
+      "universal_zero_error_recovery": "refuted for every possibly randomized estimator required to return the single correct Markov equivalence class from finitely many observational rows"
+    },
+    "base_certificate_sha256": "ecf7df618ddd7546368110913251aa7c8e276f1855c56abd129dc7915480d0a3",
+    "base_failure_artifacts_not_rewritten": true,
+    "best_short_exact_fraction": null,
+    "best_supported_bound": "chernoff",
+    "conditional_error": "With S=sum X0_i^2~chi_square(samples), error conditional on S is Phi(-abs(a)*sqrt(S/2)); the Gaussian noise has conditional variance 2*S.",
+    "conditional_gaussian_exponent": "-1/16",
+    "delta": "1/100",
+    "exact_half_power_bound": "(1+a*a/2)^(-samples/2)",
+    "family_size": 6,
+    "gaussian_mgf_denominator": "9/8",
+    "inverse_chisquare_moment": "E(1/S)=1/(samples-2), obtained from the chi-square density by the Gamma recurrence; E exp(-a*a*S/2)=(1+a*a)^(-samples/2).",
+    "markov_derivation": "The error event is contained in sum W_i<=0. Markov on exp(-t*sum W_i), using IID rows, gives error <=(1+a*a/2)^(-samples/2).",
+    "mgf_condition": "The denominator is positive; here 1+a*a/2>1. Completing the Gaussian square proves the identity.",
+    "mgf_identity": "E exp(-t*W) = E exp((t*t-abs(a)*t)*X0^2) = (1+2*abs(a)*t-2*t*t)^(-1/2)",
+    "mills_cauchy_schwarz_upper": {
+      "clamped_by_probability_one": true,
+      "comparison_supported": true,
+      "gate": "proved",
+      "integer_exponent": 1497,
+      "multiplier": "1/67",
+      "power_bit_estimate": 4498,
+      "quarter_power_dropped_conservatively": 2,
+      "rational_power_base": "4/5",
+      "short_exact_fraction": "19222373783767455889555606457449258041261154620888026808845594205625918759604264824615001059978022805975463269594559451695513815326534950368516913782271067675546239849310078397078489376740010420666011378746201256506788723682713672084579543081385787137395260293916608466007710757058226645370514312583542936072245354273139364905262704777134693786761637139122507466932048442537645343492005684420789695038873590054439035217823885705188193888495855535487696757371541311710729507995641430655788012199178981621512632252823392235685340815380446336292815559323165971961122586126258625161094535246899833588217625017714773034698672088803342305355922871247404314083659924753829635469408761259834555960974550750131725737263157790786259069031128229097614511283157633025682561057349378268166463603767670890578158914073054708980062480718841055926573800835545165816408362060768357798123613929881246466752789359659843584/15281686771846343406211953258945935881886597279483809499654361893684806889197422911018005863385643708406247199933777469140598576107232923426019709983890393402566117344383508695934228267764306445589206924536391741748453720580296818578514699855666859573068035411336289445045479588914873292895581389398624397232843568726718150819222073222191285430697534963908492800842226399467487947869920377458256909972409107369180350105616630948608940021332247462797428424692677825551605689087518450192075911544506746458994563902167303640283404219218023453246670736911021156408326265281403676031721490098262305285693809451165442943340689402420583285892061234617372701683178592623958882053887272241716984386680532273944344223884656254728348155308780727264817725373615167357795910110841880536270606509680783785986028541165688763011715606473791946979460375630177339841423532870442168315743715923589186558154146494251469837510632545492227139435863277165388337574717221228180403650038430821175877175847566121172070810493869808476506688688090207506320439279079437255859375",
+      "sqrt_3n_minus6_integer_lower": 134
+    },
+    "mills_derivation": "For x>0, Phi(-x)<=exp(-x*x/2)/(x*sqrt(2*pi)) by integrating t*exp(-t*t/2) and t/x>=1. Cauchy-Schwarz gives error<=1/(abs(a)*sqrt(pi*(samples-2)))*(1+a*a)^(-samples/4), for samples>2.",
+    "not_proved": [
+      "Graph recovery for all original 3/5/8-node worlds",
+      "Performance of the actual trained neural graph classifiers",
+      "Empirical exogenous independence or arbitrary noise-shift robustness",
+      "A 99 percent guarantee for the actual frozen neural graph networks"
+    ],
+    "old_second_moment_gate": "proved",
+    "original_claim_closed": false,
+    "original_objective_achieved": false,
+    "per_event_error_threshold": "1/600",
+    "pi_lower_proof": "pi/4=integral_0^1 1/(1+x*x) dx; sum_{k=0}^7 (-x*x)^k is a lower polynomial, with nonnegative remainder x^16/(1+x*x). Its exact integral times four is >3.",
+    "pi_lower_rational": "135904/45045",
+    "power_bit_budget": 262144,
+    "probability_semantics": "Recovery probability over ideal IID observation rows for a fixed estimator and known two-model family; not a confidence interval for trained-network accuracy across evaluation worlds.",
+    "requested_recovery_success_probability_gate": "proved",
+    "samples": 5990,
+    "schema": "ncd.finite-gaussian-chernoff.v1",
+    "signed_row_law": "For each model reflect the signed error event so W=abs(a)*X0^2+sqrt(2)*X0*Z, with X0,Z independent N(0,1)",
+    "statistic_unchanged": "T=mean(X0*(X1-X2)); return edge01 iff sign(a)*T>=0, else edge02",
+    "status": "analytic-bounds-proved-in-stated-two-model-family",
+    "tilt": "1/4",
+    "uniform_error_upper": {
+      "clamped_by_probability_one": true,
+      "comparison_supported": true,
+      "gate": "proved",
+      "integer_exponent": 2995,
+      "multiplier": "1",
+      "odd_half_power_dropped_conservatively": false,
+      "power_bit_estimate": 11981,
+      "rational_power_base": "8/9",
+      "short_exact_fraction": null
+    },
+    "union_bound": "For K fixed recovery events satisfying these premises, per-event failure<=delta/K implies family failure<=delta; events need not be mutually independent."
+  },
+  "six96": {
+    "a": "1/2",
+    "arithmetic_budget_exhaustion_does_not_refute_recovery": true,
+    "base_certificate": {
+      "a": "1/2",
+      "certificate_input_budget": {
+        "coefficient_and_confidence_bits": 256,
+        "maximum_samples_and_family_size": 1000000,
+        "theorem_formula_valid_for_every_positive_finite_n": true
+      },
+      "classical_probability_bounds_not_project_innovation": true,
+      "conditions": [
+        "Exactly the declared two SCM hypotheses, known nonzero a (including its sign)",
+        "Three observed variables; acyclic, no latent confounding, independent standard Gaussian exogenous laws",
+        "IID observations; a fixed estimator before evaluation",
+        "For K simultaneous recovery events use per-event delta/K and the union bound"
+      ],
+      "delta": "1/100",
+      "estimator": {
+        "per_claim_delta": "1/600",
+        "requested_confidence_gate": "unresolved-by-this-bound",
+        "row_means": [
+          "1/2",
+          "-1/2"
+        ],
+        "row_variance": "5/2",
+        "statistic": "T=mean(X0*(X1-X2)); return edge01 iff sign(a)*T>=0, else edge02",
+        "sufficient_samples": 5990,
+        "tail_proof": "For centered W with variance s2, Markov on (W-t)^2 and t=s2/abs(mu) gives P(W<=-abs(mu))<=s2/(s2+mu*mu); use s2=row_variance/n and the reflected upper tail for the other model.",
+        "uniform_error_upper": "5/53"
+      },
+      "family_size": 6,
+      "lower_bound_reason": "On the cube product, each n-row density is >=(1/72)^n and its volume is (1/8)^n. Average two-model error is >=half their density overlap; worst-model error is at least that average.",
+      "models": [
+        {
+          "covariance": [
+            [
+              "1",
+              "1/2",
+              "0"
+            ],
+            [
+              "1/2",
+              "5/4",
+              "0"
+            ],
+            [
+              "0",
+              "0",
+              "1"
+            ]
+          ],
+          "graph": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "label": "edge01",
+          "mixing": [
+            [
+              "1",
+              "0",
+              "0"
+            ],
+            [
+              "1/2",
+              "1",
+              "0"
+            ],
+            [
+              "0",
+              "0",
+              "1"
+            ]
+          ]
+        },
+        {
+          "covariance": [
+            [
+              "1",
+              "0",
+              "1/2"
+            ],
+            [
+              "0",
+              "1",
+              "0"
+            ],
+            [
+              "1/2",
+              "0",
+              "5/4"
+            ]
+          ],
+          "graph": [
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "label": "edge02",
+          "mixing": [
+            [
+              "1",
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "1",
+              "0"
+            ],
+            [
+              "1/2",
+              "0",
+              "1"
+            ]
+          ]
+        }
+      ],
+      "noise_law": "Independent standard centered Gaussian U0,U1,U2, independently repeated for each observed row; an ideal mathematical sampling model, not a PRNG-independence certificate.",
+      "not_proved": [
+        "Graph recovery for all original 3/5/8-node worlds",
+        "Performance of the actual trained neural graph classifiers",
+        "Empirical exogenous independence or arbitrary noise-shift robustness"
+      ],
+      "not_refuted": [
+        "Population Markov equivalence recovery",
+        "Statistical recovery at declared nonzero error",
+        "Candidate sets that retain both different equivalence classes",
+        "Other information access such as noiseless or coupled interventional contrasts"
+      ],
+      "original_claim_closed": false,
+      "original_objective_achieved": false,
+      "overlap": {
+        "cube_radius": "1/4",
+        "cube_volume": "1/8",
+        "density_lower": "1/72",
+        "exponential_lower": "1/3",
+        "exponential_proof": "e = sum_k 1/k! <3 using the geometric upper bound on the factorial tail; q<=1 implies exp(-q)>=1/3.",
+        "jacobian_determinant": "1",
+        "joint_overlap_lower": {
+          "base": "1/576",
+          "exponent": 96
+        },
+        "maximum_residual_quadratic": "17/128",
+        "minimax_error_lower": {
+          "base": "1/576",
+          "exponent": 96,
+          "multiplier": "1/2"
+        },
+        "normalization_lower": "1/24",
+        "normalization_proof": "pi/4 = integral_0^1 1/(1+x*x) dx <=1; sqrt(8)<=3; hence (2*pi)^(3/2)<=24.",
+        "strictly_positive_for_every_finite_samples": true
+      },
+      "population": "The two covariance laws differ and their faithful one-edge skeletons give distinct Gaussian Markov equivalence classes. Population class identification is possible within this specified family.",
+      "samples": 96,
+      "schema": "ncd.finite-gaussian-mec-boundary.v1",
+      "status": "proved-in-stated-two-model-family",
+      "universal_zero_error_recovery": "refuted for every possibly randomized estimator required to return the single correct Markov equivalence class from finitely many observational rows"
+    },
+    "base_certificate_sha256": "26ab2f21a302ccb787b0d4edc47bcbe9926cbde90e9ca1ace86cffdfef11a81d",
+    "base_failure_artifacts_not_rewritten": true,
+    "best_short_exact_fraction": "35184372088832/59604644775390625",
+    "best_supported_bound": "mills_cauchy_schwarz",
+    "conditional_error": "With S=sum X0_i^2~chi_square(samples), error conditional on S is Phi(-abs(a)*sqrt(S/2)); the Gaussian noise has conditional variance 2*S.",
+    "conditional_gaussian_exponent": "-1/16",
+    "delta": "1/100",
+    "exact_half_power_bound": "(1+a*a/2)^(-samples/2)",
+    "family_size": 6,
+    "gaussian_mgf_denominator": "9/8",
+    "inverse_chisquare_moment": "E(1/S)=1/(samples-2), obtained from the chi-square density by the Gamma recurrence; E exp(-a*a*S/2)=(1+a*a)^(-samples/2).",
+    "markov_derivation": "The error event is contained in sum W_i<=0. Markov on exp(-t*sum W_i), using IID rows, gives error <=(1+a*a/2)^(-samples/2).",
+    "mgf_condition": "The denominator is positive; here 1+a*a/2>1. Completing the Gaussian square proves the identity.",
+    "mgf_identity": "E exp(-t*W) = E exp((t*t-abs(a)*t)*X0^2) = (1+2*abs(a)*t-2*t*t)^(-1/2)",
+    "mills_cauchy_schwarz_upper": {
+      "clamped_by_probability_one": true,
+      "comparison_supported": true,
+      "gate": "proved",
+      "integer_exponent": 24,
+      "multiplier": "1/8",
+      "power_bit_estimate": 76,
+      "quarter_power_dropped_conservatively": 0,
+      "rational_power_base": "4/5",
+      "short_exact_fraction": "35184372088832/59604644775390625",
+      "sqrt_3n_minus6_integer_lower": 16
+    },
+    "mills_derivation": "For x>0, Phi(-x)<=exp(-x*x/2)/(x*sqrt(2*pi)) by integrating t*exp(-t*t/2) and t/x>=1. Cauchy-Schwarz gives error<=1/(abs(a)*sqrt(pi*(samples-2)))*(1+a*a)^(-samples/4), for samples>2.",
+    "not_proved": [
+      "Graph recovery for all original 3/5/8-node worlds",
+      "Performance of the actual trained neural graph classifiers",
+      "Empirical exogenous independence or arbitrary noise-shift robustness",
+      "A 99 percent guarantee for the actual frozen neural graph networks"
+    ],
+    "old_second_moment_gate": "unresolved-by-this-bound",
+    "original_claim_closed": false,
+    "original_objective_achieved": false,
+    "per_event_error_threshold": "1/600",
+    "pi_lower_proof": "pi/4=integral_0^1 1/(1+x*x) dx; sum_{k=0}^7 (-x*x)^k is a lower polynomial, with nonnegative remainder x^16/(1+x*x). Its exact integral times four is >3.",
+    "pi_lower_rational": "135904/45045",
+    "power_bit_budget": 262144,
+    "probability_semantics": "Recovery probability over ideal IID observation rows for a fixed estimator and known two-model family; not a confidence interval for trained-network accuracy across evaluation worlds.",
+    "requested_recovery_success_probability_gate": "proved",
+    "samples": 96,
+    "schema": "ncd.finite-gaussian-chernoff.v1",
+    "signed_row_law": "For each model reflect the signed error event so W=abs(a)*X0^2+sqrt(2)*X0*Z, with X0,Z independent N(0,1)",
+    "statistic_unchanged": "T=mean(X0*(X1-X2)); return edge01 iff sign(a)*T>=0, else edge02",
+    "status": "analytic-bounds-proved-in-stated-two-model-family",
+    "tilt": "1/4",
+    "uniform_error_upper": {
+      "clamped_by_probability_one": true,
+      "comparison_supported": true,
+      "gate": "unresolved-by-this-bound",
+      "integer_exponent": 48,
+      "multiplier": "1",
+      "odd_half_power_dropped_conservatively": false,
+      "power_bit_estimate": 193,
+      "rational_power_base": "8/9",
+      "short_exact_fraction": "22300745198530623141535718272648361505980416/6362685441135942358474828762538534230890216321"
+    },
+    "union_bound": "For K fixed recovery events satisfying these premises, per-event failure<=delta/K implies family failure<=delta; events need not be mutually independent."
+  }
+}

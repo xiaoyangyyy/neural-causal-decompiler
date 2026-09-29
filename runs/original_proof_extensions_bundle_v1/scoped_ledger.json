@@ -1,0 +1,107 @@
+{
+  "schema": "ncd.original-scoped-evidence-ledger.v1",
+  "original_ledger": "runs/original_proof_milestone_v1/ledger.json",
+  "original_ledger_sha256": "d2972f018c7411bbb2ea4dec2a1d080a11a6006dbc3ef16b3c6d4e0c685e7cfc",
+  "records": [
+    {
+      "id": "finite_sample",
+      "related_original_claims": [
+        "R0.uniform_finite_sample_direction",
+        "R2.discovery_guarantee"
+      ],
+      "scope_statement": "all randomized estimators with only these n observations and model-independent side information",
+      "status": "refuted",
+      "certificate": "runs/original_proof_extensions_bundle_v1/finite_sample/certificate.json",
+      "certificate_sha256": "ff2f920e03687148193a235d88228d6c37a0a653637d3d2651c7d89759d8a2c2",
+      "verification": {
+        "status": "verified",
+        "conclusion": "refuted",
+        "minimax_graph_error_lower": "287425197928998389772323/604462909807314587353088",
+        "original_scope_not_automatically_closed": true
+      },
+      "original_claim_closed": false
+    },
+    {
+      "id": "decoder_tie",
+      "related_original_claims": [
+        "R2.variable_equivariance",
+        "R9.graph_recovery"
+      ],
+      "scope_statement": "legacy decode_graph is not node-permutation-equivariant on all valid reverse-symmetric probability inputs",
+      "status": "refuted",
+      "certificate": "runs/original_proof_extensions_bundle_v1/decoder_tie/certificate.json",
+      "certificate_sha256": "d9b5b8cfc1337994d035dd26d9f52cf2ad1e77787618b8ce9d7183898eed3c14",
+      "verification": {
+        "status": "verified",
+        "conclusion": "refuted",
+        "scope": "legacy decode_graph is not node-permutation-equivariant on all valid reverse-symmetric probability inputs",
+        "original_claim_closed": false
+      },
+      "original_claim_closed": false
+    },
+    {
+      "id": "decoder_cycle",
+      "related_original_claims": [
+        "R2.variable_equivariance",
+        "R9.graph_recovery"
+      ],
+      "scope_statement": "legacy decode_graph is not node-permutation-equivariant on all valid reverse-symmetric probability inputs",
+      "status": "refuted",
+      "certificate": "runs/original_proof_extensions_bundle_v1/decoder_cycle/certificate.json",
+      "certificate_sha256": "64cebe05ae610195e3a47140bb8da8e0cdf2aa9a09f2665fb2d8a0d05abc1599",
+      "verification": {
+        "status": "verified",
+        "conclusion": "refuted",
+        "scope": "legacy decode_graph is not node-permutation-equivariant on all valid reverse-symmetric probability inputs",
+        "original_claim_closed": false
+      },
+      "original_claim_closed": false
+    },
+    {
+      "id": "feature_collision",
+      "related_original_claims": [
+        "R4.program_fidelity",
+        "R4.mdl",
+        "R7.counterexamples"
+      ],
+      "scope_statement": "Some deterministic function of the fixed 14 mathematical statistics features matches this frozen network on both specified datasets.",
+      "status": "refuted",
+      "certificate": "runs/original_proof_extensions_bundle_v1/feature_collision/certificate.json",
+      "certificate_sha256": "c13f54491bf8e1d5f7ca7c47782572130424d781cf8cfbfc430d3ea58a51b4b5",
+      "verification": {
+        "status": "verified",
+        "conclusion": "refuted",
+        "strict_network_labels": [
+          1,
+          2
+        ],
+        "scope": "specified frozen network and mathematical 14-feature family"
+      },
+      "original_claim_closed": false
+    },
+    {
+      "id": "scm_coupling",
+      "related_original_claims": [
+        "R10.mechanism",
+        "R10.noise",
+        "R10.intervention_distribution"
+      ],
+      "scope_statement": "all real parent inputs and all real common do-values",
+      "status": "proved",
+      "certificate": "runs/original_proof_extensions_bundle_v1/scm_coupling/certificate.json",
+      "certificate_sha256": "fe6035deb5c0e8df01fed8a5e246fa59c77c32866dee6318a754c2af51e06a00",
+      "verification": {
+        "status": "verified",
+        "conclusion": "proved",
+        "scope": "two specified explicit SCMs; all shared do-values and target subsets"
+      },
+      "original_claim_closed": false
+    }
+  ],
+  "original_claim_counts_unchanged": {
+    "proved": 0,
+    "refuted": 2,
+    "unresolved": 36
+  },
+  "overall_objective_achieved": false
+}

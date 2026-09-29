@@ -1,0 +1,36 @@
+{
+  "schema": "ncd.mixed-joint-phase-protocol.v1",
+  "status": "frozen-before-final-training",
+  "seeds": [
+    7101,
+    7102
+  ],
+  "dimensions": [
+    8,
+    32,
+    64,
+    128
+  ],
+  "training_defaults": {
+    "seed": 7101,
+    "state_dim": 8,
+    "hidden_width": 4,
+    "train_samples": 2048,
+    "selection_samples": 512,
+    "test_samples": 1024,
+    "epochs": 600,
+    "learning_rate": 0.01
+  },
+  "training_module_sha256": "deec954b7a3516fa7ba0d33901c5fe957df941a52203348a8964553b6541299f",
+  "pilot": "runs/mixed_training_pilot_v1/seed_7000/d_8",
+  "required_observed_mixed_difference": "1/10000",
+  "test_rmse_upper": 0.015,
+  "test_max_error_upper": 0.06,
+  "minimum_parameter_group_change": 1e-08,
+  "initial_labels": 81,
+  "epsilon": "17/100",
+  "max_phase_regions": 4096,
+  "output": "runs/trained_mixed_joint_v1",
+  "failures_policy": "retain every declared seed/dimension and report unresolved; no replacement seeds or test-based selection",
+  "scope": "fully trainable local transition parameters; two state supports and two controls; shallow network; synthetic data; no teacher structure in extraction"
+}

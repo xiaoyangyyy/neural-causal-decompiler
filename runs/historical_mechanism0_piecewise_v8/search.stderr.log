@@ -1,0 +1,18 @@
+Exception in thread Thread-1 (watch_artifacts):
+Traceback (most recent call last):
+  File "C:\Users\K\AppData\Local\Programs\Python\Python313\Lib\threading.py", line 1044, in _bootstrap_inner
+    self.run()
+    ~~~~~~~~^^
+  File "C:\Users\K\AppData\Local\Programs\Python\Python313\Lib\threading.py", line 995, in run
+    self._target(*self._args, **self._kwargs)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\实验\neural-causal-decompiler\validation\run_piecewise_mechanism_resume_v8.py", line 65, in watch_artifacts
+    if sum(p.stat().st_size for p in OUT.rglob("*") if p.is_file()) > C["artifact_bytes"]:
+       ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\实验\neural-causal-decompiler\validation\run_piecewise_mechanism_resume_v8.py", line 65, in <genexpr>
+    if sum(p.stat().st_size for p in OUT.rglob("*") if p.is_file()) > C["artifact_bytes"]:
+           ~~~~~~^^
+  File "C:\Users\K\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py", line 515, in stat
+    return os.stat(self, follow_symlinks=follow_symlinks)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [WinError 2] 系统找不到指定的文件。: 'E:\\实验\\neural-causal-decompiler\\runs\\historical_mechanism0_piecewise_v8\\checkpoint.json.tmp'

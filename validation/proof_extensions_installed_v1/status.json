@@ -1,0 +1,65 @@
+{
+  "schema": "ncd.installed-proof-extensions.v1",
+  "status": "verified",
+  "extension_version": "0.1.0",
+  "core_version": "0.59.0",
+  "core_modules": 131,
+  "extension_modules": 9,
+  "imports": {
+    "ncd": "E:\\\u5b9e\u9a8c\\neural-causal-decompiler\\validation\\proof_extensions_env_v1\\Lib\\site-packages\\ncd\\__init__.py",
+    "proof_extensions": "E:\\\u5b9e\u9a8c\\neural-causal-decompiler\\validation\\proof_extensions_env_v1\\Lib\\site-packages\\proof_extensions\\__init__.py"
+  },
+  "proof_bundle": {
+    "status": "verified",
+    "proof_jobs": 5,
+    "results": [
+      {
+        "status": "verified",
+        "conclusion": "refuted",
+        "minimax_graph_error_lower": "287425197928998389772323/604462909807314587353088",
+        "original_scope_not_automatically_closed": true
+      },
+      {
+        "status": "verified",
+        "conclusion": "refuted",
+        "scope": "legacy decode_graph is not node-permutation-equivariant on all valid reverse-symmetric probability inputs",
+        "original_claim_closed": false
+      },
+      {
+        "status": "verified",
+        "conclusion": "refuted",
+        "scope": "legacy decode_graph is not node-permutation-equivariant on all valid reverse-symmetric probability inputs",
+        "original_claim_closed": false
+      },
+      {
+        "status": "verified",
+        "conclusion": "refuted",
+        "strict_network_labels": [
+          1,
+          2
+        ],
+        "scope": "specified frozen network and mathematical 14-feature family"
+      },
+      {
+        "status": "verified",
+        "conclusion": "proved",
+        "scope": "two specified explicit SCMs; all shared do-values and target subsets"
+      }
+    ],
+    "overall_objective_achieved": false
+  },
+  "actual_statistics_rule": {
+    "status": "verified",
+    "conclusion": "proved",
+    "original_claim_closed": false
+  },
+  "certificate_tampering_rejected": true,
+  "wrong_weights_rejected": true,
+  "installed_tests": 23,
+  "test_xml_sha256": "fb2e7e24defcc69ded4d7aa3b19c053c92b9eb327160d72b0ff048b6e64c135d",
+  "extension_wheel_sha256": "e945838d4772734d0c7537bb98e19e49dae83d725eb50880d357620d93d7c4c2",
+  "rebuilt_core_wheel_sha256": "53da32c9bccebbc42b665026e2626c014039ce2c5ef115e2be4f5f5bfef1ce11",
+  "core_module_bytes_identical_to_original_059_release": true,
+  "original_claims_closed": 0,
+  "overall_objective_achieved": false
+}

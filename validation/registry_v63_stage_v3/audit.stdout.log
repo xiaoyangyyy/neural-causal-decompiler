@@ -1,0 +1,361 @@
+{
+  "schema": "ncd.unified-requirements-audit.v5",
+  "requirements": {
+    "R0": {
+      "proved": 0,
+      "refuted": 2,
+      "unresolved": 2
+    },
+    "R1": {
+      "proved": 0,
+      "refuted": 0,
+      "unresolved": 2
+    },
+    "R2": {
+      "proved": 0,
+      "refuted": 0,
+      "unresolved": 3
+    },
+    "R3": {
+      "proved": 0,
+      "refuted": 0,
+      "unresolved": 2
+    },
+    "R4": {
+      "proved": 0,
+      "refuted": 0,
+      "unresolved": 3
+    },
+    "R5": {
+      "proved": 0,
+      "refuted": 0,
+      "unresolved": 3
+    },
+    "R6": {
+      "proved": 0,
+      "refuted": 0,
+      "unresolved": 2
+    },
+    "R7": {
+      "proved": 0,
+      "refuted": 0,
+      "unresolved": 2
+    },
+    "R8": {
+      "proved": 0,
+      "refuted": 0,
+      "unresolved": 4
+    },
+    "R9": {
+      "proved": 0,
+      "refuted": 0,
+      "unresolved": 3
+    },
+    "R10": {
+      "proved": 0,
+      "refuted": 0,
+      "unresolved": 4
+    },
+    "R11": {
+      "proved": 0,
+      "refuted": 0,
+      "unresolved": 1
+    },
+    "R12": {
+      "proved": 0,
+      "refuted": 0,
+      "unresolved": 3
+    },
+    "R13": {
+      "proved": 0,
+      "refuted": 0,
+      "unresolved": 2
+    }
+  },
+  "claim_count": 38,
+  "unresolved_claims": [
+    "R0.objects",
+    "R0.equivalence_contract",
+    "R1.world_generator",
+    "R1.noise_law",
+    "R2.sample_invariance",
+    "R2.variable_equivariance",
+    "R2.discovery_guarantee",
+    "R3.typed_semantics",
+    "R3.compositionality",
+    "R4.program_fidelity",
+    "R4.cegis",
+    "R4.mdl",
+    "R5.interchange",
+    "R5.intermediate_numeric",
+    "R5.composition",
+    "R6.separate_targets",
+    "R6.evaluation_guarantee",
+    "R7.counterexamples",
+    "R7.worst_case",
+    "R8.function_ood",
+    "R8.noise_ood",
+    "R8.scale_ood",
+    "R8.intervention_ood",
+    "R9.graph_recovery",
+    "R9.sepsets",
+    "R9.neural_program",
+    "R10.end_to_end",
+    "R10.mechanism",
+    "R10.noise",
+    "R10.intervention_distribution",
+    "R11.ablations",
+    "R12.semantic_equivalence",
+    "R12.canonicalization",
+    "R12.shortest_unique",
+    "R13.reproduction",
+    "R13.extensions"
+  ],
+  "scoped_job_results": [
+    "verified",
+    "verified",
+    "verified",
+    "proved",
+    "proved",
+    "refuted",
+    "unresolved",
+    "proved",
+    "refuted",
+    "verified",
+    "verified",
+    "verified",
+    "verified"
+  ],
+  "scoped_statistical_contracts": [
+    {
+      "id": "gaussian_recovery_4c68f7b3053f1e652109beed2b8c075d81cc5b1d284712a7d14d1d2e7d0cb67e",
+      "inputs": {
+        "a": "1/2",
+        "delta": "1/100",
+        "family_size": 6,
+        "samples": 96
+      },
+      "model_estimator_sha256": "989ea304c456318b14adcd67684f300c24e9fe82de1968a46f9bc28d136dc2cc",
+      "scope": "Known declared two-model Gaussian family; fixed estimator; ideal IID real observation rows; no actual trained-network or device guarantee",
+      "quantity": "uniform per-event recovery failure<=delta/family_size, sufficient for family failure<=delta by union bound",
+      "status": "proved",
+      "proof_jobs": [
+        "gaussian_tail_recovery"
+      ],
+      "attempts": [
+        {
+          "job": "gaussian_tail_recovery",
+          "case": "six96",
+          "bound_attempts": {
+            "gaussian_tails": "proved",
+            "second_moment": "unresolved-by-this-bound"
+          }
+        }
+      ],
+      "refutation_jobs": []
+    },
+    {
+      "id": "gaussian_recovery_5095e4eae39a602ab3f748e45bf9c81fba56112d76439cfd7e6133dd24192963",
+      "inputs": {
+        "a": "1/2",
+        "delta": "1/100",
+        "family_size": 1,
+        "samples": 96
+      },
+      "model_estimator_sha256": "989ea304c456318b14adcd67684f300c24e9fe82de1968a46f9bc28d136dc2cc",
+      "scope": "Known declared two-model Gaussian family; fixed estimator; ideal IID real observation rows; no actual trained-network or device guarantee",
+      "quantity": "uniform per-event recovery failure<=delta/family_size, sufficient for family failure<=delta by union bound",
+      "status": "proved",
+      "proof_jobs": [
+        "gaussian_tail_recovery"
+      ],
+      "attempts": [
+        {
+          "job": "finite_sample_mec",
+          "case": "finite96",
+          "bound_attempts": {
+            "second_moment": "unresolved-by-this-bound"
+          }
+        },
+        {
+          "job": "gaussian_tail_recovery",
+          "case": "single96",
+          "bound_attempts": {
+            "gaussian_tails": "proved",
+            "second_moment": "unresolved-by-this-bound"
+          }
+        }
+      ],
+      "refutation_jobs": []
+    },
+    {
+      "id": "gaussian_recovery_ad329031272e00b10fc88bebc560a98675aabdb02a1f7d8584491592ab44e281",
+      "inputs": {
+        "a": "1/2",
+        "delta": "1/100",
+        "family_size": 1,
+        "samples": 1000000
+      },
+      "model_estimator_sha256": "989ea304c456318b14adcd67684f300c24e9fe82de1968a46f9bc28d136dc2cc",
+      "scope": "Known declared two-model Gaussian family; fixed estimator; ideal IID real observation rows; no actual trained-network or device guarantee",
+      "quantity": "uniform per-event recovery failure<=delta/family_size, sufficient for family failure<=delta by union bound",
+      "status": "proved",
+      "proof_jobs": [
+        "gaussian_tail_recovery"
+      ],
+      "attempts": [
+        {
+          "job": "gaussian_tail_recovery",
+          "case": "arithmetic_budget",
+          "bound_attempts": {
+            "gaussian_tails": "unresolved-arithmetic-budget",
+            "second_moment": "proved"
+          }
+        }
+      ],
+      "refutation_jobs": []
+    },
+    {
+      "id": "gaussian_recovery_b02774da29e8401c77fb55b10ae87601a698d6d7cb67362dd9bd2978f2e51be1",
+      "inputs": {
+        "a": "1/2",
+        "delta": "1/100",
+        "family_size": 100,
+        "samples": 96
+      },
+      "model_estimator_sha256": "989ea304c456318b14adcd67684f300c24e9fe82de1968a46f9bc28d136dc2cc",
+      "scope": "Known declared two-model Gaussian family; fixed estimator; ideal IID real observation rows; no actual trained-network or device guarantee",
+      "quantity": "uniform per-event recovery failure<=delta/family_size, sufficient for family failure<=delta by union bound",
+      "status": "refuted",
+      "proof_jobs": [],
+      "attempts": [
+        {
+          "job": "gaussian_tail_recovery",
+          "case": "hundred96",
+          "bound_attempts": {
+            "gaussian_tails": "unresolved-by-this-bound",
+            "second_moment": "unresolved-by-this-bound"
+          }
+        },
+        {
+          "job": "fixed_gaussian_estimator_confidence_failure",
+          "case": "hundred_96_row_events_99_percent",
+          "bound_attempts": {
+            "second_moment": "unresolved-by-this-bound",
+            "strict_error_lower": "refuted"
+          }
+        }
+      ],
+      "refutation_jobs": [
+        "fixed_gaussian_estimator_confidence_failure"
+      ]
+    },
+    {
+      "id": "gaussian_recovery_cf454be07d146f0de1e1662e52624dd182e5ad9a8008eeeff7dab0bad7ea1b7e",
+      "inputs": {
+        "a": "1/2",
+        "delta": "1/100",
+        "family_size": 1,
+        "samples": 990
+      },
+      "model_estimator_sha256": "989ea304c456318b14adcd67684f300c24e9fe82de1968a46f9bc28d136dc2cc",
+      "scope": "Known declared two-model Gaussian family; fixed estimator; ideal IID real observation rows; no actual trained-network or device guarantee",
+      "quantity": "uniform per-event recovery failure<=delta/family_size, sufficient for family failure<=delta by union bound",
+      "status": "proved",
+      "proof_jobs": [
+        "finite_sample_mec",
+        "gaussian_tail_recovery"
+      ],
+      "attempts": [
+        {
+          "job": "finite_sample_mec",
+          "case": "sufficient990",
+          "bound_attempts": {
+            "second_moment": "proved"
+          }
+        },
+        {
+          "job": "gaussian_tail_recovery",
+          "case": "single990",
+          "bound_attempts": {
+            "gaussian_tails": "proved",
+            "second_moment": "proved"
+          }
+        }
+      ],
+      "refutation_jobs": []
+    },
+    {
+      "id": "gaussian_recovery_dfea8118f79642ccb0fce75d96e1d16eb4a331257e0983815c00a2041d86debf",
+      "inputs": {
+        "a": "1/2",
+        "delta": "1/100",
+        "family_size": 1,
+        "samples": 1
+      },
+      "model_estimator_sha256": "989ea304c456318b14adcd67684f300c24e9fe82de1968a46f9bc28d136dc2cc",
+      "scope": "Known declared two-model Gaussian family; fixed estimator; ideal IID real observation rows; no actual trained-network or device guarantee",
+      "quantity": "uniform per-event recovery failure<=delta/family_size, sufficient for family failure<=delta by union bound",
+      "status": "refuted",
+      "proof_jobs": [],
+      "attempts": [
+        {
+          "job": "gaussian_tail_recovery",
+          "case": "one_row",
+          "bound_attempts": {
+            "gaussian_tails": "unresolved-by-this-bound",
+            "second_moment": "unresolved-by-this-bound"
+          }
+        },
+        {
+          "job": "fixed_gaussian_estimator_confidence_failure",
+          "case": "single_row_99_percent",
+          "bound_attempts": {
+            "second_moment": "unresolved-by-this-bound",
+            "strict_error_lower": "refuted"
+          }
+        }
+      ],
+      "refutation_jobs": [
+        "fixed_gaussian_estimator_confidence_failure"
+      ]
+    },
+    {
+      "id": "gaussian_recovery_e0db555deddd2ef820e0639d820adbfad488344d02a57ae33ea80bfd218ebb94",
+      "inputs": {
+        "a": "1/2",
+        "delta": "1/100",
+        "family_size": 6,
+        "samples": 5990
+      },
+      "model_estimator_sha256": "989ea304c456318b14adcd67684f300c24e9fe82de1968a46f9bc28d136dc2cc",
+      "scope": "Known declared two-model Gaussian family; fixed estimator; ideal IID real observation rows; no actual trained-network or device guarantee",
+      "quantity": "uniform per-event recovery failure<=delta/family_size, sufficient for family failure<=delta by union bound",
+      "status": "proved",
+      "proof_jobs": [
+        "finite_sample_mec",
+        "gaussian_tail_recovery"
+      ],
+      "attempts": [
+        {
+          "job": "finite_sample_mec",
+          "case": "family5990",
+          "bound_attempts": {
+            "second_moment": "proved"
+          }
+        },
+        {
+          "job": "gaussian_tail_recovery",
+          "case": "six5990",
+          "bound_attempts": {
+            "gaussian_tails": "proved",
+            "second_moment": "proved"
+          }
+        }
+      ],
+      "refutation_jobs": []
+    }
+  ],
+  "scoped_unresolved_contracts": [],
+  "overall_objective_achieved": false
+}

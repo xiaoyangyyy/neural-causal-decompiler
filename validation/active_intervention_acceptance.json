@@ -1,0 +1,122 @@
+{
+  "protocol": "docs/ACTIVE_INTERVENTION_GRAPH_PROTOCOL.md",
+  "runs": [
+    {
+      "seed": 4793,
+      "replayed": true,
+      "observational": {
+        "macro_f1": 0.6211846365924241,
+        "skeleton_f1": 0.786095258782258,
+        "mean_pair_shd": 2.9131944444444446,
+        "exact_graph_accuracy": 0.17430555555555555,
+        "directed_target_accuracy": 0.4856211639120818,
+        "parameter_count": 31828,
+        "by_environment_exact": {
+          "test_id": 0.3368055555555556,
+          "test_function": 0.1597222222222222,
+          "test_noise": 0.24305555555555555,
+          "test_scale": 0.05555555555555556,
+          "test_intervention": 0.07638888888888888
+        }
+      },
+      "active": {
+        "macro_f1": 0.8322669882986684,
+        "skeleton_f1": 0.9145943585325368,
+        "mean_pair_shd": 1.3868055555555556,
+        "exact_graph_accuracy": 0.4965277777777778,
+        "directed_target_accuracy": 0.8646743119092399,
+        "parameter_count": 31828,
+        "by_environment_exact": {
+          "test_id": 0.6180555555555556,
+          "test_function": 0.6666666666666666,
+          "test_noise": 0.6111111111111112,
+          "test_scale": 0.2638888888888889,
+          "test_intervention": 0.3229166666666667
+        }
+      },
+      "exact_higher": true,
+      "direction_higher": true,
+      "skeleton_no_lower": true,
+      "shd_lower": true,
+      "worlds": 2400,
+      "intervention_levels_per_node": 2
+    },
+    {
+      "seed": 4794,
+      "replayed": true,
+      "observational": {
+        "macro_f1": 0.635203298340824,
+        "skeleton_f1": 0.7846140387507965,
+        "mean_pair_shd": 2.777083333333333,
+        "exact_graph_accuracy": 0.17222222222222222,
+        "directed_target_accuracy": 0.488196595488076,
+        "parameter_count": 31828,
+        "by_environment_exact": {
+          "test_id": 0.3020833333333333,
+          "test_function": 0.13194444444444445,
+          "test_noise": 0.2951388888888889,
+          "test_scale": 0.06597222222222222,
+          "test_intervention": 0.06597222222222222
+        }
+      },
+      "active": {
+        "macro_f1": 0.8570317295505603,
+        "skeleton_f1": 0.9246200927322061,
+        "mean_pair_shd": 1.038888888888889,
+        "exact_graph_accuracy": 0.5166666666666666,
+        "directed_target_accuracy": 0.880636425482104,
+        "parameter_count": 31828,
+        "by_environment_exact": {
+          "test_id": 0.6354166666666667,
+          "test_function": 0.6423611111111112,
+          "test_noise": 0.5833333333333334,
+          "test_scale": 0.3333333333333333,
+          "test_intervention": 0.3888888888888889
+        }
+      },
+      "exact_higher": true,
+      "direction_higher": true,
+      "skeleton_no_lower": true,
+      "shd_lower": true,
+      "worlds": 2400,
+      "intervention_levels_per_node": 2
+    }
+  ],
+  "pooled": {
+    "observational_exact": 0.17326388888888888,
+    "active_exact": 0.5065972222222221,
+    "exact_delta": 0.33333333333333326,
+    "observational_shd": 2.845138888888889,
+    "active_shd": 1.2128472222222224,
+    "observational_skeleton_f1": 0.7853546487665273,
+    "active_skeleton_f1": 0.9196072256323715,
+    "observational_directed_accuracy": 0.4869088797000789,
+    "active_directed_accuracy": 0.872655368695672,
+    "direction_delta": 0.38574648899559305,
+    "environment_exact_deltas": {
+      "test_id": 0.30729166666666674,
+      "test_function": 0.5086805555555556,
+      "test_noise": 0.328125,
+      "test_scale": 0.2378472222222222,
+      "test_intervention": 0.2847222222222222
+    }
+  },
+  "criteria": {
+    "complete_replay": true,
+    "full_coverage": true,
+    "exact_higher_each_seed": true,
+    "pooled_exact_gain_at_least_10pp": true,
+    "direction_higher_each_seed": true,
+    "pooled_direction_gain_at_least_10pp": true,
+    "skeleton_no_lower_each_seed": true,
+    "shd_lower_each_seed": true,
+    "no_environment_exact_decline": true
+  },
+  "passed": true,
+  "scope": "interventional graph discovery with two known intervention levels per node and paired exogenous draws",
+  "not_claimed": [
+    "purely observational identifiability",
+    "historical-teacher decompilation",
+    "general causal discovery"
+  ]
+}

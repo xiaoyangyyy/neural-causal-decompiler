@@ -1,0 +1,85 @@
+{
+  "schema": "ncd.original-plan-continuation-state.v1",
+  "issued_utc": "2026-09-28T10:17:58.069792+00:00",
+  "goal": "continue original plan until all original atomic claims are properly proved or refuted",
+  "goal_active": true,
+  "live_core_version": "0.60.0.dev1",
+  "live_core_modules": 136,
+  "live_core_matches_frozen_tested_candidate": true,
+  "core_must_not_be_mutated_without_new_protocol_and_release": true,
+  "original_ledger": "runs/original_proof_registry_v2r1/ledger.json",
+  "original_claim_counts": {
+    "proved": 0,
+    "refuted": 2,
+    "unresolved": 36
+  },
+  "whole_project_complete": false,
+  "confirmation": {
+    "worlds": 300,
+    "installed_replayed": 300,
+    "criteria_passed": 14,
+    "acceptance": "validation/original_confirmation_acceptance_v1.json",
+    "snapshot_reseal_equal": true
+  },
+  "full_regression": {
+    "tests": 263,
+    "issues": 0,
+    "status": "passed",
+    "record": "validation/full_regression_v60_launch/launch.json"
+  },
+  "new_ssa": {
+    "targets": 2,
+    "instructions": [
+      37460,
+      37459
+    ],
+    "mapped_coordinates_per_target": 1116,
+    "diagnostic_executions": 96,
+    "source_tests": 12,
+    "installed_tests": 12,
+    "acceptance": "validation/neural_ssa_acceptance_v1.json",
+    "minimal_causal_algorithm_proved": false
+  },
+  "actual_label_boundary": {
+    "status": "strict-single-label-counterexample-verified",
+    "score_equivariance_refuted": false,
+    "source_tests": 5,
+    "installed_tests": 5,
+    "acceptance": "validation/neural_boundary_acceptance_v1.json",
+    "original_audit_integration_pending": true
+  },
+  "partial_mechanism": {
+    "proved_leaves": 378,
+    "unresolved_cells": 6,
+    "search_nodes": 767,
+    "whole_domain_conclusion": "unresolved",
+    "source_verification_complete": true,
+    "installed_replay_status": "running",
+    "installed_replay_supervisor_pid": 17052,
+    "record": "validation/partial_mechanism_installed_v1/launch.json"
+  },
+  "next_required_work": [
+    "Inspect existing owned partial replay completion; do not restart solely because a session output is missing.",
+    "Create a separate next core candidate/protocol to register full SSA and reachable-label boundary adapters with independently checked frozen contexts; do not edit pinned 0.60 sources.",
+    "Explicitly distinguish score and single-label variable equivariance contracts before any original R2 closure; a strict actual label counterexample does not refute score equivariance or all classifiers.",
+    "Continue compact programme/CEGIS search while retaining all six unresolved domains and the original query/resource limits; archive this first attempt before any changed-budget protocol.",
+    "Complete actual graph computation and SCM/noise/distribution premises beyond the finite benchmark and conditional toy theorems.",
+    "Close original atoms only with scope-matched proof or strict counterexample; keep unsupported operators and budget gaps unresolved."
+  ],
+  "historical_replay_root": "validation/source_snapshot_059",
+  "historical_core_env": "validation/wheel_v59_env",
+  "historical_extension_env": "validation/proof_extensions_env_v1",
+  "frozen_namespaces": [
+    "ncd",
+    "proof_extensions",
+    "proof_workbench",
+    "normalizer_proof",
+    "neural_ssa_proof",
+    "neural_boundary_proof"
+  ],
+  "approved_old_manifest_sha256": {
+    "manifest.json": "a3c8106f367bbcc84f0c14a448ce54caa68a6066860f93232f5297fae688611e",
+    "workbench_v1_source_manifest.json": "4e26249a5f155205fafa4eae7453085544dd21e5ab77d09f6ef5fcdf08823730",
+    "normalizer_v1_source_manifest.json": "b19f19418581bdf1cd063fe1c91c913dd227c4a99d0178c5cb060b041ac51130"
+  }
+}

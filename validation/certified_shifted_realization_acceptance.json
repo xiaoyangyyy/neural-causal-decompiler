@@ -1,0 +1,34 @@
+{
+  "accepted": true,
+  "minimum_state_interval_1d": [
+    7,
+    9
+  ],
+  "minimum_state_interval_2d": [
+    25,
+    81
+  ],
+  "upper_run": "runs/certified_shifted_realization_seed14701",
+  "upper_manifest_sha256": "ceaeae201df756ef5bc46c6bff2e5493ec9e153bb4e949860350ad454654f1b2",
+  "lower_run": "runs/certified_multiswitch_lower_seed13701",
+  "lower_manifest_sha256": "d30169eb97d42fd21d0b0eeafef7b85ff73520bbc8a563d4c6a0193611acd634",
+  "upper_verification": {
+    "status": "verified",
+    "profiles_replayed": 2,
+    "largest_state_dim": 2,
+    "largest_realization": 81,
+    "initial_cells_verified": 18,
+    "observation_relations_verified": 18,
+    "action_segments_verified": 84,
+    "packing_pairs_verified": 310
+  },
+  "lower_verification": {
+    "status": "verified",
+    "lower_bound": 7,
+    "excluded_sizes": 6,
+    "multi_switch_exclusions": 2,
+    "arithmetic": "exact-rational"
+  },
+  "claim": "nine- and eighty-one-state executable infinite-horizon realizations for the frozen separable benchmark",
+  "limitations": "1D minimum still unresolved among seven, eight and nine; 2D lower bound remains packing only"
+}

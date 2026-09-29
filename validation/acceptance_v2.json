@@ -1,0 +1,120 @@
+{
+  "91": {
+    "status": "verified",
+    "bivariate": {
+      "status": "verified",
+      "worlds": 6928,
+      "active_teacher_queries_replayed": 640,
+      "methods": [
+        "full",
+        "without_cegis",
+        "without_alignment",
+        "without_mdl",
+        "without_environment_augmentation",
+        "decision_tree",
+        "pysr"
+      ],
+      "artifacts": 110,
+      "julia_required_for_replay": false
+    },
+    "multivariate": {
+      "status": "verified",
+      "worlds": 936,
+      "node_sizes": [
+        3,
+        5,
+        8
+      ],
+      "mechanism_recoveries": 12
+    },
+    "science_is_not_certified_by_software_verification": true
+  },
+  "92": {
+    "status": "verified",
+    "bivariate": {
+      "status": "verified",
+      "worlds": 6928,
+      "active_teacher_queries_replayed": 640,
+      "methods": [
+        "full",
+        "without_cegis",
+        "without_alignment",
+        "without_mdl",
+        "without_environment_augmentation",
+        "decision_tree",
+        "pysr"
+      ],
+      "artifacts": 110,
+      "julia_required_for_replay": false
+    },
+    "multivariate": {
+      "status": "verified",
+      "worlds": 936,
+      "node_sizes": [
+        3,
+        5,
+        8
+      ],
+      "mechanism_recoveries": 12
+    },
+    "science_is_not_certified_by_software_verification": true
+  },
+  "installed_wheel": {
+    "status": "verified",
+    "bivariate": {
+      "status": "verified",
+      "worlds": 816,
+      "active_teacher_queries_replayed": 72,
+      "methods": [
+        "full",
+        "without_cegis",
+        "without_alignment",
+        "without_mdl",
+        "without_environment_augmentation",
+        "decision_tree",
+        "pysr"
+      ],
+      "artifacts": 110,
+      "julia_required_for_replay": false
+    },
+    "multivariate": {
+      "status": "verified",
+      "worlds": 132,
+      "node_sizes": [
+        3,
+        5,
+        8
+      ],
+      "mechanism_recoveries": 6
+    },
+    "science_is_not_certified_by_software_verification": true
+  },
+  "tests": {
+    "passed": 33,
+    "failures": 0,
+    "errors": 0
+  },
+  "package": {
+    "sha256": "f712cbd7b05bf862bae0be80f00a2156bc97d88f08dba6f455b82004daf70b9d",
+    "wheel_matches_source_and_install": true,
+    "experiment_code_matches_snapshots": true,
+    "historical_verifier_differences": [
+      {
+        "run": "91",
+        "part": "bivariate",
+        "file": "graph_experiment.py",
+        "scope": "verifier_only",
+        "snapshot_sha256": "bc79b7d343c347e655dbe2795bfe379c6d4403ac9203da2257dc89a8478c9bf4",
+        "current_sha256": "b66ee4b08fba66dd494f18128de066a0feb9e7e2b1d3373c0f0073c9e7ff9ecd"
+      },
+      {
+        "run": "91",
+        "part": "multivariate",
+        "file": "graph_experiment.py",
+        "scope": "verifier_only",
+        "snapshot_sha256": "bc79b7d343c347e655dbe2795bfe379c6d4403ac9203da2257dc89a8478c9bf4",
+        "current_sha256": "b66ee4b08fba66dd494f18128de066a0feb9e7e2b1d3373c0f0073c9e7ff9ecd"
+      }
+    ]
+  }
+}

@@ -1,0 +1,11 @@
+# Shared-action exact support lowers the 128D machine upper to 1,142
+
+The frozen trained affine 128D ReLU ring has a new executable finite realization with **1,142 states** at exact `epsilon=17/100`: 243 initial states and 899 recurrent states. The previous exact graph-closure upper was 2,303. This removes another 1,161 states (**50.41%** of that upper). With the independent 162-state packing lower, the same-model general minimum is now certified to lie in **[162,1142]**.
+
+The improvement comes from the fact that all five active successor coordinates depend on the *same* five action variables. Exact rational bounds on 60 pairwise linear combinations reject target-grid combinations that cannot be produced by any continuous unit-cube action. A fixed-point graph computation starts from all initial states and retains every candidate the necessary conditions cannot rule out. It finds 859 distinct initial successors and 899 recurrent cells after checking 20,672 recurrent candidates, of which 6,368 survive the pairwise filter. The full ordered graph is recomputed from frozen network weights during verification, and the executable transition is checked to remain inside it.
+
+The older exact two-stage initial handoff and weighted recurrent simulation proof continue to apply for all unit initial states, continuous action sequences, and times. The retained 899 cells are a conservative abstract closure; exact concrete reachability and global finite-state minimality remain open. The trained nonlinear 128D networks and broader project requirements also remain open.
+
+Evidence: [method](docs/CORRELATED_REACHABILITY_METHOD.md), [acceptance](validation/correlated_reachability_acceptance.json), and [full exact certificate](runs/correlated_reachability_v1/affine_d128/certificate.json). Replay with `python -m scripts.acceptance_correlated_reachability --verify`.
+
+Release 0.53.0 passed all 210 regression tests. An isolated installation of the built wheel replayed the matching lower, recurrent, two-stage, v0.52 abstract-closure, and new correlated-closure certificates and exercised the executable machine. All 113 installed Python modules matched source bytes. Evidence: [wheel status](validation/wheel_v53_run/status.json) and [JUnit report](validation/pytest_v53.xml). Wheel SHA-256: `173d35dd57c027d3f93e8d318c79921d70cab2cbcc699e822365b473e1ea8436`.

@@ -1,0 +1,65 @@
+{
+  "schema": "ncd.gaussian-nonidentifiability.v1",
+  "status": "refuted",
+  "claim": "Every observational linear Gaussian SCM admits unique causal direction recovery",
+  "quantifiers": "any observational estimator; any finite sample count, or the population law",
+  "assumptions": [
+    "acyclic",
+    "no hidden confounding",
+    "independent centered Gaussian exogenous variables"
+  ],
+  "forward": {
+    "graph": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        0
+      ]
+    ],
+    "coefficient": "1/2",
+    "root_variance": "1",
+    "residual_variance": "3/4"
+  },
+  "reverse": {
+    "graph": [
+      [
+        0,
+        0
+      ],
+      [
+        1,
+        0
+      ]
+    ],
+    "coefficient": "1/2",
+    "root_variance": "1",
+    "residual_variance": "3/4"
+  },
+  "observational_mean": [
+    "0",
+    "0"
+  ],
+  "observational_covariance": [
+    [
+      "1",
+      "1/2"
+    ],
+    [
+      "1/2",
+      "1"
+    ]
+  ],
+  "do_X": "1",
+  "forward_do_Y_mean": "1/2",
+  "reverse_do_Y_mean": "0",
+  "finite_sample_minimax_error_lower": "1/2",
+  "argument": "Both linear images of independent Gaussians have the same mean and positive definite covariance, hence the same joint law. Their n-fold observational laws also coincide. The two correct-direction output probabilities sum to at most one, so one error probability is at least one half, including randomized estimators. do(X=c) yields different Y means.",
+  "does_not_refute": [
+    "identification under additional restricted noise assumptions",
+    "identification with informative interventions",
+    "recovery of an observational equivalence class"
+  ]
+}

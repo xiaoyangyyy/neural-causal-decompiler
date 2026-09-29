@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "ncd-normalizer-proof"
+version = "0.1.0"
+description = "Scoped exact partial normalization realization of an actual frozen neural network"
+requires-python = ">=3.11"
+dependencies = ["neural-causal-decompiler==0.59.0"]
+[project.scripts]
+ncd-normalizer-proof = "normalizer_proof.__main__:main"
+[tool.setuptools]
+packages = ["normalizer_proof"]
