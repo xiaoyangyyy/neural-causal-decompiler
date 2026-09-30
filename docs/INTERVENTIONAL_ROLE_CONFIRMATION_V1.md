@@ -71,3 +71,9 @@ had already been inspected. Its simultaneous intervals are reported as
 exploratory uncertainty summaries, not as a prospectively registered 99%
 scientific guarantee. The originally frozen gate and all failure outcomes
 remain unchanged.
+
+The live finalizer watches the independent replay process handle. After
+the all-300 receipt is verified, it runs analysis, deterministic packaging,
+and the separate archive verifier in sequence. Every step has its own
+resource-bounded job and retained logs. If a step fails, it writes an
+unresolved finalization receipt rather than claiming a complete package.
