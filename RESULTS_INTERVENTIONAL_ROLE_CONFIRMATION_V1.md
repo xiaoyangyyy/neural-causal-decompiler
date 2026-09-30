@@ -45,3 +45,11 @@ The other nonlinear worlds and one graph-error world remain difficult.
 This diagnostic was chosen after confirmation failures were seen, so it
 cannot count as a new confirmation method or change the frozen result.
 The executable record is validation/interventional_role_ols_diagnostic_v1.json.
+
+A separate exact proof on the graph-correct first world shows that its
+frozen node-1 neural mechanism cannot be approximated within 1% training
+scale by **any** real linear combination in the existing six-function
+one-parent program library. The verified grid lower bound is 3.3300%.
+This is a finite-grammar obstruction, not a refutation of larger program
+languages. See docs/FROZEN_UNARY_GRAMMAR_OBSTRUCTION_V1.md.
+\nThe same exact method also certifies a 3.2513% lower bound on [-1,1]\nfor world 5, node 1. That world has an incorrect inferred graph; the\ncertificate concerns frozen-network-to-program fidelity only. Both exact\nproofs leave the broader original R4/R10 atoms unresolved.\n

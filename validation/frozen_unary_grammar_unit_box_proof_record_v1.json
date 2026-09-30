@@ -1,0 +1,35 @@
+{
+  "allowed_interventions": "seven rational parent-input queries inside [-1,1]; interior points are not frozen do values",
+  "claim": "For the named frozen one-parent Tanh mechanism, no real coefficient vector in the implemented six-function unary mechanism library achieves uniform error <= 0.01 of its frozen training scale on [-1,1] observed parent box; seven rational points.",
+  "conclusion": "proved-for-declared-grammar-and-ideal-real-semantics",
+  "error_metric": "supremum absolute error divided by frozen training scale",
+  "grammar_source_sha256": "35f78ebe2e2051a15d0b22e145b702146d169e53e4dce349c8bdc9276b389624",
+  "input_domain": "[-1,1] observed parent box; seven rational points",
+  "model_checkpoint": "runs/interventional_role_confirmation_v1/units/seed_8301_n3_test_id_5/trained/mixed/mechanism_1.pt",
+  "model_sha256": "3f24bd64320498505c27aa78ce7bde43b260c7f6d7f34d773da9af302d26d420",
+  "network_semantics": "binary32 parameters exact; ideal-real affine and tanh; no device rounding",
+  "normalized_lower_bound": "12060767230938908524909244630754787799648545182510666509380205543355/370953636939101571854359315441318778316645561539953119047958419996672",
+  "original_atoms_closed": false,
+  "original_objective_achieved": false,
+  "program_family": "all real linear combinations of the six basis functions; stronger than 8-term structured search",
+  "proof_dependencies": {
+    "certificate_sha256": "31d0ebb62e91889946c4c26223c59dd5c1ff72ff968ab4a99955cdf41ea5916a",
+    "checkpoint_sha256": "3f24bd64320498505c27aa78ce7bde43b260c7f6d7f34d773da9af302d26d420",
+    "independent_verifier_sha256": "24ae684fa509a42bd9501c741cc4aa07e85d224025bab20d7ebeb2279e843126",
+    "interval_kernel_sha256": "8838c1141070672ca69775520d81f87dc56a93678e3d818c75235ed2c3981f21",
+    "verification_receipt_sha256": "fbe106ef6324c1d95f779741ad55353e239401348ae861e656aee90fa76dda92"
+  },
+  "related_original_atoms": [
+    "R4.program_fidelity",
+    "R10.mechanism"
+  ],
+  "schema": "ncd.scoped-proof-record.v1",
+  "threshold": "1/100",
+  "uncovered": [
+    "larger or nested program grammars",
+    "other frozen networks or worlds",
+    "extra hardware inference rounding",
+    "true SCM correctness or noise-law recovery",
+    "original all-instance R4/R10 objective"
+  ]
+}
