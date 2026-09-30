@@ -274,3 +274,18 @@ contains the origin. The original declared-domain inclusion and
 device-rounding obligations remain open, as does R10.mechanism.
 See docs/FIXED_TANH_ORIGIN_FIDELITY_V1.md and
 validation/fixed_tanh_origin_fidelity_verification_v1.json.
+
+## Paired linear-DAG graph identification
+
+An exact rational candidate estimator now recovers direct graph
+coefficients by inverting the total-effect matrix built from two
+node-do response levels. Under a linear additive DAG and identical
+exogenous values within each pair, the theorem gives
+A=(I-C)^(-1) and C=I-A^(-1). A separate evaluator independently
+checked the frozen archived three-node linear-Gaussian world; 3/5/8
+node synthetic DAG tests also pass. This is a paired mathematical
+oracle result, not proof for independently sampled interventions,
+nonlinear worlds, device rounding, or the trained graph Discoverer.
+The original R9 atom remains unresolved. See
+docs/PAIRED_LINEAR_GRAPH_IDENTIFICATION_V1.md and
+validation/paired_linear_graph_development_verification_v1.json.
