@@ -36,3 +36,12 @@ frozen checkpoint records, a result, and an independent verification receipt
 under runs/interventional_role_confirmation_v1/units. The remaining declared
 worlds continue under the same frozen protocol. The original R0-R13 ledger
 remains open: 0 proved, 2 refuted, 36 unresolved.
+
+A posthoc, candidate-data-only OLS diagnostic on these same ten worlds
+passed the local gate in only one world when fitted on all usable training
+rows. On the graph-correct linear-Gaussian world at index 0, its maximum
+local MSE was 0.007660 versus 0.038614 for the frozen neural hybrid.
+The other nonlinear worlds and one graph-error world remain difficult.
+This diagnostic was chosen after confirmation failures were seen, so it
+cannot count as a new confirmation method or change the frozen result.
+The executable record is validation/interventional_role_ols_diagnostic_v1.json.
