@@ -1,0 +1,157 @@
+{
+  "seed": 2257458329237119025,
+  "split": "test_id",
+  "graph": [
+    [
+      0,
+      1,
+      1
+    ],
+    [
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      0
+    ]
+  ],
+  "equations": [
+    [],
+    [
+      {
+        "operator": "linear",
+        "parents": [
+          0
+        ],
+        "coefficient": -0.9000587902186296
+      },
+      {
+        "operator": "linear",
+        "parents": [
+          2
+        ],
+        "coefficient": -0.7421210472451407
+      }
+    ],
+    [
+      {
+        "operator": "linear",
+        "parents": [
+          0
+        ],
+        "coefficient": 1.0054647945184059
+      }
+    ]
+  ],
+  "noise_family": "gaussian",
+  "noise_scale": 0.35,
+  "samples": 96,
+  "scales": [
+    1.0,
+    1.0,
+    1.0
+  ],
+  "family": "linear_gaussian",
+  "root_shift": false,
+  "world_id": "af27c78b7d7d86d32dc983bb",
+  "equation_ast": [
+    {
+      "op": "add",
+      "args": [
+        {
+          "op": "noise",
+          "index": 0,
+          "family": "gaussian",
+          "scale": 0.35
+        }
+      ]
+    },
+    {
+      "op": "add",
+      "args": [
+        {
+          "op": "mul",
+          "args": [
+            {
+              "op": "constant",
+              "value": -0.9000587902186296
+            },
+            {
+              "op": "var",
+              "index": 0
+            }
+          ]
+        },
+        {
+          "op": "mul",
+          "args": [
+            {
+              "op": "constant",
+              "value": -0.7421210472451407
+            },
+            {
+              "op": "var",
+              "index": 2
+            }
+          ]
+        },
+        {
+          "op": "noise",
+          "index": 1,
+          "family": "gaussian",
+          "scale": 0.35
+        }
+      ]
+    },
+    {
+      "op": "add",
+      "args": [
+        {
+          "op": "mul",
+          "args": [
+            {
+              "op": "constant",
+              "value": 1.0054647945184059
+            },
+            {
+              "op": "var",
+              "index": 0
+            }
+          ]
+        },
+        {
+          "op": "noise",
+          "index": 2,
+          "family": "gaussian",
+          "scale": 0.35
+        }
+      ]
+    }
+  ],
+  "target_graph": [
+    [
+      0,
+      1,
+      1
+    ],
+    [
+      1,
+      0,
+      1
+    ],
+    [
+      1,
+      1,
+      0
+    ]
+  ],
+  "target_semantics": "CPDAG",
+  "observed_scaling": [
+    1.0,
+    1.0,
+    1.0
+  ]
+}

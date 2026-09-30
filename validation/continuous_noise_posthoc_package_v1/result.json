@@ -1,0 +1,236 @@
+{
+  "candidate": {
+    "fit_residual_sha256": "9f5a17740d92df609bd23701d74837efd4b58cd300fa6fdfcfd2a81536e97658",
+    "fit_row_ids_sha256": "3085f856eb8de3d8f0f4439164a1c61d8af81b79555fccaa17eace6ee49f2ed7",
+    "fit_rows": 512,
+    "joint_noise_independence_proved": false,
+    "node_models": [
+      {
+        "family": "gaussian",
+        "loc": -0.04053326862930705,
+        "scale": 0.34604828764415174
+      },
+      {
+        "family": "gaussian",
+        "loc": -0.036671473224332805,
+        "scale": 0.3593883326015077
+      },
+      {
+        "family": "gaussian",
+        "loc": 0.01121390208965058,
+        "scale": 0.3711645933799938
+      }
+    ],
+    "original_claim_closed": false,
+    "original_objective_achieved": false,
+    "sampling_independence_proved": false,
+    "schema": "ncd.continuous-noise-candidate.v1",
+    "selection_diagnostics": [
+      {
+        "held_out_mean_log_density": {
+          "gaussian": -0.4004031964239243,
+          "laplace": -0.4502577652836411,
+          "student5": -0.4203703498889998
+        },
+        "node": 0,
+        "selected_family": "gaussian"
+      },
+      {
+        "held_out_mean_log_density": {
+          "gaussian": -0.4138886675567255,
+          "laplace": -0.43278961966537555,
+          "student5": -0.41993690459704064
+        },
+        "node": 1,
+        "selected_family": "gaussian"
+      },
+      {
+        "held_out_mean_log_density": {
+          "gaussian": -0.3490106231111335,
+          "laplace": -0.3998901487464973,
+          "student5": -0.38527877769744834
+        },
+        "node": 2,
+        "selected_family": "gaussian"
+      }
+    ],
+    "selection_residual_sha256": "a68f3b97ea12948d3932bbb760a215fb9b5a2cb6af362e6bfe30e5c3a28838c0",
+    "selection_row_ids_sha256": "ff86fbb8b1495419d1cab4076d8ecce5f14d1a2699c697887632d00f5f184b17",
+    "selection_rows": 512,
+    "status": "candidate-only",
+    "true_noise_family_proved": false
+  },
+  "candidate_residual_target": "observation-minus-executable-symbolic-equation",
+  "evaluation": {
+    "intervention_diagnostics": [
+      {
+        "candidate_joint_energy": 0.004059509616182622,
+        "candidate_marginal_w1": [
+          0.029383327127359526,
+          0.05860997215059936,
+          0.035142200480119734
+        ],
+        "candidate_mean_marginal_w1": 0.04104516658602621,
+        "empirical_joint_energy": 0.00498000191689929,
+        "empirical_marginal_w1": [
+          0.038703863886131215,
+          0.0442903633553202,
+          0.049677860795646414
+        ],
+        "empirical_mean_marginal_w1": 0.04422402934569928,
+        "interventions": {},
+        "symbolic_mechanism_mae_at_true_parents": [
+          0.04642961174249664,
+          0.029821714084204233,
+          0.025709598815298315
+        ]
+      },
+      {
+        "candidate_joint_energy": 0.22614485293808262,
+        "candidate_marginal_w1": [
+          0.0,
+          0.37574645897630754,
+          0.3026672674957711
+        ],
+        "candidate_mean_marginal_w1": 0.2261379088240262,
+        "empirical_joint_energy": 0.16761748775312124,
+        "empirical_marginal_w1": [
+          0.0,
+          0.27092467104773577,
+          0.26652292182766946
+        ],
+        "empirical_mean_marginal_w1": 0.17914919762513506,
+        "interventions": {
+          "0": -1.0
+        },
+        "symbolic_mechanism_mae_at_true_parents": [
+          null,
+          0.15769470256825585,
+          0.2646201504319077
+        ]
+      },
+      {
+        "candidate_joint_energy": 0.0646856242795415,
+        "candidate_marginal_w1": [
+          0.0,
+          0.06106306023753298,
+          0.22537949002970978
+        ],
+        "candidate_mean_marginal_w1": 0.09548085008908092,
+        "empirical_joint_energy": 0.10161091196616578,
+        "empirical_marginal_w1": [
+          0.0,
+          0.16128340488889298,
+          0.26152383569781146
+        ],
+        "empirical_mean_marginal_w1": 0.1409357468622348,
+        "interventions": {
+          "0": 1.0
+        },
+        "symbolic_mechanism_mae_at_true_parents": [
+          null,
+          0.10527997553112195,
+          0.26342660709357313
+        ]
+      },
+      {
+        "candidate_joint_energy": 0.0027742163707441536,
+        "candidate_marginal_w1": [
+          0.029383327127359526,
+          0.0,
+          0.035142200480119734
+        ],
+        "candidate_mean_marginal_w1": 0.021508509202493087,
+        "empirical_joint_energy": 0.00430088831496489,
+        "empirical_marginal_w1": [
+          0.038703863886131215,
+          0.0,
+          0.049677860795646414
+        ],
+        "empirical_mean_marginal_w1": 0.029460574893925878,
+        "interventions": {
+          "1": 1.0
+        },
+        "symbolic_mechanism_mae_at_true_parents": [
+          0.04642961174249664,
+          null,
+          0.025709598815298315
+        ]
+      },
+      {
+        "candidate_joint_energy": 0.07511404382395481,
+        "candidate_marginal_w1": [
+          0.0,
+          0.0,
+          0.22537949002970978
+        ],
+        "candidate_mean_marginal_w1": 0.07512649667656993,
+        "empirical_joint_energy": 0.10950211627137041,
+        "empirical_marginal_w1": [
+          0.0,
+          0.0,
+          0.26152383569781146
+        ],
+        "empirical_mean_marginal_w1": 0.08717461189927049,
+        "interventions": {
+          "0": 1.0,
+          "1": -1.0
+        },
+        "symbolic_mechanism_mae_at_true_parents": [
+          null,
+          null,
+          0.26342660709357313
+        ]
+      }
+    ],
+    "noise_diagnostics": [
+      {
+        "candidate_w1": 0.06431042629313549,
+        "empirical_w1": 0.030872465478524853,
+        "neural_residual_vs_true_noise_mae": 0.04642961177160032,
+        "node": 0,
+        "symbolic_residual_vs_true_noise_mae": 0.04642961174249664
+      },
+      {
+        "candidate_w1": 0.05495678931136998,
+        "empirical_w1": 0.046582926477017596,
+        "neural_residual_vs_true_noise_mae": 0.03913739868266346,
+        "node": 1,
+        "symbolic_residual_vs_true_noise_mae": 0.029821714084204233
+      },
+      {
+        "candidate_w1": 0.040599100522377446,
+        "empirical_w1": 0.0402375567863546,
+        "neural_residual_vs_true_noise_mae": 0.037421633456999545,
+        "node": 2,
+        "symbolic_residual_vs_true_noise_mae": 0.025709598815298315
+      }
+    ],
+    "true_vs_estimated_source_graph_edge_errors": 0,
+    "true_vs_estimated_source_graph_exact": true
+  },
+  "independent_worlds_for_inference": 0,
+  "mechanism_sha256": [
+    "4654e2ce4f7a0d852e623ba4f42fa05a5fa019c436d25d966c46f4562d5a0a5d",
+    "2b5a50fe3eae30e4690b76983dae0b604fa3962acc160686f0fa004d4aa525e0",
+    "81802ba722f173f35594d02f738e78ba8975284a12099af25bbb5b1a73f146eb"
+  ],
+  "original_claim_closed": false,
+  "original_objective_achieved": false,
+  "same_world_across_splits": true,
+  "schema": "ncd.continuous-noise-posthoc-diagnostic.v1",
+  "scm_sha256": "f58a47e7db0128aeaf50c810da951e624a26af96fabee7909f00def842f1f691",
+  "source_sha256": {
+    "candidate": "c2d2955c221d4a93c2c44b368875f26ba5eec4de1597a850cd6e3fb29288e302",
+    "runner": "175872f7923d763ecd1b52e3c2377f9b245e1117bfba56519392769ff2d91d64"
+  },
+  "split_rows": 512,
+  "split_seeds": {
+    "evaluation": 9102,
+    "fit": 9100,
+    "selection": 9101
+  },
+  "status": "posthoc-development-only",
+  "world_id": "af27c78b7d7d86d32dc983bb",
+  "world_sha256": "0ad38c1b7844caca150f6c38e90b4ccd08d8a3ee9421ddba944b3d9757a192cf"
+}
