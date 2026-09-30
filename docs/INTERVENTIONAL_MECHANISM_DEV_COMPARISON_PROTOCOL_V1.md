@@ -55,3 +55,13 @@ formal proof occupies the single heavy-task slot. No performance result,
 independent-world statistical guarantee, or original claim closure follows
 from these preflights. The original claim ledger remains 0 proved, 2
 refuted, 36 unresolved.
+
+A durable handoff is available in
+validation/advance_interventional_mechanism_dev_v1.py. It waits on the
+confirmed live formal-chain process handle, verifies a terminal chain
+receipt, reruns both candidate-data replays, and launches the two training
+arms sequentially under Windows Job memory and time limits. It then executes
+the frozen paired-do evaluator and records hashes and resources for every
+stage. It never treats a stale status file as proof that the formal process
+has stopped. The handoff has a no-training precheck and source tests; its
+result remains development-only even if all stages succeed.
