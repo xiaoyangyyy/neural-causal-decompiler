@@ -68,3 +68,10 @@ declared intervention family, so this finite witness does not by itself
 close the original R10 claim. The all-real obstruction applies only
 where that all-real domain is actually claimed. Different symbolic
 programs and bounded domains may admit valid fidelity certificates.
+
+A separate one-leaf rational interval certificate now gives a
+frozen-network fidelity counterexample at the origin itself:
+the normalized error is strictly above 0.022378. See
+`docs/FIXED_TANH_ORIGIN_FIDELITY_V1.md`. This removes reliance on
+quadratic growth for a finite witness, while retaining the same
+candidate-specific and domain-inclusion limits.

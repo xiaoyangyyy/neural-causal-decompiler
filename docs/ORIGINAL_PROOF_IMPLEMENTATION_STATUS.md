@@ -258,3 +258,19 @@ intervention family's bounded-domain contract. PyTorch rounding is not
 certified. See docs/FIXED_TANH_NEURAL_SYMBOLIC_OBSTRUCTION_V1.md and
 validation/fixed_tanh_neural_symbolic_obstruction_verification_v1.json.
 The original R10.mechanism claim remains unresolved.
+
+## Origin-point neural fidelity witness
+
+The archived child-1 frozen Tanh network and symbolic candidate now
+have a one-leaf rational interval proof at full input (0,0,0).
+The normalized neural-minus-symbolic error is strictly greater than
+3381667802333073452781/151115727451828646838272
+(about 0.02237800035), above the frozen training-scale threshold
+1/100. The generator stores the network export, candidate AST and
+checked proof tree; a separate checker reloads the original
+checkpoint and recomputes the interval. This oracle-free candidate
+failure applies to every candidate contract whose input domain
+contains the origin. The original declared-domain inclusion and
+device-rounding obligations remain open, as does R10.mechanism.
+See docs/FIXED_TANH_ORIGIN_FIDELITY_V1.md and
+validation/fixed_tanh_origin_fidelity_verification_v1.json.
