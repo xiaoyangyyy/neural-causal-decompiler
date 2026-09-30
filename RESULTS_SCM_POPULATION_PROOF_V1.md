@@ -1,0 +1,31 @@
+# Population-SCM distribution boundary, version 1
+
+This is a **scoped scientific result**, not completion of the original R0–R13 objective. The frozen original ledger remains **0 proved, 2 refuted, 36 unresolved**. The accepted historical confirmation protocol supplies 300 independent worlds (seeds 8101/8102, 3/5/8 nodes, five environments, ten worlds per cell) and six estimated explicit SCMs per world. The original confirmation source, receipt, individual unit manifests, true worlds, and model bytes are SHA-256 bound in the portable proof bundle. The checker does not use a changed acceptance threshold or repair any learned graph with an oracle graph; the oracle mode is a diagnostic comparison only.
+
+## Theorems and measured coverage
+
+1. **Finite empirical support.** For each of the 1,800 estimated SCM files, the stored residual noise arrays are finite and nonempty, the declared source graph is acyclic, and the verified CDIR equations use supported operations and declared parents. Induction over a topological order bounds every coordinate under every compatible intervention with observed do values in the closed interval [-1,1]. The certificate handles the protected division, square root, and logarithm branches by conservative rational envelopes. This proves finite support of each ideal estimated population law, even when its graph or equations differ from the true mechanism. It does not prove independence of residuals in the true world.
+
+2. **Exact total-variation obstruction.** In the historical ideal real-valued true-world generator, every non-intervened node has its own independent, continuous additive Gaussian, Laplace, or Student-t noise with positive scale. Under any compatible intervention leaving at least one node free, the true joint law gives probability zero to any finite set. Its matching finite empirical-residual estimated SCM puts probability one on a finite set. The set of estimated outcomes is therefore a witness event and the total-variation distance is **exactly 1** for every such true/estimated pair. The proof applies to all 1,800 historical pairs for the declared intervention family. Fully intervened laws, numerical finite-PRNG measures, Wasserstein distance, and other estimators are outside this statement. This structural fact is a counterexample to a *small-TV claim about the current finite empirical representation*, not a refutation of the original compound R10 claim.
+
+3. **True-world moment sufficiency.** An independent growth-exponent induction proves finite ideal first moments for all 300 true worlds and finite ideal second moments for 295. For five Student-t worlds the second-moment sufficient condition fails; their actual second moments are **unresolved by this certificate**, not established as infinite. The five IDs are recorded in `scoped_ledger.json`. This argument assumes the specified independent ideal noise generator; it is not an inference of noise independence from samples.
+
+4. **Allowed-family transport counterexample.** A separate five-node and eight-node model family uses a three-edge square chain with coefficient 3/16, independent Student-t(5) noise at the recorded scale, and an isolated intervention target. For root noise `U0 >= 16` and the three other chain noises within [-1,1], the fourth chain coordinate obeys `X3 >= 16^(-7) U0^8`. An explicit positive rational density minorant yields a truncated first-moment lower bound `beta*(M^3 - 16^3)`, where `beta` is in the certificate. For every finite empirical first-moment bound `B` and desired cost lower bound `K`, the certificate computes an integer `M` that forces every coupling's expected L1 cost above `K`. Thus this family member has infinite first moment and infinite **extended** L1 transport cost to any finite-first-moment estimate. Ordinary finite-valued Wasserstein-1 is not asserted on a law outside its usual finite-first-moment domain. This counterexample is an admissible *family witness*, not a claim that a particular historical sampled world has infinite first moment.
+
+The exact current coverage is: 300 worlds, 1,800 estimated SCMs, 1,800 scoped TV boundaries, 300 first-moment sufficient proofs, 295 second-moment sufficient proofs, and five unresolved second-moment cases. Neither graph recovery nor neural/program fidelity is certified by this package. The original R0–R13 ledger is unchanged.
+
+## Evidence and replay
+
+- Frozen plan: `validation/scm_population_protocol_v1.json`, SHA-256 `be17f6fb5cb3af8ec4b893d641bdb8e15f228161a7fcad84f369f76bcd66463d`.
+- Portable bundle: `runs/scm_population_proof_v1/`; `manifest.json` SHA-256 `49ab0a5307f7336974c32bdbad5614fd7a533479af4d0554b52f13ac1b9a1942`. It contains 300 compressed copies of the ten relevant frozen source files per world and 300 derived unit certificates. The original 42-file historical unit manifests remain hashed by the accepted confirmation receipt; this bundle archives only the true world and six estimated explicit SCMs needed for its narrower statements.
+- Independent package: `validation/scm_population_package_v1/`; wheel SHA-256 `abb20a0920fd791714a571b1b94ad88fd96fca9999970687a38902d55cea1c2e`.
+- Source tests: `validation/pytest_scm_population_source_v1_r4.xml`, **16 passed**. These include wrong graphs, cycles, unsupported operators, protected numerical branches, missing noise, false independence claims, exact rational cutoffs, malformed archives, code hash mismatch, source modification, and certificate tampering.
+- The installed wheel independently recomputed all 300 unit certificates, all 1,800 support/TV conclusions, family counterexamples, summary, and artifact hashes, producing `validation/scm_population_installed_replay_v1.json` with status `verified-scoped`.
+
+After installing the wheel in a fresh environment, run:
+
+```powershell
+python -I -B -m scm_population_proof verify-proof runs/scm_population_proof_v1
+```
+
+The verifier requires the frozen package source hashes in the protocol and the frozen source files in the bundle; it does not need the original checkout's historical `runs/original_confirmation_v1` tree. `prove --config validation/scm_population_protocol_v1.json` reconstructs the bundle from the accepted original tree with checkpoints and a 15-minute stage limit. The stage's artifact budget is 8 GiB; the completed bundle is about 70.8 MB.

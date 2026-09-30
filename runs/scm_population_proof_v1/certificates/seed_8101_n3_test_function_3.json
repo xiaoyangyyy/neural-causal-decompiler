@@ -1,0 +1,1056 @@
+{
+  "estimated_support": {
+    "active_graph/baseline": {
+      "assumptions": [
+        "finite nonempty empirical noise arrays",
+        "valid acyclic declared parents",
+        "registered arithmetic operator subset"
+      ],
+      "coordinate_abs_upper": [
+        "181882393951943719/144115188075855872",
+        "24065950467543257394851645246003125/5192296858534827628530496329220096",
+        "7551453608305008546832871249180145819684856046501991929035448066857973832035698020457/1942668892225729070919461906823518906642406839052139521251812409738904285205208498176"
+      ],
+      "graph_sha256": "be833ae45973578de898fc529b33ce0087497d9d7c2d862f3652709e65d193b2",
+      "intervention_bounds": [
+        "-1",
+        "1"
+      ],
+      "joint_first_moment_upper": "19007364487757204020910440142279165348011427803395173408208462221071826267073252757609/1942668892225729070919461906823518906642406839052139521251812409738904285205208498176",
+      "model_sha256": "e3540d89c1c894978bf46c1091354115d6bf0967fcb54e90edad346da84da9cc",
+      "nodes": 3,
+      "noise_ranges": [
+        {
+          "count": 512,
+          "node": 0,
+          "range": [
+            "-5280791438714195/4503599627370496",
+            "186047314434511/140737488355328"
+          ]
+        },
+        {
+          "count": 512,
+          "node": 1,
+          "range": [
+            "-3064706382253491/2251799813685248",
+            "6895116202991579/4503599627370496"
+          ]
+        },
+        {
+          "count": 512,
+          "node": 2,
+          "range": [
+            "-2934422530101263/2251799813685248",
+            "2060071594468369/1125899906842624"
+          ]
+        }
+      ],
+      "noise_values_sha256": "aba831509667abfad77b7d79966af7a81bd9b48f090f7371318bfc8daf24e737",
+      "not_proved": [
+        "true graph recovery",
+        "empirical residual independence in the true world",
+        "true noise-law distance",
+        "neural/program fidelity",
+        "population distribution recovery"
+      ],
+      "original_claim_closed": false,
+      "original_objective_achieved": false,
+      "program_sha256": "b74b241dd44e83369b95b002d2cd5a80438a9441a135d7cbf567aac8978d2966",
+      "schema": "ncd.empirical-scm-support.v1",
+      "scope": "Every compatible intervention subset, each assigned any real value in the declared closed interval; all empirical noise choices",
+      "semantic_scope": "Ideal real CDIR operations; constants are exact stored binary values; hardware rounding is not certified",
+      "status": "proved-scoped",
+      "steps": [
+        {
+          "all_do_union_range": [
+            "-177615382067849785/144115188075855872",
+            "181882393951943719/144115188075855872"
+          ],
+          "mechanism_range": [
+            "-8630056028995545/144115188075855872",
+            "-8630056028995545/144115188075855872"
+          ],
+          "natural_range": [
+            "-177615382067849785/144115188075855872",
+            "181882393951943719/144115188075855872"
+          ],
+          "node": 0
+        },
+        {
+          "all_do_union_range": [
+            "-24065950467543257394851645246003125/5192296858534827628530496329220096",
+            "221761284736730833176116942589652162076716597855777/93536104789177786765035829293842113257979682750464"
+          ],
+          "mechanism_range": [
+            "-16999218680731454288113855088416693/5192296858534827628530496329220096",
+            "78555323936627775218329068446541558183808095569441/93536104789177786765035829293842113257979682750464"
+          ],
+          "natural_range": [
+            "-24065950467543257394851645246003125/5192296858534827628530496329220096",
+            "221761284736730833176116942589652162076716597855777/93536104789177786765035829293842113257979682750464"
+          ],
+          "node": 1
+        },
+        {
+          "all_do_union_range": [
+            "-7551453608305008546832871249180145819684856046501991929035448066857973832035698020457/1942668892225729070919461906823518906642406839052139521251812409738904285205208498176",
+            "234452953266075974064363798689007095366069897468570684454559435966091/107839786668602559178668060348078522694548577690162289924414440996864"
+          ],
+          "mechanism_range": [
+            "-5019873611171719158137154828164860035692639006525306684769586973392618948159014506601/1942668892225729070919461906823518906642406839052139521251812409738904285205208498176",
+            "37137294991872398774055318556060885600466287860491976998796928992907/107839786668602559178668060348078522694548577690162289924414440996864"
+          ],
+          "natural_range": [
+            "-7551453608305008546832871249180145819684856046501991929035448066857973832035698020457/1942668892225729070919461906823518906642406839052139521251812409738904285205208498176",
+            "234452953266075974064363798689007095366069897468570684454559435966091/107839786668602559178668060348078522694548577690162289924414440996864"
+          ],
+          "node": 2
+        }
+      ],
+      "topological_order": [
+        0,
+        1,
+        2
+      ]
+    },
+    "active_graph/structured": {
+      "assumptions": [
+        "finite nonempty empirical noise arrays",
+        "valid acyclic declared parents",
+        "registered arithmetic operator subset"
+      ],
+      "coordinate_abs_upper": [
+        "181882393951943719/144115188075855872",
+        "700811418926858089481069877785911123970221854258181/374144419156711147060143317175368453031918731001856",
+        "13229744578549078612986082739403072304117902175417052541983619959943/6739986666787659948666753771754907668409286105635143120275902562304"
+      ],
+      "graph_sha256": "be833ae45973578de898fc529b33ce0087497d9d7c2d862f3652709e65d193b2",
+      "intervention_bounds": [
+        "-1",
+        "1"
+      ],
+      "joint_first_moment_upper": "34360726089090787157654528622915190975832133563168306961772948638855/6739986666787659948666753771754907668409286105635143120275902562304",
+      "model_sha256": "4d7c59368e4a33a3037d02bd618c1b1acabec7e61f8c47936de7f626cf17ceb3",
+      "nodes": 3,
+      "noise_ranges": [
+        {
+          "count": 512,
+          "node": 0,
+          "range": [
+            "-5280791438714195/4503599627370496",
+            "186047314434511/140737488355328"
+          ]
+        },
+        {
+          "count": 512,
+          "node": 1,
+          "range": [
+            "-3064706382253491/2251799813685248",
+            "6895116202991579/4503599627370496"
+          ]
+        },
+        {
+          "count": 512,
+          "node": 2,
+          "range": [
+            "-2934422530101263/2251799813685248",
+            "2060071594468369/1125899906842624"
+          ]
+        }
+      ],
+      "noise_values_sha256": "aba831509667abfad77b7d79966af7a81bd9b48f090f7371318bfc8daf24e737",
+      "not_proved": [
+        "true graph recovery",
+        "empirical residual independence in the true world",
+        "true noise-law distance",
+        "neural/program fidelity",
+        "population distribution recovery"
+      ],
+      "original_claim_closed": false,
+      "original_objective_achieved": false,
+      "program_sha256": "117d8165507d76dc29b7faeee90b04373a3c0a7aefe93b107c9a19fa1f3d33f8",
+      "schema": "ncd.empirical-scm-support.v1",
+      "scope": "Every compatible intervention subset, each assigned any real value in the declared closed interval; all empirical noise choices",
+      "semantic_scope": "Ideal real CDIR operations; constants are exact stored binary values; hardware rounding is not certified",
+      "status": "proved-scoped",
+      "steps": [
+        {
+          "all_do_union_range": [
+            "-177615382067849785/144115188075855872",
+            "181882393951943719/144115188075855872"
+          ],
+          "mechanism_range": [
+            "-8630056028995545/144115188075855872",
+            "-8630056028995545/144115188075855872"
+          ],
+          "natural_range": [
+            "-177615382067849785/144115188075855872",
+            "181882393951943719/144115188075855872"
+          ],
+          "node": 0
+        },
+        {
+          "all_do_union_range": [
+            "-700811418926858089481069877785911123970221854258181/374144419156711147060143317175368453031918731001856",
+            "219086454179356869/144115188075855872"
+          ],
+          "mechanism_range": [
+            "-191599728657852075868455817876399913127245746893829/374144419156711147060143317175368453031918731001856",
+            "-1557264316373659/144115188075855872"
+          ],
+          "natural_range": [
+            "-700811418926858089481069877785911123970221854258181/374144419156711147060143317175368453031918731001856",
+            "219086454179356869/144115188075855872"
+          ],
+          "node": 1
+        },
+        {
+          "all_do_union_range": [
+            "-13229744578549078612986082739403072304117902175417052541983619959943/6739986666787659948666753771754907668409286105635143120275902562304",
+            "4890445289867986759454888873280711/2596148429267413814265248164610048"
+          ],
+          "mechanism_range": [
+            "-4446562073868248397366131892738364765275994423095237304598652406919/6739986666787659948666753771754907668409286105635143120275902562304",
+            "140243605283390188747680762676423/2596148429267413814265248164610048"
+          ],
+          "natural_range": [
+            "-13229744578549078612986082739403072304117902175417052541983619959943/6739986666787659948666753771754907668409286105635143120275902562304",
+            "4890445289867986759454888873280711/2596148429267413814265248164610048"
+          ],
+          "node": 2
+        }
+      ],
+      "topological_order": [
+        0,
+        1,
+        2
+      ]
+    },
+    "observational_graph/baseline": {
+      "assumptions": [
+        "finite nonempty empirical noise arrays",
+        "valid acyclic declared parents",
+        "registered arithmetic operator subset"
+      ],
+      "coordinate_abs_upper": [
+        "181882393951943719/144115188075855872",
+        "108311297949302207/72057594037927936",
+        "1049166073676805/562949953421312"
+      ],
+      "graph_sha256": "927ce195e61213099de2acd61e123bbbba97af76cfe57bc11052c4f27bc68ea5",
+      "intervention_bounds": [
+        "-1",
+        "1"
+      ],
+      "joint_first_moment_upper": "667091504711810213/144115188075855872",
+      "model_sha256": "55369fa84f6146f65000898949b76ca0f5e9a54a6a8b57f1a62619ee5d0e34c4",
+      "nodes": 3,
+      "noise_ranges": [
+        {
+          "count": 512,
+          "node": 0,
+          "range": [
+            "-5280791438714195/4503599627370496",
+            "186047314434511/140737488355328"
+          ]
+        },
+        {
+          "count": 512,
+          "node": 1,
+          "range": [
+            "-3074757910863221/2251799813685248",
+            "6995723521810395/4503599627370496"
+          ]
+        },
+        {
+          "count": 512,
+          "node": 2,
+          "range": [
+            "-3136594626678799/2251799813685248",
+            "2024358035432465/1125899906842624"
+          ]
+        }
+      ],
+      "noise_values_sha256": "c12ad81c92c505530a69ccb348d72219ed5bf8575d6cf9d2f9fcdc1423dfc0bc",
+      "not_proved": [
+        "true graph recovery",
+        "empirical residual independence in the true world",
+        "true noise-law distance",
+        "neural/program fidelity",
+        "population distribution recovery"
+      ],
+      "original_claim_closed": false,
+      "original_objective_achieved": false,
+      "program_sha256": "eda48a2d02cb1fee4a49d7ec7c3b8bc363368e42b6b33d9bd3df05d233fa0fc8",
+      "schema": "ncd.empirical-scm-support.v1",
+      "scope": "Every compatible intervention subset, each assigned any real value in the declared closed interval; all empirical noise choices",
+      "semantic_scope": "Ideal real CDIR operations; constants are exact stored binary values; hardware rounding is not certified",
+      "status": "proved-scoped",
+      "steps": [
+        {
+          "all_do_union_range": [
+            "-177615382067849785/144115188075855872",
+            "181882393951943719/144115188075855872"
+          ],
+          "mechanism_range": [
+            "-8630056028995545/144115188075855872",
+            "-8630056028995545/144115188075855872"
+          ],
+          "natural_range": [
+            "-177615382067849785/144115188075855872",
+            "181882393951943719/144115188075855872"
+          ],
+          "node": 0
+        },
+        {
+          "all_do_union_range": [
+            "-102012531547287185/72057594037927936",
+            "108311297949302207/72057594037927936"
+          ],
+          "mechanism_range": [
+            "-3620278399664113/72057594037927936",
+            "-3620278399664113/72057594037927936"
+          ],
+          "natural_range": [
+            "-102012531547287185/72057594037927936",
+            "108311297949302207/72057594037927936"
+          ],
+          "node": 1
+        },
+        {
+          "all_do_union_range": [
+            "-1049166073676805/562949953421312",
+            "2988646402836509/2251799813685248"
+          ],
+          "mechanism_range": [
+            "-1060069668028421/2251799813685248",
+            "-1060069668028421/2251799813685248"
+          ],
+          "natural_range": [
+            "-1049166073676805/562949953421312",
+            "2988646402836509/2251799813685248"
+          ],
+          "node": 2
+        }
+      ],
+      "topological_order": [
+        0,
+        1,
+        2
+      ]
+    },
+    "observational_graph/structured": {
+      "assumptions": [
+        "finite nonempty empirical noise arrays",
+        "valid acyclic declared parents",
+        "registered arithmetic operator subset"
+      ],
+      "coordinate_abs_upper": [
+        "181882393951943719/144115188075855872",
+        "108311297949302207/72057594037927936",
+        "1049166073676805/562949953421312"
+      ],
+      "graph_sha256": "927ce195e61213099de2acd61e123bbbba97af76cfe57bc11052c4f27bc68ea5",
+      "intervention_bounds": [
+        "-1",
+        "1"
+      ],
+      "joint_first_moment_upper": "667091504711810213/144115188075855872",
+      "model_sha256": "55369fa84f6146f65000898949b76ca0f5e9a54a6a8b57f1a62619ee5d0e34c4",
+      "nodes": 3,
+      "noise_ranges": [
+        {
+          "count": 512,
+          "node": 0,
+          "range": [
+            "-5280791438714195/4503599627370496",
+            "186047314434511/140737488355328"
+          ]
+        },
+        {
+          "count": 512,
+          "node": 1,
+          "range": [
+            "-3074757910863221/2251799813685248",
+            "6995723521810395/4503599627370496"
+          ]
+        },
+        {
+          "count": 512,
+          "node": 2,
+          "range": [
+            "-3136594626678799/2251799813685248",
+            "2024358035432465/1125899906842624"
+          ]
+        }
+      ],
+      "noise_values_sha256": "c12ad81c92c505530a69ccb348d72219ed5bf8575d6cf9d2f9fcdc1423dfc0bc",
+      "not_proved": [
+        "true graph recovery",
+        "empirical residual independence in the true world",
+        "true noise-law distance",
+        "neural/program fidelity",
+        "population distribution recovery"
+      ],
+      "original_claim_closed": false,
+      "original_objective_achieved": false,
+      "program_sha256": "eda48a2d02cb1fee4a49d7ec7c3b8bc363368e42b6b33d9bd3df05d233fa0fc8",
+      "schema": "ncd.empirical-scm-support.v1",
+      "scope": "Every compatible intervention subset, each assigned any real value in the declared closed interval; all empirical noise choices",
+      "semantic_scope": "Ideal real CDIR operations; constants are exact stored binary values; hardware rounding is not certified",
+      "status": "proved-scoped",
+      "steps": [
+        {
+          "all_do_union_range": [
+            "-177615382067849785/144115188075855872",
+            "181882393951943719/144115188075855872"
+          ],
+          "mechanism_range": [
+            "-8630056028995545/144115188075855872",
+            "-8630056028995545/144115188075855872"
+          ],
+          "natural_range": [
+            "-177615382067849785/144115188075855872",
+            "181882393951943719/144115188075855872"
+          ],
+          "node": 0
+        },
+        {
+          "all_do_union_range": [
+            "-102012531547287185/72057594037927936",
+            "108311297949302207/72057594037927936"
+          ],
+          "mechanism_range": [
+            "-3620278399664113/72057594037927936",
+            "-3620278399664113/72057594037927936"
+          ],
+          "natural_range": [
+            "-102012531547287185/72057594037927936",
+            "108311297949302207/72057594037927936"
+          ],
+          "node": 1
+        },
+        {
+          "all_do_union_range": [
+            "-1049166073676805/562949953421312",
+            "2988646402836509/2251799813685248"
+          ],
+          "mechanism_range": [
+            "-1060069668028421/2251799813685248",
+            "-1060069668028421/2251799813685248"
+          ],
+          "natural_range": [
+            "-1049166073676805/562949953421312",
+            "2988646402836509/2251799813685248"
+          ],
+          "node": 2
+        }
+      ],
+      "topological_order": [
+        0,
+        1,
+        2
+      ]
+    },
+    "oracle_graph_diagnostic/baseline": {
+      "assumptions": [
+        "finite nonempty empirical noise arrays",
+        "valid acyclic declared parents",
+        "registered arithmetic operator subset"
+      ],
+      "coordinate_abs_upper": [
+        "181882393951943719/144115188075855872",
+        "24065950467543257394851645246003125/5192296858534827628530496329220096",
+        "7551453608305008546832871249180145819684856046501991929035448066857973832035698020457/1942668892225729070919461906823518906642406839052139521251812409738904285205208498176"
+      ],
+      "graph_sha256": "be833ae45973578de898fc529b33ce0087497d9d7c2d862f3652709e65d193b2",
+      "intervention_bounds": [
+        "-1",
+        "1"
+      ],
+      "joint_first_moment_upper": "19007364487757204020910440142279165348011427803395173408208462221071826267073252757609/1942668892225729070919461906823518906642406839052139521251812409738904285205208498176",
+      "model_sha256": "e3540d89c1c894978bf46c1091354115d6bf0967fcb54e90edad346da84da9cc",
+      "nodes": 3,
+      "noise_ranges": [
+        {
+          "count": 512,
+          "node": 0,
+          "range": [
+            "-5280791438714195/4503599627370496",
+            "186047314434511/140737488355328"
+          ]
+        },
+        {
+          "count": 512,
+          "node": 1,
+          "range": [
+            "-3064706382253491/2251799813685248",
+            "6895116202991579/4503599627370496"
+          ]
+        },
+        {
+          "count": 512,
+          "node": 2,
+          "range": [
+            "-2934422530101263/2251799813685248",
+            "2060071594468369/1125899906842624"
+          ]
+        }
+      ],
+      "noise_values_sha256": "aba831509667abfad77b7d79966af7a81bd9b48f090f7371318bfc8daf24e737",
+      "not_proved": [
+        "true graph recovery",
+        "empirical residual independence in the true world",
+        "true noise-law distance",
+        "neural/program fidelity",
+        "population distribution recovery"
+      ],
+      "original_claim_closed": false,
+      "original_objective_achieved": false,
+      "program_sha256": "b74b241dd44e83369b95b002d2cd5a80438a9441a135d7cbf567aac8978d2966",
+      "schema": "ncd.empirical-scm-support.v1",
+      "scope": "Every compatible intervention subset, each assigned any real value in the declared closed interval; all empirical noise choices",
+      "semantic_scope": "Ideal real CDIR operations; constants are exact stored binary values; hardware rounding is not certified",
+      "status": "proved-scoped",
+      "steps": [
+        {
+          "all_do_union_range": [
+            "-177615382067849785/144115188075855872",
+            "181882393951943719/144115188075855872"
+          ],
+          "mechanism_range": [
+            "-8630056028995545/144115188075855872",
+            "-8630056028995545/144115188075855872"
+          ],
+          "natural_range": [
+            "-177615382067849785/144115188075855872",
+            "181882393951943719/144115188075855872"
+          ],
+          "node": 0
+        },
+        {
+          "all_do_union_range": [
+            "-24065950467543257394851645246003125/5192296858534827628530496329220096",
+            "221761284736730833176116942589652162076716597855777/93536104789177786765035829293842113257979682750464"
+          ],
+          "mechanism_range": [
+            "-16999218680731454288113855088416693/5192296858534827628530496329220096",
+            "78555323936627775218329068446541558183808095569441/93536104789177786765035829293842113257979682750464"
+          ],
+          "natural_range": [
+            "-24065950467543257394851645246003125/5192296858534827628530496329220096",
+            "221761284736730833176116942589652162076716597855777/93536104789177786765035829293842113257979682750464"
+          ],
+          "node": 1
+        },
+        {
+          "all_do_union_range": [
+            "-7551453608305008546832871249180145819684856046501991929035448066857973832035698020457/1942668892225729070919461906823518906642406839052139521251812409738904285205208498176",
+            "234452953266075974064363798689007095366069897468570684454559435966091/107839786668602559178668060348078522694548577690162289924414440996864"
+          ],
+          "mechanism_range": [
+            "-5019873611171719158137154828164860035692639006525306684769586973392618948159014506601/1942668892225729070919461906823518906642406839052139521251812409738904285205208498176",
+            "37137294991872398774055318556060885600466287860491976998796928992907/107839786668602559178668060348078522694548577690162289924414440996864"
+          ],
+          "natural_range": [
+            "-7551453608305008546832871249180145819684856046501991929035448066857973832035698020457/1942668892225729070919461906823518906642406839052139521251812409738904285205208498176",
+            "234452953266075974064363798689007095366069897468570684454559435966091/107839786668602559178668060348078522694548577690162289924414440996864"
+          ],
+          "node": 2
+        }
+      ],
+      "topological_order": [
+        0,
+        1,
+        2
+      ]
+    },
+    "oracle_graph_diagnostic/structured": {
+      "assumptions": [
+        "finite nonempty empirical noise arrays",
+        "valid acyclic declared parents",
+        "registered arithmetic operator subset"
+      ],
+      "coordinate_abs_upper": [
+        "181882393951943719/144115188075855872",
+        "700811418926858089481069877785911123970221854258181/374144419156711147060143317175368453031918731001856",
+        "13229744578549078612986082739403072304117902175417052541983619959943/6739986666787659948666753771754907668409286105635143120275902562304"
+      ],
+      "graph_sha256": "be833ae45973578de898fc529b33ce0087497d9d7c2d862f3652709e65d193b2",
+      "intervention_bounds": [
+        "-1",
+        "1"
+      ],
+      "joint_first_moment_upper": "34360726089090787157654528622915190975832133563168306961772948638855/6739986666787659948666753771754907668409286105635143120275902562304",
+      "model_sha256": "4d7c59368e4a33a3037d02bd618c1b1acabec7e61f8c47936de7f626cf17ceb3",
+      "nodes": 3,
+      "noise_ranges": [
+        {
+          "count": 512,
+          "node": 0,
+          "range": [
+            "-5280791438714195/4503599627370496",
+            "186047314434511/140737488355328"
+          ]
+        },
+        {
+          "count": 512,
+          "node": 1,
+          "range": [
+            "-3064706382253491/2251799813685248",
+            "6895116202991579/4503599627370496"
+          ]
+        },
+        {
+          "count": 512,
+          "node": 2,
+          "range": [
+            "-2934422530101263/2251799813685248",
+            "2060071594468369/1125899906842624"
+          ]
+        }
+      ],
+      "noise_values_sha256": "aba831509667abfad77b7d79966af7a81bd9b48f090f7371318bfc8daf24e737",
+      "not_proved": [
+        "true graph recovery",
+        "empirical residual independence in the true world",
+        "true noise-law distance",
+        "neural/program fidelity",
+        "population distribution recovery"
+      ],
+      "original_claim_closed": false,
+      "original_objective_achieved": false,
+      "program_sha256": "117d8165507d76dc29b7faeee90b04373a3c0a7aefe93b107c9a19fa1f3d33f8",
+      "schema": "ncd.empirical-scm-support.v1",
+      "scope": "Every compatible intervention subset, each assigned any real value in the declared closed interval; all empirical noise choices",
+      "semantic_scope": "Ideal real CDIR operations; constants are exact stored binary values; hardware rounding is not certified",
+      "status": "proved-scoped",
+      "steps": [
+        {
+          "all_do_union_range": [
+            "-177615382067849785/144115188075855872",
+            "181882393951943719/144115188075855872"
+          ],
+          "mechanism_range": [
+            "-8630056028995545/144115188075855872",
+            "-8630056028995545/144115188075855872"
+          ],
+          "natural_range": [
+            "-177615382067849785/144115188075855872",
+            "181882393951943719/144115188075855872"
+          ],
+          "node": 0
+        },
+        {
+          "all_do_union_range": [
+            "-700811418926858089481069877785911123970221854258181/374144419156711147060143317175368453031918731001856",
+            "219086454179356869/144115188075855872"
+          ],
+          "mechanism_range": [
+            "-191599728657852075868455817876399913127245746893829/374144419156711147060143317175368453031918731001856",
+            "-1557264316373659/144115188075855872"
+          ],
+          "natural_range": [
+            "-700811418926858089481069877785911123970221854258181/374144419156711147060143317175368453031918731001856",
+            "219086454179356869/144115188075855872"
+          ],
+          "node": 1
+        },
+        {
+          "all_do_union_range": [
+            "-13229744578549078612986082739403072304117902175417052541983619959943/6739986666787659948666753771754907668409286105635143120275902562304",
+            "4890445289867986759454888873280711/2596148429267413814265248164610048"
+          ],
+          "mechanism_range": [
+            "-4446562073868248397366131892738364765275994423095237304598652406919/6739986666787659948666753771754907668409286105635143120275902562304",
+            "140243605283390188747680762676423/2596148429267413814265248164610048"
+          ],
+          "natural_range": [
+            "-13229744578549078612986082739403072304117902175417052541983619959943/6739986666787659948666753771754907668409286105635143120275902562304",
+            "4890445289867986759454888873280711/2596148429267413814265248164610048"
+          ],
+          "node": 2
+        }
+      ],
+      "topological_order": [
+        0,
+        1,
+        2
+      ]
+    }
+  },
+  "graph_oracle_is_diagnostic_only": true,
+  "original_claim_closed": false,
+  "original_objective_achieved": false,
+  "population_tv_boundaries": {
+    "active_graph/baseline": {
+      "claim": "The finite empirical-residual SCM is within total-variation distance strictly below 1 of the ideal continuous true SCM law",
+      "estimated_joint_atom_count_upper": "134217728",
+      "estimated_model_sha256": "e3540d89c1c894978bf46c1091354115d6bf0967fcb54e90edad346da84da9cc",
+      "intervention_scope": "Every compatible intervention subset leaving at least one node un-intervened; each observed do value is in [-1,1]",
+      "node_count": 3,
+      "not_proved": [
+        "small Wasserstein distance fails",
+        "fully intervened laws are different",
+        "the true graph or mechanisms were recovered",
+        "the original compound causal-decompilation objective is resolved"
+      ],
+      "original_claim_closed": false,
+      "original_objective_achieved": false,
+      "proof": "The estimated joint law assigns probability one to its finite outcome set. Any free true coordinate equals a function of its parents plus its own independent continuous noise; its conditional and marginal laws have no atoms. Thus the true joint law assigns probability zero to that finite set.",
+      "schema": "ncd.population-empirical-tv-boundary.v1",
+      "semantic_scope": "ideal continuous population laws, not deterministic seeded NumPy PRNG or floating device measures",
+      "status": "refuted-scoped",
+      "support_certificate_sha256": "4598279b6e74187c999a973479c7b3aaf0fd53543efbbaefcc8b315f5d997a81",
+      "total_variation_distance": "1",
+      "true_noise_families": [
+        "laplace",
+        "laplace",
+        "laplace"
+      ],
+      "true_world_sha256": "a213f6c949c3f01b982c9cd0498bc59b282945fa9e9ea750f37e2acdfddf4539",
+      "witness_event": "The finite set of all estimated joint outcomes for the fixed intervention"
+    },
+    "active_graph/structured": {
+      "claim": "The finite empirical-residual SCM is within total-variation distance strictly below 1 of the ideal continuous true SCM law",
+      "estimated_joint_atom_count_upper": "134217728",
+      "estimated_model_sha256": "4d7c59368e4a33a3037d02bd618c1b1acabec7e61f8c47936de7f626cf17ceb3",
+      "intervention_scope": "Every compatible intervention subset leaving at least one node un-intervened; each observed do value is in [-1,1]",
+      "node_count": 3,
+      "not_proved": [
+        "small Wasserstein distance fails",
+        "fully intervened laws are different",
+        "the true graph or mechanisms were recovered",
+        "the original compound causal-decompilation objective is resolved"
+      ],
+      "original_claim_closed": false,
+      "original_objective_achieved": false,
+      "proof": "The estimated joint law assigns probability one to its finite outcome set. Any free true coordinate equals a function of its parents plus its own independent continuous noise; its conditional and marginal laws have no atoms. Thus the true joint law assigns probability zero to that finite set.",
+      "schema": "ncd.population-empirical-tv-boundary.v1",
+      "semantic_scope": "ideal continuous population laws, not deterministic seeded NumPy PRNG or floating device measures",
+      "status": "refuted-scoped",
+      "support_certificate_sha256": "12cafc9487fb662b0a9d9a2c487f8777d4e654beb9695ff4d1e3dee1ceedbb11",
+      "total_variation_distance": "1",
+      "true_noise_families": [
+        "laplace",
+        "laplace",
+        "laplace"
+      ],
+      "true_world_sha256": "a213f6c949c3f01b982c9cd0498bc59b282945fa9e9ea750f37e2acdfddf4539",
+      "witness_event": "The finite set of all estimated joint outcomes for the fixed intervention"
+    },
+    "observational_graph/baseline": {
+      "claim": "The finite empirical-residual SCM is within total-variation distance strictly below 1 of the ideal continuous true SCM law",
+      "estimated_joint_atom_count_upper": "134217728",
+      "estimated_model_sha256": "55369fa84f6146f65000898949b76ca0f5e9a54a6a8b57f1a62619ee5d0e34c4",
+      "intervention_scope": "Every compatible intervention subset leaving at least one node un-intervened; each observed do value is in [-1,1]",
+      "node_count": 3,
+      "not_proved": [
+        "small Wasserstein distance fails",
+        "fully intervened laws are different",
+        "the true graph or mechanisms were recovered",
+        "the original compound causal-decompilation objective is resolved"
+      ],
+      "original_claim_closed": false,
+      "original_objective_achieved": false,
+      "proof": "The estimated joint law assigns probability one to its finite outcome set. Any free true coordinate equals a function of its parents plus its own independent continuous noise; its conditional and marginal laws have no atoms. Thus the true joint law assigns probability zero to that finite set.",
+      "schema": "ncd.population-empirical-tv-boundary.v1",
+      "semantic_scope": "ideal continuous population laws, not deterministic seeded NumPy PRNG or floating device measures",
+      "status": "refuted-scoped",
+      "support_certificate_sha256": "9216945a178446e9b7937a3007fd4213a917c6b898caeb1723d6de039cbf61bc",
+      "total_variation_distance": "1",
+      "true_noise_families": [
+        "laplace",
+        "laplace",
+        "laplace"
+      ],
+      "true_world_sha256": "a213f6c949c3f01b982c9cd0498bc59b282945fa9e9ea750f37e2acdfddf4539",
+      "witness_event": "The finite set of all estimated joint outcomes for the fixed intervention"
+    },
+    "observational_graph/structured": {
+      "claim": "The finite empirical-residual SCM is within total-variation distance strictly below 1 of the ideal continuous true SCM law",
+      "estimated_joint_atom_count_upper": "134217728",
+      "estimated_model_sha256": "55369fa84f6146f65000898949b76ca0f5e9a54a6a8b57f1a62619ee5d0e34c4",
+      "intervention_scope": "Every compatible intervention subset leaving at least one node un-intervened; each observed do value is in [-1,1]",
+      "node_count": 3,
+      "not_proved": [
+        "small Wasserstein distance fails",
+        "fully intervened laws are different",
+        "the true graph or mechanisms were recovered",
+        "the original compound causal-decompilation objective is resolved"
+      ],
+      "original_claim_closed": false,
+      "original_objective_achieved": false,
+      "proof": "The estimated joint law assigns probability one to its finite outcome set. Any free true coordinate equals a function of its parents plus its own independent continuous noise; its conditional and marginal laws have no atoms. Thus the true joint law assigns probability zero to that finite set.",
+      "schema": "ncd.population-empirical-tv-boundary.v1",
+      "semantic_scope": "ideal continuous population laws, not deterministic seeded NumPy PRNG or floating device measures",
+      "status": "refuted-scoped",
+      "support_certificate_sha256": "9216945a178446e9b7937a3007fd4213a917c6b898caeb1723d6de039cbf61bc",
+      "total_variation_distance": "1",
+      "true_noise_families": [
+        "laplace",
+        "laplace",
+        "laplace"
+      ],
+      "true_world_sha256": "a213f6c949c3f01b982c9cd0498bc59b282945fa9e9ea750f37e2acdfddf4539",
+      "witness_event": "The finite set of all estimated joint outcomes for the fixed intervention"
+    },
+    "oracle_graph_diagnostic/baseline": {
+      "claim": "The finite empirical-residual SCM is within total-variation distance strictly below 1 of the ideal continuous true SCM law",
+      "estimated_joint_atom_count_upper": "134217728",
+      "estimated_model_sha256": "e3540d89c1c894978bf46c1091354115d6bf0967fcb54e90edad346da84da9cc",
+      "intervention_scope": "Every compatible intervention subset leaving at least one node un-intervened; each observed do value is in [-1,1]",
+      "node_count": 3,
+      "not_proved": [
+        "small Wasserstein distance fails",
+        "fully intervened laws are different",
+        "the true graph or mechanisms were recovered",
+        "the original compound causal-decompilation objective is resolved"
+      ],
+      "original_claim_closed": false,
+      "original_objective_achieved": false,
+      "proof": "The estimated joint law assigns probability one to its finite outcome set. Any free true coordinate equals a function of its parents plus its own independent continuous noise; its conditional and marginal laws have no atoms. Thus the true joint law assigns probability zero to that finite set.",
+      "schema": "ncd.population-empirical-tv-boundary.v1",
+      "semantic_scope": "ideal continuous population laws, not deterministic seeded NumPy PRNG or floating device measures",
+      "status": "refuted-scoped",
+      "support_certificate_sha256": "4598279b6e74187c999a973479c7b3aaf0fd53543efbbaefcc8b315f5d997a81",
+      "total_variation_distance": "1",
+      "true_noise_families": [
+        "laplace",
+        "laplace",
+        "laplace"
+      ],
+      "true_world_sha256": "a213f6c949c3f01b982c9cd0498bc59b282945fa9e9ea750f37e2acdfddf4539",
+      "witness_event": "The finite set of all estimated joint outcomes for the fixed intervention"
+    },
+    "oracle_graph_diagnostic/structured": {
+      "claim": "The finite empirical-residual SCM is within total-variation distance strictly below 1 of the ideal continuous true SCM law",
+      "estimated_joint_atom_count_upper": "134217728",
+      "estimated_model_sha256": "4d7c59368e4a33a3037d02bd618c1b1acabec7e61f8c47936de7f626cf17ceb3",
+      "intervention_scope": "Every compatible intervention subset leaving at least one node un-intervened; each observed do value is in [-1,1]",
+      "node_count": 3,
+      "not_proved": [
+        "small Wasserstein distance fails",
+        "fully intervened laws are different",
+        "the true graph or mechanisms were recovered",
+        "the original compound causal-decompilation objective is resolved"
+      ],
+      "original_claim_closed": false,
+      "original_objective_achieved": false,
+      "proof": "The estimated joint law assigns probability one to its finite outcome set. Any free true coordinate equals a function of its parents plus its own independent continuous noise; its conditional and marginal laws have no atoms. Thus the true joint law assigns probability zero to that finite set.",
+      "schema": "ncd.population-empirical-tv-boundary.v1",
+      "semantic_scope": "ideal continuous population laws, not deterministic seeded NumPy PRNG or floating device measures",
+      "status": "refuted-scoped",
+      "support_certificate_sha256": "12cafc9487fb662b0a9d9a2c487f8777d4e654beb9695ff4d1e3dee1ceedbb11",
+      "total_variation_distance": "1",
+      "true_noise_families": [
+        "laplace",
+        "laplace",
+        "laplace"
+      ],
+      "true_world_sha256": "a213f6c949c3f01b982c9cd0498bc59b282945fa9e9ea750f37e2acdfddf4539",
+      "witness_event": "The finite set of all estimated joint outcomes for the fixed intervention"
+    }
+  },
+  "schema": "ncd.scm-population-unit-certificate.v1",
+  "source_model_sha256": {
+    "active_graph/baseline": "a375735748e9e86ba9613057e1c78dfb1c8cb486f4033733a49a3caf45a5f611",
+    "active_graph/structured": "6d8e802cc245f55c62a9b7200c370563f639103368ce6f6215600233f5aaa351",
+    "observational_graph/baseline": "12493b03eeae1e7eb890254f3bc2c73133fb9e3369c4017c40b9ff8a800f66f1",
+    "observational_graph/structured": "12493b03eeae1e7eb890254f3bc2c73133fb9e3369c4017c40b9ff8a800f66f1",
+    "oracle_graph_diagnostic/baseline": "a375735748e9e86ba9613057e1c78dfb1c8cb486f4033733a49a3caf45a5f611",
+    "oracle_graph_diagnostic/structured": "6d8e802cc245f55c62a9b7200c370563f639103368ce6f6215600233f5aaa351"
+  },
+  "true_first_moment": {
+    "argument": "Canonical |Z_j| is bounded by C_j times product_k (1+|U_k|)^d_jk. Independent ideal exogenous noises factor the needed moment; Student5 has absolute moments only below 5. Failure of this sufficient condition does not prove divergence.",
+    "intervention_scope": "All compatible subsets with observed do values in [-1,1]",
+    "moment_order": "1",
+    "noise_laws": [
+      "laplace",
+      "laplace",
+      "laplace"
+    ],
+    "original_claim_closed": false,
+    "original_objective_achieved": false,
+    "rows": [
+      {
+        "canonical_growth_constant": "1",
+        "growth_exponents": [
+          1,
+          0,
+          0
+        ],
+        "moment_obligations": [
+          {
+            "available": true,
+            "noise_family": "laplace",
+            "noise_node": 0,
+            "required_moment": "1"
+          }
+        ],
+        "node": 0,
+        "observed_growth_constant": "1",
+        "status": "proved-scoped"
+      },
+      {
+        "canonical_growth_constant": "11695492310405933/9007199254740992",
+        "growth_exponents": [
+          2,
+          1,
+          0
+        ],
+        "moment_obligations": [
+          {
+            "available": true,
+            "noise_family": "laplace",
+            "noise_node": 0,
+            "required_moment": "2"
+          },
+          {
+            "available": true,
+            "noise_family": "laplace",
+            "noise_node": 1,
+            "required_moment": "1"
+          }
+        ],
+        "node": 1,
+        "observed_growth_constant": "11695492310405933/9007199254740992",
+        "status": "proved-scoped"
+      },
+      {
+        "canonical_growth_constant": "5526523584124966685136094800277972014817706077919/2923003274661805836407369665432566039311865085952",
+        "growth_exponents": [
+          4,
+          2,
+          1
+        ],
+        "moment_obligations": [
+          {
+            "available": true,
+            "noise_family": "laplace",
+            "noise_node": 0,
+            "required_moment": "4"
+          },
+          {
+            "available": true,
+            "noise_family": "laplace",
+            "noise_node": 1,
+            "required_moment": "2"
+          },
+          {
+            "available": true,
+            "noise_family": "laplace",
+            "noise_node": 2,
+            "required_moment": "1"
+          }
+        ],
+        "node": 2,
+        "observed_growth_constant": "5526523584124966685136094800277972014817706077919/2923003274661805836407369665432566039311865085952",
+        "status": "proved-scoped"
+      }
+    ],
+    "schema": "ncd.true-scm-moment-induction.v1",
+    "semantic_scope": "Ideal continuous mathematical noise laws; finite-state PRNG and hardware execution are not certified",
+    "status": "proved-scoped",
+    "true_noise_independence": "a property of the specified mathematical generator, not inferred from data",
+    "world_sha256": "a213f6c949c3f01b982c9cd0498bc59b282945fa9e9ea750f37e2acdfddf4539"
+  },
+  "true_second_moment": {
+    "argument": "Canonical |Z_j| is bounded by C_j times product_k (1+|U_k|)^d_jk. Independent ideal exogenous noises factor the needed moment; Student5 has absolute moments only below 5. Failure of this sufficient condition does not prove divergence.",
+    "intervention_scope": "All compatible subsets with observed do values in [-1,1]",
+    "moment_order": "2",
+    "noise_laws": [
+      "laplace",
+      "laplace",
+      "laplace"
+    ],
+    "original_claim_closed": false,
+    "original_objective_achieved": false,
+    "rows": [
+      {
+        "canonical_growth_constant": "1",
+        "growth_exponents": [
+          1,
+          0,
+          0
+        ],
+        "moment_obligations": [
+          {
+            "available": true,
+            "noise_family": "laplace",
+            "noise_node": 0,
+            "required_moment": "2"
+          }
+        ],
+        "node": 0,
+        "observed_growth_constant": "1",
+        "status": "proved-scoped"
+      },
+      {
+        "canonical_growth_constant": "11695492310405933/9007199254740992",
+        "growth_exponents": [
+          2,
+          1,
+          0
+        ],
+        "moment_obligations": [
+          {
+            "available": true,
+            "noise_family": "laplace",
+            "noise_node": 0,
+            "required_moment": "4"
+          },
+          {
+            "available": true,
+            "noise_family": "laplace",
+            "noise_node": 1,
+            "required_moment": "2"
+          }
+        ],
+        "node": 1,
+        "observed_growth_constant": "11695492310405933/9007199254740992",
+        "status": "proved-scoped"
+      },
+      {
+        "canonical_growth_constant": "5526523584124966685136094800277972014817706077919/2923003274661805836407369665432566039311865085952",
+        "growth_exponents": [
+          4,
+          2,
+          1
+        ],
+        "moment_obligations": [
+          {
+            "available": true,
+            "noise_family": "laplace",
+            "noise_node": 0,
+            "required_moment": "8"
+          },
+          {
+            "available": true,
+            "noise_family": "laplace",
+            "noise_node": 1,
+            "required_moment": "4"
+          },
+          {
+            "available": true,
+            "noise_family": "laplace",
+            "noise_node": 2,
+            "required_moment": "2"
+          }
+        ],
+        "node": 2,
+        "observed_growth_constant": "5526523584124966685136094800277972014817706077919/2923003274661805836407369665432566039311865085952",
+        "status": "proved-scoped"
+      }
+    ],
+    "schema": "ncd.true-scm-moment-induction.v1",
+    "semantic_scope": "Ideal continuous mathematical noise laws; finite-state PRNG and hardware execution are not certified",
+    "status": "proved-scoped",
+    "true_noise_independence": "a property of the specified mathematical generator, not inferred from data",
+    "world_sha256": "a213f6c949c3f01b982c9cd0498bc59b282945fa9e9ea750f37e2acdfddf4539"
+  },
+  "unit": "seed_8101_n3_test_function_3",
+  "world_id": "7ab1fc054a93f335cc850fcb",
+  "world_path": "worlds/n3_test_function_3/world.json",
+  "world_sha256": "c3e7ed632673ef978e4739d014c1b8885b7c6c12616d1d961f5897e1e6c1db11"
+}
