@@ -65,3 +65,9 @@ four rates for joint 99% confidence, conditional on independent world
 draws from the fixed stratified synthetic generator. Reusing an exogenous
 draw across do conditions never increases the sample count. These
 finite-sample intervals do not prove universal causal recovery.
+
+The four-rate analysis code was fixed after the first confirmation worlds
+had already been inspected. Its simultaneous intervals are reported as
+exploratory uncertainty summaries, not as a prospectively registered 99%
+scientific guarantee. The originally frozen gate and all failure outcomes
+remain unchanged.

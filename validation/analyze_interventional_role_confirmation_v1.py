@@ -97,6 +97,8 @@ def compute():
         "by_nodes": by_nodes,
         "oracle_noise_used_for_rollout": True,
         "recovered_noise_law_validated": False,
+        "analysis_fixed_after_initial_confirmation_worlds_seen": True,
+        "confirmatory_99_percent_claim_established": False,
         "original_claim_closed": False,
         "original_objective_achieved": False,
     }
