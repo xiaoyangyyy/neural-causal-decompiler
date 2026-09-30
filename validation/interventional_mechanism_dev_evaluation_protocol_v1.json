@@ -1,0 +1,30 @@
+{
+  "control_training_plan": "validation/interventional_mechanism_dev_control_training_protocol_v1.json",
+  "control_training_plan_sha256": "1027d7212222fee8d5922dcc55f80dc04eeacf3efa023fc9da9be1bc3dc07b5a",
+  "discovery": "runs/interventional_mechanism_dev_v2/candidate/discovery.npz",
+  "discovery_sha256": "245d67e95128d391a3eea1284fa2c86ffd9f2615322f21232b20cfdee300ac57",
+  "evaluation_rows": 512,
+  "evaluation_source": "heldout_eval_exogenous_v1",
+  "independent_confirmation_worlds": 0,
+  "intervention_family": "observation, all three single-node +/-1, do(0=1,1=-1), do(0=-1,2=1)",
+  "mixed_training_plan": "validation/interventional_mechanism_dev_training_protocol_v1.json",
+  "mixed_training_plan_sha256": "f560927733bc616149b79aa4b38823cbae07173214450ec30a1bf94eaa50355b",
+  "original_claim_closed": false,
+  "original_normalized_mse_threshold": 0.01,
+  "original_objective_achieved": false,
+  "output": "runs/interventional_mechanism_dev_comparison_v1.json",
+  "relative_improvement_rule": "strict_max_executed_normalized_mae_reduction",
+  "same_exogenous_draws_across_interventions": true,
+  "schema": "ncd.interventional-mechanism-dev-evaluation-plan.v1",
+  "source_sha256": {
+    "ncd/graphs.py": "119ef2757b9200c05b3f2fddebf898bf189e4844e6010d29abf61480764085fc",
+    "ncd/mechanisms.py": "35f78ebe2e2051a15d0b22e145b702146d169e53e4dce349c8bdc9276b389624",
+    "ncd/multiverse.py": "9746dd2c23015e5138c65398065dfc20d1bb34cc8aaca2f5109e326eb1f19883",
+    "ncd/worlds.py": "48801c89a8914adba782c519780e3a253d6043a8d91ffa99186f886a0743aa39",
+    "validation/evaluate_interventional_mechanism_dev_v1.py": "33854fa84fcd64949c9e3a5fff7f8177e1251babce50f70be86ed4d5b77976f0"
+  },
+  "status": "frozen-pending-training",
+  "truth_world": "runs/interventional_mechanism_dev_v2/truth_only/world.json",
+  "truth_world_sha256": "9d8bf69bb19658f9cf262ddb13f64dac0509c22e2518cca536f5a4e1d558c889",
+  "world_id": "2aee0812fc5e415773d0252d"
+}
