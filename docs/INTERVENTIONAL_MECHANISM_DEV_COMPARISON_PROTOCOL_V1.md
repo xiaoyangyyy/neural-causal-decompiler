@@ -65,3 +65,11 @@ the frozen paired-do evaluator and records hashes and resources for every
 stage. It never treats a stale status file as proof that the formal process
 has stopped. The handoff has a no-training precheck and source tests; its
 result remains development-only even if all stages succeed.
+
+The shared normalization is the per-node standard deviation of the frozen
+96-row discovery sample, clipped below at 0.05. It is fixed before either
+training arm runs and is identical between arms. It is not the separately
+learned `target_training_scale` of either arm, so the 0.01 comparison here
+is a development diagnostic under this declared scale; passing it alone
+would not satisfy an original claim whose denominator is the frozen
+mechanism's own training scale.
