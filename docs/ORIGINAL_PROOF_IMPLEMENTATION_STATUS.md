@@ -240,3 +240,21 @@ misspecification. See docs/FIXED_SCM_INTERVENTION_OBSTRUCTION_V1.md
 and validation/fixed_scm_intervention_obstruction_verification_v1.json.
 This is oracle-assisted same-world development evidence about one
 candidate; all original R10 atoms remain unresolved.
+
+## Frozen Tanh mechanism versus archived symbolic candidate
+
+An oracle-free network-fidelity obstruction now complements the fixed
+truth and noise comparisons. The archived child-1 frozen network has
+two Tanh layers and exact stored-weight absolute output bound
+85170555198899581/36028797018963968. Its archived symbolic program
+has a nonzero quadratic ray on x0=x2=t. At t=2 the exact real-semantic
+absolute error is at least
+13386194939609575/9007199254740992, or 2.1310513332 times the
+saved training output scale. An independent verifier reconstructs the
+polynomial from three evaluations and rechecks the original payload
+and source hashes. This proves failure of this *fixed program* on the
+all-real parent domain, not failure of every program or the original
+intervention family's bounded-domain contract. PyTorch rounding is not
+certified. See docs/FIXED_TANH_NEURAL_SYMBOLIC_OBSTRUCTION_V1.md and
+validation/fixed_tanh_neural_symbolic_obstruction_verification_v1.json.
+The original R10.mechanism claim remains unresolved.
