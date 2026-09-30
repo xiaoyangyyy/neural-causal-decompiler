@@ -1,0 +1,146 @@
+{
+  "conditioning": "one shared exogenous state for baseline and every do response",
+  "device_rounding_certified": false,
+  "estimator_input": {
+    "baseline": [
+      "0",
+      "0",
+      "0"
+    ],
+    "curvature_bound": "1/5",
+    "minimum_visible_direct_effect": "2/5",
+    "response_error_bound": "0",
+    "responses": [
+      [
+        "1/16",
+        "97/2560",
+        "5769409/131072000"
+      ],
+      [
+        "0",
+        "1/16",
+        "161/5120"
+      ],
+      [
+        "0",
+        "0",
+        "1/16"
+      ]
+    ],
+    "step": "1/16"
+  },
+  "estimator_result": {
+    "direct_effect_estimate": [
+      [
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "97/160",
+        "0",
+        "0"
+      ],
+      [
+        "3270689/8192000",
+        "161/320",
+        "0"
+      ]
+    ],
+    "direct_matrix_error_bound_inf": "728610190906563/10354418753536000",
+    "graph_source_target": [
+      [
+        0,
+        1,
+        1
+      ],
+      [
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "inverse_total_effect_estimate": [
+      [
+        "1",
+        "0",
+        "0"
+      ],
+      [
+        "-97/160",
+        "1",
+        "0"
+      ],
+      [
+        "-3270689/8192000",
+        "-161/320",
+        "1"
+      ]
+    ],
+    "original_claim_closed": false,
+    "schema": "ncd.paired-nonlinear-local-graph.v1",
+    "shared_exogenous_state_assumed": true,
+    "status": "conditional-on-pairing-curvature-and-direct-effect-margin",
+    "total_effect_estimate": [
+      [
+        "1",
+        "0",
+        "0"
+      ],
+      [
+        "97/160",
+        "1",
+        "0"
+      ],
+      [
+        "5769409/8192000",
+        "161/320",
+        "1"
+      ]
+    ],
+    "total_matrix_error_bound_inf": "3/160",
+    "truth_graph_read_by_estimator": false
+  },
+  "exogenous_state": [
+    "0",
+    "0",
+    "0"
+  ],
+  "independent_noise_draws_certified": false,
+  "original_claim_closed": false,
+  "schema": "ncd.paired-nonlinear-development-certificate.v1",
+  "source_sha256": {
+    "ncd/paired_linear_graph.py": "ae9efba51dcbb5568a2e296e396dc7cdb8020f8a491e6c6da5710401696c36f5",
+    "ncd/paired_nonlinear_graph.py": "2ca80bd4e277f99a62fe5bdadd648ed887159e82700f29b71d6eae6d8599c92e",
+    "validation/paired_nonlinear_graph_case_v1.py": "876ce43527071925384f793b8ee472a9cfbcd8ac63f587a28c4d8319d26e2135",
+    "validation/verify_paired_nonlinear_graph_case_v1.py": "1fed4ff2b9aabecc6ddead17f8be715c65a05e77aa8edf53e766a83fc0a4b34f"
+  },
+  "status": "exact-rational-conditional-graph-certificate",
+  "truth_only_equations": [
+    "X0=U0",
+    "X1=3/5 X0+1/10 X0^2+U1",
+    "X2=2/5 X0+1/2 X1+1/20 X1^2+U2"
+  ],
+  "truth_only_graph_source_target": [
+    [
+      0,
+      1,
+      1
+    ],
+    [
+      0,
+      0,
+      1
+    ],
+    [
+      0,
+      0,
+      0
+    ]
+  ]
+}

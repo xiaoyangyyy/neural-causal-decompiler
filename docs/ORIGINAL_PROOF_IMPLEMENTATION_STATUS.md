@@ -347,3 +347,16 @@ fixed after initial confirmation worlds were seen. Thus this closes only
 this fixed candidate experiment, not the original R9/R10/R12 or the broader
 R0-R13 objective. See RESULTS_INTERVENTIONAL_ROLE_CONFIRMATION_V1.md and
 the 300-world verified summary and portable package in validation.
+## Conditional nonlinear paired-do graph theorem
+
+An exact rational three-node nonlinear SCM now has a separately verified
+finite-step graph certificate. A general local theorem derives the direct
+Jacobian from shared-exogenous node-do response derivatives and bounds
+finite-step inversion error under explicit curvature, response-error and
+direct-effect separation assumptions. The development case satisfies those
+assumptions and recovers all three true edges. A test shows unpaired noise can
+create a false edge; the estimator cannot certify coupling from responses.
+This does not cover ordinary independent intervention samples, the frozen
+graph network, or all allowed SCMs, so original R9 remains unresolved. See
+docs/PAIRED_NONLINEAR_GRAPH_IDENTIFICATION_V1.md and
+validation/paired_nonlinear_graph_case_verification_v1.json.

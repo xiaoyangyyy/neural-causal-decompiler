@@ -1,0 +1,50 @@
+{
+  "allowed_interventions": "one do(X_i=x_i+h) per node with identical exogenous state across baseline and responses",
+  "bound": "728610190906563/10354418753536000",
+  "claim": "For a differentiable acyclic additive SCM at one fixed exogenous state, paired node-do responses identify the local direct-effect support when finite-step curvature, response error and direct-effect separation bounds close.",
+  "conclusion": "proved-under-explicit-pairing-curvature-and-visibility-assumptions",
+  "direct_effect_margin": "2/5",
+  "error_metric": "matrix infinity norm of direct-effect estimate; exact rational upper bound",
+  "estimator_source_sha256": "2ca80bd4e277f99a62fe5bdadd648ed887159e82700f29b71d6eae6d8599c92e",
+  "graph_source_target": [
+    [
+      0,
+      1,
+      1
+    ],
+    [
+      0,
+      0,
+      1
+    ],
+    [
+      0,
+      0,
+      0
+    ]
+  ],
+  "input_domain": "one observed-coordinate baseline and h=1/16 node-do responses for the exact three-node rational polynomial case",
+  "model_checkpoint": null,
+  "model_sha256": null,
+  "original_atoms_closed": false,
+  "original_objective_achieved": false,
+  "proof_dependencies": {
+    "certificate_sha256": "1272da4cc8044f90e1ae41b01590b96666a19b5d524c948f7169f0e9aa20dfe2",
+    "independent_verifier_sha256": "1fed4ff2b9aabecc6ddead17f8be715c65a05e77aa8edf53e766a83fc0a4b34f",
+    "installed_replay_sha256": "b3c8e506e60f94b5aa1ec727048aec925a22ce4ccffc4b552115df4256132336",
+    "verification_receipt_sha256": "1f0bb9e48365385a19204d503bf58d24f87464e1240eabba2969e64aa809479e",
+    "wheel_sha256": "8d400bb42439e6aa2f374cdaae2360e9b73808892836e7c645ee764520e4c551"
+  },
+  "related_original_atoms": [
+    "R9.graph_recovery",
+    "R9.neural_program"
+  ],
+  "schema": "ncd.scoped-proof-record.v1",
+  "uncovered": [
+    "independently sampled intervention responses without shared exogenous coupling",
+    "all allowed nonlinear worlds and local derivative visibility",
+    "frozen Discoverer graph recovery and network-to-program fidelity",
+    "finite-sample statistical and device-floating guarantees",
+    "original all-instance R9 and R0-R13 objectives"
+  ]
+}
