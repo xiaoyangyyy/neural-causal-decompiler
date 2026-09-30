@@ -1,0 +1,98 @@
+{
+  "analysis_fixed_after_initial_confirmation_worlds_seen": true,
+  "analysis_source_sha256": "97e178d9ef0128ebfe9a4b544cce125a0c8a224f7b1284bf9654ad52075d5547",
+  "by_nodes": [
+    {
+      "graph_exact": 31,
+      "hybrid_local_passes": 0,
+      "hybrid_max_local_mse": 32.809167198954256,
+      "hybrid_max_rollout_mse_with_oracle_noise": 32.809167198954256,
+      "nodes": 3,
+      "worlds": 100
+    },
+    {
+      "graph_exact": 12,
+      "hybrid_local_passes": 0,
+      "hybrid_max_local_mse": 21.07782613990529,
+      "hybrid_max_rollout_mse_with_oracle_noise": 21.07782613990529,
+      "nodes": 5,
+      "worlds": 100
+    },
+    {
+      "graph_exact": 2,
+      "hybrid_local_passes": 0,
+      "hybrid_max_local_mse": 35.100766552717985,
+      "hybrid_max_rollout_mse_with_oracle_noise": 35.100766552717985,
+      "nodes": 8,
+      "worlds": 100
+    }
+  ],
+  "confirmatory_99_percent_claim_established": false,
+  "graph_exact_worlds": 45,
+  "hybrid_local_failures_with_exact_graph": 45,
+  "observed_counts": {
+    "control_local_0_01": 1,
+    "graph_exact": 45,
+    "hybrid_local_0_01": 0,
+    "mixed_local_0_01": 0
+  },
+  "oracle_noise_used_for_rollout": true,
+  "original_claim_closed": false,
+  "original_objective_achieved": false,
+  "recovered_noise_law_validated": false,
+  "schema": "ncd.interventional-role-confirmation-analysis.v1",
+  "simultaneous_99_percent_intervals": {
+    "control_local_0_01": {
+      "assumption": "independent world draws in the frozen stratified generator; no within-world intervention pair is counted separately",
+      "comparisons": 4,
+      "confidence_joint": 0.99,
+      "lower": 0.0,
+      "method": "Hoeffding two-sided with Bonferroni correction",
+      "observed_rate": 0.0033333333333333335,
+      "successes": 1,
+      "unit_of_independence": "world",
+      "upper": 0.10888436149560758,
+      "worlds": 300
+    },
+    "graph_exact": {
+      "assumption": "independent world draws in the frozen stratified generator; no within-world intervention pair is counted separately",
+      "comparisons": 4,
+      "confidence_joint": 0.99,
+      "lower": 0.04444897183772574,
+      "method": "Hoeffding two-sided with Bonferroni correction",
+      "observed_rate": 0.15,
+      "successes": 45,
+      "unit_of_independence": "world",
+      "upper": 0.25555102816227426,
+      "worlds": 300
+    },
+    "hybrid_local_0_01": {
+      "assumption": "independent world draws in the frozen stratified generator; no within-world intervention pair is counted separately",
+      "comparisons": 4,
+      "confidence_joint": 0.99,
+      "lower": 0.0,
+      "method": "Hoeffding two-sided with Bonferroni correction",
+      "observed_rate": 0.0,
+      "successes": 0,
+      "unit_of_independence": "world",
+      "upper": 0.10555102816227425,
+      "worlds": 300
+    },
+    "mixed_local_0_01": {
+      "assumption": "independent world draws in the frozen stratified generator; no within-world intervention pair is counted separately",
+      "comparisons": 4,
+      "confidence_joint": 0.99,
+      "lower": 0.0,
+      "method": "Hoeffding two-sided with Bonferroni correction",
+      "observed_rate": 0.0,
+      "successes": 0,
+      "unit_of_independence": "world",
+      "upper": 0.10555102816227425,
+      "worlds": 300
+    }
+  },
+  "status": "verified-world-level-analysis",
+  "summary_sha256": "d5a7758e5f2755d3481b5f1d47c27265e22c33be5e12bfac7689ae1cbc145728",
+  "threshold": 0.01,
+  "worlds": 300
+}

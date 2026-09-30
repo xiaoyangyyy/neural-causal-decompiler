@@ -331,3 +331,19 @@ also replay under isolated installed ncd 0.59.0 modules. They refute this
 finite grammar for those two networks, not all larger grammars or the
 original all-instance R4/R10 atoms. See
 FROZEN_UNARY_GRAMMAR_OBSTRUCTION_V1.md.
+
+## Completed 300-world inferred-role candidate confirmation
+
+The predeclared two-seed, 3/5/8-node, five-environment cohort has finished:
+all 300 world artifacts passed independent replay and portable-package
+verification. The frozen inferred-role hybrid passed the 0.01 local MSE gate
+in 0/300 worlds; the graph was exactly recovered in 45/300, and all 45 of
+those worlds still failed the local gate. An initial replay stopped after 280
+worlds on a 1.5e-8 CPU float difference. That failed receipt is retained;
+a disclosed posthoc verifier tolerance repair preserved exact source/data/
+checkpoint checks and 0.01 gate classification, then all 300 replayed.
+The rollout uses oracle true noise, and the world-level interval analysis was
+fixed after initial confirmation worlds were seen. Thus this closes only
+this fixed candidate experiment, not the original R9/R10/R12 or the broader
+R0-R13 objective. See RESULTS_INTERVENTIONAL_ROLE_CONFIRMATION_V1.md and
+the 300-world verified summary and portable package in validation.

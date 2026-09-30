@@ -1,0 +1,23 @@
+Traceback (most recent call last):
+  File "E:\实验\neural-causal-decompiler\validation\verify_interventional_role_stage_v1.py", line 113, in <module>
+    result = summarize(write=args.write, require_complete=args.require_complete)
+  File "E:\实验\neural-causal-decompiler\validation\verify_interventional_role_stage_v1.py", line 50, in summarize
+    receipt = verify(folder)
+  File "E:\实验\neural-causal-decompiler\validation\verify_interventional_role_v1.py", line 259, in verify
+    assert_same(metrics, record["metrics"], "metrics")
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\实验\neural-causal-decompiler\validation\verify_interventional_role_v1.py", line 40, in assert_same
+    assert_same(expected[key], observed[key], path + "." + str(key))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\实验\neural-causal-decompiler\validation\verify_interventional_role_v1.py", line 40, in assert_same
+    assert_same(expected[key], observed[key], path + "." + str(key))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\实验\neural-causal-decompiler\validation\verify_interventional_role_v1.py", line 45, in assert_same
+    assert_same(left, right, path + f"[{i}]")
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\实验\neural-causal-decompiler\validation\verify_interventional_role_v1.py", line 40, in assert_same
+    assert_same(expected[key], observed[key], path + "." + str(key))
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\实验\neural-causal-decompiler\validation\verify_interventional_role_v1.py", line 48, in assert_same
+    raise ValueError(path + f": float changed {expected!r} versus {observed!r}")
+ValueError: metrics.mixed.contrasts[17].normalized_abs_error: float changed 0.09508242898944393 versus 0.09508244400258774

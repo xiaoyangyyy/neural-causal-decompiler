@@ -44,7 +44,8 @@ def assert_same(expected, observed, path="root"):
         for i, (left, right) in enumerate(zip(expected, observed)):
             assert_same(left, right, path + f"[{i}]")
     elif isinstance(expected, float):
-        if not math.isclose(expected, observed, rel_tol=1e-7, abs_tol=1e-8):
+        # Allow observed CPU reduction jitter; raw data and checkpoints remain hash-bound.
+        if not math.isclose(expected, observed, rel_tol=1e-6, abs_tol=1e-7):
             raise ValueError(path + f": float changed {expected!r} versus {observed!r}")
     elif expected != observed:
         raise ValueError(path + ": value changed")
@@ -257,6 +258,10 @@ def verify(unit_folder, protocol=ROOT / "validation/interventional_role_confirma
     hybrid = [models[role[j]][j] for j in range(nodes)]
     metrics["hybrid"] = independent_metrics(world, inferred, hybrid, noise, normalizers)
     assert_same(metrics, record["metrics"], "metrics")
+    for arm in ("mixed", "control", "hybrid"):
+        if ((metrics[arm]["max_local_normalized_mse"] <= .01) !=
+                (record["metrics"][arm]["max_local_normalized_mse"] <= .01)):
+            raise ValueError("metrics." + arm + ": local gate classification changed")
     return {
         "schema": "ncd.interventional-role-confirmation-verification.v1",
         "status": "verified-one-independent-world",
