@@ -29,3 +29,17 @@ python -I -B -m scm_population_proof verify-proof runs/scm_population_proof_v1
 ```
 
 The verifier requires the frozen package source hashes in the protocol and the frozen source files in the bundle; it does not need the original checkout's historical `runs/original_confirmation_v1` tree. `prove --config validation/scm_population_protocol_v1.json` reconstructs the bundle from the accepted original tree with checkpoints and a 15-minute stage limit. The stage's artifact budget is 8 GiB; the completed bundle is about 70.8 MB.
+
+## Subsequent five-world moment classification
+
+The five Student-t(5) cases left unresolved by this package's sufficient
+second-moment test were later proved to have infinite ideal observational
+second moments at specified nodes. See RESULTS_SCM_SECOND_MOMENT_V1.md and
+validation/scm_second_moment_acceptance_v1.json. Together the accepted
+packages classify the historical 300 worlds as 295 with finite ideal
+observational second moments and five with infinite second moments.
+The original population bundle and its acceptance receipt remain unchanged;
+the five cases were unresolved by that earlier certificate, not globally
+unresolved after the later proof. This extension does not infer the true
+noise law from residual samples, assert a finite-valued Wasserstein-2
+distance, or close an original R0-R13 atomic claim.
