@@ -84,3 +84,11 @@ metrics, intervention coverage or scope flags. Eight targeted development
 tests currently pass across the verifier, evaluator, data control and handoff.
 The end-to-end replay cannot run until the queued training and evaluation
 produce their result files.
+
+A second lightweight handoff waits for the development comparison process to
+finish and then runs the independent result verifier under the same 8 GiB Job
+limit and a 300-second replay limit. It stores a separate verification receipt
+and refuses a changed handoff, checker source, or result hash. The proof job,
+the development training, and independent result replay therefore remain
+sequential. The receipt will remain pending until real trained checkpoints
+and the evaluation result exist.
