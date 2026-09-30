@@ -71,3 +71,9 @@ six-function one-parent grammar** for the two named checkpoints.
 It says nothing about a larger or nested program language, other
 frozen networks, true SCM correctness, noise recovery, or extra
 device rounding. The original all-instance R4/R10 targets remain open.
+
+Both certificates also replayed with the isolated installed ncd 0.59.0
+proof modules, whose mechanism-library and interval-source hashes equal the
+bound repository sources. The portable installed-kernel receipt is
+validation/frozen_unary_grammar_installed_replay_v1.json. This scoped
+installed replay does not by itself close the all-artifact R13 requirement.

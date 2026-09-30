@@ -53,3 +53,23 @@ def test_second_certificate_rejects_false_dual(tmp_path, monkeypatch):
     monkeypatch.setattr(checker, "NARROW_CERT", changed)
     with pytest.raises(ValueError):
         checker.verify(unit_box=True)
+
+
+
+def test_scoped_records_bind_installed_and_independent_receipts():
+    from hashlib import sha256
+
+    installed = ROOT / "validation/frozen_unary_grammar_installed_replay_v1.json"
+    installed_hash = sha256(installed.read_bytes()).hexdigest()
+    for record_name, cert, receipt in (
+        ("frozen_unary_grammar_proof_record_v1.json",
+         checker.CERT, checker.RECEIPT),
+        ("frozen_unary_grammar_unit_box_proof_record_v1.json",
+         checker.NARROW_CERT, checker.NARROW_RECEIPT),
+    ):
+        record = json.loads((ROOT / "validation" / record_name).read_text(encoding="utf-8"))
+        dependencies = record["proof_dependencies"]
+        assert dependencies["certificate_sha256"] == sha256(cert.read_bytes()).hexdigest()
+        assert dependencies["verification_receipt_sha256"] == sha256(receipt.read_bytes()).hexdigest()
+        assert dependencies["installed_replay_sha256"] == installed_hash
+        assert record["original_atoms_closed"] is False
