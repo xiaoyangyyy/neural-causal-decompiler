@@ -57,3 +57,11 @@ packager collects the frozen protocol and every unit file into a deterministic
 tar.gz archive with per-file SHA-256 manifest. A separate read-only package
 verifier checks every member and rejects missing, altered, duplicate or unsafe
 paths. The package gate intentionally fails while the run is incomplete.
+
+The final analysis uses one Bernoulli observation per world for the
+hybrid, mixed and control local 0.01 gates and exact inferred graph.
+Two-sided Hoeffding intervals use a Bonferroni correction across those
+four rates for joint 99% confidence, conditional on independent world
+draws from the fixed stratified synthetic generator. Reusing an exogenous
+draw across do conditions never increases the sample count. These
+finite-sample intervals do not prove universal causal recovery.
