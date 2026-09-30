@@ -73,3 +73,14 @@ learned `target_training_scale` of either arm, so the 0.01 comparison here
 is a development diagnostic under this declared scale; passing it alone
 would not satisfy an original claim whose denominator is the frozen
 mechanism's own training scale.
+
+An independent read-only verifier is
+validation/verify_interventional_mechanism_dev_evaluation_v1.py. It checks
+both training source and checkpoint hashes, reruns both frozen candidate-data
+verifiers, regenerates the held-out exogenous draws, and recomputes every
+per-node mechanism error and paired do contrast without calling the result
+generator. It compares the complete result tree and rejects changed numeric
+metrics, intervention coverage or scope flags. Eight targeted development
+tests currently pass across the verifier, evaluator, data control and handoff.
+The end-to-end replay cannot run until the queued training and evaluation
+produce their result files.
