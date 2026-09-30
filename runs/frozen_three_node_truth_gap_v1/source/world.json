@@ -1,0 +1,136 @@
+{
+  "seed": 2824943838472991298,
+  "split": "test_id",
+  "graph": [
+    [
+      0,
+      0,
+      0
+    ],
+    [
+      1,
+      0,
+      0
+    ],
+    [
+      1,
+      0,
+      0
+    ]
+  ],
+  "equations": [
+    [
+      {
+        "operator": "linear",
+        "parents": [
+          1
+        ],
+        "coefficient": -1.0578679461186473
+      },
+      {
+        "operator": "linear",
+        "parents": [
+          2
+        ],
+        "coefficient": -0.4861483052205644
+      }
+    ],
+    [],
+    []
+  ],
+  "noise_family": "gaussian",
+  "noise_scale": 0.35,
+  "samples": 96,
+  "scales": [
+    1.0,
+    1.0,
+    1.0
+  ],
+  "family": "linear_gaussian",
+  "root_shift": false,
+  "world_id": "2a14b7104b2c20b3991c0e21",
+  "equation_ast": [
+    {
+      "op": "add",
+      "args": [
+        {
+          "op": "mul",
+          "args": [
+            {
+              "op": "constant",
+              "value": -1.0578679461186473
+            },
+            {
+              "op": "var",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "op": "mul",
+          "args": [
+            {
+              "op": "constant",
+              "value": -0.4861483052205644
+            },
+            {
+              "op": "var",
+              "index": 2
+            }
+          ]
+        },
+        {
+          "op": "noise",
+          "index": 0,
+          "family": "gaussian",
+          "scale": 0.35
+        }
+      ]
+    },
+    {
+      "op": "add",
+      "args": [
+        {
+          "op": "noise",
+          "index": 1,
+          "family": "gaussian",
+          "scale": 0.35
+        }
+      ]
+    },
+    {
+      "op": "add",
+      "args": [
+        {
+          "op": "noise",
+          "index": 2,
+          "family": "gaussian",
+          "scale": 0.35
+        }
+      ]
+    }
+  ],
+  "target_graph": [
+    [
+      0,
+      0,
+      0
+    ],
+    [
+      1,
+      0,
+      0
+    ],
+    [
+      1,
+      0,
+      0
+    ]
+  ],
+  "target_semantics": "CPDAG",
+  "observed_scaling": [
+    1.0,
+    1.0,
+    1.0
+  ]
+}

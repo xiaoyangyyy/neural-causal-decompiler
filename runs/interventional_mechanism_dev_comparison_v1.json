@@ -1,0 +1,660 @@
+{
+  "common_normalizers": [
+    0.40355531476856193,
+    0.38161911206218624,
+    0.348540283787089
+  ],
+  "control": {
+    "conditions": [
+      {
+        "interventions": {},
+        "nodes": [
+          {
+            "executed": true,
+            "node": 0,
+            "normalized_mae": 0.07649672798186904,
+            "normalized_mse": 0.005851749391932065,
+            "predicted_mean": -0.03087066113948822,
+            "true_mean": 0.0
+          },
+          {
+            "executed": true,
+            "node": 1,
+            "normalized_mae": 0.12192571080788223,
+            "normalized_mse": 0.01897717892285611,
+            "predicted_mean": -0.006639816037932178,
+            "true_mean": -0.005750012307192045
+          },
+          {
+            "executed": true,
+            "node": 2,
+            "normalized_mae": 0.032012700347797435,
+            "normalized_mse": 0.001024812983557871,
+            "predicted_mean": -0.011157715664012358,
+            "true_mean": 0.0
+          }
+        ]
+      },
+      {
+        "interventions": {
+          "0": -1.0
+        },
+        "nodes": [
+          {
+            "executed": false,
+            "node": 0,
+            "reason": "structural_equation_cut_by_do"
+          },
+          {
+            "executed": true,
+            "node": 1,
+            "normalized_mae": 0.30299590852628716,
+            "normalized_mse": 0.09180652058367016,
+            "predicted_mean": 0.4536947011947632,
+            "true_mean": 0.5693237307650403
+          },
+          {
+            "executed": true,
+            "node": 2,
+            "normalized_mae": 0.032012700347797435,
+            "normalized_mse": 0.001024812983557871,
+            "predicted_mean": -0.011157715664012358,
+            "true_mean": 0.0
+          }
+        ]
+      },
+      {
+        "interventions": {
+          "0": 1.0
+        },
+        "nodes": [
+          {
+            "executed": false,
+            "node": 0,
+            "reason": "structural_equation_cut_by_do"
+          },
+          {
+            "executed": true,
+            "node": 1,
+            "normalized_mae": 0.08249366458493367,
+            "normalized_mse": 0.006805204696651536,
+            "predicted_mean": -0.5378425717353821,
+            "true_mean": -0.5693237307650403
+          },
+          {
+            "executed": true,
+            "node": 2,
+            "normalized_mae": 0.032012700347797435,
+            "normalized_mse": 0.001024812983557871,
+            "predicted_mean": -0.011157715664012358,
+            "true_mean": 0.0
+          }
+        ]
+      },
+      {
+        "interventions": {
+          "1": -1.0
+        },
+        "nodes": [
+          {
+            "executed": true,
+            "node": 0,
+            "normalized_mae": 0.07649672798186904,
+            "normalized_mse": 0.005851749391932065,
+            "predicted_mean": -0.03087066113948822,
+            "true_mean": 0.0
+          },
+          {
+            "executed": false,
+            "node": 1,
+            "reason": "structural_equation_cut_by_do"
+          },
+          {
+            "executed": true,
+            "node": 2,
+            "normalized_mae": 0.032012700347797435,
+            "normalized_mse": 0.001024812983557871,
+            "predicted_mean": -0.011157715664012358,
+            "true_mean": 0.0
+          }
+        ]
+      },
+      {
+        "interventions": {
+          "1": 1.0
+        },
+        "nodes": [
+          {
+            "executed": true,
+            "node": 0,
+            "normalized_mae": 0.07649672798186904,
+            "normalized_mse": 0.005851749391932065,
+            "predicted_mean": -0.03087066113948822,
+            "true_mean": 0.0
+          },
+          {
+            "executed": false,
+            "node": 1,
+            "reason": "structural_equation_cut_by_do"
+          },
+          {
+            "executed": true,
+            "node": 2,
+            "normalized_mae": 0.032012700347797435,
+            "normalized_mse": 0.001024812983557871,
+            "predicted_mean": -0.011157715664012358,
+            "true_mean": 0.0
+          }
+        ]
+      },
+      {
+        "interventions": {
+          "2": -1.0
+        },
+        "nodes": [
+          {
+            "executed": true,
+            "node": 0,
+            "normalized_mae": 0.07649672798186904,
+            "normalized_mse": 0.005851749391932065,
+            "predicted_mean": -0.03087066113948822,
+            "true_mean": 0.0
+          },
+          {
+            "executed": true,
+            "node": 1,
+            "normalized_mae": 0.12192571080788223,
+            "normalized_mse": 0.01897717892285611,
+            "predicted_mean": -0.006639816037932178,
+            "true_mean": -0.005750012307192045
+          },
+          {
+            "executed": false,
+            "node": 2,
+            "reason": "structural_equation_cut_by_do"
+          }
+        ]
+      },
+      {
+        "interventions": {
+          "2": 1.0
+        },
+        "nodes": [
+          {
+            "executed": true,
+            "node": 0,
+            "normalized_mae": 0.07649672798186904,
+            "normalized_mse": 0.005851749391932065,
+            "predicted_mean": -0.03087066113948822,
+            "true_mean": 0.0
+          },
+          {
+            "executed": true,
+            "node": 1,
+            "normalized_mae": 0.12192571080788223,
+            "normalized_mse": 0.01897717892285611,
+            "predicted_mean": -0.006639816037932178,
+            "true_mean": -0.005750012307192045
+          },
+          {
+            "executed": false,
+            "node": 2,
+            "reason": "structural_equation_cut_by_do"
+          }
+        ]
+      },
+      {
+        "interventions": {
+          "0": 1.0,
+          "1": -1.0
+        },
+        "nodes": [
+          {
+            "executed": false,
+            "node": 0,
+            "reason": "structural_equation_cut_by_do"
+          },
+          {
+            "executed": false,
+            "node": 1,
+            "reason": "structural_equation_cut_by_do"
+          },
+          {
+            "executed": true,
+            "node": 2,
+            "normalized_mae": 0.032012700347797435,
+            "normalized_mse": 0.001024812983557871,
+            "predicted_mean": -0.011157715664012358,
+            "true_mean": 0.0
+          }
+        ]
+      },
+      {
+        "interventions": {
+          "0": -1.0,
+          "2": 1.0
+        },
+        "nodes": [
+          {
+            "executed": false,
+            "node": 0,
+            "reason": "structural_equation_cut_by_do"
+          },
+          {
+            "executed": true,
+            "node": 1,
+            "normalized_mae": 0.30299590852628716,
+            "normalized_mse": 0.09180652058367016,
+            "predicted_mean": 0.4536947011947632,
+            "true_mean": 0.5693237307650403
+          },
+          {
+            "executed": false,
+            "node": 2,
+            "reason": "structural_equation_cut_by_do"
+          }
+        ]
+      }
+    ],
+    "max_executed_normalized_mae": 0.30299590852628716,
+    "max_executed_normalized_mse": 0.09180652058367016,
+    "max_paired_contrast_normalized_abs_error": 0.3854895731112208,
+    "paired_contrasts": [
+      {
+        "normalized_abs_error": 0.3854895731112208,
+        "predicted_contrast": -0.9915372729301453,
+        "source": 0,
+        "target": 1,
+        "true_contrast": -1.1386474615300806
+      },
+      {
+        "normalized_abs_error": 0.0,
+        "predicted_contrast": 0.0,
+        "source": 0,
+        "target": 2,
+        "true_contrast": 0.0
+      },
+      {
+        "normalized_abs_error": 0.0,
+        "predicted_contrast": 0.0,
+        "source": 1,
+        "target": 0,
+        "true_contrast": 0.0
+      },
+      {
+        "normalized_abs_error": 0.0,
+        "predicted_contrast": 0.0,
+        "source": 1,
+        "target": 2,
+        "true_contrast": 0.0
+      },
+      {
+        "normalized_abs_error": 0.0,
+        "predicted_contrast": 0.0,
+        "source": 2,
+        "target": 0,
+        "true_contrast": 0.0
+      },
+      {
+        "normalized_abs_error": 0.0,
+        "predicted_contrast": 0.0,
+        "source": 2,
+        "target": 1,
+        "true_contrast": 0.0
+      }
+    ],
+    "paired_intervention_outcomes_are_independent_worlds": false,
+    "unique_exogenous_draws": 512
+  },
+  "control_training_result_sha256": "57e6696210418ed1854e8856d9a0f26041e12b38d8888dc4a49cb3ab8b0f9336",
+  "evaluation_seed": 2971352770229226705,
+  "evaluation_source": "heldout_eval_exogenous_v1",
+  "independent_confirmation_worlds": 0,
+  "inferred_graph": [
+    [
+      0,
+      1,
+      0
+    ],
+    [
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0
+    ]
+  ],
+  "mixed": {
+    "conditions": [
+      {
+        "interventions": {},
+        "nodes": [
+          {
+            "executed": true,
+            "node": 0,
+            "normalized_mae": 0.04569637250945045,
+            "normalized_mse": 0.0020881584605224575,
+            "predicted_mean": -0.018441013991832733,
+            "true_mean": 0.0
+          },
+          {
+            "executed": true,
+            "node": 1,
+            "normalized_mae": 0.022534617087763033,
+            "normalized_mse": 0.0007601579935945765,
+            "predicted_mean": 0.0012180677031210507,
+            "true_mean": -0.005750012307192045
+          },
+          {
+            "executed": true,
+            "node": 2,
+            "normalized_mae": 0.11446001252626906,
+            "normalized_mse": 0.013101094467513681,
+            "predicted_mean": 0.039893925248179585,
+            "true_mean": 0.0
+          }
+        ]
+      },
+      {
+        "interventions": {
+          "0": -1.0
+        },
+        "nodes": [
+          {
+            "executed": false,
+            "node": 0,
+            "reason": "structural_equation_cut_by_do"
+          },
+          {
+            "executed": true,
+            "node": 1,
+            "normalized_mae": 0.004313342899524889,
+            "normalized_mse": 1.8604926968881777e-05,
+            "predicted_mean": 0.5676776766777039,
+            "true_mean": 0.5693237307650403
+          },
+          {
+            "executed": true,
+            "node": 2,
+            "normalized_mae": 0.11446001252626906,
+            "normalized_mse": 0.013101094467513681,
+            "predicted_mean": 0.039893925248179585,
+            "true_mean": 0.0
+          }
+        ]
+      },
+      {
+        "interventions": {
+          "0": 1.0
+        },
+        "nodes": [
+          {
+            "executed": false,
+            "node": 0,
+            "reason": "structural_equation_cut_by_do"
+          },
+          {
+            "executed": true,
+            "node": 1,
+            "normalized_mae": 0.009015969133931013,
+            "normalized_mse": 8.128769942409168e-05,
+            "predicted_mean": -0.5727643969003111,
+            "true_mean": -0.5693237307650403
+          },
+          {
+            "executed": true,
+            "node": 2,
+            "normalized_mae": 0.11446001252626906,
+            "normalized_mse": 0.013101094467513681,
+            "predicted_mean": 0.039893925248179585,
+            "true_mean": 0.0
+          }
+        ]
+      },
+      {
+        "interventions": {
+          "1": -1.0
+        },
+        "nodes": [
+          {
+            "executed": true,
+            "node": 0,
+            "normalized_mae": 0.04569637250945045,
+            "normalized_mse": 0.0020881584605224575,
+            "predicted_mean": -0.018441013991832733,
+            "true_mean": 0.0
+          },
+          {
+            "executed": false,
+            "node": 1,
+            "reason": "structural_equation_cut_by_do"
+          },
+          {
+            "executed": true,
+            "node": 2,
+            "normalized_mae": 0.11446001252626906,
+            "normalized_mse": 0.013101094467513681,
+            "predicted_mean": 0.039893925248179585,
+            "true_mean": 0.0
+          }
+        ]
+      },
+      {
+        "interventions": {
+          "1": 1.0
+        },
+        "nodes": [
+          {
+            "executed": true,
+            "node": 0,
+            "normalized_mae": 0.04569637250945045,
+            "normalized_mse": 0.0020881584605224575,
+            "predicted_mean": -0.018441013991832733,
+            "true_mean": 0.0
+          },
+          {
+            "executed": false,
+            "node": 1,
+            "reason": "structural_equation_cut_by_do"
+          },
+          {
+            "executed": true,
+            "node": 2,
+            "normalized_mae": 0.11446001252626906,
+            "normalized_mse": 0.013101094467513681,
+            "predicted_mean": 0.039893925248179585,
+            "true_mean": 0.0
+          }
+        ]
+      },
+      {
+        "interventions": {
+          "2": -1.0
+        },
+        "nodes": [
+          {
+            "executed": true,
+            "node": 0,
+            "normalized_mae": 0.04569637250945045,
+            "normalized_mse": 0.0020881584605224575,
+            "predicted_mean": -0.018441013991832733,
+            "true_mean": 0.0
+          },
+          {
+            "executed": true,
+            "node": 1,
+            "normalized_mae": 0.022534617087763033,
+            "normalized_mse": 0.0007601579935945765,
+            "predicted_mean": 0.0012180677031210507,
+            "true_mean": -0.005750012307192045
+          },
+          {
+            "executed": false,
+            "node": 2,
+            "reason": "structural_equation_cut_by_do"
+          }
+        ]
+      },
+      {
+        "interventions": {
+          "2": 1.0
+        },
+        "nodes": [
+          {
+            "executed": true,
+            "node": 0,
+            "normalized_mae": 0.04569637250945045,
+            "normalized_mse": 0.0020881584605224575,
+            "predicted_mean": -0.018441013991832733,
+            "true_mean": 0.0
+          },
+          {
+            "executed": true,
+            "node": 1,
+            "normalized_mae": 0.022534617087763033,
+            "normalized_mse": 0.0007601579935945765,
+            "predicted_mean": 0.0012180677031210507,
+            "true_mean": -0.005750012307192045
+          },
+          {
+            "executed": false,
+            "node": 2,
+            "reason": "structural_equation_cut_by_do"
+          }
+        ]
+      },
+      {
+        "interventions": {
+          "0": 1.0,
+          "1": -1.0
+        },
+        "nodes": [
+          {
+            "executed": false,
+            "node": 0,
+            "reason": "structural_equation_cut_by_do"
+          },
+          {
+            "executed": false,
+            "node": 1,
+            "reason": "structural_equation_cut_by_do"
+          },
+          {
+            "executed": true,
+            "node": 2,
+            "normalized_mae": 0.11446001252626906,
+            "normalized_mse": 0.013101094467513681,
+            "predicted_mean": 0.039893925248179585,
+            "true_mean": 0.0
+          }
+        ]
+      },
+      {
+        "interventions": {
+          "0": -1.0,
+          "2": 1.0
+        },
+        "nodes": [
+          {
+            "executed": false,
+            "node": 0,
+            "reason": "structural_equation_cut_by_do"
+          },
+          {
+            "executed": true,
+            "node": 1,
+            "normalized_mae": 0.004313342899524889,
+            "normalized_mse": 1.8604926968881777e-05,
+            "predicted_mean": 0.5676776766777039,
+            "true_mean": 0.5693237307650403
+          },
+          {
+            "executed": false,
+            "node": 2,
+            "reason": "structural_equation_cut_by_do"
+          }
+        ]
+      }
+    ],
+    "max_executed_normalized_mae": 0.11446001252626906,
+    "max_executed_normalized_mse": 0.013101094467513681,
+    "max_paired_contrast_normalized_abs_error": 0.0047026262344061235,
+    "paired_contrasts": [
+      {
+        "normalized_abs_error": 0.0047026262344061235,
+        "predicted_contrast": -1.140442073578015,
+        "source": 0,
+        "target": 1,
+        "true_contrast": -1.1386474615300806
+      },
+      {
+        "normalized_abs_error": 0.0,
+        "predicted_contrast": 0.0,
+        "source": 0,
+        "target": 2,
+        "true_contrast": 0.0
+      },
+      {
+        "normalized_abs_error": 0.0,
+        "predicted_contrast": 0.0,
+        "source": 1,
+        "target": 0,
+        "true_contrast": 0.0
+      },
+      {
+        "normalized_abs_error": 0.0,
+        "predicted_contrast": 0.0,
+        "source": 1,
+        "target": 2,
+        "true_contrast": 0.0
+      },
+      {
+        "normalized_abs_error": 0.0,
+        "predicted_contrast": 0.0,
+        "source": 2,
+        "target": 0,
+        "true_contrast": 0.0
+      },
+      {
+        "normalized_abs_error": 0.0,
+        "predicted_contrast": 0.0,
+        "source": 2,
+        "target": 1,
+        "true_contrast": 0.0
+      }
+    ],
+    "paired_intervention_outcomes_are_independent_worlds": false,
+    "unique_exogenous_draws": 512
+  },
+  "mixed_meets_0_01_max_normalized_mse": false,
+  "mixed_reduces_max_normalized_mae": true,
+  "mixed_training_result_sha256": "7b84c07ab3c23ace65ae150d641ed55b6b273e104f3ba99e554064952139f3bb",
+  "original_claim_closed": false,
+  "original_objective_achieved": false,
+  "protocol_sha256": "7a50b1e8aa792d7752c13e366f81efe795d380987ad32a56aa625ba091b86296",
+  "schema": "ncd.interventional-mechanism-dev-evaluation.v1",
+  "source_graph_exact": true,
+  "status": "development-only",
+  "training_evaluation_exact_row_overlap": 0,
+  "true_graph": [
+    [
+      0,
+      1,
+      0
+    ],
+    [
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0
+    ]
+  ],
+  "world_sha256": "9d8bf69bb19658f9cf262ddb13f64dac0509c22e2518cca536f5a4e1d558c889"
+}

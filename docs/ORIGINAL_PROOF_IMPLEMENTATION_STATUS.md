@@ -289,3 +289,20 @@ nonlinear worlds, device rounding, or the trained graph Discoverer.
 The original R9 atom remains unresolved. See
 docs/PAIRED_LINEAR_GRAPH_IDENTIFICATION_V1.md and
 validation/paired_linear_graph_development_verification_v1.json.
+
+## Completed three-node proof chain and paired-do development result
+
+The previously queued installed-wheel chain completed. The fixed learned
+three-node deterministic program has an independently verified joint L1
+upper of 0.0050772390287866075 on [-1,1]^3 under all eight compatible
+intervention masks. A separately installed truth-only evaluator proved
+strict simultaneous neural/true root-fidelity incompatibility for both
+roots of this fixed world, with margins above 0.02121 and 0.02407.
+The associated development mixed-intervention training reduced the
+maximum executed normalized MAE from 0.302995909 to 0.114460013 and
+the maximum paired-contrast error from 0.385489573 to 0.004702626,
+but its maximum normalized MSE remained 0.013101094 > 0.01. The
+independent result checker passed; the 512 repeated-do draws are one
+development world, not independent confirmation worlds. See
+RESULTS_FROZEN_THREE_NODE_SCOPED.md and the two acceptance receipts.
+Original counts remain 0 proved, 2 refuted, 36 unresolved.

@@ -1,0 +1,166 @@
+{
+  "checkpoint_sha256": [
+    "20b62f0bd0f6ba0e36ee678fbd7401e8425fdb8720e28c80b4b588382e671b61",
+    "2a88efbbad9a0963d9dc1c55df4909d540b3565adb8d5c7e03571988916e9886",
+    "77bff2f77190843f2b627231d1b33e65fe176036bedbb0d3d422106d4dd74620"
+  ],
+  "child_coordinate_lipschitz_upper": {
+    "1": "38699388084815515542762228127482775/7316001565029486770824067422355456",
+    "2": "89889426354896015363335030277742703/14929216440270882635707840882278400"
+  },
+  "domain": [
+    [
+      "-1",
+      "1"
+    ],
+    [
+      "-1",
+      "1"
+    ],
+    [
+      "-1",
+      "1"
+    ]
+  ],
+  "graph": [
+    [
+      0,
+      0,
+      0
+    ],
+    [
+      1,
+      0,
+      0
+    ],
+    [
+      1,
+      0,
+      0
+    ]
+  ],
+  "intervention_scope": "all 8 compatible node subsets; each observed do value in [-1,1]",
+  "joint_intervention_bounds": [
+    {
+      "coordinate_absolute_error_upper": [
+        "254962767348554948634836656494097204651984095162086077669/50216813883093446110686315385661331328818843555712276103168",
+        "34170626646371/20282409603651670423947251286016",
+        "128223735671925/40564819207303340847894502572032"
+      ],
+      "intervened_nodes": [],
+      "joint_l1_error_upper": "254962767348555191970506817544303392944972042344865871077/50216813883093446110686315385661331328818843555712276103168"
+    },
+    {
+      "coordinate_absolute_error_upper": [
+        "0",
+        "34170626646371/20282409603651670423947251286016",
+        "128223735671925/40564819207303340847894502572032"
+      ],
+      "intervened_nodes": [
+        0
+      ],
+      "joint_l1_error_upper": "196564988964667/40564819207303340847894502572032"
+    },
+    {
+      "coordinate_absolute_error_upper": [
+        "254962767348554501114416254701948788869808308844981287719/50216813883093446110686315385661331328818843555712276103168",
+        "0",
+        "128223735671925/40564819207303340847894502572032"
+      ],
+      "intervened_nodes": [
+        1
+      ],
+      "joint_l1_error_upper": "254962767348554659847712629722999428591405750695665498919/50216813883093446110686315385661331328818843555712276103168"
+    },
+    {
+      "coordinate_absolute_error_upper": [
+        "0",
+        "0",
+        "128223735671925/40564819207303340847894502572032"
+      ],
+      "intervened_nodes": [
+        0,
+        1
+      ],
+      "joint_l1_error_upper": "128223735671925/40564819207303340847894502572032"
+    },
+    {
+      "coordinate_absolute_error_upper": [
+        "127481383674276996447564553341093863818075757651257449695/25108406941546723055343157692830665664409421777856138051584",
+        "34170626646371/20282409603651670423947251286016",
+        "0"
+      ],
+      "intervened_nodes": [
+        2
+      ],
+      "joint_l1_error_upper": "127481383674277038748751446355671638103771010317305240799/25108406941546723055343157692830665664409421777856138051584"
+    },
+    {
+      "coordinate_absolute_error_upper": [
+        "0",
+        "34170626646371/20282409603651670423947251286016",
+        "0"
+      ],
+      "intervened_nodes": [
+        0,
+        2
+      ],
+      "joint_l1_error_upper": "34170626646371/20282409603651670423947251286016"
+    },
+    {
+      "coordinate_absolute_error_upper": [
+        "102978641637495901066099512655/20282409603651670423947251286016",
+        "0",
+        "0"
+      ],
+      "intervened_nodes": [
+        1,
+        2
+      ],
+      "joint_l1_error_upper": "102978641637495901066099512655/20282409603651670423947251286016"
+    },
+    {
+      "coordinate_absolute_error_upper": [
+        "0",
+        "0",
+        "0"
+      ],
+      "intervened_nodes": [
+        0,
+        1,
+        2
+      ],
+      "joint_l1_error_upper": "0"
+    }
+  ],
+  "local_absolute_error_upper": [
+    "102978641637495901066099512655/20282409603651670423947251286016",
+    "34170626646371/20282409603651670423947251286016",
+    "128223735671925/40564819207303340847894502572032"
+  ],
+  "not_proved": [
+    "learned parents equal true graph",
+    "frozen neural functions equal true mechanisms",
+    "exogenous noise law or independence",
+    "distributional intervention fidelity",
+    "other worlds, nodes, or models",
+    "global MDL minimality"
+  ],
+  "original_claim_closed": false,
+  "original_objective_achieved": false,
+  "proof": "Induct in learned-DAG order 1,2,0. Fixed do nodes have zero paired error. Root certificates bound free roots and keep both executions inside the child proof box. The child network is coordinatewise Lipschitz by absolute weight products, positive input standard deviations and tanh derivative at most one. Triangle inequality combines the child local program certificate at the program parents with the neural change between paired parents.",
+  "root_network_value_enclosures": {
+    "1": [
+      "-4269785798552651031167/151115727451828646838272",
+      "-34158286388421208249263/1208925819614629174706176"
+    ],
+    "2": [
+      "-37800103346817145876749/1208925819614629174706176",
+      "-37800103346817145876683/1208925819614629174706176"
+    ]
+  },
+  "schema": "ncd.frozen-three-node-composition.v1",
+  "semantic_scope": "exact stored coefficient ideal real evaluation and mathematical Tanh; not floating hardware execution",
+  "status": "proved-scoped",
+  "worst_joint_l1_error_upper": "254962767348555191970506817544303392944972042344865871077/50216813883093446110686315385661331328818843555712276103168"
+}
