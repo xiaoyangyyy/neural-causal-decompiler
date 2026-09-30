@@ -224,3 +224,19 @@ validation/fixed_gaussian_noise_transport_v1.json. This is one-world
 oracle-assisted noise-side evidence. The symbolic mechanism has no
 whole-support local error certificate, so no intervention-outcome transport
 bound or original R10 claim is closed.
+
+## Fixed archived SCM intervention obstruction
+
+The historical three-node `test_id` symbolic SCM now has an exact
+candidate-specific intervention counterexample. With both parents of
+node 1 set to 1, the independently replayed ideal-law joint W1(l1)
+lower bound is 20576741616488463/144115188075855872
+(about 0.14277982696). Along do(x0=x2=t), a nonzero quadratic mean
+gap proves that no finite uniform all-real local mechanism or
+intervention-distribution bound can hold for this fixed candidate.
+This complements the earlier fixed-world Gaussian noise *upper*
+bound: noise-law proximity alone does not overcome mechanism
+misspecification. See docs/FIXED_SCM_INTERVENTION_OBSTRUCTION_V1.md
+and validation/fixed_scm_intervention_obstruction_verification_v1.json.
+This is oracle-assisted same-world development evidence about one
+candidate; all original R10 atoms remain unresolved.
