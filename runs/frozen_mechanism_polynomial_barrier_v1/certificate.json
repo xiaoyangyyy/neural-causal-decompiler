@@ -1,0 +1,101 @@
+{
+  "all_point_error_difference_upper": "8528137/13107200",
+  "checkpoint_sha256": "20b62f0bd0f6ba0e36ee678fbd7401e8425fdb8720e28c80b4b588382e671b61",
+  "claim_refuted": "A real polynomial in the three declared inputs of total degree at most six uniformly approximates this frozen child neural mechanism within one percent of its training output scale on [-1,1]^3",
+  "degree_bound": 6,
+  "difference_weights": [
+    -1,
+    7,
+    -21,
+    35,
+    -35,
+    21,
+    -7,
+    1
+  ],
+  "epsilon_normalized": "1/100",
+  "input_domain": [
+    [
+      "-1",
+      "1"
+    ],
+    [
+      "-1",
+      "1"
+    ],
+    [
+      "-1",
+      "1"
+    ]
+  ],
+  "network_export_sha256": "a80f5bdae62882a6bd30272580fd05c78ec844a3524c9c663a331a20b961ba91",
+  "network_point_enclosures": [
+    [
+      "660813883835952263121139/604462909807314587353088",
+      "1321627767671904526242381/1208925819614629174706176"
+    ],
+    [
+      "557557536152350186242789/604462909807314587353088",
+      "557557536152350186242851/604462909807314587353088"
+    ],
+    [
+      "85129262091789410895859/151115727451828646838272",
+      "340517048367157643583501/604462909807314587353088"
+    ],
+    [
+      "34572239523399876869661/302231454903657293676544",
+      "138288958093599507478773/1208925819614629174706176"
+    ],
+    [
+      "-79260764818227027343043/302231454903657293676544",
+      "-317043059272908109372039/1208925819614629174706176"
+    ],
+    [
+      "-189615294075691012067725/302231454903657293676544",
+      "-758461176302764048270773/1208925819614629174706176"
+    ],
+    [
+      "-561544654916442880533423/604462909807314587353088",
+      "-561544654916442880533363/604462909807314587353088"
+    ],
+    [
+      "-665415882058926509897083/604462909807314587353088",
+      "-1330831764117853019794061/1208925819614629174706176"
+    ]
+  ],
+  "not_refuted": [
+    "non-polynomial short programs",
+    "piecewise programs",
+    "higher-degree polynomials",
+    "other frozen networks or worlds",
+    "true causal mechanism recovery",
+    "global MDL minimality or uniqueness"
+  ],
+  "original_claim_closed": false,
+  "original_objective_achieved": false,
+  "output_training_scale": "8528137/16777216",
+  "parents": [
+    1,
+    2
+  ],
+  "points": [
+    "-37/40",
+    "-13/20",
+    "-3/8",
+    "-1/10",
+    "7/40",
+    "9/20",
+    "29/40",
+    "1"
+  ],
+  "proof": "Restrict any total-degree-at-most-six polynomial to (x0,x1,x2)=(0,t,t). Its seventh equally spaced finite difference is exactly zero. If every point error were at most output_scale/100, the seventh difference of the neural values would have absolute value at most the sum of absolute binomial weights times that radius. The independently recomputed rational enclosures violate that bound strictly.",
+  "schema": "ncd.frozen-polynomial-degree-barrier.v1",
+  "semantic_scope": "Ideal real evaluation of exact stored binary weights and mathematical Tanh; no device-rounding guarantee",
+  "seventh_difference_absolute_lower": "1277808982777554065575973/1208925819614629174706176",
+  "seventh_difference_enclosure": [
+    "-159726122847194258199057/151115727451828646838272",
+    "-1277808982777554065575973/1208925819614629174706176"
+  ],
+  "status": "refuted-scoped",
+  "strict_incompatibility_margin_lower": "12280679486372207340671901/30223145490365729367654400"
+}

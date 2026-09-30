@@ -175,3 +175,13 @@ mu over base/source/intervention tuples, that Pr_mu(commutation error <= epsilon
 >= 1-delta. Independent-world measurements and familywise bounds can support
 this statement conditional on the sampling premises. They do not imply the
 universal deterministic relation or correctness of the real-world causal SCM.
+
+## Subsequent polynomial-family boundary
+
+A later eight-point rational finite-difference certificate excludes every
+polynomial of total degree at most six for one frozen conditional child
+mechanism at the one-percent uniform-error threshold; see
+RESULTS_POLYNOMIAL_DEGREE_BARRIER_V1.md. This strengthens the explanation
+for a failed bounded polynomial search on that mechanism. It does not
+establish fidelity for the separate discovery network target of R4, exclude
+nonpolynomial programs, or prove a global MDL minimum.
