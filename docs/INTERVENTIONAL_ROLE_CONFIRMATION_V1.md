@@ -51,3 +51,9 @@ A deferred handoff watches the live stage process handle. Only after the
 stage reports all 300 computed units does it launch the independent full
 replay under the same 8 GiB job limit. It writes a separate status receipt;
 if computation or replay fails, the status remains unresolved.
+
+After the independent all-300 summary and handoff succeed, the portable
+packager collects the frozen protocol and every unit file into a deterministic
+tar.gz archive with per-file SHA-256 manifest. A separate read-only package
+verifier checks every member and rejects missing, altered, duplicate or unsafe
+paths. The package gate intentionally fails while the run is incomplete.
