@@ -1,4 +1,4 @@
-﻿"""Checks for the frozen independent-world role experiment."""
+"""Checks for the frozen independent-world role experiment."""
 from pathlib import Path
 import sys
 
@@ -8,6 +8,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "validation"))
 
 from confirm_interventional_role_v1 import batch_layout, masks, preflight
+import verify_interventional_role_v1 as independent
 from verify_interventional_role_v1 import assert_same, verify
 
 UNIT = ROOT / "runs/interventional_role_confirmation_v1/units/seed_8301_n3_test_id_0"
@@ -48,3 +49,34 @@ def test_first_new_world_fails_original_local_gate_under_independent_replay():
     assert receipt["hybrid_meets_local_0_01"] is False
     assert receipt["hybrid_max_local_normalized_mse"] > 0.01
     assert receipt["original_claim_closed"] is False
+
+
+
+@pytest.mark.skipif(not UNIT.exists(), reason="first confirmation unit not yet computed")
+def test_full_verifier_rejects_falsified_gate(monkeypatch):
+    original = independent.read
+
+    def changed(path):
+        value = original(path)
+        if Path(path) == UNIT / "result.json":
+            value["metrics"]["hybrid"]["max_local_normalized_mse"] = .01
+        return value
+
+    monkeypatch.setattr(independent, "read", changed)
+    with pytest.raises(ValueError, match="metrics"):
+        verify(UNIT)
+
+
+@pytest.mark.skipif(not UNIT.exists(), reason="first confirmation unit not yet computed")
+def test_full_verifier_rejects_claim_inflation(monkeypatch):
+    original = independent.read
+
+    def changed(path):
+        value = original(path)
+        if Path(path) == UNIT / "result.json":
+            value["original_claim_closed"] = True
+        return value
+
+    monkeypatch.setattr(independent, "read", changed)
+    with pytest.raises(ValueError, match="Untrusted unit"):
+        verify(UNIT)
