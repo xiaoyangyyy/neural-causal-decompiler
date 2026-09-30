@@ -211,3 +211,16 @@ Twenty targeted tests pass. Correct graph, local neural mechanism error,
 Lipschitz domain coverage and identification of the declared true noise law
 remain unproved. This strengthens the R10 proof kernel but closes no
 original R0-R13 atom.
+
+## Fixed Gaussian candidate noise distance, current scope
+
+The frozen n3 test_id posthoc candidate happens to select three
+Gaussian noise marginals. Against the oracle true Gaussian exogenous law,
+the ideal candidate product law now has a checked exact rational joint
+Wasserstein-1 upper bound of
+35430223889551975/288230376151711744 (about 0.1229233) under l1 cost.
+The candidate payload, original manifest and source hashes are bound in
+validation/fixed_gaussian_noise_transport_v1.json. This is one-world
+oracle-assisted noise-side evidence. The symbolic mechanism has no
+whole-support local error certificate, so no intervention-outcome transport
+bound or original R10 claim is closed.
