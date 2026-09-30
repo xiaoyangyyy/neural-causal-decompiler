@@ -46,3 +46,8 @@ node/condition. A passing world is only one independent-world observation.
 A failed world refutes this specific frozen hybrid rule's universal
 success over the declared cohort; it does not refute existence of another
 candidate or close R0-R13. The original proof ledger remains open.
+
+A deferred handoff watches the live stage process handle. Only after the
+stage reports all 300 computed units does it launch the independent full
+replay under the same 8 GiB job limit. It writes a separate status receipt;
+if computation or replay fails, the status remains unresolved.
