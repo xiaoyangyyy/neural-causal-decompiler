@@ -92,3 +92,10 @@ and refuses a changed handoff, checker source, or result hash. The proof job,
 the development training, and independent result replay therefore remain
 sequential. The receipt will remain pending until real trained checkpoints
 and the evaluation result exist.
+
+The independent arithmetic was also prechecked on the actual frozen
+three-node development world: with 512 common exogenous draws, all nine
+conditions from the result generator and the separate verifier agree under
+the declared numerical replay tolerance when using fixed zero predictors.
+This checks the evaluation semantics before training; it is not a result
+for learned mechanisms.

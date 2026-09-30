@@ -55,3 +55,24 @@ def test_read_only_comparison_rejects_subtle_metric_tampering():
     changed["conditions"][0]["nodes"][0]["executed"] = False
     with pytest.raises(ValueError, match="value changed"):
         same(expected, changed)
+
+
+def test_frozen_development_world_truth_arithmetic_replays():
+    import json
+    from evaluate_interventional_mechanism_dev_v1 import evaluate_predictors
+    from verify_interventional_mechanism_dev_evaluation_v1 import seed_for
+
+    truth = ROOT / "runs/interventional_mechanism_dev_v2/truth_only/world.json"
+    discovery = ROOT / "runs/interventional_mechanism_dev_v2/candidate/discovery.npz"
+    target = GraphWorld.from_dict(json.loads(truth.read_text(encoding="utf-8")))
+    _, exogenous = target.sample(
+        seed=seed_for(target.identity, "heldout_eval_exogenous_v1"),
+        samples=512, return_exogenous=True)
+    with np.load(discovery, allow_pickle=False) as archive:
+        normalizers = np.maximum(np.std(archive["observations"], axis=0), .05)
+    predictors = [lambda observed: np.zeros(len(observed)) for _ in range(3)]
+    generated = evaluate_predictors(target, predictors, exogenous, normalizers)
+    replayed = independent_metrics(target, predictors, exogenous, normalizers)
+    same(generated, replayed)
+    assert len(replayed["conditions"]) == 9
+    assert replayed["unique_exogenous_draws"] == 512
