@@ -1,0 +1,124 @@
+{
+  "assumptions": [
+    "true and model exogenous laws are the declared affine images of the same-dimensional standard Gaussian",
+    "both SCMs use the same correct acyclic graph and additive unit-gain exogenous noise",
+    "both SCMs apply identical observed-coordinate intervention values",
+    "at every common parent state in the domain, true and model structural functions differ by at most the declared local error",
+    "declared coordinatewise Lipschitz bounds hold for the model structural functions over that domain"
+  ],
+  "coordinate_intervention_error_upper": [
+    "1/10",
+    "5/4"
+  ],
+  "gaussian_row_difference_squared": [
+    "0",
+    "1"
+  ],
+  "gaussian_sigma_upper": [
+    "0",
+    "1"
+  ],
+  "graph": [
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      0
+    ]
+  ],
+  "interventions": {},
+  "joint_intervention_wasserstein_l1_upper": "27/20",
+  "lipschitz": [
+    [
+      "0",
+      "2"
+    ],
+    [
+      "0",
+      "0"
+    ]
+  ],
+  "local_errors": [
+    "1/10",
+    "1/20"
+  ],
+  "model_noise_covariance": [
+    [
+      "1",
+      "0"
+    ],
+    [
+      "0",
+      "1"
+    ]
+  ],
+  "model_noise_has_cross_node_correlation": false,
+  "model_noise_mean": [
+    "0",
+    "0"
+  ],
+  "model_noise_mix": [
+    [
+      "1",
+      "0"
+    ],
+    [
+      "0",
+      "1"
+    ]
+  ],
+  "noise_coordinate_l1_upper": [
+    "0",
+    "1"
+  ],
+  "noise_joint_wasserstein_l1_upper": "1",
+  "original_claim_closed": false,
+  "original_objective_achieved": false,
+  "premises": [
+    "correct_graph",
+    "local_mechanism",
+    "domain_and_lipschitz"
+  ],
+  "premises_verified": false,
+  "schema": "ncd.gaussian-joint-scm-coupling.v1",
+  "status": "proved-conditionally",
+  "topological_order": [
+    0,
+    1
+  ],
+  "true_noise_covariance": [
+    [
+      "1",
+      "1"
+    ],
+    [
+      "1",
+      "2"
+    ]
+  ],
+  "true_noise_has_cross_node_correlation": true,
+  "true_noise_mean": [
+    "0",
+    "0"
+  ],
+  "true_noise_mix": [
+    [
+      "1",
+      "0"
+    ],
+    [
+      "1",
+      "1"
+    ]
+  ],
+  "uncovered": [
+    "identification of the declared true noise law from data",
+    "correctness of the graph, mechanism error and Lipschitz premises",
+    "coverage of the coupled execution domain",
+    "other noise families and general neural-network fidelity",
+    "original R0-R13 claim closure"
+  ],
+  "verified_shared_gaussian_coupling": true
+}

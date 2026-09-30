@@ -197,3 +197,17 @@ R2.variable_equivariance atom remains unresolved because the native
 score/graph contract and all declared architectures are broader. This
 reconciliation does not alter the issue-time receipt or promote any of the
 36 unresolved original claims.
+
+## Verified continuous joint-Gaussian coupling kernel
+
+The exact rational certificate in
+validation/gaussian_joint_scm_certificate_v1.json constructs a shared
+standard-Gaussian coupling for two declared affine joint noise laws; the
+true law has cross-node correlation. The separate verifier recomputes the
+covariance matrices, noise distances and conditional DAG intervention
+distribution bound. The example yields noise l1 bound 1 and joint outcome
+Wasserstein-1 bound 27/20 before intervention, 21/20 after do(node 0 = 2).
+Twenty targeted tests pass. Correct graph, local neural mechanism error,
+Lipschitz domain coverage and identification of the declared true noise law
+remain unproved. This strengthens the R10 proof kernel but closes no
+original R0-R13 atom.
