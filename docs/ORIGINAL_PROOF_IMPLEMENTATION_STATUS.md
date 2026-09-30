@@ -318,3 +318,16 @@ to 0.076496728 on this same world. The rule is posthoc, has zero
 independent confirmation worlds and no full SCM rollout; the original
 R10 atoms remain unresolved. See
 docs/INTERVENTIONAL_MECHANISM_HYBRID_DEV_V1.md.
+
+## Exact obstruction for the current unary mechanism library
+
+Two frozen one-parent Tanh mechanisms now have independently replayed
+rational certificates against every real linear combination of the six
+implemented unary basis functions. The verified normalized grid lower
+bounds are 0.033300278 on [-2,2] and 0.032512870 on [-1,1], both above
+the 0.01 frozen-network fidelity gate. The certificates bind checkpoints,
+mechanism_library, and the transcendental interval kernel by SHA-256 and
+also replay under isolated installed ncd 0.59.0 modules. They refute this
+finite grammar for those two networks, not all larger grammars or the
+original all-instance R4/R10 atoms. See
+FROZEN_UNARY_GRAMMAR_OBSTRUCTION_V1.md.
