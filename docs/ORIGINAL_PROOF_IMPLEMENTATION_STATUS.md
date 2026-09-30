@@ -306,3 +306,15 @@ independent result checker passed; the 512 repeated-do draws are one
 development world, not independent confirmation worlds. See
 RESULTS_FROZEN_THREE_NODE_SCOPED.md and the two acceptance receipts.
 Original counts remain 0 proved, 2 refuted, 36 unresolved.
+
+## Posthoc structural-role hybrid diagnostic
+
+After seeing the fixed development-world mixed/control result, a
+truth-free inferred-parent rule selected control checkpoints for
+roots and mixed-intervention checkpoints for the child. An independent
+model-level replay recomputed the same 512-draw, nine-condition local
+metrics. Maximum normalized MSE fell to 0.005851749 and maximum MAE
+to 0.076496728 on this same world. The rule is posthoc, has zero
+independent confirmation worlds and no full SCM rollout; the original
+R10 atoms remain unresolved. See
+docs/INTERVENTIONAL_MECHANISM_HYBRID_DEV_V1.md.

@@ -39,7 +39,12 @@ The independent replay found:
 | Maximum normalized paired-contrast absolute error | 0.385489573 | 0.004702626 |
 
 The mixed arm improves all three reported maxima on this development
-world, but **0.013101094 > 0.01**. The nine intervention conditions
+world, but **0.013101094 > 0.01**. A later, explicitly posthoc
+inferred-role hybrid uses the observational checkpoint for roots and the
+mixed checkpoint for nodes with inferred parents. On the same world its
+maximum local normalized MSE is 0.005851749, but it has zero independent
+confirmation worlds and no full SCM rollout. See
+`docs/INTERVENTIONAL_MECHANISM_HYBRID_DEV_V1.md`. The nine intervention conditions
 reuse the same 512 exogenous draws and are not nine independent worlds.
 The frozen discovery-data standard deviations are the common
 normalizers. Independent confirmation worlds: **zero**. The result
