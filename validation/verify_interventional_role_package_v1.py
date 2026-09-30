@@ -1,4 +1,4 @@
-﻿"""Read-only integrity verification of the portable 300-world archive."""
+"""Read-only integrity verification of the portable 300-world archive."""
 from hashlib import sha256
 import json
 from pathlib import Path
@@ -19,6 +19,30 @@ def digest(path):
 
 def read(path):
     return json.loads(Path(path).read_text(encoding="utf-8-sig"))
+
+
+def verify_members(archive_path, expected):
+    observed = set()
+    with tarfile.open(archive_path, mode="r:gz") as archive:
+        for member in archive:
+            name = member.name
+            path = Path(name)
+            if (name in observed or name not in expected
+                    or path.is_absolute() or ".." in path.parts
+                    or not name.startswith("runs/interventional_role_confirmation_v1/")
+                    or not member.isfile() or member.issym() or member.islnk()
+                    or member.mtime != 0 or member.uid != 0 or member.gid != 0
+                    or member.mode != 0o644):
+                raise ValueError("Unsafe or unlisted archive member: " + name)
+            observed.add(name)
+            with archive.extractfile(member) as stream:
+                payload = stream.read()
+            if (len(payload) != expected[name]["bytes"]
+                    or sha256(payload).hexdigest() != expected[name]["sha256"]):
+                raise ValueError("Archive member hash mismatch: " + name)
+    if observed != set(expected):
+        raise ValueError("Archive member set incomplete")
+    return observed
 
 
 def verify():
@@ -43,26 +67,7 @@ def verify():
     expected = manifest["files"]
     if manifest["file_count"] != len(expected):
         raise ValueError("Manifest file count changed")
-    observed = set()
-    with tarfile.open(ARCHIVE, mode="r:gz") as archive:
-        for member in archive:
-            name = member.name
-            path = Path(name)
-            if (name in observed or name not in expected
-                    or path.is_absolute() or ".." in path.parts
-                    or not name.startswith("runs/interventional_role_confirmation_v1/")
-                    or not member.isfile() or member.issym() or member.islnk()
-                    or member.mtime != 0 or member.uid != 0 or member.gid != 0
-                    or member.mode != 0o644):
-                raise ValueError("Unsafe or unlisted archive member: " + name)
-            observed.add(name)
-            with archive.extractfile(member) as stream:
-                payload = stream.read()
-            if (len(payload) != expected[name]["bytes"]
-                    or sha256(payload).hexdigest() != expected[name]["sha256"]):
-                raise ValueError("Archive member hash mismatch: " + name)
-    if observed != set(expected):
-        raise ValueError("Archive member set incomplete")
+    observed = verify_members(ARCHIVE, expected)
     units = {name.split("/")[3] for name in observed
              if name.startswith("runs/interventional_role_confirmation_v1/units/")}
     if len(units) != 300:
