@@ -1,0 +1,116 @@
+{
+  "equation_ast": [
+    {
+      "args": [
+        {
+          "args": [
+            {
+              "op": "constant",
+              "value": -0.6943037399893146
+            },
+            {
+              "index": 1,
+              "op": "var"
+            }
+          ],
+          "op": "mul"
+        },
+        {
+          "family": "laplace",
+          "index": 0,
+          "op": "noise",
+          "scale": 0.35
+        }
+      ],
+      "op": "add"
+    },
+    {
+      "args": [
+        {
+          "family": "laplace",
+          "index": 1,
+          "op": "noise",
+          "scale": 0.35
+        }
+      ],
+      "op": "add"
+    },
+    {
+      "args": [
+        {
+          "family": "laplace",
+          "index": 2,
+          "op": "noise",
+          "scale": 0.35
+        }
+      ],
+      "op": "add"
+    }
+  ],
+  "equations": [
+    [
+      {
+        "coefficient": -0.6943037399893146,
+        "operator": "linear",
+        "parents": [
+          1
+        ]
+      }
+    ],
+    [],
+    []
+  ],
+  "family": "nonlinear",
+  "graph": [
+    [
+      0,
+      0,
+      0
+    ],
+    [
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0
+    ]
+  ],
+  "noise_family": "laplace",
+  "noise_scale": 0.35,
+  "observed_scaling": [
+    1.0,
+    1.0,
+    1.0
+  ],
+  "root_shift": false,
+  "samples": 96,
+  "scales": [
+    1.0,
+    1.0,
+    1.0
+  ],
+  "seed": 5652322176303190451,
+  "split": "test_id",
+  "target_graph": [
+    [
+      0,
+      0,
+      0
+    ],
+    [
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0
+    ]
+  ],
+  "target_semantics": "DAG_under_benchmark_assumptions",
+  "world_id": "89317a05a16dff2a35682d0e"
+}

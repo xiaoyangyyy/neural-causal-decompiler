@@ -1,0 +1,128 @@
+{
+  "best_epoch": 13,
+  "checkpoint_sha256": "1f9b0869661fd3d2af19b258258fcdd7aae1eed2ef7ab9c9c0222e02650fd1bc",
+  "epochs": 120,
+  "fit_coverage": [
+    {
+      "intervention_targets": [],
+      "rows": 96,
+      "source": "fit_observation",
+      "used": true
+    },
+    {
+      "reason": "target_intervened",
+      "rows": 48,
+      "source": "fit_do_0_minus",
+      "used": false
+    },
+    {
+      "reason": "target_intervened",
+      "rows": 48,
+      "source": "fit_do_0_plus",
+      "used": false
+    },
+    {
+      "intervention_targets": [
+        1
+      ],
+      "rows": 48,
+      "source": "fit_do_1_minus",
+      "used": true
+    },
+    {
+      "intervention_targets": [
+        1
+      ],
+      "rows": 48,
+      "source": "fit_do_1_plus",
+      "used": true
+    },
+    {
+      "intervention_targets": [
+        2
+      ],
+      "rows": 48,
+      "source": "fit_do_2_minus",
+      "used": true
+    },
+    {
+      "intervention_targets": [
+        2
+      ],
+      "rows": 48,
+      "source": "fit_do_2_plus",
+      "used": true
+    }
+  ],
+  "fit_row_id_sha256": "1904988514e674fe89c6bf5408b8b6e000ce16b6faced67d8dd664e303b481b2",
+  "fit_rows": 288,
+  "inferred_parents": [
+    1,
+    2
+  ],
+  "original_claim_closed": false,
+  "original_objective_achieved": false,
+  "sampling_independence_proved": false,
+  "schema": "ncd.intervention-mechanism-split.v1",
+  "seed": 741317678,
+  "status": "development-only",
+  "target": 0,
+  "target_training_scale": 0.4552293121814728,
+  "true_equations_used": false,
+  "true_graph_used": false,
+  "validation_coverage": [
+    {
+      "intervention_targets": [],
+      "rows": 32,
+      "source": "validation_observation",
+      "used": true
+    },
+    {
+      "reason": "target_intervened",
+      "rows": 16,
+      "source": "validation_do_0_minus",
+      "used": false
+    },
+    {
+      "reason": "target_intervened",
+      "rows": 16,
+      "source": "validation_do_0_plus",
+      "used": false
+    },
+    {
+      "intervention_targets": [
+        1
+      ],
+      "rows": 16,
+      "source": "validation_do_1_minus",
+      "used": true
+    },
+    {
+      "intervention_targets": [
+        1
+      ],
+      "rows": 16,
+      "source": "validation_do_1_plus",
+      "used": true
+    },
+    {
+      "intervention_targets": [
+        2
+      ],
+      "rows": 16,
+      "source": "validation_do_2_minus",
+      "used": true
+    },
+    {
+      "intervention_targets": [
+        2
+      ],
+      "rows": 16,
+      "source": "validation_do_2_plus",
+      "used": true
+    }
+  ],
+  "validation_mse": 0.12384974956512451,
+  "validation_row_id_sha256": "f32937f9b62aec7207bb1fc94c1eeebc8caff2c60fc19687737b5f4f6c18d0cf",
+  "validation_rows": 96
+}

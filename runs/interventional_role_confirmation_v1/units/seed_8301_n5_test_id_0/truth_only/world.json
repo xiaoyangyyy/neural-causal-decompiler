@@ -1,0 +1,205 @@
+{
+  "equation_ast": [
+    {
+      "args": [
+        {
+          "family": "gaussian",
+          "index": 0,
+          "op": "noise",
+          "scale": 0.35
+        }
+      ],
+      "op": "add"
+    },
+    {
+      "args": [
+        {
+          "args": [
+            {
+              "op": "constant",
+              "value": -0.5434394007748378
+            },
+            {
+              "index": 3,
+              "op": "var"
+            }
+          ],
+          "op": "mul"
+        },
+        {
+          "family": "gaussian",
+          "index": 1,
+          "op": "noise",
+          "scale": 0.35
+        }
+      ],
+      "op": "add"
+    },
+    {
+      "args": [
+        {
+          "family": "gaussian",
+          "index": 2,
+          "op": "noise",
+          "scale": 0.35
+        }
+      ],
+      "op": "add"
+    },
+    {
+      "args": [
+        {
+          "family": "gaussian",
+          "index": 3,
+          "op": "noise",
+          "scale": 0.35
+        }
+      ],
+      "op": "add"
+    },
+    {
+      "args": [
+        {
+          "args": [
+            {
+              "op": "constant",
+              "value": -1.0694480066731982
+            },
+            {
+              "index": 1,
+              "op": "var"
+            }
+          ],
+          "op": "mul"
+        },
+        {
+          "family": "gaussian",
+          "index": 4,
+          "op": "noise",
+          "scale": 0.35
+        }
+      ],
+      "op": "add"
+    }
+  ],
+  "equations": [
+    [],
+    [
+      {
+        "coefficient": -0.5434394007748378,
+        "operator": "linear",
+        "parents": [
+          3
+        ]
+      }
+    ],
+    [],
+    [],
+    [
+      {
+        "coefficient": -1.0694480066731982,
+        "operator": "linear",
+        "parents": [
+          1
+        ]
+      }
+    ]
+  ],
+  "family": "linear_gaussian",
+  "graph": [
+    [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  ],
+  "noise_family": "gaussian",
+  "noise_scale": 0.35,
+  "observed_scaling": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+  ],
+  "root_shift": false,
+  "samples": 96,
+  "scales": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+  ],
+  "seed": 2439805063789459419,
+  "split": "test_id",
+  "target_graph": [
+    [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      1,
+      1
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      0,
+      0,
+      0
+    ]
+  ],
+  "target_semantics": "CPDAG",
+  "world_id": "715efd86f0e1c40292c5ba85"
+}

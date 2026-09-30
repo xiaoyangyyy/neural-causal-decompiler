@@ -1,0 +1,202 @@
+{
+  "equation_ast": [
+    {
+      "args": [
+        {
+          "args": [
+            {
+              "op": "constant",
+              "value": -0.9265834411538911
+            },
+            {
+              "args": [
+                {
+                  "index": 2,
+                  "op": "var"
+                }
+              ],
+              "op": "tanh"
+            }
+          ],
+          "op": "mul"
+        },
+        {
+          "family": "laplace",
+          "index": 0,
+          "op": "noise",
+          "scale": 0.35
+        }
+      ],
+      "op": "add"
+    },
+    {
+      "args": [
+        {
+          "args": [
+            {
+              "op": "constant",
+              "value": 1.0247360532206893
+            },
+            {
+              "args": [
+                {
+                  "index": 0,
+                  "op": "var"
+                }
+              ],
+              "op": "sin"
+            }
+          ],
+          "op": "mul"
+        },
+        {
+          "args": [
+            {
+              "op": "constant",
+              "value": -0.6519210449576107
+            },
+            {
+              "args": [
+                {
+                  "index": 2,
+                  "op": "var"
+                }
+              ],
+              "op": "tanh"
+            }
+          ],
+          "op": "mul"
+        },
+        {
+          "args": [
+            {
+              "op": "constant",
+              "value": 0.22574485128365854
+            },
+            {
+              "args": [
+                {
+                  "index": 0,
+                  "op": "var"
+                },
+                {
+                  "index": 2,
+                  "op": "var"
+                }
+              ],
+              "op": "mul"
+            }
+          ],
+          "op": "mul"
+        },
+        {
+          "family": "laplace",
+          "index": 1,
+          "op": "noise",
+          "scale": 0.35
+        }
+      ],
+      "op": "add"
+    },
+    {
+      "args": [
+        {
+          "family": "laplace",
+          "index": 2,
+          "op": "noise",
+          "scale": 0.35
+        }
+      ],
+      "op": "add"
+    }
+  ],
+  "equations": [
+    [
+      {
+        "coefficient": -0.9265834411538911,
+        "operator": "tanh",
+        "parents": [
+          2
+        ]
+      }
+    ],
+    [
+      {
+        "coefficient": 1.0247360532206893,
+        "operator": "sin",
+        "parents": [
+          0
+        ]
+      },
+      {
+        "coefficient": -0.6519210449576107,
+        "operator": "tanh",
+        "parents": [
+          2
+        ]
+      },
+      {
+        "coefficient": 0.22574485128365854,
+        "operator": "interaction",
+        "parents": [
+          0,
+          2
+        ]
+      }
+    ],
+    []
+  ],
+  "family": "nonlinear",
+  "graph": [
+    [
+      0,
+      1,
+      0
+    ],
+    [
+      0,
+      0,
+      0
+    ],
+    [
+      1,
+      1,
+      0
+    ]
+  ],
+  "noise_family": "laplace",
+  "noise_scale": 0.35,
+  "observed_scaling": [
+    1.0,
+    1.0,
+    1.0
+  ],
+  "root_shift": false,
+  "samples": 96,
+  "scales": [
+    1.0,
+    1.0,
+    1.0
+  ],
+  "seed": 1467167014333753270,
+  "split": "test_id",
+  "target_graph": [
+    [
+      0,
+      1,
+      0
+    ],
+    [
+      0,
+      0,
+      0
+    ],
+    [
+      1,
+      1,
+      0
+    ]
+  ],
+  "target_semantics": "DAG_under_benchmark_assumptions",
+  "world_id": "6faf533bc90e6f73114abc58"
+}

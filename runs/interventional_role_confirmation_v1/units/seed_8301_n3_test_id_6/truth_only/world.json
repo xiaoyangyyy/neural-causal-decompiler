@@ -1,0 +1,172 @@
+{
+  "equation_ast": [
+    {
+      "args": [
+        {
+          "family": "laplace",
+          "index": 0,
+          "op": "noise",
+          "scale": 0.35
+        }
+      ],
+      "op": "add"
+    },
+    {
+      "args": [
+        {
+          "args": [
+            {
+              "op": "constant",
+              "value": 1.0892619866629676
+            },
+            {
+              "args": [
+                {
+                  "index": 0,
+                  "op": "var"
+                }
+              ],
+              "op": "tanh"
+            }
+          ],
+          "op": "mul"
+        },
+        {
+          "args": [
+            {
+              "op": "constant",
+              "value": 0.41835774142266574
+            },
+            {
+              "args": [
+                {
+                  "index": 2,
+                  "op": "var"
+                }
+              ],
+              "op": "sin"
+            }
+          ],
+          "op": "mul"
+        },
+        {
+          "family": "laplace",
+          "index": 1,
+          "op": "noise",
+          "scale": 0.35
+        }
+      ],
+      "op": "add"
+    },
+    {
+      "args": [
+        {
+          "args": [
+            {
+              "op": "constant",
+              "value": -0.5976625628660087
+            },
+            {
+              "args": [
+                {
+                  "index": 0,
+                  "op": "var"
+                }
+              ],
+              "op": "sin"
+            }
+          ],
+          "op": "mul"
+        },
+        {
+          "family": "laplace",
+          "index": 2,
+          "op": "noise",
+          "scale": 0.35
+        }
+      ],
+      "op": "add"
+    }
+  ],
+  "equations": [
+    [],
+    [
+      {
+        "coefficient": 1.0892619866629676,
+        "operator": "tanh",
+        "parents": [
+          0
+        ]
+      },
+      {
+        "coefficient": 0.41835774142266574,
+        "operator": "sin",
+        "parents": [
+          2
+        ]
+      }
+    ],
+    [
+      {
+        "coefficient": -0.5976625628660087,
+        "operator": "sin",
+        "parents": [
+          0
+        ]
+      }
+    ]
+  ],
+  "family": "nonlinear",
+  "graph": [
+    [
+      0,
+      1,
+      1
+    ],
+    [
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      0
+    ]
+  ],
+  "noise_family": "laplace",
+  "noise_scale": 0.35,
+  "observed_scaling": [
+    1.0,
+    1.0,
+    1.0
+  ],
+  "root_shift": false,
+  "samples": 96,
+  "scales": [
+    1.0,
+    1.0,
+    1.0
+  ],
+  "seed": 7668379167325625803,
+  "split": "test_id",
+  "target_graph": [
+    [
+      0,
+      1,
+      1
+    ],
+    [
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      0
+    ]
+  ],
+  "target_semantics": "DAG_under_benchmark_assumptions",
+  "world_id": "6fd4767429476d42ef78ea99"
+}

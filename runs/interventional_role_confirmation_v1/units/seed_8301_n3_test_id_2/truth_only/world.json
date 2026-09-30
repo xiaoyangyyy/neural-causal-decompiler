@@ -1,0 +1,142 @@
+{
+  "equation_ast": [
+    {
+      "args": [
+        {
+          "args": [
+            {
+              "op": "constant",
+              "value": -0.47968862687982633
+            },
+            {
+              "index": 2,
+              "op": "var"
+            }
+          ],
+          "op": "mul"
+        },
+        {
+          "family": "laplace",
+          "index": 0,
+          "op": "noise",
+          "scale": 0.35
+        }
+      ],
+      "op": "add"
+    },
+    {
+      "args": [
+        {
+          "args": [
+            {
+              "op": "constant",
+              "value": 0.4203299839922901
+            },
+            {
+              "args": [
+                {
+                  "index": 2,
+                  "op": "var"
+                }
+              ],
+              "op": "sin"
+            }
+          ],
+          "op": "mul"
+        },
+        {
+          "family": "laplace",
+          "index": 1,
+          "op": "noise",
+          "scale": 0.35
+        }
+      ],
+      "op": "add"
+    },
+    {
+      "args": [
+        {
+          "family": "laplace",
+          "index": 2,
+          "op": "noise",
+          "scale": 0.35
+        }
+      ],
+      "op": "add"
+    }
+  ],
+  "equations": [
+    [
+      {
+        "coefficient": -0.47968862687982633,
+        "operator": "linear",
+        "parents": [
+          2
+        ]
+      }
+    ],
+    [
+      {
+        "coefficient": 0.4203299839922901,
+        "operator": "sin",
+        "parents": [
+          2
+        ]
+      }
+    ],
+    []
+  ],
+  "family": "nonlinear",
+  "graph": [
+    [
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0
+    ],
+    [
+      1,
+      1,
+      0
+    ]
+  ],
+  "noise_family": "laplace",
+  "noise_scale": 0.35,
+  "observed_scaling": [
+    1.0,
+    1.0,
+    1.0
+  ],
+  "root_shift": false,
+  "samples": 96,
+  "scales": [
+    1.0,
+    1.0,
+    1.0
+  ],
+  "seed": 8936500244858732748,
+  "split": "test_id",
+  "target_graph": [
+    [
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0
+    ],
+    [
+      1,
+      1,
+      0
+    ]
+  ],
+  "target_semantics": "DAG_under_benchmark_assumptions",
+  "world_id": "706de312e5cf465bfe1b19d2"
+}

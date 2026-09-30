@@ -1,0 +1,50 @@
+{
+  "artifact_budget_bytes": 8589934592,
+  "discovery_rows": 96,
+  "environments": [
+    "test_id",
+    "test_function",
+    "test_noise",
+    "test_scale",
+    "test_intervention"
+  ],
+  "epochs": 120,
+  "evaluation_rows": 512,
+  "graph_teacher": "runs/original_confirmation_v1/training_seed_8101/attempt_0000/models/observational_padded/graph_teacher.pt",
+  "graph_teacher_sha256": "3e1c5c4967858ba5035fd4f897dd5872c95ee70f70131e45fe72b9cfcc2345fc",
+  "max_stage_seconds": 43200,
+  "max_unit_seconds": 600,
+  "mechanism_observation_rows": 512,
+  "memory_bytes": 8589934592,
+  "nodes": [
+    3,
+    5,
+    8
+  ],
+  "normalized_mse_threshold": 0.01,
+  "original_claim_closed": false,
+  "original_objective_achieved": false,
+  "output": "runs/interventional_role_confirmation_v1",
+  "role_rule": "inferred indegree 0: control; positive indegree: mixed",
+  "schema": "ncd.interventional-role-confirmation-plan.v1",
+  "seeds": [
+    8301,
+    8302
+  ],
+  "source_sha256": {
+    "ncd/active_intervention_graph.py": "b132c5be445e85293a8b410b9303b6a30b4e9454736ba6d149cd83313d0b0d35",
+    "ncd/graph_model.py": "de044407e023a4e575cdb7781bd1e893d277fd87a1058e1f6c866fc3805b0873",
+    "ncd/graphs.py": "119ef2757b9200c05b3f2fddebf898bf189e4844e6010d29abf61480764085fc",
+    "ncd/mechanisms.py": "35f78ebe2e2051a15d0b22e145b702146d169e53e4dce349c8bdc9276b389624",
+    "ncd/model.py": "ee732b8f06c153951e6f3e559c9511591e8e6e632d815766c5192aff50bb3602",
+    "ncd/multiverse.py": "9746dd2c23015e5138c65398065dfc20d1bb34cc8aaca2f5109e326eb1f19883",
+    "ncd/proof_process.py": "bc052fb5d06473b6df0466500a1d37b3bd42c8f80ab9435dbb7774e1d2e36c03",
+    "ncd/worlds.py": "48801c89a8914adba782c519780e3a253d6043a8d91ffa99186f886a0743aa39",
+    "validation/confirm_interventional_role_v1.py": "b3686b65a2ba4926452abf0d667ddb4e7b67198747072fe4955e03c59f7673ca",
+    "validation/interventional_mechanism_fit_v1.py": "a19ecf0c54b6d5e351038195501873d4e05b811a78826a4ae75fca1b45803066"
+  },
+  "status": "frozen-before-confirmation",
+  "training_threads": 1,
+  "width": 48,
+  "worlds_per_cell": 10
+}
