@@ -24,3 +24,15 @@ python -m neural_boundary_proof verify-proof runs/actual_label_swap_boundary_v1/
 ```
 
 验证器重新核查完整网络实现、样本置换归纳、双分支关系、严格方向间隔、数据置换与标签不交换关系。五项源测试和五项隔离安装包测试覆盖反例、伪造标签、权重依赖错配、非共享分支和全中间状态的行置换诊断。最终安装验收见 `validation/neural_boundary_installed_v1/status.json`。
+
+## 后续统一台账接入（2026-09-30 核对）
+
+上述“尚未自动更新”的表述记录的是本证书初次签发时的状态。
+当前 runs/original_proof_registry_v7/ledger.json 已登记
+actual_single_label_boundary 任务：在固定 Discoverer 的数学实数语义下，
+fixed_discoverer.score_swap 为限定作用域已证明，
+fixed_discoverer.single_label_swap 为限定作用域已反证。
+R2.variable_equivariance 仍为未解决，因为原始网络分数／图语义、
+其他架构和声明任务并未由单标签平局反例一并解决。
+v7 的 summary.json 仍声明 overall_objective_achieved=false。
+这项后续登记不改写初次签发的验收文件或原始 38 项计数。

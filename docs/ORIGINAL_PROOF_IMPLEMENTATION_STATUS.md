@@ -184,3 +184,16 @@ verified short discovered causal algorithm. Finite device label identity
 also remains open: 28 near-tie label disagreements were retained as
 diagnostics, without promoting them to strict numeric counterexamples.
 The original 38-claim ledger remains 0 proved, 2 refuted, 36 unresolved.
+
+## Current R2 label-swap registry reconciliation
+
+The issue-time actual-label boundary receipt says that original-audit integration
+was pending. The current v7 unified bundle already contains the
+actual_single_label_boundary job and two explicit R2 subcontracts:
+fixed_discoverer.score_swap is proved only for the checked shared-branch
+score computation, while fixed_discoverer.single_label_swap is refuted for
+the fixed lowest-index hard-label rule at a reachable exact tie. The original
+R2.variable_equivariance atom remains unresolved because the native
+score/graph contract and all declared architectures are broader. This
+reconciliation does not alter the issue-time receipt or promote any of the
+36 unresolved original claims.
