@@ -185,3 +185,18 @@ RESULTS_POLYNOMIAL_DEGREE_BARRIER_V1.md. This strengthens the explanation
 for a failed bounded polynomial search on that mechanism. It does not
 establish fidelity for the separate discovery network target of R4, exclude
 nonpolynomial programs, or prove a global MDL minimum.
+## Later graph-attention implementation update
+
+The earlier statement that full graph-attention export was not integrated has
+been superseded for four frozen 8101/8102 graph checkpoints. The separately
+accepted graph_ssa_proof package exports a 138-instruction tensor program for
+each of 12 checkpoint/node-size domains, including four-head attention,
+LayerNorm, graph scores, and mathematical postprocessing. It proves exact
+ideal-real feature-tensor-to-score/probability fidelity and all 16,384
+compatible subsets of 14 fixed physical read/write sites per domain. See
+RESULTS_ACTUAL_GRAPH_PROGRAM.md and validation/actual_graph_acceptance_v1.json.
+
+That theorem starts at the supplied 24-dimensional graph feature tensor. It
+does not certify the raw-sample and true-intervention feature generator,
+short-program or MDL minimality, actual causal graph correctness, or device
+floating-point labels. These remain distinct original R4/R5/R9 obligations.

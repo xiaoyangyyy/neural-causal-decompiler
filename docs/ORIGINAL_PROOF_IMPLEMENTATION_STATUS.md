@@ -166,3 +166,21 @@ validation/unified_proof_registry_release_v60.json. Original counts remain
 and actual-label boundary evidence still needs trusted unified-registry integration.
 The partial mechanism's installed replay has now started after regression ended.
 See RESULTS_ORIGINAL_PROOF_CORE_V60.md. The full approved plan is not complete.
+
+## Accepted graph-network mathematics, current scope
+
+The original milestone table above describes its earlier release. Subsequent
+validation/actual_graph_acceptance_v1.json accepts 12 exact mathematical
+feature-tensor-to-program proofs for four frozen graph checkpoints at 3, 5,
+and 8 nodes. Each proof includes attention, LayerNorm, output scores and
+probabilities, plus all 16,384 compatible subsets of 14 fixed physical
+read/write sites. The independent installed package checked all 22 stored
+tensors for each network; both source and installed suites passed 77 tests.
+
+The 24-dimensional input graph features are supplied to this theorem. Their
+raw observational samples and intervention-response construction are not
+covered. The program is a weight-rich computation realization, not a
+verified short discovered causal algorithm. Finite device label identity
+also remains open: 28 near-tie label disagreements were retained as
+diagnostics, without promoting them to strict numeric counterexamples.
+The original 38-claim ledger remains 0 proved, 2 refuted, 36 unresolved.
